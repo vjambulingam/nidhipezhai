@@ -37,6 +37,6 @@ The article appears in the newest-first list, topic filters, search results, and
 
 The workflow in `.github/workflows/pages.yml` builds and deploys on every push to `main`, including pushes created when a pull request is merged. It can also be run manually from the Actions tab. In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**.
 
-For a custom domain, add a repository Actions variable named `CUSTOM_DOMAIN` with the domain only (for example, `blog.example.com`). The workflow writes it into the deployed `CNAME` file and builds links for the domain root. Without this variable, it uses the repository subpath supplied by GitHub Pages. Point the domain’s DNS records to GitHub Pages using the current instructions from GitHub, then enable HTTPS in the repository’s Pages settings after DNS verification.
+The workflow defaults to `nidhipezhai.com`, writes it into the deployed `CNAME` file, and builds links for the domain root. To use a different custom domain, set the repository Actions variable `CUSTOM_DOMAIN` to the domain only (for example, `blog.example.com`). Without a custom domain, remove the default from the workflow so it uses the repository subpath supplied by GitHub Pages. Point the domain’s DNS records to GitHub Pages using the current instructions from GitHub, then enable HTTPS in the repository’s Pages settings after DNS verification.
 
 Calculator source files live in `_calculators/` and are copied into `_site/calculators/` unchanged. The calculator directory and homepage link to those generated routes.
