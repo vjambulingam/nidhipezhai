@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="{{ site.language }}">
+<head>
+  {% set seoDescription = description or site.description %}
+  {% set seoKeywords = keywords or topics or site.keywords %}
+  {% set canonicalUrl = page.url | url | absoluteUrl %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0D7377">
+  <meta name="description" content="{{ seoDescription }}">
+  <meta name="keywords" content="{{ seoKeywords | join(', ') }}">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <title>{% if title %}{{ title }} · {% endif %}{{ site.title }}</title>
+  {% if siteOrigin %}
+  <link rel="canonical" href="{{ canonicalUrl }}">
+  <meta property="og:url" content="{{ canonicalUrl }}">
+  <meta property="og:image" content="{{ '/assets/images/nidhipezhai-logo.png' | url | absoluteUrl }}">
+  {% endif %}
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:locale" content="ta_IN">
+  <meta property="og:type" content="{{ seoType or 'website' }}">
+  <meta property="og:title" content="{% if title %}{{ title }} · {% endif %}{{ site.title }}">
+  <meta property="og:description" content="{{ seoDescription }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{% if title %}{{ title }} · {% endif %}{{ site.title }}">
+  <meta name="twitter:description" content="{{ seoDescription }}">
+  <link rel="icon" type="image/png" href="{{ '/assets/images/nidhipezhai-logo.png' | url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Noto+Serif+Tamil:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | url }}">
+  {% if siteOrigin %}
+  {% set websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": site.title,
+    "description": site.description,
+    "inLanguage": "ta-IN",
+    "url": canonicalUrl
+  } %}
+  <script type="application/ld+json">{{ websiteSchema | jsonify | safe }}</script>
+  {% endif %}
+</head>
+<body class="{{ bodyClass or '' }}">
+  {% include "partials/site-header.njk" %}
+  {{ content | safe }}
+  {% include "partials/site-footer.njk" %}
+  <script src="{{ '/assets/js/site.js' | url }}" defer></script>
+</body>
+</html>

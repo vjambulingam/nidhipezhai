@@ -1,0 +1,29 @@
+---
+title: நிதிக் கணிப்பேடுகள்
+description: கடன், சேமிப்பு, வைப்பு மற்றும் முதலீட்டுக்கான தமிழ் நிதிக் கணிப்பேடுகள்.
+permalink: /calculators/index.html
+---
+<main>
+  <header class="directory-intro wrap">
+    <p class="eyebrow eyebrow--light">திட்டமிடுங்கள் · ஒப்பிடுங்கள்</p>
+    <h1>நிதிக் கணிப்பேடுகள்</h1>
+    <p>கடன் தவணை, சேமிப்பு வளர்ச்சி மற்றும் முதலீட்டு மதிப்பீடுகளை உங்கள் உள்ளீடுகளுடன் கணக்கிடுங்கள்.</p>
+  </header>
+  <div class="calculator-groups wrap">
+    {% for group in calculators %}
+    <section class="calculator-group" aria-labelledby="calculator-group-{{ loop.index }}">
+      <h2 id="calculator-group-{{ loop.index }}">{{ group.category }}</h2>
+      <div class="calculator-grid">
+        {% for calculator in group.items %}
+        <a class="calculator-card" href="{{ calculator.url | url }}">
+          <span class="calculator-card__type">{{ calculator.type }}</span>
+          <h3>{{ calculator.title }}</h3>
+          <p>{{ calculator.description }}</p>
+          <span class="calculator-card__open">கணிப்பேட்டைத் திறக்க <span aria-hidden="true">↗</span></span>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endfor %}
+  </div>
+</main>

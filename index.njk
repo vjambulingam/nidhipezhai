@@ -1,0 +1,86 @@
+---
+title: தமிழ் நிதி வலைப்பதிவு
+description: சேமிப்பு, முதலீடு, ஓய்வூதியம் மற்றும் கடன் குறித்த எளிய தமிழ் விளக்கங்கள்.
+permalink: /index.html
+bodyClass: home-page
+---
+<main>
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <div class="hero__copy">
+        <p class="eyebrow"><span class="eyebrow__rule"></span> தமிழில் நிதி அறிவு</p>
+        <h1>பணத்தைப் புரிந்துகொண்டு,<br><span>நம்பிக்கையுடன் திட்டமிடுங்கள்.</span></h1>
+        <p class="hero__summary">சேமிப்பு, முதலீடு, ஓய்வூதியம், கடன் ஆகியவற்றை எளிய தமிழில் அறிந்துகொள்ளுங்கள்.</p>
+        <a class="hero__link" href="#articles">சமீபத்திய கட்டுரைகளைப் பார்க்க <span aria-hidden="true">↓</span></a>
+      </div>
+      {% set featured = collections.articles[0] %}
+      {% if featured %}
+      <a class="featured" href="{{ featured.url | url }}">
+        <span class="featured__eyebrow">புதிய கட்டுரை</span>
+        <span class="featured__topic">{{ featured.data.topics[0] }}</span>
+        <span class="featured__title">{{ featured.data.title }}</span>
+        <span class="featured__description">{{ featured.data.description }}</span>
+        <span class="featured__meta">{{ featured.date | dateTamil }} <span aria-hidden="true">↗</span></span>
+      </a>
+      {% else %}
+      <div class="featured featured--empty">
+        <span class="featured__eyebrow">உங்கள் முதல் கட்டுரை</span>
+        <span class="featured__title">ஒரு Markdown கோப்பைச் சேர்த்து தொடங்குங்கள்.</span>
+        <span class="featured__description">புதிய தலைப்புகள் தானாகவே இங்கே தோன்றும்.</span>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="articles-section wrap" id="articles" aria-labelledby="articles-heading">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow eyebrow--light">வாசிக்கவும் · கற்றுக்கொள்ளவும்</p>
+        <h2 id="articles-heading">நிதிக் கட்டுரைகள்</h2>
+      </div>
+      <label class="search-field">
+        <span class="visually-hidden">கட்டுரைகளைத் தேடுங்கள்</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.8" cy="10.8" r="6.3"></circle><path d="m15.5 15.5 4.2 4.2"></path></svg>
+        <input id="article-search" type="search" placeholder="தலைப்பு அல்லது சொல்லைத் தேடுங்கள்" autocomplete="off">
+      </label>
+    </div>
+
+    <div class="topic-filters" role="group" aria-label="தலைப்பின்படி வடிகட்டுங்கள்">
+      <button class="topic-filter is-active" type="button" data-topic="all" aria-pressed="true">அனைத்தும்</button>
+      {% for topic in collections.topics %}
+      <button class="topic-filter" type="button" data-topic="{{ topic | escape }}" aria-pressed="false">{{ topic }}</button>
+      {% endfor %}
+    </div>
+
+    <p class="results-count" id="results-count" aria-live="polite">{{ collections.articles | length }} கட்டுரைகள்</p>
+    <div class="article-grid" id="article-grid">
+      {% for article in collections.articles %}
+      <article class="article-card" data-article-card data-topics="{{ article.data.topics | join('|') | escape }}" data-search="{{ article.data.title }} {{ article.data.description }} {{ article.data.topics | join(' ') }}">
+        <div class="article-card__meta">
+          <span class="article-card__topic">{{ article.data.topics[0] }}</span>
+          <time datetime="{{ article.date | dateIso }}">{{ article.date | dateTamil }}</time>
+        </div>
+        <h3><a href="{{ article.url | url }}">{{ article.data.title }}</a></h3>
+        <p>{{ article.data.description }}</p>
+        <a class="article-card__read" href="{{ article.url | url }}">கட்டுரையைப் படிக்க <span aria-hidden="true">↗</span></a>
+      </article>
+      {% endfor %}
+    </div>
+    <p class="empty-state" id="empty-state" hidden>இந்தத் தேடலுக்கு ஏற்ற கட்டுரைகள் இல்லை. வேறு சொல்லை முயற்சிக்கவும்.</p>
+  </section>
+
+  <section class="tools-band" id="tools">
+    <div class="wrap tools-band__inner">
+      <div>
+        <p class="eyebrow eyebrow--light">கணக்கிட்டு ஒப்பிடுங்கள்</p>
+        <h2>நிதி கணிப்பேடுகள்</h2>
+      </div>
+      <nav class="tools-links" aria-label="நிதி கணிப்பேடுகள்">
+        <a href="{{ '/calculators/' | url }}">அனைத்து கணிப்பான்களும் <span aria-hidden="true">↗</span></a>
+        <a href="{{ '/calculators/home_loan_emi_calculator.html' | url }}">வீட்டுக் கடன் EMI <span aria-hidden="true">↗</span></a>
+        <a href="{{ '/calculators/mf_sip_calculator.html' | url }}">SIP முதலீடு <span aria-hidden="true">↗</span></a>
+        <a href="{{ '/calculators/ppf_returns_calculator.html' | url }}">PPF வருமானம் <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </section>
+</main>

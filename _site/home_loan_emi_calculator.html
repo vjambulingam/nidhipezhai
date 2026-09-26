@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>முன்கட்டணம் மற்றும் வரிச் சலுகைகளுடன் வீட்டு கடன் தவணை கணிப்பேடு</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+    }
+
+    /* Precision Range Sliders */
+    input[type=range] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 6px;
+      background: #e2e8f0;
+      border-radius: 9999px;
+      outline: none;
+      transition: background 0.2s;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #0D7377;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(13, 115, 119, 0.4);
+      border: 2px solid #ffffff;
+      transition: transform 0.15s ease, background-color 0.15s ease;
+    }
+    input[type=range]::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+      background: #095e61;
+    }
+    input[type=range]::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #0D7377;
+      cursor: pointer;
+      border: 2px solid #ffffff;
+      box-shadow: 0 2px 6px rgba(13, 115, 119, 0.4);
+    }
+
+    /* Print Formatting */
+    @media print {
+      .no-print { display: none !important; }
+      body { background-color: #ffffff !important; }
+      .shadow-sm, .shadow-md, .shadow-lg, .shadow-xl { box-shadow: none !important; }
+      .border { border-color: #cbd5e1 !important; }
+    }
+
+    .calculator-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 12px 16px;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .calculator-nav a {
+      color: #095e61;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 7px 10px;
+      border-radius: 7px;
+    }
+
+    .calculator-nav a:hover {
+      background: #e0f2fe;
+    }
+  </style>
+  <link rel="stylesheet" href="assets/css/calculator-theme.css">
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased">
+
+  <!-- Header -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="calc-site-header__inner flex items-center justify-between h-16">
+        <div class="calc-site-header__identity flex items-center space-x-3">
+          <a class="calc-site-logo" href="index.html" aria-label="நிதிப்பேழை முகப்பு"><img src="assets/images/nidhipezhai-logo.png" alt=""></a>
+          <div>
+            <div class="flex items-center gap-2">
+              <h1 class="text-xl font-bold tracking-tight text-slate-900 leading-tight">
+                வீட்டு கடன் தவணைக் கணிப்பேடு
+              </h1>
+              <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-sky-100 text-sky-800 uppercase tracking-wider">
+                மேம்பட்ட திட்டமிடல்
+              </span>
+            </div>
+            <p class="text-xs text-slate-500 font-medium hidden sm:block">
+              முன்கட்டணம் &bull; தவணை அட்டவணைக் கணிப்பேடு &bull; வரிச் சலுகைகள் &bull; கடன் திருப்பிச் செலுத்தல்
+            </p>
+          </div>
+        </div>
+
+        <nav class="calc-site-header__nav" aria-label="முதன்மை வழிசெலுத்தல்">
+          <a class="calc-nav-home" href="index.html">முகப்பு</a>
+          <a class="calc-nav-articles" href="index.html#articles">கட்டுரைகள்</a>
+          <a class="calc-nav-directory" href="calculators/">கணிப்பான்கள்</a>
+        </nav>
+
+        <!-- Quick actions -->
+        <div class="calc-site-header__actions flex items-center space-x-2">
+          <button id="btnPrint" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+            அச்சிடு
+          </button>
+          <button id="btnExportCSV" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-700 rounded-lg shadow-sm transition">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            அட்டவணையை ஏற்றுமதி செய் (CSV)
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full space-y-6">
+
+    <!-- Top Grid: Left (Inputs & Prepayments) | Right (Summary & Donut) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+
+      <!-- Left Column: Inputs & Advanced Controls (7 Cols) -->
+      <div class="lg:col-span-7 space-y-6">
+
+        <!-- Card 1: Core Home Loan Parameters -->
+        <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-6">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <h2 class="text-base font-bold text-slate-800 flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-sky-600"></span>
+              கடன் விவரங்கள்
+            </h2>
+            <span class="text-xs font-medium text-slate-400">அனைத்து கணக்கீடுகளும் தானாகப் புதுப்பிக்கப்படும்</span>
+          </div>
+
+          <!-- Parameter 1: Loan Amount -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <label for="amountInput" class="text-sm font-semibold text-slate-700 flex items-center gap-2">
+                வீட்டு கடன் தொகை
+                <span id="amountInWords" class="text-xs font-semibold text-sky-700 bg-sky-50 px-2 py-0.5 rounded-md border border-sky-100">₹ 50 லட்சம்</span>
+              </label>
+              <div class="relative w-40 sm:w-48">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 font-semibold text-sm">₹</span>
+                <input type="number" id="amountInput" min="100000" max="50000000" step="50000" value="5000000"
+                  class="w-full pl-8 pr-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 text-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none">
+              </div>
+            </div>
+            <input type="range" id="amountSlider" min="100000" max="50000000" step="50000" value="5000000">
+            <div class="flex justify-between text-[11px] font-medium text-slate-400">
+              <button type="button" class="preset-amt hover:text-sky-600" data-amt="2500000">₹25 லட்சம்</button>
+              <button type="button" class="preset-amt hover:text-sky-600" data-amt="5000000">₹50 லட்சம்</button>
+              <button type="button" class="preset-amt hover:text-sky-600" data-amt="7500000">₹75 லட்சம்</button>
+              <button type="button" class="preset-amt hover:text-sky-600" data-amt="10000000">₹1 கோடி</button>
+              <button type="button" class="preset-amt hover:text-sky-600" data-amt="20000000">₹2 கோடி</button>
+              <button type="button" class="preset-amt hover:text-sky-600" data-amt="50000000">₹5 கோடி</button>
+            </div>
+          </div>
+
+          <!-- Parameter 2: Interest Rate -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <label for="rateInput" class="text-sm font-semibold text-slate-700">வட்டி விகிதம் (% ஆண்டுக்கு)</label>
+              <div class="relative w-28 sm:w-32">
+                <input type="number" id="rateInput" min="5" max="18" step="0.05" value="8.5"
+                  class="w-full pr-8 pl-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 text-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none">
+                <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-400 font-semibold text-sm">%</span>
+              </div>
+            </div>
+            <input type="range" id="rateSlider" min="5" max="18" step="0.05" value="8.5">
+            <div class="flex justify-between text-[11px] font-medium text-slate-400">
+              <button type="button" class="preset-rate hover:text-sky-600" data-rate="7.5">7.5%</button>
+              <button type="button" class="preset-rate hover:text-sky-600" data-rate="8.25">8.25%</button>
+              <button type="button" class="preset-rate hover:text-sky-600" data-rate="8.5">8.5%</button>
+              <button type="button" class="preset-rate hover:text-sky-600" data-rate="9.0">9.0%</button>
+              <button type="button" class="preset-rate hover:text-sky-600" data-rate="9.5">9.5%</button>
+              <button type="button" class="preset-rate hover:text-sky-600" data-rate="10.5">10.5%</button>
+            </div>
+          </div>
+
+          <!-- Parameter 3: Loan Tenure -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <label for="tenureInput" class="text-sm font-semibold text-slate-700">கடன் காலம்</label>
+              <div class="flex items-center space-x-2">
+                <div class="relative w-24">
+                  <input type="number" id="tenureInput" min="1" max="30" step="1" value="20"
+                    class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 text-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none">
+                </div>
+                <!-- Yr / Mo Toggle Switch -->
+                <div class="inline-flex rounded-lg border border-slate-300 bg-slate-100 p-0.5 text-xs font-semibold">
+                  <button type="button" id="tenureYrBtn" class="px-2.5 py-1 rounded-md bg-white text-sky-700 shadow-xs">ஆண்டு</button>
+                  <button type="button" id="tenureMoBtn" class="px-2.5 py-1 rounded-md text-slate-500 hover:text-slate-900">மாதம்</button>
+                </div>
+              </div>
+            </div>
+            <input type="range" id="tenureSlider" min="1" max="30" step="1" value="20">
+            <div id="tenureScaleMarks" class="flex justify-between text-[11px] font-medium text-slate-400">
+              <span>5 ஆண்டு</span>
+              <span>10 ஆண்டு</span>
+              <span>15 ஆண்டு</span>
+              <span>20 ஆண்டு</span>
+              <span>25 ஆண்டு</span>
+              <span>30 ஆண்டு</span>
+            </div>
+          </div>
+
+          <!-- Fees & Start Date Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-slate-100">
+            <!-- Processing Fees -->
+            <div class="space-y-1.5">
+              <div class="flex justify-between items-center">
+                  <label for="feeInput" class="text-xs font-semibold text-slate-700">கட்டணங்கள் மற்றும் செலவுகள்</label>
+                <div class="flex items-center gap-1 text-[11px]">
+                  <button type="button" id="feePercentToggle" class="px-1.5 py-0.5 rounded text-sky-700 bg-sky-100 font-bold">%</button>
+                  <button type="button" id="feeFixedToggle" class="px-1.5 py-0.5 rounded text-slate-500 hover:text-slate-800">₹</button>
+                </div>
+              </div>
+              <div class="relative">
+                <input type="number" id="feeInput" min="0" max="1000000" step="0.05" value="0.5"
+                  class="w-full pl-3 pr-8 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+                <span id="feeSymbol" class="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-400 font-semibold text-xs">%</span>
+              </div>
+              <span id="feeAmountPreview" class="text-[11px] text-slate-500 block text-right font-medium">மதிப்பீடு: ₹25,000</span>
+            </div>
+
+            <!-- Loan Start Date -->
+            <div class="space-y-1.5">
+              <label for="startDateInput" class="text-xs font-semibold text-slate-700">கடன் தொடங்கும் தேதி</label>
+              <input type="month" id="startDateInput"
+                class="w-full px-3 py-1.5 border border-slate-300 rounded-lg font-medium text-slate-800 text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+              <span class="text-[11px] text-slate-400 block font-medium">முதல் தவணை மாதம்</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Card 2: Advanced Prepayment & Extra Payments Accordion -->
+        <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-base">
+                ⚡
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-slate-800">முன்கட்டணம் மற்றும் பகுதி செலுத்துதல்</h3>
+                <p class="text-xs text-slate-500">கடனை விரைவாக முடித்து, வட்டியைப் பெரிதும் குறைக்கவும்</p>
+              </div>
+            </div>
+            <label class="relative inline-flex items-center cursor-pointer">
+              <input type="checkbox" id="prepaymentToggle" class="sr-only peer" checked>
+              <div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-600"></div>
+            </label>
+          </div>
+
+          <div id="prepaymentSection" class="space-y-4 pt-3 border-t border-slate-100">
+            <!-- Monthly & Annual extra inputs -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="space-y-1.5">
+                <label for="monthlyExtraInput" class="text-xs font-semibold text-slate-700 flex items-center justify-between">
+                  <span>மாதாந்திர கூடுதல் தவணை (₹)</span>
+                  <span class="text-[10px] text-emerald-600 font-bold uppercase">ஒவ்வொரு மாதமும்</span>
+                </label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 text-xs font-semibold">₹</span>
+                  <input type="number" id="monthlyExtraInput" min="0" max="500000" step="1000" value="5000"
+                    class="w-full pl-7 pr-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 text-sm focus:ring-2 focus:ring-emerald-500 outline-none">
+                </div>
+              </div>
+
+              <div class="space-y-1.5">
+                <label for="yearlyExtraInput" class="text-xs font-semibold text-slate-700 flex items-center justify-between">
+                  <span>ஆண்டு மொத்தத் தொகை (₹)</span>
+                  <span class="text-[10px] text-emerald-600 font-bold uppercase">ஆண்டுக்கு ஒருமுறை</span>
+                </label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 text-xs font-semibold">₹</span>
+                  <input type="number" id="yearlyExtraInput" min="0" max="5000000" step="10000" value="50000"
+                    class="w-full pl-7 pr-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 text-sm focus:ring-2 focus:ring-emerald-500 outline-none">
+                </div>
+              </div>
+            </div>
+
+            <!-- Custom One-Time Prepayment Entries -->
+            <div class="space-y-2 pt-2">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-semibold text-slate-700">தனிப்பயன் ஒருமுறை முன்கட்டணங்கள்</span>
+                <button type="button" id="btnAddLumpSum" class="text-xs font-semibold text-emerald-700 hover:text-emerald-800 inline-flex items-center gap-1 bg-emerald-50 px-2 py-1 rounded-md border border-emerald-200/60">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                  முன்கட்டணத்தைச் சேர்
+                </button>
+              </div>
+
+              <div id="lumpSumList" class="space-y-2">
+                <!-- Dynamically populated or customized -->
+              </div>
+            </div>
+
+            <!-- Prepayment Impact Highlight Banner -->
+            <div id="prepaymentSavingsBanner" class="p-3.5 rounded-xl bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 text-emerald-900 flex items-start gap-3">
+              <span class="text-emerald-600 text-xl font-bold">✨</span>
+              <div class="text-xs space-y-0.5">
+                <p class="font-bold text-emerald-950 text-sm" id="bannerSavingsHighlight">வட்டியில் ₹18,45,210 சேமிப்பீர்கள்!</p>
+                <p class="text-emerald-800" id="bannerTenureHighlight">உங்கள் கடன் காலம் 6 ஆண்டுகள் 4 மாதங்கள் குறைக்கப்படும்.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Results Summary, Donut Chart & Comparison (5 Cols) -->
+      <div class="lg:col-span-5 space-y-6">
+
+        <!-- Monthly தவணை Highlight Card -->
+        <div class="bg-gradient-to-br from-sky-600 via-sky-700 to-indigo-800 rounded-2xl p-6 text-white shadow-lg relative overflow-hidden">
+          <div class="absolute -right-8 -bottom-8 w-36 h-36 bg-white/10 rounded-full blur-sm pointer-events-none"></div>
+          <div class="flex justify-between items-start">
+            <div>
+              <p class="text-xs uppercase tracking-wider font-semibold text-sky-200">மாதாந்திர வீட்டு கடன் தவணை</p>
+              <div class="flex items-baseline gap-2 mt-1">
+                <span class="text-3xl sm:text-4xl font-extrabold tracking-tight" id="emiDisplay">₹ 43,391</span>
+                <span class="text-xs text-sky-200 font-medium">/ மாதம்</span>
+              </div>
+            </div>
+            <span class="px-2.5 py-1 bg-white/15 backdrop-blur-md rounded-lg text-[11px] font-semibold text-white uppercase tracking-wider border border-white/20">
+              நிலையான தவணை
+            </span>
+          </div>
+
+          <div class="mt-4 pt-4 border-t border-white/15 grid grid-cols-2 gap-2 text-xs">
+            <div>
+              <span class="text-sky-200 block text-[11px]">கடன் முடியும் தேதி</span>
+              <span id="loanPayoffDate" class="font-bold text-white text-sm">அக். 2046</span>
+            </div>
+            <div>
+              <span class="text-sky-200 block text-[11px]">மொத்த கூடுதல் செலுத்துதல்</span>
+              <span id="totalExtraPaidDisplay" class="font-bold text-white text-sm">₹ 0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Donut Chart & Detailed Cost Breakdown -->
+        <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-6">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <h3 class="text-base font-bold text-slate-800">மொத்த செலுத்துதல் விவரம்</h3>
+            <span class="text-xs text-slate-400 font-medium">அசல் + வட்டி + கட்டணம்</span>
+          </div>
+
+          <div class="relative w-48 h-48 mx-auto flex items-center justify-center">
+            <canvas id="breakdownChart"></canvas>
+            <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
+              <span class="text-[10px] uppercase font-bold text-slate-400">மொத்த செலவு</span>
+              <span id="chartCenterTotal" class="text-xs font-bold text-slate-800">₹ 1.04 கோடி</span>
+            </div>
+          </div>
+
+          <!-- Numerical Breakdown -->
+          <div class="space-y-3 text-sm">
+            <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-50 border-l-4 border-sky-500">
+              <div>
+                <span class="text-xs font-semibold text-slate-600 block">அசல் தொகை</span>
+                <span id="summaryPrincipal" class="font-bold text-slate-900">₹ 50,00,000</span>
+              </div>
+              <span id="principalRatio" class="text-xs font-bold text-sky-700 bg-sky-100 px-2 py-0.5 rounded">48.0%</span>
+            </div>
+
+            <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-50 border-l-4 border-amber-500">
+              <div>
+                <span class="text-xs font-semibold text-slate-600 block">மொத்த வட்டி</span>
+                <span id="summaryInterest" class="font-bold text-slate-900">₹ 54,13,879</span>
+              </div>
+              <span id="interestRatio" class="text-xs font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">52.0%</span>
+            </div>
+
+            <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-50 border-l-4 border-indigo-500">
+              <div>
+                <span class="text-xs font-semibold text-slate-600 block">செயலாக்கக் கட்டணங்கள் மற்றும் செலவுகள்</span>
+                <span id="summaryFees" class="font-bold text-slate-900">₹ 25,000</span>
+              </div>
+              <span id="feesRatio" class="text-xs font-bold text-indigo-700 bg-indigo-100 px-2 py-0.5 rounded">0.2%</span>
+            </div>
+
+            <div class="pt-2 border-t border-slate-200 flex items-center justify-between">
+              <span class="text-xs uppercase tracking-wider font-bold text-slate-500">மொத்த செலுத்துதல்</span>
+              <span id="summaryTotal" class="text-lg font-extrabold text-slate-900">₹ 1,04,38,879</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Indian Income Tax Benefits Summary (Sec 80C & Sec 24b) -->
+        <div class="bg-gradient-to-br from-indigo-50/70 to-sky-50/70 rounded-2xl p-5 border border-indigo-100 space-y-3">
+          <div class="flex items-center justify-between">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-indigo-900 flex items-center gap-1.5">
+              <span>🏛️</span> வரிச் சலுகைகள் சுருக்கம் (ஆண்டு)
+            </h4>
+            <span class="text-[10px] text-indigo-600 font-semibold bg-indigo-100 px-2 py-0.5 rounded">பழைய வரி முறை</span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3 text-xs">
+            <div class="p-2.5 rounded-lg bg-white border border-indigo-100">
+              <span class="text-[11px] text-slate-500 font-medium block">பிரிவு 80C (அசல்)</span>
+              <span id="tax80CDisplay" class="font-bold text-indigo-950 text-sm">₹ 1,50,000</span>
+              <span class="text-[10px] text-slate-400 block">அதிகபட்ச விலக்கு ₹1.5 லட்சம்</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-white border border-indigo-100">
+              <span class="text-[11px] text-slate-500 font-medium block">பிரிவு 24(b) (வட்டி)</span>
+              <span id="tax24Display" class="font-bold text-indigo-950 text-sm">₹ 2,00,000</span>
+              <span class="text-[10px] text-slate-400 block">அதிகபட்ச விலக்கு ₹2.0 லட்சம்</span>
+            </div>
+          </div>
+
+          <p class="text-[11px] text-slate-500 leading-snug">
+            முதல் ஆண்டின் மதிப்பிடப்பட்ட வரி விலக்கு: <strong id="totalTaxDeductionEst" class="text-indigo-900">₹ 3,50,000</strong>. 30% வரி விகிதத்தில், முதல் நிதியாண்டில் சுமார் <strong id="totalTaxSavingsEst" class="text-emerald-700">₹ 1,09,200</strong> வரியைச் சேமிக்கலாம்!
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Amortization Visual Chart -->
+    <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-slate-100">
+        <div>
+          <h2 class="text-lg font-bold text-slate-900">கடன் திருப்பிச் செலுத்தும் அட்டவணை மற்றும் மீதத் தொகை வளைவு</h2>
+          <p class="text-xs text-slate-500">அசல், வட்டி, முன்கட்டணம் மற்றும் மீதமுள்ள தொகையின் ஆண்டு விவரம்</p>
+        </div>
+        <!-- Toggle Yearly vs Cumulative -->
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-semibold text-slate-500">காட்சி:</span>
+          <div class="inline-flex rounded-lg border border-slate-300 bg-slate-100 p-0.5 text-xs font-semibold">
+            <button type="button" id="chartViewYearly" class="px-2.5 py-1 rounded-md bg-white text-sky-700 shadow-xs">ஆண்டு</button>
+            <button type="button" id="chartViewCumulative" class="px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900">ஒட்டுமொத்தம்</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chart Canvas -->
+      <div class="w-full h-72 sm:h-80 relative">
+        <canvas id="amortizationBarChart"></canvas>
+      </div>
+
+      <!-- Chart Legend explanation -->
+      <div class="flex flex-wrap items-center justify-center gap-6 pt-1 text-xs font-semibold text-slate-600">
+        <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-xs bg-sky-500 inline-block"></span> செலுத்திய அசல்</span>
+        <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-xs bg-amber-500 inline-block"></span> செலுத்திய வட்டி</span>
+        <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-xs bg-emerald-500 inline-block"></span> கூடுதல் / முன்கட்டணம்</span>
+        <span class="flex items-center gap-1.5"><span class="w-3 h-1.5 rounded-full bg-slate-700 inline-block"></span> நிலுவைத் தொகை</span>
+      </div>
+    </div>
+
+    <!-- Detailed Amortization Table -->
+    <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-slate-100">
+        <div>
+          <h2 class="text-lg font-bold text-slate-900">முழுமையான கடன் திருப்பிச் செலுத்தும் அட்டவணை</h2>
+          <p class="text-xs text-slate-500">தனிப்பட்ட மாதாந்திர செலுத்துதல்கள் மற்றும் நிலுவைகளைப் பார்க்க எந்த ஆண்டு வரியையும் கிளிக் செய்யவும்</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="btnExpandAll" type="button" class="px-3 py-1.5 text-xs font-semibold text-slate-600 bg-slate-100 hover:bg-slate-200 rounded-lg transition">அனைத்து ஆண்டுகளையும் விரி</button>
+          <button id="btnCollapseAll" type="button" class="px-3 py-1.5 text-xs font-semibold text-slate-600 bg-slate-100 hover:bg-slate-200 rounded-lg transition">அனைத்தையும் சுருக்கு</button>
+        </div>
+      </div>
+
+      <!-- Table responsive wrapper -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs sm:text-sm border-collapse" id="amortizationTable">
+          <thead>
+            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 uppercase font-semibold text-[11px] tracking-wider">
+              <th class="py-3 px-4">காலம் (ஆண்டு / மாதம்)</th>
+              <th class="py-3 px-4 text-right">தொடக்க நிலுவை</th>
+              <th class="py-3 px-4 text-right text-sky-700">அசல் (A)</th>
+              <th class="py-3 px-4 text-right text-amber-700">வட்டி (B)</th>
+              <th class="py-3 px-4 text-right text-emerald-700">முன்கட்டணம் (C)</th>
+              <th class="py-3 px-4 text-right">மொத்த செலுத்துதல் (A+B+C)</th>
+              <th class="py-3 px-4 text-right">இறுதி நிலுவை</th>
+              <th class="py-3 px-4 text-right">செலுத்திய கடன்</th>
+            </tr>
+          </thead>
+          <tbody id="amortizationBody" class="divide-y divide-slate-100 text-slate-700">
+            <!-- Dynamically populated rows -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="calc-site-footer bg-white border-t border-slate-200 mt-12 py-6 text-center text-xs text-slate-500 no-print">
+    <div class="calc-site-footer__inner max-w-7xl mx-auto px-4">
+      <div class="calc-site-footer__main">
+        <div>
+          <a class="calc-site-footer__brand" href="index.html">நிதிப்பேழை</a>
+          <p class="calc-site-footer__tagline">பணத்தைப் புரிந்துகொள்ளவும், நிதி முடிவுகளைப் பற்றி கற்றுக்கொள்ளவும் தமிழில் ஒரு இடம்.</p>
+        </div>
+        <nav class="calc-site-footer__links" aria-label="தள இணைப்புகள்">
+          <a href="index.html">முகப்பு</a>
+          <a href="index.html#articles">கட்டுரைகள்</a>
+          <a href="calculators/">கணிப்பான்கள்</a>
+          <a href="about/">எங்களைப் பற்றி</a>
+          <a href="disclaimer/">பொறுப்புத் துறப்பு</a>
+          <a href="license/">உரிமம்</a>
+        </nav>
+      </div>
+      <p class="font-medium text-slate-700">முழுமையான வீட்டு கடன் தவணை மற்றும் முன்கட்டணக் கணிப்பேடு</p>
+      <p class="text-slate-400">நிலையான மாதாந்திர குறையும் நிலுவை முறையின் அடிப்படையில் கணக்கீடுகள் செய்யப்படுகின்றன. இந்திய வருமான வரிச் சட்ட வழிகாட்டுதலின்படி பிரிவு 80C மற்றும் 24(b) அடிப்படையில் வரிகள் கணக்கிடப்படுகின்றன.</p>
+      <p class="text-slate-500">பொறுப்புத் துறப்பு: இந்தக் கணிப்பேடு கல்வி மற்றும் விழிப்புணர்வு நோக்கத்திற்காக மட்டுமே. காட்டப்படும் கணக்கீடுகளின் துல்லியம் அல்லது முழுமைக்கு உத்தரவாதம் அளிக்கப்படாது; அவற்றின் அடிப்படையில் எடுக்கப்படும் முடிவுகள் அல்லது ஏற்படும் இழப்புகளுக்கு நாங்கள் பொறுப்பேற்கமாட்டோம். முதலீடு அல்லது கடன் முடிவெடுப்பதற்கு முன் தகுதியான நிதி ஆலோசகரை அணுகவும்.</p>
+      <p class="calc-site-footer__license">இந்தத் தளத்தின் உள்ளடக்கம் <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> உரிமத்தின் கீழ் பகிரப்படுகிறது.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Global State Container
+    const state = {
+      loanAmount: 5000000,
+      annualRate: 8.5,
+      tenureValue: 20,
+      tenureType: 'yr', // 'yr' or 'mo'
+      feeType: 'percent', // 'percent' or 'fixed'
+      feeValue: 0.5,
+      startDate: (() => {
+        const d = new Date();
+        const y = d.getFullYear();
+        const m = String(d.getMonth() + 1).padStart(2, '0');
+        return `${y}-${m}`;
+      })(),
+      prepaymentEnabled: true,
+      monthlyExtra: 5000,
+      yearlyExtra: 50000,
+      customLumpSums: [
+        { monthIndex: 12, amount: 100000 } // Example 1L at end of 1st year
+      ],
+      chartMode: 'yearly', // 'yearly' or 'cumulative'
+      scheduleData: [],
+      calculatedMetrics: {}
+    };
+
+    let breakdownChartInstance = null;
+    let amortizationBarChartInstance = null;
+
+    // Currency Formatter (Indian numbering system: Lakhs / Crores)
+    function formatINR(val, symbol = true) {
+      if (isNaN(val)) return symbol ? '₹ 0' : '0';
+      const num = Math.round(val);
+      const str = num.toLocaleString('en-IN');
+      return symbol ? `₹ ${str}` : str;
+    }
+
+    // Amount to word representation
+    function formatAmountToWords(amount) {
+      if (amount >= 10000000) {
+        const cr = (amount / 10000000).toFixed(2);
+        return `₹ ${parseFloat(cr)} கோடி`;
+      } else if (amount >= 100000) {
+        const lk = (amount / 100000).toFixed(2);
+        return `₹ ${parseFloat(lk)} லட்சம்`;
+      } else if (amount >= 1000) {
+        return `₹ ${(amount / 1000).toFixed(1)} ஆயிரம்`;
+      }
+      return `₹ ${Math.round(amount)}`;
+    }
+
+    function calculateFullLoan() {
+      const P = state.loanAmount;
+      const annualRate = state.annualRate;
+      const totalMonths = state.tenureType === 'yr' ? state.tenureValue * 12 : state.tenureValue;
+      const r = (annualRate / 12) / 100;
+
+      // Base Regular Monthly தவணை formula: [P * r * (1+r)^N] / [(1+r)^N - 1]
+      let baseEMI = 0;
+      if (r === 0) {
+        baseEMI = P / totalMonths;
+      } else {
+        const factor = Math.pow(1 + r, totalMonths);
+        baseEMI = (P * r * factor) / (factor - 1);
+      }
+
+      // Processing Fees
+      let totalFees = 0;
+      if (state.feeType === 'percent') {
+        totalFees = (P * state.feeValue) / 100;
+      } else {
+        totalFees = state.feeValue;
+      }
+
+      // 1. Calculate Standard Baseline (WITHOUT prepayments) for direct savings comparison
+      let baselineInterest = 0;
+      let tempBalance = P;
+      for (let m = 1; m <= totalMonths; m++) {
+        const intAmt = tempBalance * r;
+        let princAmt = baseEMI - intAmt;
+        if (princAmt > tempBalance) princAmt = tempBalance;
+        tempBalance -= princAmt;
+        baselineInterest += intAmt;
+        if (tempBalance <= 0) break;
+      }
+
+      // 2. Calculate Actual Schedule (WITH prepayments if active)
+      let balance = P;
+      let totalInterestPaid = 0;
+      let totalExtraPaid = 0;
+      let actualMonthsTaken = 0;
+
+      const [startYearStr, startMonthStr] = state.startDate.split('-');
+      let currentCalYear = parseInt(startYearStr, 10);
+      let currentCalMonth = parseInt(startMonthStr, 10); // 1 to 12
+
+      const yearlySummary = [];
+      let currentYearObj = null;
+      let yrPrincipal = 0, yrInterest = 0, yrPrepay = 0;
+      let yrStartBalance = balance;
+      let monthRows = [];
+
+      for (let m = 1; m <= totalMonths; m++) {
+        actualMonthsTaken = m;
+        const interestForMonth = balance * r;
+        let regularPrincipal = baseEMI - interestForMonth;
+
+        // Extra Prepayment check
+        let extraPayment = 0;
+        if (state.prepaymentEnabled) {
+          extraPayment += state.monthlyExtra;
+          // Annual Lump sum added on every 12th installment
+          if (m % 12 === 0) {
+            extraPayment += state.yearlyExtra;
+          }
+          // Custom specific lump sums
+          state.customLumpSums.forEach(ls => {
+            if (ls.monthIndex === m) {
+              extraPayment += ls.amount;
+            }
+          });
+        }
+
+        // Cap extra if balance is exceeded
+        let totalPrincipalApplied = regularPrincipal + extraPayment;
+        if (totalPrincipalApplied >= balance) {
+          totalPrincipalApplied = balance;
+          if (regularPrincipal >= balance) {
+            regularPrincipal = balance;
+            extraPayment = 0;
+          } else {
+            extraPayment = balance - regularPrincipal;
+          }
+        }
+
+        const closingBalance = Math.max(0, balance - totalPrincipalApplied);
+
+        yrPrincipal += regularPrincipal;
+        yrInterest += interestForMonth;
+        yrPrepay += extraPayment;
+        totalInterestPaid += interestForMonth;
+        totalExtraPaid += extraPayment;
+
+        // Month Name formatting
+        const monthDate = new Date(currentCalYear, currentCalMonth - 1, 1);
+        const monthName = monthDate.toLocaleString('ta-IN', { month: 'short', year: 'numeric' });
+
+        monthRows.push({
+          monthIndex: m,
+          monthLabel: monthName,
+          openingBalance: balance,
+          principal: regularPrincipal,
+          interest: interestForMonth,
+          prepayment: extraPayment,
+          total: regularPrincipal + interestForMonth + extraPayment,
+          closingBalance: closingBalance
+        });
+
+        balance = closingBalance;
+
+        // Increment Month/Year
+        currentCalMonth++;
+        if (currentCalMonth > 12) {
+          currentCalMonth = 1;
+          currentCalYear++;
+        }
+
+        // Year end boundary or payoff reached
+        const isYearEnd = (m % 12 === 0) || (balance <= 0) || (m === totalMonths);
+        if (isYearEnd) {
+          const yearNumber = Math.ceil(m / 12);
+          const totalPaidCum = P - balance;
+          const paidPercentage = ((totalPaidCum / P) * 100).toFixed(1);
+
+          yearlySummary.push({
+            year: yearNumber,
+            yearName: `ஆண்டு ${yearNumber}`,
+            openingBalance: yrStartBalance,
+            principal: yrPrincipal,
+            interest: yrInterest,
+            prepayment: yrPrepay,
+            total: yrPrincipal + yrInterest + yrPrepay,
+            closingBalance: balance,
+            paidPercentage: paidPercentage,
+            months: [...monthRows]
+          });
+
+          // Reset year aggregators
+          yrPrincipal = 0;
+          yrInterest = 0;
+          yrPrepay = 0;
+          monthRows = [];
+          yrStartBalance = balance;
+        }
+
+        if (balance <= 0) break;
+      }
+
+      // Calculate Savings & Tenure difference
+      const interestSaved = Math.max(0, baselineInterest - totalInterestPaid);
+      const monthsSaved = totalMonths - actualMonthsTaken;
+      const yrsSaved = Math.floor(monthsSaved / 12);
+      const remMonthsSaved = monthsSaved % 12;
+
+      // Estimated Final Payoff Date
+      const lastMonthObj = yearlySummary[yearlySummary.length - 1]?.months?.slice(-1)[0];
+      const payoffDateStr = lastMonthObj ? lastMonthObj.monthLabel : 'முடிந்தது';
+
+      return {
+        baseEMI: Math.round(baseEMI),
+        totalInterest: Math.round(totalInterestPaid),
+        totalFees: Math.round(totalFees),
+        totalPayment: Math.round(P + totalInterestPaid + totalFees),
+        totalExtraPaid: Math.round(totalExtraPaid),
+        interestSaved: Math.round(interestSaved),
+        monthsSaved,
+        yrsSaved,
+        remMonthsSaved,
+        actualMonthsTaken,
+        payoffDate: payoffDateStr,
+        schedule: yearlySummary,
+        year1Principal: yearlySummary[0]?.principal || 0,
+        year1Interest: yearlySummary[0]?.interest || 0
+      };
+    }
+
+    function renderCharts(metrics) {
+      const { totalInterest, totalFees, totalPayment, schedule } = metrics;
+      const P = state.loanAmount;
+
+      // 1. Donut Chart: Breakdown
+      const donutCtx = document.getElementById('breakdownChart').getContext('2d');
+      const donutData = {
+        labels: ['அசல் தொகை', 'மொத்த வட்டி', 'கட்டணங்கள் மற்றும் செலவுகள்'],
+        datasets: [{
+          data: [P, totalInterest, totalFees],
+          backgroundColor: ['#0D7377', '#f59e0b', '#247C72'],
+          hoverBackgroundColor: ['#095e61', '#d97706', '#176b58'],
+          borderWidth: 2,
+          borderColor: '#ffffff'
+        }]
+      };
+
+      if (breakdownChartInstance) {
+        breakdownChartInstance.data = donutData;
+        breakdownChartInstance.update();
+      } else {
+        breakdownChartInstance = new Chart(donutCtx, {
+          type: 'doughnut',
+          data: donutData,
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '72%',
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: function(ctx) {
+                    const val = ctx.parsed;
+                    const pct = ((val / totalPayment) * 100).toFixed(1);
+                    return ` ${ctx.label}: ${formatINR(val)} (${pct}%)`;
+                  }
+                }
+              }
+            }
+          }
+        });
+      }
+
+      // 2. Stacked Bar + Line Chart
+      const barCtx = document.getElementById('amortizationBarChart').getContext('2d');
+      const labels = schedule.map(y => `ஆண்டு ${y.year}`);
+
+      let principalData = [];
+      let interestData = [];
+      let prepayData = [];
+      let balanceData = [];
+
+      if (state.chartMode === 'yearly') {
+        principalData = schedule.map(y => Math.round(y.principal));
+        interestData = schedule.map(y => Math.round(y.interest));
+        prepayData = schedule.map(y => Math.round(y.prepayment));
+        balanceData = schedule.map(y => Math.round(y.closingBalance));
+      } else {
+        // Cumulative
+        let cP = 0, cI = 0, cExtra = 0;
+        schedule.forEach(y => {
+          cP += y.principal;
+          cI += y.interest;
+          cExtra += y.prepayment;
+          principalData.push(Math.round(cP));
+          interestData.push(Math.round(cI));
+          prepayData.push(Math.round(cExtra));
+          balanceData.push(Math.round(y.closingBalance));
+        });
+      }
+
+      const barData = {
+        labels: labels,
+        datasets: [
+          {
+            type: 'line',
+            label: 'நிலுவைத் தொகை',
+            data: balanceData,
+            borderColor: '#334155',
+            backgroundColor: '#334155',
+            borderWidth: 2.5,
+            pointRadius: schedule.length > 20 ? 1 : 3,
+            yAxisID: 'y1',
+            tension: 0.15
+          },
+          {
+            type: 'bar',
+            label: 'செலுத்திய அசல்',
+            data: principalData,
+            backgroundColor: '#0D7377',
+            stack: 'payments',
+            borderRadius: 3
+          },
+          {
+            type: 'bar',
+            label: 'செலுத்திய வட்டி',
+            data: interestData,
+            backgroundColor: '#f59e0b',
+            stack: 'payments',
+            borderRadius: 3
+          },
+          {
+            type: 'bar',
+            label: 'முன்கட்டணங்கள்',
+            data: prepayData,
+            backgroundColor: '#10b981',
+            stack: 'payments',
+            borderRadius: 3
+          }
+        ]
+      };
+
+      if (amortizationBarChartInstance) {
+        amortizationBarChartInstance.data = barData;
+        amortizationBarChartInstance.update();
+      } else {
+        amortizationBarChartInstance = new Chart(barCtx, {
+          data: barData,
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: { mode: 'index', intersect: false },
+            scales: {
+              x: {
+                grid: { display: false },
+                ticks: { font: { size: 10 } }
+              },
+              y: {
+                stacked: true,
+                position: 'left',
+                grid: { color: '#f1f5f9' },
+                ticks: {
+                  font: { size: 10 },
+                  callback: (v) => formatAmountToWords(v)
+                }
+              },
+              y1: {
+                position: 'right',
+                grid: { drawOnChartArea: false },
+                ticks: {
+                  font: { size: 10 },
+                  callback: (v) => formatAmountToWords(v)
+                }
+              }
+            },
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: function(ctx) {
+                    return ` ${ctx.dataset.label}: ${formatINR(ctx.parsed.y)}`;
+                  }
+                }
+              }
+            }
+          }
+        });
+      }
+    }
+
+    function renderTable(schedule) {
+      const tbody = document.getElementById('amortizationBody');
+      tbody.innerHTML = '';
+
+      schedule.forEach((row) => {
+        // Parent Year Header Row
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-sky-50/70 transition-colors cursor-pointer group border-b border-slate-100 font-medium';
+        tr.dataset.year = row.year;
+        tr.innerHTML = `
+          <td class="py-3 px-4 font-bold text-sky-700 flex items-center gap-2">
+            <svg id="arrow-${row.year}" class="w-4 h-4 transform transition-transform text-slate-400 group-hover:text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+            ${row.yearName}
+          </td>
+          <td class="py-3 px-4 text-right text-slate-600">${formatINR(row.openingBalance)}</td>
+          <td class="py-3 px-4 text-right text-sky-700 font-semibold">${formatINR(row.principal)}</td>
+          <td class="py-3 px-4 text-right text-amber-700 font-semibold">${formatINR(row.interest)}</td>
+          <td class="py-3 px-4 text-right text-emerald-700 font-semibold">${row.prepayment > 0 ? formatINR(row.prepayment) : '-'}</td>
+          <td class="py-3 px-4 text-right text-slate-900 font-bold">${formatINR(row.total)}</td>
+          <td class="py-3 px-4 text-right text-slate-800 font-semibold">${formatINR(row.closingBalance)}</td>
+          <td class="py-3 px-4 text-right">
+            <div class="inline-flex items-center gap-1.5 font-bold text-slate-700">
+              <span>${row.paidPercentage}%</span>
+              <div class="w-12 bg-slate-200 rounded-full h-1.5 hidden sm:inline-block overflow-hidden">
+                <div class="bg-emerald-500 h-1.5 rounded-full" style="width: ${row.paidPercentage}%"></div>
+              </div>
+            </div>
+          </td>
+        `;
+
+        // Collapsible Monthly Sub-table
+        const subTr = document.createElement('tr');
+        subTr.id = `sub-year-${row.year}`;
+        subTr.className = 'hidden bg-slate-50/90 border-b border-slate-200';
+
+        let monthRowsHtml = '';
+        row.months.forEach(m => {
+          monthRowsHtml += `
+            <tr class="hover:bg-slate-100 border-b border-slate-200/50 text-[11px] sm:text-xs text-slate-600">
+              <td class="py-2 px-4 pl-10 font-medium text-slate-700">${m.monthLabel} (மாதம் ${m.monthIndex})</td>
+              <td class="py-2 px-4 text-right">${formatINR(m.openingBalance)}</td>
+              <td class="py-2 px-4 text-right text-sky-700">${formatINR(m.principal)}</td>
+              <td class="py-2 px-4 text-right text-amber-700">${formatINR(m.interest)}</td>
+              <td class="py-2 px-4 text-right text-emerald-700">${m.prepayment > 0 ? formatINR(m.prepayment) : '-'}</td>
+              <td class="py-2 px-4 text-right font-semibold text-slate-800">${formatINR(m.total)}</td>
+              <td class="py-2 px-4 text-right">${formatINR(m.closingBalance)}</td>
+              <td class="py-2 px-4 text-right text-slate-400">-</td>
+            </tr>
+          `;
+        });
+
+        subTr.innerHTML = `
+          <td colspan="8" class="p-0">
+            <table class="w-full text-left">
+              <tbody class="divide-y divide-slate-100">
+                ${monthRowsHtml}
+              </tbody>
+            </table>
+          </td>
+        `;
+
+        tbody.appendChild(tr);
+        tbody.appendChild(subTr);
+
+        // Click row to toggle monthly details
+        tr.addEventListener('click', () => {
+          const isHidden = subTr.classList.contains('hidden');
+          const arrow = document.getElementById(`arrow-${row.year}`);
+          if (isHidden) {
+            subTr.classList.remove('hidden');
+            arrow.classList.add('rotate-90');
+          } else {
+            subTr.classList.add('hidden');
+            arrow.classList.remove('rotate-90');
+          }
+        });
+      });
+    }
+
+    function renderLumpSumList() {
+      const container = document.getElementById('lumpSumList');
+      container.innerHTML = '';
+
+      state.customLumpSums.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.className = 'flex items-center gap-2 text-xs bg-slate-50 p-2 rounded-lg border border-slate-200';
+        div.innerHTML = `
+          <span class="text-slate-500 font-medium">மாதத்திற்குப் பின்:</span>
+          <input type="number" min="1" max="360" value="${item.monthIndex}" data-idx="${index}" class="lump-month-input w-20 px-2 py-1 border border-slate-300 rounded font-semibold text-slate-800 text-center">
+          <span class="text-slate-500 font-medium ml-1">தொகை: ₹</span>
+          <input type="number" min="1000" step="5000" value="${item.amount}" data-idx="${index}" class="lump-amt-input flex-1 px-2 py-1 border border-slate-300 rounded font-bold text-slate-800 text-right">
+          <button type="button" data-idx="${index}" class="btn-remove-lump text-rose-500 hover:text-rose-700 p-1 font-bold">✕</button>
+        `;
+        container.appendChild(div);
+      });
+
+      // Bind input events for lump sums
+      container.querySelectorAll('.lump-month-input').forEach(inp => {
+        inp.addEventListener('change', (e) => {
+          const idx = parseInt(e.target.dataset.idx, 10);
+          state.customLumpSums[idx].monthIndex = Math.max(1, parseInt(e.target.value, 10) || 1);
+          updateAll();
+        });
+      });
+      container.querySelectorAll('.lump-amt-input').forEach(inp => {
+        inp.addEventListener('change', (e) => {
+          const idx = parseInt(e.target.dataset.idx, 10);
+          state.customLumpSums[idx].amount = Math.max(0, parseInt(e.target.value, 10) || 0);
+          updateAll();
+        });
+      });
+      container.querySelectorAll('.btn-remove-lump').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const idx = parseInt(e.target.dataset.idx, 10);
+          state.customLumpSums.splice(idx, 1);
+          renderLumpSumList();
+          updateAll();
+        });
+      });
+    }
+
+    function updateAll() {
+      const metrics = calculateFullLoan();
+      state.calculatedMetrics = metrics;
+
+      // 1. Highlight Values
+      document.getElementById('emiDisplay').textContent = formatINR(metrics.baseEMI);
+      document.getElementById('loanPayoffDate').textContent = metrics.payoffDate;
+      document.getElementById('totalExtraPaidDisplay').textContent = formatINR(metrics.totalExtraPaid);
+
+      // 2. Summary Breakdown
+      document.getElementById('summaryPrincipal').textContent = formatINR(state.loanAmount);
+      document.getElementById('summaryInterest').textContent = formatINR(metrics.totalInterest);
+      document.getElementById('summaryFees').textContent = formatINR(metrics.totalFees);
+      document.getElementById('summaryTotal').textContent = formatINR(metrics.totalPayment);
+
+      const pPct = ((state.loanAmount / metrics.totalPayment) * 100).toFixed(1);
+      const iPct = ((metrics.totalInterest / metrics.totalPayment) * 100).toFixed(1);
+      const fPct = (100 - parseFloat(pPct) - parseFloat(iPct)).toFixed(1);
+
+      document.getElementById('principalRatio').textContent = `${pPct}%`;
+      document.getElementById('interestRatio').textContent = `${iPct}%`;
+      document.getElementById('feesRatio').textContent = `${fPct}%`;
+
+      document.getElementById('chartCenterTotal').textContent = formatAmountToWords(metrics.totalPayment);
+      document.getElementById('amountInWords').textContent = formatAmountToWords(state.loanAmount);
+
+      // Processing Fee indicator
+      const feePreview = document.getElementById('feeAmountPreview');
+      feePreview.textContent = `மதிப்பீடு: ${formatINR(metrics.totalFees)}`;
+
+      // 3. Prepayment Savings Banner
+      const banner = document.getElementById('prepaymentSavingsBanner');
+      if (state.prepaymentEnabled && (metrics.interestSaved > 0 || metrics.monthsSaved > 0)) {
+        banner.classList.remove('hidden');
+        document.getElementById('bannerSavingsHighlight').textContent = `வட்டியில் ${formatINR(metrics.interestSaved)} சேமிப்பீர்கள்!`;
+        let tenureText = '';
+        if (metrics.yrsSaved > 0 && metrics.remMonthsSaved > 0) {
+          tenureText = `உங்கள் கடன் காலம் ${metrics.yrsSaved} ஆண்டுகள் ${metrics.remMonthsSaved} மாதங்கள் குறைக்கப்படுகிறது.`;
+        } else if (metrics.yrsSaved > 0) {
+          tenureText = `உங்கள் கடன் காலம் ${metrics.yrsSaved} ஆண்டுகள் குறைக்கப்படுகிறது.`;
+        } else {
+          tenureText = `உங்கள் கடன் காலம் ${metrics.remMonthsSaved} மாதங்கள் குறைக்கப்படுகிறது.`;
+        }
+        document.getElementById('bannerTenureHighlight').textContent = tenureText;
+      } else {
+        banner.classList.add('hidden');
+      }
+
+      // 4. Tax Benefits Calculation (Year 1)
+      const sec80cClaim = Math.min(150000, metrics.year1Principal);
+      const sec24Claim = Math.min(200000, metrics.year1Interest);
+      const totalTaxDeduction = sec80cClaim + sec24Claim;
+      const taxSaved30 = totalTaxDeduction * 0.312; // 30% + 4% cess
+
+      document.getElementById('tax80CDisplay').textContent = formatINR(sec80cClaim);
+      document.getElementById('tax24Display').textContent = formatINR(sec24Claim);
+      document.getElementById('totalTaxDeductionEst').textContent = formatINR(totalTaxDeduction);
+      document.getElementById('totalTaxSavingsEst').textContent = formatINR(taxSaved30);
+
+      // 5. Update Charts & Table
+      renderCharts(metrics);
+      renderTable(metrics.schedule);
+    }
+
+    // Input & Slider two-way bindings
+    const amountInput = document.getElementById('amountInput');
+    const amountSlider = document.getElementById('amountSlider');
+    amountInput.addEventListener('input', (e) => {
+      const val = Number(e.target.value);
+      if (val >= 10000) {
+        state.loanAmount = val;
+        amountSlider.value = val;
+        updateAll();
+      }
+    });
+    amountSlider.addEventListener('input', (e) => {
+      state.loanAmount = Number(e.target.value);
+      amountInput.value = state.loanAmount;
+      updateAll();
+    });
+
+    // Preset Amount Buttons
+    document.querySelectorAll('.preset-amt').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const amt = Number(btn.dataset.amt);
+        state.loanAmount = amt;
+        amountInput.value = amt;
+        amountSlider.value = amt;
+        updateAll();
+      });
+    });
+
+    // Interest Rate
+    const rateInput = document.getElementById('rateInput');
+    const rateSlider = document.getElementById('rateSlider');
+    rateInput.addEventListener('input', (e) => {
+      const val = Number(e.target.value);
+      if (val > 0) {
+        state.annualRate = val;
+        rateSlider.value = val;
+        updateAll();
+      }
+    });
+    rateSlider.addEventListener('input', (e) => {
+      state.annualRate = Number(e.target.value);
+      rateInput.value = state.annualRate;
+      updateAll();
+    });
+
+    document.querySelectorAll('.preset-rate').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const r = Number(btn.dataset.rate);
+        state.annualRate = r;
+        rateInput.value = r;
+        rateSlider.value = r;
+        updateAll();
+      });
+    });
+
+    // Loan Tenure
+    const tenureInput = document.getElementById('tenureInput');
+    const tenureSlider = document.getElementById('tenureSlider');
+    const tenureYrBtn = document.getElementById('tenureYrBtn');
+    const tenureMoBtn = document.getElementById('tenureMoBtn');
+    const tenureScaleMarks = document.getElementById('tenureScaleMarks');
+
+    function setTenureMode(mode) {
+      if (state.tenureType === mode) return;
+      state.tenureType = mode;
+
+      if (mode === 'yr') {
+        tenureYrBtn.className = 'px-2.5 py-1 rounded-md bg-white text-sky-700 shadow-xs font-semibold';
+        tenureMoBtn.className = 'px-2.5 py-1 rounded-md text-slate-500 hover:text-slate-900 font-semibold';
+        tenureSlider.min = 1;
+        tenureSlider.max = 30;
+        state.tenureValue = Math.min(30, Math.max(1, Math.round(state.tenureValue / 12)));
+        tenureScaleMarks.innerHTML = '<span>5 ஆண்டு</span><span>10 ஆண்டு</span><span>15 ஆண்டு</span><span>20 ஆண்டு</span><span>25 ஆண்டு</span><span>30 ஆண்டு</span>';
+      } else {
+        tenureMoBtn.className = 'px-2.5 py-1 rounded-md bg-white text-sky-700 shadow-xs font-semibold';
+        tenureYrBtn.className = 'px-2.5 py-1 rounded-md text-slate-500 hover:text-slate-900 font-semibold';
+        tenureSlider.min = 12;
+        tenureSlider.max = 360;
+        state.tenureValue = state.tenureValue * 12;
+        tenureScaleMarks.innerHTML = '<span>60 மாதம்</span><span>120 மாதம்</span><span>180 மாதம்</span><span>240 மாதம்</span><span>300 மாதம்</span><span>360 மாதம்</span>';
+      }
+
+      tenureInput.value = state.tenureValue;
+      tenureSlider.value = state.tenureValue;
+      updateAll();
+    }
+
+    tenureYrBtn.addEventListener('click', () => setTenureMode('yr'));
+    tenureMoBtn.addEventListener('click', () => setTenureMode('mo'));
+
+    tenureInput.addEventListener('input', (e) => {
+      const val = Number(e.target.value);
+      if (val > 0) {
+        state.tenureValue = val;
+        tenureSlider.value = val;
+        updateAll();
+      }
+    });
+    tenureSlider.addEventListener('input', (e) => {
+      state.tenureValue = Number(e.target.value);
+      tenureInput.value = state.tenureValue;
+      updateAll();
+    });
+
+    // Fees & Charges toggle
+    const feeInput = document.getElementById('feeInput');
+    const feePercentToggle = document.getElementById('feePercentToggle');
+    const feeFixedToggle = document.getElementById('feeFixedToggle');
+    const feeSymbol = document.getElementById('feeSymbol');
+
+    feePercentToggle.addEventListener('click', () => {
+      state.feeType = 'percent';
+      state.feeValue = 0.5;
+      feePercentToggle.className = 'px-1.5 py-0.5 rounded text-sky-700 bg-sky-100 font-bold';
+      feeFixedToggle.className = 'px-1.5 py-0.5 rounded text-slate-500 hover:text-slate-800';
+      feeSymbol.textContent = '%';
+      feeInput.value = 0.5;
+      feeInput.step = '0.05';
+      updateAll();
+    });
+
+    feeFixedToggle.addEventListener('click', () => {
+      state.feeType = 'fixed';
+      state.feeValue = 25000;
+      feeFixedToggle.className = 'px-1.5 py-0.5 rounded text-sky-700 bg-sky-100 font-bold';
+      feePercentToggle.className = 'px-1.5 py-0.5 rounded text-slate-500 hover:text-slate-800';
+      feeSymbol.textContent = '₹';
+      feeInput.value = 25000;
+      feeInput.step = '1000';
+      updateAll();
+    });
+
+    feeInput.addEventListener('input', (e) => {
+      state.feeValue = Math.max(0, Number(e.target.value));
+      updateAll();
+    });
+
+    // Start Date Picker
+    const startDateInput = document.getElementById('startDateInput');
+    startDateInput.value = state.startDate;
+    startDateInput.addEventListener('change', (e) => {
+      if (e.target.value) {
+        state.startDate = e.target.value;
+        updateAll();
+      }
+    });
+
+    // Prepayment Toggle & Controls
+    const prepaymentToggle = document.getElementById('prepaymentToggle');
+    const prepaymentSection = document.getElementById('prepaymentSection');
+    prepaymentToggle.addEventListener('change', (e) => {
+      state.prepaymentEnabled = e.target.checked;
+      if (state.prepaymentEnabled) {
+        prepaymentSection.classList.remove('opacity-40', 'pointer-events-none');
+      } else {
+        prepaymentSection.classList.add('opacity-40', 'pointer-events-none');
+      }
+      updateAll();
+    });
+
+    const monthlyExtraInput = document.getElementById('monthlyExtraInput');
+    monthlyExtraInput.addEventListener('input', (e) => {
+      state.monthlyExtra = Math.max(0, Number(e.target.value) || 0);
+      updateAll();
+    });
+
+    const yearlyExtraInput = document.getElementById('yearlyExtraInput');
+    yearlyExtraInput.addEventListener('input', (e) => {
+      state.yearlyExtra = Math.max(0, Number(e.target.value) || 0);
+      updateAll();
+    });
+
+    // Add One-Time Lump Sum
+    document.getElementById('btnAddLumpSum').addEventListener('click', () => {
+      const nextMonth = (state.customLumpSums.length + 1) * 12;
+      state.customLumpSums.push({ monthIndex: Math.min(360, nextMonth), amount: 50000 });
+      renderLumpSumList();
+      updateAll();
+    });
+
+    // Chart Mode Toggle (Yearly vs Cumulative)
+    const chartViewYearly = document.getElementById('chartViewYearly');
+    const chartViewCumulative = document.getElementById('chartViewCumulative');
+
+    chartViewYearly.addEventListener('click', () => {
+      state.chartMode = 'yearly';
+      chartViewYearly.className = 'px-2.5 py-1 rounded-md bg-white text-sky-700 shadow-xs font-semibold';
+      chartViewCumulative.className = 'px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900 font-semibold';
+      renderCharts(state.calculatedMetrics);
+    });
+
+    chartViewCumulative.addEventListener('click', () => {
+      state.chartMode = 'cumulative';
+      chartViewCumulative.className = 'px-2.5 py-1 rounded-md bg-white text-sky-700 shadow-xs font-semibold';
+      chartViewYearly.className = 'px-2.5 py-1 rounded-md text-slate-600 hover:text-slate-900 font-semibold';
+      renderCharts(state.calculatedMetrics);
+    });
+
+    // Expand & Collapse All
+    document.getElementById('btnExpandAll').addEventListener('click', () => {
+      state.calculatedMetrics.schedule.forEach(row => {
+        const sub = document.getElementById(`sub-year-${row.year}`);
+        const arrow = document.getElementById(`arrow-${row.year}`);
+        if (sub) sub.classList.remove('hidden');
+        if (arrow) arrow.classList.add('rotate-90');
+      });
+    });
+
+    document.getElementById('btnCollapseAll').addEventListener('click', () => {
+      state.calculatedMetrics.schedule.forEach(row => {
+        const sub = document.getElementById(`sub-year-${row.year}`);
+        const arrow = document.getElementById(`arrow-${row.year}`);
+        if (sub) sub.classList.add('hidden');
+        if (arrow) arrow.classList.remove('rotate-90');
+      });
+    });
+
+    // Print
+    document.getElementById('btnPrint').addEventListener('click', () => {
+      window.print();
+    });
+
+    // Export Schedule as CSV
+    document.getElementById('btnExportCSV').addEventListener('click', () => {
+      const schedule = state.calculatedMetrics.schedule;
+      if (!schedule || schedule.length === 0) return;
+
+      let csv = 'காலம்,தொடக்க நிலுவை,செலுத்திய அசல்,செலுத்திய வட்டி,முன்கட்டணம்,மொத்த செலுத்துதல்,இறுதி நிலுவை,செலுத்திய கடன் (%)\n';
+
+      schedule.forEach(y => {
+        csv += `"${y.yearName}","${Math.round(y.openingBalance)}","${Math.round(y.principal)}","${Math.round(y.interest)}","${Math.round(y.prepayment)}","${Math.round(y.total)}","${Math.round(y.closingBalance)}","${y.paidPercentage}%"\n`;
+        y.months.forEach(m => {
+          csv += `"${m.monthLabel} (மாதம் ${m.monthIndex})","${Math.round(m.openingBalance)}","${Math.round(m.principal)}","${Math.round(m.interest)}","${Math.round(m.prepayment)}","${Math.round(m.total)}","${Math.round(m.closingBalance)}","-"\n`;
+        });
+      });
+
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.setAttribute('href', url);
+      link.setAttribute('download', `Home_Loan_Amortization_Schedule_${Date.now()}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+
+    // Initial Execution
+    window.addEventListener('DOMContentLoaded', () => {
+      renderLumpSumList();
+      updateAll();
+    });
+  </script>
+</body>
+</html>

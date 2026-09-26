@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>தொடர் வைப்பு நிதி (RD) கணிப்பேடு</title>
+  <meta name="description" content="மாதாந்திர RD வைப்புத் தொகை, வட்டி விகிதம், காலம் மற்றும் கூட்டு வட்டி முறையால் முதிர்வைக் கணக்கிடுங்கள்.">
+  <meta name="keywords" content="RD கணிப்பான், RD calculator Tamil, recurring deposit calculator, தொடர் வைப்பு, வைப்பு வட்டி">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#0D7377">
+  <link rel="canonical" href="rd_returns_calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ta_IN">
+  <meta property="og:title" content="RD வருமானக் கணிப்பேடு · நிதிப்பேழை">
+  <meta property="og:description" content="மாதாந்திர RD வைப்புத் தொகை, வட்டி விகிதம், காலம் மற்றும் கூட்டு வட்டி முறையால் முதிர்வைக் கணக்கிடுங்கள்.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="RD வருமானக் கணிப்பேடு · நிதிப்பேழை">
+  <meta name="twitter:description" content="மாதாந்திர RD வைப்புத் தொகை, வட்டி விகிதம், காலம் மற்றும் கூட்டு வட்டி முறையால் முதிர்வைக் கணக்கிடுங்கள்.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Noto Sans Tamil -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', 'Noto Sans Tamil', sans-serif;
+      background-color: #f3f7f5;
+      color: #102e31;
+    }
+    
+    /* Range Slider Styling */
+    input[type=range] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 6px;
+      background: #e2e8f0;
+      border-radius: 9999px;
+      outline: none;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #0D7377;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(13, 115, 119, 0.4);
+      border: 2px solid #ffffff;
+      transition: transform 0.15s ease;
+    }
+    input[type=range]::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+      background: #095e61;
+    }
+    input[type=range]::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #0D7377;
+      cursor: pointer;
+      border: 2px solid #ffffff;
+      box-shadow: 0 2px 6px rgba(13, 115, 119, 0.4);
+    }
+
+    /* Print styles */
+    @media print {
+      .no-print { display: none !important; }
+      body { background-color: #fff !important; }
+      .shadow-xs, .shadow-sm, .shadow-md, .shadow-lg { box-shadow: none !important; }
+      .print-border { border: 1px solid #e5e7eb !important; }
+    }
+  </style>
+  <link rel="stylesheet" href="../assets/css/calculator-theme.css">
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased">
+
+  <!-- Top Navigation Header -->
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="calc-site-header__inner flex items-center justify-between h-16">
+        <div class="calc-site-header__identity flex items-center space-x-3">
+          <a class="calc-site-logo" href="../index.html" aria-label="நிதிப்பேழை முகப்பு"><img src="../assets/images/nidhipezhai-logo.png" alt=""></a>
+          <div>
+            <h1 class="text-xl font-bold tracking-tight text-gray-900 leading-tight">
+              தொடர் வைப்பு நிதி (RD) கணிப்பேடு
+            </h1>
+            <p class="text-xs text-gray-500 font-medium hidden sm:block">முதிர்வுத் தொகை மற்றும் காலாண்டு கூட்டு வட்டி கணிப்பேடு</p>
+          </div>
+        </div>
+
+        <nav class="calc-site-header__nav" aria-label="முதன்மை வழிசெலுத்தல்">
+          <a class="calc-nav-home" href="../index.html">முகப்பு</a>
+          <a class="calc-nav-articles" href="../index.html#articles">கட்டுரைகள்</a>
+          <a class="calc-nav-directory" href="index.html">கணிப்பான்கள்</a>
+        </nav>
+
+        <!-- Action / Quick Links -->
+        <div class="calc-site-header__actions flex items-center space-x-2">
+          <button id="btnPrint" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+            அச்சிடு
+          </button>
+          <button id="btnExportCSV" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-700 rounded-lg shadow-sm transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            CSV ஏற்றுமதி
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full space-y-6">
+    
+    <!-- Customer Category Preset Tabs -->
+    <div class="bg-white rounded-xl shadow-xs border border-gray-200 p-1.5 flex flex-wrap gap-1.5">
+      <button class="customer-type-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 bg-sky-600 text-white shadow-xs" data-type="regular">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+        வழக்கமான முதலீட்டாளர் (Regular)
+      </button>
+      <button class="customer-type-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100" data-type="senior">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        மூத்த குடிமக்கள் (Senior Citizen +0.50%)
+      </button>
+      <button class="customer-type-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100" data-type="postoffice">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        அஞ்சலக RD (Post Office - 5 ஆண்டுகள்)
+      </button>
+    </div>
+
+    <!-- Main Interactive Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+      
+      <!-- Left Column: Inputs & Sliders (7 cols) -->
+      <div class="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-7 shadow-xs border border-gray-200 space-y-6">
+        
+        <!-- Field 1: Monthly Deposit Amount -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <label for="monthlyDepositInput" class="text-sm font-semibold text-gray-700 flex items-center gap-1.5">
+              மாதாந்திர வைப்புத் தொகை (Monthly Installment)
+              <span id="amountInWords" class="text-xs font-normal text-sky-600 bg-sky-50 px-2 py-0.5 rounded-full border border-sky-100">₹ 10 ஆயிரம்</span>
+            </label>
+            <div class="relative w-40 sm:w-48">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500 font-semibold text-sm">₹</span>
+              <input type="number" id="monthlyDepositInput" min="500" max="1000000" step="500" value="10000" 
+                     class="w-full pl-8 pr-3 py-1.5 border border-gray-300 rounded-lg text-right font-bold text-gray-800 text-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-all outline-none">
+            </div>
+          </div>
+          <input type="range" id="monthlyDepositSlider" min="500" max="1000000" step="500" value="10000">
+          <div class="flex justify-between text-[11px] font-medium text-gray-400">
+            <span>₹ 500</span>
+            <span>₹ 25,000</span>
+            <span>₹ 50,000</span>
+            <span>₹ 75,000</span>
+            <span>₹ 10,00,000</span>
+          </div>
+        </div>
+
+        <!-- Field 2: Annual Interest Rate -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <label for="rateInput" class="text-sm font-semibold text-gray-700">ஆண்டு வட்டி விகிதம் (Interest Rate % p.a.)</label>
+            <div class="relative w-28 sm:w-32">
+              <input type="number" id="rateInput" min="1" max="15" step="0.05" value="6.8" 
+                     class="w-full pr-8 pl-3 py-1.5 border border-gray-300 rounded-lg text-right font-bold text-gray-800 text-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-all outline-none">
+              <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 font-semibold text-sm">%</span>
+            </div>
+          </div>
+          <input type="range" id="rateSlider" min="3" max="12" step="0.05" value="6.8">
+          <div class="flex justify-between text-[11px] font-medium text-gray-400">
+            <span>3%</span>
+            <span>5%</span>
+            <span>7%</span>
+            <span>9%</span>
+            <span>11%</span>
+            <span>12%</span>
+          </div>
+        </div>
+
+        <!-- Field 3: Deposit Tenure -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <label for="tenureInput" class="text-sm font-semibold text-gray-700">முதலீட்டுக் காலம் (Tenure)</label>
+            <div class="flex items-center space-x-2">
+              <div class="relative w-24">
+                <input type="number" id="tenureInput" min="1" max="10" step="1" value="5" 
+                       class="w-full px-3 py-1.5 border border-gray-300 rounded-lg text-right font-bold text-gray-800 text-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-all outline-none">
+              </div>
+              <div class="inline-flex rounded-lg border border-gray-300 bg-gray-100 p-0.5 text-xs font-semibold">
+                <button type="button" id="tenureYrBtn" class="px-2.5 py-1 rounded-md bg-white text-sky-700 shadow-xs">ஆண்டு</button>
+                <button type="button" id="tenureMoBtn" class="px-2.5 py-1 rounded-md text-gray-500 hover:text-gray-900">மாதம்</button>
+              </div>
+            </div>
+          </div>
+          <input type="range" id="tenureSlider" min="1" max="10" step="1" value="5">
+          <div id="tenureScaleMarks" class="flex justify-between text-[11px] font-medium text-gray-400">
+            <span>1 ஆண்டு</span>
+            <span>2 ஆண்டு</span>
+            <span>3 ஆண்டு</span>
+            <span>5 ஆண்டு</span>
+            <span>7 ஆண்டு</span>
+            <span>10 ஆண்டு</span>
+          </div>
+        </div>
+
+        <!-- Compounding Frequency Option -->
+        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200/80 space-y-3">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <label for="compoundingFreq" class="text-xs font-semibold text-gray-700 block">வட்டிக் கணக்கீட்டு முறை (Compounding Frequency):</label>
+              <span class="text-[10px] text-gray-400">இந்திய வங்கிகள் & அஞ்சலகத்தின் நிலையான முறை: காலாண்டு கூட்டு வட்டி</span>
+            </div>
+            <select id="compoundingFreq" class="bg-white border border-gray-300 rounded-lg px-3 py-1.5 text-xs font-semibold text-gray-800 focus:ring-2 focus:ring-sky-500 outline-none">
+              <option value="4" selected>காலாண்டு தோறும் (Quarterly)</option>
+              <option value="12">மாதாந்திரம் (Monthly)</option>
+              <option value="2">அரையாண்டு தோறும் (Half-Yearly)</option>
+              <option value="1">வருடாந்திரம் (Annually)</option>
+              <option value="0">எளிய வட்டி முறை (Simple Interest)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- RD Tips Card -->
+        <div class="p-3 bg-amber-50 rounded-xl border border-amber-200/60 flex items-start gap-3">
+          <span class="text-amber-600 mt-0.5">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </span>
+          <div class="text-xs text-amber-900 leading-relaxed" id="tipText">
+            <strong>RD நடைமுறை:</strong> இந்திய வணிக வங்கிகள் மற்றும் அஞ்சலகங்களில் தொடர் வைப்பு நிதிக்கு (RD) காலாண்டு அடிப்படையில் வட்டி கூட்டப்படுகிறது (Quarterly Compounding). ஒவ்வொரு மாதமும் குறிப்பிட்ட தேதியில் ஒழுங்காக சேமிக்க இது ஒரு சிறந்த பாதுகாப்பான முதலீடு.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Summary & Chart (5 cols) -->
+      <div class="lg:col-span-5 bg-white rounded-2xl p-6 sm:p-7 shadow-xs border border-gray-200 flex flex-col justify-between space-y-6">
+        
+        <!-- Total Maturity Highlight Card -->
+        <div class="bg-gradient-to-br from-sky-600 to-indigo-700 rounded-xl p-5 text-white shadow-md relative overflow-hidden">
+          <div class="absolute -right-6 -bottom-6 w-28 h-28 bg-white/10 rounded-full pointer-events-none"></div>
+          <p class="text-xs uppercase tracking-wider font-semibold text-sky-100">முதிர்வுத் தொகை (Total Maturity Value)</p>
+          <div class="flex items-baseline gap-2 mt-1">
+            <span class="text-3xl sm:text-4xl font-extrabold tracking-tight" id="maturityDisplay">₹ 7,16,104</span>
+            <span class="text-xs text-sky-200 font-medium">முடிவு இருப்பு</span>
+          </div>
+        </div>
+
+        <!-- Donut Chart & Breakdown Stats -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 items-center">
+          <!-- Canvas for Chart.js -->
+          <div class="relative w-44 h-44 mx-auto flex items-center justify-center">
+            <canvas id="breakdownChart"></canvas>
+            <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
+              <span class="text-[10px] uppercase font-bold text-gray-400">மொத்தம்</span>
+              <span id="chartCenterTotal" class="text-xs font-bold text-gray-700">₹ 7.16 L</span>
+            </div>
+          </div>
+
+          <!-- Numbers Legend -->
+          <div class="space-y-3.5 text-sm">
+            <div class="border-l-4 border-sky-500 pl-3">
+              <span class="text-xs text-gray-500 font-medium block">செலுத்திய மொத்த அசல் தொகை</span>
+              <span id="summaryDeposited" class="font-bold text-gray-900 text-base">₹ 6,00,000</span>
+              <span id="depositedRatio" class="text-[11px] text-sky-600 font-semibold block">(83.8%)</span>
+            </div>
+
+            <div class="border-l-4 border-emerald-500 pl-3">
+              <span class="text-xs text-gray-500 font-medium block">ஈட்டிய மொத்த வட்டி வருமானம்</span>
+              <span id="summaryInterest" class="font-bold text-emerald-600 text-base">₹ 1,16,104</span>
+              <span id="interestRatio" class="text-[11px] text-emerald-600 font-semibold block">(16.2%)</span>
+            </div>
+
+            <div class="border-l-4 border-indigo-500 pl-3 pt-1 border-t border-gray-100">
+              <span class="text-xs text-gray-500 font-medium block">மொத்த முதிர்வுத் தொகை</span>
+              <span id="summaryTotal" class="font-bold text-gray-900 text-base">₹ 7,16,104</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Yearly Growth Bar Chart Section -->
+    <div class="bg-white rounded-2xl p-6 shadow-xs border border-gray-200 space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-gray-100">
+        <div>
+          <h2 class="text-lg font-bold text-gray-900">ஆண்டு வாரியான தொடர் வைப்பு வளர்ச்சி வரைபடம்</h2>
+          <p class="text-xs text-gray-500">வைப்பு அசல், ஆண்டுதோறும் சேர்ந்த கூட்டு வட்டி மற்றும் மொத்த இருப்பின் வளர்ச்சிப் பாதை</p>
+        </div>
+        <div class="flex items-center gap-4 text-xs font-semibold">
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-xs bg-sky-500 inline-block"></span> செலுத்திய அசல்</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-xs bg-emerald-500 inline-block"></span> ஈட்டிய கூட்டு வட்டி</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-1.5 rounded-full bg-indigo-600 inline-block"></span> மொத்த நிதி இருப்பு</span>
+        </div>
+      </div>
+      <div class="w-full h-72 sm:h-80">
+        <canvas id="growthBarChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Amortization / Year-on-Year Growth Schedule Table Section -->
+    <div class="bg-white rounded-2xl p-6 shadow-xs border border-gray-200 space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-gray-100">
+        <div>
+          <h2 class="text-lg font-bold text-gray-900">தொடர் வைப்பு அட்டவணை (RD Maturity Schedule)</h2>
+          <p class="text-xs text-gray-500">மாதாந்திர தவணை, வட்டி மற்றும் முடிவு இருப்பை விரித்து அறிய அந்தந்த ஆண்டைக் கிளிக் செய்யவும்.</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="btnExpandAll" class="px-3 py-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">அனைத்தையும் விரி</button>
+          <button id="btnCollapseAll" class="px-3 py-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">அனைத்தையும் சுருக்கு</button>
+        </div>
+      </div>
+
+      <!-- Schedule Table -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs sm:text-sm border-collapse" id="amortizationTable">
+          <thead>
+            <tr class="bg-gray-50 border-b border-gray-200 text-gray-600 uppercase font-semibold text-[11px] tracking-wider">
+              <th class="py-3 px-4">ஆண்டு / மாதம்</th>
+              <th class="py-3 px-4 text-right">தொடக்க இருப்பு</th>
+              <th class="py-3 px-4 text-right">செலுத்திய வைப்புத்தொகை</th>
+              <th class="py-3 px-4 text-right">ஈட்டிய வட்டி</th>
+              <th class="py-3 px-4 text-right">ஆண்டு இறுதி மதிப்பு</th>
+              <th class="py-3 px-4 text-right">வளர்ச்சி விகிதம் %</th>
+            </tr>
+          </thead>
+          <tbody id="amortizationBody" class="divide-y divide-gray-100 text-gray-700">
+            <!-- Dynamically populated via JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="calc-site-footer bg-white border-t border-gray-200 mt-10 py-6 text-center text-xs text-gray-500">
+    <div class="calc-site-footer__inner max-w-7xl mx-auto px-4">
+      <div class="calc-site-footer__main">
+        <div>
+          <a class="calc-site-footer__brand" href="../index.html">நிதிப்பேழை</a>
+          <p class="calc-site-footer__tagline">பணத்தைப் புரிந்துகொள்ளவும், நிதி முடிவுகளைப் பற்றி கற்றுக்கொள்ளவும் தமிழில் ஒரு இடம்.</p>
+        </div>
+        <nav class="calc-site-footer__links" aria-label="தள இணைப்புகள்">
+          <a href="../index.html">முகப்பு</a>
+          <a href="../index.html#articles">கட்டுரைகள்</a>
+          <a href="index.html">கணிப்பான்கள்</a>
+          <a href="../about/">எங்களைப் பற்றி</a>
+          <a href="../disclaimer/">பொறுப்புத் துறப்பு</a>
+          <a href="../license/">உரிமம்</a>
+        </nav>
+      </div>
+      <p class="font-medium text-gray-600">தொடர் வைப்பு நிதி (RD) கணிப்பேடு &bull; இந்திய வங்கி மற்றும் அஞ்சலக விதிமுறைகளின்படி வடிவமைக்கப்பட்டது</p>
+      <p class="mt-1 text-gray-400">குறிப்பு: ஒரு நிதியாண்டில் RD வட்டி வருமானம் ₹40,000 (மூத்த குடிமக்களுக்கு ₹50,000) கடந்தால் TDS பிடித்தம் பொருந்தும். அரசு உத்தரவுகளின்படி அஞ்சலக வட்டி விகிதங்கள் காலாண்டுக்கு ஒருமுறை மாற்றியமைக்கப்படலாம்.</p>
+      <p class="mt-2 text-gray-500">பொறுப்புத் துறப்பு: இந்தக் கணிப்பேடு கல்வி மற்றும் விழிப்புணர்வு நோக்கத்திற்காக மட்டுமே. காட்டப்படும் கணக்கீடுகளின் துல்லியம் அல்லது முழுமைக்கு உத்தரவாதம் அளிக்கப்படாது; அவற்றின் அடிப்படையில் எடுக்கப்படும் முடிவுகள் அல்லது ஏற்படும் இழப்புகளுக்கு நாங்கள் பொறுப்பேற்கமாட்டோம். முதலீடு அல்லது கடன் முடிவெடுப்பதற்கு முன் தகுதியான நிதி ஆலோசகரை அணுகவும்.</p>
+      <p class="calc-site-footer__license">இந்தத் தளத்தின் உள்ளடக்கம் <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> உரிமத்தின் கீழ் பகிரப்படுகிறது.</p>
+    </div>
+  </footer>
+
+  <script>
+    /* State */
+    const state = {
+      customerType: 'regular', // 'regular', 'senior', 'postoffice'
+      monthlyDeposit: 10000,
+      annualRate: 6.8,
+      tenureValue: 5,
+      tenureType: 'yr', // 'yr' or 'mo'
+      compoundingFreq: 4, // 4 = quarterly, 12 = monthly, 2 = half-yearly, 1 = annually, 0 = simple
+      scheduleData: []
+    };
+
+    /* Chart instances */
+    let breakdownChartInstance = null;
+    let growthBarChartInstance = null;
+
+    // Format numbers with Indian commas
+    function formatINR(val, includeSymbol = true) {
+      const num = Math.round(val);
+      const str = num.toLocaleString('en-IN');
+      return includeSymbol ? `₹ ${str}` : str;
+    }
+
+    // Convert large amounts into concise words (Lakhs / Crores)
+    function formatAmountToWords(amount) {
+      if (amount >= 10000000) {
+        const cr = (amount / 10000000).toFixed(2);
+        return `₹ ${parseFloat(cr)} கோடி`;
+      } else if (amount >= 100000) {
+        const lk = (amount / 100000).toFixed(2);
+        return `₹ ${parseFloat(lk)} லட்சம்`;
+      } else if (amount >= 1000) {
+        return `₹ ${(amount / 1000).toFixed(1)} ஆயிரம்`;
+      }
+      return `₹ ${amount}`;
+    }
+
+    /* Core Calculation Engine */
+    function calculateRD() {
+      const P = state.monthlyDeposit;
+      const totalMonths = state.tenureType === 'yr' ? state.tenureValue * 12 : state.tenureValue;
+      const r = state.annualRate / 100;
+      const n = parseInt(state.compoundingFreq);
+
+      let maturityAmount = 0;
+      let yearlyRecords = [];
+
+      let runningBalance = 0;
+      let totalDepositedTillNow = 0;
+      let yearStartBalance = 0;
+      let yearlyDeposited = 0;
+      let yearlyInterest = 0;
+      let monthlyBreakdown = [];
+      let currentYear = 1;
+
+      if (n === 0) {
+        // Simple Interest calculation for RD
+        // Total Interest = P * n * (n + 1) / (2 * 12) * r
+        const totalInterestOverall = P * totalMonths * (totalMonths + 1) / 24 * r;
+        const totalInvested = P * totalMonths;
+        maturityAmount = totalInvested + totalInterestOverall;
+
+        // Month by month simple interest distribution
+        for (let m = 1; m <= totalMonths; m++) {
+          const openBal = runningBalance;
+          totalDepositedTillNow += P;
+          yearlyDeposited += P;
+
+          // Interest for this specific month under simple interest on accumulated balance
+          const interestForMonth = (totalDepositedTillNow * r) / 12;
+          yearlyInterest += interestForMonth;
+          runningBalance = openBal + P + interestForMonth;
+
+          monthlyBreakdown.push({
+            month: m,
+            openingBalance: openBal,
+            deposit: P,
+            interest: interestForMonth,
+            closingBalance: runningBalance
+          });
+
+          if (m % 12 === 0 || m === totalMonths) {
+            yearlyRecords.push({
+              year: currentYear,
+              openingBalance: yearStartBalance,
+              deposit: yearlyDeposited,
+              interest: yearlyInterest,
+              closingBalance: runningBalance,
+              cumulativeDeposited: totalDepositedTillNow,
+              growthPercent: (((runningBalance - totalDepositedTillNow) / totalDepositedTillNow) * 100).toFixed(1),
+              months: [...monthlyBreakdown]
+            });
+
+            currentYear++;
+            yearStartBalance = runningBalance;
+            yearlyDeposited = 0;
+            yearlyInterest = 0;
+            monthlyBreakdown = [];
+          }
+        }
+      } else {
+        // Compound Interest for RD (Standard Banking Formula with Frequency n)
+        // Effective monthly compounding rate derived from nominal annual rate and compounding frequency n
+        const effectiveMonthlyRate = Math.pow(1 + r / n, n / 12) - 1;
+
+        for (let m = 1; m <= totalMonths; m++) {
+          const openBal = runningBalance;
+          totalDepositedTillNow += P;
+          yearlyDeposited += P;
+
+          const interestForMonth = (openBal + P) * effectiveMonthlyRate;
+          runningBalance = openBal + P + interestForMonth;
+          yearlyInterest += interestForMonth;
+
+          monthlyBreakdown.push({
+            month: m,
+            openingBalance: openBal,
+            deposit: P,
+            interest: interestForMonth,
+            closingBalance: runningBalance
+          });
+
+          if (m % 12 === 0 || m === totalMonths) {
+            yearlyRecords.push({
+              year: currentYear,
+              openingBalance: yearStartBalance,
+              deposit: yearlyDeposited,
+              interest: yearlyInterest,
+              closingBalance: runningBalance,
+              cumulativeDeposited: totalDepositedTillNow,
+              growthPercent: (((runningBalance - totalDepositedTillNow) / totalDepositedTillNow) * 100).toFixed(1),
+              months: [...monthlyBreakdown]
+            });
+
+            currentYear++;
+            yearStartBalance = runningBalance;
+            yearlyDeposited = 0;
+            yearlyInterest = 0;
+            monthlyBreakdown = [];
+          }
+        }
+        maturityAmount = runningBalance;
+      }
+
+      const totalDeposited = P * totalMonths;
+      const totalInterest = Math.max(0, maturityAmount - totalDeposited);
+
+      return {
+        totalDeposited: Math.round(totalDeposited),
+        totalInterest: Math.round(totalInterest),
+        maturityAmount: Math.round(maturityAmount),
+        schedule: yearlyRecords
+      };
+    }
+
+    /* Chart Renderers */
+    function updateCharts(calcResults) {
+      const { totalDeposited, totalInterest, maturityAmount, schedule } = calcResults;
+
+      // 1. Donut Chart
+      const donutCtx = document.getElementById('breakdownChart').getContext('2d');
+      const donutData = {
+        labels: ['செலுத்திய மொத்த அசல்', 'ஈட்டிய மொத்த வட்டி'],
+        datasets: [{
+          data: [totalDeposited, totalInterest],
+          backgroundColor: ['#0D7377', '#10b981'],
+          hoverBackgroundColor: ['#095e61', '#059669'],
+          borderWidth: 2,
+          borderColor: '#ffffff'
+        }]
+      };
+
+      if (breakdownChartInstance) {
+        breakdownChartInstance.data = donutData;
+        breakdownChartInstance.update();
+      } else {
+        breakdownChartInstance = new Chart(donutCtx, {
+          type: 'doughnut',
+          data: donutData,
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '72%',
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    const val = context.parsed;
+                    const pct = ((val / maturityAmount) * 100).toFixed(1);
+                    return ` ${context.label}: ${formatINR(val)} (${pct}%)`;
+                  }
+                }
+              }
+            }
+          }
+        });
+      }
+
+      // 2. Growth Stacked Bar + Line Chart
+      const barCtx = document.getElementById('growthBarChart').getContext('2d');
+      const labels = schedule.map(item => `ஆண்டு ${item.year}`);
+      const depositedData = schedule.map(item => Math.round(item.cumulativeDeposited));
+      const interestData = schedule.map(item => Math.round(Math.max(0, item.closingBalance - item.cumulativeDeposited)));
+      const balanceData = schedule.map(item => Math.round(item.closingBalance));
+
+      const barData = {
+        labels: labels,
+        datasets: [
+          {
+            type: 'line',
+            label: 'மொத்த நிதி இருப்பு',
+            data: balanceData,
+            borderColor: '#176b58',
+            backgroundColor: '#176b58',
+            borderWidth: 2.5,
+            pointRadius: schedule.length > 20 ? 1.5 : 3.5,
+            yAxisID: 'y1',
+            tension: 0.2
+          },
+          {
+            type: 'bar',
+            label: 'செலுத்திய அசல்',
+            data: depositedData,
+            backgroundColor: '#0D7377',
+            stack: 'rdStack',
+            borderRadius: 3
+          },
+          {
+            type: 'bar',
+            label: 'சேர்ந்த கூட்டு வட்டி',
+            data: interestData,
+            backgroundColor: '#10b981',
+            stack: 'rdStack',
+            borderRadius: 3
+          }
+        ]
+      };
+
+      if (growthBarChartInstance) {
+        growthBarChartInstance.data = barData;
+        growthBarChartInstance.update();
+      } else {
+        growthBarChartInstance = new Chart(barCtx, {
+          data: barData,
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: {
+              mode: 'index',
+              intersect: false
+            },
+            scales: {
+              x: {
+                grid: { display: false },
+                ticks: { font: { size: 11 } }
+              },
+              y: {
+                stacked: true,
+                position: 'left',
+                grid: { color: '#f1f5f9' },
+                ticks: {
+                  font: { size: 10 },
+                  callback: (value) => formatAmountToWords(value)
+                }
+              },
+              y1: {
+                position: 'right',
+                grid: { drawOnChartArea: false },
+                ticks: {
+                  font: { size: 10 },
+                  callback: (value) => formatAmountToWords(value)
+                }
+              }
+            },
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    return ` ${context.dataset.label}: ${formatINR(context.parsed.y)}`;
+                  }
+                }
+              }
+            }
+          }
+        });
+      }
+    }
+
+    /* Table Renderer */
+    function renderScheduleTable(schedule) {
+      const tbody = document.getElementById('amortizationBody');
+      tbody.innerHTML = '';
+
+      schedule.forEach((row) => {
+        // Parent Year Row
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-sky-50/60 transition-colors cursor-pointer group border-b border-gray-100 font-medium';
+        tr.dataset.year = row.year;
+        tr.innerHTML = `
+          <td class="py-3 px-4 font-bold text-sky-700 flex items-center gap-2">
+            <svg id="arrow-${row.year}" class="w-4 h-4 transform transition-transform text-gray-400 group-hover:text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+            ஆண்டு ${row.year}
+          </td>
+          <td class="py-3 px-4 text-right text-gray-600">${formatINR(row.openingBalance)}</td>
+          <td class="py-3 px-4 text-right text-sky-700 font-semibold">${formatINR(row.deposit)}</td>
+          <td class="py-3 px-4 text-right text-emerald-600 font-semibold">${formatINR(row.interest)}</td>
+          <td class="py-3 px-4 text-right text-gray-900 font-bold">${formatINR(row.closingBalance)}</td>
+          <td class="py-3 px-4 text-right">
+            <div class="inline-flex items-center gap-1.5 font-bold text-gray-700">
+              <span>+${row.growthPercent}%</span>
+              <div class="w-12 bg-gray-200 rounded-full h-1.5 hidden sm:inline-block overflow-hidden">
+                <div class="bg-emerald-500 h-1.5 rounded-full" style="width: ${Math.min(100, Math.max(5, row.growthPercent))}%"></div>
+              </div>
+            </div>
+          </td>
+        `;
+
+        // Collapsible Months Container Row
+        const subTr = document.createElement('tr');
+        subTr.id = `sub-year-${row.year}`;
+        subTr.className = 'hidden bg-slate-50 border-b border-gray-200';
+        
+        let monthRowsHtml = '';
+        row.months.forEach(m => {
+          monthRowsHtml += `
+            <tr class="hover:bg-slate-100/70 border-b border-slate-200/50 text-[11px] sm:text-xs">
+              <td class="py-2 px-4 pl-10 text-gray-500 font-medium">மாதம் ${m.month}</td>
+              <td class="py-2 px-4 text-right text-gray-500">${formatINR(m.openingBalance)}</td>
+              <td class="py-2 px-4 text-right text-sky-600 font-medium">${formatINR(m.deposit)}</td>
+              <td class="py-2 px-4 text-right text-emerald-600 font-medium">${formatINR(m.interest)}</td>
+              <td class="py-2 px-4 text-right text-gray-800 font-medium">${formatINR(m.closingBalance)}</td>
+              <td class="py-2 px-4 text-right text-gray-400">-</td>
+            </tr>
+          `;
+        });
+
+        subTr.innerHTML = `
+          <td colspan="6" class="p-0">
+            <table class="w-full text-left">
+              <tbody class="divide-y divide-slate-100">
+                ${monthRowsHtml}
+              </tbody>
+            </table>
+          </td>
+        `;
+
+        tbody.appendChild(tr);
+        tbody.appendChild(subTr);
+
+        // Click event to toggle monthly details
+        tr.addEventListener('click', () => {
+          const isHidden = subTr.classList.contains('hidden');
+          const arrow = document.getElementById(`arrow-${row.year}`);
+          if (isHidden) {
+            subTr.classList.remove('hidden');
+            arrow.classList.add('rotate-90');
+          } else {
+            subTr.classList.add('hidden');
+            arrow.classList.remove('rotate-90');
+          }
+        });
+      });
+    }
+
+    /* Update Complete UI State */
+    function updateUI() {
+      const calc = calculateRD();
+      state.scheduleData = calc.schedule;
+
+      // Top Highlights
+      document.getElementById('maturityDisplay').textContent = formatINR(calc.maturityAmount);
+      document.getElementById('summaryDeposited').textContent = formatINR(calc.totalDeposited);
+      document.getElementById('summaryInterest').textContent = formatINR(calc.totalInterest);
+      document.getElementById('summaryTotal').textContent = formatINR(calc.maturityAmount);
+
+      const depPct = ((calc.totalDeposited / calc.maturityAmount) * 100).toFixed(1);
+      const intPct = (100 - parseFloat(depPct)).toFixed(1);
+      document.getElementById('depositedRatio').textContent = `(${depPct}%)`;
+      document.getElementById('interestRatio').textContent = `(${intPct}%)`;
+
+      document.getElementById('chartCenterTotal').textContent = formatAmountToWords(calc.maturityAmount);
+      document.getElementById('amountInWords').textContent = formatAmountToWords(state.monthlyDeposit);
+
+      // Sync Controls
+      document.getElementById('monthlyDepositInput').value = state.monthlyDeposit;
+      document.getElementById('monthlyDepositSlider').value = state.monthlyDeposit;
+
+      document.getElementById('rateInput').value = state.annualRate;
+      document.getElementById('rateSlider').value = state.annualRate;
+
+      document.getElementById('tenureInput').value = state.tenureValue;
+      document.getElementById('tenureSlider').value = state.tenureValue;
+
+      // Update Charts & Table
+      updateCharts(calc);
+      renderScheduleTable(calc.schedule);
+    }
+
+    /* Event Listeners */
+    const monthlyDepositInput = document.getElementById('monthlyDepositInput');
+    const monthlyDepositSlider = document.getElementById('monthlyDepositSlider');
+
+    monthlyDepositInput.addEventListener('input', (e) => {
+      let val = Number(e.target.value);
+      if (val >= 0) {
+        state.monthlyDeposit = val;
+        monthlyDepositSlider.value = val;
+        updateUI();
+      }
+    });
+
+    monthlyDepositSlider.addEventListener('input', (e) => {
+      state.monthlyDeposit = Number(e.target.value);
+      monthlyDepositInput.value = state.monthlyDeposit;
+      updateUI();
+    });
+
+    const rateInput = document.getElementById('rateInput');
+    const rateSlider = document.getElementById('rateSlider');
+
+    rateInput.addEventListener('input', (e) => {
+      let val = Number(e.target.value);
+      if (val >= 0) {
+        state.annualRate = val;
+        rateSlider.value = val;
+        updateUI();
+      }
+    });
+
+    rateSlider.addEventListener('input', (e) => {
+      state.annualRate = Number(e.target.value);
+      rateInput.value = state.annualRate;
+      updateUI();
+    });
+
+    const tenureInput = document.getElementById('tenureInput');
+    const tenureSlider = document.getElementById('tenureSlider');
+    const tenureYrBtn = document.getElementById('tenureYrBtn');
+    const tenureMoBtn = document.getElementById('tenureMoBtn');
+    const tenureScaleMarks = document.getElementById('tenureScaleMarks');
+
+    function setTenureMode(mode) {
+      if (state.tenureType === mode) return;
+      state.tenureType = mode;
+
+      if (mode === 'yr') {
+        tenureYrBtn.className = 'px-2.5 py-1 rounded-md bg-white text-sky-700 shadow-xs font-semibold';
+        tenureMoBtn.className = 'px-2.5 py-1 rounded-md text-gray-500 hover:text-gray-900 font-semibold';
+        
+        tenureSlider.min = 1;
+        tenureSlider.max = 10;
+        state.tenureValue = Math.min(10, Math.max(1, Math.round(state.tenureValue / 12)));
+        
+        tenureScaleMarks.innerHTML = `
+          <span>1 ஆண்டு</span><span>2 ஆண்டு</span><span>3 ஆண்டு</span><span>5 ஆண்டு</span><span>7 ஆண்டு</span><span>10 ஆண்டு</span>
+        `;
+      } else {
+        tenureMoBtn.className = 'px-2.5 py-1 rounded-md bg-white text-sky-700 shadow-xs font-semibold';
+        tenureYrBtn.className = 'px-2.5 py-1 rounded-md text-gray-500 hover:text-gray-900 font-semibold';
+        
+        tenureSlider.min = 6;
+        tenureSlider.max = 120;
+        state.tenureValue = state.tenureValue * 12;
+
+        tenureScaleMarks.innerHTML = `
+          <span>6 மாதம்</span><span>12 மாதம்</span><span>24 மாதம்</span><span>60 மாதம்</span><span>84 மாதம்</span><span>120 மாதம்</span>
+        `;
+      }
+
+      tenureInput.value = state.tenureValue;
+      tenureSlider.value = state.tenureValue;
+      updateUI();
+    }
+
+    tenureYrBtn.addEventListener('click', () => setTenureMode('yr'));
+    tenureMoBtn.addEventListener('click', () => setTenureMode('mo'));
+
+    tenureInput.addEventListener('input', (e) => {
+      let val = Number(e.target.value);
+      if (val > 0) {
+        state.tenureValue = val;
+        tenureSlider.value = val;
+        updateUI();
+      }
+    });
+
+    tenureSlider.addEventListener('input', (e) => {
+      state.tenureValue = Number(e.target.value);
+      tenureInput.value = state.tenureValue;
+      updateUI();
+    });
+
+    document.getElementById('compoundingFreq').addEventListener('change', (e) => {
+      state.compoundingFreq = Number(e.target.value);
+      updateUI();
+    });
+
+    // Customer Category Presets
+    document.querySelectorAll('.customer-type-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.customer-type-btn').forEach(b => {
+          b.className = 'customer-type-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100';
+        });
+        btn.className = 'customer-type-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 bg-sky-600 text-white shadow-xs';
+
+        const type = btn.dataset.type;
+        state.customerType = type;
+        const tipText = document.getElementById('tipText');
+
+        if (type === 'senior') {
+          state.annualRate = 7.3;
+          tipText.innerHTML = "<strong>மூத்த குடிமக்கள் சிறப்பு சலுகை:</strong> பெரும்பாலான வங்கிகள் 60 வயது பூர்த்தியடைந்த மூத்த குடிமக்களுக்கு வழக்கமான வட்டியை விட 0.50% முதல் 0.75% வரை கூடுதல் வட்டி வழங்குகின்றன. நிதியாண்டில் ₹50,000 வரை வட்டி வருமானத்திற்கு வரி விலக்கு உண்டு.";
+        } else if (type === 'postoffice') {
+          state.annualRate = 6.7;
+          setTenureMode('yr');
+          state.tenureValue = 5;
+          tipText.innerHTML = "<strong>அஞ்சலக தொடர் வைப்பு நிதி (Post Office RD):</strong> 5 ஆண்டுகள் கால அளவு கொண்டது. மத்திய அரசால் காலாண்டுக்கு ஒருமுறை வட்டி விகிதம் தீர்மானிக்கப்பட்டு காலாண்டு கூட்டு வட்டி முறையில் கணக்கிடப்படுகிறது.";
+        } else {
+          state.annualRate = 6.8;
+          tipText.innerHTML = "<strong>RD நடைமுறை:</strong> இந்திய வணிக வங்கிகள் மற்றும் அஞ்சலகங்களில் தொடர் வைப்பு நிதிக்கு (RD) காலாண்டு அடிப்படையில் வட்டி கூட்டப்படுகிறது (Quarterly Compounding). ஒவ்வொரு மாதமும் குறிப்பிட்ட தேதியில் ஒழுங்காக சேமிக்க இது ஒரு சிறந்த பாதுகாப்பான முதலீடு.";
+        }
+
+        updateUI();
+      });
+    });
+
+    // Expand / Collapse Table Accordions
+    document.getElementById('btnExpandAll').addEventListener('click', () => {
+      state.scheduleData.forEach(row => {
+        const sub = document.getElementById(`sub-year-${row.year}`);
+        const arrow = document.getElementById(`arrow-${row.year}`);
+        if (sub) sub.classList.remove('hidden');
+        if (arrow) arrow.classList.add('rotate-90');
+      });
+    });
+
+    document.getElementById('btnCollapseAll').addEventListener('click', () => {
+      state.scheduleData.forEach(row => {
+        const sub = document.getElementById(`sub-year-${row.year}`);
+        const arrow = document.getElementById(`arrow-${row.year}`);
+        if (sub) sub.classList.add('hidden');
+        if (arrow) arrow.classList.remove('rotate-90');
+      });
+    });
+
+    // Print
+    document.getElementById('btnPrint').addEventListener('click', () => {
+      window.print();
+    });
+
+    // CSV Export
+    document.getElementById('btnExportCSV').addEventListener('click', () => {
+      if (!state.scheduleData || state.scheduleData.length === 0) return;
+
+      let csv = 'ஆண்டு/மாதம்,தொடக்க இருப்பு,செலுத்திய தவணை,ஈட்டிய வட்டி,ஆண்டு இறுதி மதிப்பு,வளர்ச்சி சதவீதம்\n';
+
+      state.scheduleData.forEach(y => {
+        csv += `ஆண்டு ${y.year},"${y.openingBalance}","${y.deposit}","${y.interest}","${y.closingBalance}","${y.growthPercent}%"\n`;
+        y.months.forEach(m => {
+          csv += `மாதம் ${m.month},"${m.openingBalance}","${m.deposit}","${m.interest}","${m.closingBalance}","-"\n`;
+        });
+      });
+
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.setAttribute('href', url);
+      link.setAttribute('download', `Recurring_Deposit_RD_Schedule_${Date.now()}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+
+    /* Initial Load */
+    window.addEventListener('DOMContentLoaded', () => {
+      updateUI();
+    });
+  </script>
+</body>
+</html>

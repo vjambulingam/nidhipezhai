@@ -1,0 +1,48 @@
+---
+layout: layouts/base.njk
+---
+{% if siteOrigin %}
+{% set articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": title,
+  "description": description,
+  "datePublished": date | dateIso,
+  "inLanguage": "ta-IN",
+  "mainEntityOfPage": page.url | url | absoluteUrl,
+  "author": { "@type": "Organization", "name": site.title },
+  "publisher": { "@type": "Organization", "name": site.title },
+  "keywords": topics
+} %}
+<script type="application/ld+json">{{ articleSchema | jsonify | safe }}</script>
+{% endif %}
+<main class="article-page">
+  <div class="wrap article-page__wrap">
+    <nav class="breadcrumbs" aria-label="நீங்கள் இருக்கும் இடம்">
+      <a href="{{ '/' | url }}">முகப்பு</a>
+      <span aria-hidden="true">/</span>
+      <a href="{{ '/#articles' | url }}">கட்டுரைகள்</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">{{ title }}</span>
+    </nav>
+    <article class="article">
+      <header class="article__header">
+        <div class="article__topics">
+          {% for topic in topics %}<span class="topic-label">{{ topic }}</span>{% endfor %}
+        </div>
+        <h1>{{ title }}</h1>
+        <p class="article__description">{{ description }}</p>
+        <div class="article__meta">
+          <time datetime="{{ date | dateIso }}">{{ date | dateTamil }}</time>
+          <span aria-hidden="true">·</span>
+          <span>{{ content | readingTime }} நிமிட வாசிப்பு</span>
+        </div>
+      </header>
+      <div class="article__body">{{ content | safe }}</div>
+      <footer class="article__end">
+        <p>இந்தக் கட்டுரை கல்வி மற்றும் விழிப்புணர்வு நோக்கத்திற்காக மட்டுமே; தனிப்பட்ட நிதி ஆலோசனை அல்ல.</p>
+        <a href="{{ '/' | url }}#articles">← மேலும் கட்டுரைகள்</a>
+      </footer>
+    </article>
+  </div>
+</main>

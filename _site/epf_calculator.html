@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ஊழியர் வருங்கால வைப்பு நிதி (EPF) கணிப்பேடு</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Noto Sans Tamil -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', 'Noto Sans Tamil', sans-serif;
+      background-color: #f3f7f5;
+      color: #102e31;
+    }
+    
+    /* Range Slider Styling */
+    input[type=range] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 6px;
+      background: #e2e8f0;
+      border-radius: 9999px;
+      outline: none;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #0D7377;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(13, 115, 119, 0.4);
+      border: 2px solid #ffffff;
+      transition: transform 0.15s ease;
+    }
+    input[type=range]::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+      background: #095e61;
+    }
+    input[type=range]::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #0D7377;
+      cursor: pointer;
+      border: 2px solid #ffffff;
+      box-shadow: 0 2px 6px rgba(13, 115, 119, 0.4);
+    }
+
+    /* Print styles */
+    @media print {
+      .no-print { display: none !important; }
+      body { background-color: #fff !important; }
+      .shadow-xs, .shadow-sm, .shadow-md, .shadow-lg { box-shadow: none !important; }
+      .print-border { border: 1px solid #e5e7eb !important; }
+    }
+  </style>
+  <link rel="stylesheet" href="assets/css/calculator-theme.css">
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased">
+
+  <!-- Top Navigation Header -->
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="calc-site-header__inner flex items-center justify-between h-16">
+        <div class="calc-site-header__identity flex items-center space-x-3">
+          <a class="calc-site-logo" href="index.html" aria-label="நிதிப்பேழை முகப்பு"><img src="assets/images/nidhipezhai-logo.png" alt=""></a>
+          <div>
+            <h1 class="text-xl font-bold tracking-tight text-gray-900 leading-tight">
+              ஊழியர் வருங்கால வைப்பு நிதி (EPF) கணிப்பேடு
+            </h1>
+            <p class="text-xs text-gray-500 font-medium hidden sm:block">ஓய்வுக்கால முதிர்வுத் தொகை மற்றும் வட்டி கணிப்பேடு</p>
+          </div>
+        </div>
+
+        <nav class="calc-site-header__nav" aria-label="முதன்மை வழிசெலுத்தல்">
+          <a class="calc-nav-home" href="index.html">முகப்பு</a>
+          <a class="calc-nav-articles" href="index.html#articles">கட்டுரைகள்</a>
+          <a class="calc-nav-directory" href="calculators/">கணிப்பான்கள்</a>
+        </nav>
+
+        <!-- Action / Quick Links -->
+        <div class="calc-site-header__actions flex items-center space-x-2">
+          <button id="btnPrint" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+            அச்சிடு
+          </button>
+          <button id="btnExportCSV" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-700 rounded-lg shadow-sm transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            CSV ஏற்றுமதி
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full space-y-6">
+    
+    <!-- Profile Preset Tabs -->
+    <div class="bg-white rounded-xl shadow-xs border border-gray-200 p-1.5 flex flex-wrap gap-1.5">
+      <button class="profile-tab-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 bg-sky-600 text-white shadow-xs" data-preset="early">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        தொடக்கநிலை பணியாளர் (25 வயது, ₹35,000)
+      </button>
+      <button class="profile-tab-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100" data-preset="mid">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        நடுத்தர அனுபவம் (35 வயது, ₹75,000)
+      </button>
+      <button class="profile-tab-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100" data-preset="senior">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        முதிர் நிலை பணியாளர் (45 வயது, ₹1,50,000)
+      </button>
+    </div>
+
+    <!-- Main Interactive Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+      
+      <!-- Left Column: Inputs & Sliders (7 cols) -->
+      <div class="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-7 shadow-xs border border-gray-200 space-y-6">
+        
+        <!-- Field 1: Monthly Basic Salary + DA -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <label for="basicSalaryInput" class="text-sm font-semibold text-gray-700 flex items-center gap-1.5">
+              மாத அடிப்படை ஊதியம் + DA (Basic + DA)
+              <span id="salaryInWords" class="text-xs font-normal text-sky-600 bg-sky-50 px-2 py-0.5 rounded-full border border-sky-100">₹ 50 ஆயிரம்</span>
+            </label>
+            <div class="relative w-40 sm:w-48">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500 font-semibold text-sm">₹</span>
+              <input type="number" id="basicSalaryInput" min="5000" max="1000000" step="1000" value="50000" 
+                     class="w-full pl-8 pr-3 py-1.5 border border-gray-300 rounded-lg text-right font-bold text-gray-800 text-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-all outline-none">
+            </div>
+          </div>
+          <input type="range" id="basicSalarySlider" min="10000" max="300000" step="1000" value="50000">
+          <div class="flex justify-between text-[11px] font-medium text-gray-400">
+            <span>₹ 10K</span>
+            <span>₹ 50K</span>
+            <span>₹ 1L</span>
+            <span>₹ 2L</span>
+            <span>₹ 3L</span>
+          </div>
+        </div>
+
+        <!-- Field 2: Current Age & Retirement Age -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <label for="currentAgeInput" class="text-xs font-semibold text-gray-700">தற்போதைய வயது (ஆண்டுகள்)</label>
+              <input type="number" id="currentAgeInput" min="18" max="57" step="1" value="28" 
+                     class="w-20 px-2.5 py-1 border border-gray-300 rounded-lg text-right font-bold text-gray-800 text-xs focus:ring-2 focus:ring-sky-500 outline-none">
+            </div>
+            <input type="range" id="currentAgeSlider" min="18" max="55" step="1" value="28">
+          </div>
+
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <label for="retirementAgeInput" class="text-xs font-semibold text-gray-700">ஓய்வு பெறும் வயது</label>
+              <input type="number" id="retirementAgeInput" min="50" max="65" step="1" value="58" 
+                     class="w-20 px-2.5 py-1 border border-gray-300 rounded-lg text-right font-bold text-gray-800 text-xs focus:ring-2 focus:ring-sky-500 outline-none">
+            </div>
+            <input type="range" id="retirementAgeSlider" min="50" max="65" step="1" value="58">
+          </div>
+        </div>
+
+        <!-- Field 3: Current EPF Balance & Expected Annual Interest Rate -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <label for="existingBalanceInput" class="text-xs font-semibold text-gray-700">தற்போதைய EPF இருப்பு</label>
+              <div class="relative w-28">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-2 text-gray-500 text-xs font-semibold">₹</span>
+                <input type="number" id="existingBalanceInput" min="0" max="10000000" step="5000" value="100000" 
+                       class="w-full pl-6 pr-2 py-1 border border-gray-300 rounded-lg text-right font-bold text-gray-800 text-xs focus:ring-2 focus:ring-sky-500 outline-none">
+              </div>
+            </div>
+            <input type="range" id="existingBalanceSlider" min="0" max="2500000" step="10000" value="100000">
+          </div>
+
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <label for="rateInput" class="text-xs font-semibold text-gray-700">EPF வட்டி விகிதம் (% p.a.)</label>
+              <div class="relative w-24">
+                <input type="number" id="rateInput" min="5" max="12" step="0.05" value="8.25" 
+                       class="w-full pr-6 pl-2 py-1 border border-gray-300 rounded-lg text-right font-bold text-gray-800 text-xs focus:ring-2 focus:ring-sky-500 outline-none">
+                <span class="absolute inset-y-0 right-0 flex items-center pr-2 text-gray-500 text-xs font-semibold">%</span>
+              </div>
+            </div>
+            <input type="range" id="rateSlider" min="6.5" max="10" step="0.05" value="8.25">
+          </div>
+        </div>
+
+        <!-- Advanced Options: Salary Hike & VPF Contribution -->
+        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200/80 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <label for="salaryHikeInput" class="text-xs font-semibold text-gray-700 block">ஆண்டு சம்பள உயர்வு (Annual Salary Hike %)</label>
+              <span class="text-[10px] text-gray-400">ஒவ்வொரு ஆண்டும் ஊதியத்தில் எதிர்பார்க்கப்படும் சராசரி உயர்வு</span>
+            </div>
+            <div class="relative w-28">
+              <input type="number" id="salaryHikeInput" min="0" max="25" step="0.5" value="5" 
+                     class="w-full pr-7 pl-3 py-1.5 border border-gray-300 rounded-lg text-right font-bold text-gray-800 text-xs focus:ring-2 focus:ring-sky-500 outline-none">
+              <span class="absolute inset-y-0 right-0 flex items-center pr-2.5 text-gray-500 font-semibold text-xs">%</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-slate-200/70">
+            <div>
+              <label for="vpfContributionInput" class="text-xs font-semibold text-gray-700 block">விருப்ப PF பங்களிப்பு (VPF %)</label>
+              <span class="text-[10px] text-gray-400">கட்டாய 12%-க்கு மேல் நீங்கள் விரும்பும் கூடுதல் பணியாளர் பங்களிப்பு</span>
+            </div>
+            <div class="relative w-28">
+              <input type="number" id="vpfContributionInput" min="0" max="88" step="1" value="0" 
+                     class="w-full pr-7 pl-3 py-1.5 border border-gray-300 rounded-lg text-right font-bold text-gray-800 text-xs focus:ring-2 focus:ring-sky-500 outline-none">
+              <span class="absolute inset-y-0 right-0 flex items-center pr-2.5 text-gray-500 font-semibold text-xs">%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contextual Note / Statutory Info -->
+        <div class="p-3 bg-amber-50 rounded-xl border border-amber-200/60 flex items-start gap-3">
+          <span class="text-amber-600 mt-0.5">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </span>
+          <div class="text-xs text-amber-900 leading-relaxed" id="tipText">
+            <strong>பங்களிப்பு விகிதங்கள்:</strong> பணியாளர் பங்கு: 12% (முழுவதும் EPF-க்கு)[cite: 1]. நிர்வாகத்தின் பங்கு: 12% (இதில் 3.67% EPF கணக்கிற்கும், 8.33% EPS ஓய்வூதியத் திட்டத்திற்கும் பகிரப்படுகிறது)[cite: 1]. மத்திய அரசு அறிவிக்கும் வட்டி மாதாந்திர இறுதி இருப்பின் அடிப்படையில் கணக்கிடப்பட்டு ஆண்டு இறுதியில் வரவு வைக்கப்படுகிறது[cite: 1].
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Summary & Chart (5 cols) -->
+      <div class="lg:col-span-5 bg-white rounded-2xl p-6 sm:p-7 shadow-xs border border-gray-200 flex flex-col justify-between space-y-6">
+        
+        <!-- Total Retirement Corpus Highlight Card -->
+        <div class="bg-gradient-to-br from-sky-600 to-indigo-700 rounded-xl p-5 text-white shadow-md relative overflow-hidden">
+          <div class="absolute -right-6 -bottom-6 w-28 h-28 bg-white/10 rounded-full pointer-events-none"></div>
+          <p class="text-xs uppercase tracking-wider font-semibold text-sky-100">ஓய்வுக்கால EPF முதிர்வு நிதி (Retirement Corpus)</p>
+          <div class="flex flex-wrap items-baseline gap-x-2 gap-y-1 mt-1">
+            <span class="min-w-0 max-w-full break-words text-2xl sm:text-3xl font-extrabold tracking-tight" id="corpusDisplay">₹ 1.84 கோடி</span>
+            <span class="max-w-full text-xs text-sky-200 font-medium" id="tenureLabelSubtitle">30 ஆண்டுகளில்</span>
+          </div>
+        </div>
+
+        <!-- Donut Chart & Breakdown Stats -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 items-center">
+          <!-- Canvas for Chart.js -->
+          <div class="relative w-44 h-44 mx-auto flex items-center justify-center">
+            <canvas id="breakdownChart"></canvas>
+            <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
+              <span class="text-[10px] uppercase font-bold text-gray-400">மொத்தம்</span>
+              <span id="chartCenterTotal" class="text-xs font-bold text-gray-700">₹ 1.84 Cr</span>
+            </div>
+          </div>
+
+          <!-- Numbers Legend -->
+          <div class="space-y-3.5 text-sm">
+            <div class="border-l-4 border-sky-500 pl-3">
+              <span class="text-xs text-gray-500 font-medium block">பணியாளர் பங்கு (12% + VPF)</span>
+              <span id="summaryEmployeeShare" class="font-bold text-gray-900 text-base">₹ 47.8 L</span>
+              <span id="employeeRatio" class="text-[11px] text-sky-600 font-semibold block">(26.0%)</span>
+            </div>
+
+            <div class="border-l-4 border-indigo-500 pl-3">
+              <span class="text-xs text-gray-500 font-medium block">நிர்வாக பங்கு (3.67% EPF)</span>
+              <span id="summaryEmployerShare" class="font-bold text-indigo-700 text-base">₹ 14.6 L</span>
+              <span id="employerRatio" class="text-[11px] text-indigo-600 font-semibold block">(7.9%)</span>
+            </div>
+
+            <div class="border-l-4 border-emerald-500 pl-3">
+              <span class="text-xs text-gray-500 font-medium block">ஈட்டிய மொத்த EPF வட்டி</span>
+              <span id="summaryInterest" class="font-bold text-emerald-600 text-base">₹ 1.22 Cr</span>
+              <span id="interestRatio" class="text-[11px] text-emerald-600 font-semibold block">(66.1%)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Monthly Contribution Overview Card -->
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200/80 text-xs space-y-1.5">
+          <div class="flex justify-between text-gray-600">
+            <span>தொடக்க மாதப் பங்களிப்பு (பணியாளர் 12%):</span>
+            <span class="font-bold text-gray-800" id="currentMonthlyEmployee">₹ 6,000</span>
+          </div>
+          <div class="flex justify-between text-gray-600">
+            <span>தொடக்க மாதப் பங்களிப்பு (நிறுவனம் 3.67%):</span>
+            <span class="font-bold text-gray-800" id="currentMonthlyEmployer">₹ 1,835</span>
+          </div>
+          <div class="flex justify-between text-gray-600 border-t border-slate-200 pt-1.5 font-semibold">
+            <span>மாதாந்திர EPF வரவு (15.67%):</span>
+            <span class="text-sky-700 font-bold" id="currentMonthlyTotal">₹ 7,835</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Growth Stacked Bar & Line Chart Section -->
+    <div class="bg-white rounded-2xl p-6 shadow-xs border border-gray-200 space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-gray-100">
+        <div>
+          <h2 class="text-lg font-bold text-gray-900">ஆண்டு EPF வளர்ச்சி & வட்டி கூட்டு வளர்ச்சி வரைபடம்</h2>
+          <p class="text-xs text-gray-500">பணியாளர் பங்களிப்பு, நிறுவன பங்களிப்பு மற்றும் ஆண்டுதோறும் சேரும் வட்டியின் முழுமையான வரைபடம்</p>
+        </div>
+        <div class="flex items-center gap-4 text-xs font-semibold">
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-xs bg-sky-500 inline-block"></span> பணியாளர் பங்கு</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-xs bg-indigo-500 inline-block"></span> நிறுவன பங்கு</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-xs bg-emerald-500 inline-block"></span> ஈட்டிய வட்டி</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-1.5 rounded-full bg-slate-900 inline-block"></span> மொத்த நிதி</span>
+        </div>
+      </div>
+      <div class="w-full h-72 sm:h-80">
+        <canvas id="growthBarChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Amortization / Year-on-Year Growth Schedule Table Section -->
+    <div class="bg-white rounded-2xl p-6 shadow-xs border border-gray-200 space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-gray-100">
+        <div>
+          <h2 class="text-lg font-bold text-gray-900">ஆண்டு வாரியான EPF கணக்கு அட்டவணை (Yearly Statement)</h2>
+          <p class="text-xs text-gray-500">மாதாந்திர அடிப்படை ஊதியம், பங்களிப்பு மற்றும் வட்டி விவரங்களைக் காண அந்தந்த ஆண்டைக் கிளிக் செய்யவும்.</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="btnExpandAll" class="px-3 py-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">அனைத்தையும் விரி</button>
+          <button id="btnCollapseAll" class="px-3 py-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">அனைத்தையும் சுருக்கு</button>
+        </div>
+      </div>
+
+      <!-- Schedule Table -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs sm:text-sm border-collapse" id="amortizationTable">
+          <thead>
+            <tr class="bg-gray-50 border-b border-gray-200 text-gray-600 uppercase font-semibold text-[11px] tracking-wider">
+              <th class="py-3 px-4">ஆண்டு (வயது)</th>
+              <th class="py-3 px-4 text-right">தொடக்க இருப்பு</th>
+              <th class="py-3 px-4 text-right">பணியாளர் பங்கு</th>
+              <th class="py-3 px-4 text-right">நிறுவன பங்கு</th>
+              <th class="py-3 px-4 text-right">ஆண்டு வட்டி</th>
+              <th class="py-3 px-4 text-right">இறுதி EPF இருப்பு</th>
+              <th class="py-3 px-4 text-right">வளர்ச்சி சதவீதம் %</th>
+            </tr>
+          </thead>
+          <tbody id="amortizationBody" class="divide-y divide-gray-100 text-gray-700">
+            <!-- Dynamically populated via JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="calc-site-footer bg-white border-t border-gray-200 mt-10 py-6 text-center text-xs text-gray-500">
+    <div class="calc-site-footer__inner max-w-7xl mx-auto px-4">
+      <div class="calc-site-footer__main">
+        <div>
+          <a class="calc-site-footer__brand" href="index.html">நிதிப்பேழை</a>
+          <p class="calc-site-footer__tagline">பணத்தைப் புரிந்துகொள்ளவும், நிதி முடிவுகளைப் பற்றி கற்றுக்கொள்ளவும் தமிழில் ஒரு இடம்.</p>
+        </div>
+        <nav class="calc-site-footer__links" aria-label="தள இணைப்புகள்">
+          <a href="index.html">முகப்பு</a>
+          <a href="index.html#articles">கட்டுரைகள்</a>
+          <a href="calculators/">கணிப்பான்கள்</a>
+          <a href="about/">எங்களைப் பற்றி</a>
+          <a href="disclaimer/">பொறுப்புத் துறப்பு</a>
+          <a href="license/">உரிமம்</a>
+        </nav>
+      </div>
+      <p class="font-medium text-gray-600">ஊழியர் சேமநல நிதி (EPF) கணிப்பேடு &bull; இந்திய தொழிலாளர் வைப்பு நிதி நிறுவன (EPFO) விதிகளின்படி உருவாக்கப்பட்டது</p>
+      <p class="mt-1 text-gray-400">குறிப்பு: ஒரு நிதியாண்டில் பணியாளர் பங்களிப்பு ₹2.5 லட்சத்தைத் தாண்டினால் (நிறுவன பங்களிப்பு இல்லாத போது ₹5 லட்சம்), உபரித் தொகைக்கு கிடைக்கும் வட்டிக்கு வருமான வரி பொருந்தும். அரசு உத்தரவுகளின்படி ஆண்டுதோறும் வட்டி விகிதங்கள் மாற்றியமைக்கப்படலாம்.</p>
+      <p class="mt-2 text-gray-500">பொறுப்புத் துறப்பு: இந்தக் கணிப்பேடு கல்வி மற்றும் விழிப்புணர்வு நோக்கத்திற்காக மட்டுமே. காட்டப்படும் கணக்கீடுகளின் துல்லியம் அல்லது முழுமைக்கு உத்தரவாதம் அளிக்கப்படாது; அவற்றின் அடிப்படையில் எடுக்கப்படும் முடிவுகள் அல்லது ஏற்படும் இழப்புகளுக்கு நாங்கள் பொறுப்பேற்கமாட்டோம். முதலீடு அல்லது கடன் முடிவெடுப்பதற்கு முன் தகுதியான நிதி ஆலோசகரை அணுகவும்.</p>
+      <p class="calc-site-footer__license">இந்தத் தளத்தின் உள்ளடக்கம் <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> உரிமத்தின் கீழ் பகிரப்படுகிறது.</p>
+    </div>
+  </footer>
+
+  <script>
+    /* State */
+    const state = {
+      basicSalary: 50000,
+      currentAge: 28,
+      retirementAge: 58,
+      existingBalance: 100000,
+      annualRate: 8.25,
+      salaryHike: 5,
+      vpfRate: 0,
+      scheduleData: []
+    };
+
+    /* Chart instances */
+    let breakdownChartInstance = null;
+    let growthBarChartInstance = null;
+
+    // Format numbers with Indian commas
+    function formatINR(val, includeSymbol = true) {
+      const num = Math.round(val);
+      const str = num.toLocaleString('en-IN');
+      return includeSymbol ? `₹ ${str}` : str;
+    }
+
+    // Convert large amounts into concise words (Lakhs / Crores)
+    function formatAmountToWords(amount) {
+      if (amount >= 10000000) {
+        const cr = (amount / 10000000).toFixed(2);
+        return `₹ ${parseFloat(cr)} கோடி`;
+      } else if (amount >= 100000) {
+        const lk = (amount / 100000).toFixed(2);
+        return `₹ ${parseFloat(lk)} லட்சம்`;
+      } else if (amount >= 1000) {
+        return `₹ ${(amount / 1000).toFixed(1)} ஆயிரம்`;
+      }
+      return `₹ ${amount}`;
+    }
+
+    /* Core Calculation Engine */
+    function calculateEPF() {
+      const totalYears = Math.max(1, state.retirementAge - state.currentAge);
+      const annualRateDecimal = state.annualRate / 100;
+      const monthlyRate = annualRateDecimal / 12;
+      const hikeDecimal = state.salaryHike / 100;
+      
+      const employeePercent = (12 + state.vpfRate) / 100;
+      const employerEpfPercent = 0.0367; // 3.67% goes to EPF
+
+      let runningBalance = state.existingBalance;
+      let totalEmployeeContr = 0;
+      let totalEmployerContr = 0;
+      let totalInterestEarned = 0;
+
+      let currentSalary = state.basicSalary;
+      const yearlyRecords = [];
+
+      for (let yr = 1; yr <= totalYears; yr++) {
+        const yearStartBalance = runningBalance;
+        let yearEmployeeContr = 0;
+        let yearEmployerContr = 0;
+        let yearInterestAccumulator = 0;
+        const monthlyBreakdown = [];
+
+        // 12 months in this year
+        for (let m = 1; m <= 12; m++) {
+          const openBal = runningBalance;
+          const empShare = currentSalary * employeePercent;
+          const emplyrShare = currentSalary * employerEpfPercent;
+          const totalMonthDeposit = empShare + emplyrShare;
+
+          yearEmployeeContr += empShare;
+          yearEmployerContr += emplyrShare;
+          totalEmployeeContr += empShare;
+          totalEmployerContr += emplyrShare;
+
+          // EPFO calculates monthly interest on the running balance including new deposit
+          const monthInterest = (openBal + totalMonthDeposit) * monthlyRate;
+          yearInterestAccumulator += monthInterest;
+
+          runningBalance = openBal + totalMonthDeposit;
+
+          monthlyBreakdown.push({
+            month: m,
+            openingBalance: openBal,
+            employeeShare: empShare,
+            employerShare: emplyrShare,
+            totalDeposit: totalMonthDeposit,
+            interest: monthInterest,
+            closingBalance: runningBalance
+          });
+        }
+
+        // At end of financial year, the accumulated interest is officially credited to balance
+        runningBalance += yearInterestAccumulator;
+        totalInterestEarned += yearInterestAccumulator;
+
+        const cumulativeContributions = state.existingBalance + totalEmployeeContr + totalEmployerContr;
+        const growthPercent = cumulativeContributions > 0 
+          ? (((runningBalance - cumulativeContributions) / cumulativeContributions) * 100).toFixed(1)
+          : '0.0';
+
+        yearlyRecords.push({
+          year: yr,
+          age: state.currentAge + yr,
+          openingBalance: yearStartBalance,
+          monthlySalary: currentSalary,
+          employeeShare: yearEmployeeContr,
+          employerShare: yearEmployerContr,
+          totalDeposit: yearEmployeeContr + yearEmployerContr,
+          interest: yearInterestAccumulator,
+          closingBalance: runningBalance,
+          cumulativeEmployee: totalEmployeeContr,
+          cumulativeEmployer: totalEmployerContr,
+          cumulativeInterest: totalInterestEarned,
+          growthPercent: growthPercent,
+          months: [...monthlyBreakdown]
+        });
+
+        // Apply annual salary increment for next year
+        currentSalary = currentSalary * (1 + hikeDecimal);
+      }
+
+      return {
+        totalYears,
+        finalCorpus: Math.round(runningBalance),
+        totalEmployeeContr: Math.round(totalEmployeeContr),
+        totalEmployerContr: Math.round(totalEmployerContr),
+        totalInterestEarned: Math.round(totalInterestEarned),
+        schedule: yearlyRecords
+      };
+    }
+
+    /* Chart Renderers */
+    function updateCharts(calcResults) {
+      const { finalCorpus, totalEmployeeContr, totalEmployerContr, totalInterestEarned, schedule } = calcResults;
+
+      // 1. Donut Chart
+      const donutCtx = document.getElementById('breakdownChart').getContext('2d');
+      const donutData = {
+        labels: ['பணியாளர் பங்கு', 'நிறுவன பங்கு', 'ஈட்டிய மொத்த வட்டி'],
+        datasets: [{
+          data: [totalEmployeeContr + state.existingBalance, totalEmployerContr, totalInterestEarned],
+          backgroundColor: ['#0D7377', '#247C72', '#10b981'],
+          hoverBackgroundColor: ['#095e61', '#176b58', '#059669'],
+          borderWidth: 2,
+          borderColor: '#ffffff'
+        }]
+      };
+
+      if (breakdownChartInstance) {
+        breakdownChartInstance.data = donutData;
+        breakdownChartInstance.update();
+      } else {
+        breakdownChartInstance = new Chart(donutCtx, {
+          type: 'doughnut',
+          data: donutData,
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '72%',
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    const val = context.parsed;
+                    const pct = ((val / finalCorpus) * 100).toFixed(1);
+                    return ` ${context.label}: ${formatINR(val)} (${pct}%)`;
+                  }
+                }
+              }
+            }
+          }
+        });
+      }
+
+      // 2. Growth Stacked Bar + Line Chart
+      const barCtx = document.getElementById('growthBarChart').getContext('2d');
+      const labels = schedule.map(item => `வயது ${item.age}`);
+      const empData = schedule.map(item => Math.round(item.cumulativeEmployee + state.existingBalance));
+      const emplyrData = schedule.map(item => Math.round(item.cumulativeEmployer));
+      const interestData = schedule.map(item => Math.round(item.cumulativeInterest));
+      const balanceData = schedule.map(item => Math.round(item.closingBalance));
+
+      const barData = {
+        labels: labels,
+        datasets: [
+          {
+            type: 'line',
+            label: 'மொத்த EPF நிதி',
+            data: balanceData,
+            borderColor: '#0f172a',
+            backgroundColor: '#0f172a',
+            borderWidth: 2.5,
+            pointRadius: schedule.length > 25 ? 1 : 3,
+            yAxisID: 'y1',
+            tension: 0.2
+          },
+          {
+            type: 'bar',
+            label: 'பணியாளர் பங்கு',
+            data: empData,
+            backgroundColor: '#0D7377',
+            stack: 'epfStack',
+            borderRadius: 3
+          },
+          {
+            type: 'bar',
+            label: 'நிறுவன பங்கு',
+            data: emplyrData,
+            backgroundColor: '#247C72',
+            stack: 'epfStack',
+            borderRadius: 3
+          },
+          {
+            type: 'bar',
+            label: 'சேர்ந்த வட்டி',
+            data: interestData,
+            backgroundColor: '#10b981',
+            stack: 'epfStack',
+            borderRadius: 3
+          }
+        ]
+      };
+
+      if (growthBarChartInstance) {
+        growthBarChartInstance.data = barData;
+        growthBarChartInstance.update();
+      } else {
+        growthBarChartInstance = new Chart(barCtx, {
+          data: barData,
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: {
+              mode: 'index',
+              intersect: false
+            },
+            scales: {
+              x: {
+                grid: { display: false },
+                ticks: { font: { size: 11 } }
+              },
+              y: {
+                stacked: true,
+                position: 'left',
+                grid: { color: '#f1f5f9' },
+                ticks: {
+                  font: { size: 10 },
+                  callback: (value) => formatAmountToWords(value)
+                }
+              },
+              y1: {
+                position: 'right',
+                grid: { drawOnChartArea: false },
+                ticks: {
+                  font: { size: 10 },
+                  callback: (value) => formatAmountToWords(value)
+                }
+              }
+            },
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    return ` ${context.dataset.label}: ${formatINR(context.parsed.y)}`;
+                  }
+                }
+              }
+            }
+          }
+        });
+      }
+    }
+
+    /* Table Renderer */
+    function renderScheduleTable(schedule) {
+      const tbody = document.getElementById('amortizationBody');
+      tbody.innerHTML = '';
+
+      schedule.forEach((row) => {
+        // Parent Year Row
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-sky-50/60 transition-colors cursor-pointer group border-b border-gray-100 font-medium';
+        tr.dataset.year = row.year;
+        tr.innerHTML = `
+          <td class="py-3 px-4 font-bold text-sky-700 flex items-center gap-2">
+            <svg id="arrow-${row.year}" class="w-4 h-4 transform transition-transform text-gray-400 group-hover:text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+            ஆண்டு ${row.year} (வயது ${row.age})
+          </td>
+          <td class="py-3 px-4 text-right text-gray-600">${formatINR(row.openingBalance)}</td>
+          <td class="py-3 px-4 text-right text-sky-700 font-semibold">${formatINR(row.employeeShare)}</td>
+          <td class="py-3 px-4 text-right text-indigo-700 font-semibold">${formatINR(row.employerShare)}</td>
+          <td class="py-3 px-4 text-right text-emerald-600 font-semibold">${formatINR(row.interest)}</td>
+          <td class="py-3 px-4 text-right text-gray-900 font-bold">${formatINR(row.closingBalance)}</td>
+          <td class="py-3 px-4 text-right">
+            <div class="inline-flex items-center gap-1.5 font-bold text-gray-700">
+              <span>+${row.growthPercent}%</span>
+              <div class="w-12 bg-gray-200 rounded-full h-1.5 hidden sm:inline-block overflow-hidden">
+                <div class="bg-emerald-500 h-1.5 rounded-full" style="width: ${Math.min(100, Math.max(5, row.growthPercent))}%"></div>
+              </div>
+            </div>
+          </td>
+        `;
+
+        // Collapsible Months Container Row
+        const subTr = document.createElement('tr');
+        subTr.id = `sub-year-${row.year}`;
+        subTr.className = 'hidden bg-slate-50 border-b border-gray-200';
+        
+        let monthRowsHtml = '';
+        row.months.forEach(m => {
+          monthRowsHtml += `
+            <tr class="hover:bg-slate-100/70 border-b border-slate-200/50 text-[11px] sm:text-xs">
+              <td class="py-2 px-4 pl-10 text-gray-500 font-medium">மாதம் ${m.month}</td>
+              <td class="py-2 px-4 text-right text-gray-500">${formatINR(m.openingBalance)}</td>
+              <td class="py-2 px-4 text-right text-sky-600 font-medium">${formatINR(m.employeeShare)}</td>
+              <td class="py-2 px-4 text-right text-indigo-600 font-medium">${formatINR(m.employerShare)}</td>
+              <td class="py-2 px-4 text-right text-emerald-600 font-medium">${formatINR(m.interest)}</td>
+              <td class="py-2 px-4 text-right text-gray-800 font-medium">${formatINR(m.closingBalance)}</td>
+              <td class="py-2 px-4 text-right text-gray-400">-</td>
+            </tr>
+          `;
+        });
+
+        subTr.innerHTML = `
+          <td colspan="7" class="p-0">
+            <table class="w-full text-left">
+              <tbody class="divide-y divide-slate-100">
+                ${monthRowsHtml}
+              </tbody>
+            </table>
+          </td>
+        `;
+
+        tbody.appendChild(tr);
+        tbody.appendChild(subTr);
+
+        // Click event to toggle monthly details
+        tr.addEventListener('click', () => {
+          const isHidden = subTr.classList.contains('hidden');
+          const arrow = document.getElementById(`arrow-${row.year}`);
+          if (isHidden) {
+            subTr.classList.remove('hidden');
+            arrow.classList.add('rotate-90');
+          } else {
+            subTr.classList.add('hidden');
+            arrow.classList.remove('rotate-90');
+          }
+        });
+      });
+    }
+
+    /* Update Complete UI State */
+    function updateUI() {
+      // Input Validation
+      if (state.currentAge >= state.retirementAge) {
+        state.retirementAge = state.currentAge + 1;
+        document.getElementById('retirementAgeInput').value = state.retirementAge;
+        document.getElementById('retirementAgeSlider').value = state.retirementAge;
+      }
+
+      const calc = calculateEPF();
+      state.scheduleData = calc.schedule;
+
+      // Top Highlights
+      document.getElementById('corpusDisplay').textContent = formatINR(calc.finalCorpus);
+      document.getElementById('tenureLabelSubtitle').textContent = `${calc.totalYears} ஆண்டுகளில் (ஓய்வு வயது ${state.retirementAge})`;
+
+      const totalContrPlusBalance = calc.totalEmployeeContr + state.existingBalance;
+      document.getElementById('summaryEmployeeShare').textContent = formatINR(totalContrPlusBalance);
+      document.getElementById('summaryEmployerShare').textContent = formatINR(calc.totalEmployerContr);
+      document.getElementById('summaryInterest').textContent = formatINR(calc.totalInterestEarned);
+
+      const empPct = ((totalContrPlusBalance / calc.finalCorpus) * 100).toFixed(1);
+      const emplyrPct = ((calc.totalEmployerContr / calc.finalCorpus) * 100).toFixed(1);
+      const intPct = (100 - parseFloat(empPct) - parseFloat(emplyrPct)).toFixed(1);
+
+      document.getElementById('employeeRatio').textContent = `(${empPct}%)`;
+      document.getElementById('employerRatio').textContent = `(${emplyrPct}%)`;
+      document.getElementById('interestRatio').textContent = `(${intPct}%)`;
+
+      document.getElementById('chartCenterTotal').textContent = formatAmountToWords(calc.finalCorpus);
+      document.getElementById('salaryInWords').textContent = formatAmountToWords(state.basicSalary);
+
+      // Monthly breakdown card
+      const curEmpMonthly = state.basicSalary * ((12 + state.vpfRate) / 100);
+      const curEmplyrMonthly = state.basicSalary * 0.0367;
+      document.getElementById('currentMonthlyEmployee').textContent = formatINR(curEmpMonthly);
+      document.getElementById('currentMonthlyEmployer').textContent = formatINR(curEmplyrMonthly);
+      document.getElementById('currentMonthlyTotal').textContent = formatINR(curEmpMonthly + curEmplyrMonthly);
+
+      // Sync Controls
+      document.getElementById('basicSalaryInput').value = state.basicSalary;
+      document.getElementById('basicSalarySlider').value = state.basicSalary;
+
+      document.getElementById('currentAgeInput').value = state.currentAge;
+      document.getElementById('currentAgeSlider').value = state.currentAge;
+
+      document.getElementById('retirementAgeInput').value = state.retirementAge;
+      document.getElementById('retirementAgeSlider').value = state.retirementAge;
+
+      document.getElementById('existingBalanceInput').value = state.existingBalance;
+      document.getElementById('existingBalanceSlider').value = state.existingBalance;
+
+      document.getElementById('rateInput').value = state.annualRate;
+      document.getElementById('rateSlider').value = state.annualRate;
+
+      document.getElementById('salaryHikeInput').value = state.salaryHike;
+      document.getElementById('vpfContributionInput').value = state.vpfRate;
+
+      // Update Charts & Table
+      updateCharts(calc);
+      renderScheduleTable(calc.schedule);
+    }
+
+    /* Event Listeners */
+    const basicSalaryInput = document.getElementById('basicSalaryInput');
+    const basicSalarySlider = document.getElementById('basicSalarySlider');
+
+    basicSalaryInput.addEventListener('input', (e) => {
+      let val = Number(e.target.value);
+      if (val >= 0) {
+        state.basicSalary = val;
+        basicSalarySlider.value = val;
+        updateUI();
+      }
+    });
+
+    basicSalarySlider.addEventListener('input', (e) => {
+      state.basicSalary = Number(e.target.value);
+      basicSalaryInput.value = state.basicSalary;
+      updateUI();
+    });
+
+    const currentAgeInput = document.getElementById('currentAgeInput');
+    const currentAgeSlider = document.getElementById('currentAgeSlider');
+
+    currentAgeInput.addEventListener('input', (e) => {
+      let val = Number(e.target.value);
+      if (val >= 18 && val <= 65) {
+        state.currentAge = val;
+        currentAgeSlider.value = val;
+        updateUI();
+      }
+    });
+
+    currentAgeSlider.addEventListener('input', (e) => {
+      state.currentAge = Number(e.target.value);
+      currentAgeInput.value = state.currentAge;
+      updateUI();
+    });
+
+    const retirementAgeInput = document.getElementById('retirementAgeInput');
+    const retirementAgeSlider = document.getElementById('retirementAgeSlider');
+
+    retirementAgeInput.addEventListener('input', (e) => {
+      let val = Number(e.target.value);
+      if (val >= 50 && val <= 70) {
+        state.retirementAge = val;
+        retirementAgeSlider.value = val;
+        updateUI();
+      }
+    });
+
+    retirementAgeSlider.addEventListener('input', (e) => {
+      state.retirementAge = Number(e.target.value);
+      retirementAgeInput.value = state.retirementAge;
+      updateUI();
+    });
+
+    const existingBalanceInput = document.getElementById('existingBalanceInput');
+    const existingBalanceSlider = document.getElementById('existingBalanceSlider');
+
+    existingBalanceInput.addEventListener('input', (e) => {
+      let val = Number(e.target.value);
+      if (val >= 0) {
+        state.existingBalance = val;
+        existingBalanceSlider.value = val;
+        updateUI();
+      }
+    });
+
+    existingBalanceSlider.addEventListener('input', (e) => {
+      state.existingBalance = Number(e.target.value);
+      existingBalanceInput.value = state.existingBalance;
+      updateUI();
+    });
+
+    const rateInput = document.getElementById('rateInput');
+    const rateSlider = document.getElementById('rateSlider');
+
+    rateInput.addEventListener('input', (e) => {
+      let val = Number(e.target.value);
+      if (val >= 0) {
+        state.annualRate = val;
+        rateSlider.value = val;
+        updateUI();
+      }
+    });
+
+    rateSlider.addEventListener('input', (e) => {
+      state.annualRate = Number(e.target.value);
+      rateInput.value = state.annualRate;
+      updateUI();
+    });
+
+    document.getElementById('salaryHikeInput').addEventListener('input', (e) => {
+      state.salaryHike = Number(e.target.value) || 0;
+      updateUI();
+    });
+
+    document.getElementById('vpfContributionInput').addEventListener('input', (e) => {
+      state.vpfRate = Number(e.target.value) || 0;
+      updateUI();
+    });
+
+    // Profile Presets
+    document.querySelectorAll('.profile-tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.profile-tab-btn').forEach(b => {
+          b.className = 'profile-tab-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100';
+        });
+        btn.className = 'profile-tab-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 bg-sky-600 text-white shadow-xs';
+
+        const preset = btn.dataset.preset;
+        if (preset === 'early') {
+          state.basicSalary = 35000;
+          state.currentAge = 25;
+          state.retirementAge = 58;
+          state.existingBalance = 25000;
+          state.salaryHike = 7;
+          state.vpfRate = 0;
+        } else if (preset === 'mid') {
+          state.basicSalary = 75000;
+          state.currentAge = 35;
+          state.retirementAge = 58;
+          state.existingBalance = 750000;
+          state.salaryHike = 5;
+          state.vpfRate = 0;
+        } else if (preset === 'senior') {
+          state.basicSalary = 150000;
+          state.currentAge = 45;
+          state.retirementAge = 60;
+          state.existingBalance = 2500000;
+          state.salaryHike = 4;
+          state.vpfRate = 5;
+        }
+
+        updateUI();
+      });
+    });
+
+    // Expand / Collapse Table Accordions
+    document.getElementById('btnExpandAll').addEventListener('click', () => {
+      state.scheduleData.forEach(row => {
+        const sub = document.getElementById(`sub-year-${row.year}`);
+        const arrow = document.getElementById(`arrow-${row.year}`);
+        if (sub) sub.classList.remove('hidden');
+        if (arrow) arrow.classList.add('rotate-90');
+      });
+    });
+
+    document.getElementById('btnCollapseAll').addEventListener('click', () => {
+      state.scheduleData.forEach(row => {
+        const sub = document.getElementById(`sub-year-${row.year}`);
+        const arrow = document.getElementById(`arrow-${row.year}`);
+        if (sub) sub.classList.add('hidden');
+        if (arrow) arrow.classList.remove('rotate-90');
+      });
+    });
+
+    // Print
+    document.getElementById('btnPrint').addEventListener('click', () => {
+      window.print();
+    });
+
+    // CSV Export
+    document.getElementById('btnExportCSV').addEventListener('click', () => {
+      if (!state.scheduleData || state.scheduleData.length === 0) return;
+
+      let csv = 'ஆண்டு(வயது),தொடக்க இருப்பு,பணியாளர் பங்கு,நிறுவன பங்கு,ஆண்டு வட்டி,இறுதி EPF இருப்பு,வளர்ச்சி சதவீதம்\n';
+
+      state.scheduleData.forEach(y => {
+        csv += `ஆண்டு ${y.year} (வயது ${y.age}),"${y.openingBalance}","${y.employeeShare}","${y.employerShare}","${y.interest}","${y.closingBalance}","${y.growthPercent}%"\n`;
+        y.months.forEach(m => {
+          csv += `மாதம் ${m.month},"${m.openingBalance}","${m.employeeShare}","${m.employerShare}","${m.interest}","${m.closingBalance}","-"\n`;
+        });
+      });
+
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.setAttribute('href', url);
+      link.setAttribute('download', `EPF_Retirement_Corpus_Schedule_${Date.now()}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+
+    /* Initial Load */
+    window.addEventListener('DOMContentLoaded', () => {
+      updateUI();
+    });
+  </script>
+</body>
+</html>

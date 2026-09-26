@@ -1,0 +1,71 @@
+[
+  {
+    "category": "கடன்கள்",
+    "items": [
+      {
+        "title": "வீட்டுக் கடன் தவணை கணிப்பேடு",
+        "type": "Home Loan",
+        "description": "மாதத் தவணை, மொத்த வட்டி மற்றும் முன்கட்டணத்தின் தாக்கத்தைக் கணக்கிடுங்கள்.",
+        "url": "/calculators/home_loan_emi_calculator.html"
+      },
+      {
+        "title": "வாகனக் கடன் தவணை கணிப்பேடு",
+        "type": "Vehicle Loan",
+        "description": "வாகன விலை, முன்பணம், வட்டி மற்றும் கடன் காலத்திற்கான தவணையை மதிப்பிடுங்கள்.",
+        "url": "/calculators/car_loan_emi_calculator.html"
+      },
+      {
+        "title": "தனிநபர் கடன் தவணை கணிப்பேடு",
+        "type": "Personal Loan",
+        "description": "தனிநபர் கடனின் மாதத் தவணை, வட்டி மற்றும் செயலாக்கக் கட்டணத்தைக் கணக்கிடுங்கள்.",
+        "url": "/calculators/personal_loan_emi_calculator.html"
+      }
+    ]
+  },
+  {
+    "category": "சேமிப்பு மற்றும் வைப்புத்தொகை",
+    "items": [
+      {
+        "title": "ஓய்வூதிய வைப்பு நிதி கணிப்பேடு",
+        "type": "EPF",
+        "description": "ஊதியம், பங்களிப்பு மற்றும் வட்டி அடிப்படையில் எதிர்கால ஓய்வூதிய வைப்பு நிதி இருப்பை மதிப்பிடுங்கள்.",
+        "url": "/calculators/epf_calculator.html"
+      },
+      {
+        "title": "நிலையான வைப்பு நிதி கணிப்பேடு",
+        "type": "FD",
+        "description": "வைப்புத் தொகை, வட்டி விகிதம் மற்றும் காலத்தின் அடிப்படையில் முதிர்வுத் தொகையைக் காணுங்கள்.",
+        "url": "/calculators/fd_returns_calculator.html"
+      },
+      {
+        "title": "பொது வருங்கால வைப்பு நிதி கணிப்பேடு",
+        "type": "PPF",
+        "description": "ஆண்டு பங்களிப்புகளின் அடிப்படையில் PPF முதிர்வு மற்றும் வட்டி வருமானத்தை மதிப்பிடுங்கள்.",
+        "url": "/calculators/ppf_returns_calculator.html"
+      },
+      {
+        "title": "தொடர் வைப்பு நிதி கணிப்பேடு",
+        "type": "RD",
+        "description": "மாதாந்திர வைப்பின் அடிப்படையில் RD முதிர்வுத் தொகையைக் கணக்கிடுங்கள்.",
+        "url": "/calculators/rd_returns_calculator.html"
+      }
+    ]
+  },
+  {
+    "category": "மியூச்சுவல் ஃபண்ட்",
+    "items": [
+      {
+        "title": "தவணை முதலீட்டுக் கணிப்பேடு",
+        "type": "Mutual Fund SIP",
+        "description": "வழக்கமான தவணை, உயரும் தவணை மற்றும் ஒரே தவணை முதலீட்டின் வளர்ச்சியை ஒப்பிடுங்கள்.",
+        "url": "/calculators/mf_sip_calculator.html"
+      },
+      {
+        "title": "தவணை பணமெடுப்புக் கணிப்பேடு",
+        "type": "Mutual Fund SWP",
+        "description": "தவணை பணமெடுப்பில் முதலீட்டு இருப்பு எவ்வாறு மாறுகிறது என மதிப்பிடுங்கள்.",
+        "url": "/calculators/mf_swp_calculator.html"
+      }
+    ]
+  }
+]
