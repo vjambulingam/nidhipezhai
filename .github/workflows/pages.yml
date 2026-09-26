@@ -28,18 +28,23 @@ jobs:
           node-version: 22
           cache: npm
 
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
       - name: Install dependencies
         run: npm ci
 
       - name: Build site
         env:
           CUSTOM_DOMAIN: ${{ vars.CUSTOM_DOMAIN }}
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: |
           if [ -n "$CUSTOM_DOMAIN" ]; then
             npm run build
             printf '%s\n' "$CUSTOM_DOMAIN" > _site/CNAME
           else
-            npm run build -- --pathprefix="/${{ github.event.repository.name }}/"
+            npm run build -- --pathprefix="$PAGES_BASE_PATH/"
           fi
 
       - name: Upload Pages artifact
