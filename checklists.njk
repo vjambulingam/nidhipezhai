@@ -1,0 +1,30 @@
+---
+title: நிதி சரிபார்ப்புப் பட்டியல்கள்
+description: சொத்து வாரிசுரிமைத் திட்டமிடல் மற்றும் தனிநபர் நிதிப் பாதுகாப்பிற்கான தமிழ் சரிபார்ப்புப் பட்டியல்கள்.
+keywords: [சரிபார்ப்புப் பட்டியல், சொத்துத் திட்டமிடல், வாரிசுரிமை, தனிநபர் நிதி, நிதிப் பாதுகாப்பு]
+permalink: /checklists/index.html
+---
+<main>
+  <header class="directory-intro wrap">
+    <p class="eyebrow eyebrow--light">திட்டமிடுங்கள் · பாதுகாக்குங்கள்</p>
+    <h1>நிதி சரிபார்ப்புப் பட்டியல்கள்</h1>
+    <p>உங்கள் குடும்பத்தின் நிதி மற்றும் சொத்துப் பாதுகாப்பை படிப்படியாக மதிப்பாய்வு செய்யுங்கள்.</p>
+  </header>
+  <div class="calculator-groups wrap">
+    {% for group in checklists %}
+    <section class="calculator-group" aria-labelledby="checklist-group-{{ loop.index }}">
+      <h2 id="checklist-group-{{ loop.index }}">{{ group.category }}</h2>
+      <div class="calculator-grid">
+        {% for checklist in group.items %}
+        <a class="calculator-card" href="{{ checklist.url | url }}">
+          <span class="calculator-card__type">{{ checklist.type }}</span>
+          <h3>{{ checklist.title }}</h3>
+          <p>{{ checklist.description }}</p>
+          <span class="calculator-card__open">சரிபார்ப்புப் பட்டியலைத் திறக்க <span aria-hidden="true">↗</span></span>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endfor %}
+  </div>
+</main>

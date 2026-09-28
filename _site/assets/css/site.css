@@ -52,6 +52,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 
 .site-header { position: relative; z-index: 2; background: var(--white); border-bottom: 1px solid var(--line); }
 .site-header__inner { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.checklist-site-header .site-header__inner { gap: 18px; }
 .brand { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; }
 .brand__mark { display: block; width: 46px; height: 46px; object-fit: contain; flex: 0 0 auto; }
 .brand__text { display: grid; line-height: 1.45; }
@@ -61,6 +62,34 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 .site-nav a { text-decoration: none; }
 .site-nav a:hover, .site-footer__links a:hover { color: var(--green); }
 .site-nav__tool { color: var(--green); }
+.checklist-header__actions { display: flex; align-items: center; gap: 7px; flex: 0 0 auto; }
+.checklist-header__actions button { white-space: nowrap; }
+.checklist-header__actions #btnDownloadExcel { background-color: var(--ink) !important; }
+.checklist-header__actions #btnDownloadExcel:hover { background-color: #095e61 !important; }
+
+.checklist-page { background: var(--paper) !important; color: var(--ink-deep) !important; font-family: var(--body) !important; }
+.checklist-page h2, .checklist-page h3 { font-family: var(--display); }
+.checklist-page .bg-emerald-50 { background-color: #f0f7f4 !important; }
+.checklist-page .bg-emerald-100 { background-color: #dceee9 !important; }
+.checklist-page .bg-emerald-600 { background-color: var(--ink) !important; }
+.checklist-page [class*="bg-emerald-200/"] { background-color: #dceee9 !important; }
+.checklist-page [class~="bg-gradient-to-r"][class~="from-emerald-600"][class~="to-teal-800"] { background-image: linear-gradient(110deg, #0D7377, #176b58) !important; }
+.checklist-page [class*="hover:bg-emerald-700"]:hover { background-color: #095e61 !important; }
+.checklist-page [class*="hover:text-emerald-800"]:hover { color: #095e61 !important; }
+.checklist-page [class*="focus:ring-emerald-500"]:focus { --tw-ring-color: rgb(13 115 119 / 35%) !important; }
+.checklist-page .text-emerald-100, .checklist-page .text-emerald-200 { color: #e0f1ed !important; }
+.checklist-page .text-emerald-700, .checklist-page .text-emerald-800, .checklist-page .text-emerald-900 { color: var(--ink) !important; }
+.checklist-page .text-emerald-950 { color: #164b41 !important; }
+.checklist-page [class*="border-emerald-100"], .checklist-page [class*="border-emerald-200"] { border-color: var(--line) !important; }
+.checklist-page .text-slate-900, .checklist-page .text-slate-800 { color: var(--ink-deep) !important; }
+.checklist-page .text-slate-700, .checklist-page .text-slate-600 { color: #38524f !important; }
+.checklist-page .text-slate-500, .checklist-page .text-slate-400 { color: var(--muted) !important; }
+.checklist-page .bg-slate-50 { background-color: #e9f0ec !important; }
+.checklist-page [class*="border-slate-100"], .checklist-page [class*="border-slate-200"], .checklist-page [class*="border-slate-300"] { border-color: var(--line) !important; }
+.checklist-page .bg-white.rounded-2xl, .checklist-page .bg-white.rounded-xl { border-radius: 4px !important; }
+.checklist-page #btnDownloadExcel { background-color: var(--ink) !important; }
+.checklist-page #btnDownloadExcel:hover { background-color: #095e61 !important; }
+.checklist-page .task-checkbox { accent-color: var(--ink) !important; }
 
 .hero {
   overflow: hidden;
@@ -204,6 +233,12 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   .brand__tagline { font-size: 9px; }
   .site-nav { gap: 12px; font-size: 10px; }
   .site-nav__about { display: none; }
+  .checklist-site-header .site-header__inner { flex-wrap: wrap; gap: 8px 12px; padding-block: 9px; }
+  .checklist-site-header .brand { flex: 1 1 100%; min-width: 0; }
+  .checklist-site-header .site-nav { order: 2; margin-left: 46px; }
+  .checklist-header__actions { order: 3; margin-left: auto; }
+  .checklist-header__actions button { padding: 7px !important; font-size: 0 !important; }
+  .checklist-header__actions button svg { width: 16px; height: 16px; }
   .hero__inner { min-height: 0; grid-template-columns: 1fr; gap: 27px; padding-block: 37px; }
   .hero h1 { font-size: 28px; }
   .hero__summary { font-size: 12px; }
@@ -237,6 +272,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 @media (max-width: 360px) {
   .site-nav { gap: 8px; font-size: 9px; }
   .site-nav__articles { display: none; }
+  .checklist-site-header .site-nav { margin-left: 42px; }
   .brand__tagline { display: none; }
   .hero__inner { gap: 14px; padding-block: 20px; }
   .hero__copy .eyebrow { margin-bottom: 9px; }

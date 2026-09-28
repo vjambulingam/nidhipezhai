@@ -14,5 +14,11 @@ eleventyExcludeFromCollections: true
 <url><loc>{{ calculator.url | url | absoluteUrl }}</loc></url>
 {% endfor %}
 {% endfor %}
+{% for group in checklists %}
+{% for checklist in group.items %}
+<url><loc>{{ checklist.url | url | absoluteUrl }}</loc></url>
+{% endfor %}
+{% endfor %}
+<url><loc>{{ '/checklists/' | url | absoluteUrl }}</loc></url>
 {% endif %}
 </urlset>

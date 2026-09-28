@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ஆயுள் காப்பீட்டுத் தொகை பரிந்துரை கணிப்பேடு</title>
+  <script data-goatcounter="https://nidhipezhai.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Noto Sans Tamil -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', 'Noto Sans Tamil', sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+    }
+    
+    /* Range Slider Styling - Emerald/Teal Modern Minimalist Theme */
+    input[type=range] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 6px;
+      background: #e2e8f0;
+      border-radius: 9999px;
+      outline: none;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #059669;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(5, 150, 105, 0.4);
+      border: 2px solid #ffffff;
+      transition: transform 0.15s ease, background-color 0.15s ease;
+    }
+    input[type=range]::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+      background: #047857;
+    }
+    input[type=range]::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #059669;
+      cursor: pointer;
+      border: 2px solid #ffffff;
+      box-shadow: 0 2px 6px rgba(5, 150, 105, 0.4);
+    }
+
+    /* Print styles */
+    @media print {
+      .no-print { display: none !important; }
+      body { background-color: #fff !important; }
+      .shadow-xs, .shadow-sm, .shadow-md, .shadow-lg { box-shadow: none !important; }
+      .print-border { border: 1px solid #e2e8f0 !important; }
+    }
+  </style>
+  <link rel="stylesheet" href="../assets/css/calculator-theme.css">
+  <style>
+    .bg-emerald-100 { background-color: #dceee9 !important; }
+    .bg-emerald-600 { background-color: var(--calc-brand) !important; }
+    .text-emerald-600, .text-emerald-700 { color: var(--calc-brand) !important; }
+    .hover\:bg-emerald-700:hover { background-color: var(--calc-brand-dark) !important; }
+    .focus\:ring-emerald-500:focus { --tw-ring-color: rgb(13 115 119 / 35%) !important; }
+    .bg-gradient-to-tr.from-emerald-600.to-teal-700 {
+      background-image: linear-gradient(to top right, #0D7377, #176b58) !important;
+    }
+    header.bg-white { border-color: var(--calc-line) !important; }
+    footer.bg-white {
+      border-color: transparent !important;
+      background-color: #0D7377 !important;
+      color: #d6e8e4 !important;
+      text-align: left !important;
+    }
+    footer.bg-white p {
+      max-width: 1160px;
+      margin-inline: auto !important;
+      padding-inline: 24px;
+      color: #d6e8e4 !important;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased">
+
+  <!-- Top Navigation Header -->
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="calc-site-header__inner flex items-center justify-between h-16">
+        <div class="calc-site-header__identity flex items-center space-x-3">
+          <a class="calc-site-logo" href="../index.html" aria-label="நிதிப்பேழை முகப்பு"><img src="../assets/images/nidhipezhai-logo.png" alt=""></a>
+          <div>
+            <h1 class="text-xl font-bold tracking-tight text-slate-900 leading-tight">
+              நிதிப்பேழை
+            </h1>
+            <p class="text-xs text-slate-500 font-medium hidden sm:block">தமிழில் தெளிவான நிதி அறிவு</p>
+          </div>
+        </div>
+
+        <nav class="calc-site-header__nav" aria-label="முதன்மை வழிசெலுத்தல்">
+          <a class="calc-nav-articles" href="../index.html#articles">கட்டுரைகள்</a>
+          <a class="calc-nav-about" href="../about/">எங்களைப் பற்றி</a>
+          <a class="calc-nav-directory" href="index.html">கணிப்பேடுகள்</a>
+          <a class="calc-nav-checklists" href="../checklists/">சரிபார்ப்புப் பட்டியல்கள்</a>
+        </nav>
+
+        <!-- Action / Quick Links -->
+        <div class="calc-site-header__actions flex items-center space-x-2">
+          <button id="btnPrint" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+            அச்சிடு
+          </button>
+          <button id="btnExportCSV" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg shadow-sm transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            CSV ஏற்றுமதி
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full space-y-6">
+    <div>
+            <h1 class="text-xl font-bold tracking-tight text-slate-900 leading-tight">
+              ஆயுள் காப்பீட்டுத் தேவை கணிப்பேடு
+            </h1>
+            <p class="text-xs text-slate-500 font-medium hidden sm:block"> அறிவியல் பூர்வமான DIME (Debts, Income, Mortality, Education) அணுகுமுறை</p>
+    <!-- Profile / Lifestyle Preset Tabs -->
+    <div class="bg-white rounded-xl shadow-xs border border-slate-200 p-1.5 flex flex-wrap gap-1.5">
+      <button class="preset-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 bg-emerald-600 text-white shadow-xs" data-preset="youngFamily">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        இளம் குடும்பம் (1 குழந்தை, வீட்டுக் கடன்)
+      </button>
+      <button class="preset-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100" data-preset="established">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        நடுத்தர குடும்பம் (2 குழந்தைகள், கல்லூரி & திருமண இலக்கு)
+      </button>
+      <button class="preset-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100" data-preset="highNetWorth">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+        உயர் வருவாய் & விரிவான வாழ்க்கை முறை (HNI)
+      </button>
+    </div>
+
+    <!-- Main Interactive Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+      
+      <!-- Left Column: Inputs Accordion / Sections (7 cols) -->
+      <div class="lg:col-span-7 space-y-5">
+        
+        <!-- SECTION 1: Income & Living Expense Sustenance -->
+        <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-xs border border-slate-200 space-y-4">
+          <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+            <h2 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">1</span>
+              வருமானம் & குடும்ப வாழ்க்கை பராமரிப்பு நிதி (Spouse Sustenance)
+            </h2>
+            <span class="text-[11px] text-slate-400">பணவீக்க காரணி உட்பட</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Monthly Take-Home Salary -->
+            <div class="space-y-2">
+              <div class="flex justify-between items-center">
+                <label for="salaryInput" class="text-xs font-semibold text-slate-700">மாத நிகர ஊதியம் (Take-Home Salary)</label>
+              </div>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 text-xs">₹</span>
+                <input type="number" id="salaryInput" min="20000" max="2000000" step="5000" value="150000" 
+                       class="w-full pl-7 pr-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 text-xs focus:ring-2 focus:ring-emerald-500 outline-none">
+              </div>
+              <input type="range" id="salarySlider" min="25000" max="500000" step="5000" value="150000">
+            </div>
+
+            <!-- Monthly Family Expense -->
+            <div class="space-y-2">
+              <div class="flex justify-between items-center">
+                <label for="monthlyExpenseInput" class="text-xs font-semibold text-slate-700">தற்போதைய மாதக் குடும்பச் செலவு</label>
+              </div>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 text-xs">₹</span>
+                <input type="number" id="monthlyExpenseInput" min="15000" max="1000000" step="5000" value="70000" 
+                       class="w-full pl-7 pr-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 text-xs focus:ring-2 focus:ring-emerald-500 outline-none">
+              </div>
+              <input type="range" id="monthlyExpenseSlider" min="20000" max="250000" step="5000" value="70000">
+            </div>
+          </div>
+
+          <!-- Sustenance Years for Spouse -->
+          <div class="space-y-2 pt-1">
+            <div class="flex items-center justify-between">
+              <div>
+                <label for="sustenanceYearsInput" class="text-xs font-semibold text-slate-700 block">துணைவியார் / குடும்பத்திற்கு தேவைப்படும் பராமரிப்பு காலம் (ஆண்டுகள்)</label>
+                <span class="text-[10px] text-slate-400">குடும்பம் தற்போதைய வாழ்க்கை முறையைத் தொடர தேவையான காலம்</span>
+              </div>
+              <div class="relative w-24">
+                <input type="number" id="sustenanceYearsInput" min="5" max="50" step="1" value="30" 
+                       class="w-full px-2 py-1 border border-slate-300 rounded-lg text-right font-bold text-slate-800 text-xs focus:ring-2 focus:ring-emerald-500 outline-none">
+              </div>
+            </div>
+            <input type="range" id="sustenanceYearsSlider" min="10" max="45" step="1" value="30">
+            <div class="flex justify-between text-[10px] text-slate-400">
+              <span>10 ஆண்டுகள்</span>
+              <span>20 ஆண்டுகள்</span>
+              <span>30 ஆண்டுகள்</span>
+              <span>45 ஆண்டுகள்</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: Existing Liabilities & Debts -->
+        <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-xs border border-slate-200 space-y-4">
+          <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+            <h2 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">2</span>
+              தற்போதைய கடன்கள் & நிதிப் பொறுப்புகள் (Current Liabilities)
+            </h2>
+            <span class="text-[11px] font-semibold text-amber-600" id="totalDebtsBadge">மொத்தம்: ₹42,50,000</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs">
+            <!-- Home Loan -->
+            <div>
+              <label for="homeLoanInput" class="text-slate-600 block mb-1 font-medium">வீட்டுக் கடன் மீதி (Home Loan Balance)</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-2.5 text-slate-400">₹</span>
+                <input type="number" id="homeLoanInput" min="0" max="50000000" step="50000" value="3500000" 
+                       class="w-full pl-6 pr-2.5 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+              </div>
+            </div>
+
+            <!-- Car Loan -->
+            <div>
+              <label for="carLoanInput" class="text-slate-600 block mb-1 font-medium">கார் கடன் நிலுவை (Car Loan)</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-2.5 text-slate-400">₹</span>
+                <input type="number" id="carLoanInput" min="0" max="10000000" step="25000" value="500000" 
+                       class="w-full pl-6 pr-2.5 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+              </div>
+            </div>
+
+            <!-- Personal Loan -->
+            <div>
+              <label for="personalLoanInput" class="text-slate-600 block mb-1 font-medium">தனிநபர் கடன் நிலுவை (Personal Loan)</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-2.5 text-slate-400">₹</span>
+                <input type="number" id="personalLoanInput" min="0" max="5000000" step="10000" value="200000" 
+                       class="w-full pl-6 pr-2.5 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+              </div>
+            </div>
+
+            <!-- Credit Card Balance / Other short-term loans -->
+            <div>
+              <label for="creditCardInput" class="text-slate-600 block mb-1 font-medium">கிரெடிட் கார்டு & பிற கடன்கள் (Credit Card / Other)</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-2.5 text-slate-400">₹</span>
+                <input type="number" id="creditCardInput" min="0" max="2000000" step="5000" value="50000" 
+                       class="w-full pl-6 pr-2.5 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 3: Future Goals & Emergency Contingency -->
+        <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-xs border border-slate-200 space-y-4">
+          <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+            <h2 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">3</span>
+              எதிர்கால குடும்ப இலக்குகள் & அவசரகால நிதி (Future Goals)
+            </h2>
+            <span class="text-[11px] font-semibold text-sky-600" id="totalGoalsBadge">இலக்குகள்: ₹65,00,000</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs">
+            <!-- Kids School Education -->
+            <div>
+              <label for="kidsSchoolInput" class="text-slate-600 block mb-1 font-medium">குழந்தைகளின் பள்ளிப் படிப்புச் செலவு</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-2.5 text-slate-400">₹</span>
+                <input type="number" id="kidsSchoolInput" min="0" max="10000000" step="50000" value="1000000" 
+                       class="w-full pl-6 pr-2.5 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+              </div>
+            </div>
+
+            <!-- Kids College Higher Education -->
+            <div>
+              <label for="kidsCollegeInput" class="text-slate-600 block mb-1 font-medium">கல்லூரி / உயர் கல்வி நிதி (College Education)</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-2.5 text-slate-400">₹</span>
+                <input type="number" id="kidsCollegeInput" min="0" max="25000000" step="50000" value="2500000" 
+                       class="w-full pl-6 pr-2.5 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+              </div>
+            </div>
+
+            <!-- Kids Marriage -->
+            <div>
+              <label for="kidsMarriageInput" class="text-slate-600 block mb-1 font-medium">குழந்தைகளின் திருமணச் செலவு (Kids Marriage)</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-2.5 text-slate-400">₹</span>
+                <input type="number" id="kidsMarriageInput" min="0" max="20000000" step="50000" value="2000000" 
+                       class="w-full pl-6 pr-2.5 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+              </div>
+            </div>
+
+            <!-- Medical Emergencies & Contingency -->
+            <div>
+              <label for="emergencyMedicalInput" class="text-slate-600 block mb-1 font-medium">மருத்துவ அவசர நிதி & எதிர்பாராத செலவு</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-2.5 text-slate-400">₹</span>
+                <input type="number" id="emergencyMedicalInput" min="0" max="10000000" step="25000" value="1000000" 
+                       class="w-full pl-6 pr-2.5 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 4: Less Existing Assets / Savings (Deductions) -->
+        <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-xs border border-slate-200 space-y-3">
+          <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+            <div>
+              <h2 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center text-xs font-bold">4</span>
+                தற்போதைய சேமிப்பு & முதலீடுகள் (Existing Liquid Assets)
+              </h2>
+              <span class="text-[11px] text-slate-400">இவை பரிந்துரைக்கப்படும் காப்பீட்டுத் தொகையிலிருந்து கழிக்கப்படும் (Less Assets)</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs">
+            <div>
+              <label for="existingInvestmentsInput" class="text-slate-600 block mb-1 font-medium">மியூச்சுவல் ஃபண்ட், பங்குகள் & சேமிப்பு (MF, Stocks, FD)</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-2.5 text-slate-400">₹</span>
+                <input type="number" id="existingInvestmentsInput" min="0" max="50000000" step="50000" value="1500000" 
+                       class="w-full pl-6 pr-2.5 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+              </div>
+            </div>
+
+            <div>
+              <label for="existingInsuranceInput" class="text-slate-600 block mb-1 font-medium">தற்போதுள்ள பிற ஆயுள் காப்பீடுகள் (Existing Term Cover)</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-2.5 text-slate-400">₹</span>
+                <input type="number" id="existingInsuranceInput" min="0" max="50000000" step="50000" value="0" 
+                       class="w-full pl-6 pr-2.5 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Recommended Sum Insured & Visual Breakdown (5 cols) -->
+      <div class="lg:col-span-5 bg-white rounded-2xl p-6 sm:p-7 shadow-xs border border-slate-200 flex flex-col justify-between space-y-6">
+        
+        <!-- Hero Recommendation Card -->
+        <div class="bg-gradient-to-br from-emerald-600 via-teal-700 to-slate-900 rounded-xl p-5 text-white shadow-md relative overflow-hidden">
+          <div class="absolute -right-6 -bottom-6 w-28 h-28 bg-white/10 rounded-full pointer-events-none"></div>
+          <div class="flex items-center justify-between">
+            <p class="text-xs uppercase tracking-wider font-semibold text-emerald-100">பரிந்துரைக்கப்படும் காப்பீட்டுத் தொகை</p>
+            <span class="bg-emerald-500/30 text-white text-[10px] px-2 py-0.5 rounded-full font-medium border border-white/20">D.I.M.E முறை</span>
+          </div>
+          <div class="flex items-baseline gap-2 mt-1.5">
+            <span class="text-3xl sm:text-4xl font-extrabold tracking-tight" id="recommendedDisplay">₹ 2.45 கோடி</span>
+          </div>
+          <p class="text-xs text-emerald-100/90 mt-1 font-medium" id="salaryMultipleBadge">ஆண்டு வருமானத்தை விட 13.6 மடங்கு பாதுகாப்பு</p>
+        </div>
+
+        <!-- Donut Chart & Breakdown Stats -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 items-center">
+          <!-- Canvas for Chart.js -->
+          <div class="relative w-44 h-44 mx-auto flex items-center justify-center">
+            <canvas id="breakdownChart"></canvas>
+            <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
+              <span class="text-[10px] uppercase font-bold text-slate-400">தேவைப்படும் நிதி</span>
+              <span id="chartCenterTotal" class="text-xs font-bold text-slate-700">₹ 2.45 Cr</span>
+            </div>
+          </div>
+
+          <!-- Numbers Legend -->
+          <div class="space-y-3 text-xs">
+            <div class="border-l-4 border-emerald-500 pl-2.5">
+              <span class="text-slate-500 font-medium block">வாழ்க்கைச் செலவு நிதி (Sustenance)</span>
+              <span id="summarySustenance" class="font-bold text-slate-900 text-sm">₹ 1,52,50,000</span>
+              <span id="sustenanceRatio" class="text-[10px] text-emerald-600 font-semibold block">(62.2%)</span>
+            </div>
+
+            <div class="border-l-4 border-amber-500 pl-2.5">
+              <span class="text-slate-500 font-medium block">கடன்கள் அடைப்பு (Liabilities)</span>
+              <span id="summaryDebts" class="font-bold text-amber-700 text-sm">₹ 42,50,000</span>
+              <span id="debtRatio" class="text-[10px] text-amber-600 font-semibold block">(17.3%)</span>
+            </div>
+
+            <div class="border-l-4 border-sky-500 pl-2.5">
+              <span class="text-slate-500 font-medium block">கல்வி, திருமணம் & மருத்துவம்</span>
+              <span id="summaryGoals" class="font-bold text-sky-700 text-sm">₹ 65,00,000</span>
+              <span id="goalsRatio" class="text-[10px] text-sky-600 font-semibold block">(26.5%)</span>
+            </div>
+
+            <div class="border-l-4 border-rose-400 pl-2.5 border-t border-slate-100 pt-1">
+              <span class="text-slate-500 font-medium block">கழிக்கப்பட்ட சேமிப்பு & முதலீடுகள்</span>
+              <span id="summaryDeductions" class="font-bold text-rose-600 text-sm">- ₹ 15,00,000</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Calculation Audit Formula Card -->
+        <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 text-xs space-y-1.5">
+          <div class="flex justify-between text-slate-600 font-medium">
+            <span>மொத்த நிதித் தேவைகள் (A + B + C):</span>
+            <span class="font-bold text-slate-800" id="totalNeedsDisplay">₹ 2,60,00,000</span>
+          </div>
+          <div class="flex justify-between text-slate-600 font-medium">
+            <span>தற்போதைய சொத்துகள் (Deductions):</span>
+            <span class="font-bold text-rose-600" id="totalAssetsDisplay">- ₹ 15,00,000</span>
+          </div>
+          <div class="flex justify-between text-slate-800 border-t border-slate-200 pt-2 font-bold text-sm">
+            <span>நிகர காப்பீட்டுத் தேவை:</span>
+            <span class="text-emerald-700" id="netCoverDisplay">₹ 2,45,00,000</span>
+          </div>
+        </div>
+
+        <!-- Insurance Advice Callout -->
+        <div class="p-3 bg-amber-50 rounded-xl border border-amber-200/60 flex items-start gap-2.5 text-xs text-amber-900 leading-relaxed">
+          <span class="text-amber-600 mt-0.5">💡</span>
+          <div>
+            <strong>முக்கிய பரிந்துரை:</strong> இந்த காப்பீட்டுத் தொகையை (Sum Insured) எண்டோவ்மென்ட் பாலிசியாக எடுக்காமல், <strong>தூய டேர்ம் இன்சூரன்ஸ் (Pure Term Insurance)</strong> திட்டமாக எடுத்தால் மிகக் குறைந்த வருடாந்திர பிரீமியத்தில் முழு குடும்பப் பாதுகாப்பையும் உறுதி செய்யலாம்.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Comparative Breakdown Bar Chart Section -->
+    <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-slate-100">
+        <div>
+          <h2 class="text-lg font-bold text-slate-900">காப்பீட்டுத் தொகை மதிப்பீட்டுக் கூறுகள் (Component-wise Breakdown)</h2>
+          <p class="text-xs text-slate-500">ஒவ்வொரு குடும்பத் தேவையின் மதிப்பு மற்றும் சேமிப்புக் கழிவின் காட்சி ஒப்பீடு</p>
+        </div>
+        <div class="flex items-center gap-4 text-xs font-semibold">
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-xs bg-emerald-600 inline-block"></span> குடும்பப் பராமரிப்பு</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-xs bg-amber-500 inline-block"></span> கடன்கள்</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-xs bg-sky-500 inline-block"></span> எதிர்கால இலக்குகள்</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-xs bg-rose-400 inline-block"></span> தற்போதைய சொத்துகள்</span>
+        </div>
+      </div>
+      <div class="w-full h-72 sm:h-80">
+        <canvas id="barBreakdownChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Detailed Amortization / Target Schedule Table -->
+    <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-slate-100">
+        <div>
+          <h2 class="text-lg font-bold text-slate-900">காப்பீட்டுத் தேவை பகுப்பாய்வு அறிக்கை (Needs Analysis Report)</h2>
+          <p class="text-xs text-slate-500">ஒவ்வொரு பொறுப்பு மற்றும் இலக்குகளுக்கான விரிவான நிதி மதிப்பீடு.</p>
+        </div>
+      </div>
+
+      <!-- Schedule Table -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs sm:text-sm border-collapse" id="needsTable">
+          <thead>
+            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 uppercase font-semibold text-[11px] tracking-wider">
+              <th class="py-3 px-4">வரிசை</th>
+              <th class="py-3 px-4">நிதித் தேவை / இலக்கு வகை</th>
+              <th class="py-3 px-4">கணக்கீட்டு முறை & விளக்கம்</th>
+              <th class="py-3 px-4 text-right">தேவைப்படும் தொகை</th>
+              <th class="py-3 px-4 text-right">மொத்த தேவையில் பங்கு %</th>
+            </tr>
+          </thead>
+          <tbody id="needsTableBody" class="divide-y divide-slate-100 text-slate-700">
+            <!-- Populated dynamically via JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="calc-site-footer bg-white border-t border-gray-200 mt-10 py-6 text-center text-xs text-gray-500">
+    <div class="calc-site-footer__inner max-w-7xl mx-auto px-4">
+      <div class="calc-site-footer__main">
+        <div>
+          <a class="calc-site-footer__brand" href="../index.html">நிதிப்பேழை</a>
+          <p class="calc-site-footer__tagline">பணத்தைப் புரிந்துகொள்ளவும், நிதி முடிவுகளைப் பற்றி கற்றுக்கொள்ளவும் தமிழில் ஒரு இடம்.</p>
+        </div>
+        <nav class="calc-site-footer__links" aria-label="தள இணைப்புகள்">
+          <a href="../index.html">முகப்பு</a>
+          <a href="../index.html#articles">கட்டுரைகள்</a>
+          <a href="index.html">கணிப்பேடுகள்</a>
+          <a href="../about/">எங்களைப் பற்றி</a>
+          <a href="../disclaimer/">பொறுப்புத் துறப்பு</a>
+          <a href="../license/">உரிமம்</a>
+        </nav>
+      </div>
+      <p class="font-medium text-gray-600">நிதிப்பேழை காப்பீட்டுத் தேவை கணிப்பேடு &bull; அறிவியல் பூர்வமான DIME (Debts, Income, Mortality, Education) அணுகுமுறை</p>
+      <p class="mt-1 text-gray-400">பொறுப்புத் துறப்பு: இந்தக் கணிப்பேடு கல்வி மற்றும் விழிப்புணர்வு நோக்கத்திற்காக மட்டுமே. காட்டப்படும் கணக்கீடுகளின் துல்லியம் அல்லது முழுமைக்கு உத்தரவாதம் அளிக்கப்படாது; அவற்றின் அடிப்படையில் எடுக்கப்படும் முடிவுகள் அல்லது ஏற்படும் இழப்புகளுக்கு நாங்கள் பொறுப்பேற்கமாட்டோம். காப்பீடு குறித்த முடிவெடுப்பதற்கு முன் தகுதியான நிதி ஆலோசகரை கலந்தாலோசித்து இறுதி முடிவெடுக்கவும். </p>
+      <p class="calc-site-footer__license">இந்தத் தளத்தின் உள்ளடக்கம் <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> உரிமத்தின் கீழ் பகிரப்படுகிறது.</p>
+    </div>
+  </footer>
+
+  <script>
+    /* State */
+    const state = {
+      salary: 150000,
+      monthlyExpense: 70000,
+      sustenanceYears: 30,
+      
+      // Debts
+      homeLoan: 3500000,
+      carLoan: 500000,
+      personalLoan: 200000,
+      creditCard: 50000,
+
+      // Goals
+      kidsSchool: 1000000,
+      kidsCollege: 2500000,
+      kidsMarriage: 2000000,
+      emergencyMedical: 1000000,
+
+      // Existing assets
+      existingInvestments: 1500000,
+      existingInsurance: 0
+    };
+
+    /* Chart instances */
+    let breakdownChartInstance = null;
+    let barBreakdownChartInstance = null;
+
+    // Presets Configuration
+    const presets = {
+      youngFamily: {
+        salary: 120000,
+        expense: 50000,
+        years: 30,
+        homeLoan: 3000000,
+        carLoan: 400000,
+        personalLoan: 0,
+        creditCard: 25000,
+        school: 800000,
+        college: 2000000,
+        marriage: 1500000,
+        medical: 500000,
+        investments: 800000,
+        insurance: 0
+      },
+      established: {
+        salary: 200000,
+        expense: 90000,
+        years: 25,
+        homeLoan: 4500000,
+        carLoan: 600000,
+        personalLoan: 200000,
+        creditCard: 50000,
+        school: 1500000,
+        college: 3500000,
+        marriage: 2500000,
+        medical: 1500000,
+        investments: 2500000,
+        insurance: 5000000
+      },
+      highNetWorth: {
+        salary: 400000,
+        expense: 160000,
+        years: 35,
+        homeLoan: 9000000,
+        carLoan: 1500000,
+        personalLoan: 0,
+        creditCard: 100000,
+        school: 2500000,
+        college: 6000000,
+        marriage: 4000000,
+        medical: 2500000,
+        investments: 6000000,
+        insurance: 10000000
+      }
+    };
+
+    // Format numbers with Indian commas
+    function formatINR(val, includeSymbol = true) {
+      const num = Math.round(val);
+      const str = num.toLocaleString('en-IN');
+      return includeSymbol ? `₹ ${str}` : str;
+    }
+
+    // Convert large amounts into concise words (Lakhs / Crores)
+    function formatAmountToWords(amount) {
+      if (amount >= 10000000) {
+        const cr = (amount / 10000000).toFixed(2);
+        return `₹ ${parseFloat(cr)} கோடி`;
+      } else if (amount >= 100000) {
+        const lk = (amount / 100000).toFixed(2);
+        return `₹ ${parseFloat(lk)} லட்சம்`;
+      } else if (amount >= 1000) {
+        return `₹ ${(amount / 1000).toFixed(1)} ஆயிரம்`;
+      }
+      return `₹ ${amount}`;
+    }
+
+    /* Core DIME (Debt, Income, Mortality, Education) Recommendation Engine */
+    function calculateSumInsured() {
+      // 1. Sustenance Fund for Family (Real Rate Approach):
+      // Assuming annual living expense = monthlyExpense * 12
+      // Using a real rate of return (Investment Return - Inflation = ~2% net above inflation):
+      // Present Value of Annuity formula: Annual Expense * [1 - (1+r)^-n] / r
+      const annualExpense = state.monthlyExpense * 12;
+      const realRate = 0.02; // 2% net real rate after inflation
+      const n = state.sustenanceYears;
+      const annuityFactor = (1 - Math.pow(1 + realRate, -n)) / realRate;
+      const sustenanceFund = annualExpense * annuityFactor;
+
+      // 2. Debts and Liabilities
+      const totalDebts = (state.homeLoan || 0) + (state.carLoan || 0) + (state.personalLoan || 0) + (state.creditCard || 0);
+
+      // 3. Future Goals (School, College, Marriage, Medical)
+      const totalGoals = (state.kidsSchool || 0) + (state.kidsCollege || 0) + (state.kidsMarriage || 0) + (state.emergencyMedical || 0);
+
+      // Total Financial Burden (Needs)
+      const grossNeeds = sustenanceFund + totalDebts + totalGoals;
+
+      // 4. Deductions (Existing Assets + Existing Cover)
+      const totalAssets = (state.existingInvestments || 0) + (state.existingInsurance || 0);
+
+      // Net Recommended Sum Assured
+      const netSumAssured = Math.max(0, grossNeeds - totalAssets);
+
+      // Multiple of annual income
+      const annualIncome = state.salary * 12;
+      const incomeMultiple = annualIncome > 0 ? (netSumAssured / annualIncome).toFixed(1) : 0;
+
+      return {
+        sustenanceFund: Math.round(sustenanceFund),
+        totalDebts: Math.round(totalDebts),
+        totalGoals: Math.round(totalGoals),
+        grossNeeds: Math.round(grossNeeds),
+        totalAssets: Math.round(totalAssets),
+        netSumAssured: Math.round(netSumAssured),
+        incomeMultiple
+      };
+    }
+
+    /* Chart Renderers */
+    function updateCharts(calc) {
+      const { sustenanceFund, totalDebts, totalGoals, netSumAssured } = calc;
+
+      // 1. Donut Chart - Relative proportion of needs
+      const donutCtx = document.getElementById('breakdownChart').getContext('2d');
+      const donutData = {
+        labels: ['வாழ்க்கைச் செலவு (Sustenance)', 'கடன்கள் (Debts)', 'எதிர்கால இலக்குகள் (Goals)'],
+        datasets: [{
+          data: [sustenanceFund, totalDebts, totalGoals],
+          backgroundColor: ['#059669', '#d97706', '#0284c7'],
+          hoverBackgroundColor: ['#047857', '#b45309', '#0369a1'],
+          borderWidth: 2,
+          borderColor: '#ffffff'
+        }]
+      };
+
+      if (breakdownChartInstance) {
+        breakdownChartInstance.data = donutData;
+        breakdownChartInstance.update();
+      } else {
+        breakdownChartInstance = new Chart(donutCtx, {
+          type: 'doughnut',
+          data: donutData,
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '72%',
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    const val = context.parsed;
+                    const tot = sustenanceFund + totalDebts + totalGoals;
+                    const pct = tot > 0 ? ((val / tot) * 100).toFixed(1) : 0;
+                    return ` ${context.label}: ${formatINR(val)} (${pct}%)`;
+                  }
+                }
+              }
+            }
+          }
+        });
+      }
+
+      // 2. Bar Chart Breakdown
+      const barCtx = document.getElementById('barBreakdownChart').getContext('2d');
+      const labels = ['குடும்ப வாழ்க்கை பராமரிப்பு', 'அனைத்து கடன்கள்', 'பள்ளி & உயர் கல்வி', 'திருமணம் & மருத்துவம்', 'தற்போதைய சொத்துகள் (கழிவு)'];
+      const dataValues = [
+        sustenanceFund,
+        totalDebts,
+        (state.kidsSchool + state.kidsCollege),
+        (state.kidsMarriage + state.emergencyMedical),
+        calc.totalAssets
+      ];
+
+      const barData = {
+        labels: labels,
+        datasets: [
+          {
+            label: 'மதிப்பு (₹)',
+            data: dataValues,
+            backgroundColor: ['#059669', '#d97706', '#0284c7', '#6366f1', '#fb7185'],
+            borderRadius: 6
+          }
+        ]
+      };
+
+      if (barBreakdownChartInstance) {
+        barBreakdownChartInstance.data = barData;
+        barBreakdownChartInstance.update();
+      } else {
+        barBreakdownChartInstance = new Chart(barCtx, {
+          type: 'bar',
+          data: barData,
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              x: {
+                grid: { display: false },
+                ticks: { font: { size: 10 } }
+              },
+              y: {
+                grid: { color: '#f1f5f9' },
+                ticks: {
+                  font: { size: 10 },
+                  callback: (value) => formatAmountToWords(value)
+                }
+              }
+            },
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    return ` ${context.label}: ${formatINR(context.parsed.y)}`;
+                  }
+                }
+              }
+            }
+          }
+        });
+      }
+    }
+
+    /* Table Renderer */
+    function renderNeedsTable(calc) {
+      const tbody = document.getElementById('needsTableBody');
+      tbody.innerHTML = '';
+
+      const items = [
+        {
+          num: '1',
+          name: 'துணைவியார் / குடும்ப வாழ்க்கை பராமரிப்பு',
+          desc: `மாத செலவு ₹${state.monthlyExpense.toLocaleString('en-IN')} x ${state.sustenanceYears} ஆண்டுகள் (பணவீக்க சரிக்கட்டல்)`,
+          amount: calc.sustenanceFund,
+          pct: ((calc.sustenanceFund / calc.grossNeeds) * 100).toFixed(1)
+        },
+        {
+          num: '2',
+          name: 'வீட்டுக் கடன் (Home Loan)',
+          desc: 'வீட்டின் உரிமையை குடும்பத்திற்கு பாதுகாப்பாக ஒப்படைக்க',
+          amount: state.homeLoan,
+          pct: ((state.homeLoan / calc.grossNeeds) * 100).toFixed(1)
+        },
+        {
+          num: '3',
+          name: 'வாகனம் & தனிநபர் கடன்கள்',
+          desc: 'கார் கடன், தனிநபர் கடன் மற்றும் கிரெடிட் கார்டு நிலுவைகள்',
+          amount: (state.carLoan + state.personalLoan + state.creditCard),
+          pct: (((state.carLoan + state.personalLoan + state.creditCard) / calc.grossNeeds) * 100).toFixed(1)
+        },
+        {
+          num: '4',
+          name: 'குழந்தைகளின் பள்ளி & கல்லூரி கல்வி',
+          desc: 'பள்ளி கட்டணம் மற்றும் எதிர்கால உயர்கல்வி நிதி',
+          amount: (state.kidsSchool + state.kidsCollege),
+          pct: (((state.kidsSchool + state.kidsCollege) / calc.grossNeeds) * 100).toFixed(1)
+        },
+        {
+          num: '5',
+          name: 'குழந்தைகளின் திருமணம் & மருத்துவ நிதி',
+          desc: 'திருமண செலவுகள் மற்றும் குடும்ப மருத்துவ அவசர இருப்பு',
+          amount: (state.kidsMarriage + state.emergencyMedical),
+          pct: (((state.kidsMarriage + state.emergencyMedical) / calc.grossNeeds) * 100).toFixed(1)
+        },
+        {
+          num: '6',
+          name: 'கழிக்க: தற்போதைய சேமிப்பு & முதலீடுகள்',
+          desc: 'ஏற்கனவே உள்ள MF, FD, பங்குகள் மற்றும் பழைய இன்சூரன்ஸ்',
+          amount: -calc.totalAssets,
+          pct: '-'
+        }
+      ];
+
+      items.forEach(row => {
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-slate-50 transition-colors border-b border-slate-100 font-medium';
+        const isDeduction = row.amount < 0;
+        tr.innerHTML = `
+          <td class="py-3 px-4 font-bold ${isDeduction ? 'text-rose-600' : 'text-slate-800'}">${row.num}</td>
+          <td class="py-3 px-4 font-bold ${isDeduction ? 'text-rose-600' : 'text-slate-800'}">${row.name}</td>
+          <td class="py-3 px-4 text-slate-500 text-xs">${row.desc}</td>
+          <td class="py-3 px-4 text-right font-bold ${isDeduction ? 'text-rose-600' : 'text-slate-900'}">${formatINR(row.amount)}</td>
+          <td class="py-3 px-4 text-right font-semibold text-slate-600">${row.pct}${row.pct !== '-' ? '%' : ''}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    /* Update Complete UI State */
+    function updateUI() {
+      const calc = calculateSumInsured();
+
+      // Top Highlights
+      document.getElementById('recommendedDisplay').textContent = formatINR(calc.netSumAssured);
+      document.getElementById('salaryMultipleBadge').textContent = `ஆண்டு வருமானத்தை விட ${calc.incomeMultiple} மடங்கு பாதுகாப்பு`;
+      document.getElementById('chartCenterTotal').textContent = formatAmountToWords(calc.netSumAssured);
+
+      // Section Badges
+      document.getElementById('totalDebtsBadge').textContent = `மொத்தம்: ${formatINR(calc.totalDebts)}`;
+      document.getElementById('totalGoalsBadge').textContent = `இலக்குகள்: ${formatINR(calc.totalGoals)}`;
+
+      // Right Column Summaries
+      document.getElementById('summarySustenance').textContent = formatINR(calc.sustenanceFund);
+      document.getElementById('summaryDebts').textContent = formatINR(calc.totalDebts);
+      document.getElementById('summaryGoals').textContent = formatINR(calc.totalGoals);
+      document.getElementById('summaryDeductions').textContent = `- ${formatINR(calc.totalAssets)}`;
+
+      const totNeeds = calc.sustenanceFund + calc.totalDebts + calc.totalGoals;
+      const sustPct = totNeeds > 0 ? ((calc.sustenanceFund / totNeeds) * 100).toFixed(1) : 0;
+      const debtPct = totNeeds > 0 ? ((calc.totalDebts / totNeeds) * 100).toFixed(1) : 0;
+      const goalPct = (100 - parseFloat(sustPct) - parseFloat(debtPct)).toFixed(1);
+
+      document.getElementById('sustenanceRatio').textContent = `(${sustPct}%)`;
+      document.getElementById('debtRatio').textContent = `(${debtPct}%)`;
+      document.getElementById('goalsRatio').textContent = `(${goalPct}%)`;
+
+      // Formula Card
+      document.getElementById('totalNeedsDisplay').textContent = formatINR(calc.grossNeeds);
+      document.getElementById('totalAssetsDisplay').textContent = `- ${formatINR(calc.totalAssets)}`;
+      document.getElementById('netCoverDisplay').textContent = formatINR(calc.netSumAssured);
+
+      // Sync Sliders & Inputs
+      document.getElementById('salaryInput').value = state.salary;
+      document.getElementById('salarySlider').value = state.salary;
+
+      document.getElementById('monthlyExpenseInput').value = state.monthlyExpense;
+      document.getElementById('monthlyExpenseSlider').value = state.monthlyExpense;
+
+      document.getElementById('sustenanceYearsInput').value = state.sustenanceYears;
+      document.getElementById('sustenanceYearsSlider').value = state.sustenanceYears;
+
+      document.getElementById('homeLoanInput').value = state.homeLoan;
+      document.getElementById('carLoanInput').value = state.carLoan;
+      document.getElementById('personalLoanInput').value = state.personalLoan;
+      document.getElementById('creditCardInput').value = state.creditCard;
+
+      document.getElementById('kidsSchoolInput').value = state.kidsSchool;
+      document.getElementById('kidsCollegeInput').value = state.kidsCollege;
+      document.getElementById('kidsMarriageInput').value = state.kidsMarriage;
+      document.getElementById('emergencyMedicalInput').value = state.emergencyMedical;
+
+      document.getElementById('existingInvestmentsInput').value = state.existingInvestments;
+      document.getElementById('existingInsuranceInput').value = state.existingInsurance;
+
+      // Update Visuals
+      updateCharts(calc);
+      renderNeedsTable(calc);
+    }
+
+    /* Event Listeners Helper */
+    function syncInputSlider(inputId, sliderId, key) {
+      const input = document.getElementById(inputId);
+      const slider = document.getElementById(sliderId);
+
+      input.addEventListener('input', (e) => {
+        state[key] = Number(e.target.value) || 0;
+        if (slider) slider.value = state[key];
+        updateUI();
+      });
+
+      if (slider) {
+        slider.addEventListener('input', (e) => {
+          state[key] = Number(e.target.value) || 0;
+          input.value = state[key];
+          updateUI();
+        });
+      }
+    }
+
+    function initListeners() {
+      syncInputSlider('salaryInput', 'salarySlider', 'salary');
+      syncInputSlider('monthlyExpenseInput', 'monthlyExpenseSlider', 'monthlyExpense');
+      syncInputSlider('sustenanceYearsInput', 'sustenanceYearsSlider', 'sustenanceYears');
+
+      syncInputSlider('homeLoanInput', null, 'homeLoan');
+      syncInputSlider('carLoanInput', null, 'carLoan');
+      syncInputSlider('personalLoanInput', null, 'personalLoan');
+      syncInputSlider('creditCardInput', null, 'creditCard');
+
+      syncInputSlider('kidsSchoolInput', null, 'kidsSchool');
+      syncInputSlider('kidsCollegeInput', null, 'kidsCollege');
+      syncInputSlider('kidsMarriageInput', null, 'kidsMarriage');
+      syncInputSlider('emergencyMedicalInput', null, 'emergencyMedical');
+
+      syncInputSlider('existingInvestmentsInput', null, 'existingInvestments');
+      syncInputSlider('existingInsuranceInput', null, 'existingInsurance');
+
+      // Presets
+      document.querySelectorAll('.preset-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.preset-btn').forEach(b => {
+            b.className = 'preset-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100';
+          });
+          btn.className = 'preset-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 bg-emerald-600 text-white shadow-xs';
+
+          const key = btn.dataset.preset;
+          const conf = presets[key];
+
+          state.salary = conf.salary;
+          state.monthlyExpense = conf.expense;
+          state.sustenanceYears = conf.years;
+          state.homeLoan = conf.homeLoan;
+          state.carLoan = conf.carLoan;
+          state.personalLoan = conf.personalLoan;
+          state.creditCard = conf.creditCard;
+          state.kidsSchool = conf.school;
+          state.kidsCollege = conf.college;
+          state.kidsMarriage = conf.marriage;
+          state.emergencyMedical = conf.medical;
+          state.existingInvestments = conf.investments;
+          state.existingInsurance = conf.insurance;
+
+          updateUI();
+        });
+      });
+
+      // Print
+      document.getElementById('btnPrint').addEventListener('click', () => {
+        window.print();
+      });
+
+      // CSV Export
+      document.getElementById('btnExportCSV').addEventListener('click', () => {
+        const calc = calculateSumInsured();
+        let csv = 'தேவை வகை,மதிப்பு (ரூ)\n';
+        csv += `மாத சம்பளம்,"${state.salary}"\n`;
+        csv += `மாதக் குடும்பச் செலவு,"${state.monthlyExpense}"\n`;
+        csv += `பராமரிப்பு நிதி (Sustenance Fund),"${calc.sustenanceFund}"\n`;
+        csv += `வீட்டுக் கடன் நிலுவை,"${state.homeLoan}"\n`;
+        csv += `கார் கடன் நிலுவை,"${state.carLoan}"\n`;
+        csv += `தனிநபர் கடன்,"${state.personalLoan}"\n`;
+        csv += `கிரெடிட் கார்டு நிலுவை,"${state.creditCard}"\n`;
+        csv += `பள்ளிக் கல்வி நிதி,"${state.kidsSchool}"\n`;
+        csv += `கல்லூரி உயர் கல்வி நிதி,"${state.kidsCollege}"\n`;
+        csv += `திருமணச் செலவு,"${state.kidsMarriage}"\n`;
+        csv += `மருத்துவ அவசர நிதி,"${state.emergencyMedical}"\n`;
+        csv += `கழிக்கப்பட்ட முதலீடுகள்,"${state.existingInvestments}"\n`;
+        csv += `கழிக்கப்பட்ட முந்தைய காப்பீடு,"${state.existingInsurance}"\n`;
+        csv += `பரிந்துரைக்கப்பட்ட நிகர காப்பீடு (Sum Assured),"${calc.netSumAssured}"\n`;
+
+        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.setAttribute('href', url);
+        link.setAttribute('download', `Insurance_Sum_Assured_Needs_Report_${Date.now()}.csv`);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      });
+    }
+
+    /* Initial Load */
+    window.addEventListener('DOMContentLoaded', () => {
+      initListeners();
+      updateUI();
+    });
+  </script>
+</body>
+</html>

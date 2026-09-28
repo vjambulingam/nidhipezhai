@@ -1,0 +1,19 @@
+[
+  {
+    "category": "நிதி மற்றும் குடும்பப் பாதுகாப்பு",
+    "items": [
+      {
+        "title": "சொத்துரிமை மற்றும் வாரிசுரிமை திட்டமிடல்",
+        "type": "Estate Planning",
+        "description": "உயில், நாமினி, சொத்து ஆவணங்கள் மற்றும் குடும்ப வாரிசுரிமைத் திட்டத்தை ஒழுங்குபடுத்துங்கள்.",
+        "url": "/checklists/estate-planning-checklist.html"
+      },
+      {
+        "title": "தனிநபர் நிதிநிலை வலுவூட்டல்",
+        "type": "Personal Finance Fortification",
+        "description": "அவசர நிதி, காப்பீடு, கடன், முதலீடு மற்றும் ஆவணப் பாதுகாப்பை மதிப்பாய்வு செய்யுங்கள்.",
+        "url": "/checklists/personal-finance-fortification-checklist.html"
+      }
+    ]
+  }
+]

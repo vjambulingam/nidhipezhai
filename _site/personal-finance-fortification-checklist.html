@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>தனிநபர் நிதிநிலை வலுவூட்டல் பட்டியல் (Excel ஏற்றுமதியுடன்)</title>
+  <script data-goatcounter="https://nidhipezhai.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Noto Sans Tamil -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- SheetJS CDN for Native Excel (.xlsx) Generation -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', 'Noto Sans Tamil', sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+    }
+    /* Print styles */
+    @media print {
+      .no-print { display: none !important; }
+      body { background-color: #fff !important; }
+      .shadow-xs, .shadow-sm, .shadow-md, .shadow-lg { box-shadow: none !important; }
+      .print-border { border: 1px solid #e2e8f0 !important; }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased">
+
+  <!-- Header -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-xs">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-700 flex items-center justify-center text-white font-bold text-lg shadow-sm">
+            📊
+          </div>
+          <div>
+            <h1 class="text-xl font-bold tracking-tight text-slate-900 leading-tight">
+              நிதிப்பேழை<span class="text-xs ml-1 text-slate-400 font-medium">| தனிநபர் நிதிநிலை வலுவூட்டல்  பட்டியல் </span>
+            </h1>
+            <p class="text-xs text-slate-500 font-medium hidden sm:block">தனிநபர் நிதிநிலை வலுவூட்டல் மற்றும் எதிர்காலப் பாதுகாப்பு சரிபார்ப்புப் பட்டியல் (Excel ஏற்றுமதியுடன்)</p>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex items-center space-x-2">
+          <button id="btnPrint" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors border border-slate-300">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+            <span>அச்சிடு</span>
+          </button>
+          <button id="btnDownloadExcel" class="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg shadow-sm transition-colors">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM6 20V4h7v5h5v11H6zm10-7.5l-2.2 3.5 2.2 3.5h-1.6l-1.4-2.4-1.4 2.4H10l2.2-3.5L10 12.5h1.6l1.4 2.3 1.4-2.3H16z"/>
+            </svg>
+            <span>Excel (.xlsx) பதிவிறக்கு</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-grow space-y-6">
+
+    <!-- Interactive Progress Summary Banner -->
+    <div class="bg-gradient-to-r from-emerald-600 to-teal-800 rounded-2xl p-6 text-white shadow-md flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div>
+        <h2 class="text-lg font-bold">தனிநபர் நிதிநிலை வலுவூட்டல்  பட்டியல் (Personal Finance Fortification Checklist)</h2>
+        <p class="text-xs text-emerald-100 mt-1">கீழேயுள்ள பட்டியலில் நீங்கள் முடித்தவற்றை டிக் செய்யவும். அதற்கேற்ப Excel கோப்பில் நிலை (Status) 'நிறைவுற்றது' எனப் பதிவு செய்யப்படும்.</p>
+      </div>
+      <div class="bg-white/10 backdrop-blur-xs rounded-xl p-3.5 px-5 flex items-center gap-4 border border-white/20">
+        <div>
+          <span class="text-xs text-emerald-200 block">நிறைவு செய்தவை</span>
+          <span class="text-2xl font-extrabold" id="progressCount">0 / 25</span>
+        </div>
+        <div class="h-10 w-px bg-white/20"></div>
+        <div>
+          <span class="text-xs text-emerald-200 block">பாதுகாப்பு சதவீதம்</span>
+          <span class="text-2xl font-extrabold" id="progressPercent">0%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Excel Export Helper Card -->
+    <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-emerald-950">
+      <div class="flex items-center gap-2">
+        <span class="text-base">📗</span>
+        <span>Excel கோப்பில் அனைத்து <strong>6 நிதிப் பிரிவுகள், இலக்கு விவரங்கள், முன்னுரிமை நிலை (Priority) மற்றும் உங்கள் தற்போதைய நிலை (Status)</strong> அட்டவணையாகத் தொகுக்கப்பட்டு பதிவிறக்கப்படும்.</span>
+      </div>
+      <button onclick="document.getElementById('btnDownloadExcel').click()" class="shrink-0 font-bold underline hover:text-emerald-800 text-emerald-900">
+        இப்போதே பதிவிறக்க &rarr;
+      </button>
+    </div>
+
+    <!-- Interactive Checklist Cards Container -->
+    <div id="interactiveContainer" class="space-y-6">
+
+      <!-- Category 1 -->
+      <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">1</span>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">அவசரகால பாதுகாப்பு நிதி (Emergency Fund Layer)</h3>
+              <p class="text-xs text-slate-500">வருமான இழப்பு மற்றும் எதிர்பாராத சூழல்களைத் தாங்கும் முதல் அரண்</p>
+            </div>
+          </div>
+          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">அடிப்படை அரண்</span>
+        </div>
+        <div class="space-y-3">
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="1">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">6 முதல் 12 மாத குடும்பச் செலவு இருப்பு:</strong>
+              வீட்டு வாடகை, EMI, மளிகை மற்றும் பள்ளி கட்டணம் அடங்கிய தொகையை எளிதில் எடுக்கக்கூடிய சேமிப்பில் வைத்திருக்க வேண்டும்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="2">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">அவசர நிதியின் இடம் (Liquidity Allocation):</strong>
+              இத்தொகையை பங்குச் சந்தையிலோ அல்லது லாக்-இன் திட்டங்களிலோ வைக்காமல், ஒரு பகுதி சேமிப்புக் கணக்கிலும், மீதியை ஸ்வீப்-இன் FD (Sweep-in FD) அல்லது லிக்விட் ஃபண்டுகளிலும் வைத்திருத்தல்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="3">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">தனித்துவமான அவசர வங்கிக் கணக்கு:</strong>
+              அன்றாட UPI மற்றும் ஷாப்பிங் பரிவர்த்தனைகளுக்குப் பயன்படுத்தாத தனி வங்கிக் கணக்கில் அவசர நிதியை வைத்திருத்தல்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="4">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">அவசர கால ரொக்க இருப்பு (Physical Cash):</strong>
+              இயற்கை பேரிடர் அல்லது இணைய முடக்கங்களை சமாளிக்க வீட்டில் ₹25,000 முதல் ₹50,000 வரை ரொக்கமாகப் பாதுகாத்தல்.
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Category 2 -->
+      <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">2</span>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">மருத்துவக் காப்பீடு & இடர் மேலாண்மை (Health Insurance Fortress)</h3>
+              <p class="text-xs text-slate-500">சேமிப்பை மருத்துவமனைக் கட்டணங்கள் கரைக்காமல் தடுக்கும் கவசம்</p>
+            </div>
+          </div>
+          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">உடல்நலக் கவசம்</span>
+        </div>
+        <div class="space-y-3">
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="5">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">சொந்தக் குடும்ப மருத்துவக் காப்பீடு (Family Floater):</strong>
+              நிறுவனத்தின் குழு காப்பீட்டை மட்டுமே நம்பியிருக்காமல், குடும்பத்திற்கு குறைந்தபட்சம் ₹10L - ₹15L சொந்த காப்பீடு எடுத்தல்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="6">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">சூப்பர் டாப்-அப் பாலிசி (Super Top-Up Cover):</strong>
+              குறைந்த பிரீமியத்தில் ₹50 லட்சம் முதல் ₹1 கோடி வரை உயர் சிகிச்சை பாதுகாப்பைப் பெறுவதற்கு ₹10 லட்சம் டிடக்டிபிள் (Deductible) உடன் சூப்பர் டாப்-அப் இணைத்தல்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="7">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">அறை வாடகை வரம்பற்ற பாலிசி (No Room Rent Capping):</strong>
+              பாலிசியில் ரூம் வாடகைக்கு உச்சவரம்பு (Capping/Sub-limits) இல்லாததை உறுதி செய்தல்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="8">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">பெற்றோருக்கான தனித்துவமான காப்பீடு:</strong>
+              வயதான பெற்றோரின் நோய்கள் உங்கள் குடும்ப பாலிசியின் பிரீமியத்தை உயர்த்தாமல் இருக்க, அவர்களுக்கு தனியாக மருத்துவக் காப்பீடு எடுத்தல்.
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Category 3 -->
+      <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">3</span>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">ஆயுள் பாதுகாப்பு & டேர்ம் இன்சூரன்ஸ் (Pure Term Insurance)</h3>
+              <p class="text-xs text-slate-500">குடும்பத்தின் நிதி எதிர்காலத்தை உறுதி செய்யும் ஈடுசெய்ய முடியாத பாதுகாப்பு</p>
+            </div>
+          </div>
+          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">ஆயுள் அரண்</span>
+        </div>
+        <div class="space-y-3">
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="9">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">ஆண்டு வருமானத்தை விட 15 - 20 மடங்கு டேர்ம் காப்பீடு:</strong>
+              எண்டோவ்மென்ட் அல்லது ULIP அல்லாமல், தூய டேர்ம் இன்சூரன்ஸ் (Pure Term Plan) மூலம் போதிய Sum Assured பெறுதல்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="10">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">MWP சட்டப் பிரிவு 1974 (Married Women's Property Act):</strong>
+              கடன் கொடுத்தவர்களோ அல்லது சட்டப் பிரச்சனைகளோ காப்பீட்டுத் தொகையைப் பறிக்க முடியாதபடி, பாலிசியை MWP சட்டத்தின் கீழ் பதிவு செய்தல்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="11">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">முழுமையான வெளிப்படைத்தன்மை:</strong>
+              புகைபிடித்தல், மது அருந்துதல் மற்றும் குடும்ப மருத்துவ வரலாற்றை எவ்வித மறைத்தலுமின்றி பாலிசி விண்ணப்பத்தில் தெளிவாகக் குறிப்பிடுதல்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="12">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">விபத்து & ஊனமுற்றோர் ரைடர் (Accidental Disability Rider):</strong>
+              விபத்தினால் நிரந்தர ஊனம் ஏற்பட்டால் வருமான இழப்பை ஈடுசெய்யும் ரைடரை டேர்ம் பாலிசியில் இணைத்தல்.
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Category 4 -->
+      <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">4</span>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">கடன் மற்றும் பொறுப்புகள் மேலாண்மை (Debt Fortification)</h3>
+              <p class="text-xs text-slate-500">வட்டி இழப்பைத் தடுத்து பணப்புழக்கத்தை சுதந்திரமாக்கும் உத்தி</p>
+            </div>
+          </div>
+          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">கடன் கட்டுப்பாடு</span>
+        </div>
+        <div class="space-y-3">
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="13">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">அதிக வட்டி கடன்களை ஒழித்தல் (Zero High-Interest Debt):</strong>
+              கிரெடிட் கார்டு நிலுவைகள், தனிநபர் கடன் மற்றும் BNPL (Buy Now Pay Later) கடன்களை முதல் முன்னுரிமையாக அடைத்தல்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="14">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">கடன் தவணை வருமான விகிதம் (EMI to Income Ratio &lt; 40%):</strong>
+              வீட்டுக்கடன் உள்ளிட்ட அனைத்து மாதாந்திர கடன் தவணைகளும் உங்கள் நிகர ஊதியத்தில் 40%-க்கு மிகாமல் இருப்பதை உறுதி செய்தல்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="15">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">வீட்டுக்கடன் முன்கூட்டியே செலுத்துதல் (Prepayment Strategy):</strong>
+              ஆண்டுதோறும் அசல் தொகையில் 5% கூடுதல் தவணையாகச் செலுத்தி, கடன் காலத்தை 30-40% வரை குறைத்தல்[cite: 1].
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="16">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">CIBIL கிரெடிட் ஸ்கோர் 750+ பராமரிப்பு:</strong>
+              அனைத்து பில்களையும் உரிய தேதியில் செலுத்தி ஆரோக்கியமான கடன் நற்பெயரைப் பேணல்.
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Category 5 -->
+      <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">5</span>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">நீண்ட கால சொத்து உருவாக்கம் (Asset Allocation & Growth)</h3>
+              <p class="text-xs text-slate-500">பணவீக்கத்தை முறியடித்து செல்வத்தைப் பெருக்கும் முதலீட்டு அடுக்கு</p>
+            </div>
+          </div>
+          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">செல்வப் பெருக்கம்</span>
+        </div>
+        <div class="space-y-3">
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="17">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">ஒழுங்கான மாதாந்திர SIP முதலீடு:</strong>
+              ஊதியம் வந்தவுடன் முதல் செலவாக வருமானத்தில் குறைந்தபட்சம் 20% முதல் 30% வரை மியூச்சுவல் ஃபண்ட் SIP-யில் முதலீடு செய்தல்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="18">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">பணவீக்க Step-Up SIP முறை:</strong>
+              ஆண்டு ஊதிய உயர்வுக்கு ஏற்ப SIP முதலீட்டுத் தொகையை ஆண்டுதோறும் 10% அதிகரித்தல்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="19">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">பாதுகாப்பான கடன் முதலீடு (EPF / PPF):</strong>
+              அரசு உத்தரவாதத்துடன் கூடிய EEE வரிச்சலுகை கொண்ட PPF மற்றும் ஊழியர் EPF கணக்குகளை முழுமையாகப் பயன்படுத்துதல்[cite: 1].
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="20">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">தங்க முதலீடு (5% - 10% Gold Allocation):</strong>
+              ஆபரணமாக அல்லாமல், இறையாண்மை தங்கப் பத்திரம் (SGB) அல்லது கோல்ட் ETF வடிவில் பணவீக்கப் பாதுகாப்பாக வைத்திருத்தல்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="21">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">ஆண்டு மறுசீரமைப்பு (Annual Rebalancing):</strong>
+              ஆண்டுக்கு ஒருமுறை ஈக்விட்டி மற்றும் டெட் (Debt) விகிதங்களை நிர்ணயித்த இலக்கிற்கு ஏற்ப மறுசீரமைத்தல்.
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Category 6 -->
+      <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">6</span>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">வாரிசுரிமை, ஆவணங்கள் & டிஜிட்டல் பாதுகாப்பு (Estate Planning)</h3>
+              <p class="text-xs text-slate-500">எதிர்பாராத நேரத்தில் குடும்பம் அலைக்கழிக்கப்படாமல் உரிமைகளைப் பெற</p>
+            </div>
+          </div>
+          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">சட்டப் பாதுகாப்பு</span>
+        </div>
+        <div class="space-y-3">
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="22">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">அனைத்து கணக்குகளிலும் வாரிசுரிமை (100% Nominees Updated):</strong>
+              வங்கி கணக்குகள், Demat, Mutual Funds, EPF, PPF மற்றும் இன்சூரன்ஸ் பாலிசிகள் அனைத்திலும் சரியான நாமினி பெயர் சேர்க்கப்பட்டுள்ளதை சரிபார்த்தல்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="23">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">உயில் தயாரித்தல் (Will Preparation):</strong>
+              சொத்துக்கள், வங்கி இருப்புகள் மற்றும் முதலீடுகள் யாருக்கு சேர வேண்டும் என்பதை தெளிவுபடுத்தும் சட்டப்பூர்வ உயில் எழுதி வைத்தல்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="24">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">மறைமுகக் கோப்பு (Family Financial Blueprint / "In Case of Emergency" Dossier):</strong>
+              உங்கள் வங்கிக் கணக்கு எண்கள், பாலிசி எண்கள், லாக்கர் விவரங்கள், நிதி ஆலோசகர் தொடர்பு எண் அடங்கிய ஆவணத்தை குடும்ப துணைவியாருடன் பகிர்ந்திருத்தல்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="25">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <strong class="text-slate-900 block text-sm">டிஜிட்டல் ஆவணப் பெட்டகம் (DigiLocker):</strong>
+              பான் கார்டு, ஆதார், சொத்துப் பத்திரங்கள் மற்றும் காப்பீட்டு சான்றிதழ்களை டிஜிலாக்கரில் சேமித்து வைத்தல்.
+            </div>
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 mt-10 py-6 text-center text-xs text-slate-500 no-print">
+    <div class="max-w-6xl mx-auto px-4">
+      <p class="font-medium text-slate-600">நிதிபேழை தனிநபர் நிதிப் பாதுகாப்பு சரிபார்ப்புப் பட்டியல் &bull; உங்களின் குடும்பப் பாதுகாப்பிற்காக</p>
+      <p class="mt-1 text-slate-400">இந்த சரிபார்ப்புப் பட்டியல் தனிநபர் நிதிக் கட்டமைப்பு மற்றும் இடர் மேலாண்மைக் கோட்பாடுகளின் அடிப்படையில் தொகுக்கப்பட்டது.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Checklist Master Data
+    const checklistData = [
+      {
+        category: "1. அவசரகால பாதுகாப்பு நிதி (Emergency Fund Layer)",
+        items: [
+          { id: 1, priority: "High", title: "6 முதல் 12 மாத குடும்பச் செலவு இருப்பு", desc: "வாடகை, EMI, மளிகை மற்றும் கட்டணங்கள் அடங்கிய தொகையைத் திரட்டுதல்.", checked: false },
+          { id: 2, priority: "High", title: "அவசர நிதியின் இடம் (Liquidity Allocation)", desc: "சேமிப்புக் கணக்கு, ஸ்வீப்-இன் FD அல்லது லிக்விட் ஃபண்டுகளில் வைத்திருத்தல்.", checked: false },
+          { id: 3, priority: "Medium", title: "தனித்துவமான அவசர வங்கிக் கணக்கு", desc: "அன்றாட UPI / ஷாப்பிங் செய்யாத தனி வங்கிக் கணக்கில் அவசர நிதியை வைத்திருத்தல்.", checked: false },
+          { id: 4, priority: "Medium", title: "அவசர கால ரொக்க இருப்பு (Physical Cash)", desc: "இயற்கை பேரிடர் மற்றும் அவசரத் தேவைகளுக்காக ₹25,000 - ₹50,000 ரொக்கமாக வைத்திருத்தல்.", checked: false }
+        ]
+      },
+      {
+        category: "2. மருத்துவக் காப்பீடு & இடர் மேலாண்மை (Health Insurance Fortress)",
+        items: [
+          { id: 5, priority: "Critical", title: "சொந்தக் குடும்ப மருத்துவக் காப்பீடு (Family Floater)", desc: "நிறுவன காப்பீடு தவிர்த்து குடும்பத்திற்கு தனியாக ₹10L - ₹15L சொந்த காப்பீடு எடுத்தல்.", checked: false },
+          { id: 6, priority: "High", title: "சூப்பர் டாப்-அப் பாலிசி (Super Top-Up Cover)", desc: "குறைந்த பிரீமியத்தில் ₹50 லட்சம் முதல் ₹1 கோடி வரை உயர் சிகிச்சை பாதுகாப்பைப் பெறுதல்.", checked: false },
+          { id: 7, priority: "High", title: "அறை வாடகை வரம்பற்ற பாலிசி (No Room Rent Capping)", desc: "பாலிசியில் ரூம் வாடகைக்கு உச்சவரம்பு மற்றும் Sub-limits இல்லாததை உறுதி செய்தல்.", checked: false },
+          { id: 8, priority: "Medium", title: "பெற்றோருக்கான தனித்துவமான காப்பீடு", desc: "முதியோரின் நோய்கள் குடும்ப பாலிசியை பாதிக்காமல் இருக்க அவர்களுக்கு தனி பாலிசி எடுத்தல்.", checked: false }
+        ]
+      },
+      {
+        category: "3. ஆயுள் பாதுகாப்பு & டேர்ம் இன்சூரன்ஸ் (Pure Term Insurance)",
+        items: [
+          { id: 9, priority: "Critical", title: "ஆண்டு வருமானத்தை விட 15 - 20 மடங்கு டேர்ம் காப்பீடு", desc: "எண்டோவ்மென்ட் அல்லது ULIP அல்லாமல், தூய டேர்ம் இன்சூரன்ஸ் (Pure Term Plan) எடுத்தல்.", checked: false },
+          { id: 10, priority: "High", title: "MWP சட்டப் பிரிவு 1974 (Married Women's Property Act)", desc: "கடன் கொடுத்தவர்களோ நீதிமன்றமோ பறிக்க முடியாதபடி பாலிசியை MWP சட்டத்தில் பதிவு செய்தல்.", checked: false },
+          { id: 11, priority: "Critical", title: "முழுமையான மருத்துவ வெளிப்படைத்தன்மை", desc: "உடல்நலம், பழக்கவழக்கங்கள் மற்றும் குடும்ப வரலாற்றை மறைக்காமல் விண்ணப்பித்தல்.", checked: false },
+          { id: 12, priority: "Medium", title: "விபத்து & ஊனமுற்றோர் ரைடர் (Accidental Disability Rider)", desc: "விபத்தினால் ஊனம் ஏற்பட்டால் வருமான இழப்பை ஈடுசெய்யும் ரைடரை இணைத்தல்.", checked: false }
+        ]
+      },
+      {
+        category: "4. கடன் மற்றும் பொறுப்புகள் மேலாண்மை (Debt Fortification)",
+        items: [
+          { id: 13, priority: "Critical", title: "அதிக வட்டி கடன்களை ஒழித்தல் (Zero High-Interest Debt)", desc: "கிரெடிட் கார்டு நிலுவைகள், தனிநபர் கடன் மற்றும் BNPL கடன்களை உடனடியாக அடைத்தல்.", checked: false },
+          { id: 14, priority: "High", title: "கடன் தவணை வருமான விகிதம் (EMI to Income Ratio < 40%)", desc: "அனைத்து மாதாந்திர EMI-களும் நிகர சம்பளத்தில் 40%-க்கு மிகாமல் இருப்பதை உறுதி செய்தல்.", checked: false },
+          { id: 15, priority: "Medium", title: "வீட்டுக்கடன் முன்கூட்டியே செலுத்துதல் (Prepayment Strategy)", desc: "ஆண்டுக்கு 5% கூடுதல் அசல் செலுத்தி கடன் காலத்தை 30-40% வரை குறைத்தல்.", checked: false },
+          { id: 16, priority: "High", title: "CIBIL கிரெடிட் ஸ்கோர் 750+ பராமரிப்பு", desc: "உரிய தேதியில் நிலுவைகளைச் செலுத்தி ஆரோக்கியமான நற்பெயரைப் பேணல்.", checked: false }
+        ]
+      },
+      {
+        category: "5. நீண்ட கால சொத்து உருவாக்கம் (Asset Allocation & Growth)",
+        items: [
+          { id: 17, priority: "High", title: "ஒழுங்கான மாதாந்திர SIP முதலீடு", desc: "வருமானத்தில் குறைந்தபட்சம் 20% முதல் 30% வரை மியூச்சுவல் ஃபண்ட் SIP-யில் முதலீடு செய்தல்.", checked: false },
+          { id: 18, priority: "Medium", title: "பணவீக்க Step-Up SIP முறை", desc: "ஆண்டுதோறும் SIP தொகையை ஊதிய உயர்வுக்கு ஏற்ப 10% அதிகரித்தல்.", checked: false },
+          { id: 19, priority: "High", title: "பாதுகாப்பான கடன் முதலீடு (EPF / PPF)", desc: "அரசு உத்தரவாதத்துடன் கூடிய EEE வரிச்சலுகை கொண்ட PPF/EPF-ஐ முழுமையாகப் பயன்படுத்துதல்.", checked: false },
+          { id: 20, priority: "Medium", title: "தங்க முதலீடு (5% - 10% Gold Allocation)", desc: "இறையாண்மை தங்கப் பத்திரம் (SGB) அல்லது கோல்ட் ETF வடிவில் பணவீக்கப் பாதுகாப்பாக வைத்திருத்தல்.", checked: false },
+          { id: 21, priority: "Medium", title: "ஆண்டு மறுசீரமைப்பு (Annual Rebalancing)", desc: "ஆண்டுக்கு ஒருமுறை ஈக்விட்டி மற்றும் டெட் விகிதங்களை நிர்ணயித்த இலக்கிற்கு சீரமைத்தல்.", checked: false }
+        ]
+      },
+      {
+        category: "6. வாரிசுரிமை, ஆவணங்கள் & டிஜிட்டல் பாதுகாப்பு (Estate Planning)",
+        items: [
+          { id: 22, priority: "Critical", title: "அனைத்து கணக்குகளிலும் வாரிசுரிமை (100% Nominees Updated)", desc: "வங்கி, Demat, Mutual Funds, EPF, PPF மற்றும் இன்சூரன்ஸ் அனைத்திலும் நாமினியை உறுதி செய்தல்.", checked: false },
+          { id: 23, priority: "High", title: "உயில் தயாரித்தல் (Will Preparation)", desc: "சொத்துக்கள் மற்றும் முதலீடுகளை யாருக்கு வழங்க வேண்டும் என்பதற்கான உயில் எழுதி வைத்தல்.", checked: false },
+          { id: 24, priority: "High", title: "குடும்ப நிதி ஆவணம் (Family Emergency Blueprint)", desc: "அனைத்து கணக்குகள், பாலிசிகள், லாக்கர் விவரங்கள் அடங்கிய குறிப்பை குடும்பத்தினரிடம் தெரிவித்தல்.", checked: false },
+          { id: 25, priority: "Medium", title: "டிஜிட்டல் ஆவணப் பெட்டகம் (DigiLocker)", desc: "பான், ஆதார், சொத்துப் பத்திரங்கள் மற்றும் பாலிசிகளை டிஜிலாக்கரில் பாதுகாத்தல்.", checked: false }
+        ]
+      }
+    ];
+
+    const totalTasks = 25;
+
+    // Update Progress Counter
+    function updateProgress() {
+      let completed = 0;
+      checklistData.forEach(cat => {
+        cat.items.forEach(item => {
+          if (item.checked) completed++;
+        });
+      });
+
+      const pct = Math.round((completed / totalTasks) * 100);
+      document.getElementById('progressCount').textContent = `${completed} / ${totalTasks}`;
+      document.getElementById('progressPercent').textContent = `${pct}%`;
+    }
+
+    // Checkbox Listener
+    document.querySelectorAll('.task-checkbox').forEach(box => {
+      box.addEventListener('change', (e) => {
+        const id = parseInt(e.target.dataset.id);
+        const isChecked = e.target.checked;
+
+        checklistData.forEach(cat => {
+          cat.items.forEach(item => {
+            if (item.id === id) item.checked = isChecked;
+          });
+        });
+
+        updateProgress();
+      });
+    });
+
+    // Native Excel (.xlsx) Download Handler using SheetJS
+    document.getElementById('btnDownloadExcel').addEventListener('click', () => {
+      // 1. Prepare structured tabular rows for Excel
+      const excelRows = [
+        ["வரிசை எண் (S.No)", "நிதிப் பாதுகாப்பு பிரிவு (Category)", "இலக்கு / பாதுகாப்பு அம்சம் (Checklist Item)", "விளக்கம் (Details)", "முன்னுரிமை (Priority)", "தற்போதைய நிலை (Status)"]
+      ];
+
+      let rowIdx = 1;
+      checklistData.forEach(cat => {
+        cat.items.forEach(item => {
+          excelRows.push([
+            rowIdx++,
+            cat.category,
+            item.title,
+            item.desc,
+            item.priority,
+            item.checked ? "நிறைவுற்றது (Completed) ✓" : "நிலுவையில் உள்ளது (Pending)"
+          ]);
+        });
+      });
+
+      // 2. Create Sheet and Workbook
+      const worksheet = XLSX.utils.aoa_to_sheet(excelRows);
+
+      // Auto-fit column widths
+      worksheet['!cols'] = [
+        { wch: 18 },
+        { wch: 45 },
+        { wch: 45 },
+        { wch: 65 },
+        { wch: 16 },
+        { wch: 24 }
+      ];
+
+      const workbook = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(workbook, worksheet, "நிதி_பாதுகாப்பு_பட்டியல்");
+
+      // 3. Trigger File Download
+      XLSX.writeFile(workbook, `Personal_Financial_Fortification_Checklist_${Date.now()}.xlsx`);
+    });
+
+    // Print Button
+    document.getElementById('btnPrint').addEventListener('click', () => {
+      window.print();
+    });
+
+    // Initialize progress on load
+    updateProgress();
+  </script>
+</body>
+</html>
