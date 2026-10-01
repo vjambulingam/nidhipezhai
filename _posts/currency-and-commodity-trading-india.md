@@ -1,14 +1,14 @@
 ---
-title: இந்தியாவில் நாணய மற்றும் பொருள் வர்த்தகம்
+title: நாணய மற்றும் சரக்கு வர்த்தகம்
 description: Currency மற்றும் commodity derivatives, அவற்றை வழங்கும் இந்திய எக்சேஞ்ச்கள், ஒப்பந்த அம்சங்கள் மற்றும் ஆபத்துகள்.
 date: 2026-09-26
 topics:
   - முதலீடு
   - நாணய வர்த்தகம்
-  - பொருள் வர்த்தகம்
+  - சரக்கு வர்த்தகம்
 ---
 
-நாணயம் மற்றும் பொருள் வர்த்தகம் என்பது விலை மாற்றத்திலிருந்து பாதுகாப்பு பெறவும் (hedging), சந்தை மதிப்பை எதிர்பார்த்து position எடுக்கவும் பயன்படுத்தப்படும் சந்தைச் செயல்பாடுகள். இந்தியாவில் இவை அங்கீகரிக்கப்பட்ட stock exchange-களில் பட்டியலிடப்பட்ட derivatives ஒப்பந்தங்கள் வழியாக நடைபெறலாம். இது வங்கியில் currency மாற்றுவது அல்லது நேரடியாக தங்கம்/கச்சாப் பொருள் வாங்குவது போன்றதல்ல.
+நாணயம் மற்றும் சரக்கு வர்த்தகம் என்பது விலை மாற்றத்திலிருந்து பாதுகாப்பு பெறவும் (hedging), சந்தை மதிப்பை எதிர்பார்த்து position எடுக்கவும் பயன்படுத்தப்படும் சந்தைச் செயல்பாடுகள். இந்தியாவில் இவை அங்கீகரிக்கப்பட்ட stock exchange-களில் பட்டியலிடப்பட்ட derivatives ஒப்பந்தங்கள் வழியாக நடைபெறலாம். இது வங்கியில் currency மாற்றுவது அல்லது நேரடியாக தங்கம்/கச்சாப் சரக்கு வாங்குவது போன்றதல்ல.
 
 ## 1. நாணய வர்த்தகம் (Currency Trading)
 
@@ -16,7 +16,7 @@ topics:
 
 INR தொடர்பான currency pairs அல்லது cross-currency contracts போன்றவற்றின் பட்டியல் மற்றும் அனுமதி மாறக்கூடும். இந்தியாவில் currency derivatives வர்த்தகம் RBI/FEMA விதிகள், SEBI ஒழுங்குமுறை, exchange விதிகள் மற்றும் பொருந்தும் exposure/eligible-contract நிபந்தனைகளுக்கு உட்பட்டது. அனுமதியில்லாத offshore forex தளங்கள் அல்லது உறுதியான லாபம் கூறும் செயலிகளைத் தவிர்த்து, தற்போதைய விதிகளை அதிகாரப்பூர்வமாகச் சரிபார்க்கவும்.
 
-### இந்தியாவில் currency derivatives வழங்கும் எக்சேஞ்ச்கள்
+### இந்தியாவில் நாணய வழித்தோன்றல்கள் (currency derivatives) வழங்கும் சந்தைகள்
 
 - [National Stock Exchange of India (NSE)](https://www.nseindia.com/products-services/about-currency-derivatives) — currency derivatives பிரிவு.
 - [BSE](https://www.bseindia.com/) — தளத்தின் Currency Derivatives சந்தைப் பகுதி மற்றும் தற்போதைய ஒப்பந்தங்களைப் பாருங்கள்.
@@ -24,13 +24,13 @@ INR தொடர்பான currency pairs அல்லது cross-currency co
 
 ஒவ்வொரு எக்சேஞ்சிலும் ஒரே currency pair அல்லது ஒப்பந்தம் கட்டாயம் கிடைக்கும் என்று கருத வேண்டாம். வர்த்தகத்திற்கு முன் அந்த நாளில் பட்டியலிடப்பட்ட contract-கள், lot அளவு, expiry, margin மற்றும் settlement விவரங்களைச் சரிபார்க்கவும்.
 
-## 2. பொருள் வர்த்தகம் (Commodity Trading)
+## 2. சரக்கு வர்த்தகம் (Commodity Trading)
 
 Commodity derivatives-ன் விலை தங்கம், வெள்ளி, கச்சா எண்ணெய், இயற்கை எரிவாயு, அடிப்படை உலோகங்கள் அல்லது வேளாண் பொருட்கள் போன்ற underlying பொருட்களின் விலையுடன் தொடர்புடையது. இவை பெரும்பாலும் futures அல்லது options ஒப்பந்தங்களாக வர்த்தகம் செய்யப்படும். உலக சந்தை, நாணய மாற்றம், வானிலை, அறுவடை, சேமிப்பு, போக்குவரத்து, அரசு கொள்கை மற்றும் விநியோகம்/தேவை ஆகியவை விலையை வேகமாக மாற்றலாம்.
 
 ஒப்பந்தத்தைப் பொறுத்து settlement பணமாகவோ physical delivery-ஆகவோ இருக்கலாம். Delivery period, tender period, கிடங்கு, தரநிலை, delivery centre மற்றும் expiry விதிகளைப் புரியாமல் ஒப்பந்தத்தை வைத்திருக்க வேண்டாம். தேவையற்ற delivery அல்லது settlement பொறுப்பு ஏற்படலாம்.
 
-### இந்தியாவில் commodity derivatives வழங்கும் எக்சேஞ்ச்கள்
+### இந்தியாவில் சரக்கு வழித்தோன்றல்கள் (commodity derivatives) வழங்கும் சந்தைகள்
 
 - [Multi Commodity Exchange of India (MCX)](https://www.mcxindia.com/market-data/market-watch) — bullion, energy, metals மற்றும் பட்டியலிடப்பட்ட பிற commodity contracts.
 - [National Commodity & Derivatives Exchange (NCDEX)](https://ncdex.com/) — வேளாண் மற்றும் தொடர்புடைய commodity derivatives ஒப்பந்தங்கள்.
