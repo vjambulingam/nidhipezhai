@@ -13,7 +13,7 @@ bodyClass: home-page
         <p class="hero__summary">சேமிப்பு, முதலீடு, ஓய்வூதியம், கடன் ஆகியவற்றை எளிய தமிழில் அறிந்துகொள்ளுங்கள்.</p>
         <a class="hero__link" href="#articles">சமீபத்திய கட்டுரைகளைப் பார்க்க <span aria-hidden="true">↓</span></a>
       </div>
-      {% set featured = collections.articles[0] %}
+      {% set featured = collections.articlesByDate[0] %}
       {% if featured %}
       <a class="featured" href="{{ featured.url | url }}">
         <span class="featured__eyebrow">புதிய கட்டுரை</span>
@@ -52,9 +52,9 @@ bodyClass: home-page
       {% endfor %}
     </div>
 
-    <p class="results-count" id="results-count" aria-live="polite">{{ collections.articles | length }} கட்டுரைகள்</p>
+    <p class="results-count" id="results-count" aria-live="polite">{{ collections.articlesByDate | length }} கட்டுரைகள்</p>
     <div class="article-grid" id="article-grid">
-      {% for article in collections.articles %}
+      {% for article in collections.articlesByDate %}
       <article class="article-card" data-article-card data-topics="{{ article.data.topics | join('|') | escape }}" data-search="{{ article.data.title }} {{ article.data.description }} {{ article.data.topics | join(' ') }}">
         <div class="article-card__meta">
           <span class="article-card__topic">{{ article.data.topics[0] }}</span>

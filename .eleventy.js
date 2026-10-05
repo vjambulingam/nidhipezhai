@@ -19,6 +19,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.ignores.add("_checklists/**");
   eleventyConfig.addGlobalData("layout", "layouts/base.njk");
   eleventyConfig.addGlobalData("siteOrigin", siteOrigin);
+  eleventyConfig.addCollection("articlesByDate", (collectionApi) => {
+    return collectionApi.getFilteredByTag("articles").sort((a, b) => b.date.getTime() - a.date.getTime());
+  });
   eleventyConfig.addFilter("dateIso", (value) => toDate(value).toISOString().split("T")[0]);
   eleventyConfig.addFilter("dateTamil", (value) => tamilDateFormatter.format(toDate(value)));
   eleventyConfig.addFilter("jsonify", (value) => JSON.stringify(value).replace(/</g, "\\u003c"));
