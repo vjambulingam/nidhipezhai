@@ -149,6 +149,7 @@ body > header > div {
 }
 
 .calc-site-footer__tagline { max-width: 440px; margin: 5px 0 0 !important; color: #d6e8e4 !important; font-size: 11px !important; }
+footer.bg-white .calc-site-footer__tagline { padding-inline: 0 !important; }
 .calc-site-footer__links { display: flex; flex-wrap: wrap; gap: 9px 19px; }
 .calc-site-footer__links a { color: #eef6f3; font-size: 11px; text-decoration: none; }
 .calc-site-footer__links a:hover { color: #f0d39e; }
@@ -172,7 +173,6 @@ body > header > div {
   .calc-site-header__identity h1 { font-size: 16px !important; }
   .calc-site-header__identity p { display: none; }
   .calc-site-header__nav { order: 2; flex: 0 1 auto; margin-left: 55px; gap: 12px; font-size: 10px; }
-  .calc-site-header__nav .calc-nav-about { display: none; }
   .calc-site-header__actions { order: 3; margin-left: auto; }
   .calc-site-header__actions button { gap: 0 !important; padding: 7px !important; font-size: 0 !important; }
   .calc-site-header__actions button svg { width: 16px; height: 16px; }

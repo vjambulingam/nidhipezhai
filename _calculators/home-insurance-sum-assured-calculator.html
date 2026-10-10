@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>வீட்டுக் காப்பீட்டுத் தொகை கணிப்பேடு (உரிமையாளர் & வாடகைதாரர்)</title>
+  <meta name="description" content="வீட்டு உரிமையாளர்கள் மற்றும் வாடகைதாரர்களுக்கு தேவையான வீட்டுக் காப்பீட்டுத் தொகையை (Sum Assured) கட்டடம், உடைமைகள், நகைகள் மற்றும் மாற்று தங்குமிடச் செலவின் அடிப்படையில் கணக்கிடுங்கள்.">
+  <meta name="keywords" content="வீட்டுக் காப்பீடு, home insurance sum assured calculator Tamil, home owner, tenant, contents insurance">
+  <script data-goatcounter="https://nidhipezhai.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body { font-family: 'Inter', 'Noto Sans Tamil', sans-serif; background-color: #f8fafc; color: #0f172a; }
+
+    input[type=range] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 6px;
+      background: #e2e8f0;
+      border-radius: 9999px;
+      outline: none;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #059669;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(5, 150, 105, 0.4);
+      border: 2px solid #ffffff;
+      transition: transform 0.15s ease, background-color 0.15s ease;
+    }
+    input[type=range]::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+      background: #047857;
+    }
+    input[type=range]::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #059669;
+      cursor: pointer;
+      border: 2px solid #ffffff;
+      box-shadow: 0 2px 6px rgba(5, 150, 105, 0.4);
+    }
+
+    @media print {
+      .no-print { display: none !important; }
+      body { background-color: #fff !important; }
+      .shadow-xs, .shadow-sm, .shadow-md, .shadow-lg { box-shadow: none !important; }
+    }
+  </style>
+  <link rel="stylesheet" href="../assets/css/calculator-theme.css">
+  <style>
+    .bg-emerald-100 { background-color: #dceee9 !important; }
+    .bg-emerald-600 { background-color: var(--calc-brand) !important; }
+    .text-emerald-600, .text-emerald-700 { color: var(--calc-brand) !important; }
+    .hover\:bg-emerald-700:hover { background-color: var(--calc-brand-dark) !important; }
+    .focus\:ring-emerald-500:focus { --tw-ring-color: rgb(13 115 119 / 35%) !important; }
+    header.bg-white { border-color: var(--calc-line) !important; }
+    footer.bg-white {
+      border-color: transparent !important;
+      background-color: #0D7377 !important;
+      color: #d6e8e4 !important;
+      text-align: left !important;
+    }
+    footer.bg-white p {
+      max-width: 1160px;
+      margin-inline: auto !important;
+      padding-inline: 24px;
+      color: #d6e8e4 !important;
+    }
+    .mode-btn.active { background-color: var(--calc-brand); color: #fff; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased">
+
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="calc-site-header__inner flex items-center justify-between h-16">
+        <div class="calc-site-header__identity flex items-center space-x-3">
+          <a class="calc-site-logo" href="../index.html" aria-label="நிதிப்பேழை முகப்பு"><img src="../assets/images/nidhipezhai-logo.svg" alt=""></a>
+          <div>
+            <h1 class="text-xl font-bold tracking-tight text-slate-900 leading-tight">நிதிப்பேழை</h1>
+            <p class="text-xs text-slate-500 font-medium hidden sm:block">நிதி நலம் காக்க தெளிவான நிதி அறிவு</p>
+          </div>
+        </div>
+
+        <nav class="calc-site-header__nav" aria-label="முதன்மை வழிசெலுத்தல்">
+          <a class="calc-nav-articles" href="../index.html#articles">கட்டுரைகள்</a>
+          <a class="calc-nav-directory" href="index.html">கணிப்பேடுகள்</a>
+          <a class="calc-nav-checklists" href="../checklists/">சரிபார்ப்புப் பட்டியல்கள்</a>
+        </nav>
+
+        <div class="calc-site-header__actions flex items-center space-x-2">
+          <button id="btnPrint" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors">அச்சிடு</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full space-y-6">
+    <div>
+      <h1 class="text-xl font-bold tracking-tight text-slate-900 leading-tight">வீட்டுக் காப்பீட்டுத் தொகை கணிப்பேடு</h1>
+      <p class="text-xs text-slate-500 font-medium">வீட்டு உரிமையாளர் மற்றும் வாடகைதாரர் – இருவருக்கும் ஏற்ற காப்பீட்டுத் தொகையை மதிப்பிடுங்கள்</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-xs border border-slate-200 p-1.5 flex flex-wrap gap-1.5 no-print">
+      <button type="button" class="mode-btn active flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-slate-600" data-mode="owner" aria-pressed="true">🏠 வீட்டு உரிமையாளர் (Home Owner)</button>
+      <button type="button" class="mode-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-slate-600" data-mode="renter" aria-pressed="false">🔑 வாடகைதாரர் (Renter)</button>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+      <div class="lg:col-span-7 space-y-5">
+
+        <!-- Building (owners only) -->
+        <div id="buildingSection" class="bg-white rounded-2xl p-5 sm:p-6 shadow-xs border border-slate-200 space-y-4">
+          <div class="pb-2 border-b border-slate-100">
+            <h2 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">1</span>
+              வீட்டுக் கட்டடம் (Building – மறுகட்டுமான மதிப்பு)
+            </h2>
+            <p class="text-[11px] text-slate-400 mt-1">நிலத்தின் மதிப்பு சேர்க்கப்படாது; கட்டடத்தை மீண்டும் கட்டும் செலவே அடிப்படை.</p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+            <div class="space-y-1">
+              <label for="area" class="font-semibold text-slate-700">கட்டுமானப் பரப்பளவு (சதுர அடி)</label>
+              <input type="number" id="area" min="100" step="50" value="1200" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+            </div>
+            <div class="space-y-1">
+              <label for="grade" class="font-semibold text-slate-700">கட்டுமானத் தரம்</label>
+              <select id="grade" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg font-semibold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none bg-white">
+                <option value="1800">அடிப்படை (₹1,800 / ச.அடி)</option>
+                <option value="2400" selected>நடுத்தரம் (₹2,400 / ச.அடி)</option>
+                <option value="3200">உயர்தரம் (₹3,200 / ச.அடி)</option>
+                <option value="4500">சொகுசு (₹4,500 / ச.அடி)</option>
+                <option value="">தனிப்பயன் மதிப்பு (கீழே உள்ளிடவும்)</option>
+              </select>
+            </div>
+            <div class="space-y-1">
+              <label for="costPerSqft" class="font-semibold text-slate-700">மறுகட்டுமானச் செலவு (₹ / ச.அடி)</label>
+              <input type="number" id="costPerSqft" min="500" step="100" value="2400" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+              <span class="text-[11px] text-slate-400">இவை வழிகாட்டும் மதிப்புகள் மட்டுமே; உங்கள் ஊரின் தற்போதைய மறுகட்டுமானச் செலவுக்கேற்ப மாற்றவும். நிலத்தின் விலையைச் சேர்க்க வேண்டாம்.</span>
+            </div>
+            <div class="space-y-1">
+              <label for="extras" class="font-semibold text-slate-700">சுற்றுச்சுவர், கேட், தண்ணீர்த் தொட்டி போன்றவை (₹)</label>
+              <input type="number" id="extras" min="0" step="10000" value="200000" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+            </div>
+          </div>
+        </div>
+
+        <!-- Contents -->
+        <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-xs border border-slate-200 space-y-4">
+          <div class="pb-2 border-b border-slate-100">
+            <h2 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold" id="contentsNum">2</span>
+              வீட்டு உடைமைகள் (Contents – இன்றைய மாற்று மதிப்பு)
+            </h2>
+            <p class="text-[11px] text-slate-400 mt-1">பழைய விலை அல்ல; அதே பொருளை இன்று புதிதாக வாங்கும் விலையை உள்ளிடுங்கள்.</p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+            <div class="space-y-1">
+              <label for="furniture" class="font-semibold text-slate-700">மரச்சாமான்கள் & அலங்காரப் பொருட்கள்</label>
+              <input type="number" id="furniture" min="0" step="10000" value="300000" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+            </div>
+            <div class="space-y-1">
+              <label for="appliances" class="font-semibold text-slate-700">வீட்டு உபயோக சாதனங்கள் (ஃப்ரிட்ஜ், வாஷிங் மெஷின், AC…)</label>
+              <input type="number" id="appliances" min="0" step="10000" value="250000" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+            </div>
+            <div class="space-y-1">
+              <label for="electronics" class="font-semibold text-slate-700">மின்னணுப் பொருட்கள் (TV, லேப்டாப், மொபைல்)</label>
+              <input type="number" id="electronics" min="0" step="10000" value="200000" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+            </div>
+            <div class="space-y-1">
+              <label for="clothing" class="font-semibold text-slate-700">உடைகள், பாத்திரங்கள் & பிற பொருட்கள்</label>
+              <input type="number" id="clothing" min="0" step="5000" value="100000" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+            </div>
+            <div class="space-y-1 sm:col-span-2">
+              <label for="valuables" class="font-semibold text-slate-700">நகை, வெள்ளிப் பொருட்கள் & மதிப்புமிக்கவை (தனியாக வரம்புடன் ஈடுசெய்யப்படலாம்)</label>
+              <input type="number" id="valuables" min="0" step="10000" value="0" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+              <span class="text-[11px] text-slate-400">பெரும்பாலான பாலிசிகளில் நகைகளுக்கு குறைந்த வரம்பே இருக்கும்; தேவையெனில் தனி ஷெட்யூலில் சேர்க்கவும்.</span>
+            </div>
+            <div class="space-y-1 sm:col-span-2" id="interiorsWrap">
+              <label for="interiors" class="font-semibold text-slate-700">உள் அலங்கார / மாடுலர் கிச்சன் / நிலையான பொருத்தங்கள் (வாடகைதாரர் செய்த முதலீடு)</label>
+              <input type="number" id="interiors" min="0" step="10000" value="100000" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional -->
+        <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-xs border border-slate-200 space-y-4">
+          <div class="pb-2 border-b border-slate-100">
+            <h2 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold" id="extraNum">3</span>
+              கூடுதல் பாதுகாப்பு & காரணிகள்
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+            <div class="space-y-1">
+              <label for="rent" class="font-semibold text-slate-700">மாத வாடகை (மாற்றுத் தங்குமிடத்திற்கு) ₹</label>
+              <input type="number" id="rent" min="0" step="1000" value="25000" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+            </div>
+            <div class="space-y-1">
+              <label for="months" class="font-semibold text-slate-700">மாற்றுத் தங்குமிடம் தேவைப்படும் மாதங்கள்</label>
+              <input type="number" id="months" min="0" max="36" step="1" value="6" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+              <span class="text-[11px] text-slate-400" id="monthsHint">கடும் சேதத்தில் பழுது / மறுகட்டுமானம் 6–12 மாதம் ஆகலாம்.</span>
+            </div>
+            <div class="space-y-1 sm:col-span-2">
+              <label for="buffer" class="font-semibold text-slate-700">விலையேற்றப் பாதுகாப்பு (Buffer) %</label>
+              <div class="flex items-center gap-3">
+                <input type="range" id="buffer" min="0" max="25" step="1" value="10" class="flex-1">
+                <span id="bufferVal" class="font-bold text-slate-800 w-10 text-right">10%</span>
+              </div>
+              <span class="text-[11px] text-slate-400">கணக்கிடப்பட்ட சொத்து மதிப்புக்கு மேல் விலையேற்ற இடைவெளியாகக் காட்டப்படும்; இது பாலிசி வழங்கும் கூடுதல் காப்புறுதி என்று பொருளல்ல.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="lg:col-span-5 space-y-5 lg:sticky lg:top-20">
+        <div class="rounded-2xl p-6 shadow-sm text-white" style="background:linear-gradient(to right bottom,#059669,#0f766e,#0f172a)">
+          <p class="text-xs font-semibold opacity-90">பரிந்துரைக்கப்படும் சொத்துக் காப்பீட்டு இலக்கு (விலையேற்ற இடைவெளியுடன்)</p>
+          <p id="totalSum" class="text-3xl font-extrabold mt-1">₹0</p>
+          <p id="totalWords" class="text-xs opacity-90 mt-1"></p>
+          <p id="insuredValue" class="text-xs opacity-90 mt-2"></p>
+          <p class="text-[11px] opacity-80 mt-2">இது காப்பீட்டு பிரீமியம் அல்லது பாலிசி ஒப்புதல் அல்ல; பாலிசியின் விதிமுறைகள் மற்றும் வரம்புகள் பொருந்தும்.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 shadow-xs border border-slate-200">
+          <h3 class="text-sm font-bold text-slate-900 mb-3">தொகை பிரிப்பு</h3>
+          <table class="w-full text-xs">
+            <tbody id="breakdown" class="divide-y divide-slate-100 text-slate-700"></tbody>
+          </table>
+          <div class="mt-4 h-56"><canvas id="chart"></canvas></div>
+        </div>
+
+        <div class="bg-amber-50 rounded-2xl p-5 shadow-xs border border-amber-200 text-xs text-slate-700 space-y-1">
+          <h3 class="text-sm font-bold text-slate-900">தனியாகக் கணக்கிட வேண்டிய கூடுதல் பலன்</h3>
+          <p>மாற்றுத் தங்குமிடத்திற்கான மதிப்பீடு: <strong id="altCover">₹0</strong></p>
+          <p>இது சொத்துக் காப்பீட்டுத் தொகையில் சேர்க்கப்படவில்லை. அத்தகைய பலன், அதன் வரம்பு மற்றும் தகுதி பாலிசிக்கு ஏற்ப மாறும்; பாலிசி ஆவணத்தில் சரிபார்க்கவும்.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 shadow-xs border border-slate-200 text-xs text-slate-600 space-y-2" id="tips"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="calc-site-footer bg-white border-t border-gray-200 mt-10 py-6 text-center text-xs text-gray-500">
+    <div class="calc-site-footer__inner max-w-7xl mx-auto px-4">
+      <div class="calc-site-footer__main">
+        <div>
+          <a class="calc-site-footer__brand" href="../index.html">நிதிப்பேழை</a>
+          <p class="calc-site-footer__tagline">நிதி நலம் காக்க தெளிவான நிதி அறிவு.</p>
+        </div>
+        <nav class="calc-site-footer__links" aria-label="தள இணைப்புகள்">
+          <a href="../about/">எங்களைப் பற்றி</a>
+          <a href="../disclaimer/">பொறுப்புத் துறப்பு</a>
+          <a href="../license/">உரிமம்</a>
+        </nav>
+      </div>
+      <p class="font-medium text-gray-600">நிதிப்பேழை வீட்டுக் காப்பீட்டுத் தொகை கணிப்பேடு</p>
+      <p class="mt-1 text-gray-400">பொறுப்புத் துறப்பு: இந்தக் கணிப்பேடு கல்வி மற்றும் விழிப்புணர்வு நோக்கத்திற்காக மட்டுமே. காட்டப்படும் கணக்கீடுகளின் துல்லியம் அல்லது முழுமைக்கு உத்தரவாதம் அளிக்கப்படாது; அவற்றின் அடிப்படையில் எடுக்கப்படும் முடிவுகள் அல்லது ஏற்படும் இழப்புகளுக்கு நாங்கள் பொறுப்பேற்கமாட்டோம். காப்பீடு குறித்த முடிவெடுப்பதற்கு முன் <a href="../articles/sebi-registered-investment-advisors/">தகுதியான நிதி ஆலோசகரை </a> கலந்தாலோசித்து இறுதி முடிவெடுக்கவும்.</p>
+      <p class="calc-site-footer__license">இந்தத் தளத்தின் உள்ளடக்கம் <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> உரிமத்தின் கீழ் பகிரப்படுகிறது.</p>
+    </div>
+  </footer>
+
+  <script>
+    let mode = 'owner';
+    let chart = null;
+    const $ = (id) => document.getElementById(id);
+    const num = (id, min = 0, max = Number.POSITIVE_INFINITY) => {
+      const parsed = Number.parseFloat($(id).value);
+      return Math.min(max, Math.max(min, Number.isFinite(parsed) ? parsed : min));
+    };
+    const inr = (v) => '₹' + Math.round(v).toLocaleString('en-IN');
+
+    function toWords(v) {
+      if (v >= 1e7) return (v / 1e7).toFixed(2) + ' கோடி';
+      if (v >= 1e5) return (v / 1e5).toFixed(2) + ' இலட்சம்';
+      return '';
+    }
+
+    function setMode(m) {
+      mode = m;
+      document.querySelectorAll('.mode-btn').forEach((b) => {
+        const selected = b.dataset.mode === m;
+        b.classList.toggle('active', selected);
+        b.setAttribute('aria-pressed', String(selected));
+      });
+      const owner = m === 'owner';
+      $('buildingSection').style.display = owner ? '' : 'none';
+      $('interiorsWrap').style.display = owner ? 'none' : '';
+      $('contentsNum').textContent = owner ? '2' : '1';
+      $('extraNum').textContent = owner ? '3' : '2';
+      $('monthsHint').textContent = owner
+        ? 'கடும் சேதத்தில் பழுது / மறுகட்டுமானம் 6–12 மாதம் ஆகலாம்.'
+        : 'வீடு வாழத் தகுதியற்றதானால் புதிய வீடு தேடி குடியேற 2–4 மாதம் போதுமானது.';
+      $('months').value = owner ? 6 : 3;
+      calculate();
+    }
+
+    function calculate() {
+      const buffer = num('buffer') / 100;
+      $('bufferVal').textContent = Math.round(buffer * 100) + '%';
+
+      const building = mode === 'owner' ? (num('area', 100) * num('costPerSqft', 500) + num('extras')) : 0;
+      const contents = num('furniture') + num('appliances') + num('electronics') + num('clothing');
+      const valuables = num('valuables');
+      const interiors = mode === 'renter' ? num('interiors') : 0;
+      const alt = num('rent') * num('months', 0, 36);
+
+      const insuredValueTotal = building + contents + valuables + interiors;
+      const bufferAmt = insuredValueTotal * buffer;
+      const total = insuredValueTotal + bufferAmt;
+
+      const rows = [];
+      if (mode === 'owner') rows.push(['கட்டடம் (மறுகட்டுமான மதிப்பு)', building, '#059669', '#047857']);
+      rows.push(['வீட்டு உடைமைகள்', contents, '#d97706', '#b45309']);
+      if (valuables) rows.push(['நகை & மதிப்புமிக்கவை', valuables, '#0284c7', '#0369a1']);
+      if (interiors) rows.push(['உள் அலங்காரம் / பொருத்தங்கள்', interiors, '#6366f1', '#4f46e5']);
+
+      $('totalSum').textContent = inr(total);
+      $('totalWords').textContent = toWords(total) ? '≈ ' + toWords(total) : '';
+      $('insuredValue').textContent = `கணக்கிடப்பட்ட சொத்து மதிப்பு: ${inr(insuredValueTotal)} + விலையேற்ற இடைவெளி: ${inr(bufferAmt)}`;
+      $('altCover').textContent = inr(alt);
+      $('breakdown').innerHTML = rows.map(([n, v]) =>
+        `<tr><td class="py-2">${n}</td><td class="py-2 text-right font-semibold">${inr(v)}</td><td class="py-2 text-right text-slate-400">${insuredValueTotal ? (v / insuredValueTotal * 100).toFixed(1) : 0}%</td></tr>`
+      ).join('') +
+      `<tr><td class="py-2">கணக்கிடப்பட்ட சொத்து மதிப்பு</td><td class="py-2 text-right font-semibold">${inr(insuredValueTotal)}</td><td></td></tr>` +
+      `<tr><td class="py-2">விலையேற்ற இடைவெளி (${Math.round(buffer * 100)}%)</td><td class="py-2 text-right font-semibold">${inr(bufferAmt)}</td><td></td></tr>` +
+      `<tr class="font-bold text-slate-900"><td class="py-2">இலக்கு காப்பீட்டுத் தொகை</td><td class="py-2 text-right">${inr(total)}</td><td></td></tr>`;
+
+      const data = {
+        labels: rows.map((r) => r[0]),
+        datasets: [{
+          data: rows.map((r) => r[1]),
+          backgroundColor: rows.map((r) => r[2]),
+          hoverBackgroundColor: rows.map((r) => r[3]),
+          borderWidth: 2,
+          borderColor: '#ffffff',
+        }],
+      };
+      if (chart) { chart.data = data; chart.update(); }
+      else if (window.Chart) {
+        chart = new Chart($('chart'), {
+          type: 'doughnut',
+          data,
+          options: {
+            maintainAspectRatio: false,
+            cutout: '72%',
+            plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 10 } } } },
+          },
+        });
+      }
+
+      const tips = mode === 'owner' ? [
+        'கட்டடத்திற்கு சந்தை மதிப்பு அல்ல, மறுகட்டுமான மதிப்பையே Sum Assured ஆகக் கொள்ளுங்கள்; நிலம் ஈடுசெய்யப்படாது.',
+        'கட்டடம் மற்றும் உடைமைகளுக்கு மறுகட்டுமான / மாற்று மதிப்பு அல்லது தேய்மானம் கழித்த மதிப்பு எது பொருந்துகிறது என்பதைப் பாலிசியில் சரிபாருங்கள்.',
+        'வெள்ளம், நிலநடுக்கம், தீ, திருட்டு ஆகியவற்றின் விலக்குகள், கழிவுத் தொகை (deductible), குறைவான காப்பீட்டுக்கான சராசரி விதி (average clause) ஆகியவற்றைப் பாருங்கள்.',
+      ] : [
+        'வாடகைதாரருக்கு கட்டடக் காப்பு தேவையில்லை; அது உரிமையாளரின் பொறுப்பு. உடைமைகள் மற்றும் நீங்கள் செய்த உள் அலங்காரம் மட்டும் காப்பீடு செய்யுங்கள்.',
+        'மூன்றாம் நபர் பொறுப்பு, திருட்டு / இயற்கைச் சேதக் காப்பு, கழிவுத் தொகை மற்றும் மாற்றுத் தங்குமிடப் பலன் உள்ளதா எனப் பாருங்கள்.',
+        'வீடு மாறும்போது பாலிசி முகவரியைப் புதுப்பிக்க மறக்க வேண்டாம்.',
+      ];
+      $('tips').innerHTML = '<h3 class="text-sm font-bold text-slate-900">கவனிக்க வேண்டியவை</h3>' + tips.map((t) => `<p>• ${t}</p>`).join('');
+    }
+
+    $('grade').addEventListener('change', () => {
+      if ($('grade').value) $('costPerSqft').value = $('grade').value;
+      calculate();
+    });
+    $('costPerSqft').addEventListener('input', () => {
+      const grade = [...$('grade').options].find((option) => option.value && Number(option.value) === num('costPerSqft'));
+      $('grade').value = grade ? grade.value : '';
+      calculate();
+    });
+    document.querySelectorAll('input').forEach((el) => el.addEventListener('input', () => {
+      if (el.id === 'months') {
+        const months = Number.parseFloat(el.value);
+        if (Number.isFinite(months) && months > 36) el.value = '36';
+      }
+      calculate();
+    }));
+    document.querySelectorAll('.mode-btn').forEach((b) => b.addEventListener('click', () => setMode(b.dataset.mode)));
+    $('btnPrint').addEventListener('click', () => window.print());
+    window.addEventListener('load', calculate);
+    calculate();
+  </script>
+</body>
+</html>

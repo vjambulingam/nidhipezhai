@@ -82,7 +82,19 @@
         "title": "ஆயுள் காப்பீட்டுத் தொகை பரிந்துரை கணிப்பேடு",
         "type": "Insurance Needs",
         "description": "குடும்பச் செலவுகள், கடன்கள், எதிர்கால இலக்குகள் மற்றும் தற்போதைய சொத்துகளின் அடிப்படையில் தேவையான காப்பீட்டுத் தொகையை மதிப்பிடுங்கள்.",
-        "url": "/calculators/insurance-sum-assured-calculator.html"
+        "url": "/calculators/life-insurance-sum-assured-calculator.html"
+      },
+      {
+        "title": "வீட்டுக் காப்பீட்டுத் தொகை கணிப்பேடு",
+        "type": "Home Insurance",
+        "description": "வீட்டு உரிமையாளர் மற்றும் வாடகைதாரருக்கான கட்டடம், உடைமைகள் மற்றும் மாற்றுத் தங்குமிடச் செலவின் அடிப்படையில் காப்பீட்டுத் தொகையை மதிப்பிடுங்கள்.",
+        "url": "/calculators/home-insurance-sum-assured-calculator.html"
+      },
+      {
+        "title": "மருத்துவக் காப்பீட்டுத் தொகை கணிப்பேடு",
+        "type": "Health Insurance",
+        "description": "குடும்ப உறுப்பினர்களின் வயது மற்றும் விருப்பமான மருத்துவமனை அறை வாடகையை வைத்து குடும்பக் காப்பீட்டுத் திட்டம் அல்லது தனிநபர் மருத்துவக் காப்பீட்டுக்கான திட்டமிடல் தொகையை மதிப்பிடுங்கள்.",
+        "url": "/calculators/medical-insurance-sum-assured-calculator.html"
       }
     ]
   },

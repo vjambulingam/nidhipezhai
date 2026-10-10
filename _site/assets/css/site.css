@@ -232,7 +232,6 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   .brand__name { font-size: 16px; }
   .brand__tagline { font-size: 9px; }
   .site-nav { gap: 12px; font-size: 10px; }
-  .site-nav__about { display: none; }
   .checklist-site-header .site-header__inner { flex-wrap: wrap; gap: 8px 12px; padding-block: 9px; }
   .checklist-site-header .brand { flex: 1 1 100%; min-width: 0; }
   .checklist-site-header .site-nav { order: 2; margin-left: 52px; }
