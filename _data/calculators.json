@@ -1,6 +1,6 @@
 [
   {
-    "category": "கடன்கள்",
+    "category": "கடன் மேலாண்மை (Loan Management)",
     "items": [
       {
         "title": "வீட்டுக் கடன் தவணை கணிப்பேடு",
@@ -19,11 +19,23 @@
         "type": "Personal Loan",
         "description": "தனிநபர் கடனின் மாதத் தவணை, வட்டி மற்றும் செயலாக்கக் கட்டணத்தைக் கணக்கிடுங்கள்.",
         "url": "/calculators/personal_loan_emi_calculator.html"
+      },
+      {
+        "title": "கடன் அட்டை நிலுவைத் தொகை அடைப்பு கணிப்பேடு",
+        "type": "Credit Card Payoff",
+        "description": "நிலுவைத் தொகை, வட்டி விகிதம் மற்றும் மாதாந்திரக் கட்டணத்தின் அடிப்படையில் கடனை அடைக்கும் காலத்தையும் மொத்த வட்டியையும் மதிப்பிடுங்கள்.",
+        "url": "/calculators/credit-card-payoff-calculator.html"
+      },
+      {
+        "title": "கல்விக் கடன் கணிப்பேடு",
+        "type": "Education Loan",
+        "description": "படிப்புக் கால மொரட்டோரியம், அந்தக் காலத்திற்கான வட்டி செலுத்தல் அல்லது முதலுடன் சேர்த்தல், மற்றும் திருப்பிச் செலுத்தும் EMI-ஐ மதிப்பிடுங்கள்.",
+        "url": "/calculators/education-loan-calculator.html"
       }
     ]
   },
   {
-    "category": "சேமிப்பு மற்றும் வைப்புத்தொகை",
+    "category": "சேமிப்பு மேலாண்மை (Savings Management)",
     "items": [
       {
         "title": "ஓய்வூதிய வைப்பு நிதி கணிப்பேடு",
@@ -48,22 +60,23 @@
         "type": "RD",
         "description": "மாதாந்திர வைப்பின் அடிப்படையில் RD முதிர்வுத் தொகையைக் கணக்கிடுங்கள்.",
         "url": "/calculators/rd_returns_calculator.html"
-      }
-    ]
-  },
-  {
-    "category": "ஓய்வூதியத் திட்டமிடல்",
-    "items": [
+      },
       {
-        "title": "ஓய்வூதிய நிதி திட்டமிடல் கணிப்பேடு",
-        "type": "Retirement Planning",
-        "description": "ஓய்வுக்கான நிதித் தேவை, பணவீக்கம், முதலீட்டு வருமானம் மற்றும் தற்போதைய சேமிப்பின் அடிப்படையில் திட்டமிடுங்கள்.",
-        "url": "/calculators/retirement-calculator.html"
+        "title": "அவசரகால நிதித் திட்டமிடல் கணிப்பேடு",
+        "type": "Emergency Fund Planner",
+        "description": "அத்தியாவசிய மாதச் செலவு மற்றும் இலக்கு மாதங்களின் அடிப்படையில் நிதி இலக்கையும், அதை அடையத் தேவையான மாதச் சேமிப்பையும் கணக்கிடுங்கள்.",
+        "url": "/calculators/emergency-fund-planner.html"
+      },
+      {
+        "title": "பணவீக்கக் கணிப்பேடு",
+        "type": "Inflation Calculator",
+        "description": "பணவீக்க விகிதம் மற்றும் காலத்தின் அடிப்படையில் எதிர்காலச் செலவையும் பணத்தின் வாங்கும் திறன் மாற்றத்தையும் மதிப்பிடுங்கள்.",
+        "url": "/calculators/inflation-calculator.html"
       }
     ]
   },
   {
-    "category": "காப்பீடு",
+    "category": "காப்பீட்டு மேலாண்மை (Insurance Management)",
     "items": [
       {
         "title": "ஆயுள் காப்பீட்டுத் தொகை பரிந்துரை கணிப்பேடு",
@@ -74,8 +87,20 @@
     ]
   },
   {
-    "category": "மியூச்சுவல் ஃபண்ட்",
+    "category": "முதலீட்டு மேலாண்மை (Investment Management)",
     "items": [
+      {
+        "title": "ஓய்வூதிய நிதி திட்டமிடல் கணிப்பேடு",
+        "type": "Retirement Planning",
+        "description": "ஓய்வுக்கான நிதித் தேவை, பணவீக்கம், முதலீட்டு வருமானம் மற்றும் தற்போதைய சேமிப்பின் அடிப்படையில் திட்டமிடுங்கள்.",
+        "url": "/calculators/retirement-calculator.html"
+      },
+      {
+        "title": "இலக்கு அடிப்படையிலான முதலீட்டுக் கணிப்பேடு",
+        "type": "Goal-based Investing",
+        "description": "வீடு, கல்லூரிக் கல்வி, குழந்தைகளின் திருமணம், சுற்றுலா, ஓய்வூதியம் அல்லது பிற இலக்குக்கான எதிர்காலத் தொகையையும் தேவையான மாதாந்திர SIP-யையும் கணக்கிடுங்கள்.",
+        "url": "/calculators/goal-based-investing-calculator.html"
+      },
       {
         "title": "தவணை முதலீட்டுக் கணிப்பேடு",
         "type": "Mutual Fund SIP",

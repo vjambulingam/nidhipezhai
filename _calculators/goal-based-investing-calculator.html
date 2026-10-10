@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="ta">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>இலக்கு அடிப்படையிலான முதலீட்டுக் கணிப்பேடு · நிதிப்பேழை</title>
+  <meta name="description" content="வீடு, கல்லூரிக் கல்வி, குழந்தைகளின் திருமணம், சுற்றுலா, ஓய்வூதியம் அல்லது பிற இலக்குக்குத் தேவையான எதிர்காலத் தொகையையும் மாதாந்திர SIP-யையும் கணக்கிடுங்கள்.">
+  <meta name="theme-color" content="#0D7377">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ta_IN">
+  <meta property="og:title" content="இலக்கு அடிப்படையிலான முதலீட்டுக் கணிப்பேடு · நிதிப்பேழை">
+  <meta property="og:description" content="இலக்குத் தொகை, காலம், பணவீக்கம், எதிர்பார்க்கும் வருமானம், தற்போதைய சேமிப்பு ஆகியவற்றின் அடிப்படையில் தேவைப்படும் மாதாந்திர SIP-யை மதிப்பிடுங்கள்.">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Noto+Serif+Tamil:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/calculator-theme.css">
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+  <header class="bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="calc-site-header__inner flex items-center justify-between">
+        <div class="calc-site-header__identity flex items-center space-x-3">
+          <a class="calc-site-logo" href="../index.html" aria-label="நிதிப்பேழை முகப்பு"><img src="../assets/images/nidhipezhai-logo.svg" alt=""></a>
+          <div>
+            <h1 class="text-xl font-bold tracking-tight text-gray-900 leading-tight">நிதிப்பேழை</h1>
+            <p class="text-xs text-gray-500 font-medium hidden sm:block">நிதி நலம் காக்க தெளிவான நிதி அறிவு</p>
+          </div>
+        </div>
+        <nav class="calc-site-header__nav" aria-label="முதன்மை வழிசெலுத்தல்">
+          <a class="calc-nav-articles" href="../index.html#articles">கட்டுரைகள்</a>
+          <a class="calc-nav-about" href="../about/">எங்களைப் பற்றி</a>
+          <a class="calc-nav-directory" href="index.html">கணிப்பேடுகள்</a>
+          <a class="calc-nav-checklists" href="../checklists/">சரிபார்ப்புப் பட்டியல்கள்</a>
+        </nav>
+        <div class="calc-site-header__actions flex items-center space-x-2 no-print">
+          <button id="printButton" type="button" class="px-3 py-1.5 text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg">அச்சிடு</button>
+          <button id="csvButton" type="button" class="px-3 py-1.5 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-700 rounded-lg">CSV ஏற்றுமதி</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-1">
+    <div class="mb-6">
+      <p class="text-xs font-semibold text-sky-700">இலக்கு அடிப்படையிலான முதலீட்டுத் திட்டமிடல்</p>
+      <h2 class="mt-1 text-2xl sm:text-3xl font-bold text-gray-900">இலக்கு அடிப்படையிலான முதலீட்டுக் கணிப்பேடு</h2>
+      <p class="mt-2 max-w-3xl text-sm text-gray-600">வீடு வாங்குதல், கல்லூரிக் கல்வி, குழந்தைகளின் திருமணம், உள்நாட்டு அல்லது வெளிநாட்டுச் சுற்றுலா, ஓய்வூதியம் அல்லது பிற இலக்குக்காக இன்றைய இலக்குத் தொகையை எதிர்காலப் பணவீக்கத்துடன் கணித்து, தேவைப்படும் மாதாந்திர SIP-யை மதிப்பிடுங்கள்.</p>
+    </div>
+
+    <div class="grid gap-6 lg:grid-cols-5">
+      <section class="lg:col-span-2 bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-gray-200" aria-labelledby="inputHeading">
+        <h3 id="inputHeading" class="text-lg font-bold text-gray-900">உங்கள் இலக்கு விவரங்கள்</h3>
+        <div class="mt-5 space-y-5">
+          <div>
+            <label for="goalInput" class="block text-sm font-semibold text-gray-700">இலக்கு</label>
+            <select id="goalInput" class="mt-2 w-full rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm text-gray-900 focus:ring-2 focus:ring-sky-500">
+              <option value="home">வீடு வாங்குதல்</option>
+              <option value="education">கல்லூரிக் கல்விச் செலவு</option>
+              <option value="wedding">குழந்தைகளின் திருமணச் செலவு</option>
+              <option value="retirement">ஓய்வூதியம்</option>
+              <option value="domesticTour">உள்நாட்டுச் சுற்றுலா</option>
+              <option value="foreignTour">வெளிநாட்டுச் சுற்றுலா</option>
+              <option value="other">மற்ற இலக்கு</option>
+            </select>
+            <p class="mt-1 text-xs text-gray-500">ஒவ்வொரு இலக்குக்கும் மாதிரி தொடக்க மதிப்புகள் வழங்கப்பட்டுள்ளன; உங்கள் தேவைக்கேற்ப மாற்றலாம்.</p>
+          </div>
+          <div>
+            <label for="targetInput" class="block text-sm font-semibold text-gray-700">இன்றைய மதிப்பில் இலக்குத் தொகை</label>
+            <div class="relative mt-2">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">₹</span>
+              <input id="targetInput" type="number" min="1" max="10000000000" step="10000" value="5000000" inputmode="decimal" class="w-full rounded-lg border border-gray-300 py-2.5 pl-8 pr-3 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
+            </div>
+            <p class="mt-1 text-xs text-gray-500">இலக்கை அடையும் நாளில் தேவைப்படும் தொகை அல்ல; இன்றைய விலையை உள்ளிடுங்கள்.</p>
+          </div>
+          <div>
+            <label for="yearsInput" class="block text-sm font-semibold text-gray-700">இலக்கை அடைய மீதமுள்ள காலம்</label>
+            <div class="mt-2 flex">
+              <input id="yearsInput" type="number" min="1" max="60" step="1" value="10" inputmode="numeric" class="w-full min-w-0 rounded-l-lg rounded-r-none border border-r-0 border-gray-300 py-2.5 pl-3 pr-3 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
+              <span class="inline-flex shrink-0 items-center rounded-r-lg border border-gray-300 bg-slate-50 px-3 text-sm text-gray-500">ஆண்டுகள்</span>
+            </div>
+          </div>
+          <div>
+            <label for="inflationInput" class="block text-sm font-semibold text-gray-700">ஆண்டு பணவீக்க மதிப்பீடு</label>
+            <div class="relative mt-2">
+              <input id="inflationInput" type="number" min="0" max="30" step="0.1" value="6" inputmode="decimal" class="w-full rounded-lg border border-gray-300 py-2.5 pl-3 pr-9 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
+              <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500">%</span>
+            </div>
+          </div>
+          <div>
+            <label for="returnInput" class="block text-sm font-semibold text-gray-700">எதிர்பார்க்கும் ஆண்டு முதலீட்டு வருமானம்</label>
+            <div class="relative mt-2">
+              <input id="returnInput" type="number" min="0" max="30" step="0.1" value="10" inputmode="decimal" class="w-full rounded-lg border border-gray-300 py-2.5 pl-3 pr-9 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
+              <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500">%</span>
+            </div>
+            <p class="mt-1 text-xs text-gray-500">இது கணிப்பிற்கான அனுமானம் மட்டுமே; முதலீட்டு வருமானம் உறுதியானதல்ல.</p>
+          </div>
+          <div>
+            <label for="corpusInput" class="block text-sm font-semibold text-gray-700">இந்த இலக்கிற்காக ஏற்கெனவே உள்ள முதலீடு</label>
+            <div class="relative mt-2">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">₹</span>
+              <input id="corpusInput" type="number" min="0" max="10000000000" step="10000" value="500000" inputmode="decimal" class="w-full rounded-lg border border-gray-300 py-2.5 pl-8 pr-3 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
+            </div>
+          </div>
+          <p id="errorMessage" class="hidden rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-800" role="alert"></p>
+          <p class="rounded-lg border border-amber-200 bg-amber-50 p-3 text-xs leading-relaxed text-amber-900">இலக்குத் தொகை பணவீக்கத்தால் ஆண்டுதோறும் உயரும் எனவும், தற்போதைய முதலீடு மற்றும் மாதாந்திர SIP ஒரே மதிப்பீட்டு வருமானத்தைப் பெறும் எனவும் கணக்கிடப்பட்டுள்ளது. சந்தை வருமானம் மாறுபடும்; இந்த மதிப்பீடு உத்தரவாதமல்ல.</p>
+        </div>
+      </section>
+
+      <section class="lg:col-span-3 space-y-6" aria-labelledby="resultsHeading" aria-live="polite">
+        <div class="bg-gradient-to-br from-sky-600 to-indigo-700 rounded-2xl p-6 text-white shadow-md">
+          <h3 id="resultsHeading" class="text-sm font-semibold text-sky-100"><span id="goalNameDisplay">வீடு வாங்குதல்</span> இலக்கை அடைய வேண்டிய SIP</h3>
+          <p class="mt-2 flex flex-wrap items-baseline gap-x-2">
+            <span id="sipDisplay" class="text-3xl sm:text-4xl font-extrabold">₹ 0</span>
+            <span class="text-sm text-sky-100">மாதந்தோறும்</span>
+          </p>
+          <p class="mt-2 text-sm text-sky-100">இலக்கை அடையும் வரை ஒவ்வொரு மாத முடிவிலும் முதலீடு செய்வதாகக் கணக்கிடப்பட்டுள்ளது.</p>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
+            <p class="text-xs text-gray-500">பணவீக்கத்துக்குப் பின் எதிர்கால இலக்குத் தொகை</p>
+            <p id="futureTargetDisplay" class="mt-1 text-xl font-bold text-amber-700">₹ 0</p>
+          </div>
+          <div class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
+            <p class="text-xs text-gray-500">தற்போதைய முதலீட்டின் எதிர்கால மதிப்பு</p>
+            <p id="futureCorpusDisplay" class="mt-1 text-xl font-bold text-sky-700">₹ 0</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-gray-200">
+          <h3 class="text-lg font-bold text-gray-900">இலக்கை நோக்கிய முதலீட்டு வளர்ச்சி</h3>
+          <p class="mt-1 text-xs text-gray-500">மதிப்பிடப்பட்ட முதலீட்டுத் தொகுப்பும் பணவீக்கத்துடன் உயரும் இலக்குத் தொகையும் ஆண்டுதோறும்.</p>
+          <div class="mt-4 overflow-x-auto">
+            <svg id="corpusChart" class="w-full min-w-[520px]" viewBox="0 0 760 330" role="img" aria-labelledby="chartTitle chartDescription">
+              <title id="chartTitle">இலக்கை நோக்கிய முதலீட்டு வளர்ச்சி வரைபடம்</title>
+              <desc id="chartDescription"></desc>
+            </svg>
+          </div>
+          <div class="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-xs text-gray-600">
+            <span class="inline-flex items-center gap-2"><span class="h-0.5 w-5 bg-sky-700"></span>மதிப்பிடப்பட்ட முதலீட்டுத் தொகுப்பு</span>
+            <span class="inline-flex items-center gap-2"><span class="h-0.5 w-5 border-t-2 border-dashed border-amber-700"></span>பணவீக்கத்துடன் உயரும் இலக்கு</span>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-gray-200">
+          <h3 class="text-lg font-bold text-gray-900">கணிப்பு விவரம்</h3>
+          <p id="summaryMessage" class="mt-2 text-sm leading-relaxed text-gray-600"></p>
+          <p class="mt-4 rounded-lg bg-slate-50 p-3 text-xs leading-relaxed text-gray-600">கணக்கீடு: எதிர்கால இலக்கு = இன்றைய இலக்குத் தொகை × (1 + பணவீக்கம்)<sup>ஆண்டுகள்</sup>. தற்போதைய முதலீடு எதிர்பார்க்கும் வருமானத்தில் வளர்ந்த பின் மீதமுள்ள தொகையை மாதாந்திர SIP மூலம் நிரப்புகிறது. வரி, கட்டணம் அல்லது முதலீட்டு வருமான ஏற்றத்தாழ்வு இதில் சேர்க்கப்படவில்லை.</p>
+          <p class="mt-4 text-sm text-gray-600">இலக்குகளுக்கு ஏற்ப முதலீட்டுத் தொகுப்பை அமைப்பது பற்றி <a class="font-semibold text-sky-700 underline underline-offset-2 hover:text-sky-800" href="../articles/portfolio-creation-approach/">முதலீட்டுத் தொகுப்பு உருவாக்கும் வழிகாட்டியில்</a> படிக்கவும்.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="calc-site-footer bg-white border-t border-gray-200 mt-10 py-6 text-center text-xs text-gray-500">
+    <div class="calc-site-footer__inner max-w-7xl mx-auto px-4">
+      <div class="calc-site-footer__main">
+        <div>
+          <a class="calc-site-footer__brand" href="../index.html">நிதிப்பேழை</a>
+          <p class="calc-site-footer__tagline">நிதி நலம் காக்க தெளிவான நிதி அறிவு.</p>
+        </div>
+        <nav class="calc-site-footer__links" aria-label="தள இணைப்புகள்">
+          <a href="../index.html">முகப்பு</a>
+          <a href="../index.html#articles">கட்டுரைகள்</a>
+          <a href="index.html">கணிப்பேடுகள்</a>
+          <a href="../about/">எங்களைப் பற்றி</a>
+          <a href="../disclaimer/">பொறுப்புத் துறப்பு</a>
+          <a href="../license/">உரிமம்</a>
+        </nav>
+      </div>
+      <p>இந்தக் கணிப்பேடு கல்வி மற்றும் விழிப்புணர்வுக்காக மட்டுமே; முதலீட்டு ஆலோசனை அல்ல.</p>
+      <p class="calc-site-footer__disclaimer">பொறுப்புத் துறப்பு: முடிவெடுப்பதற்கு முன் <a href="../articles/sebi-registered-investment-advisors/">தகுதியான நிதி ஆலோசகரை அணுகவும்</a>.</p>
+      <p class="calc-site-footer__license">இந்தத் தளத்தின் உள்ளடக்கம் <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> உரிமத்தின் கீழ் பகிரப்படுகிறது.</p>
+    </div>
+  </footer>
+
+  <script>
+    const currency = new Intl.NumberFormat("ta-IN", {
+      style: "currency",
+      currency: "INR",
+      maximumFractionDigits: 0
+    });
+    const goalInput = document.getElementById("goalInput");
+    const targetInput = document.getElementById("targetInput");
+    const yearsInput = document.getElementById("yearsInput");
+    const inflationInput = document.getElementById("inflationInput");
+    const returnInput = document.getElementById("returnInput");
+    const corpusInput = document.getElementById("corpusInput");
+
+    const goalNames = {
+      home: "வீடு வாங்குதல்",
+      education: "கல்லூரிக் கல்விச் செலவு",
+      wedding: "குழந்தைகளின் திருமணச் செலவு",
+      retirement: "ஓய்வூதியம்",
+      domesticTour: "உள்நாட்டுச் சுற்றுலா",
+      foreignTour: "வெளிநாட்டுச் சுற்றுலா",
+      other: "மற்ற இலக்கு"
+    };
+    const goalDefaults = {
+      home: { target: 5000000, years: 10, inflation: 6, annualReturn: 10, corpus: 500000 },
+      education: { target: 2500000, years: 15, inflation: 8, annualReturn: 10, corpus: 250000 },
+      wedding: { target: 2000000, years: 15, inflation: 6, annualReturn: 10, corpus: 200000 },
+      retirement: { target: 10000000, years: 25, inflation: 6, annualReturn: 10, corpus: 1000000 },
+      domesticTour: { target: 200000, years: 2, inflation: 6, annualReturn: 6, corpus: 50000 },
+      foreignTour: { target: 500000, years: 3, inflation: 6, annualReturn: 6, corpus: 100000 },
+      other: { target: 500000, years: 5, inflation: 6, annualReturn: 8, corpus: 50000 }
+    };
+
+    function formatMoney(value) {
+      return currency.format(Math.round(value));
+    }
+
+    function createSvgElement(name, attributes = {}, text = "") {
+      const element = document.createElementNS("http://www.w3.org/2000/svg", name);
+      Object.entries(attributes).forEach(([key, value]) => element.setAttribute(key, String(value)));
+      if (text) {
+        element.textContent = text;
+      }
+      return element;
+    }
+
+    function formatCompactMoney(value) {
+      if (value >= 10000000) {
+        return `₹${(value / 10000000).toLocaleString("ta-IN", { maximumFractionDigits: 1 })} கோடி`;
+      }
+      if (value >= 100000) {
+        return `₹${(value / 100000).toLocaleString("ta-IN", { maximumFractionDigits: 1 })} லட்சம்`;
+      }
+      if (value >= 1000) {
+        return `₹${(value / 1000).toLocaleString("ta-IN", { maximumFractionDigits: 0 })} ஆயிரம்`;
+      }
+      return formatMoney(value);
+    }
+
+    function drawChart(plan) {
+      const chart = document.getElementById("corpusChart");
+      chart.replaceChildren();
+      chart.append(
+        createSvgElement("title", { id: "chartTitle" }, "இலக்கை நோக்கிய முதலீட்டு வளர்ச்சி வரைபடம்"),
+        createSvgElement("desc", { id: "chartDescription" }, plan
+          ? `${plan.years} ஆண்டுகளில் இலக்கு ${formatMoney(plan.futureTarget)}; மதிப்பிடப்பட்ட முதலீட்டுத் தொகுப்பு ${formatMoney(plan.projectedCorpus)}.`
+          : "உள்ளீடுகளைச் சரிபார்த்த பின் வரைபடம் காட்டப்படும்.")
+      );
+      if (!plan) {
+        return;
+      }
+
+      const width = 760;
+      const height = 330;
+      const left = 118;
+      const right = 20;
+      const top = 18;
+      const bottom = 272;
+      const chartWidth = width - left - right;
+      const chartHeight = bottom - top;
+      const monthlyReturn = plan.annualReturn / 1200;
+      let projectedCorpus = plan.corpus;
+      const points = [{ year: 0, goal: plan.target, corpus: projectedCorpus }];
+
+      for (let year = 1; year <= plan.years; year += 1) {
+        for (let month = 0; month < 12; month += 1) {
+          projectedCorpus = projectedCorpus * (1 + monthlyReturn) + plan.sip;
+        }
+        points.push({
+          year,
+          goal: plan.target * (1 + plan.inflation / 100) ** year,
+          corpus: projectedCorpus
+        });
+      }
+
+      const maxValue = Math.max(...points.map((point) => Math.max(point.goal, point.corpus)), 1);
+      const xForYear = (year) => left + (year / plan.years) * chartWidth;
+      const yForValue = (value) => bottom - (value / maxValue) * chartHeight;
+
+      for (let tick = 0; tick <= 4; tick += 1) {
+        const value = maxValue * tick / 4;
+        const y = yForValue(value);
+        chart.append(
+          createSvgElement("line", {
+            x1: left, y1: y, x2: width - right, y2: y,
+            stroke: "#d8e3de", "stroke-width": 1
+          }),
+          createSvgElement("text", {
+            x: left - 9, y: y + 4, "text-anchor": "end",
+            fill: "#64748b", "font-size": 11
+          }, formatCompactMoney(value))
+        );
+      }
+
+      const yearStep = Math.max(1, Math.ceil(plan.years / 5));
+      for (let year = 0; year <= plan.years; year += yearStep) {
+        const x = xForYear(year);
+        chart.append(
+          createSvgElement("line", {
+            x1: x, y1: top, x2: x, y2: bottom,
+            stroke: "#eef2f0", "stroke-width": 1
+          }),
+          createSvgElement("text", {
+            x, y: bottom + 20, "text-anchor": "middle",
+            fill: "#64748b", "font-size": 11
+          }, String(year))
+        );
+      }
+      if (plan.years % yearStep !== 0) {
+        chart.append(createSvgElement("text", {
+          x: xForYear(plan.years), y: bottom + 20, "text-anchor": "middle",
+          fill: "#64748b", "font-size": 11
+        }, String(plan.years)));
+      }
+      chart.append(createSvgElement("text", {
+        x: left + chartWidth / 2, y: height - 10, "text-anchor": "middle",
+        fill: "#475569", "font-size": 11
+      }, "ஆண்டுகள்"));
+
+      const makePath = (key) => points.map((point, index) =>
+        `${index === 0 ? "M" : "L"} ${xForYear(point.year)} ${yForValue(point[key])}`
+      ).join(" ");
+      chart.append(
+        createSvgElement("path", {
+          d: makePath("goal"), fill: "none", stroke: "#b45309",
+          "stroke-width": 3, "stroke-dasharray": "7 6", "stroke-linecap": "round"
+        }),
+        createSvgElement("path", {
+          d: makePath("corpus"), fill: "none", stroke: "#0D7377",
+          "stroke-width": 3, "stroke-linecap": "round", "stroke-linejoin": "round"
+        })
+      );
+    }
+
+    function applyGoalDefaults() {
+      const defaults = goalDefaults[goalInput.value];
+      targetInput.value = String(defaults.target);
+      yearsInput.value = String(defaults.years);
+      inflationInput.value = String(defaults.inflation);
+      returnInput.value = String(defaults.annualReturn);
+      corpusInput.value = String(defaults.corpus);
+      calculatePlan();
+    }
+
+    function calculatePlan() {
+      const target = Number(targetInput.value);
+      const years = Number(yearsInput.value);
+      const inflation = Number(inflationInput.value);
+      const annualReturn = Number(returnInput.value);
+      const corpus = Number(corpusInput.value);
+      let error = "";
+
+      if (!Number.isFinite(target) || target <= 0 || target > 10000000000) {
+        error = "இன்றைய இலக்குத் தொகை ₹0-ஐ விட அதிகமாகவும் ₹1,000 கோடி அல்லது அதற்குக் குறைவாகவும் இருக்க வேண்டும்.";
+      } else if (!Number.isInteger(years) || years < 1 || years > 60) {
+        error = "இலக்குக்கான காலம் 1 முதல் 60 முழு ஆண்டுகளுக்குள் இருக்க வேண்டும்.";
+      } else if (!Number.isFinite(inflation) || inflation < 0 || inflation > 30) {
+        error = "பணவீக்க மதிப்பீடு 0% முதல் 30% வரை இருக்க வேண்டும்.";
+      } else if (!Number.isFinite(annualReturn) || annualReturn < 0 || annualReturn > 30) {
+        error = "எதிர்பார்க்கும் ஆண்டு வருமானம் 0% முதல் 30% வரை இருக்க வேண்டும்.";
+      } else if (!Number.isFinite(corpus) || corpus < 0 || corpus > 10000000000) {
+        error = "தற்போதைய முதலீடு ₹0 முதல் ₹1,000 கோடி வரை இருக்க வேண்டும்.";
+      }
+
+      const errorElement = document.getElementById("errorMessage");
+      errorElement.textContent = error;
+      errorElement.classList.toggle("hidden", !error);
+      if (error) {
+        document.getElementById("sipDisplay").textContent = "—";
+        document.getElementById("futureTargetDisplay").textContent = "—";
+        document.getElementById("futureCorpusDisplay").textContent = "—";
+        document.getElementById("summaryMessage").textContent = "";
+        drawChart(null);
+        return null;
+      }
+
+      const months = years * 12;
+      const monthlyReturn = annualReturn / 1200;
+      const corpusFactor = (1 + monthlyReturn) ** months;
+      const futureTarget = target * (1 + inflation / 100) ** years;
+      const futureCorpus = corpus * corpusFactor;
+      const remaining = Math.max(futureTarget - futureCorpus, 0);
+      const sip = remaining === 0
+        ? 0
+        : monthlyReturn === 0
+          ? Math.ceil(remaining / months)
+          : Math.ceil(remaining * monthlyReturn / (corpusFactor - 1));
+      const projectedCorpus = futureCorpus + (sip === 0
+        ? 0
+        : monthlyReturn === 0
+          ? sip * months
+          : sip * (corpusFactor - 1) / monthlyReturn);
+      const plan = { target, years, inflation, annualReturn, corpus, months, futureTarget, futureCorpus, projectedCorpus, remaining, sip };
+
+      document.getElementById("goalNameDisplay").textContent = goalNames[goalInput.value];
+      document.getElementById("sipDisplay").textContent = formatMoney(sip);
+      document.getElementById("futureTargetDisplay").textContent = formatMoney(futureTarget);
+      document.getElementById("futureCorpusDisplay").textContent = formatMoney(futureCorpus);
+      document.getElementById("summaryMessage").textContent = remaining === 0
+        ? `தற்போதைய முதலீடு எதிர்பார்க்கும் வருமானத்தில் வளர்ந்தால், மதிப்பிடப்பட்ட எதிர்கால மதிப்பு இலக்கை விட ${formatMoney(futureCorpus - futureTarget)} அதிகமாக இருக்கும். இந்தக் கணிப்பில் கூடுதல் SIP தேவையில்லை.`
+        : `${formatMoney(futureTarget)} எதிர்கால இலக்கில், தற்போதைய முதலீட்டின் மதிப்பிடப்பட்ட வளர்ச்சி ${formatMoney(futureCorpus)}. மீதமுள்ள ${formatMoney(remaining)} இலக்கை அடைய மாதம் ${formatMoney(sip)} SIP தேவை.`;
+      drawChart(plan);
+      return plan;
+    }
+
+    function exportCsv() {
+      const plan = calculatePlan();
+      if (!plan) {
+        return;
+      }
+      const rows = [
+        ["இலக்கு", "இன்றைய இலக்குத் தொகை (ரூ)", "காலம் (ஆண்டுகள்)", "பணவீக்கம் (%)", "எதிர்பார்க்கும் வருமானம் (%)", "தற்போதைய முதலீடு (ரூ)", "எதிர்கால இலக்கு (ரூ)", "தற்போதைய முதலீட்டின் எதிர்கால மதிப்பு (ரூ)", "தேவையான மாத SIP (ரூ)"],
+        [goalNames[goalInput.value], plan.target.toFixed(2), plan.years, plan.inflation, plan.annualReturn, plan.corpus.toFixed(2), plan.futureTarget.toFixed(2), plan.futureCorpus.toFixed(2), plan.sip.toFixed(2)]
+      ];
+      const csv = "\uFEFF" + rows.map((row) => row.join(",")).join("\r\n");
+      const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "goal-based-investing-plan.csv";
+      link.click();
+      setTimeout(() => URL.revokeObjectURL(url), 0);
+    }
+
+    [targetInput, yearsInput, inflationInput, returnInput, corpusInput].forEach((input) => {
+      input.addEventListener("input", calculatePlan);
+      input.addEventListener("change", calculatePlan);
+    });
+    goalInput.addEventListener("change", applyGoalDefaults);
+    document.getElementById("printButton").addEventListener("click", () => window.print());
+    document.getElementById("csvButton").addEventListener("click", exportCsv);
+    calculatePlan();
+  </script>
+</body>
+</html>
