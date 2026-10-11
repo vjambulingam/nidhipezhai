@@ -36,26 +36,26 @@ bodyClass: home-page
     <div class="section-heading">
       <div>
         <p class="eyebrow eyebrow--light">வாசிக்கவும் · கற்றுக்கொள்ளவும்</p>
-        <h2 id="articles-heading">நிதிக் கட்டுரைகள்</h2>
+        <h2 id="articles-heading">நிதி வளங்கள்</h2>
       </div>
       <label class="search-field">
-        <span class="visually-hidden">கட்டுரைகளைத் தேடுங்கள்</span>
+        <span class="visually-hidden">கட்டுரைகள், கணிப்பேடுகள் மற்றும் சரிபார்ப்புப் பட்டியல்களைத் தேடுங்கள்</span>
         <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.8" cy="10.8" r="6.3"></circle><path d="m15.5 15.5 4.2 4.2"></path></svg>
-        <input id="article-search" type="search" placeholder="தலைப்பு அல்லது சொல்லைத் தேடுங்கள்" autocomplete="off">
+        <input id="global-search" type="search" placeholder="கட்டுரைகள், கணிப்பேடுகள், பட்டியல்களைத் தேடுங்கள்" autocomplete="off">
       </label>
     </div>
 
-    <div class="topic-filters" role="group" aria-label="தலைப்பின்படி வடிகட்டுங்கள்">
+    <div class="topic-filters" role="group" aria-label="கட்டுரைகளைத் தலைப்பின்படி வடிகட்டுங்கள்">
       <button class="topic-filter is-active" type="button" data-topic="all" aria-pressed="true">அனைத்தும்</button>
       {% for topic in collections.topics %}
       <button class="topic-filter" type="button" data-topic="{{ topic | escape }}" aria-pressed="false">{{ topic }}</button>
       {% endfor %}
     </div>
 
-    <p class="results-count" id="results-count" aria-live="polite">{{ collections.articlesByDate | length }} கட்டுரைகள்</p>
-    <div class="article-grid" id="article-grid">
+    <p class="results-count" id="results-count" aria-live="polite">{{ collections.articlesByDate | length }} முடிவுகள்</p>
+    <div class="article-grid" id="search-results">
       {% for article in collections.articlesByDate %}
-      <article class="article-card" data-article-card data-topics="{{ article.data.topics | join('|') | escape }}" data-search="{{ article.data.title }} {{ article.data.description }} {{ article.data.topics | join(' ') }}">
+      <article class="article-card" data-search-result data-search-type="article" data-topics="{{ article.data.topics | join('|') | escape }}" data-search="{{ article.data.title | escape }} {{ article.data.description | escape }} {{ article.data.topics | join(' ') | escape }} {{ article.data.keywords | default([]) | join(' ') | escape }}">
         <div class="article-card__meta">
           <span class="article-card__topic">{{ article.data.topics[0] }}</span>
           <time datetime="{{ article.date | dateIso }}">{{ article.date | dateTamil }}</time>
@@ -65,8 +65,30 @@ bodyClass: home-page
         <a class="article-card__read" href="{{ article.url | url }}">கட்டுரையைப் படிக்க <span aria-hidden="true">↗</span></a>
       </article>
       {% endfor %}
+      {% for calculator in searchResources.calculators %}
+      <article class="article-card" data-search-result data-search-type="calculator" data-topics="" data-search="{{ calculator.searchText | escape }}" hidden>
+        <div class="article-card__meta">
+          <span class="article-card__topic">கணிப்பேடு</span>
+          <span>{{ calculator.type | escape }}</span>
+        </div>
+        <h3><a href="{{ calculator.url | url }}">{{ calculator.title | escape }}</a></h3>
+        <p>{{ calculator.description | escape }}</p>
+        <a class="article-card__read" href="{{ calculator.url | url }}">கணிப்பேட்டைத் திறக்க <span aria-hidden="true">↗</span></a>
+      </article>
+      {% endfor %}
+      {% for checklist in searchResources.checklists %}
+      <article class="article-card" data-search-result data-search-type="checklist" data-topics="" data-search="{{ checklist.searchText | escape }}" hidden>
+        <div class="article-card__meta">
+          <span class="article-card__topic">சரிபார்ப்புப் பட்டியல்</span>
+          <span>{{ checklist.type | escape }}</span>
+        </div>
+        <h3><a href="{{ checklist.url | url }}">{{ checklist.title | escape }}</a></h3>
+        <p>{{ checklist.description | escape }}</p>
+        <a class="article-card__read" href="{{ checklist.url | url }}">பட்டியலைத் திறக்க <span aria-hidden="true">↗</span></a>
+      </article>
+      {% endfor %}
     </div>
-    <p class="empty-state" id="empty-state" hidden>இந்தத் தேடலுக்கு ஏற்ற கட்டுரைகள் இல்லை. வேறு சொல்லை முயற்சிக்கவும்.</p>
+    <p class="empty-state" id="empty-state" hidden>இந்தத் தேடலுக்கு ஏற்ற முடிவுகள் இல்லை. வேறு சொல்லை முயற்சிக்கவும்.</p>
   </section>
 
   <section class="tools-band" id="tools">

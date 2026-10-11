@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title description">
+  <title id="title">முதலீட்டுப் பயணத்தைத் திட்டமிட்டு தொடங்குங்கள்</title>
+  <desc id="description">நிதி அடித்தளத்திலிருந்து இலக்கை நோக்கி படிப்படியாக உயர்ந்து செல்லும் பாதையும் வளர்ச்சியைக் குறிக்கும் வரைபடமும்.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0D7377"/>
+      <stop offset="1" stop-color="#102e31"/>
+    </linearGradient>
+    <linearGradient id="growth" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#10b981"/>
+      <stop offset="1" stop-color="#cbe4d5"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="500" rx="24" fill="url(#background)"/>
+  <circle cx="1080" cy="92" r="126" fill="#fff" opacity=".035"/>
+  <circle cx="875" cy="415" r="190" fill="#fff" opacity=".035"/>
+
+  <g font-family="'Noto Sans Tamil', sans-serif">
+    <text x="36" y="190" fill="#e5c58e" font-size="34" font-weight="700">உங்கள் முதலீட்டுப் பயணத்தைத் </text>
+    <text x="36" y="244" fill="#e5c58e" font-size="34" font-weight="700">திட்டமிட்டு படிப்படியாகத் தொடங்குங்கள்</text>
+    <text x="36" y="294" fill="#d5e2dc" font-size="26">அடித்தளம் · இலக்கு · முதலீடு · மதிப்பாய்வு</text>
+  </g>
+
+  <g transform="translate(694 66)">
+    <rect x="0" y="0" width="438" height="356" rx="22" fill="#f3f7f5" opacity=".98"/>
+    <path d="M42 288H397" fill="none" stroke="#d8e3de" stroke-width="2"/>
+    <path d="M55 274L132 232L207 248L289 166L373 99" fill="none" stroke="url(#growth)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M342 98H375V131" fill="none" stroke="#0D7377" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <g fill="#fff" stroke="#0D7377" stroke-width="4">
+      <circle cx="55" cy="274" r="13"/>
+      <circle cx="132" cy="232" r="13"/>
+      <circle cx="207" cy="248" r="13"/>
+      <circle cx="289" cy="166" r="13"/>
+    </g>
+
+    <g fill="#0D7377">
+      <rect x="44" y="305" width="66" height="16" rx="8"/>
+      <rect x="121" y="305" width="66" height="16" rx="8"/>
+      <rect x="198" y="305" width="66" height="16" rx="8"/>
+      <rect x="275" y="305" width="66" height="16" rx="8"/>
+    </g>
+    <g fill="#c48b3a">
+      <circle cx="77" cy="313" r="4"/>
+      <circle cx="154" cy="313" r="4"/>
+      <circle cx="231" cy="313" r="4"/>
+      <circle cx="308" cy="313" r="4"/>
+    </g>
+    <g fill="#38524f" font-family="'Noto Sans Tamil', sans-serif" font-size="16" font-weight="600" text-anchor="middle">
+      <text x="77" y="344">அடித்தளம்</text>
+      <text x="154" y="344">இலக்கு</text>
+      <text x="231" y="344">முதலீடு</text>
+      <text x="308" y="344">மதிப்பாய்வு</text>
+    </g>
+  </g>
+</svg>
