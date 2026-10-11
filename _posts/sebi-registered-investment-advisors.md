@@ -5,6 +5,14 @@ date: 2026-10-05
 topics:
   - நிதி ஆலோசனை
   - முதலீடு 
+keywords:
+  - நிதி ஆலோசனை
+  - முதலீடு
+  - SEBI registered investment advisor Tamil
+  - financial advisor eppadi choose panrathu
+  - SEBI RIA fees India Tamil
+  - investment advice Tamil Nadu
+  - SEBI RIA na enna Tamil
 ---
 
 

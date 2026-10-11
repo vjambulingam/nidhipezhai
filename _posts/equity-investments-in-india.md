@@ -5,6 +5,15 @@ date: 2026-09-26
 topics:
   - முதலீடு
   - பங்குச்சந்தை
+keywords:
+  - முதலீடு
+  - பங்குச்சந்தை
+  - mutual fund thodangurathu eppadi
+  - mutual fund types India Tamil
+  - stock market basics Tamil
+  - shares la invest panrathu eppadi
+  - futures and options Tamil
+  - REIT and InvIT Tamil
 ---
 
 “Equity investments” என்று ஒரே சொல்லில் அழைக்கப்பட்டாலும், கீழே உள்ளவை ஒரே வகை அல்ல. பரஸ்பர நிதிகள் பல வகை சொத்துகளில் முதலீடு செய்யலாம்; பங்குகள் நிறுவனத்தின் உரிமைப் பங்குகள்; Futures/Options derivatives; REITs மற்றும் InvITs சொத்து அல்லது உள்கட்டமைப்பு வருமானத்தில் பங்கெடுக்கும் trust units. ஒவ்வொன்றின் வருமான வாய்ப்பு, இழப்பு ஆபத்து, பணமாக மாற்றும் வசதி வேறுபடும்.

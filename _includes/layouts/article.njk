@@ -12,7 +12,7 @@ layout: layouts/base.njk
   "mainEntityOfPage": page.url | url | absoluteUrl,
   "author": { "@type": "Organization", "name": site.title },
   "publisher": { "@type": "Organization", "name": site.title },
-  "keywords": topics
+  "keywords": keywords or topics
 } %}
 <script type="application/ld+json">{{ articleSchema | jsonify | safe }}</script>
 {% endif %}

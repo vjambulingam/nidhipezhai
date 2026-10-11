@@ -6,6 +6,15 @@ topics:
   - முதலீடு
   - நாணய வர்த்தகம்
   - சரக்கு வர்த்தகம்
+keywords:
+  - முதலீடு
+  - நாணய வர்த்தகம்
+  - சரக்கு வர்த்தகம்
+  - currency trading India Tamil
+  - commodity trading Tamil
+  - currency derivatives Tamil
+  - commodity derivatives eppadi trade panrathu
+  - MCX trading basics Tamil
 ---
 
 நாணயம் மற்றும் சரக்கு வர்த்தகம் என்பது விலை மாற்றத்திலிருந்து பாதுகாப்பு பெறவும் (hedging), சந்தை மதிப்பை எதிர்பார்த்து position எடுக்கவும் பயன்படுத்தப்படும் சந்தைச் செயல்பாடுகள். இந்தியாவில் இவை அங்கீகரிக்கப்பட்ட stock exchange-களில் பட்டியலிடப்பட்ட derivatives ஒப்பந்தங்கள் வழியாக நடைபெறலாம். இது வங்கியில் currency மாற்றுவது அல்லது நேரடியாக தங்கம்/கச்சாப் சரக்கு வாங்குவது போன்றதல்ல.

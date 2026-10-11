@@ -5,6 +5,15 @@ date: 2026-10-01
 topics:
   - தனிநபர் நிதி
   - நிதித் திட்டமிடல்
+keywords:
+  - தனிநபர் நிதி
+  - நிதித் திட்டமிடல்
+  - personal finance checklist Tamil
+  - emergency fund eppadi serpadhu
+  - emergency fund evvalavu venum
+  - life insurance cover evvalavu venum
+  - family financial planning Tamil
+  - personal finance eppadi plan panrathu
 ---
 
 நிதி நலன் என்பது முதலீடுகளைத் தேர்ந்தெடுப்பது மட்டுமல்ல. எதிர்பாராத செலவுகளைச் சமாளித்தல், குடும்பத்தைப் பாதுகாத்தல், கடனைக் கட்டுப்படுத்துதல், நீண்டகால இலக்குகளுக்காகச் சேமித்தல், முக்கிய ஆவணங்களை ஒழுங்குபடுத்துதல் ஆகியவை ஒன்றோடொன்று தொடர்புடையவை. இந்த ஆறு பிரிவுகளையும் அவ்வப்போது மதிப்பாய்வு செய்வது, உங்கள் நிதித் திட்டத்தில் உள்ள குறைபாடுகளை முன்கூட்டியே கண்டறிய உதவும்.
