@@ -31,7 +31,7 @@
           <a class="calc-site-logo" href="../index.html" aria-label="நிதிப்பேழை முகப்பு"><img src="../assets/images/nidhipezhai-logo.svg" alt=""></a>
           <div>
             <p class="text-xl font-bold tracking-tight text-gray-900 leading-tight">நிதிப்பேழை</p>
-            <p class="text-xs text-gray-500 font-medium hidden sm:block">நிதி நலம் காக்க தெளிவான நிதி அறிவு</p>
+            <p class="text-xs text-gray-500 font-medium hidden sm:block">நிதி நலம் காக்கத் தெளிவான நிதி அறிவு</p>
           </div>
         </div>
         <nav class="calc-site-header__nav" aria-label="முதன்மை வழிசெலுத்தல்">
@@ -108,7 +108,7 @@
           <h3 id="resultsHeading" class="text-sm font-semibold text-sky-100">தற்காலிகத் தவணை நிறுத்திவைப்புக் காலத்திற்குப் பின் மாத EMI</h3>
           <p class="mt-2 flex flex-wrap items-baseline gap-x-2">
             <span id="emiDisplay" class="text-3xl sm:text-4xl font-extrabold">₹ 0</span>
-            <span class="text-sm text-sky-100">திருப்பிச் செலுத்தும் காலம்</span>
+            <span class="text-sm text-sky-100">திருப்பிச் செலுத்தும் காலத்தில்</span>
           </p>
           <p id="repaymentPrincipalNote" class="mt-2 text-sm text-sky-100">திருப்பிச் செலுத்தத் தொடங்கும் நிலுவை: ₹ 0</p>
         </div>
@@ -190,7 +190,7 @@
           <h3 id="officialLinksHeading" class="text-lg font-bold text-gray-900">அதிகாரப்பூர்வ தகவல் இணைப்புகள்</h3>
           <ul class="mt-3 space-y-2 text-sm text-sky-700">
             <li><a class="underline underline-offset-2 hover:text-sky-900" href="https://www.sbi.co.in/web/personal-banking/loans/education-loans/student-loan-scheme" target="_blank" rel="noopener noreferrer">SBI மாணவர் கல்விக் கடன் திட்டம் <span aria-hidden="true">↗</span></a></li>
-            <li><a class="underline underline-offset-2 hover:text-sky-900" href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2070532" target="_blank" rel="noopener noreferrer">PM-Vidyalaxmi திட்டம் — பத்திரிகை தகவல் பணியகம் (PIB) <span aria-hidden="true">↗</span></a></li>
+            <li><a class="underline underline-offset-2 hover:text-sky-900" href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2070532" target="_blank" rel="noopener noreferrer">PM-Vidyalaxmi திட்டம் — பத்திரிகைத் தகவல் பணியகம் (PIB) <span aria-hidden="true">↗</span></a></li>
           </ul>
           <p class="mt-3 text-xs leading-relaxed text-gray-500">தகுதி, வட்டி மானியம், கடன் வரம்பு மற்றும் தற்காலிகத் தவணை நிறுத்திவைப்புக் கால விதிகள் திட்டம் மற்றும் வங்கியைப் பொறுத்து மாறுபடும். சமீபத்திய விதிகளையும் உங்கள் தகுதியையும் அதிகாரப்பூர்வ தளங்களில் சரிபார்க்கவும்.</p>
         </section>
@@ -202,7 +202,7 @@
       <div class="calc-site-footer__main">
         <div>
           <a class="calc-site-footer__brand" href="../index.html">நிதிப்பேழை</a>
-          <p class="calc-site-footer__tagline">நிதி நலம் காக்க தெளிவான நிதி அறிவு.</p>
+          <p class="calc-site-footer__tagline">நிதி நலம் காக்கத் தெளிவான நிதி அறிவு.</p>
         </div>
         <nav class="calc-site-footer__links" aria-label="தள இணைப்புகள்">
           <a href="../about/">எங்களைப் பற்றி</a>
@@ -465,7 +465,7 @@
       document.getElementById("totalPaidDisplay").textContent = formatMoney(totalPaid);
       document.getElementById("repaymentPrincipalNote").textContent = `திருப்பிச் செலுத்தத் தொடங்கும் நிலுவை: ${formatMoney(repaymentPrincipal)}`;
       document.getElementById("principalDisplay").textContent = formatMoney(principal);
-      document.getElementById("scheduleNote").textContent = `${moratoriumMonths} மாத தற்காலிகத் தவணை நிறுத்திவைப்புக் காலம் + ${repaymentMonths} மாத திருப்பிச் செலுத்தல். முழு அட்டவணையும் காட்டப்பட்டுள்ளது.`;
+      document.getElementById("scheduleNote").textContent = `${moratoriumMonths} மாதத் தற்காலிகத் தவணை நிறுத்திவைப்புக் காலம் + ${repaymentMonths} மாதத் திருப்பிச் செலுத்தல். முழு அட்டவணையும் காட்டப்பட்டுள்ளது.`;
 
       const body = document.getElementById("scheduleBody");
       body.replaceChildren();
