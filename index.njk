@@ -8,7 +8,7 @@ bodyClass: home-page
   <section class="hero">
     <div class="wrap hero__inner">
       <div class="hero__copy">
-        <p class="eyebrow"><span class="eyebrow__rule"></span> நிதி நலம் காக்க தெளிவான நிதி அறிவு</p>
+        <p class="eyebrow"><span class="eyebrow__rule"></span> நிதி நலம் காக்கத் தெளிவான நிதி அறிவு</p>
         <h1>பணத்தைப் புரிந்துகொண்டு,<br><span>நம்பிக்கையுடன் திட்டமிடுங்கள்.</span></h1>
         <p class="hero__summary">சேமிப்பு, முதலீடு, ஓய்வூதியம், கடன் ஆகியவற்றை எளிய தமிழில் அறிந்துகொள்ளுங்கள்.</p>
         <a class="hero__link" href="#articles">சமீபத்திய கட்டுரைகளைப் பார்க்க <span aria-hidden="true">↓</span></a>
@@ -25,7 +25,7 @@ bodyClass: home-page
       {% else %}
       <div class="featured featured--empty">
         <span class="featured__eyebrow">உங்கள் முதல் கட்டுரை</span>
-        <span class="featured__title">ஒரு Markdown கோப்பைச் சேர்த்து தொடங்குங்கள்.</span>
+        <span class="featured__title">ஒரு Markdown கோப்பைச் சேர்த்துத் தொடங்குங்கள்.</span>
         <span class="featured__description">புதிய தலைப்புகள் தானாகவே இங்கே தோன்றும்.</span>
       </div>
       {% endif %}
@@ -50,6 +50,8 @@ bodyClass: home-page
       {% for topic in collections.topics %}
       <button class="topic-filter" type="button" data-topic="{{ topic | escape }}" aria-pressed="false">{{ topic }}</button>
       {% endfor %}
+      <button class="topic-filter topic-filter--tool" type="button" data-topic="__calculator" aria-pressed="false">கணிப்பேடுகள்</button>
+      <button class="topic-filter topic-filter--tool" type="button" data-topic="__checklist" aria-pressed="false">சரிபார்ப்புப் பட்டியல்கள்</button>
     </div>
 
     <p class="results-count" id="results-count" aria-live="polite">{{ collections.articlesByDate | length }} முடிவுகள்</p>
@@ -66,7 +68,7 @@ bodyClass: home-page
       </article>
       {% endfor %}
       {% for calculator in searchResources.calculators %}
-      <article class="article-card" data-search-result data-search-type="calculator" data-topics="" data-search="{{ calculator.searchText | escape }}" hidden>
+      <article class="article-card article-card--calculator" data-search-result data-search-type="calculator" data-topics="" data-search="{{ calculator.searchText | escape }}" hidden>
         <div class="article-card__meta">
           <span class="article-card__topic">கணிப்பேடு</span>
           <span>{{ calculator.type | escape }}</span>
@@ -77,7 +79,7 @@ bodyClass: home-page
       </article>
       {% endfor %}
       {% for checklist in searchResources.checklists %}
-      <article class="article-card" data-search-result data-search-type="checklist" data-topics="" data-search="{{ checklist.searchText | escape }}" hidden>
+      <article class="article-card article-card--checklist" data-search-result data-search-type="checklist" data-topics="" data-search="{{ checklist.searchText | escape }}" hidden>
         <div class="article-card__meta">
           <span class="article-card__topic">சரிபார்ப்புப் பட்டியல்</span>
           <span>{{ checklist.type | escape }}</span>
@@ -95,10 +97,10 @@ bodyClass: home-page
     <div class="wrap tools-band__inner">
       <div>
         <p class="eyebrow eyebrow--light">கணக்கிட்டு ஒப்பிடுங்கள்</p>
-        <h2>நிதி கருவிகள்</h2>
+        <h2>நிதிக் கருவிகள்</h2>
       </div>
-      <nav class="tools-links" aria-label="நிதி கருவிகள்">
-        <a href="{{ '/calculators/' | url }}">அனைத்து கணிப்பேடுகளும் <span aria-hidden="true">↗</span></a>
+      <nav class="tools-links" aria-label="நிதிக் கருவிகள்">
+        <a href="{{ '/calculators/' | url }}">அனைத்துக் கணிப்பேடுகளும் <span aria-hidden="true">↗</span></a>
         <a href="{{ '/checklists/' | url }}">சரிபார்ப்புப் பட்டியல்கள் <span aria-hidden="true">↗</span></a>
         <a href="{{ '/calculators/home_loan_emi_calculator.html' | url }}">வீட்டுக் கடன் EMI <span aria-hidden="true">↗</span></a>
         <a href="{{ '/calculators/mf_sip_calculator.html' | url }}">SIP முதலீடு <span aria-hidden="true">↗</span></a>

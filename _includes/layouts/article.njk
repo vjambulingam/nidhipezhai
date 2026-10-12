@@ -38,7 +38,63 @@ layout: layouts/base.njk
           <span>{{ content | readingTime }} நிமிட வாசிப்பு</span>
         </div>
       </header>
+      <nav class="article-toc" id="article-toc" aria-label="பொருளடக்கம்" hidden>
+        <p class="article-toc__title">பொருளடக்கம்</p>
+        <ol class="article-toc__list" id="article-toc-list"></ol>
+      </nav>
       <div class="article__body">{{ content | safe }}</div>
+      {% set prevArticle = null %}
+      {% set nextArticle = null %}
+      {% for item in collections.articlesByDate %}
+        {% if item.url == page.url %}
+          {% if not loop.first %}
+            {% set nextArticle = collections.articlesByDate[loop.index0 - 1] %}
+          {% endif %}
+          {% if not loop.last %}
+            {% set prevArticle = collections.articlesByDate[loop.index0 + 1] %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      {% if prevArticle or nextArticle %}
+      <nav class="article-pagination" aria-label="மற்ற கட்டுரைகள்">
+        {% if prevArticle %}
+        <a class="article-pagination__link article-pagination__link--prev" href="{{ prevArticle.url | url }}">
+          <span class="article-pagination__label">← முந்தைய கட்டுரை</span>
+          <span class="article-pagination__title">{{ prevArticle.data.title }}</span>
+        </a>
+        {% endif %}
+        {% if nextArticle %}
+        <a class="article-pagination__link article-pagination__link--next" href="{{ nextArticle.url | url }}">
+          <span class="article-pagination__label">அடுத்த கட்டுரை →</span>
+          <span class="article-pagination__title">{{ nextArticle.data.title }}</span>
+        </a>
+        {% endif %}
+      </nav>
+      {% endif %}
+      {% set relatedCount = 0 %}
+      <section class="article-related" aria-labelledby="related-articles-heading">
+        <h2 id="related-articles-heading" class="article-related__heading">தொடர்புடைய கட்டுரைகள்</h2>
+        <div class="article-related__grid">
+          {% for item in collections.articlesByDate %}
+            {% if item.url != page.url and relatedCount < 3 %}
+              {% set hasSharedTopic = false %}
+              {% for t in item.data.topics %}
+                {% if topics and (t in topics) %}
+                  {% set hasSharedTopic = true %}
+                {% endif %}
+              {% endfor %}
+              {% if hasSharedTopic %}
+                {% set relatedCount = relatedCount + 1 %}
+                <a class="article-related__card" href="{{ item.url | url }}">
+                  <span class="article-related__topic">{{ item.data.topics[0] }}</span>
+                  <span class="article-related__title">{{ item.data.title }}</span>
+                  <span class="article-related__read">கட்டுரையைப் படிக்க ↗</span>
+                </a>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </section>
       <footer class="article__end">
         <p>இந்தக் கட்டுரை கல்வி மற்றும் விழிப்புணர்வு நோக்கத்திற்காக மட்டுமே; தனிப்பட்ட நிதி ஆலோசனை அல்ல.</p>
         <a href="{{ '/' | url }}#articles">← மேலும் கட்டுரைகள்</a>

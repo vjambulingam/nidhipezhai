@@ -5,39 +5,107 @@ const emptyState = document.querySelector("#empty-state");
 const resultsCount = document.querySelector("#results-count");
 
 if (searchInput && searchResults.length) {
-  let selectedTopic = "all";
+  const params = new URLSearchParams(window.location.search);
+  let selectedTopic = params.get("topic") || "all";
+  if (params.get("q")) {
+    searchInput.value = params.get("q");
+  }
 
-  function filterArticles() {
+  function syncActiveButton() {
+    let matched = false;
+    for (const item of topicButtons) {
+      const active = item.dataset.topic === selectedTopic;
+      if (active) matched = true;
+      item.classList.toggle("is-active", active);
+      item.setAttribute("aria-pressed", String(active));
+    }
+    if (!matched && topicButtons.length) {
+      selectedTopic = "all";
+      topicButtons[0].classList.add("is-active");
+      topicButtons[0].setAttribute("aria-pressed", "true");
+    }
+  }
+
+  function updateUrlParams(query) {
+    const nextParams = new URLSearchParams(window.location.search);
+    if (query) {
+      nextParams.set("q", query);
+    } else {
+      nextParams.delete("q");
+    }
+    if (selectedTopic && selectedTopic !== "all") {
+      nextParams.set("topic", selectedTopic);
+    } else {
+      nextParams.delete("topic");
+    }
+    const qs = nextParams.toString();
+    const nextUrl = `${window.location.pathname}${qs ? `?${qs}` : ""}${window.location.hash}`;
+    window.history.replaceState(null, "", nextUrl);
+  }
+
+  function filterArticles(syncUrl = true) {
     const query = searchInput.value.trim().toLocaleLowerCase();
     let visibleCount = 0;
 
     for (const card of searchResults) {
       const searchableText = (card.dataset.search || "").toLocaleLowerCase();
       const topics = (card.dataset.topics || "").split("|");
-      const isArticle = card.dataset.searchType === "article";
+      const searchType = card.dataset.searchType;
+      const isArticle = searchType === "article";
       const matchesQuery = searchableText.includes(query);
-      const matchesTopic = !isArticle || selectedTopic === "all" || topics.includes(selectedTopic);
-      const visible = matchesQuery && matchesTopic && (isArticle || query.length > 0);
 
+      let matchesFilter = false;
+      if (selectedTopic === "__calculator") {
+        matchesFilter = searchType === "calculator";
+      } else if (selectedTopic === "__checklist") {
+        matchesFilter = searchType === "checklist";
+      } else if (selectedTopic === "all") {
+        matchesFilter = isArticle || query.length > 0;
+      } else {
+        matchesFilter = isArticle && topics.includes(selectedTopic);
+      }
+
+      const visible = matchesQuery && matchesFilter;
       card.hidden = !visible;
       if (visible) visibleCount += 1;
     }
 
     emptyState.hidden = visibleCount !== 0;
     resultsCount.textContent = `${visibleCount} முடிவுகள்`;
+    if (syncUrl) {
+      updateUrlParams(query);
+    }
   }
 
-  searchInput.addEventListener("input", filterArticles);
+  syncActiveButton();
+  filterArticles(false);
+
+  searchInput.addEventListener("input", () => filterArticles(true));
 
   for (const button of topicButtons) {
     button.addEventListener("click", () => {
       selectedTopic = button.dataset.topic;
-      for (const item of topicButtons) {
-        const active = item === button;
-        item.classList.toggle("is-active", active);
-        item.setAttribute("aria-pressed", String(active));
-      }
-      filterArticles();
+      syncActiveButton();
+      filterArticles(true);
     });
   }
+}
+
+const tocNav = document.querySelector("#article-toc");
+const tocList = document.querySelector("#article-toc-list");
+const articleHeadings = [...document.querySelectorAll(".article__body h2")];
+
+if (tocNav && tocList && articleHeadings.length >= 2) {
+  articleHeadings.forEach((heading, index) => {
+    if (!heading.id) {
+      heading.id = `section-${index + 1}`;
+    }
+    const li = document.createElement("li");
+    const link = document.createElement("a");
+    link.href = `#${heading.id}`;
+    link.textContent = heading.textContent;
+    li.appendChild(link);
+    tocList.appendChild(li);
+  });
+  tocNav.hidden = false;
 }

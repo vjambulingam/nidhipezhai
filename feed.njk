@@ -1,0 +1,32 @@
+---
+permalink: /feed.xml
+layout: false
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+{% set baseUrl = siteOrigin or "https://nidhipezhai.com" %}
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ site.language }}">
+  <title>{{ site.title }}</title>
+  <subtitle>{{ site.description }}</subtitle>
+  <link href="{{ baseUrl }}/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="{{ baseUrl }}/" rel="alternate" type="text/html"/>
+  <id>{{ baseUrl }}/</id>
+  {% if collections.articlesByDate.length %}
+  <updated>{{ collections.articlesByDate[0].date | dateIso }}T00:00:00Z</updated>
+  {% endif %}
+  <author>
+    <name>{{ site.title }}</name>
+  </author>
+  {% for post in collections.articlesByDate %}
+  {% set postUrl = baseUrl + (post.url | url) %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ postUrl }}" rel="alternate" type="text/html"/>
+    <id>{{ postUrl }}</id>
+    <updated>{{ post.date | dateIso }}T00:00:00Z</updated>
+    <summary>{{ post.data.description }}</summary>
+    <content type="html">{{ post.templateContent | escape }}</content>
+  </entry>
+  {% endfor %}
+</feed>
+

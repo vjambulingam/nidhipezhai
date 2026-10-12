@@ -1,123 +1,14 @@
-<!DOCTYPE html>
-<html lang="ta">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>மியூச்சுவல் ஃபண்ட் இடைவிடாத் தவணைப் பணமெடுப்புக் கணிப்பேடு (SWP)</title>
-  <meta name="description" content="SWP மூலம் மாதாந்திரப் பணமெடுப்பைத் திட்டமிட்டு, முதலீட்டு இருப்பின் மதிப்பிடப்பட்ட மாற்றத்தைப் பாருங்கள்.">
-  <meta name="keywords" content="SWP கணிப்பேடு, SWP calculator Tamil, systematic withdrawal plan, mutual fund withdrawal, ஓய்வூதிய வருமானம், SWP calculator in Tamil, mutual fund withdrawal calculator Tamil, monthly SWP income calculator, SWP eppadi calculate panrathu, mutual fund la monthly withdraw evvalavu panlam">
-  <meta name="robots" content="index,follow">
-  <meta name="theme-color" content="#0D7377">
-  <link rel="canonical" href="mf_swp_calculator.html">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="ta_IN">
-  <meta property="og:title" content="SWP பணமெடுப்புக் கணிப்பேடு · நிதிப்பேழை">
-  <meta property="og:description" content="SWP மூலம் மாதாந்திரப் பணமெடுப்பைத் திட்டமிட்டு, முதலீட்டு இருப்பின் மதிப்பிடப்பட்ட மாற்றத்தைப் பாருங்கள்.">
-  <meta name="twitter:card" content="summary">
-  <script data-goatcounter="https://nidhipezhai.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-  <meta name="twitter:title" content="SWP பணமெடுப்புக் கணிப்பேடு · நிதிப்பேழை">
-  <meta name="twitter:description" content="SWP மூலம் மாதாந்திரப் பணமெடுப்பைத் திட்டமிட்டு, முதலீட்டு இருப்பின் மதிப்பிடப்பட்ட மாற்றத்தைப் பாருங்கள்.">
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts: Inter & Noto Sans Tamil -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Chart.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-  <style>
-    body {
-      font-family: 'Inter', 'Noto Sans Tamil', sans-serif;
-      background-color: #f3f7f5;
-      color: #102e31;
-    }
-    
-    /* Range Slider Styling */
-    input[type=range] {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 100%;
-      height: 6px;
-      background: #e2e8f0;
-      border-radius: 9999px;
-      outline: none;
-    }
-    input[type=range]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: #0D7377;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(13, 115, 119, 0.4);
-      border: 2px solid #ffffff;
-      transition: transform 0.15s ease;
-    }
-    input[type=range]::-webkit-slider-thumb:hover {
-      transform: scale(1.15);
-      background: #095e61;
-    }
-    input[type=range]::-moz-range-thumb {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: #0D7377;
-      cursor: pointer;
-      border: 2px solid #ffffff;
-      box-shadow: 0 2px 6px rgba(13, 115, 119, 0.4);
-    }
-
-    /* Print styles */
-    @media print {
-      .no-print { display: none !important; }
-      body { background-color: #fff !important; }
-      .shadow-xs, .shadow-sm, .shadow-md, .shadow-lg { box-shadow: none !important; }
-      .print-border { border: 1px solid #e5e7eb !important; }
-    }
-  </style>
-  <link rel="stylesheet" href="../assets/css/calculator-theme.css">
-</head>
-<body class="min-h-screen flex flex-col justify-between antialiased">
-
-  <!-- Top Navigation Header -->
-  <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="calc-site-header__inner flex items-center justify-between h-16">
-        <div class="calc-site-header__identity flex items-center space-x-3">
-          <a class="calc-site-logo" href="../index.html" aria-label="நிதிப்பேழை முகப்பு"><img src="../assets/images/nidhipezhai-logo.svg" alt=""></a>
-          <div>
-            <h1 class="text-xl font-bold tracking-tight text-gray-900 leading-tight">
-              நிதிப்பேழை
-            </h1>
-            <p class="text-xs text-gray-500 font-medium hidden sm:block">நிதி நலம் காக்கத் தெளிவான நிதி அறிவு</p>
-          </div>
-        </div>
-
-        <nav class="calc-site-header__nav" aria-label="முதன்மை வழிசெலுத்தல்">
-          <a class="calc-nav-articles" href="../index.html#articles">கட்டுரைகள்</a>
-          <a class="calc-nav-directory" href="index.html">கணிப்பேடுகள்</a>
-          <a class="calc-nav-checklists" href="../checklists/">சரிபார்ப்புப் பட்டியல்கள்</a>
-        </nav>
-
-        <!-- Action / Quick Links -->
-        <div class="calc-site-header__actions flex items-center space-x-2">
-          <button id="btnPrint" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
-            அச்சிடு
-          </button>
-          <button id="btnExportCSV" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-700 rounded-lg shadow-sm transition-colors">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-            CSV ஏற்றுமதி
-          </button>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full space-y-6">
+---
+title: "மியூச்சுவல் ஃபண்ட் இடைவிடாத் தவணைப் பணமெடுப்புக் கணிப்பேடு (SWP)"
+ogTitle: "SWP பணமெடுப்புக் கணிப்பேடு · நிதிப்பேழை"
+description: "SWP மூலம் மாதாந்திரப் பணமெடுப்பைத் திட்டமிட்டு, முதலீட்டு இருப்பின் மதிப்பிடப்பட்ட மாற்றத்தைப் பாருங்கள்."
+keywords: "SWP கணிப்பேடு, SWP calculator Tamil, systematic withdrawal plan, mutual fund withdrawal, ஓய்வூதிய வருமானம், SWP calculator in Tamil, mutual fund withdrawal calculator Tamil, monthly SWP income calculator, SWP eppadi calculate panrathu, mutual fund la monthly withdraw evvalavu panlam"
+hasChart: true
+hasCsvExport: true
+footerTitle: "மியூச்சுவல் ஃபண்ட் தவணை பண மீட்டெடுப்புத் திட்ட (SWP) கணிப்பேடு"
+footerNote: "பொறுப்புத் துறப்பு: மியூச்சுவல் ஃபண்ட் முதலீடுகள் சந்தை அபாயங்களுக்கு உட்பட்டவை. வரி விதிப்பு: ஈக்விட்டி ஃபண்டுகளில் நீண்ட கால மூலதன ஆதாயத்திற்கு (LTCG) ₹1.25 லட்சத்திற்கு மேல் 12.5% வரி பொருந்தும். SWP எடுக்கும் போது மூலதனத்தில் உள்ள லாபப் பகுதிக்கு மட்டுமே வரி செலுத்த வேண்டும்."
+---
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full space-y-6">
     <div>
         <h1 class="text-xl font-bold tracking-tight text-gray-900 leading-tight">
               மியூச்சுவல் ஃபண்ட் இடைவிடாத் தவணைப் பணமெடுப்புக் கணிப்பேடு (SWP)
@@ -343,7 +234,7 @@
         <div class="flex items-center gap-4 text-xs font-semibold">
           <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-xs bg-amber-500 inline-block"></span> எடுத்த தொகை (SWP)</span>
           <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-xs bg-emerald-500 inline-block"></span> ஈட்டிய வருமானம்</span>
-          <span class="flex items-center gap-1.5"><span class="w-3 h-1.5 rounded-full bg-sky-600 inline-block"></span> மீதமுள்ள நிதி இருப்பு</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-1.5 rounded-full bg-rose-600 inline-block"></span> மீதமுள்ள நிதி இருப்பு</span>
         </div>
       </div>
       <div class="w-full h-72 sm:h-80">
@@ -386,28 +277,7 @@
 
   </main>
 
-  <!-- Footer -->
-  <footer class="calc-site-footer bg-white border-t border-gray-200 mt-10 py-6 text-center text-xs text-gray-500">
-    <div class="calc-site-footer__inner max-w-7xl mx-auto px-4">
-      <div class="calc-site-footer__main">
-        <div>
-          <a class="calc-site-footer__brand" href="../index.html">நிதிப்பேழை</a>
-          <p class="calc-site-footer__tagline">நிதி நலம் காக்கத் தெளிவான நிதி அறிவு.</p>
-        </div>
-        <nav class="calc-site-footer__links" aria-label="தள இணைப்புகள்">
-          <a href="../about/">எங்களைப் பற்றி</a>
-          <a href="../disclaimer/">பொறுப்புத் துறப்பு</a>
-          <a href="../license/">உரிமம்</a>
-        </nav>
-      </div>
-      <p class="font-medium text-gray-600">மியூச்சுவல் ஃபண்ட் தவணை பண மீட்டெடுப்புத் திட்ட (SWP) கணிப்பேடு</p>
-      <p class="mt-1 text-gray-400">பொறுப்புத் துறப்பு: மியூச்சுவல் ஃபண்ட் முதலீடுகள் சந்தை அபாயங்களுக்கு உட்பட்டவை. வரி விதிப்பு: ஈக்விட்டி ஃபண்டுகளில் நீண்ட கால மூலதன ஆதாயத்திற்கு (LTCG) ₹1.25 லட்சத்திற்கு மேல் 12.5% வரி பொருந்தும். SWP எடுக்கும் போது மூலதனத்தில் உள்ள லாபப் பகுதிக்கு மட்டுமே வரி செலுத்த வேண்டும்.</p>
-      <p class="mt-2 text-gray-500">பொறுப்புத் துறப்பு: இந்தக் கணிப்பேடு கல்வி மற்றும் விழிப்புணர்வு நோக்கத்திற்காக மட்டுமே. காட்டப்படும் கணக்கீடுகளின் துல்லியம் அல்லது முழுமைக்கு உத்தரவாதம் அளிக்கப்படாது; அவற்றின் அடிப்படையில் எடுக்கப்படும் முடிவுகள் அல்லது ஏற்படும் இழப்புகளுக்கு நாங்கள் பொறுப்பேற்க மாட்டோம். முதலீடு அல்லது கடன் முடிவெடுப்பதற்கு முன் <a href="../articles/sebi-registered-investment-advisors/">தகுதியான நிதி ஆலோசகரை அணுகவும்</a>.</p>
-      <p class="calc-site-footer__license">இந்தத் தளத்தின் உள்ளடக்கம் <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> உரிமத்தின் கீழ் பகிரப்படுகிறது.</p>
-    </div>
-  </footer>
-
-  <script>
+<script>
     /* State */
     const state = {
       initialInvestment: 5000000,
@@ -450,27 +320,6 @@
         tip: "<strong>பணவீக்க Step-Up உத்தி:</strong> செலவுகள் உயரும் போது மாதாந்திர மீட்டெடுப்பை ஆண்டுக்கு 5% அதிகரித்துக் கொண்டாலும், ஈக்விட்டி ஃபண்டுகளின் 12% கூட்டு வளர்ச்சியினால் நிதிப் பற்றாக்குறை ஏற்படாது."
       }
     };
-
-    // Format numbers with Indian commas
-    function formatINR(val, includeSymbol = true) {
-      const num = Math.round(val);
-      const str = num.toLocaleString('en-IN');
-      return includeSymbol ? `₹ ${str}` : str;
-    }
-
-    // Convert large amounts into concise words (Lakhs / Crores)
-    function formatAmountToWords(amount) {
-      if (amount >= 10000000) {
-        const cr = (amount / 10000000).toFixed(2);
-        return `₹ ${parseFloat(cr)} கோடி`;
-      } else if (amount >= 100000) {
-        const lk = (amount / 100000).toFixed(2);
-        return `₹ ${parseFloat(lk)} லட்சம்`;
-      } else if (amount >= 1000) {
-        return `₹ ${(amount / 1000).toFixed(1)} ஆயிரம்`;
-      }
-      return `₹ ${amount}`;
-    }
 
     /* Core SWP Calculation Engine */
     function calculateSWP() {
@@ -622,8 +471,8 @@
             type: 'line',
             label: 'மீதமுள்ள இருப்பு',
             data: balanceData,
-            borderColor: '#0D7377',
-            backgroundColor: '#0D7377',
+            borderColor: '#e11d48',
+            backgroundColor: '#e11d48',
             borderWidth: 2.5,
             pointRadius: schedule.length > 20 ? 1.5 : 3.5,
             yAxisID: 'y1',
@@ -1039,5 +888,3 @@
       updateUI();
     });
   </script>
-</body>
-</html>

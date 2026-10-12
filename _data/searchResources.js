@@ -9,9 +9,19 @@ function getAttribute(tag, name) {
 
 function readKeywords(filePath) {
   const html = fs.readFileSync(filePath, "utf8");
-  const metaTags = html.match(/<meta\b[^>]*>/gi) || [];
-  const keywordTag = metaTags.find((tag) => getAttribute(tag, "name")?.toLowerCase() === "keywords");
-  const content = keywordTag ? getAttribute(keywordTag, "content") || "" : "";
+  let content = "";
+  const fmMatch = html.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  if (fmMatch) {
+    const kwLine = fmMatch[1].match(/^keywords:\s*(["']?)(.*?)\1\s*$/m);
+    if (kwLine) {
+      content = kwLine[2];
+    }
+  }
+  if (!content) {
+    const metaTags = html.match(/<meta\b[^>]*>/gi) || [];
+    const keywordTag = metaTags.find((tag) => getAttribute(tag, "name")?.toLowerCase() === "keywords");
+    content = keywordTag ? getAttribute(keywordTag, "content") || "" : "";
+  }
 
   return content
     .replace(/&amp;/gi, "&")

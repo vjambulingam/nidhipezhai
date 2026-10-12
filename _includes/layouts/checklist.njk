@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+<head>
+  {% set canonicalUrl = page.url | url | absoluteUrl %}
+  {% set socialTitle = ogTitle or (title + " · " + site.title) %}
+  {% set socialDescription = ogDescription or description %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#0D7377">
+  <link rel="canonical" href="{{ canonicalUrl }}">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/nidhipezhai-logo.svg' | url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ta_IN">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ socialTitle }}">
+  <meta property="og:description" content="{{ socialDescription }}">
+  <meta property="og:url" content="{{ canonicalUrl }}">
+  <meta property="og:image" content="{{ '/assets/images/nidhipezhai-og.png' | url | absoluteUrl }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ socialTitle }}">
+  <meta name="twitter:description" content="{{ socialDescription }}">
+  <meta name="twitter:image" content="{{ '/assets/images/nidhipezhai-og.png' | url | absoluteUrl }}">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | url | absoluteUrl }}">
+  <script data-goatcounter="https://nidhipezhai.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <link rel="stylesheet" href="{{ '/assets/css/tailwind.css' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | url }}">
+  <style>
+    @media print {
+      .no-print { display: none !important; }
+      body { background-color: #fff !important; }
+      .shadow-xs, .shadow-sm, .shadow-md, .shadow-lg { box-shadow: none !important; }
+      .print-border { border: 1px solid #e2e8f0 !important; }
+    }
+  </style>
+  {% if siteOrigin %}
+  {% set appSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": title,
+    "description": description,
+    "inLanguage": "ta-IN",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "url": canonicalUrl,
+    "publisher": {
+      "@type": "Organization",
+      "name": site.title,
+      "url": siteOrigin
+    }
+  } %}
+  <script type="application/ld+json">{{ appSchema | jsonify | safe }}</script>
+  {% endif %}
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased checklist-page">
+  <header class="site-header checklist-site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="{{ '/index.html' | url }}" aria-label="{{ site.title }} முகப்பு">
+        <img class="brand__mark" src="{{ '/assets/images/nidhipezhai-logo.svg' | url }}" alt="">
+        <span class="brand__text">
+          <span class="brand__name">{{ site.title }}</span>
+          <span class="brand__tagline">{{ site.tagline }}</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="முதன்மை வழிசெலுத்தல்">
+        <a class="site-nav__articles" href="{{ '/index.html#articles' | url }}">கட்டுரைகள்</a>
+        <a class="site-nav__tool" href="{{ '/calculators/' | url }}">கணிப்பேடுகள்</a>
+        <a class="site-nav__checklists" href="{{ '/checklists/' | url }}">சரிபார்ப்புப் பட்டியல்கள்</a>
+      </nav>
+      <div class="checklist-header__actions no-print">
+        <button id="btnPrint" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors border border-slate-300">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+          <span>அச்சிடு</span>
+        </button>
+        <button id="btnDownloadExcel" type="button" class="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg shadow-sm transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM6 20V4h7v5h5v11H6zm10-7.5l-2.2 3.5 2.2 3.5h-1.6l-1.4-2.4-1.4 2.4H10l2.2-3.5L10 12.5h1.6l1.4 2.3 1.4-2.3H16z"/>
+          </svg>
+          <span>Excel (.xlsx) பதிவிறக்கு</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  {{ content | safe }}
+
+  {% include "partials/site-footer.njk" %}
+</body>
+</html>
+

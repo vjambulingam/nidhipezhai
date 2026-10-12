@@ -41,10 +41,10 @@ keywords:
 
 Debit card என்பது credit card போலக் கடன் வரம்பு அல்ல. தினசரி பணம் எடுப்பு/செலுத்தல் வரம்பு, வெளிநாட்டுப் பரிவர்த்தனை வசதி, கட்டணம் மற்றும் பொறுப்புக் கட்டுப்பாடுகள் மாறுபடும். PIN, OTP, CVV ஆகியவற்றை யாருடனும் பகிர வேண்டாம்; அட்டை தொலைந்தால் உடனே வங்கியின் அதிகாரப்பூர்வ வழியில் முடக்குங்கள்.
 
-<img src="/assets/images/rupay.svg" alt="Rupay Logo" width="100" height="auto"> 
-<img src="/assets/images/discover.svg" alt="Discover Logo" width="100" height="auto"> 
-<img src="/assets/images/visa.svg" alt="Visa Logo" width="100" height="auto">
-<img src="/assets/images/mastercard.svg" alt="Mastercard Logo" width="100" height="auto"> 
+<img src="/assets/images/rupay.svg" alt="Rupay Logo" width="100" height="33" loading="lazy"> 
+<img src="/assets/images/discover.svg" alt="Discover Logo" width="100" height="19" loading="lazy"> 
+<img src="/assets/images/visa.svg" alt="Visa Logo" width="100" height="32" loading="lazy">
+<img src="/assets/images/mastercard.svg" alt="Mastercard Logo" width="100" height="62" loading="lazy"> 
 
 ## 5. இணைய வங்கிச் சேவை (Online/Net Banking)
 
@@ -52,13 +52,13 @@ Debit card என்பது credit card போலக் கடன் வரம
 
 வங்கியின் சரியான இணைய முகவரியைத் தட்டச்சு செய்து திறக்கவும்; செய்தி அல்லது மின்னஞ்சலில் வரும் சந்தேக இணைப்புகளைத் தவிர்க்கவும். கடவுச்சொல், OTP, PIN ஆகியவற்றை யாரிடமும் தெரிவிக்க வேண்டாம். பொதுக் கணினியில் உள்நுழையாமல் இருப்பதும், பணப் பரிவர்த்தனை அறிவிப்புகளை இயக்குவதும் பாதுகாப்புக்கு உதவும்.
 
-<img src="/assets/images/internet-banking.jpg" alt="Internet Banking" width="auto" height="auto"> 
+<img src="/assets/images/internet-banking.webp" alt="Internet Banking" width="564" height="140" loading="lazy"> 
 
 ## 6. கைபேசி / தொலைபேசி வங்கிச் சேவை (Mobile/Telephone Banking)
 
 **கைபேசி வங்கி** என்பது வங்கியின் அதிகாரப்பூர்வ செயலி அல்லது அனுமதிக்கப்பட்ட மொபைல் சேவை மூலம் இருப்புப் பார்ப்பது, பரிமாற்றம், பில் செலுத்தல், அட்டைக் கட்டுப்பாடு போன்ற செயல்களைச் செய்வதாகும். செயலியின் வெளியீட்டாளர் வங்கிதானா எனச் சரிபார்த்து, அதை அதிகாரப்பூர்வ ஆப் கடையிலிருந்து மட்டும் நிறுவுங்கள்.
 
-<img src="/assets/images/mobile-banking.png" alt="Mobile Banking" width="auto" height="auto"> 
+<img src="/assets/images/mobile-banking.webp" alt="Mobile Banking" width="582" height="386" loading="lazy"> 
 
 **தொலைபேசி வங்கி** என்பது வங்கியின் அதிகாரப்பூர்வ வாடிக்கையாளர் சேவை எண்ணை அழைத்து அல்லது IVR வழியாகச் சில தகவல்கள்/சேவைகளைப் பெறுவது. அழைப்பில் இருப்பவராகக் கூறிக்கொள்பவர் கேட்டாலும் OTP, PIN அல்லது முழு அட்டை விவரங்களைச் சொல்ல வேண்டாம். வங்கியின் அதிகாரப்பூர்வ இணையதளம் அல்லது அட்டையின் பின்புறத்திலுள்ள எண்ணைப் பயன்படுத்துங்கள்.
 
@@ -68,7 +68,7 @@ Debit card என்பது credit card போலக் கடன் வரம
 
 பெறுநரின் பெயர் மற்றும் தொகையைத் தெளிவாக எழுதுங்கள்; கணக்கு-பெயருக்கு மட்டும் செலுத்தும் வகையில் “A/C Payee” குறுக்குக் கோடு இடுவது தவறான பணமாற்ற அபாயத்தைக் குறைக்க உதவும். காசோலை காலாவதி, வசூல் காலம், நிறுத்த உத்தரவு, திரும்பியதற்கான கட்டணம் போன்றவை நடைமுறையிலுள்ள விதிகள் மற்றும் வங்கி நிபந்தனைகளுக்கு உட்பட்டவை.
 
-<img src="/assets/images/sbi-cheque.jpg" alt="SBI Cheque" width="700" height="auto"> 
+<img src="/assets/images/sbi-cheque.webp" alt="SBI Cheque" width="700" height="314" loading="lazy"> 
 
 ## 8. கேட்பு வரைவோலை (Demand Draft)
 
@@ -76,7 +76,7 @@ Debit card என்பது credit card போலக் கடன் வரம
 
 பெறுநரின் பெயர், தொகை, செலுத்த வேண்டிய இடம் ஆகியவற்றை விண்ணப்பிக்கும் முன் உறுதிப்படுத்துங்கள். வெளியீட்டுக் கட்டணம், ரத்து/திருப்பிச் செலுத்தும் நடைமுறை, செல்லுபடியாகும் காலம் மற்றும் கோரிக்கைக்குத் தேவையான ரசீது/ஆவணங்கள் வங்கியின் விதிகளின்படி இருக்கும். DD இருப்பது பொருள் அல்லது சேவையின் தரத்திற்கான உத்தரவாதம் அல்ல; அது பணம் செலுத்தும் வழிமுறை மட்டுமே.
 
-<img src="/assets/images/sbi-dd.jpg" alt="SBI Demand Draft" width="700" height="auto"> 
+<img src="/assets/images/sbi-dd.webp" alt="SBI Demand Draft" width="700" height="310" loading="lazy"> 
 
 ## எந்த வசதி பொருத்தம்?
 
