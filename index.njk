@@ -20,7 +20,7 @@ bodyClass: home-page
         <span class="featured__topic">{{ featured.data.topics[0] }}</span>
         <span class="featured__title">{{ featured.data.title }}</span>
         <span class="featured__description">{{ featured.data.description }}</span>
-        <span class="featured__meta">{{ featured.date | dateTamil }} <span aria-hidden="true">↗</span></span>
+        <span class="featured__meta"><span>{{ featured.date | dateTamil }} <span aria-hidden="true">·</span> {{ featured | readingTime }} நிமிட வாசிப்பு</span> <span class="featured__meta-arrow" aria-hidden="true">↗</span></span>
       </a>
       {% else %}
       <div class="featured featured--empty">
@@ -60,7 +60,11 @@ bodyClass: home-page
       <article class="article-card" data-search-result data-search-type="article" data-topics="{{ article.data.topics | join('|') | escape }}" data-search="{{ article.data.title | escape }} {{ article.data.description | escape }} {{ article.data.topics | join(' ') | escape }} {{ article.data.keywords | default([]) | join(' ') | escape }}">
         <div class="article-card__meta">
           <span class="article-card__topic">{{ article.data.topics[0] }}</span>
-          <time datetime="{{ article.date | dateIso }}">{{ article.date | dateTamil }}</time>
+          <span class="article-card__info">
+            <time datetime="{{ article.date | dateIso }}">{{ article.date | dateTamil }}</time>
+            <span aria-hidden="true">·</span>
+            <span>{{ article | readingTime }} நிமிட வாசிப்பு</span>
+          </span>
         </div>
         <h3><a href="{{ article.url | url }}">{{ article.data.title }}</a></h3>
         <p>{{ article.data.description }}</p>

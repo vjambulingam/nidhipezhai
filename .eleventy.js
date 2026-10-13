@@ -41,7 +41,11 @@ module.exports = function (eleventyConfig) {
     return siteOrigin ? new URL(value, siteOrigin).toString() : value;
   });
   eleventyConfig.addFilter("readingTime", (value) => {
-    const text = String(value || "").replace(/<[^>]*>/g, " ").trim();
+    let raw = value;
+    if (value && typeof value === "object") {
+      raw = value.templateContent || value.rawInput || value.content || "";
+    }
+    const text = String(raw || "").replace(/<[^>]*>/g, " ").trim();
     const wordCount = text ? text.split(/\s+/).length : 0;
     return Math.max(1, Math.ceil(wordCount / 200));
   });
