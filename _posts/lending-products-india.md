@@ -4,10 +4,14 @@ description: கிரெடிட் கார்டு, வீடு, வா�
 date: 2026-09-26
 topics:
   - கடன்
+  - கடன் மேலாண்மை
   - நிதித் திட்டமிடல்
+  - நிதி விழிப்புணர்வு
 keywords:
   - கடன்
+  - கடன் மேலாண்மை
   - நிதித் திட்டமிடல்
+  - நிதி விழிப்புணர்வு
   - loan types India Tamil
   - credit card debt eppadi pay panrathu
   - education loan eppadi apply panrathu

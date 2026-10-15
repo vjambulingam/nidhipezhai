@@ -5,9 +5,11 @@ date: 2026-10-05
 topics:
   - முதலீடு
   - நிதித் திட்டமிடல்
+  - சொத்து வகை
 keywords:
   - முதலீடு
   - நிதித் திட்டமிடல்
+  - சொத்து வகை
   - investment portfolio eppadi create panrathu
   - asset allocation by age Tamil
   - 20s investment plan India Tamil

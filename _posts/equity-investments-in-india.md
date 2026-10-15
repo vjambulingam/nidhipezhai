@@ -5,9 +5,11 @@ date: 2026-09-26
 topics:
   - முதலீடு
   - பங்குச்சந்தை
+  - பரஸ்பர நிதி
 keywords:
   - முதலீடு
   - பங்குச்சந்தை
+  - பரஸ்பர நிதி
   - mutual fund thodangurathu eppadi
   - mutual fund types India Tamil
   - stock market basics Tamil

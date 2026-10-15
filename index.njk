@@ -57,9 +57,8 @@ bodyClass: home-page
     <p class="results-count" id="results-count" aria-live="polite">{{ collections.articlesByDate | length }} முடிவுகள்</p>
     <div class="article-grid" id="search-results">
       {% for article in collections.articlesByDate %}
-      <article class="article-card" data-search-result data-search-type="article" data-topics="{{ article.data.topics | join('|') | escape }}" data-search="{{ article.data.title | escape }} {{ article.data.description | escape }} {{ article.data.topics | join(' ') | escape }} {{ article.data.keywords | default([]) | join(' ') | escape }}">
+      <article class="article-card" data-search-result data-search-type="article" data-topics="{{ article | articleDataTopics | escape }}" data-all-topics="{{ article | articleTopicsString('|') | escape }}" data-search="{{ article | articleSearchText | escape }}">
         <div class="article-card__meta">
-          <span class="article-card__topic">{{ article.data.topics[0] }}</span>
           <span class="article-card__info">
             <time datetime="{{ article.date | dateIso }}">{{ article.date | dateTamil }}</time>
             <span aria-hidden="true">·</span>

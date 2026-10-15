@@ -5,9 +5,11 @@ date: 2026-09-26
 topics:
   - காப்பீடு
   - நிதித் திட்டமிடல்
+  - நிதிப் பாதுகாப்பு
 keywords:
   - காப்பீடு
   - நிதித் திட்டமிடல்
+  - நிதிப் பாதுகாப்பு
   - insurance types India Tamil
   - term insurance evvalavu venum
   - health insurance eppadi choose panrathu

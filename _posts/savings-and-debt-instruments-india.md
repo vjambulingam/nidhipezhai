@@ -6,10 +6,14 @@ topics:
   - சேமிப்பு
   - முதலீடு
   - கடன் பத்திரங்கள்
+  - வைப்புத்தொகை
+  - அரசு சேமிப்பு
 keywords:
   - சேமிப்பு
   - முதலீடு
   - கடன் பத்திரங்கள்
+  - வைப்புத்தொகை
+  - அரசு சேமிப்பு
   - safe investment options India Tamil
   - FD vs RD Tamil
   - government savings schemes Tamil

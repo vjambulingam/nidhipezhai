@@ -5,9 +5,11 @@ date: 2026-09-26
 topics:
   - சேமிப்பு
   - வங்கி
+  - நிதி விழிப்புணர்வு
 keywords:
   - சேமிப்பு
   - வங்கி
+  - நிதி விழிப்புணர்வு
   - banking products India Tamil
   - savings account types Tamil
   - bank account eppadi open panrathu

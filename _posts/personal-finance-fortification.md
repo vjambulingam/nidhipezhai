@@ -5,9 +5,15 @@ date: 2026-10-01
 topics:
   - தனிநபர் நிதி
   - நிதித் திட்டமிடல்
+  - நிதிப் பாதுகாப்பு
+  - அவசர நிதி
+  - காப்பீடு
 keywords:
   - தனிநபர் நிதி
   - நிதித் திட்டமிடல்
+  - நிதிப் பாதுகாப்பு
+  - அவசர நிதி
+  - காப்பீடு
   - personal finance checklist Tamil
   - emergency fund eppadi serpadhu
   - emergency fund evvalavu venum

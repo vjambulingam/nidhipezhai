@@ -67,7 +67,21 @@ if (searchInput && searchResults.length) {
 
       const visible = matchesQuery && matchesFilter;
       card.hidden = !visible;
-      if (visible) visibleCount += 1;
+      if (visible) {
+        visibleCount += 1;
+        const topicElem = card.querySelector(".article-card__topic");
+        if (topicElem && card.dataset.allTopics) {
+          const allTopics = card.dataset.allTopics.split("|").filter(Boolean);
+          if (selectedTopic && selectedTopic !== "all" && !selectedTopic.startsWith("__")) {
+            topicElem.textContent = selectedTopic;
+          } else if (query) {
+            const matchingTopics = allTopics.filter(t => t.toLocaleLowerCase().includes(query) || query.includes(t.toLocaleLowerCase()));
+            topicElem.textContent = matchingTopics.length > 0 ? matchingTopics.join(" · ") : allTopics.join(" · ");
+          } else {
+            topicElem.textContent = allTopics.join(" · ");
+          }
+        }
+      }
     }
 
     emptyState.hidden = visibleCount !== 0;
