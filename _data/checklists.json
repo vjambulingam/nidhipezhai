@@ -4,7 +4,7 @@
     "items": [
       {
         "title": "உயில், சொத்துரிமை மற்றும் வாரிசுரிமைத் திட்டமிடல்",
-        "type": "Estate Planning",
+        "type": "Will & Succession Planning",
         "description": "உயில், நாமினி, சொத்து ஆவணங்கள் மற்றும் குடும்ப வாரிசுரிமைத் திட்டத்தை ஒழுங்குபடுத்துங்கள்.",
         "url": "/checklists/estate-planning-checklist.html"
       },
@@ -13,6 +13,12 @@
         "type": "Personal Finance Fortification",
         "description": "அவசர நிதி, காப்பீடு, கடன், முதலீடு மற்றும் ஆவணப் பாதுகாப்பை மதிப்பாய்வு செய்யுங்கள்.",
         "url": "/checklists/personal-finance-fortification-checklist.html"
+      },
+      {
+        "title": "அவசர காலக் கையேடு",
+        "type": "In Case of Emergency Kit",
+        "description": "அவசரத் தொடர்புகள், வங்கி, காப்பீடு, சொத்து, உயில் மற்றும் டிஜிட்டல் ஆவணங்களின் முழுமையான சரிபார்ப்புப் பட்டியல்.",
+        "url": "/checklists/icoe-checklist.html"
       }
     ]
   }

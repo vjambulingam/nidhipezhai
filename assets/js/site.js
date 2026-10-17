@@ -117,7 +117,7 @@ if (tocNav && tocList && articleHeadings.length >= 2) {
     const li = document.createElement("li");
     const link = document.createElement("a");
     link.href = `#${heading.id}`;
-    link.textContent = heading.textContent;
+    link.textContent = heading.textContent.replace(/^\s*\d+[\.\)\-:]\s*/, "");
     li.appendChild(link);
     tocList.appendChild(li);
   });

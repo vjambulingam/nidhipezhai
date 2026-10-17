@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="535" viewBox="0 0 1200 535" role="img" aria-labelledby="sec-title sec-desc">
+  <title id="sec-title">அவசர காலக் கையேடு (ICE KIT)  - 8 முக்கியப் பிரிவுகள்</title>
+  <desc id="sec-desc">அவசரத் தொடர்பு, அடையாள ஆவணங்கள், மருத்துவக் காப்பீடு, வங்கிக் கணக்குகள், முதலீடுகள், சொத்துகள், டிஜிட்டல் சொத்துகள் மற்றும் உயில் ஆகிய 8 முக்கியப் பிரிவுகள்.</desc>
+
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D7377"/>
+      <stop offset="100%" stop-color="#102e31"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c59b27"/>
+      <stop offset="100%" stop-color="#e5c58e"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0d2b26" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="535" rx="18" fill="#f4f7f6" stroke="#d5e2dc" stroke-width="2"/>
+
+  <!-- Header Banner -->
+  <rect x="24" y="24" width="1152" height="76" rx="14" fill="url(#headerGrad)"/>
+  <rect x="24" y="24" width="1152" height="5" rx="2.5" fill="url(#goldGrad)"/>
+
+  <!-- Header Icon Badge -->
+  <g transform="translate(46, 38)">
+    <rect width="48" height="48" rx="10" fill="#ffffff" fill-opacity="0.12" stroke="#e5c58e" stroke-width="1.5"/>
+    <path d="M24 10 L36 16 V26 C36 34 31 40 24 42 C17 40 12 34 12 26 V16 Z" fill="none" stroke="#e5c58e" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M19 25 L23 29 L30 21" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Header Title -->
+  <text x="110" y="70" fill="#ffffff" font-family="'Noto Sans Tamil', 'DM Sans', sans-serif" font-size="25" font-weight="700">அவசர காலக் கையேடு (ICE KIT)  - 8 முக்கியப் பிரிவுகள்</text>
+
+  <!-- ================= ROW 1 (Cards 1 to 4) ================= -->
+
+  <!-- Card 1: 1. அவசரத் தொடர்பு அடைவு -->
+  <g transform="translate(40, 125)" filter="url(#cardShadow)">
+    <rect width="265" height="175" rx="14" fill="#ffffff" stroke="#dbe7e1" stroke-width="1.5"/>
+    <rect width="265" height="5" rx="2.5" fill="#0D7377"/>
+    <!-- Icon Container -->
+    <circle cx="48" cy="50" r="24" fill="#e8f5f1"/>
+    <!-- Phone Vector Icon -->
+    <path d="M40 40 C40 38 42 36 44 36 L47 36 C48.5 36 49.5 37 50 38.5 L51 41.5 C51.5 42.5 51 43.5 50.5 44 L49 45.5 C50 47.5 51.5 49 53.5 50 L55 48.5 C55.5 48 56.5 47.5 57.5 48 L60.5 49 C62 49.5 63 50.5 63 52 L63 55 C63 57 61 59 59 59 C48 59 39 50 39 39 C39 37 40 40 40 40 Z" fill="#0D7377"/>
+    <!-- Number Badge -->
+    <rect x="200" y="36" width="45" height="26" rx="13" fill="#e8f5f1"/>
+    <text x="222" y="54" fill="#0D7377" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" text-anchor="middle">01</text>
+    <!-- Card Title -->
+    <text x="24" y="115" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="18" font-weight="700">1. அவசரத் தொடர்பு</text>
+    <text x="47" y="145" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="18" font-weight="700">அடைவு</text>
+  </g>
+
+  <!-- Card 2: 2. தனிநபர் அடையாள ஆவணங்கள் -->
+  <g transform="translate(325, 125)" filter="url(#cardShadow)">
+    <rect width="265" height="175" rx="14" fill="#ffffff" stroke="#dbe7e1" stroke-width="1.5"/>
+    <rect width="265" height="5" rx="2.5" fill="#10b981"/>
+    <!-- Icon Container -->
+    <circle cx="48" cy="50" r="24" fill="#eafaf3"/>
+    <!-- ID Card Vector Icon -->
+    <rect x="36" y="38" width="24" height="18" rx="3" fill="none" stroke="#10b981" stroke-width="2.2"/>
+    <circle cx="43" cy="47" r="2.5" fill="#10b981"/>
+    <line x1="49" y1="44" x2="56" y2="44" stroke="#10b981" stroke-width="2" stroke-linecap="round"/>
+    <line x1="49" y1="49" x2="54" y2="49" stroke="#10b981" stroke-width="2" stroke-linecap="round"/>
+    <!-- Number Badge -->
+    <rect x="200" y="36" width="45" height="26" rx="13" fill="#eafaf3"/>
+    <text x="222" y="54" fill="#10b981" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" text-anchor="middle">02</text>
+    <!-- Card Title -->
+    <text x="24" y="115" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="18" font-weight="700">2. தனிநபர் அடையாள</text>
+    <text x="47" y="145" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="18" font-weight="700">ஆவணங்கள்</text>
+  </g>
+
+  <!-- Card 3: 3. மருத்துவக் காப்பீடு & குறிப்புகள் -->
+  <g transform="translate(610, 125)" filter="url(#cardShadow)">
+    <rect width="265" height="175" rx="14" fill="#ffffff" stroke="#dbe7e1" stroke-width="1.5"/>
+    <rect width="265" height="5" rx="2.5" fill="#0D7377"/>
+    <!-- Icon Container -->
+    <circle cx="48" cy="50" r="24" fill="#e8f5f1"/>
+    <!-- Medical Cross Vector Icon -->
+    <path d="M48 38 V56 M39 47 H57" fill="none" stroke="#0D7377" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="48" cy="47" r="14" fill="none" stroke="#0D7377" stroke-width="1.8" stroke-dasharray="3,2"/>
+    <!-- Number Badge -->
+    <rect x="200" y="36" width="45" height="26" rx="13" fill="#e8f5f1"/>
+    <text x="222" y="54" fill="#0D7377" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" text-anchor="middle">03</text>
+    <!-- Card Title -->
+    <text x="24" y="115" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="18" font-weight="700">3. மருத்துவக் காப்பீடு</text>
+    <text x="47" y="145" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="18" font-weight="700">&amp; குறிப்புகள்</text>
+  </g>
+
+  <!-- Card 4: 4. வங்கிக் கணக்குகள் & கடன்கள் -->
+  <g transform="translate(895, 125)" filter="url(#cardShadow)">
+    <rect width="265" height="175" rx="14" fill="#ffffff" stroke="#dbe7e1" stroke-width="1.5"/>
+    <rect width="265" height="5" rx="2.5" fill="#c59b27"/>
+    <!-- Icon Container -->
+    <circle cx="48" cy="50" r="24" fill="#fdf8ed"/>
+    <!-- Bank Vector Icon -->
+    <path d="M48 37 L36 43 V45 H60 V43 Z" fill="#c59b27"/>
+    <line x1="39" y1="46" x2="39" y2="53" stroke="#c59b27" stroke-width="2"/>
+    <line x1="45" y1="46" x2="45" y2="53" stroke="#c59b27" stroke-width="2"/>
+    <line x1="51" y1="46" x2="51" y2="53" stroke="#c59b27" stroke-width="2"/>
+    <line x1="57" y1="46" x2="57" y2="53" stroke="#c59b27" stroke-width="2"/>
+    <rect x="35" y="53" width="26" height="3" fill="#c59b27"/>
+    <!-- Number Badge -->
+    <rect x="200" y="36" width="45" height="26" rx="13" fill="#fdf8ed"/>
+    <text x="222" y="54" fill="#c59b27" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" text-anchor="middle">04</text>
+    <!-- Card Title -->
+    <text x="24" y="115" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="18" font-weight="700">4. வங்கிக் கணக்குகள்</text>
+    <text x="47" y="145" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="18" font-weight="700">&amp; கடன்கள்</text>
+  </g>
+
+  <!-- ================= ROW 2 (Cards 5 to 8) ================= -->
+
+  <!-- Card 5: 5. முதலீடுகள் & ஓய்வூதியம் -->
+  <g transform="translate(40, 325)" filter="url(#cardShadow)">
+    <rect width="265" height="175" rx="14" fill="#ffffff" stroke="#dbe7e1" stroke-width="1.5"/>
+    <rect width="265" height="5" rx="2.5" fill="#10b981"/>
+    <!-- Icon Container -->
+    <circle cx="48" cy="50" r="24" fill="#eafaf3"/>
+    <!-- Investment Growth Vector Icon -->
+    <path d="M38 54 L44 47 L49 50 L58 40" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M53 40 H58 V45" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="38" cy="54" r="2" fill="#10b981"/>
+    <circle cx="44" cy="47" r="2" fill="#10b981"/>
+    <circle cx="49" cy="50" r="2" fill="#10b981"/>
+    <circle cx="58" cy="40" r="2" fill="#10b981"/>
+    <!-- Number Badge -->
+    <rect x="200" y="36" width="45" height="26" rx="13" fill="#eafaf3"/>
+    <text x="222" y="54" fill="#10b981" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" text-anchor="middle">05</text>
+    <!-- Card Title -->
+    <text x="24" y="115" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="18" font-weight="700">5. முதலீடுகள் &amp;</text>
+    <text x="47" y="145" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="18" font-weight="700">ஓய்வூதியம்</text>
+  </g>
+
+  <!-- Card 6: 6. சொத்துகள் & லாக்கர் விவரம் -->
+  <g transform="translate(325, 325)" filter="url(#cardShadow)">
+    <rect width="265" height="175" rx="14" fill="#ffffff" stroke="#dbe7e1" stroke-width="1.5"/>
+    <rect width="265" height="5" rx="2.5" fill="#0D7377"/>
+    <!-- Icon Container -->
+    <circle cx="48" cy="50" r="24" fill="#e8f5f1"/>
+    <!-- Property / Key Vector Icon -->
+    <path d="M48 38 L37 46 V56 H59 V46 Z" fill="none" stroke="#0D7377" stroke-width="2.2" stroke-linejoin="round"/>
+    <circle cx="48" cy="48" r="2" fill="#0D7377"/>
+    <path d="M48 50 V53" stroke="#0D7377" stroke-width="2" stroke-linecap="round"/>
+    <!-- Number Badge -->
+    <rect x="200" y="36" width="45" height="26" rx="13" fill="#e8f5f1"/>
+    <text x="222" y="54" fill="#0D7377" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" text-anchor="middle">06</text>
+    <!-- Card Title -->
+    <text x="24" y="115" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="18" font-weight="700">6. சொத்துகள் &amp;</text>
+    <text x="47" y="145" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="18" font-weight="700">லாக்கர் விவரம்</text>
+  </g>
+
+  <!-- Card 7: 7. டிஜிட்டல் சொத்துகள் & அணுகல் -->
+  <g transform="translate(610, 325)" filter="url(#cardShadow)">
+    <rect width="265" height="175" rx="14" fill="#ffffff" stroke="#dbe7e1" stroke-width="1.5"/>
+    <rect width="265" height="5" rx="2.5" fill="#c59b27"/>
+    <!-- Icon Container -->
+    <circle cx="48" cy="50" r="24" fill="#fdf8ed"/>
+    <!-- Digital Device / Lock Vector Icon -->
+    <rect x="36" y="38" width="24" height="16" rx="2" fill="none" stroke="#c59b27" stroke-width="2"/>
+    <line x1="33" y1="56" x2="63" y2="56" stroke="#c59b27" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="48" cy="45" r="2" fill="#c59b27"/>
+    <path d="M48 47 V49" stroke="#c59b27" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Number Badge -->
+    <rect x="200" y="36" width="45" height="26" rx="13" fill="#fdf8ed"/>
+    <text x="222" y="54" fill="#c59b27" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" text-anchor="middle">07</text>
+    <!-- Card Title -->
+    <text x="24" y="115" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="18" font-weight="700">7. டிஜிட்டல் சொத்துகள்</text>
+    <text x="47" y="145" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="18" font-weight="700">&amp; அணுகல்</text>
+  </g>
+
+  <!-- Card 8: 8. உயில் & விருப்பக் கடிதம் -->
+  <g transform="translate(895, 325)" filter="url(#cardShadow)">
+    <rect width="265" height="175" rx="14" fill="#ffffff" stroke="#dbe7e1" stroke-width="1.5"/>
+    <rect width="265" height="5" rx="2.5" fill="#10b981"/>
+    <!-- Icon Container -->
+    <circle cx="48" cy="50" r="24" fill="#eafaf3"/>
+    <!-- Will / Legal Document Vector Icon -->
+    <path d="M38 37 H54 C56 37 58 39 58 41 V56 C58 57.5 56.5 59 55 59 H39 C37.5 59 36 57.5 36 56 V39 C36 37.5 37 37 38 37 Z" fill="none" stroke="#10b981" stroke-width="2"/>
+    <line x1="41" y1="44" x2="51" y2="44" stroke="#10b981" stroke-width="2" stroke-linecap="round"/>
+    <line x1="41" y1="49" x2="53" y2="49" stroke="#10b981" stroke-width="2" stroke-linecap="round"/>
+    <line x1="41" y1="54" x2="48" y2="54" stroke="#10b981" stroke-width="2" stroke-linecap="round"/>
+    <!-- Number Badge -->
+    <rect x="200" y="36" width="45" height="26" rx="13" fill="#eafaf3"/>
+    <text x="222" y="54" fill="#10b981" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" text-anchor="middle">08</text>
+    <!-- Card Title -->
+    <text x="24" y="115" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="18" font-weight="700">8. உயில் &amp;</text>
+    <text x="47" y="145" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="18" font-weight="700">விருப்பக் கடிதம்</text>
+  </g>
+
+</svg>
