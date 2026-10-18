@@ -34,9 +34,24 @@ keywords:
 
 <img src="/assets/images/real-estate-encumbrance-risks-banner.jpg" alt="இந்தியாவில் ரியல் எஸ்டேட் முதலீட்டின் மறைமுக சட்ட அபாயங்கள் மற்றும் வில்லங்கங்கள் (Hidden Risks of Real Estate Investments in India)" width="1376" height="768" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 20px; margin: 24px 0;">
+  <div style="font-weight: 700; color: #0D7377; font-size: 15px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+    <span>⚡ விரைவு வழிசெலுத்தல் (Quick Jump):</span>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+    <a href="#equity-vs-real-estate" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">1. பங்குச்சந்தை vs ரியல் எஸ்டேட்</a>
+    <a href="#legal-principles" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">2. 5 சட்டக் கோட்பாடுகள்</a>
+    <a href="#real-cases-15" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">3. 15 நிஜ சம்பவங்கள் & அட்டவணை</a>
+    <a href="#bank-legal-myth" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">4. வங்கி வழக்கறிஞர் மாயை</a>
+    <a href="#chennai-builder-issues" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">5. சென்னை பில்டர் வில்லங்கங்கள்</a>
+    <a href="#due-diligence-safety" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">6. பாதுகாப்பு உத்திகள்</a>
+    <a href="#faqs" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">7. அடிக்கடி கேட்கப்படும் கேள்விகள்</a>
+  </div>
+</div>
+
 ---
 
-## பங்குச்சந்தை (Equity) vs ரியல் எஸ்டேட்: அடையாளமற்ற பரிவர்த்தனை vs தலைமுறைச் சுமைகள்
+<h2 id="equity-vs-real-estate">பங்குச்சந்தை (Equity) vs ரியல் எஸ்டேட்: அடையாளமற்ற பரிவர்த்தனை vs தலைமுறைச் சுமைகள்</h2>
 
 பங்குச்சந்தைக்கும் அசையாச் சொத்துகளுக்கும் இடையே உள்ள மிகப்பெரிய சட்ட மற்றும் செயல்பாட்டு வேறுபாட்டை முதலில் நாம் ஆழமாகப் புரிந்து கொள்ள வேண்டும்.
 
@@ -62,7 +77,7 @@ keywords:
 
 ---
 
-## நிலம் மற்றும் சொத்துரிமை குறித்த 5 மிக முக்கியமான சட்டக் கோட்பாடுகள்
+<h2 id="legal-principles">நிலம் மற்றும் சொத்துரிமை குறித்த 5 மிக முக்கியமான சட்டக் கோட்பாடுகள்</h2>
 
 ரியல் எஸ்டேட் விவகாரங்களில் இந்திய நீதிமன்றங்கள் பின்பற்றும் அடிப்படைச் சட்ட விதிகளை ஒவ்வொரு முதலீட்டாளரும் அவசியம் தெரிந்து கொள்ள வேண்டும்:
 
@@ -146,7 +161,7 @@ keywords:
 
 ---
 
-## ரியல் எஸ்டேட்டின் மறைமுக வில்லங்கங்களை விளக்கும் 15 நிஜ வாழ்க்கைச் சம்பவங்கள்
+<h2 id="real-cases-15">ரியல் எஸ்டேட்டின் மறைமுக வில்லங்கங்களை விளக்கும் 15 நிஜ வாழ்க்கைச் சம்பவங்கள்</h2>
 
 கீழே விவரிக்கப்பட்டுள்ள சம்பவங்கள் கற்பனையானவை அல்ல; இந்திய நீதிமன்றங்களில் உண்மையாகவே நடைபெற்ற, பெரும் சட்டப் போராட்டங்களுக்கு உள்ளான நிஜ வழக்குகளின் அடிப்படையிலானவை. நிலைமையின் தீவிரத்தைப் புரிந்துகொள்ள பெயர்களும் இடங்களும் மாற்றியமைக்கப்பட்டு எளிய தமிழில் தொகுக்கப்பட்டுள்ளன:
 
@@ -390,7 +405,7 @@ keywords:
 
 ---
 
-## "வங்கி வழக்கறிஞர் சரிபார்த்துவிட்டாரே, அப்புறம் என்ன பயம்?" – மிகப்பெரிய மாயை!
+<h2 id="bank-legal-myth">"வங்கி வழக்கறிஞர் சரிபார்த்துவிட்டாரே, அப்புறம் என்ன பயம்?" – மிகப்பெரிய மாயை!</h2>
 
 பல நடுத்தரக் குடும்பங்கள் செய்யும் மிகப்பெரிய வரலாற்றுத் தவறு இதுதான்:  
 *"நாங்கள் பாரத ஸ்டேட் வங்கி (SBI) அல்லது HDFC வங்கியில்தான் வீட்டுக் கடன் வாங்கினோம்; வங்கியின் சட்டக் குழு 30 ஆண்டு ஆவணங்களை அலசி ஆராய்ந்துதானே கடன் கொடுத்தது? அதனால் சொத்தில் எந்தப் பிரச்சனையும் இருக்காது!"*
@@ -406,7 +421,7 @@ keywords:
 
 ---
 
-## அடுக்குமாடிக் குடியிருப்பு (Flats) வாங்குவோர் சந்திக்கும் சென்னை/தமிழக பிரத்யேக பில்டர் வில்லங்கங்கள்
+<h2 id="chennai-builder-issues">அடுக்குமாடிக் குடியிருப்பு (Flats) வாங்குவோர் சந்திக்கும் சென்னை/தமிழக பிரத்யேக பில்டர் வில்லங்கங்கள்</h2>
 
 தனி மனைகள் (Plots) மற்றும் பூர்வீக நிலங்களில் குடும்ப வாரிசுரிமைச் சச்சரவுகள் முதன்மையான வில்லங்கங்களாக இருக்கும்போது, சென்னை மற்றும் தமிழகத்தின் பெருநகரங்களில் அடுக்குமாடிக் குடியிருப்பு (Flats / Apartments) வாங்குவோர் சந்திக்கும் வில்லங்கங்கள் முற்றிலும் மாறுபட்ட, மிகச் சாதுரியமான வணிக மற்றும் நிர்வாகச் சட்டச் சிக்கல்களாகும்.
 
@@ -511,7 +526,7 @@ keywords:
 
 ---
 
-## ரியல் எஸ்டேட் முதலீட்டாளர்கள் என்ன செய்ய வேண்டும்? (முக்கியப் பாதுகாப்பு உத்திகள்)
+<h2 id="due-diligence-safety">ரியல் எஸ்டேட் முதலீட்டாளர்கள் என்ன செய்ய வேண்டும்? (முக்கியப் பாதுகாப்பு உத்திகள்)</h2>
 
 ரியல் எஸ்டேட்டில் உள்ள இந்த மறைமுக வில்லங்கங்களிலிருந்து தப்பிக்க முதலீட்டாளர்கள் பின்பற்ற வேண்டிய நடைமுறை வழிகாட்டுதல்கள்:
 
@@ -593,7 +608,7 @@ keywords:
 > Equity investments are subject to market risks. Real-estate investments are subject to many hidden risks.
 ---
 
-## அடிக்கடி கேட்கப்படும் கேள்விகள் (FAQs)
+<h2 id="faqs">அடிக்கடி கேட்கப்படும் கேள்விகள் (FAQs)</h2>
 
 ### 1. வில்லங்கச் சான்றிதழில் (EC) எதுவும் இல்லை என்றால் சொத்து 100% சுத்தமானது என்று அர்த்தமா?
 **பதில்:** இல்லை! வில்லங்கச் சான்றிதழ் (Encumbrance Certificate) என்பது அந்த குறிப்பிட்ட சார்பதிவாளர் அலுவலகத்தில் பதிவு செய்யப்பட்ட அடமானங்கள் மற்றும் கிரயப் பத்திரங்களை மட்டுமே காட்டும். பதிவு செய்யப்படாத பாகப்பிரிவினைகள், நீதிமன்றத்தில் நிலுவையில் உள்ள வழக்குகள், வாய்மொழி உடன்படிக்கைகள், நில உச்சவரம்பு மீறல்கள், மற்றும் வேறு ஊரில் பதியப்பட்ட உயில்கள் ஒருபோதும் வில்லங்கச் சான்றிதழில் காட்டாது.

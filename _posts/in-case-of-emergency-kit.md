@@ -43,7 +43,22 @@ keywords:
 
 <img src="/assets/images/in-case-of-emergency-kit-banner.jpg" alt="குடும்ப அவசரகால நிதி ஆவணக் கோப்பு (ICE Kit / Financial Dossier) - அவசர காலக் கையேடு மற்றும் குடும்ப நிதிப் பாதுகாப்பு பெட்டகம்" width="1376" height="768" style="display:block;max-width:100%;height:auto;border-radius:12px">
 
-## 1. அவசர காலக் கையேடு (ICE Kit) என்றால் என்ன?
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 20px; margin: 24px 0;">
+  <div style="font-weight: 700; color: #0D7377; font-size: 15px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+    <span>⚡ விரைவு வழிசெலுத்தல் (Quick Jump):</span>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+    <a href="#what-is-ice-kit" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">1. ICE Kit அறிமுகம்</a>
+    <a href="#two-tier-approach" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">2. இரு அடுக்கு அணுகுமுறை</a>
+    <a href="#ice-kit-sections" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">3. 8 முக்கியப் பிரிவுகள்</a>
+    <a href="#will-and-wishes" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">4. உயில் & விருப்பக் கடிதம்</a>
+    <a href="#action-plan" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">5. 5-படி செயல் திட்டம்</a>
+    <a href="#checklist" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">6. சரிபார்ப்புப் பட்டியல்</a>
+    <a href="#faqs" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">7. அடிக்கடி கேட்கப்படும் கேள்விகள்</a>
+  </div>
+</div>
+
+<h2 id="what-is-ice-kit">1. அவசர காலக் கையேடு (ICE Kit) என்றால் என்ன?</h2>
 
 **ICE Kit (In Case of Emergency Kit)** அல்லது **Financial Dossier** என்பது ஒரு குடும்பத்தின் அனைத்து நிதிச் சொத்துகள், கடன்கள், காப்பீட்டுப் பாலிசிகள், அரசு அடையாள அட்டைகள், சட்டப்பூர்வ ஆவணங்கள் மற்றும் முக்கியத் தொடர்பு எண்களை ஒரே இடத்தில் ஒழுங்குபடுத்திப் பாதுகாப்பாக வைக்கப்படும் ஒரு முதன்மைத் தகவல் பெட்டகமாகும் (Master Financial Repository).
 
@@ -57,7 +72,7 @@ keywords:
 
 ---
 
-## 2. ICE Kit தொகுப்பின் இரு அடுக்கு அணுகுமுறை (Physical & Digital)
+<h2 id="two-tier-approach">2. ICE Kit தொகுப்பின் இரு அடுக்கு அணுகுமுறை (Physical & Digital)</h2>
 
 ஒரு சிறந்த நிதி ஆவணக் கோப்பு இரண்டு வடிவங்களிலும் தயாராக இருக்க வேண்டும்:
 
@@ -76,7 +91,7 @@ keywords:
 
 ---
 
-## 3. அவசர காலக் கையேட்டில் இடம்பெற வேண்டிய 8 முக்கியப் பிரிவுகள்
+<h2 id="ice-kit-sections">3. அவசர காலக் கையேட்டில் இடம்பெற வேண்டிய 8 முக்கியப் பிரிவுகள்</h2>
 
 ஒரு முழுமையான அவசரகால நிதி ஆவணத் தொகுப்பில் கீழ்க்கண்ட எட்டுப் பிரிவுகள் வரிசைக்கிரமமாகத் தொகுக்கப்பட வேண்டும்:
 
@@ -84,7 +99,12 @@ keywords:
 
 ---
 
-### பிரிவு 1: முதன்மை அவசரத் தொடர்பு அடைவு (Master Emergency Contacts)
+<details open style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>பிரிவு 1: முதன்மை அவசரத் தொடர்பு அடைவு (Master Emergency Contacts)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #ccfbf1; color: #0f766e; font-weight: 600; white-space: nowrap;">அவசர எண்கள் & ஆலோசகர்கள்</span>
+</summary>
+<div style="padding: 16px 20px;">
 
 நெருக்கடியான நேரத்தில் யாரைத் தொடர்புகொள்வது என்று குடும்பத்தினர் பதற்றமடையக் கூடாது. எனவே, முதல் பக்கத்தில் இந்தத் தொடர்புப் பட்டியல் இருக்க வேண்டும்:
 
@@ -101,9 +121,15 @@ keywords:
 
 கூடுதலாக, குடும்பத்தின் ஒவ்வொரு உறுப்பினரின் **இரத்த வகை (Blood Group)**, தொடர் மருந்து உட்கொள்ளல் (Critical Medications) மற்றும் ஒவ்வாமைகள் (Allergies) தெளிவாகக் குறிப்பிடப்பட்டிருக்க வேண்டும்.
 
----
+</div>
+</details>
 
-### பிரிவு 2: தனிநபர் அடையாள மற்றும் குடியுரிமை ஆவணங்கள்
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>பிரிவு 2: தனிநபர் அடையாள மற்றும் குடியுரிமை ஆவணங்கள் (Identity & Civil Documents)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #dbeafe; color: #1e40af; font-weight: 600; white-space: nowrap;">ஆதார், பான், பாஸ்போர்ட்</span>
+</summary>
+<div style="padding: 16px 20px;">
 
 அனைத்து அரசுப் பணிகளுக்கும், நாமினி உரிமைகளுக்கும், வங்கிப் பரிவர்த்தனைகளுக்கும் இந்த ஆவணங்கள் அடிப்படை:
 
@@ -115,11 +141,17 @@ keywords:
 * **திருமணப் பதிவுச் சான்றிதழ் (Marriage Certificate):** இறப்புக்குப் பிந்தைய காப்பீடு மற்றும் வாரிசுரிமை மாற்றங்களுக்கு மிக மிக முக்கியமான ஆவணம்.
 * **அசல் ஆவணங்களின் இருப்பிடம்:** அசல் சான்றிதழ்கள் பீரோவில் எந்த அடுக்கில் அல்லது எந்த வங்கி லாக்கரில் உள்ளன என்ற துல்லியமான குறிப்பு.
 
----
+</div>
+</details>
 
-### பிரிவு 3: மருத்துவக் காப்பீடு மற்றும் அவசர சிகிச்சை நெறிமுறைகள்
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>பிரிவு 3: மருத்துவக் காப்பீடு மற்றும் அவசர சிகிச்சை நெறிமுறைகள் (Health Insurance & TPA)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #fee2e2; color: #991b1b; font-weight: 600; white-space: nowrap;">TPA கார்டு & கேஷ்லெஸ்</span>
+</summary>
+<div style="padding: 16px 20px;">
 
-மருத்துவ அவசரநிலை ஏற்படும் போது ஒரு நிமிடத் தாமதம் கூடப் பெரும் பாதிப்பை ஏற்படுத்தும்.
+மருத்துவ அவசரநிலை ஏற்படும் போது ஒரு நிமிடத் தாமதம் கூடப் பெரும் பாதிப்பை ஏற்படுத்தும்:
 
 1. **பாலிசி அட்டவணை (Policy Schedule):** நிறுவனக் குழுக் காப்பீடு (Corporate Group Medical Cover) மற்றும் தனிநபர்/குடும்பக் காப்பீடு (Retail Health Insurance) இரண்டின் பாலிசி நகல்கள்.
 2. **TPA அடையாள அட்டைகள் (TPA E-Cards):** குடும்ப உறுப்பினர்கள் ஒவ்வொருவருக்குமான அட்டை நகல்கள்.
@@ -127,9 +159,15 @@ keywords:
 4. **முன்-அனுமதி நடைமுறை (Pre-Authorization Process):** மருத்துவமனையில் அனுமதிக்கப்பட்ட 24 மணி நேரத்திற்குள் காப்பீட்டு நிறுவனத்திற்குத் தகவல் தெரிவிக்கும் நடைமுறைக் குறிப்பு.
 5. **சூப்பர் டாப்-அப் பாலிசி விவரங்கள்:** அடிப்படை பாலிசிக்கு மேல் எடுக்கப்பட்டுள்ள கூடுதல் பாதுகாப்புக் கொள்கை எண்கள்.
 
----
+</div>
+</details>
 
-### பிரிவு 4: ஆயுள் காப்பீடு மற்றும் காலவரையறைக் காப்பீடு (Term Insurance)
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>பிரிவு 4: ஆயுள் காப்பீடு மற்றும் காலவரையறைக் காப்பீடு (Term Insurance)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #d1fae5; color: #065f46; font-weight: 600; white-space: nowrap;">டேர்ம் பிளான் & கிளைம் வழிகாட்டல்</span>
+</summary>
+<div style="padding: 16px 20px;">
 
 குடும்பத்தின் வருவாய் ஈட்டுபவர் இறக்க நேரிட்டால் குடும்பம் வறுமையில் விழாமல் தடுக்கும் ஒரே அரண் ஆயுள் காப்பீடு ஆகும்:
 
@@ -146,9 +184,15 @@ keywords:
   4. நாமினியின் பான் அட்டை, ஆதார் அட்டை மற்றும் ரத்து செய்யப்பட்ட காசோலை (Cancelled Cheque).
 * **MWP சட்டக் குறிப்பு (Married Women's Property Act 1874):** பாலிசி MWP சட்டத்தின் கீழ் எடுக்கப்பட்டிருந்தால், அத்தொகை கடன் கொடுத்தவர்களால் பறிமுதல் செய்யப்பட முடியாது; மனைவி மற்றும் குழந்தைகளுக்கு மட்டுமே போய்ச் சேரும் என்ற சட்டக் குறிப்பு.
 
----
+</div>
+</details>
 
-### பிரிவு 5: வங்கிக் கணக்குகள், வைப்பு நிதிகள் மற்றும் கடன்கள்
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>பிரிவு 5: வங்கிக் கணக்குகள், வைப்பு நிதிகள் மற்றும் கடன்கள் (Banking, FDs & Loans)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #fef3c7; color: #92400e; font-weight: 600; white-space: nowrap;">சேமிப்பு, எஃப்டி & கடன்கள்</span>
+</summary>
+<div style="padding: 16px 20px;">
 
 வங்கிகளில் கோரப்படாத பணம் உருவாவதைத் தடுக்க இப்பிரிவு மிகத் துல்லியமாக இருக்க வேண்டும்:
 
@@ -169,9 +213,15 @@ keywords:
 * கடன் கணக்கு எண், கடன் வழங்கிய வங்கி/நிறுவனம், மாதாந்திரத் தவணைத் தொகை (EMI) மற்றும் நிலுவைத் தொகை.
 * **கடன் காப்பீடு உள்ளதா? (Loan Protection Insurance / Mortgage Term Insurance):** கடன் வாங்கியவர் இறந்தால் கடனை அடைக்கக் காப்பீடு உள்ளதா என்ற மிக முக்கியமான குறிப்பு.
 
----
+</div>
+</details>
 
-### பிரிவு 6: முதலீடுகள், ஓய்வூதிய நிதி மற்றும் தங்கம்
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>பிரிவு 6: முதலீடுகள், ஓய்வூதிய நிதி மற்றும் தங்கம் (Investments, Pension & Gold)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #ede9fe; color: #5b21b6; font-weight: 600; white-space: nowrap;">மியூச்சுவல் ஃபண்ட், EPF, தங்கம், லாக்கர்</span>
+</summary>
+<div style="padding: 16px 20px;">
 
 நீண்டகால நிதி இலக்குகளுக்காக நாம் பல தளங்களில் முதலீடு செய்திருப்போம். அவற்றை ஒருங்கிணைக்கும் வழிகள்:
 
@@ -183,7 +233,7 @@ keywords:
    - டெபாசிட்டரி விவரம் (CDSL / NSDL).
    - புரோக்கர் பெயர் (Zerodha, Zerodha Kite, Upstox, Groww, ICICI Direct).
    - DP ID மற்றும் Client ID / BO ID.
-   - நாமினி விவரங்கள் হালபடுத்துதல் (Nominee Updated).
+   - நாமினி விவரங்கள் புதுப்பித்தல் (Nominee Updated).
 3. **அரசு மற்றும் ஓய்வூதியத் திட்டங்கள்:**
    - **வருங்கால வைப்பு நிதி (EPF):** UAN எண் மற்றும் EPFO போர்ட்டல் குறிப்பு.
    - **பொது வருங்கால வைப்பு நிதி (PPF):** 15 ஆண்டு PPF கணக்கு எண் மற்றும் வங்கி/அஞ்சலகக் கிளை.
@@ -198,9 +248,15 @@ keywords:
    - லாக்கர் ஒப்பந்தம் யார் பெயரில் உள்ளது (தனிநபர் / கூட்டு).
    - லாக்கரின் அசல் சாவி எங்கு மறைத்து வைக்கப்பட்டுள்ளது என்ற ரகசியக் குறிப்பு.
 
----
+</div>
+</details>
 
-### பிரிவு 7: அசையாச் சொத்துகள் மற்றும் ரியல் எஸ்டேட் ஆவணங்கள்
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>பிரிவு 7: அசையாச் சொத்துகள் மற்றும் ரியல் எஸ்டேட் ஆவணங்கள் (Real Estate & Property Deeds)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #e0e7ff; color: #3730a3; font-weight: 600; white-space: nowrap;">பத்திரம், பட்டா & வில்லங்கம்</span>
+</summary>
+<div style="padding: 16px 20px;">
 
 நிலம் மற்றும் வீடுகள் தொடர்பான ஆவணங்கள் மிகக் கவனமாகப் பராமரிக்கப்பட வேண்டும்:
 
@@ -213,9 +269,15 @@ keywords:
 * **அசல் ஆவணங்கள் அடமானத்தில் உள்ளதா?**
   - வீட்டுக் கடனுக்காக அசல் பத்திரங்கள் வங்கியில் சமர்ப்பிக்கப்பட்டிருந்தால், எந்த வங்கிக் கிளையில் உள்ளது, கடன் முடிந்தவுடன் எவ்வாறு மீட்பது என்ற வழிகாட்டல்.
 
----
+</div>
+</details>
 
-### பிரிவு 8: டிஜிட்டல் சொத்துகள் மற்றும் கடவுச்சொல் அணுகல் (Digital Legacy)
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>பிரிவு 8: டிஜிட்டல் சொத்துகள் மற்றும் கடவுச்சொல் அணுகல் (Digital Legacy & Passwords)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #fce7f3; color: #9d174d; font-weight: 600; white-space: nowrap;">மொபைல், ஈமெயில் & டிஜிட்டல் மரபு</span>
+</summary>
+<div style="padding: 16px 20px;">
 
 தற்காலத்தில் நமது நிதி வாழ்க்கை காகிதங்களை விட திறன்பேசிகளிலும் (Smartphone) மின்னஞ்சல்களிலுமே (Email) அதிகம் இயங்குகிறது. எனவே டிஜிட்டல் அணுகல் மிக இன்றியமையாதது:
 
@@ -232,9 +294,12 @@ keywords:
 5. **இரு/பல காரணி அங்கீகாரம் (2FA/MFA Backup Codes):**
    - அங்கீகார செயலிகளுக்கான (Authenticator Apps) ஆஃப்லைன் மீட்புக் குறியீடுகளை (Backup Codes) பாதுகாப்பாக அச்சிட்டு வைத்தல்.
 
+</div>
+</details>
+
 ---
 
-## 4. உயில் (Will) மற்றும் விருப்பக் கடிதம் (Letter of Wishes)
+<h2 id="will-and-wishes">4. உயில் (Will) மற்றும் விருப்பக் கடிதம் (Letter of Wishes)</h2>
 
 ### நாமினி (Nominee) vs சட்டப்பூர்வ வாரிசு (Legal Heir) - மிக முக்கிய எச்சரிக்கை!
 பெரும்பாலானோர் செய்யும் தவறு: "நான் என் வங்கிக் கணக்கிலும் முதலீட்டிலும் என் மனைவியை நாமினியாகப் போட்டுவிட்டேன், எனவே எல்லாமே அவருக்குப் போய்விடும்" என்று நினைப்பது.
@@ -258,26 +323,38 @@ keywords:
 
 ---
 
-## 5. அவசர காலக் கையேடு தயாரிப்பதற்கான 5-படி செயல் திட்டம் (Action Plan)
+<h2 id="action-plan">5. அவசர காலக் கையேடு தயாரிப்பதற்கான 5-படி செயல் திட்டம் (Action Plan)</h2>
 
 ஒரு வார இறுதி நாளில் அமர்ந்து இதை நீங்கள் முழுமையாகத் தயார் செய்துவிடலாம்:
 
 <img src="/assets/images/ice-kit-action-plan-flow.svg" alt="ICE Kit தயாரிப்பதற்கான 5-படி செயல் திட்டம்: படி 1: ஆவணங்களைச் சேகரித்தல் (Document Gathering), படி 2: மாஸ்டர் எக்செல் அட்டவணை தயாரித்தல் (Master Spreadsheet), படி 3: காகிதக் கோப்புறை உருவாக்குதல் (ICE Paper Folder), படி 4: வாழ்க்கைத்துணையுடன் மனம் திறந்த உரையாடல் (The Family Conversation), படி 5: ஆண்டுக்கொரு முறை புதுப்பித்தல் (Annual Review/Update)" width="1200" height="545" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
-- **படி 1: ஆவணங்களைச் சேகரித்தல் (Document Gathering):**
-   - வீட்டில் சிதறிக் கிடக்கும் அனைத்து பாலிசி பத்திரங்கள், பான், ஆதார், வங்கிக் கணக்குப் புத்தகங்கள், பத்திர நகல்களை ஒரே மேசையில் குவியுங்கள்.
-- **படி 2: மாஸ்டர் எக்செல் அட்டவணை தயாரித்தல் (Master Spreadsheet):**
-   - மேலே கொடுக்கப்பட்டுள்ள 8 பிரிவுகளின் கீழ் கணக்கு எண்கள், பாலிசி எண்கள், நாமினி பெயர்கள் ஆகியவற்றை ஒரு பாதுகாப்பான எக்செல் கோப்பில் தட்டச்சு செய்யுங்கள்.
-- **படி 3: காகிதக் கோப்புறை (ICE Paper Folder) உருவாக்குதல்:**
-   - ஒரு தரமான வாட்டர்ப்ரூப் கோப்பை வாங்கி, பிரிப்பான்கள் (Dividers / Folders) கொண்டு 8 பிரிவுகளாகப் பிரித்து ஆவணங்களை அடுக்கி வையுங்கள்.
-- **படி 4: வாழ்க்கைத்துணையுடன் மனம் திறந்த உரையாடல் (The Family Conversation):**
-   - ஒரு அமைதியான மாலையில் உங்கள் வாழ்க்கைத்துணை மற்றும் வளர்ந்த பிள்ளைகளை அமர்த்தி, "இது ஒரு பாதுகாப்பு முன்னெச்சரிக்கை மட்டுமே" என்று கூறி, கோப்பு இருக்கும் இடம், அவசர எண்கள் மற்றும் எங்கு என்ன இருக்கிறது என்பதைப் பொறுமையாக விளக்கிக் கூறுங்கள்.
-- **படி 5: ஆண்டுக்கொரு முறை புதுப்பித்தல் (Annual Review/Update):**
-   - ஒவ்வொரு ஆண்டும் தீபாவளி, புத்தாண்டு அல்லது உங்கள் பிறந்த நாளில் இந்தக் கோப்பைத் திறந்து, புதிய முதலீடுகள், புதிய வங்கிக் கணக்குகளைச் சேர்த்துப் புதுப்பிக்கவும். மேலும், புதிய குழந்தை பிறக்கும்போது, புதிய வீடு/நிலம் வாங்கும்போது, புதிய வேலை மாறும்போது அல்லது புதிய பாலிசி எடுக்கும்போது உடனடியாக இதில் தகவலைச் சேர்க்க வேண்டும்
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin: 20px 0;">
+  <div style="background: #ffffff; border: 1px solid #cbd5e1; border-left: 4px solid #0D7377; border-radius: 8px; padding: 14px 16px;">
+    <div style="font-weight: 700; color: #0D7377; font-size: 14px; margin-bottom: 6px;">படி 1: ஆவணங்களைச் சேகரித்தல் (Document Gathering)</div>
+    <div style="font-size: 13px; color: #334155; line-height: 1.5;">வீட்டில் சிதறிக் கிடக்கும் அனைத்து பாலிசி பத்திரங்கள், பான், ஆதார், வங்கிக் கணக்குப் புத்தகங்கள் மற்றும் பத்திர நகல்களை ஒரே மேசையில் குவியுங்கள்.</div>
+  </div>
+  <div style="background: #ffffff; border: 1px solid #cbd5e1; border-left: 4px solid #0f766e; border-radius: 8px; padding: 14px 16px;">
+    <div style="font-weight: 700; color: #0f766e; font-size: 14px; margin-bottom: 6px;">படி 2: மாஸ்டர் எக்செல் அட்டவணை தயாரித்தல் (Spreadsheet)</div>
+    <div style="font-size: 13px; color: #334155; line-height: 1.5;">8 பிரிவுகளின் கீழ் கணக்கு எண்கள், பாலிசி எண்கள், நாமினி பெயர்கள் ஆகியவற்றை ஒரு பாதுகாப்பான எக்செல் கோப்பில் தட்டச்சு செய்யுங்கள்.</div>
+  </div>
+  <div style="background: #ffffff; border: 1px solid #cbd5e1; border-left: 4px solid #0284c7; border-radius: 8px; padding: 14px 16px;">
+    <div style="font-weight: 700; color: #0284c7; font-size: 14px; margin-bottom: 6px;">படி 3: காகிதக் கோப்புறை உருவாக்குதல் (Paper Folder)</div>
+    <div style="font-size: 13px; color: #334155; line-height: 1.5;">தரமான வாட்டர்ப்ரூப்/தீப்பிடிக்காத கோப்பை வாங்கி, பிரிப்பான்கள் (Dividers) கொண்டு 8 பிரிவுகளாகப் பிரித்து ஆவணங்களை அடுக்கி வையுங்கள்.</div>
+  </div>
+  <div style="background: #ffffff; border: 1px solid #cbd5e1; border-left: 4px solid #7c3aed; border-radius: 8px; padding: 14px 16px;">
+    <div style="font-weight: 700; color: #7c3aed; font-size: 14px; margin-bottom: 6px;">படி 4: வாழ்க்கைத்துணையுடன் உரையாடல் (Family Conversation)</div>
+    <div style="font-size: 13px; color: #334155; line-height: 1.5;">அமைதியான மாலையில் வாழ்க்கைத்துணை மற்றும் பிள்ளைகளை அமர்த்தி, கோப்பு இருக்கும் இடம், அவசர எண்கள் மற்றும் நடைமுறைகளை விளக்கிக் கூறுங்கள்.</div>
+  </div>
+  <div style="background: #ffffff; border: 1px solid #cbd5e1; border-left: 4px solid #d97706; border-radius: 8px; padding: 14px 16px;">
+    <div style="font-weight: 700; color: #d97706; font-size: 14px; margin-bottom: 6px;">படி 5: ஆண்டுக்கொரு முறை புதுப்பித்தல் (Annual Review)</div>
+    <div style="font-size: 13px; color: #334155; line-height: 1.5;">ஒவ்வொரு ஆண்டும் தீபாவளி அல்லது பிறந்த நாளில் கோப்பைத் திறந்து, புதிய முதலீடுகள், வேலை/முகவரி மாற்றங்களை உடனடியாகப் புதுப்பிக்கவும்.</div>
+  </div>
+</div>
 
 ---
 
-## 6. அவசர காலக் கையேடு சரிபார்ப்புப் பட்டியல் (Interactive ICE Kit Checklist)
+<h2 id="checklist">6. அவசர காலக் கையேடு சரிபார்ப்புப் பட்டியல் (Interactive ICE Kit Checklist)</h2>
 
 உங்கள் அவசர காலக் கையேடு முழுமையடைந்துவிட்டதா என்பதைச் சரிபார்க்கவும், குடும்பத்தின் தயார் நிலையை மதிப்பிடவும் எங்களின் பிரத்யேகத் செயலாற்றும் சரிபார்ப்புப் பட்டியலைப் (Interactive Checklist) பயன்படுத்தலாம்:
 
@@ -290,7 +367,7 @@ keywords:
 
 ---
 
-## 7. அடிக்கடி கேட்கப்படும் கேள்விகள் (FAQs)
+<h2 id="faqs">7. அடிக்கடி கேட்கப்படும் கேள்விகள் (FAQs)</h2>
 
 ### கே 1: என் பாஸ்வேர்டுகள், பின் எண்களை இந்தக் கோப்பில் எழுதி வைக்கலாமா?
 **பதில்:** கூடாது. ஒருவேளை கோப்பு திருடப்பட்டாலோ அல்லது தவறான நபர்கள் கையில் கிடைத்தாலோ பெரும் நிதி இழப்பு ஏற்படலாம். கடவுச்சொற்களை நினைவில் வைத்திருக்க அல்லது கடவுச்சொல் மேலாளரைப் (Password Manager) பயன்படுத்தப் பழகுங்கள். குடும்ப உறுப்பினருக்குக் கடவுச்சொல் மேலாளரின் மாஸ்டர் சாவியை மட்டும் பாதுகாப்பான வழியில் பகிருங்கள்.

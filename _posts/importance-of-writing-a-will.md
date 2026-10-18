@@ -36,7 +36,24 @@ keywords:
 
 <img src="/assets/images/will-writing-banner.jpg" alt="உயில் எழுதுவதன் முக்கியத்துவம் மற்றும் வாரிசுரிமைத் திட்டமிடல் வழிகாட்டி (Will Writing & Estate Planning Guide)" width="1376" height="768" style="display:block;max-width:100%;height:auto;border-radius:12px">
 
-## சொத்துத் திட்டமிடல் (Estate Planning) & வாரிசுரிமைத் திட்டமிடல் (Succession Planning) என்றால் என்ன?
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 20px; margin: 24px 0;">
+  <div style="font-weight: 700; color: #0D7377; font-size: 15px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+    <span>⚡ விரைவு வழிசெலுத்தல் (Quick Jump):</span>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+    <a href="#estate-vs-succession" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">1. திட்டமிடல் வேறுபாடு</a>
+    <a href="#why-write-a-will" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">2. உயிலின் முக்கியத்துவம்</a>
+    <a href="#nominee-vs-legal-heir" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">3. நாமினி vs வாரிசு</a>
+    <a href="#succession-laws-india" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">4. மத வாரிசுரிமைச் சட்டங்கள்</a>
+    <a href="#step-by-step-guide" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">5. உயில் எழுதும் 6 படிகள்</a>
+    <a href="#best-practices" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">6. சிறந்த நடைமுறைகள்</a>
+    <a href="#beyond-will" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">7. 6 சொத்துரிமை அரண்கள்</a>
+    <a href="#online-platforms" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">8. ஆன்லைன் தளங்கள்</a>
+    <a href="#faqs" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">9. அடிக்கடி கேட்கப்படும் கேள்விகள்</a>
+  </div>
+</div>
+
+<h2 id="estate-vs-succession">சொத்துத் திட்டமிடல் (Estate Planning) &amp; வாரிசுரிமைத் திட்டமிடல் (Succession Planning) என்றால் என்ன?</h2>
 
 பொதுவாக பலர் இவ்விரண்டு சொற்களையும் ஒன்றெனக் கருதுகின்றனர்; ஆனால் அவற்றுக்கிடையே தெளிவான வேறுபாடு உண்டு:
 
@@ -51,12 +68,11 @@ keywords:
 
 ---
 
-## உயில் (Will) எழுதுவதன் இன்றியமையாத முக்கியத்துவம்
+<h2 id="why-write-a-will">உயில் (Will) எழுதுவதன் இன்றியமையாத முக்கியத்துவம்</h2>
 
 **உயில் (Will)** என்பது, ஒருவர் தனது சுய சம்பாத்திய சொத்துகள் தனது மறைவுக்குப் பிறகு யார் யாருக்கு, எந்தெந்த விகிதத்தில் போய்ச் சேர வேண்டும் என்று தனது வாழ்நாளில் சட்டப்பூர்வமாக எழுதி வைக்கும் ஒரு விருப்ப ஆவணமாகும் (Testamentary Declaration).
 
 ### 1. உயிலில்லா மரணம் (Intestate Succession) தரும் பேராபத்து
-ஒருவர் உயில் எழுதாமல் இறந்துவிட்டால், அவர் **"உயிலில்லா மரணம் அடைந்தவர்" (Died Intestate)** என்று அழைக்கப்படுகிறார். அத்தகைய சூழலில்:
 * உங்கள் சொத்துகள் நீங்கள் விரும்பியபடி பிரிக்கப்படாது; மாறாக, நீங்கள் எந்த மதத்தைச் சார்ந்தவரோ, அந்த மதத்திற்குரிய **அரசு வாரிசுரிமைச் சட்டத்தின்படி (Statutory Rules)** தானாகப் பிரிக்கப்படும்.
 * உதாரணமாக, உங்கள் மறைவுக்குப் பின் உங்கள் மனைவிக்கு மட்டுமே முழு வீடும் போக வேண்டும் என்று நீங்கள் மனதில் நினைத்திருக்கலாம். ஆனால் உயில் இல்லை எனில், சட்டப்படி உங்கள் மனைவி, தாய் மற்றும் பிள்ளைகள் அனைவருக்கும் சம பங்கு சென்றுவிடும்.
 * இதனால் சொத்தை விற்கவோ, அடமானம் வைக்கவோ அல்லது பராமரிக்கவோ அனைத்து வாரிசுகளின் கையொப்பமும் தேவைப்படும். ஒருவர் மறுத்தாலும் ஒட்டுமொத்தக் குடும்பமும் முடங்கிவிடும்.
@@ -72,7 +88,7 @@ keywords:
 
 ---
 
-## நாமினி (Nominee) vs சட்டப்பூர்வ வாரிசு (Legal Heir) vs நிறைவேற்றுநர் (Executor)
+<h2 id="nominee-vs-legal-heir">நாமினி (Nominee) vs சட்டப்பூர்வ வாரிசு (Legal Heir) vs நிறைவேற்றுநர் (Executor)</h2>
 
 இந்தியாவில் பெரும்பாலான மக்கள் செய்யும் மிகப்பெரிய தவறு: *"நான் வங்கிக் கணக்கிலும் இன்சூரன்ஸிலும் என் மனைவியை நாமினியாகப் போட்டுவிட்டேன்; எனவே அவருக்குத்தான் எல்லாச் சொத்தும் சொந்தம்"* என்று நம்புவதுதான். இந்த வேறுபாட்டை மிகத் தெளிவாகப் புரிந்துகொள்ள வேண்டும்:
 
@@ -102,13 +118,19 @@ keywords:
 
 ---
 
-## இந்தியாவில் மத ரீதியான வாரிசுரிமைச் சட்டங்கள் (Succession Laws in India)
+<h2 id="succession-laws-india">இந்தியாவில் மத ரீதியான வாரிசுரிமைச் சட்டங்கள் (Succession Laws in India)</h2>
 
 இந்தியாவில் பொதுவான சிவில் சட்டம் (Uniform Civil Code) இல்லாததால், ஒருவர் உயில் எழுதாமல் இறக்கும்போது, அவருடைய மதம் சார்ந்த தனிநபர் சட்டங்களின்படியே சொத்துகள் பிரிக்கப்படுகின்றன.
 
 <img src="/assets/images/succession-laws-india.svg" alt="இந்தியாவில் வாரிசுரிமைச் சட்டங்கள் (Succession Laws in India): 1. இந்து வாரிசுரிமைச் சட்டம் 1956, 2. இந்திய வாரிசுரிமைச் சட்டம் 1925, 3. முஸ்லிம் தனிநபர் சட்டம் (ஷரியத்) 1937, 4. சிறப்புத் திருமணச் சட்டம் 1954" width="1200" height="644" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
-### 1. இந்து வாரிசுரிமைச் சட்டம், 1956 (Hindu Succession Act, 1956)
+<details open style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>1. இந்து வாரிசுரிமைச் சட்டம், 1956 (Hindu Succession Act, 1956)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #ccfbf1; color: #0f766e; font-weight: 600; white-space: nowrap;">இந்து / பௌத்த / சமண / சீக்கியர்</span>
+</summary>
+<div style="padding: 16px 20px;">
+
 * **யாருக்குப் பொருந்தும்:** இந்துக்கள், பௌத்தர்கள், சமணர்கள் மற்றும் சீக்கியர்களுக்கு இச்சட்டம் பொருந்தும்.
 * **சொத்து வகைப்பாடு:**
   * **சுய சம்பாத்திய சொத்து (Self-Acquired Property):** நீங்கள் சொந்த உழைப்பில் வாங்கிய சொத்து. இதை நீங்கள் விரும்பும் எவருக்கும் 100% உங்கள் விருப்பப்படி உயில் மூலம் எழுதி வைக்கலாம்.
@@ -117,7 +139,16 @@ keywords:
 * **உயில் இல்லையெனில்:** சொத்து வகுப்பு 1 வாரிசுகளுக்கு (Class-I Heirs: தாய், மனைவி, மகன்கள், மகள்கள்) சமமாகப் பிரிக்கப்படும்.
 * [அதிகாரப்பூர்வ மத்திய அரசுச் சட்டம்: Hindu Succession Act, 1956 (indiacode.nic.in)](https://www.indiacode.nic.in/handle/123456789/1702)
 
-### 2. இந்திய வாரிசுரிமைச் சட்டம், 1925 (Indian Succession Act, 1925)
+</div>
+</details>
+
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>2. இந்திய வாரிசுரிமைச் சட்டம், 1925 (Indian Succession Act, 1925)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #dbeafe; color: #1e40af; font-weight: 600; white-space: nowrap;">கிறிஸ்தவர்கள் / பார்சிகள் / பொது உயில் சட்டம்</span>
+</summary>
+<div style="padding: 16px 20px;">
+
 * **யாருக்குப் பொருந்தும்:** கிறிஸ்தவர்கள், பார்சிகள் மற்றும் இந்தியாவில் மத வேறுபாடின்றி எழுதப்படும் அனைத்து **உயில்களின் வரைவு மற்றும் செயல்பாட்டு நெறிமுறைகளுக்கு (Testamentary Succession)** இச்சட்டமே அடிப்படையாகும்.
 * **முக்கிய விதிகள்:**
   * உயில் எழுதுபவர் 18 வயது பூர்த்தியடைந்தவராகவும், சுய நினைவோடும் இருக்க வேண்டும் (Section 59).
@@ -125,7 +156,16 @@ keywords:
   * கிறிஸ்தவர்கள் உயில் இன்றி இறந்தால், மூன்றில் ஒரு பங்கு (1/3rd) மனைவிக்குச் செல்லும்; மீதமுள்ள 2/3 பங்கு பிள்ளைகளுக்குச் சமமாகப் பிரிக்கப்படும்.
 * [அதிகாரப்பூர்வ மத்திய அரசுச் சட்டம்: Indian Succession Act, 1925 (indiacode.nic.in)](https://www.indiacode.nic.in/handle/123456789/2385)
 
-### 3. இஸ்லாமிய வாரிசுரிமைச் சட்டம் (Muslim Personal Law / Shariat)
+</div>
+</details>
+
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>3. இஸ்லாமிய வாரிசுரிமைச் சட்டம் (Muslim Personal Law / Shariat)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #d1fae5; color: #065f46; font-weight: 600; white-space: nowrap;">ஷரியத் / 1/3 பங்கு வரம்பு</span>
+</summary>
+<div style="padding: 16px 20px;">
+
 * **யாருக்குப் பொருந்தும்:** இந்தியாவில் உள்ள முஸ்லிம்களுக்கு **முஸ்லிம் தனிநபர் சட்டம் (ஷரியத்) பயன்பாட்டுச் சட்டம், 1937** பொருந்தும்.
 * **உயில் (வசியத் - Wasiyat) மீதான மிக முக்கியக் கட்டுப்பாடுகள்:**
   * ஒருவர் தனது நிகரச் சொத்தில் அதிகபட்சமாக **மூன்றில் ஒரு பங்கு (1/3rd of Net Estate)** மட்டுமே உயில் மூலம் யாருக்கும் வழங்க முடியும்.
@@ -133,24 +173,51 @@ keywords:
   * சட்டப்பூர்வ வாரிசு ஒருவருக்கு ஆதரவாக 1/3 பங்குக்குள் உயில் எழுதினாலும், மற்ற சட்டப்பூர்வ வாரிசுகள் உயில் எழுதியவரின் மரணத்திற்குப் பிறகு அதற்கு ஒப்புதல் (Consent of other legal heirs) அளிக்க வேண்டும்.
 * [அதிகாரப்பூர்வ மத்திய அரசுச் சட்டம்: Muslim Personal Law (Shariat) Application Act, 1937 (indiacode.nic.in)](https://www.indiacode.nic.in/handle/123456789/2416)
 
-### 4. சிறப்புத் திருமணச் சட்டம், 1954 (Special Marriage Act, 1954)
+</div>
+</details>
+
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>4. சிறப்புத் திருமணச் சட்டம், 1954 (Special Marriage Act, 1954)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #ede9fe; color: #5b21b6; font-weight: 600; white-space: nowrap;">மதங்கடந்த பதிவுத் திருமணம்</span>
+</summary>
+<div style="padding: 16px 20px;">
+
 * வெவ்வேறு மதங்களைச் சேர்ந்த தம்பதிகள் அல்லது இச்சட்டத்தின் கீழ் பதிவு திருமணம் செய்துகொண்ட நபர்களின் வாரிசுரிமை விவகாரங்கள் **இந்திய வாரிசுரிமைச் சட்டம், 1925-ன் படியே** நிர்வகிக்கப்படும் (Section 21).
 * [அதிகாரப்பூர்வ மத்திய அரசுச் சட்டம்: Special Marriage Act, 1954 (indiacode.nic.in)](https://www.indiacode.nic.in/handle/123456789/1387)
 
+</div>
+</details>
+
 ---
 
-## உயில் எழுதும் முறை: படிப்படியான வழிகாட்டி (Step-by-Step Process)
+<h2 id="step-by-step-guide">உயில் எழுதும் முறை: படிப்படியான வழிகாட்டி (Step-by-Step Process)</h2>
 
 உயில் எழுதுவது என்பது மிகவும் சிக்கலான சட்டச் செயல்முறை அல்ல; ஒரு வெள்ளைத் தாளில் நீங்களே கைப்படவோ அல்லது தட்டச்சு செய்தோ முறையான வழிகாட்டுதலுடன் உயிலை உருவாக்கிவிடலாம்:
 
 <img src="/assets/images/will-writing-process-flow.svg" alt="உயில் எழுதும் முறை: படிப்படியான வழிகாட்டி - படி 1: மனத்தகுதி அறிவிப்பு ➔ படி 2: சொத்து பட்டியல் ➔ படி 3: நிறைவேற்றுநர் தேர்வு ➔ படி 4: பயனாளிகள் ஒதுக்கீடு ➔ படி 5: சாட்சிகள் கையொப்பம் ➔ படி 6: விருப்பப் பதிவு" width="1200" height="470" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
-### படி 1: தொடக்க அறிவிப்பு மற்றும் மனத்தகுதி (Declaration of Sound Mind)
+<details open style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>படி 1: தொடக்க அறிவிப்பு மற்றும் மனத்தகுதி (Declaration of Sound Mind)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #ccfbf1; color: #0f766e; font-weight: 600; white-space: nowrap;">மனத்தகுதி சான்றிதழ்</span>
+</summary>
+<div style="padding: 16px 20px;">
+
 உயிலின் தொடக்கத்தில் உங்கள் பெயர், வயது, தந்தை/கணவர் பெயர், முகவரி ஆகியவற்றைக் குறிப்பிட்டு, "நான் நல்ல மனநிலையுடனும் (Sound Mind), முழு நினைவாற்றலுடனும், எந்தவொரு நபரின் வற்புறுத்தலோ மிரட்டலோ இன்றி சுயமாக இந்த உயிலை எழுதுகிறேன்" என்று தெளிவாகப் பிரகடனப்படுத்த வேண்டும்.
 
 குறிப்பாக 60 வயதைக் கடந்தவர்கள் உயில் எழுதும்போது, ஒரு பதிவு பெற்ற மருத்துவரிடம் (MBBS/MD) சென்று, "இவர் நல்ல மனநிலையில் சுய நினைவோடு முடிவெடுக்கும் தகுதியுடன் உள்ளார்" என்ற மருத்துவச் சான்றிதழைப் பெற்று உயிலுடன் இணைப்பது மிகச் சிறந்த நடைமுறையாகும். இது பிற்காலத்தில் "அவருக்கு நினைவாற்றல் சரியில்லை, ஏமாற்றி எழுதி வாங்கிவிட்டார்கள்" என்று எழும் வழக்குகளை வேரறுக்கும்.
 
-### படி 2: சொத்துகள் மற்றும் கடன்களின் முழுப் பட்டியல் (Asset Inventory)
+</div>
+</details>
+
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>படி 2: சொத்துகள் மற்றும் கடன்களின் முழுப் பட்டியல் (Asset Inventory)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #dbeafe; color: #1e40af; font-weight: 600; white-space: nowrap;">இயல் & டிஜிட்டல் சொத்துகள்</span>
+</summary>
+<div style="padding: 16px 20px;">
+
 உங்களுக்குச் சொந்தமான அனைத்து அசையும் மற்றும் அசையாச் சொத்துகளின் விவரங்களைத் துல்லியமாகவும் விரிவாகவும் பட்டியலிடுங்கள்:
 * **அசையாச் சொத்துகள்:** வீட்டின் முகவரி, நிலத்தின் சர்வே எண், மனை எண், பத்திரப் பதிவு எண் மற்றும் சார்பதிவாளர் அலுவலக விவரங்கள்.
 * **பாரம்பரிய நிதிச் சொத்துகள்:** வங்கிக் கணக்கு எண்கள், பிக்சட் டெபாசிட் ரசீதுகள், டீமேட் கணக்கு ஐடி, பரஸ்பர நிதி ஃபோலியோ எண்கள், பிஎஃப்/பிபிஎஃப் எண்கள், வாகனப் பதிவு எண்கள்.
@@ -162,92 +229,288 @@ keywords:
   நகைகளை "குடும்ப நகைகள்" என்று பொத்தாம் பொதுவாகக் குறிப்பிடாமல், ஆபரணங்களின் வகை, எத்தனை சவரன் / கிராம்கள் எடை, 916 ஹால்மார்க் விவரங்கள், வாங்கிய அசல் ரசீதுகள் மற்றும் அவை வைக்கப்பட்டுள்ள வங்கி லாக்கர் எண்/சாவி விவரங்களை எடையுடன் துல்லியமாகப் பட்டியலிட வேண்டும்.
 * எங்களின் [அவசர காலக் கையேடு சரிபார்ப்புப் பட்டியலைப் (ICE Kit Checklist)](/checklists/icoe-checklist.html) பயன்படுத்தி உங்கள் குடும்பத்தின் அனைத்து ஆவணங்களையும் எக்செல் வடிவில் எளிதாகத் தொகுக்கலாம்.
 
-### படி 3: நிறைவேற்றுநரை (Executor) நியமித்தல்
+</div>
+</details>
+
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>படி 3: நிறைவேற்றுநரை (Executor) நியமித்தல்</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #d1fae5; color: #065f46; font-weight: 600; white-space: nowrap;">செயலாட்சியர் தேர்வு</span>
+</summary>
+<div style="padding: 16px 20px;">
+
 உங்கள் மறைவுக்குப் பிறகு உயிலில் உள்ளபடி சொத்துகளைப் பிரித்துக் கொடுக்கும் பொறுப்பைச் சுமக்க ஒரு நம்பகமான, நடுநிலையான நபரை நிறைவேற்றுநராக நியமிக்க வேண்டும். அவர் குடும்ப உறுப்பினராகவோ, நண்பராகவோ அல்லது குடும்ப வழக்கறிஞராகவோ இருக்கலாம். மாற்று நிறைவேற்றுநர் ஒருவரையும் (Alternate Executor) குறிப்பிடுவது சிறந்தது.
 
-### படி 4: பயனாளிகள் மற்றும் விகிதாச்சாரப் பங்கீடு (Beneficiaries & Allocation)
+</div>
+</details>
+
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>படி 4: பயனாளிகள் மற்றும் விகிதாச்சாரப் பங்கீடு (Beneficiaries & Allocation)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #fef3c7; color: #92400e; font-weight: 600; white-space: nowrap;">பங்கீட்டு விவரங்கள்</span>
+</summary>
+<div style="padding: 16px 20px;">
+
 எந்தச் சொத்து யாருக்குப் போய்ச் சேர வேண்டும் என்பதைச் சந்தேகத்திற்கு இடமின்றி சதவீத வாரியாகவோ அல்லது சொத்து வாரியாகவோ தெளிவாகக் குறிப்பிட வேண்டும். ஒருவேளை ஒரு பயனாளி உங்களுக்கு முன்பே இறந்துவிட்டால், அந்தப் பங்கு யாருக்குச் செல்ல வேண்டும் (Contingency Clause) என்பதையும் குறிப்பிட வேண்டும்.
 * **சமமற்ற ஒதுக்கீட்டிற்கான காரணங்களை விளக்குதல் (Reasons for Unequal Distribution):** அனைத்து வாரிசுகளுக்கும் சமமாகப் பிரிக்காமல், ஒருவருக்குக் கூடுதலாகவோ அல்லது குறைவாகவோ சொத்து ஒதுக்கப்பட்டாலோ, அல்லது ஒரு வாரிசை முற்றிலும் தவிர்த்தாலோ, அதற்கான நியாயமான காரணங்களை (எ.கா: ஒரு பிள்ளைக்கு ஏற்கனவே கல்வி, திருமணம் அல்லது தொழிலுக்குச் செய்த கூடுதல் நிதி உதவி, அல்லது முதிய காலத்தில் பெற்றோரைக் கவனித்துக் கொண்டது) உயிலிலேயே வெளிப்படையாக எழுத வேண்டும். இது பிற்காலத்தில் "பிறர் வற்புறுத்தி அல்லது ஏமாற்றி உயிலை எழுதி வாங்கிக்கொண்டனர்" (Undue Influence / Coercion) என்று நீதிமன்றத்தில் வழக்குகள் தொடுக்கப்படுவதைத் தடுக்கும்.
 
-### படி 5: மைனர் குழந்தைகளுக்கான பாதுகாவலர் நியமனம் (Guardian for Minors)
+</div>
+</details>
+
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>படி 5: மைனர் குழந்தைகளுக்கான பாதுகாவலர் நியமனம் (Guardian for Minors)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #ede9fe; color: #5b21b6; font-weight: 600; white-space: nowrap;">மைனர் பாதுகாப்பு</span>
+</summary>
+<div style="padding: 16px 20px;">
+
 பிள்ளைகள் 18 வயதுக்குட்பட்டவர்களாக இருந்தால், அவர்களின் நல்வாழ்வையும் கல்விச் செலவுகளையும் மேற்பார்வையிட ஒரு பாதுகாவலரை (Guardian) நியமித்து, பிள்ளைகள் மேஜர் ஆகும்வரை சொத்துகள் எவ்வாறு பராமரிக்கப்பட வேண்டும் என்பதை வரையறுக்கவும்.
 
-### படி 6: நடுநிலையான சாட்சிகள் கையொப்பம் (Attestation by Witnesses)
+</div>
+</details>
+
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>படி 6: நடுநிலையான சாட்சிகள் கையொப்பம் (Attestation by Witnesses)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #fee2e2; color: #991b1b; font-weight: 600; white-space: nowrap;">சாட்சிகள் நெறிமுறை</span>
+</summary>
+<div style="padding: 16px 20px;">
+
 இந்திய வாரிசுரிமைச் சட்டம் பிரிவு 63-ன் படி, உயிலில் **குறைந்தபட்சம் இரண்டு சாட்சிகள்** முன்னிலையில் நீங்கள் கையொப்பமிட வேண்டும்; அதே நேரத்தில் உங்கள் முன்னிலையில் அந்த சாட்சிகளும் கையொப்பமிட வேண்டும்.
 * **பொன்னான விதி:** உயிலில் சொத்துப் பங்கு பெறும் **பயனாளிகள் ஒருபோதும் சாட்சிகளாகக் கையொப்பமிடக் கூடாது!** அவ்வாறு செய்தால் அந்தப் பயனாளியின் பங்கு செல்லாததாகிவிடும் அபாயம் உண்டு.
 * **15 முதல் 20 வயது இளைய சாட்சிகளைத் தேர்வு செய்தல் (Younger Witnesses Selection):** சாட்சிகளாக நமது சமவயதினரை மட்டுமே போடாமல், நம்மை விட **15 முதல் 20 வயது இளையவர்களாகவும்**, நல்ல உடல்நலனுடனும் உள்ளவர்களைச் சாட்சிகளாகத் தேர்வு செய்வது மிகச் சிறந்த நடைமுறையாகும். ஏனெனில், உங்கள் மறைவுக்குப் பிறகு உயிலின் உண்மைத் தன்மையை நிரூபிக்க நீதிமன்றத்திலோ (Probate) அல்லது சார்பதிவாளர் அலுவலகத்திலோ சாட்சியம் அளிக்க அவர்கள் உயிருடன் இருக்க வேண்டும்.
 * **3 முதல் 4 சாட்சிகள் நியமனம்:** சட்டம் குறைந்தபட்சம் 2 சாட்சிகளைக் கோருகிறது என்றாலும், 3 அல்லது 4 நம்பகமான, பயனடையாத (Non-beneficiary) சாட்சிகளை நியமிப்பது உயிலுக்கு அசைக்க முடியாத சட்டப் பாதுகாப்பை வழங்கும்.
 
----
-
-## உயில் எழுதும்போது பின்பற்ற வேண்டிய சிறந்த நடைமுறைகள் (Best Practices)
-
-1. **முந்தைய உயில்களை ரத்து செய்யும் வாசகம் (Revocation of Prior Wills):**  
-   "இதற்கு முன்னர் என்னால் வாய்மொழியாகவோ அல்லது எழுத்துப்பூர்வமாகவோ உருவாக்கப்பட்ட அனைத்து முந்தைய உயில்களையும் நான் இதன் மூலம் முழுமையாக ரத்து செய்கிறேன்" என்ற வாசகத்தை முதல் பத்தியிலேயே எழுத வேண்டும்.
-
-2. **எஞ்சிய சொத்துகள் பிரிவு (Residuary Clause):**  
-   நாம் உயில் எழுதிய பிறகு எதிர்காலத்தில் வாங்கும் புதிய சொத்துகள், விடுபட்டுப்போன சிறிய சேமிப்புகள் யாருக்குச் சேர வேண்டும் என்பதைத் தீர்மானிக்க: *"இதில் வெளிப்படையாகக் குறிப்பிடப்படாத எனது எஞ்சிய அனைத்து அசையும் மற்றும் அசையாச் சொத்துகளும் என் துணைவி/பிள்ளையைச் சேரும்"* என்று எழுதுவது மிக முக்கியம்.
-
-3. **பக்கங்கள் தோறும் கையொப்பம்:**  
-   உயிலின் கடைசிப் பக்கத்தில் மட்டும் கையொப்பமிடாமல், உயிலின் **ஒவ்வொரு பக்கத்தின் கீழும்** தேதியுடன் முழுமையாகக் கையொப்பமிட்டு பக்க எண்களை (எ.கா: 1/4, 2/4) குறிப்பிட வேண்டும்.
-
-4. **பதிவு செய்வது கட்டாயமா? (Is Registration Mandatory?):**  
-   இந்தியப் பதிவுச் சட்டம், 1908 பிரிவு 18-ன் படி, **உயிலைப் பதிவு செய்வது சட்டப்படி கட்டாயமில்லை.** வெள்ளைத் தாளில் முறையாக இரு சாட்சிகள் கையொப்பமிட்ட உயில் 100% செல்லுபடியாகும். முத்திரைத்தாள் (Stamp Paper) தேவையில்லை. இருப்பினும், சார்-பதிவாளர் அலுவலகத்தில் (Sub-Registrar Office) பதிவு செய்வது கூடுதல் சட்டப் பாதுகாப்பைத் தரும்; போலி உயில் என்ற குற்றச்சாட்டைத் தகர்க்கும்.
-
-5. **வீடியோ பதிவு செய்தல் (Video Recording):**  
-   உயில் கையொப்பமிடும் நிகழ்வை ஒரு எளிய ஸ்மார்ட்போனில் வீடியோவாகப் பதிவு செய்து, உயில் வாசித்துக் கையொப்பமிடுவதை ஆவணப்படுத்தி டிஜிட்டல் பெட்டகத்தில் சேமிக்கலாம்.
-
-6. **விருப்பக் கடிதம் (Letter of Wishes):**  
-   உயிலுடன் சேர்த்து ஒரு உணர்வுபூர்வமான கடிதத்தை இணைத்து வைக்கலாம். குடும்ப உறுப்பினர்கள் ஒற்றுமையாக இருக்க வேண்டும் என்ற உங்கள் மனப்பூர்வமான வேண்டுகோள் மற்றும் நிதி வழிகாட்டல்களை இதில் குறிப்பிடலாம்.
-
-7. **உயிலை எப்போது திருத்த/புதுப்பிக்க வேண்டும்?**  
-   திருமணம் நடக்கும்போது, விவாகரத்து ஏற்படும்போது, புதிய குழந்தை பிறக்கும்போது, பெரிய சொத்துகளை வாங்கும்போது அல்லது விற்கும் போது, அல்லது நியமிக்கப்பட்ட நிறைவேற்றுநர் இறந்துவிட்டால் உடனடியாக உயிலைப் புதுப்பிக்க வேண்டும். சிறிய மாற்றங்களை **கோடிசில் (Codicil)** மூலமாகவும், பெரிய மாற்றங்களைப் புதிய உயில் மூலமாகவும் செய்யலாம்.
-
-8. **சமமற்ற பங்கீட்டிற்கான நியாயமான காரணங்களை ஆவணப்படுத்துதல் (Documenting Reasons for Unequal Shares):**  
-   பிள்ளைகளுக்கோ அல்லது வாரிசுகளுக்கோ சமமற்ற முறையில் சொத்துகளைப் பிரிக்கும்போது, அதற்கான நியாயமான காரணங்களை (முந்தைய நிதி உதவி, கல்வி/மருத்துவச் செலவுகள், மூத்த பருவப் பராமரிப்பு) உயிலில் வெளிப்படையாகப் பதிவு செய்ய வேண்டும். இது பிற வாரிசுகள் "வற்புறுத்தி எழுதி வாங்கப்பட்டது" (Undue Influence) என்று நீதிமன்றத்தில் வழக்கு தொடுப்பதைத் தகர்க்கும்.
-
-9. **நீண்ட ஆயுள் உள்ள 15-20 வயது இளைய சாட்சிகளைத் தேர்வு செய்தல் (Appointing Younger Witnesses):**  
-   உயில் சாட்சிகளாக நமது சமவயதினரை மட்டுமே போடாமல், நம்மை விட 15 முதல் 20 வயது இளையவர்களாக உள்ள 3 அல்லது 4 நபர்களைச் சாட்சிகளாக நியமிப்பது சிறந்தது. பிற்காலத்தில் உயிலை நீதிமன்றத்திலோ (Probate) அல்லது பதிவுத்துறையிலோ நிரூபிக்க அவர்கள் நல்ல உடல்நலத்துடன் உயிருடன் இருப்பதை இது உறுதி செய்யும்.
+</div>
+</details>
 
 ---
 
-## உயிலையும் தாண்டி அவசியமான சொத்துரிமை அரண்கள் (Comprehensive Estate Planning Beyond Will)
+<h2 id="best-practices">உயில் எழுதும்போது பின்பற்ற வேண்டிய சிறந்த நடைமுறைகள் (Best Practices)</h2>
+
+உயில் தயாரிக்கும்போது எதிர்காலத்தில் எந்தவொரு சட்டச் சிக்கலோ, தவறான புரிதலோ அல்லது குடும்ப உறுப்பினர்களிடையே மனக்கசப்போ ஏற்படாமல் இருக்க கீழ்க்கண்ட 9 சிறந்த நடைமுறைகளைப் பின்பற்றுவது அவசியமாகும்:
+
+<img src="/assets/images/will-best-practices-summary.svg" alt="உயில் எழுதும்போது பின்பற்ற வேண்டிய 9 சிறந்த நடைமுறைகள்: 1. முந்தைய உயில்கள் ரத்து, 2. எஞ்சிய சொத்துகள் பிரிவு, 3. பக்கங்கள் தோறும் கையொப்பம், 4. விருப்பப் பதிவு, 5. வீடியோ பதிவு, 6. விருப்பக் கடிதம், 7. காலத்திற்கேற்ப புதுப்பித்தல், 8. சமமற்ற பங்கீட்டிற்கு விளக்கம், 9. இளைய சாட்சிகள் தேர்வு" width="1200" height="855" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
+
+<details open style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>1. முந்தைய உயில்களை ரத்து செய்யும் வாசகம் (Revocation of Prior Wills)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #ccfbf1; color: #0f766e; font-weight: 600; white-space: nowrap;">முந்தைய உயில் ரத்து</span>
+</summary>
+<div style="padding: 16px 20px;">
+
+"இதற்கு முன்னர் என்னால் வாய்மொழியாகவோ அல்லது எழுத்துப்பூர்வமாகவோ உருவாக்கப்பட்ட அனைத்து முந்தைய உயில்களையும் நான் இதன் மூலம் முழுமையாக ரத்து செய்கிறேன்" என்ற வாசகத்தை உயிலின் முதல் பத்தியிலேயே தெளிவாக எழுத வேண்டும்.
+* **சட்டப் பின்னணி:** ஒருவர் தன் வாழ்நாளில் எத்தனை முறை வேண்டுமானாலும் உயிலை மாற்றியமைக்கலாம். இறுதியாக எழுதப்பட்ட உயிலே சட்டப்படி செல்லும்.
+* **நடைமுறை நன்மை:** பழைய உயில்களை வெளிப்படையாக ரத்து செய்வதன் மூலம், பிற்காலத்தில் குடும்ப உறுப்பினர்களிடையே எழும் முரண்பட்ட உயில்கள் குறித்த சர்ச்சைகளையும் வழக்குகளையும் ஆரம்பத்திலேயே தவிர்க்க முடியும்.
+
+</div>
+</details>
+
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>2. எஞ்சிய சொத்துகள் பிரிவு (Residuary Clause)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #dbeafe; color: #1e40af; font-weight: 600; white-space: nowrap;">எதிர்காலச் சொத்துரிமை</span>
+</summary>
+<div style="padding: 16px 20px;">
+
+நாம் உயில் எழுதிய பிறகு எதிர்காலத்தில் வாங்கும் புதிய சொத்துகள், அல்லது கவனக்குறைவால் விடுபட்டுப்போன சிறிய சேமிப்புகள் யாருக்குச் சேர வேண்டும் என்பதைத் தீர்மானிக்க எஞ்சிய சொத்துகள் பிரிவு (Residuary Clause) மிக முக்கியம்:
+* **மாதிரி வாசகம்:** *"இதில் வெளிப்படையாகக் குறிப்பிடப்படாத எனது எஞ்சிய அனைத்து அசையும் மற்றும் அசையாச் சொத்துகளும் என் துணைவி / பிள்ளையைச் சேரும்"* என்று குறிப்பிடுவது அவசியம்.
+* **நடைமுறை நன்மை:** புதிய வங்கிக் கணக்கு தொடங்கும்போதோ, அல்லது எதிர்பாராத வருவாய் வரும்போதோ ஒவ்வொரு முறையும் உயிலைத் திருத்த வேண்டிய அவசியமிருக்காது; அத்துடன் விடுபட்ட சொத்துகளுக்காக வாரிசுகள் நீதிமன்றப் படிகளில் ஏறுவதையும் இது தடுக்கும்.
+
+</div>
+</details>
+
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>3. பக்கங்கள் தோறும் கையொப்பம் & வரிசை எண்கள் (Sign All Pages & Page Numbers)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #d1fae5; color: #065f46; font-weight: 600; white-space: nowrap;">தாள் மோசடித் தடுப்பு</span>
+</summary>
+<div style="padding: 16px 20px;">
+
+உயிலின் கடைசிப் பக்கத்தில் மட்டும் கையொப்பமிடாமல், உயிலின் **ஒவ்வொரு பக்கத்தின் கீழும்** தேதியுடன் முழுமையாகக் கையொப்பமிட வேண்டும்:
+* **பக்க எண்கள் (Page Numbering):** மொத்தப் பக்கங்கள் மற்றும் நடப்புப் பக்க எண்ணைத் தெளிவாக (எ.கா: 1/4, 2/4, 3/4, 4/4) குறிப்பிட வேண்டும்.
+* **நடைமுறை நன்மை:** உயிலின் நடுவில் உள்ள பக்கங்களை யாரேனும் மாற்றிவிட்டார்கள் அல்லது இடைச்செருகல் (Interlineation / Page Substitution) செய்தார்கள் என்ற குற்றச்சாட்டுகளை இது முற்றிலும் முறியடிக்கும்.
+
+</div>
+</details>
+
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>4. பதிவு செய்வது கட்டாயமா? (Is Registration Mandatory?)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #fef3c7; color: #92400e; font-weight: 600; white-space: nowrap;">விருப்பப் பதிவு & பாதுகாப்பு</span>
+</summary>
+<div style="padding: 16px 20px;">
+
+இந்தியப் பதிவுச் சட்டம், 1908 பிரிவு 18-ன் படி, **உயிலைப் பதிவு செய்வது சட்டப்படி கட்டாயமில்லை (Registration is Optional).**
+* **சட்ட நிலை:** வெள்ளைத் தாளில் முறையாக இரு சாட்சிகள் கையொப்பமிட்ட உயில் 100% சட்டப்பூர்வமாகச் செல்லுபடியாகும். இதற்கென விலையுயர்ந்த முத்திரைத்தாள் (Stamp Paper) தேவையில்லை.
+* **பதிவு செய்வதன் பயன்:** இருப்பினும், சார்-பதிவாளர் அலுவலகத்தில் (Sub-Registrar Office) பதிவு செய்வது கூடுதல் சட்டப் பாதுகாப்பைத் தரும்; "இது போலி உயில்", "கையொப்பம் போலியானது" போன்ற குற்றச்சாட்டுகளை அரசுப் பதிவேடுகள் மூலம் எளிதாகத் தகர்க்க முடியும்.
+
+</div>
+</details>
+
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>5. வீடியோ பதிவு செய்தல் (Video Recording of Execution)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #ede9fe; color: #5b21b6; font-weight: 600; white-space: nowrap;">டிஜிட்டல் ஆவணச் சான்று</span>
+</summary>
+<div style="padding: 16px 20px;">
+
+உயில் கையொப்பமிடும் நிகழ்வை ஒரு எளிய ஸ்மார்ட்போனில் வீடியோவாகப் பதிவு செய்து டிஜிட்டல் முறையில் பாதுகாப்பது நவீன சிறந்த நடைமுறையாகும்:
+* **வீடியோவில் இடம்பெற வேண்டியவை:** உயில் எழுதுபவர் தனது விருப்பங்களைச் சுருக்கமாக வாசித்துக் காட்டுவது, சாட்சிகள் முன்னிலையில் கையொப்பமிடுவது, மற்றும் சாட்சிகள் உயில் எழுதுபவரின் முன்னிலையில் கையொப்பமிடுவதைத் தெளிவாகப் பதிவு செய்ய வேண்டும்.
+* **சட்ட வலிமை:** பிற்காலத்தில் "அவருக்கு நினைவாற்றல் சரியில்லை (Lack of Testamentary Capacity)", அல்லது "மிரட்டிப் பெற்ற உயில் (Coercion)" என்று எழும் வழக்குகளில் இந்த வீடியோ பதிவு நீதிமன்றத்தில் அசைக்க முடியாத சான்றாக (Electronic Evidence under BSA 2023) நிற்கும்.
+
+</div>
+</details>
+
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>6. விருப்பக் கடிதம் (Letter of Wishes)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #fee2e2; color: #991b1b; font-weight: 600; white-space: nowrap;">குடும்ப ஒற்றுமை வழிகாட்டல்</span>
+</summary>
+<div style="padding: 16px 20px;">
+
+உயிலுடன் சேர்த்து ஒரு உணர்வுபூர்வமான விருப்பக் கடிதத்தை (Letter of Wishes) இணைத்து வைக்கலாம்:
+* **தன்மைகள்:** இது சட்டப்படி கட்டாயக் கட்டுப்பாடுகளைக் கொண்ட ஆவணம் அல்ல (Non-binding); ஆனால் குடும்ப உறுப்பினர்கள் ஒற்றுமையாக வாழ வேண்டும் என்ற உங்கள் மனப்பூர்வமான வேண்டுகோள், நிதி வழிகாட்டல்கள், மற்றும் இறுதிச் சடங்கு விருப்பங்களை இதில் குறிப்பிடலாம்.
+* **நோக்கம்:** சொத்துப் பிரிவினையால் குடும்ப உறவுகளில் மனக்கசப்பு ஏற்படாமல் தடுத்து, வாரிசுகளிடையே பரஸ்பர அன்பையும் புரிதலையும் பேண இது உதவுகிறது.
+
+</div>
+</details>
+
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>7. உயிலை எப்போது திருத்த/புதுப்பிக்க வேண்டும்? (Periodic Updates & Codicil)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #e0e7ff; color: #3730a3; font-weight: 600; white-space: nowrap;">காலத்திற்கேற்ப திருத்தம்</span>
+</summary>
+<div style="padding: 16px 20px;">
+
+வாழ்வின் முக்கிய திருப்புமுனைகளின்போது உயிலை மறக்காமல் மறுஆய்வு செய்து புதுப்பிக்க வேண்டும்:
+* **எப்போது புதுப்பிக்க வேண்டும்?** திருமணம் நடக்கும்போது, விவாகரத்து ஏற்படும்போது, புதிய குழந்தை பிறக்கும்போது, பெரிய புதிய சொத்துகளை வாங்கும்போது அல்லது விற்கும் போது, அல்லது நியமிக்கப்பட்ட நிறைவேற்றுநர்/சாட்சிகள் இறந்துவிட்டால் உடனடியாக உயிலைப் புதுப்பிக்க வேண்டும்.
+* **கோடிசில் vs புதிய உயில்:** சிறிய மாற்றங்களுக்கு (எ.கா: ஒரு பயனாளியின் முகவரி மாற்றம், அல்லது புதிய வங்கி கணக்கு சேர்த்தல்) **கோடிசில் (Codicil)** எனப்படும் பிற்சேர்க்கை ஆவணத்தைப் பயன்படுத்தலாம். பெரிய சொத்துப் பங்கீட்டு மாற்றங்களுக்குப் பழையதை முழுமையாக ரத்து செய்து புதிய உயில் வரைவதே சிறந்தது.
+
+</div>
+</details>
+
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>8. சமமற்ற பங்கீட்டிற்கான நியாயமான காரணங்களை ஆவணப்படுத்துதல் (Documenting Reasons for Unequal Shares)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #fce7f3; color: #9d174d; font-weight: 600; white-space: nowrap;">நீதிமன்ற வழக்குத் தடுப்பு</span>
+</summary>
+<div style="padding: 16px 20px;">
+
+பிள்ளைகளுக்கோ அல்லது வாரிசுகளுக்கோ சமமற்ற முறையில் சொத்துகளைப் பிரிக்கும்போது, அதற்கான நியாயமான காரணங்களை உயிலில் வெளிப்படையாகப் பதிவு செய்ய வேண்டும்:
+* **ஆவணப்படுத்த வேண்டிய காரணங்கள்:** ஒரு பிள்ளைக்கு முந்தைய காலத்தில் கல்வி, திருமணம் அல்லது தொழிலுக்குச் செய்த கணிசமான நிதி உதவி, அல்லது குறிப்பிட்ட வாரிசு முதிய காலத்தில் பெற்றோரின் உடல்நலனை அர்ப்பணிப்புடன் கவனித்துக் கொண்டது போன்றவற்றை வெளிப்படையாகக் குறிப்பிடலாம்.
+* **சட்டப் பாதுகாப்பு:** இது பிற வாரிசுகள் நீதிமன்றம் சென்று "மூளைச்சலவை செய்து, ஏமாற்றி அல்லது வற்புறுத்தி எழுதி வாங்கிக்கொண்டனர்" (Undue Influence / Fraud) என்று வழக்கு தொடுப்பதைத் தடுத்து உயிலைக் காக்கும்.
+
+</div>
+</details>
+
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>9. நீண்ட ஆயுள் உள்ள 15-20 வயது இளைய சாட்சிகளைத் தேர்வு செய்தல் (Appointing Younger Witnesses)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #ccfbf1; color: #0f766e; font-weight: 600; white-space: nowrap;">நீண்ட ஆயுள் சாட்சிகள்</span>
+</summary>
+<div style="padding: 16px 20px;">
+
+உயில் சாட்சிகளாக நமது சமவயதினரையோ அல்லது முதியவர்களையோ மட்டுமே நியமிக்காமல், நம்மை விட **15 முதல் 20 வயது இளையவர்களாக** உள்ள நடுநிலையான நபர்களைச் சாட்சிகளாக நியமிப்பது மிகச் சிறந்த நடைமுறையாகும்:
+* **சாட்சியத்தின் முக்கியத்துவம்:** உங்கள் மறைவுக்குப் பிறகு உயிலின் உண்மைத் தன்மையை நிரூபிக்க நீதிமன்றத்திலோ (Probate Proceedings) அல்லது சார்பதிவாளர் அலுவலகத்திலோ சாட்சியம் அளிக்க அவர்கள் நல்ல உடல்நலத்துடன் உயிருடன் இருக்க வேண்டும்.
+* **பொன்னான விதிகளின் நினைவூட்டல்:** சட்டம் 2 சாட்சிகளைக் கோரினாலும், 3 முதல் 4 சாட்சிகளைப் போடுவது கூடுதல் பலம்; அதே சமயம் **பயனாளிகள் ஒருபோதும் சாட்சிகளாகக் கையொப்பமிடக் கூடாது.**
+
+</div>
+</details>
+
+---
+
+<h2 id="beyond-will">உயிலையும் தாண்டி அவசியமான சொத்துரிமை அரண்கள் (Comprehensive Estate Planning Beyond Will)</h2>
 
 "உயில் எழுதிவிட்டால் வாரிசுரிமைத் திட்டமிடல் (Estate Planning) முழுமையடைந்துவிட்டது" என்று பலரும் கருதுகின்றனர். ஆனால் அது உண்மையல்ல. உயில் என்பது **ஒருவர் மறைந்த பிறகே** நடைமுறைக்கு வரக்கூடிய ஆவணம். 
 
 ஒருவர் உயிருடன் வாழும் காலத்தில் கடுமையான பக்கவாதம், அல்சைமர், நினைவாற்றல் இழப்பு (Dementia), சுயநினைவற்ற கோமா நிலை அல்லது தீவிர முதுமையால் பாதிக்கப்படும்போது நிதி மற்றும் மருத்துவ முடிவுகளை எடுப்பது யார்? அல்லது பிள்ளைகளுக்கு நிதி ஒழுக்கம் குறைவாக இருக்கும்போதோ அல்லது மாற்றுத்திறனாளி குழந்தைகள் இருக்கும்போதோ குடும்ப சொத்துகளைப் பல வருடங்களுக்குப் பாதுகாப்பது எப்படி? இதற்கு உயிலையும் தாண்டி கீழ்க்கண்ட 6 சட்டக் கருவிகளும் பாதுகாப்பு அரண்களும் அவசியமாகின்றன:
 
-### 1. பொது அதிகாரப் பத்திரம் (General Power of Attorney - GPA / Durable POA)
+<details open style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>1. பொது அதிகாரப் பத்திரம் (General Power of Attorney - GPA / Durable POA)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #ccfbf1; color: #0f766e; font-weight: 600; white-space: nowrap;">வாழ்நாள் சொத்து மேலாண்மை</span>
+</summary>
+<div style="padding: 16px 20px;">
+
 நீங்கள் வாழும் காலத்தில் தீவிர நோய், விபத்து, நினைவாற்றல் பாதிப்பு அல்லது நீண்ட காலம் வெளிநாட்டில் (NRI) வசிக்கும் சூழல் ஏற்பட்டால், உங்கள் பெயரில் உள்ள நிதி மற்றும் சொத்துகளை முறையாக நிர்வகிக்க (வாடகை வசூல், பராமரிப்புச் செலவுகள், சொத்து வரி செலுத்துதல், வங்கிக் கணக்கு மேலாண்மை மற்றும் அவசர மருத்துவச் செலவுகளுக்கு நிதி திரட்டுதல்) நம்பகமான வாழ்க்கைத்துணை அல்லது பிள்ளைக்குப் பொது அதிகாரப் பத்திரம் (GPA) வழங்குவது சிறந்த நடைமுறையாகும்.
 
-### 2. சிகிச்சை மறுப்பு / வாழ்க்கை உயில் & மருத்துவப் பதிலாள் (Living Will / Advance Medical Directive & Healthcare Proxy)
+</div>
+</details>
+
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>2. சிகிச்சை மறுப்பு / வாழ்க்கை உயில் & மருத்துவப் பதிலாள் (Living Will / Advance Medical Directive & Healthcare Proxy)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #dbeafe; color: #1e40af; font-weight: 600; white-space: nowrap;">கண்ணியமான மரணம் & மருத்துவம்</span>
+</summary>
+<div style="padding: 16px 20px;">
+
 குணப்படுத்த முடியாத தீவிர நோய் அல்லது சுயநினைவற்ற கோமா நிலையில் மருத்துவமனையின் தீவிர சிகிச்சைப் பிரிவில் (ICU) இருக்கும்போது, செயற்கை சுவாசக் கருவிகள் (Ventilator) மூலம் உடலைத் தேவையின்றி நீண்ட நாட்கள் துன்புறுத்தாமல் இயற்கை மரணத்தை அனுமதிக்கவும், கண்ணியமாக விடைபெறவும் இந்திய உச்ச நீதிமன்றத்தின் வரலாற்றுச் சிறப்புமிக்க நெறிமுறைகளின்படி (Supreme Court Guidelines) தயாரிக்கப்படும் ஆவணமே **"வாழ்க்கை உயில்" (Advance Medical Directive / Living Will)**. 
 * இத்துடன் உங்கள் சார்பாக இக்கட்டான நேரத்தில் மருத்துவ சிகிச்சை முடிவுகளை எடுக்க ஒரு நம்பகமான குடும்ப உறுப்பினரை **மருத்துவப் பதிலாளராக (Healthcare Proxy)** நியமிக்கலாம்.
 * இந்த ஆவணத்தை முதல்நிலை நீதித்துறை நடுவர் (Judicial Magistrate of First Class - JMFC) முன்னிலையில் பதிவு செய்து மருத்துவமனைக்கும் குடும்பத்தினருக்கும் வழங்கி வைக்கலாம்.
 
-### 3. குடும்பத் தனியார் அறக்கட்டளை (Private Family Trust - Indian Trusts Act, 1882)
+</div>
+</details>
+
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>3. குடும்பத் தனியார் அறக்கட்டளை (Private Family Trust - Indian Trusts Act, 1882)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #d1fae5; color: #065f46; font-weight: 600; white-space: nowrap;">குடும்ப அறக்கட்டளை அரண்</span>
+</summary>
+<div style="padding: 16px 20px;">
+
 குறிப்பிடத்தக்க சொத்துகள் உள்ள குடும்பங்கள் அல்லது குறிப்பிட்ட குடும்பச் சூழ்நிலைகளில் ஒரு பிரைவேட் டிரஸ்ட் அமைப்பது உயிலை விட அசைக்க முடியாத பாதுகாப்பை வழங்குகிறது:
 * **நிதி முதிர்ச்சி நிபந்தனை (Spendthrift Protection):** இளம் வாரிசுகளுக்கு நிதி ஒழுக்கமின்மை இருந்தால் அல்லது பணத்தை ஊதாரித்தனமாக விரயமாக்குவதைத் தடுக்க, அவர்கள் 40 அல்லது 45 வயதை எட்டும் வரை சொத்துகளின் மூலதனத்தைப் பிரிக்காமல், அவர்களின் குடும்பச் செலவுகளுக்கு மாதாந்திரப் பராமரிப்பு நிதியை மட்டும் டிரஸ்ட் மூலம் வழங்கும் நிபந்தனையை வைக்கலாம்.
 * **மகள்களுக்கான பாதுகாப்புக் கவசம் (Divorce & Creditor Protection):** மகள்களுக்கு வழங்கப்படும் சொத்துகள் பிற்காலத்தில் அவர்களின் திருமண முறிவு வழக்குகளிலோ அல்லது அவர்களின் கணவரின் குடும்பக் கடன் மற்றும் வணிக இழப்புகளிலோ பறிபோகாமல் பாதுகாக்க அறக்கட்டளை ஒரு  கவசமாகச் செயல்படுகிறது.
 * **மாற்றுத்திறனாளி / சிறப்புக் குழந்தைகளுக்கான அறக்கட்டளை (Special Needs Child Trust):** பெற்றோரின் மறைவுக்குப் பிறகு சுயசார்பற்ற, சிறப்புக் கவனம் தேவைப்படும் குழந்தைகளின் வாழ்நாள் உணவு, தங்குமிடம், சிகிச்சை மற்றும் ஆதரவை உறுதிசெய்ய **தேசிய அறக்கட்டளைச் சட்டம், 1999 (National Trust Act, 1999)** விதிகளுக்குட்பட்டு பிரத்யேக அறக்கட்டளை அமைப்பது பெற்றோரின் மிக முக்கியமான கடமையாகும்.
 
-### 4. வாழும் காலத்திலேயே சொத்துகளைத் தானம் (Gift Deed) செய்யாதிருத்தல்!
+</div>
+</details>
+
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>4. வாழும் காலத்திலேயே சொத்துகளைத் தானம் (Gift Deed) செய்யாதிருத்தல்!</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #fee2e2; color: #991b1b; font-weight: 600; white-space: nowrap;">முதியோர் பாதுகாப்பு எச்சரிக்கை</span>
+</summary>
+<div style="padding: 16px 20px;">
+
 இந்தியாவில் பல முதியவர்கள் செய்யும் மிகப்பெரிய வரலாற்றுத் தவறு: பிள்ளைகள் அன்பாகப் பேசுகிறார்கள் என்பதற்காகவோ அல்லது அவர்களின் உணர்வுபூர்வமான வற்புறுத்தலால் வாழும் காலத்திலேயே தங்களின் அனைத்துச் சுய சம்பாத்திய சொத்துகளையும் தானப் பத்திரம் (Gift Deed / Settlement Deed) மூலம் பிள்ளைகளின் பெயருக்கு மாற்றி எழுதி வைத்துவிடுவதுதான். அதன் பிறகு பிள்ளைகளால் கைவிடப்பட்டு முதியோர் இல்லங்களிலும் வாடகை வீடுகளிலும் நிர்கதியாக நிற்கும் நிலைக்குத் தள்ளப்படுகிறார்கள்.
 * **பொன்னான விதி:** உங்கள் வாழ்நாள் முழுவதும் உங்கள் சொத்துகளின் முழு உரிமை உங்களிடமே இருக்க வேண்டும். உங்கள் மறைவுக்குப் பிறகே அவை பிள்ளைகளுக்குச் செல்ல வேண்டும் (அதை உயில் மூலம் மட்டுமே செய்ய வேண்டும்).
 * **பெற்றோர் மற்றும் மூத்த குடிமக்கள் நலச் சட்டம், 2007:** [Maintenance and Welfare of Parents and Senior Citizens Act, 2007](https://www.indiacode.nic.in/handle/123456789/2026)-ன் பிரிவு 23-ன் படி, அடிப்படைத் தேவைகளையும் பராமரிப்பையும் செய்வதாக உறுதியளித்து முதியோரிடமிருந்து சொத்தைப் பெற்றுவிட்டு பின்னர் கவனிக்காமல் விட்டால், அந்தத் தானப் பத்திரத்தை ரத்து செய்து சொத்தை மீண்டும் முதியவருக்கே பெற்றுத்தர மாவட்டக் கோட்டாட்சியர் நீதிமன்றத்திற்கு (RDO Tribunal) முழு அதிகாரம் உண்டு.
 
-### 5. தமிழ்நாடு நில ஆவணங்கள் & கணினிப் பட்டா சரிபார்த்தல் (Tamil Nadu Land Records Due Diligence)
+</div>
+</details>
+
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>5. தமிழ்நாடு நில ஆவணங்கள் & கணினிப் பட்டா சரிபார்த்தல் (Tamil Nadu Land Records Due Diligence)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #fef3c7; color: #92400e; font-weight: 600; white-space: nowrap;">தமிழக நில ஆவண ஆய்வு</span>
+</summary>
+<div style="padding: 16px 20px;">
+
 உயிலில் பூர்வீக அல்லது சுய சம்பாத்திய நிலம் மற்றும் வீடுகளைக் குறிப்பிடுவதற்கு முன்பாக, தமிழ்நாட்டில் உள்ள உங்கள் சொத்துகளின் ஆவணங்கள் சட்டப்படி முழுமையாக உள்ளதா என்பதைச் சரிபார்க்க வேண்டும்:
 * **கணினிப் பட்டா & சிட்டா (Tamil Nilam E-Patta):** தமிழக அரசின் [தமிழ் நிலம் (eservices.tn.gov.in)](https://eservices.tn.gov.in/) இணையதளத்தில் உங்களின் சர்வே எண் மற்றும் உட்பிரிவு எண் (Sub-division) பெயரில் கணினிப் பட்டா, சிட்டா மற்றும் நில வரைபடம் (FMB) உங்கள் பெயரிலேயே உள்ளதா என்பதை உறுதிசெய்யவும்.
 * **30 ஆண்டு வில்லங்கச் சான்றிதழ் (30-Year Encumbrance Certificate - EC):** தமிழகப் பதிவுத்துறையின் [TNREGINET (tnreginet.gov.in)](https://tnreginet.gov.in/) இணையதளத்தில் குறைந்தபட்சம் கடந்த 30 ஆண்டுகளுக்கான வில்லங்கச் சான்றிதழைப் பதிவிறக்கி, சொத்தின் மீது பழைய அடமானம், வங்கி இணைப்புகள் அல்லது நீதிமன்றத் தடைகள் ஏதுமில்லை என்பதை உறுதிசெய்யவும்.
 * **தாய் பத்திரங்களின் சங்கிலித் தொடர் (Parent Deeds Chain):** சொத்தின் மூலப் பத்திரங்கள் (Parent Documents) வரிசையாக உள்ளதா என்பதைச் சரிபார்த்து, அவற்றை உயில் மற்றும் அவசர காலக் கையேட்டுடன் (ICE Kit) பாதுகாப்பாக இணைத்து வைக்க வேண்டும்.
 
-### 6. மறைவுக்குப் பிறகு எந்தப் பத்திரத்திலும் அவசரமாகக் கையொப்பமிடாதிருத்தல்!
+</div>
+</details>
+
+<details style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>6. மறைவுக்குப் பிறகு எந்தப் பத்திரத்திலும் அவசரமாகக் கையொப்பமிடாதிருத்தல்!</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #ede9fe; color: #5b21b6; font-weight: 600; white-space: nowrap;">உரிமை துறப்புப் பத்திரம் எச்சரிக்கை</span>
+</summary>
+<div style="padding: 16px 20px;">
+
 குடும்பத் தலைவர் எதிர்பாராமல் மறைந்த உடனேயே நிலவும் துக்கச் சூழலையும் குழப்பத்தையும் பயன்படுத்தி, தூரத்து உறவினர்களோ அல்லது பங்காளிகளோ கொண்டுவரும் **உரிமை துறப்புப் பத்திரம் (Relinquishment Deed / Release Deed)** அல்லது பொது அதிகாரப் பத்திரங்களில் (POA) விவரம் புரியாமல் விதவை மனைவியோ அல்லது பெண் பிள்ளைகளோ அவசரத்தில் ஒருபோதும் கையொப்பமிடக் கூடாது. குடும்ப வழக்கறிஞரின் சுதந்திரமான சட்ட ஆலோசனைக்குப் பின்னரே எந்தவொரு பத்திரத்திலும் கையொப்பமிட வேண்டும்.
+
+</div>
+</details>
 
 ---
 
-## இந்தியாவில் ஆன்லைன் மூலம் உயில் எழுதும் முன்னணிச் சேவை நிறுவனங்கள்
+<h2 id="online-platforms">இந்தியாவில் ஆன்லைன் மூலம் உயில் எழுதும் முன்னணிச் சேவை நிறுவனங்கள்</h2>
 
 இன்றைய டிஜிட்டல் காலகட்டத்தில், வழக்கறிஞர் அலுவலகங்களுக்கு அலையாமல் வீட்டிலிருந்தபடியே குறைந்த கட்டணத்தில் சட்டப்பூர்வமாக உயில் தயாரித்துத் தரும் நம்பகமான ஆன்லைன் தளங்கள் (Online Legal-Tech & Estate Planning Platforms) இந்தியாவில் செயல்பட்டு வருகின்றன:
 
@@ -268,7 +531,7 @@ keywords:
 
 ---
 
-## அடிக்கடி கேட்கப்படும் கேள்விகள் (FAQs)
+<h2 id="faqs">அடிக்கடி கேட்கப்படும் கேள்விகள் (FAQs)</h2>
 
 ### 1. உயில் எழுத முத்திரைத்தாள் (Stamp Paper) தேவையா?
 **பதில்:** தேவையில்லை. உயில் எழுதுவதற்கு எந்தவித முத்திரைத் தாளும் அவசியமில்லை. ஒரு சாதாரண வெள்ளைத் தாளில் கைப்பட எழுதியோ அல்லது தட்டச்சு செய்தோ முறையான சாட்சிகளுடன் கையொப்பமிட்டால் அது சட்டப்படி முழு செல்லுபடியாகும்.

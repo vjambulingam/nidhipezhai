@@ -91,6 +91,36 @@ keywords:
 * **உறுப்பினர்கள் எண்ணிக்கை:** 20 | **அடிப்படைத் தவணை:** ₹5,000 | **மொத்தச் சீட்டு மதிப்பு:** ₹1,00,000 | **நடத்துநர் கமிஷன் (7%):** ₹7,000
 * இந்த மாதிரிக் கணக்கில் ஒவ்வொரு மாத ஏலக் கழிவும் ₹7,000 அல்லது அதற்கு மேல்; பகிரத்தக்க ஈவுத்தொகை = ஏலக் கழிவு − ₹7,000 கமிஷன். பிற கட்டணங்கள் சேர்க்கப்படவில்லை.
 
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 16px 0;">
+  <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #0D7377; border-radius: 8px; padding: 12px 14px;">
+    <div style="font-size: 12px; color: #64748b; font-weight: 600;">மொத்தச் சீட்டு மதிப்பு</div>
+    <div style="font-size: 18px; font-weight: 800; color: #0D7377; margin-top: 4px;">₹1,00,000</div>
+    <div style="font-size: 11px; color: #64748b; margin-top: 2px;">20 மாதங்கள் × ₹5,000</div>
+  </div>
+  <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #0f766e; border-radius: 8px; padding: 12px 14px;">
+    <div style="font-size: 12px; color: #64748b; font-weight: 600;">செலுத்திய நிகரத் தொகை</div>
+    <div style="font-size: 18px; font-weight: 800; color: #0f766e; margin-top: 4px;">₹93,875</div>
+    <div style="font-size: 11px; color: #64748b; margin-top: 2px;">ஈவுத்தொகை கழிவு: ₹6,125</div>
+  </div>
+  <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #0284c7; border-radius: 8px; padding: 12px 14px;">
+    <div style="font-size: 12px; color: #64748b; font-weight: 600;">சேமிப்பாளர் XIRR (20-வது மாதம்)</div>
+    <div style="font-size: 18px; font-weight: 800; color: #0284c7; margin-top: 4px;">~ −1.21%</div>
+    <div style="font-size: 11px; color: #64748b; margin-top: 2px;">₹93,000 இறுதித் தொகை</div>
+  </div>
+  <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #d97706; border-radius: 8px; padding: 12px 14px;">
+    <div style="font-size: 12px; color: #64748b; font-weight: 600;">கடன் XIRR செலவு (2-வது மாதம்)</div>
+    <div style="font-size: 18px; font-weight: 800; color: #d97706; margin-top: 4px;">~ 38.09%</div>
+    <div style="font-size: 11px; color: #64748b; margin-top: 2px;">முன்கூட்டியே கடன் எடுத்த செலவு</div>
+  </div>
+</div>
+
+<details style="margin: 16px 0; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
+<summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+  <span>📊 முழு 20 மாத விரிவான கணக்கீட்டைக் காண கிளிக் செய்யவும் (மாத வாரியாக)</span>
+  <span style="font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: #dbeafe; color: #1e40af; font-weight: 600; white-space: nowrap;">விரிவான அட்டவணை</span>
+</summary>
+<div style="padding: 16px 20px; overflow-x: auto;">
+
 | மாதம் | ஏலக் கழிவுத் தொகை / Auction Discount | நடத்துநர் கமிஷன் (7%) | மொத்த ஈவுத்தொகை (Dividend Pool) | தனிநபர் ஈவுத்தொகை / கொசுறு (Dividend / 20) | நிகரத் தவணைத் தொகை | உறுப்பினர் பெறும் தொகை |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **1** | ₹7,000 | ₹7,000 | ₹0 | ₹0 | ₹5,000 | ₹93,000 |
@@ -114,6 +144,9 @@ keywords:
 | **19** | ₹7,000 | ₹7,000 | ₹0 | ₹0 | ₹5,000 | ₹93,000 |
 | **20** | ₹7,000 | ₹7,000 | ₹0 | ₹0 | ₹5,000 | ₹93,000 |
 | **மொத்தம்** | **₹2,62,500** | **₹1,40,000** | **₹1,22,500** | **₹6,125** | **₹93,875** | — |
+
+</div>
+</details>
 
 ---
 

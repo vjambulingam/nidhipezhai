@@ -1,0 +1,387 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="855" viewBox="0 0 1200 855" role="img" aria-labelledby="best-practices-title best-practices-desc">
+  <title id="best-practices-title">உயில் எழுதும்போது பின்பற்ற வேண்டிய 9 சிறந்த நடைமுறைகள்</title>
+  <desc id="best-practices-desc">9 Essential Best Practices for Will Writing in India: 1. Revocation of Prior Wills, 2. Residuary Clause, 3. Sign Every Page, 4. Optional Registration, 5. Video Recording, 6. Letter of Wishes, 7. Periodic Updates, 8. Reasons for Unequal Shares, 9. Younger Witnesses.</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&amp;family=Noto+Sans+Tamil:wght@500;600;700&amp;display=swap');
+      .header-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 20.5px;
+        font-weight: 700;
+        fill: #ffffff;
+      }
+      .header-sub {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        fill: #d5e7e3;
+      }
+      .bp-pill-text {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+      }
+      .card-title-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 14.5px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .card-sub-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+      }
+      .bullet-text {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        fill: #334155;
+      }
+      .tag-text {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10.5px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .footer-title-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        fill: #0D7377;
+      }
+      .footer-desc-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 11.5px;
+        font-weight: 500;
+        fill: #334155;
+      }
+    </style>
+
+    <linearGradient id="headerGradBP" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D7377"/>
+      <stop offset="100%" stop-color="#102e31"/>
+    </linearGradient>
+
+    <filter id="cardShadowBP" x="-4%" y="-3%" width="108%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="855" rx="18" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- Top Header Banner -->
+  <rect x="2" y="2" width="1196" height="85" rx="16" fill="url(#headerGradBP)"/>
+  <circle cx="50" cy="44" r="24" fill="#14b8a6" fill-opacity="0.2"/>
+  
+  <!-- Parchment & Fountain Pen Icon -->
+  <path d="M 40 32 L 56 32 C 58 32 60 34 60 36 L 60 54 C 60 56 58 58 56 58 L 40 58 C 38 58 36 56 36 54 L 36 36 C 36 34 38 32 40 32 Z" fill="none" stroke="#5eead4" stroke-width="1.8"/>
+  <line x1="41" y1="38" x2="55" y2="38" stroke="#5eead4" stroke-width="1.5"/>
+  <line x1="41" y1="44" x2="55" y2="44" stroke="#5eead4" stroke-width="1.5"/>
+  <line x1="41" y1="50" x2="50" y2="50" stroke="#5eead4" stroke-width="1.5"/>
+  <circle cx="58" cy="52" r="6" fill="#10b981" stroke="#ffffff" stroke-width="1.5"/>
+  <path d="M 56 52 L 58 54 L 61 50" stroke="#ffffff" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+
+  <text x="86" y="38" class="header-tamil">உயில் எழுதும்போது பின்பற்ற வேண்டிய 9 சிறந்த நடைமுறைகள்</text>
+  <text x="86" y="60" class="header-sub">9 Essential Best Practices: குடும்பப் பிணக்குகள் &amp; சட்ட வழக்குகளற்ற அசைக்க முடியாத உயில் தயாரிப்பு</text>
+
+  <!-- ================= ROW 1 (Cards 1, 2, 3) ================= -->
+
+  <!-- CARD 1: முந்தைய உயில்கள் ரத்து -->
+  <g transform="translate(30, 100)" filter="url(#cardShadowBP)">
+    <rect width="360" height="205" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="360" height="4.5" rx="2.25" fill="#0D7377"/>
+    
+    <!-- Top Pill & Icon -->
+    <rect x="16" y="14" width="70" height="20" rx="10" fill="#e6f5f3"/>
+    <text x="51" y="28" class="bp-pill-text" fill="#0D7377" text-anchor="middle">விதி 1</text>
+    <circle cx="330" cy="24" r="14" fill="#e6f5f3"/>
+    <path d="M 324 18 L 336 30 M 336 18 L 324 30" stroke="#0D7377" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Title & Subtitle -->
+    <text x="16" y="55" class="card-title-tamil">முந்தைய உயில்களை ரத்து செய்தல்</text>
+    <text x="16" y="72" class="card-sub-tamil" fill="#0D7377">Revocation of Prior Wills</text>
+
+    <!-- Bullets -->
+    <circle cx="20" cy="94" r="2.5" fill="#0D7377"/>
+    <text x="30" y="98" class="bullet-text">தொடக்கத்திலேயே முந்தைய அனைத்து</text>
+    <text x="30" y="113" class="bullet-text">உயில்களையும் முழுமையாக ரத்து செய்க.</text>
+
+    <circle cx="20" cy="132" r="2.5" fill="#0D7377"/>
+    <text x="30" y="136" class="bullet-text">பழைய உயில்களால் பிற்காலத்தில் எழும்</text>
+    <text x="30" y="151" class="bullet-text">வாரிசு மோதல்களை ஆரம்பத்தில் தவிர்க்கும்.</text>
+
+    <!-- Bottom Tag -->
+    <rect x="16" y="170" width="130" height="22" rx="11" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1"/>
+    <text x="81" y="185" class="tag-text" fill="#0f766e">தெளிவான தொடக்கம்</text>
+  </g>
+
+  <!-- CARD 2: எஞ்சிய சொத்துகள் பிரிவு -->
+  <g transform="translate(420, 100)" filter="url(#cardShadowBP)">
+    <rect width="360" height="205" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="360" height="4.5" rx="2.25" fill="#059669"/>
+    
+    <!-- Top Pill & Icon -->
+    <rect x="16" y="14" width="70" height="20" rx="10" fill="#ecfdf5"/>
+    <text x="51" y="28" class="bp-pill-text" fill="#059669" text-anchor="middle">விதி 2</text>
+    <circle cx="330" cy="24" r="14" fill="#ecfdf5"/>
+    <!-- Vault / Safe Icon -->
+    <rect x="323" y="17" width="14" height="14" rx="2" fill="none" stroke="#059669" stroke-width="1.8"/>
+    <circle cx="330" cy="24" r="2" fill="#059669"/>
+
+    <!-- Title & Subtitle -->
+    <text x="16" y="55" class="card-title-tamil">எஞ்சிய சொத்துகள் பிரிவு (Residuary)</text>
+    <text x="16" y="72" class="card-sub-tamil" fill="#059669">Residuary Clause for Future Assets</text>
+
+    <!-- Bullets -->
+    <circle cx="20" cy="94" r="2.5" fill="#059669"/>
+    <text x="30" y="98" class="bullet-text">"எஞ்சிய அனைத்து சொத்துகளும் என்</text>
+    <text x="30" y="113" class="bullet-text">வாரிசைச் சேரும்" என எழுதுவது கட்டாயம்.</text>
+
+    <circle cx="20" cy="132" r="2.5" fill="#059669"/>
+    <text x="30" y="136" class="bullet-text">புதிய சொத்துகளும் விடுபட்ட நிதி</text>
+    <text x="30" y="151" class="bullet-text">சேமிப்புகளும் நீதிமன்ற வழக்கில் மாட்டாது.</text>
+
+    <!-- Bottom Tag -->
+    <rect x="16" y="170" width="140" height="22" rx="11" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+    <text x="86" y="185" class="tag-text" fill="#15803d">எதிர்காலச் சொத்துரிமை</text>
+  </g>
+
+  <!-- CARD 3: பக்கங்கள் தோறும் கையொப்பம் -->
+  <g transform="translate(810, 100)" filter="url(#cardShadowBP)">
+    <rect width="360" height="205" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="360" height="4.5" rx="2.25" fill="#d97706"/>
+    
+    <!-- Top Pill & Icon -->
+    <rect x="16" y="14" width="70" height="20" rx="10" fill="#fffbeb"/>
+    <text x="51" y="28" class="bp-pill-text" fill="#d97706" text-anchor="middle">விதி 3</text>
+    <circle cx="330" cy="24" r="14" fill="#fffbeb"/>
+    <!-- Pen / Signature Icon -->
+    <path d="M 324 28 L 333 19 L 336 22 L 327 31 L 322 32 Z" fill="none" stroke="#d97706" stroke-width="1.6"/>
+
+    <!-- Title & Subtitle -->
+    <text x="16" y="55" class="card-title-tamil">ஒவ்வொரு பக்கத்திலும் கையொப்பம்</text>
+    <text x="16" y="72" class="card-sub-tamil" fill="#d97706">Sign Every Page &amp; Numbering</text>
+
+    <!-- Bullets -->
+    <circle cx="20" cy="94" r="2.5" fill="#d97706"/>
+    <text x="30" y="98" class="bullet-text">கடைசிப் பக்கத்தோடு நிற்காமல், உயிலின்</text>
+    <text x="30" y="113" class="bullet-text">ஒவ்வொரு பக்கத்தின் கீழும் கையொப்பமிடுக.</text>
+
+    <circle cx="20" cy="132" r="2.5" fill="#d97706"/>
+    <text x="30" y="136" class="bullet-text">பக்க எண்களை (எ.கா: 1/4, 2/4) தருவது</text>
+    <text x="30" y="151" class="bullet-text">தாள் மாற்ற மோசடிகளைத் தடுக்கும்.</text>
+
+    <!-- Bottom Tag -->
+    <rect x="16" y="170" width="130" height="22" rx="11" fill="#fffbeb" stroke="#fde68a" stroke-width="1"/>
+    <text x="81" y="185" class="tag-text" fill="#b45309">தாள் மோசடித் தடுப்பு</text>
+  </g>
+
+  <!-- ================= ROW 2 (Cards 4, 5, 6) ================= -->
+
+  <!-- CARD 4: விருப்பப் பதிவு -->
+  <g transform="translate(30, 320)" filter="url(#cardShadowBP)">
+    <rect width="360" height="205" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="360" height="4.5" rx="2.25" fill="#2563eb"/>
+    
+    <!-- Top Pill & Icon -->
+    <rect x="16" y="14" width="70" height="20" rx="10" fill="#eff6ff"/>
+    <text x="51" y="28" class="bp-pill-text" fill="#2563eb" text-anchor="middle">விதி 4</text>
+    <circle cx="330" cy="24" r="14" fill="#eff6ff"/>
+    <!-- Stamp Ribbon Icon -->
+    <circle cx="330" cy="22" r="5" fill="none" stroke="#2563eb" stroke-width="1.7"/>
+    <path d="M 328 27 L 326 33 L 330 31 L 334 33 L 332 27" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+
+    <!-- Title & Subtitle -->
+    <text x="16" y="55" class="card-title-tamil">சார்பதிவாளர் பதிவு (Registration)</text>
+    <text x="16" y="72" class="card-sub-tamil" fill="#2563eb">Optional Under Law, Highly Recommended</text>
+
+    <!-- Bullets -->
+    <circle cx="20" cy="94" r="2.5" fill="#2563eb"/>
+    <text x="30" y="98" class="bullet-text">பதிவுச் சட்டம் பிரிவு 18: உயில் பதிவு</text>
+    <text x="30" y="113" class="bullet-text">கட்டாயமல்ல; வெள்ளைத் தாள் செல்லும்.</text>
+
+    <circle cx="20" cy="132" r="2.5" fill="#2563eb"/>
+    <text x="30" y="136" class="bullet-text">இருப்பினும், சார்பதிவகப் பதிவு உயிலுக்கு</text>
+    <text x="30" y="151" class="bullet-text">அரசுப் பதிவேட்டு நம்பகத்தன்மை தரும்.</text>
+
+    <!-- Bottom Tag -->
+    <rect x="16" y="170" width="145" height="22" rx="11" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+    <text x="88" y="185" class="tag-text" fill="#1d4ed8">சட்டப்பூர்வ நம்பகத்தன்மை</text>
+  </g>
+
+  <!-- CARD 5: வீடியோ பதிவு செய்தல் -->
+  <g transform="translate(420, 320)" filter="url(#cardShadowBP)">
+    <rect width="360" height="205" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="360" height="4.5" rx="2.25" fill="#7c3aed"/>
+    
+    <!-- Top Pill & Icon -->
+    <rect x="16" y="14" width="70" height="20" rx="10" fill="#f5f3ff"/>
+    <text x="51" y="28" class="bp-pill-text" fill="#7c3aed" text-anchor="middle">விதி 5</text>
+    <circle cx="330" cy="24" r="14" fill="#f5f3ff"/>
+    <!-- Video Camera Icon -->
+    <rect x="322" y="18" width="11" height="11" rx="2" fill="none" stroke="#7c3aed" stroke-width="1.7"/>
+    <path d="M 333 21 L 338 18 L 338 29 L 333 26 Z" fill="#7c3aed"/>
+
+    <!-- Title & Subtitle -->
+    <text x="16" y="55" class="card-title-tamil">வீடியோ பதிவு செய்தல் (Video Proof)</text>
+    <text x="16" y="72" class="card-sub-tamil" fill="#7c3aed">Video Recording of Execution</text>
+
+    <!-- Bullets -->
+    <circle cx="20" cy="94" r="2.5" fill="#7c3aed"/>
+    <text x="30" y="98" class="bullet-text">உயில் வாசித்துக் கையொப்பமிடுவதை</text>
+    <text x="30" y="113" class="bullet-text">மொபைலில் வீடியோவாகப் பதிவு செய்க.</text>
+
+    <circle cx="20" cy="132" r="2.5" fill="#7c3aed"/>
+    <text x="30" y="136" class="bullet-text">"நினைவாற்றல் இன்றி எழுதப்பட்டது"</text>
+    <text x="30" y="151" class="bullet-text">என்ற குற்றச்சாட்டுகளை உடைத்தெறியும்.</text>
+
+    <!-- Bottom Tag -->
+    <rect x="16" y="170" width="155" height="22" rx="11" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1"/>
+    <text x="93" y="185" class="tag-text" fill="#6d28d9">மறுக்கவொணா டிஜிட்டல் சான்று</text>
+  </g>
+
+  <!-- CARD 6: விருப்பக் கடிதம் -->
+  <g transform="translate(810, 320)" filter="url(#cardShadowBP)">
+    <rect width="360" height="205" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="360" height="4.5" rx="2.25" fill="#e11d48"/>
+    
+    <!-- Top Pill & Icon -->
+    <rect x="16" y="14" width="70" height="20" rx="10" fill="#fff1f2"/>
+    <text x="51" y="28" class="bp-pill-text" fill="#e11d48" text-anchor="middle">விதி 6</text>
+    <circle cx="330" cy="24" r="14" fill="#fff1f2"/>
+    <!-- Envelope / Heart Icon -->
+    <rect x="322" y="18" width="16" height="12" rx="2" fill="none" stroke="#e11d48" stroke-width="1.6"/>
+    <path d="M 322 19 L 330 25 L 338 19" fill="none" stroke="#e11d48" stroke-width="1.6"/>
+
+    <!-- Title & Subtitle -->
+    <text x="16" y="55" class="card-title-tamil">விருப்பக் கடிதம் (Letter of Wishes)</text>
+    <text x="16" y="72" class="card-sub-tamil" fill="#e11d48">Non-binding Emotional Guide to Family</text>
+
+    <!-- Bullets -->
+    <circle cx="20" cy="94" r="2.5" fill="#e11d48"/>
+    <text x="30" y="98" class="bullet-text">குடும்பத்தினர் ஒற்றுமையாக வாழ</text>
+    <text x="30" y="113" class="bullet-text">அன்பான வேண்டுகோள் மடல் இணைக்க.</text>
+
+    <circle cx="20" cy="132" r="2.5" fill="#e11d48"/>
+    <text x="30" y="136" class="bullet-text">சட்ட உயிலில் கூற இயலாத குடும்ப</text>
+    <text x="30" y="151" class="bullet-text">நெறிமுறைகள், ஆசைகளை விளக்கலாம்.</text>
+
+    <!-- Bottom Tag -->
+    <rect x="16" y="170" width="135" height="22" rx="11" fill="#fff1f2" stroke="#fecdd3" stroke-width="1"/>
+    <text x="83" y="185" class="tag-text" fill="#be123c">குடும்ப ஒற்றுமைப் பாலம்</text>
+  </g>
+
+  <!-- ================= ROW 3 (Cards 7, 8, 9) ================= -->
+
+  <!-- CARD 7: காலத்திற்கேற்ப புதுப்பித்தல் -->
+  <g transform="translate(30, 540)" filter="url(#cardShadowBP)">
+    <rect width="360" height="205" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="360" height="4.5" rx="2.25" fill="#0284c7"/>
+    
+    <!-- Top Pill & Icon -->
+    <rect x="16" y="14" width="70" height="20" rx="10" fill="#f0f9ff"/>
+    <text x="51" y="28" class="bp-pill-text" fill="#0284c7" text-anchor="middle">விதி 7</text>
+    <circle cx="330" cy="24" r="14" fill="#f0f9ff"/>
+    <!-- Sync / Refresh Icon -->
+    <path d="M 334 19 A 6 6 0 1 0 336 24 M 336 18 L 336 22 L 332 22" fill="none" stroke="#0284c7" stroke-width="1.8" stroke-linecap="round"/>
+
+    <!-- Title & Subtitle -->
+    <text x="16" y="55" class="card-title-tamil">காலத்திற்கேற்ப உயிலைப் புதுப்பித்தல்</text>
+    <text x="16" y="72" class="card-sub-tamil" fill="#0284c7">Periodic Review &amp; Codicil</text>
+
+    <!-- Bullets -->
+    <circle cx="20" cy="94" r="2.5" fill="#0284c7"/>
+    <text x="30" y="98" class="bullet-text">திருமணம், குழந்தை பிறப்பு, சொத்து</text>
+    <text x="30" y="113" class="bullet-text">மாற்றங்களின்போது புதுப்பிக்கவும்.</text>
+
+    <circle cx="20" cy="132" r="2.5" fill="#0284c7"/>
+    <text x="30" y="136" class="bullet-text">சிறிய மாற்றங்களை 'கோடிசில்' (Codicil)</text>
+    <text x="30" y="151" class="bullet-text">மூலமும் எளிதாகச் செய்யலாம்.</text>
+
+    <!-- Bottom Tag -->
+    <rect x="16" y="170" width="140" height="22" rx="11" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1"/>
+    <text x="86" y="185" class="tag-text" fill="#0369a1">காலத்திற்கேற்ற திருத்தம்</text>
+  </g>
+
+  <!-- CARD 8: சமமற்ற பங்கீட்டிற்கு விளக்கம் -->
+  <g transform="translate(420, 540)" filter="url(#cardShadowBP)">
+    <rect width="360" height="205" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="360" height="4.5" rx="2.25" fill="#b45309"/>
+    
+    <!-- Top Pill & Icon -->
+    <rect x="16" y="14" width="70" height="20" rx="10" fill="#fef3c7"/>
+    <text x="51" y="28" class="bp-pill-text" fill="#b45309" text-anchor="middle">விதி 8</text>
+    <circle cx="330" cy="24" r="14" fill="#fef3c7"/>
+    <!-- Scales Icon -->
+    <path d="M 330 18 L 330 30 M 325 21 L 335 21 M 324 25 L 328 25 M 332 27 L 336 27" stroke="#b45309" stroke-width="1.7" stroke-linecap="round"/>
+
+    <!-- Title & Subtitle -->
+    <text x="16" y="55" class="card-title-tamil">சமமற்ற பங்கீட்டிற்கு விளக்கம்</text>
+    <text x="16" y="72" class="card-sub-tamil" fill="#b45309">Documenting Reasons for Unequal Shares</text>
+
+    <!-- Bullets -->
+    <circle cx="20" cy="94" r="2.5" fill="#b45309"/>
+    <text x="30" y="98" class="bullet-text">வாரிசுகளுக்கு சமமற்ற ஒதுக்கீட்டிற்கு</text>
+    <text x="30" y="113" class="bullet-text">நியாயமான காரணங்களை விளக்குக.</text>
+
+    <circle cx="20" cy="132" r="2.5" fill="#b45309"/>
+    <text x="30" y="136" class="bullet-text">முந்தைய நிதி உதவி &amp; பராமரிப்பைக்</text>
+    <text x="30" y="151" class="bullet-text">குறிப்பிடுவது வழக்குகளைத் தடுக்கும்.</text>
+
+    <!-- Bottom Tag -->
+    <rect x="16" y="170" width="130" height="22" rx="11" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
+    <text x="81" y="185" class="tag-text" fill="#92400e">நீதிமன்ற வழக்குத் தடுப்பு</text>
+  </g>
+
+  <!-- CARD 9: 15-20 வயது இளைய சாட்சிகள் -->
+  <g transform="translate(810, 540)" filter="url(#cardShadowBP)">
+    <rect width="360" height="205" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="360" height="4.5" rx="2.25" fill="#0f766e"/>
+    
+    <!-- Top Pill & Icon -->
+    <rect x="16" y="14" width="70" height="20" rx="10" fill="#ccfbf1"/>
+    <text x="51" y="28" class="bp-pill-text" fill="#0f766e" text-anchor="middle">விதி 9</text>
+    <circle cx="330" cy="24" r="14" fill="#ccfbf1"/>
+    <!-- Two People / Witnesses Icon -->
+    <circle cx="327" cy="21" r="3" fill="none" stroke="#0f766e" stroke-width="1.5"/>
+    <path d="M 323 29 C 323 26 325 25 327 25 C 329 25 331 26 331 29" fill="none" stroke="#0f766e" stroke-width="1.5"/>
+    <circle cx="334" cy="22" r="2.5" fill="none" stroke="#0f766e" stroke-width="1.5"/>
+    <path d="M 331 29 C 331 27 332.5 26 334 26 C 335.5 26 337 27 337 29" fill="none" stroke="#0f766e" stroke-width="1.5"/>
+
+    <!-- Title & Subtitle -->
+    <text x="16" y="55" class="card-title-tamil">15-20 வயது இளைய சாட்சிகள்</text>
+    <text x="16" y="72" class="card-sub-tamil" fill="#0f766e">Younger Non-Beneficiary Witnesses</text>
+
+    <!-- Bullets -->
+    <circle cx="20" cy="94" r="2.5" fill="#0f766e"/>
+    <text x="30" y="98" class="bullet-text">சமவயதினரைத் தவிர்த்து 15–20 வயது</text>
+    <text x="30" y="113" class="bullet-text">இளைய நடுநிலை சாட்சிகளை நியமிக்க.</text>
+
+    <circle cx="20" cy="132" r="2.5" fill="#0f766e"/>
+    <text x="30" y="136" class="bullet-text">மறைவுக்குப் பின் நீதிமன்ற சாட்சியம்</text>
+    <text x="30" y="151" class="bullet-text">அளிக்க அவர்கள் நலமுடன் இருப்பர்.</text>
+
+    <!-- Bottom Tag -->
+    <rect x="16" y="170" width="135" height="22" rx="11" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1"/>
+    <text x="83" y="185" class="tag-text" fill="#0f766e">நீண்ட ஆயுள் சாட்சிகள்</text>
+  </g>
+
+  <!-- ================= BOTTOM HIGHLIGHT BAR ================= -->
+  <g transform="translate(30, 760)">
+    <rect width="1140" height="72" rx="12" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+    <rect width="6" height="72" rx="3" fill="#0D7377"/>
+    
+    <!-- Shield / Lightbulb Icon Circle -->
+    <circle cx="45" cy="36" r="18" fill="#ccfbf1"/>
+    <!-- Star / Shield Icon -->
+    <path d="M 45 25 L 53 29 C 53 38 45 44 45 44 C 45 44 37 38 37 29 Z" fill="none" stroke="#0D7377" stroke-width="1.8" stroke-linejoin="round"/>
+    <path d="M 42 34 L 44 36 L 49 31" fill="none" stroke="#0D7377" stroke-width="1.6" stroke-linecap="round"/>
+
+    <!-- Two-Line Contained Text -->
+    <text x="78" y="29" class="footer-title-tamil">பொன்னான விதி (Golden Rule): பயனாளிகள் (Beneficiaries) ஒருபோதும் உயிலில் சாட்சிகளாகக் கையொப்பமிடக் கூடாது!</text>
+    <text x="78" y="52" class="footer-desc-tamil">மருத்துவரிடம் பெறும் மனத்தகுதிச் சான்றிதழும், நம்மை விட 15–20 வயது இளைய சாட்சிகளும் உயிலுக்கு அசைக்க முடியாத சட்ட வலிமையை வழங்கும்.</text>
+  </g>
+</svg>
