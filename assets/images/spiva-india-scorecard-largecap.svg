@@ -1,0 +1,222 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="540" viewBox="0 0 1200 540" role="img" aria-labelledby="spiva-title spiva-desc">
+  <title id="spiva-title">SPIVA இந்தியா அறிக்கை: Large Cap நிதித் திட்டங்களின் தோல்வி விகிதம்</title>
+  <desc id="spiva-desc">SPIVA India Scorecard: Percentage of Active Indian Large Cap Equity Mutual Funds Underperforming the Nifty 50 TRI Benchmark over 1, 3, 5, and 10 Years.</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&amp;family=Noto+Sans+Tamil:wght@500;600;700&amp;display=swap');
+      .sp-header-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 19px;
+        font-weight: 700;
+        fill: #ffffff;
+      }
+      .sp-header-sub {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 11.5px;
+        font-weight: 500;
+        fill: #d5e7e3;
+      }
+      .sp-period {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 13.5px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .sp-fail-text {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        fill: #b91c1c;
+      }
+      .sp-pass-text {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        fill: #047857;
+      }
+      .sp-reason-title {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .sp-reason-desc {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10.5px;
+        font-weight: 500;
+        fill: #475569;
+        line-height: 1.4;
+      }
+      .sp-badge-text {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+    </style>
+
+    <linearGradient id="headerGradSpiva" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D7377"/>
+      <stop offset="100%" stop-color="#102e31"/>
+    </linearGradient>
+
+    <linearGradient id="failBarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+
+    <linearGradient id="passBarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+
+    <filter id="shadowSpiva" x="-3%" y="-4%" width="106%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="540" rx="16" fill="#f8fafc"/>
+
+  <!-- Top Banner -->
+  <rect width="1200" height="78" rx="16" fill="url(#headerGradSpiva)"/>
+  <rect y="62" width="1200" height="16" fill="url(#headerGradSpiva)"/>
+
+  <!-- Banner Icon -->
+  <g transform="translate(36, 16)">
+    <circle cx="23" cy="23" r="21" fill="#14b8a6" fill-opacity="0.25"/>
+    <path d="M 16 31 L 22 23 L 27 27 L 34 16" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="23" cy="23" r="13" fill="none" stroke="#ffffff" stroke-width="2"/>
+  </g>
+
+  <text x="95" y="34" class="sp-header-tamil">SPIVA இந்தியா அறிக்கை: Large Cap நிதித் திட்டங்களின் தோல்வி விகிதம்</text>
+  <text x="95" y="56" class="sp-header-sub">SPIVA Scorecard: பெஞ்ச்மார்க் குறியீட்டை (Nifty 50 TRI) முந்தத் தவறிய இந்தியப் பெரு முதல் செயலுள்ள நிதிகளின் சதவீதம் (%)</text>
+
+  <!-- ================= MAIN SCORECARD CONTAINER ================= -->
+  <g transform="translate(40, 96)" filter="url(#shadowSpiva)">
+    <rect width="1120" height="280" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+
+    <!-- Legend -->
+    <g transform="translate(650, 14)">
+      <rect x="0" y="2" width="14" height="14" rx="3" fill="#dc2626"/>
+      <text x="20" y="14" font-family="'Noto Sans Tamil', sans-serif" font-size="11" font-weight="700" fill="#991b1b">குறியீட்டை விடத் தோல்வி (%)</text>
+      <rect x="205" y="2" width="14" height="14" rx="3" fill="#059669"/>
+      <text x="225" y="14" font-family="'Noto Sans Tamil', sans-serif" font-size="11" font-weight="700" fill="#065f46">குறியீட்டை முந்தியவை (%)</text>
+    </g>
+
+    <!-- ROW 1: 1 YEAR -->
+    <g transform="translate(24, 40)">
+      <text x="0" y="26" class="sp-period">1 ஆண்டு காலம்</text>
+      <text x="0" y="44" font-family="'DM Sans', sans-serif" font-size="11" fill="#64748b">(1-Yr Horizon)</text>
+      
+      <!-- Progress Bar (Total width = 640px) -->
+      <!-- 58.3% of 640 = 373px -->
+      <rect x="250" y="8" width="640" height="28" rx="6" fill="#f1f5f9"/>
+      <rect x="250" y="8" width="373" height="28" rx="6" fill="url(#failBarGrad)"/>
+      <rect x="623" y="8" width="267" height="28" rx="6" fill="url(#passBarGrad)"/>
+
+      <text x="436" y="27" font-family="'DM Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">58.3% தோல்வி</text>
+      <text x="756" y="27" font-family="'DM Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">41.7% வெற்றி</text>
+
+      <!-- Stat Badge -->
+      <rect x="895" y="6" width="200" height="32" rx="6" fill="#fee2e2" stroke="#fecaca"/>
+      <text x="995" y="26" class="sp-badge-text" fill="#b91c1c">58.3% நிதித் திட்டங்கள் தோல்வி</text>
+    </g>
+
+    <!-- ROW 2: 3 YEARS -->
+    <g transform="translate(24, 98)">
+      <text x="0" y="26" class="sp-period">3 ஆண்டுகள் காலம்</text>
+      <text x="0" y="44" font-family="'DM Sans', sans-serif" font-size="11" fill="#64748b">(3-Yr Horizon)</text>
+      
+      <!-- 65.4% of 640 = 418px -->
+      <rect x="250" y="8" width="640" height="28" rx="6" fill="#f1f5f9"/>
+      <rect x="250" y="8" width="418" height="28" rx="6" fill="url(#failBarGrad)"/>
+      <rect x="668" y="8" width="222" height="28" rx="6" fill="url(#passBarGrad)"/>
+
+      <text x="459" y="27" font-family="'DM Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">65.4% தோல்வி</text>
+      <text x="779" y="27" font-family="'DM Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">34.6% வெற்றி</text>
+
+      <rect x="895" y="6" width="200" height="32" rx="6" fill="#fee2e2" stroke="#fecaca"/>
+      <text x="995" y="26" class="sp-badge-text" fill="#b91c1c">65.4% நிதித் திட்டங்கள் தோல்வி</text>
+    </g>
+
+    <!-- ROW 3: 5 YEARS (HIGHLIGHTED) -->
+    <g transform="translate(24, 156)">
+      <rect x="-8" y="0" width="1084" height="52" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-dasharray="3 3"/>
+      
+      <text x="0" y="28" class="sp-period" fill="#b91c1c">5 ஆண்டுகள் காலம்</text>
+      <text x="0" y="44" font-family="'DM Sans', sans-serif" font-size="11" font-weight="700" fill="#dc2626">★ முக்கிய மைல்கல்</text>
+      
+      <!-- 79.2% of 640 = 507px -->
+      <rect x="250" y="8" width="640" height="28" rx="6" fill="#f1f5f9"/>
+      <rect x="250" y="8" width="507" height="28" rx="6" fill="url(#failBarGrad)"/>
+      <rect x="757" y="8" width="133" height="28" rx="6" fill="url(#passBarGrad)"/>
+
+      <text x="503" y="27" font-family="'DM Sans', sans-serif" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">79.2% நிதித் திட்டங்கள் தோல்வி!</text>
+      <text x="823" y="27" font-family="'DM Sans', sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">20.8%</text>
+
+      <rect x="910" y="6" width="160" height="32" rx="6" fill="#dc2626"/>
+      <text x="990" y="26" class="sp-badge-text" fill="#ffffff">கிட்டத்தட்ட 80% தோல்வி!</text>
+    </g>
+
+    <!-- ROW 4: 10 YEARS -->
+    <g transform="translate(24, 216)">
+      <text x="0" y="26" class="sp-period">10 ஆண்டுகள் காலம்</text>
+      <text x="0" y="44" font-family="'DM Sans', sans-serif" font-size="11" fill="#64748b">(10-Yr Horizon)</text>
+      
+      <!-- 75.0% of 640 = 480px -->
+      <rect x="250" y="8" width="640" height="28" rx="6" fill="#f1f5f9"/>
+      <rect x="250" y="8" width="480" height="28" rx="6" fill="url(#failBarGrad)"/>
+      <rect x="730" y="8" width="160" height="28" rx="6" fill="url(#passBarGrad)"/>
+
+      <text x="490" y="27" font-family="'DM Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">75.0% தோல்வி</text>
+      <text x="810" y="27" font-family="'DM Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">25.0% வெற்றி</text>
+
+      <rect x="895" y="6" width="200" height="32" rx="6" fill="#fee2e2" stroke="#fecaca"/>
+      <text x="995" y="26" class="sp-badge-text" fill="#b91c1c">75.0% நிதித் திட்டங்கள் தோல்வி</text>
+    </g>
+  </g>
+
+  <!-- ================= 3 REASONS CARDS AT BOTTOM ================= -->
+  <g transform="translate(40, 392)">
+    <!-- Reason 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="354" height="128" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+      <rect width="354" height="4" rx="2" fill="#2563eb"/>
+      <rect x="14" y="14" width="28" height="28" rx="14" fill="#eff6ff"/>
+      <text x="28" y="33" font-size="14" text-anchor="middle">🏛️</text>
+      <text x="50" y="28" class="sp-reason-title">1. SEBI 2018 மறுசீரமைப்பு விதி</text>
+      <text x="50" y="44" font-family="'DM Sans', sans-serif" font-size="10" font-weight="600" fill="#2563eb">SEBI Categorization Rules</text>
+      <text x="14" y="72" class="sp-reason-desc">• பெரு முதல் நிதித் திட்டங்கள் 80% நிதியை</text>
+      <text x="14" y="88" class="sp-reason-desc">  முதல் 100 நிறுவனங்களில் முதலீடு செய்ய வேண்டும்.</text>
+      <text x="14" y="104" class="sp-reason-desc">• குறுக்குவழியில் கூடுதல் வருமானம் ஈட்ட முடியாது.</text>
+    </g>
+
+    <!-- Reason 2 -->
+    <g transform="translate(383, 0)">
+      <rect width="354" height="128" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+      <rect width="354" height="4" rx="2" fill="#0D7377"/>
+      <rect x="14" y="14" width="28" height="28" rx="14" fill="#e6f5f3"/>
+      <text x="28" y="33" font-size="14" text-anchor="middle">🔍</text>
+      <text x="50" y="28" class="sp-reason-title">2. சந்தைத் தகவல் வெளிப்படைத்தன்மை</text>
+      <text x="50" y="44" font-family="'DM Sans', sans-serif" font-size="10" font-weight="600" fill="#0D7377">Market Efficiency</text>
+      <text x="14" y="72" class="sp-reason-desc">• முதல் 100 நிறுவனங்களை உலகமே தொடர்ந்து</text>
+      <text x="14" y="88" class="sp-reason-desc">  ஆய்வு செய்வதால் ரகசியத் தகவல்கள் ஏதுமில்லை.</text>
+      <text x="14" y="104" class="sp-reason-desc">• மேலாளர்கள் சந்தையைத் தொடர்ந்து முந்துவது கடினம்.</text>
+    </g>
+
+    <!-- Reason 3 -->
+    <g transform="translate(766, 0)">
+      <rect width="354" height="128" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+      <rect width="354" height="4" rx="2" fill="#d97706"/>
+      <rect x="14" y="14" width="28" height="28" rx="14" fill="#fffbeb"/>
+      <text x="28" y="33" font-size="14" text-anchor="middle">👤</text>
+      <text x="50" y="28" class="sp-reason-title">3. மேலாளர் விலகல் ஆபத்து (Risk)</text>
+      <text x="50" y="44" font-family="'DM Sans', sans-serif" font-size="10" font-weight="600" fill="#d97706">Key Person Risk &amp; Style Drift</text>
+      <text x="14" y="72" class="sp-reason-desc">• திறமையான நிதி மேலாளர் விலகும்போதும்,</text>
+      <text x="14" y="88" class="sp-reason-desc">  முதலீட்டுப் பாணி விலகும்போதும் (Style Drift)</text>
+      <text x="14" y="104" class="sp-reason-desc">  முந்தைய வெற்றி நிலைக்காமல் வருமானம் சரியும்.</text>
+    </g>
+  </g>
+</svg>

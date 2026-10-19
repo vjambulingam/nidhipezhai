@@ -1,0 +1,313 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="665" viewBox="0 0 1200 665" role="img" aria-labelledby="hl-mf-title hl-mf-desc">
+  <title id="hl-mf-title">வீட்டுக் கடன் முன்கூட்டியே அடைப்பு vs பங்குச் சந்தையில் முதலீடு: ஒப்பீட்டு வழிகாட்டி</title>
+  <desc id="hl-mf-desc">Home Loan Prepayment vs. Mutual Fund Investment Comparison: Returns, Liquidity, Tax Impact, Behavioral Psychology, Suitability, and Alpha Definition.</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&amp;family=Noto+Sans+Tamil:wght@500;600;700&amp;display=swap');
+      .header-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        fill: #ffffff;
+      }
+      .header-sub {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        fill: #d5e7e3;
+      }
+      .hl-pill-text {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10.5px;
+        font-weight: 700;
+      }
+      .card-title-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 14.5px;
+        font-weight: 700;
+        fill: #0f172a;
+        text-anchor: middle;
+      }
+      .card-sub-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        text-anchor: middle;
+      }
+      .section-heading {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10.5px;
+        font-weight: 700;
+      }
+      .bullet-text {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10.5px;
+        font-weight: 500;
+        fill: #334155;
+      }
+      .tag-text {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10.5px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .footer-title-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 12.5px;
+        font-weight: 700;
+        fill: #0D7377;
+      }
+      .footer-desc-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 11.2px;
+        font-weight: 500;
+        fill: #334155;
+      }
+      .alpha-title-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 12.5px;
+        font-weight: 700;
+        fill: #1e40af;
+      }
+      .alpha-desc-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 11.2px;
+        font-weight: 500;
+        fill: #334155;
+      }
+    </style>
+
+    <linearGradient id="headerGradHLMF" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D7377"/>
+      <stop offset="100%" stop-color="#102e31"/>
+    </linearGradient>
+
+    <filter id="cardShadowHLMF" x="-5%" y="-3%" width="110%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="665" rx="18" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- Top Header Banner -->
+  <rect x="2" y="2" width="1196" height="85" rx="16" fill="url(#headerGradHLMF)"/>
+  <circle cx="50" cy="44" r="24" fill="#14b8a6" fill-opacity="0.2"/>
+  
+  <!-- Balance Scale & Upward Arrow Icon -->
+  <path d="M 50 32 L 50 54 M 42 37 L 58 37 M 40 46 L 44 46 M 56 46 L 60 46" stroke="#5eead4" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="50" cy="33" r="2.5" fill="#5eead4"/>
+  <path d="M 42 37 L 39 46 M 42 37 L 45 46 M 58 37 L 55 46 M 58 37 L 61 46" stroke="#5eead4" stroke-width="1.4" fill="none"/>
+
+  <text x="86" y="38" class="header-tamil">வீட்டுக் கடன் முன்கூட்டியே அடைப்பு vs பங்குச் சந்தையில் முதலீடு: ஒப்பீட்டு வழிகாட்டி</text>
+  <text x="86" y="60" class="header-sub">Debt Freedom vs Wealth Compounding: எந்தச் சூழல் யாருக்கு, எப்போது உகந்தது? — 5 முக்கிய நிதிப் பரிமாணங்கள்</text>
+
+  <!-- ================= 5 COMPARISON CARDS ================= -->
+
+  <!-- CARD 1: வருமானம் & ரிஸ்க் -->
+  <g transform="translate(30, 100)" filter="url(#cardShadowHLMF)">
+    <rect width="216" height="390" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="216" height="5" rx="2.5" fill="#0D7377"/>
+    
+    <rect x="73" y="14" width="70" height="20" rx="10" fill="#e6f5f3"/>
+    <text x="108" y="28" class="hl-pill-text" fill="#0D7377" text-anchor="middle">காரணி 1</text>
+    
+    <circle cx="108" cy="60" r="18" fill="#e6f5f3"/>
+    <path d="M 100 64 L 105 59 L 109 63 L 116 56 M 112 56 L 116 56 L 116 60" stroke="#0D7377" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="108" y="100" class="card-title-tamil">வருமானம் &amp; ரிஸ்க்</text>
+    <text x="108" y="117" class="card-sub-tamil" fill="#0D7377">Returns &amp; Risk</text>
+
+    <!-- Prepayment Box -->
+    <rect x="12" y="132" width="192" height="95" rx="8" fill="#f0fdfa" stroke="#ccfbf1" stroke-width="1"/>
+    <text x="20" y="149" class="section-heading" fill="#0f766e">🏠 கடன் முன்கூட்டிய அடைப்பு:</text>
+    <text x="20" y="167" class="bullet-text">• 8.5% கடன் வட்டி மிச்சம்.</text>
+    <text x="20" y="183" class="bullet-text">• 100% உத்தரவாத லாபம்.</text>
+    <text x="20" y="199" class="bullet-text">• பூஜ்ஜிய சந்தை அபாயம்.</text>
+    <text x="20" y="215" class="bullet-text">• வரிவிலக்கு தேவையில்லை.</text>
+
+    <!-- SIP Box -->
+    <rect x="12" y="237" width="192" height="95" rx="8" fill="#ecfdf5" stroke="#d1fae5" stroke-width="1"/>
+    <text x="20" y="254" class="section-heading" fill="#065f46">📈 மியூச்சுவல் ஃபண்ட் SIP:</text>
+    <text x="20" y="272" class="bullet-text">• 12% எதிர்பார்க்கப்படும் CAGR.</text>
+    <text x="20" y="288" class="bullet-text">• கூட்டு வட்டியின் ஆற்றல்.</text>
+    <text x="20" y="304" class="bullet-text">• சந்தை ஏற்ற இறக்கம் உண்டு.</text>
+    <text x="20" y="320" class="bullet-text">• ஆல்ஃபா (+3.5% உபரி லாபம்).</text>
+
+    <rect x="16" y="346" width="184" height="26" rx="13" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1"/>
+    <text x="108" y="363" class="tag-text" fill="#0f766e">உத்தரவாதம் vs வளர்ச்சி</text>
+  </g>
+
+  <!-- CARD 2: பணப்புழக்கம் -->
+  <g transform="translate(261, 100)" filter="url(#cardShadowHLMF)">
+    <rect width="216" height="390" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="216" height="5" rx="2.5" fill="#059669"/>
+    
+    <rect x="73" y="14" width="70" height="20" rx="10" fill="#ecfdf5"/>
+    <text x="108" y="28" class="hl-pill-text" fill="#059669" text-anchor="middle">காரணி 2</text>
+    
+    <circle cx="108" cy="60" r="18" fill="#ecfdf5"/>
+    <!-- Wallet / Liquidity Icon -->
+    <rect x="99" y="52" width="18" height="15" rx="2" fill="none" stroke="#059669" stroke-width="1.8"/>
+    <circle cx="111" cy="60" r="1.8" fill="#059669"/>
+
+    <text x="108" y="100" class="card-title-tamil">பணப்புழக்கம்</text>
+    <text x="108" y="117" class="card-sub-tamil" fill="#059669">Emergency Liquidity</text>
+
+    <!-- Prepayment Box -->
+    <rect x="12" y="132" width="192" height="95" rx="8" fill="#fef2f2" stroke="#fee2e2" stroke-width="1"/>
+    <text x="20" y="149" class="section-heading" fill="#991b1b">🏠 கடன் முன்கூட்டிய அடைப்பு:</text>
+    <text x="20" y="167" class="bullet-text">• சுவரில் முடங்கும் பணம்.</text>
+    <text x="20" y="183" class="bullet-text">• அவசரத்திற்கு எடுக்க முடியாது.</text>
+    <text x="20" y="199" class="bullet-text">• வேலை இழந்தால் ஆபத்து.</text>
+    <text x="20" y="215" class="bullet-text">• House-rich, Cash-poor!</text>
+
+    <!-- SIP Box -->
+    <rect x="12" y="237" width="192" height="95" rx="8" fill="#ecfdf5" stroke="#d1fae5" stroke-width="1"/>
+    <text x="20" y="254" class="section-heading" fill="#065f46">📈 மியூச்சுவல் ஃபண்ட் SIP:</text>
+    <text x="20" y="272" class="bullet-text">• முழுமையான பணப்புழக்கம்.</text>
+    <text x="20" y="288" class="bullet-text">• 2-3 நாட்களில் வங்கிக் கணக்கில்.</text>
+    <text x="20" y="304" class="bullet-text">• அவசர நிதிக்குப் பாதுகாப்பு.</text>
+    <text x="20" y="320" class="bullet-text">• பகுதித் தொகையும் எடுக்கலாம்.</text>
+
+    <rect x="16" y="346" width="184" height="26" rx="13" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+    <text x="108" y="363" class="tag-text" fill="#15803d">பண முடக்கம் vs புழக்கம்</text>
+  </g>
+
+  <!-- CARD 3: வரி நடைமுறை -->
+  <g transform="translate(492, 100)" filter="url(#cardShadowHLMF)">
+    <rect width="216" height="390" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="216" height="5" rx="2.5" fill="#d97706"/>
+    
+    <rect x="73" y="14" width="70" height="20" rx="10" fill="#fffbeb"/>
+    <text x="108" y="28" class="hl-pill-text" fill="#d97706" text-anchor="middle">காரணி 3</text>
+    
+    <circle cx="108" cy="60" r="18" fill="#fffbeb"/>
+    <!-- Receipt / Tax Icon -->
+    <rect x="100" y="51" width="16" height="18" rx="1.5" fill="none" stroke="#d97706" stroke-width="1.8"/>
+    <line x1="104" y1="56" x2="112" y2="56" stroke="#d97706" stroke-width="1.5"/>
+    <line x1="104" y1="61" x2="112" y2="61" stroke="#d97706" stroke-width="1.5"/>
+
+    <text x="108" y="100" class="card-title-tamil">வரி நடைமுறை</text>
+    <text x="108" y="117" class="card-sub-tamil" fill="#d97706">Tax Rules 2024-25</text>
+
+    <!-- Prepayment Box -->
+    <rect x="12" y="132" width="192" height="95" rx="8" fill="#fffbeb" stroke="#fde68a" stroke-width="1"/>
+    <text x="20" y="149" class="section-heading" fill="#92400e">🏠 கடன் முன்கூட்டிய அடைப்பு:</text>
+    <text x="20" y="167" class="bullet-text">• புதிய வரி முறையில் (New</text>
+    <text x="20" y="183" class="bullet-text">Regime) சலுகை இல்லை.</text>
+    <text x="20" y="199" class="bullet-text">• பழைய முறை: ₹2L வட்டிக் கழிவு.</text>
+    <text x="20" y="215" class="bullet-text">• பயன் குறைந்தால் வட்டி 8.5%.</text>
+
+    <!-- SIP Box -->
+    <rect x="12" y="237" width="192" height="95" rx="8" fill="#fffbeb" stroke="#fde68a" stroke-width="1"/>
+    <text x="20" y="254" class="section-heading" fill="#92400e">📈 மியூச்சுவல் ஃபண்ட் SIP:</text>
+    <text x="20" y="272" class="bullet-text">• ₹1.25L வரை LTCG வரிவிலக்கு.</text>
+    <text x="20" y="288" class="bullet-text">• கூடுதல் லாபத்திற்கு 12.5% வரி.</text>
+    <text x="20" y="304" class="bullet-text">• வரிக்குப் பின்னும் ~10.5% நிகர</text>
+    <text x="20" y="320" class="bullet-text">ஆதாயம் கிடைக்க வாய்ப்பு.</text>
+
+    <rect x="16" y="346" width="184" height="26" rx="13" fill="#fffbeb" stroke="#fde68a" stroke-width="1"/>
+    <text x="108" y="363" class="tag-text" fill="#b45309">வரிச் சலுகை நிதர்சனம்</text>
+  </g>
+
+  <!-- CARD 4: உளவியல் அமைதி -->
+  <g transform="translate(723, 100)" filter="url(#cardShadowHLMF)">
+    <rect width="216" height="390" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="216" height="5" rx="2.5" fill="#7c3aed"/>
+    
+    <rect x="73" y="14" width="70" height="20" rx="10" fill="#f5f3ff"/>
+    <text x="108" y="28" class="hl-pill-text" fill="#7c3aed" text-anchor="middle">காரணி 4</text>
+    
+    <circle cx="108" cy="60" r="18" fill="#f5f3ff"/>
+    <!-- Heart / Peace of Mind Icon -->
+    <path d="M 108 67 C 108 67 101 62 98 58 C 95 54 97 50 101 50 C 104 50 107 53 108 55 C 109 53 112 50 115 50 C 119 50 121 54 118 58 C 115 62 108 67 108 67 Z" fill="none" stroke="#7c3aed" stroke-width="1.8" stroke-linejoin="round"/>
+
+    <text x="108" y="100" class="card-title-tamil">உளவியல் அமைதி</text>
+    <text x="108" y="117" class="card-sub-tamil" fill="#7c3aed">Peace of Mind</text>
+
+    <!-- Prepayment Box -->
+    <rect x="12" y="132" width="192" height="95" rx="8" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1"/>
+    <text x="20" y="149" class="section-heading" fill="#6d28d9">🏠 கடன் முன்கூட்டிய அடைப்பு:</text>
+    <text x="20" y="167" class="bullet-text">• கடன் சுமையற்ற நிம்மதி.</text>
+    <text x="20" y="183" class="bullet-text">• EMI கவலை இல்லாத வாழ்க்கை.</text>
+    <text x="20" y="199" class="bullet-text">• அசல் பத்திரம் கையில் வரும்.</text>
+    <text x="20" y="215" class="bullet-text">• இணையற்ற மன அமைதி!</text>
+
+    <!-- SIP Box -->
+    <rect x="12" y="237" width="192" height="95" rx="8" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1"/>
+    <text x="20" y="254" class="section-heading" fill="#6d28d9">📈 மியூச்சுவல் ஃபண்ட் SIP:</text>
+    <text x="20" y="272" class="bullet-text">• சந்தை வீழ்ச்சியில் பயம் வரும்.</text>
+    <text x="20" y="288" class="bullet-text">• அதிக நிதி ஒழுக்கம் தேவை.</text>
+    <text x="20" y="304" class="bullet-text">• 10-15 ஆண்டுப் பொறுமை.</text>
+    <text x="20" y="320" class="bullet-text">• உணர்வுகளை அடக்க வேண்டும்.</text>
+
+    <rect x="16" y="346" width="184" height="26" rx="13" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1"/>
+    <text x="108" y="363" class="tag-text" fill="#6d28d9">மன அமைதி vs மனப்பக்குவம்</text>
+  </g>
+
+  <!-- CARD 5: யாருக்கு ஏற்றது? -->
+  <g transform="translate(954, 100)" filter="url(#cardShadowHLMF)">
+    <rect width="216" height="390" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="216" height="5" rx="2.5" fill="#2563eb"/>
+    
+    <rect x="73" y="14" width="70" height="20" rx="10" fill="#eff6ff"/>
+    <text x="108" y="28" class="hl-pill-text" fill="#2563eb" text-anchor="middle">காரணி 5</text>
+    
+    <circle cx="108" cy="60" r="18" fill="#eff6ff"/>
+    <!-- Target / Profile Icon -->
+    <circle cx="108" cy="60" r="10" fill="none" stroke="#2563eb" stroke-width="1.7"/>
+    <circle cx="108" cy="60" r="4" fill="#2563eb"/>
+
+    <text x="108" y="100" class="card-title-tamil">யாருக்கு ஏற்றது?</text>
+    <text x="108" y="117" class="card-sub-tamil" fill="#2563eb">Suitable Profile</text>
+
+    <!-- Prepayment Box -->
+    <rect x="12" y="132" width="192" height="95" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+    <text x="20" y="149" class="section-heading" fill="#1d4ed8">🏠 கடன் முன்கூட்டிய அடைப்பு:</text>
+    <text x="20" y="167" class="bullet-text">• 45+ வயதுடையவர்கள்.</text>
+    <text x="20" y="183" class="bullet-text">• ஓய்வுக்காலம் நெருங்குவோர்.</text>
+    <text x="20" y="199" class="bullet-text">• நிலையற்ற தொழில்/வருமானம்.</text>
+    <text x="20" y="215" class="bullet-text">• வட்டிப் பயம் உள்ளவர்கள்.</text>
+
+    <!-- SIP Box -->
+    <rect x="12" y="237" width="192" height="95" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+    <text x="20" y="254" class="section-heading" fill="#1d4ed8">📈 மியூச்சுவல் ஃபண்ட் SIP:</text>
+    <text x="20" y="272" class="bullet-text">• 25-38 வயது இளைஞர்கள்.</text>
+    <text x="20" y="288" class="bullet-text">• 15+ ஆண்டுகள் பணிக்காலம்.</text>
+    <text x="20" y="304" class="bullet-text">• நிலையான பணி உள்ளவர்கள்.</text>
+    <text x="20" y="320" class="bullet-text">• பணவீக்கத்தை வெல்ல நினைப்போர்.</text>
+
+    <rect x="16" y="346" width="184" height="26" rx="13" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+    <text x="108" y="363" class="tag-text" fill="#1d4ed8">வயது &amp; நிதி இலக்குகள்</text>
+  </g>
+
+  <!-- ================= BOTTOM TAKEAWAY BAR ================= -->
+  <g transform="translate(30, 504)" filter="url(#cardShadowHLMF)">
+    <rect width="1140" height="68" rx="12" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+    <rect width="6" height="68" rx="3" fill="#0D7377"/>
+    
+    <circle cx="36" cy="34" r="16" fill="#ccfbf1"/>
+    <!-- Star / Spark Icon -->
+    <path d="M 36 25 L 38 31 L 44 31 L 39 35 L 41 41 L 36 37 L 31 41 L 33 35 L 28 31 L 34 31 Z" fill="#0D7377"/>
+
+    <text x="64" y="27" class="footer-title-tamil">💡 தங்கச் சமநிலை உத்தி (The Golden Hybrid Strategy): இரண்டில் ஒன்றைத் தேர்வு செய்ய வேண்டிய கட்டாயமில்லை!</text>
+    <text x="64" y="46" class="footer-desc-tamil">உங்களின் உபரிப் பணத்தை 50% கடன் முன்கூட்டிய அடைப்பிற்கும், 50% மியூச்சுவல் ஃபண்ட் SIP-க்கும் பிரித்து முதலீடு செய்வதன் மூலம்,</text>
+    <text x="64" y="60" class="footer-desc-tamil">கடன் சுமையை விரைவாகக் குறைப்பதோடு, நீண்டகாலத்தில் பல கோடிகள் கொண்ட மிகப்பெரிய செல்வக் குவியலையும் உருவாக்க முடியும்!</text>
+  </g>
+
+  <!-- ================= ALPHA DEFINITION CALLOUT ================= -->
+  <g transform="translate(30, 582)" filter="url(#cardShadowHLMF)">
+    <rect width="1140" height="68" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <rect width="6" height="68" rx="3" fill="#2563eb"/>
+    
+    <circle cx="36" cy="34" r="16" fill="#dbeafe"/>
+    <!-- Alpha Greek Symbol -->
+    <text x="36" y="41" font-family="'DM Sans', 'Noto Sans Tamil', sans-serif" font-size="18" font-weight="700" fill="#2563eb" text-anchor="middle">α</text>
+
+    <text x="64" y="27" class="alpha-title-tamil">📘 நிதி அகராதி — "ஆல்ஃபா" (Alpha) என்றால் என்ன?</text>
+    <text x="64" y="46" class="alpha-desc-tamil"><tspan font-weight="700" fill="#1e40af">ஆல்ஃபா (Alpha):</tspan> வீட்டுக் கடன் வட்டி (8.5%) போன்ற அடிப்படைச் செலவு / அளவுகோலைவிட முதலீட்டில் கூடுதலாக ஈட்டப்படும் நிகர உபரி லாபமாகும் (Excess Return).</text>
+    <text x="64" y="60" class="alpha-desc-tamil">எ.கா: கடன் வட்டி 8.5% ஆக உள்ளபோது, மியூச்சுவல் ஃபண்ட் 12% தந்தால், இடையில் கிடைக்கும் கூடுதல் <tspan font-weight="700" fill="#15803d">+3.5% உபரி லாபமே பாசிட்டிவ் ஆல்ஃபா (Positive Alpha)!</tspan></text>
+  </g>
+</svg>

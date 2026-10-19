@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="530" viewBox="0 0 1200 530" role="img" aria-labelledby="cs-title cs-desc">
+  <title id="cs-title">சந்தை செயல்திறன் மற்றும் நவீன கோர்-சாட்டிலைட் முதலீட்டு உத்தி</title>
+  <desc id="cs-desc">Market Efficiency across Large, Mid, and Small Cap segments, and the modern Core and Satellite portfolio strategy allocating 70% to passive index funds and 30% to active satellite funds.</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700;800&amp;family=Noto+Sans+Tamil:wght@500;600;700;800&amp;display=swap');
+      .cs-hdr-title {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 18.5px;
+        font-weight: 700;
+        fill: #ffffff;
+      }
+      .cs-hdr-sub {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        fill: #d5e7e3;
+      }
+      .cs-card-title {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+      }
+      .cs-card-sub {
+        font-family: 'DM Sans', 'Noto Sans Tamil', sans-serif;
+        font-size: 11.5px;
+        font-weight: 600;
+      }
+      .cs-tier-title {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .cs-tier-sub {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10.5px;
+        font-weight: 500;
+        fill: #475569;
+      }
+      .cs-badge-txt {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10.5px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .cs-block-title {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      .cs-block-desc {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10.5px;
+        font-weight: 500;
+        fill: #334155;
+      }
+      .cs-ftr-txt {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        fill: #065f46;
+        text-anchor: middle;
+      }
+    </style>
+
+    <linearGradient id="csHdrGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D7377"/>
+      <stop offset="100%" stop-color="#102e31"/>
+    </linearGradient>
+
+    <filter id="csCardShadow" x="-3%" y="-4%" width="106%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="530" fill="#f8fafc" rx="14"/>
+  <rect width="1200" height="530" fill="none" stroke="#e2e8f0" stroke-width="1.5" rx="14"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1200" height="72" fill="url(#csHdrGrad)" rx="14"/>
+  <rect x="0" y="58" width="1200" height="14" fill="#102e31"/>
+
+  <g transform="translate(40, 24)">
+    <circle cx="16" cy="16" r="16" fill="rgba(255,255,255,0.12)"/>
+    <circle cx="16" cy="16" r="7" fill="none" stroke="#e5c58e" stroke-width="2.5"/>
+    <circle cx="23" cy="9" r="2.5" fill="#e5c58e"/>
+    <text x="44" y="16" class="cs-hdr-title">சந்தை செயல்திறன் மற்றும் நவீன கோர்-சாட்டிலைட் முதலீட்டு உத்தி</text>
+    <text x="44" y="34" class="cs-hdr-sub">சந்தை திறன் வேறுபாடுகள் (Market Efficiency Tiers) மற்றும் முதலீட்டுத் தொகுப்பை அமைக்கும் உத்தி</text>
+  </g>
+
+  <!-- MAIN BODY: TWO HALVES (y: 86 to 452, height: 366) -->
+
+  <!-- LEFT HALF: Market Efficiency Pyramid -->
+  <g transform="translate(40, 86)">
+    <rect width="545" height="366" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#csCardShadow)"/>
+    <rect width="545" height="6" rx="3" fill="#0D7377"/>
+
+    <g transform="translate(20, 20)">
+      <text x="0" y="15" class="cs-card-title" fill="#0D7377">சந்தை செயல்திறன் அடுக்குகள் (Market Efficiency Tiers)</text>
+      <text x="0" y="32" class="cs-card-sub" fill="#64748b">தகவல் சமச்சீர்மை எங்கு குறைவாக உள்ளதோ அங்கு மட்டுமே ஆல்ஃபா சாத்தியம்</text>
+    </g>
+
+    <!-- Tier 1: Large Cap -->
+    <g transform="translate(20, 66)">
+      <rect width="505" height="84" rx="8" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.2"/>
+      <rect width="6" height="84" rx="3" fill="#0284c7"/>
+
+      <text x="18" y="24" class="cs-tier-title" fill="#0369a1">1. பெரு முதல் (Large Cap)</text>
+      <rect x="350" y="8" width="140" height="22" rx="4" fill="#e0f2fe"/>
+      <text x="420" y="23" class="cs-badge-txt" fill="#0369a1">அதிகத் திறன்</text>
+
+      <text x="18" y="48" class="cs-tier-sub">• முதல் 100 நிறுவனங்கள்; ஆய்வாளர்களின் தொடர் கண்காணிப்பு.</text>
+      <text x="18" y="66" class="cs-tier-sub">• <tspan font-weight="700" fill="#0284c7">பரிந்துரை:</tspan> குறியீட்டு நிதியே சிறந்தது (Passive Index Fund).</text>
+    </g>
+
+    <!-- Tier 2: Mid Cap -->
+    <g transform="translate(20, 160)">
+      <rect width="505" height="84" rx="8" fill="#fdf4ff" stroke="#f5d0fe" stroke-width="1.2"/>
+      <rect width="6" height="84" rx="3" fill="#c026d3"/>
+
+      <text x="18" y="24" class="cs-tier-title" fill="#a21caf">2. நடு முதல் (Midcap)</text>
+      <rect x="350" y="8" width="140" height="22" rx="4" fill="#fae8ff"/>
+      <text x="420" y="23" class="cs-badge-txt" fill="#a21caf">நடுத்தரத் திறன்</text>
+
+      <text x="18" y="48" class="cs-tier-sub">• 101–250 நிறுவனங்கள்; ஆய்வு பகுதியளவு மட்டுமே.</text>
+      <text x="18" y="66" class="cs-tier-sub">• <tspan font-weight="700" fill="#a21caf">பரிந்துரை:</tspan> குறியீட்டு அல்லது தரமான செயலுள்ள நிதி.</text>
+    </g>
+
+    <!-- Tier 3: Small Cap -->
+    <g transform="translate(20, 254)">
+      <rect width="505" height="92" rx="8" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1.2"/>
+      <rect width="6" height="92" rx="3" fill="#059669"/>
+
+      <text x="18" y="24" class="cs-tier-title" fill="#065f46">3. சிறு முதல் (Smallcap)</text>
+      <rect x="350" y="8" width="140" height="22" rx="4" fill="#d1fae5"/>
+      <text x="420" y="23" class="cs-badge-txt" fill="#065f46">குறைந்த திறன்</text>
+
+      <text x="18" y="48" class="cs-tier-sub">• 251-வது இடத்திற்கு மேல்; நிறுவன ஆய்வு குறைவாக இருக்கும்.</text>
+      <text x="18" y="66" class="cs-tier-sub">• <tspan font-weight="700" fill="#059669">பரிந்துரை:</tspan> செயலுள்ள மேலாளரால் ஆல்ஃபா வாய்ப்பு உண்டு.</text>
+    </g>
+  </g>
+
+  <!-- RIGHT HALF: Core & Satellite Strategy -->
+  <g transform="translate(615, 86)">
+    <rect width="545" height="366" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#csCardShadow)"/>
+    <rect width="545" height="6" rx="3" fill="#059669"/>
+
+    <g transform="translate(20, 20)">
+      <text x="0" y="15" class="cs-card-title" fill="#059669">நவீன கோர் &amp; சாட்டிலைட் கட்டமைப்பு (Core &amp; Satellite)</text>
+      <text x="0" y="32" class="cs-card-sub" fill="#64748b">பாதுகாப்புடன் கூடிய ஆல்ஃபா ஈட்டும் நவீன முதலீட்டுத் தொகுப்புக் கலவை</text>
+    </g>
+
+    <!-- Core Portfolio Card (70%) -->
+    <g transform="translate(20, 66)">
+      <rect width="505" height="130" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+      <rect width="8" height="130" rx="4" fill="#16a34a"/>
+
+      <g transform="translate(20, 16)">
+        <circle cx="16" cy="16" r="16" fill="#dcfce7"/>
+        <text x="16" y="22" font-family="'DM Sans', sans-serif" font-size="13px" font-weight="800" fill="#16a34a" text-anchor="middle">70%</text>
+
+        <text x="44" y="15" class="cs-block-title" fill="#166534">CORE PORTFOLIO (இதயப் பகுதி - 70%)</text>
+        <text x="44" y="30" class="cs-card-sub" fill="#15803d">குறைந்த கட்டண Nifty 50 + Nifty Next 50 செயல் வேண்டா நிதிகள்</text>
+      </g>
+
+      <text x="24" y="78" class="cs-block-desc">• முதல் 100 நிறுவனங்கள் உங்கள் செல்வத்திற்கு அரணாகும்.</text>
+      <text x="24" y="96" class="cs-block-desc">• மனிதத் தவறோ பாணி விலகலோ (Style Drift) இங்கு இல்லை.</text>
+      <text x="24" y="114" class="cs-block-desc">• குறைந்த செலவு (~0.18%); கூட்டு வட்டி இழப்பு குறையும்.</text>
+    </g>
+
+    <!-- Satellite Portfolio Card (30%) -->
+    <g transform="translate(20, 208)">
+      <rect width="505" height="138" rx="10" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5"/>
+      <rect width="8" height="138" rx="4" fill="#d97706"/>
+
+      <g transform="translate(20, 16)">
+        <circle cx="16" cy="16" r="16" fill="#fef3c7"/>
+        <text x="16" y="22" font-family="'DM Sans', sans-serif" font-size="13px" font-weight="800" fill="#d97706" text-anchor="middle">30%</text>
+
+        <text x="44" y="15" class="cs-block-title" fill="#92400e">SATELLITE PORTFOLIO (துணைப் பகுதி - 30%)</text>
+        <text x="44" y="30" class="cs-card-sub" fill="#b45309">ஒரு தரமான Mid-Cap / Small-Cap / Flexi-Cap செயலுள்ள நிதித் திட்டம்</text>
+      </g>
+
+      <text x="24" y="78" class="cs-block-desc">• குறைந்த செயல்திறன் பிரிவுகளில் மேலாளர் ஆல்ஃபா தேடலாம்.</text>
+      <text x="24" y="96" class="cs-block-desc">• 70% மூலதனம் பாதுகாப்பதால் கூடுதல் ரிஸ்க் எடுக்கலாம்.</text>
+      <text x="24" y="114" class="cs-block-desc">• மேலாளர் சறுக்கினாலும் மொத்தப் பாதிப்பு குறையும்.</text>
+    </g>
+  </g>
+
+  <!-- FOOTER RULE BANNER (y: 466, height: 48) -->
+  <g transform="translate(40, 466)">
+    <rect width="1120" height="48" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+    <text x="560" y="20" class="cs-ftr-txt">💡 பொன்மொழி: 70% செல்வத்தை செயல் வேண்டா குறியீட்டு நிதிகளிலும் (Core),</text>
+    <text x="560" y="37" class="cs-ftr-txt">30% தொகையை ஆல்ஃபா வாய்ப்புள்ள சிறிய நிறுவன செயலுள்ள நிதித் திட்டங்களிலும் (Satellite) முதலீடு செய்வதே தலைசிறந்த உத்தி!</text>
+  </g>
+</svg>

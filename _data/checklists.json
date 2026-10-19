@@ -21,5 +21,16 @@
         "url": "/checklists/icoe-checklist.html"
       }
     ]
+  },
+  {
+    "category": "முதலீடு மற்றும் செல்வ உருவாக்கம்",
+    "items": [
+      {
+        "title": "குறியீட்டு நிதித் திட்ட தேர்வு சரிபார்ப்புப் பட்டியல்",
+        "type": "Index Fund Selection Checklist",
+        "description": "குறைந்த நிதித்திட்ட நிர்வாகச் செலவு விகிதம் (TER), குறைந்த பின்தொடர்தல் பிழை (Tracking Error) மற்றும் சிறந்த Nifty 50 / Next 50 குறியீட்டு நிதித் திட்டங்களைத் தேர்ந்தெடுக்கும் படிநிலை வழிகாட்டி.",
+        "url": "/checklists/index-fund-selection-checklist.html"
+      }
+    ]
   }
 ]

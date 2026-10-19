@@ -1,0 +1,248 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="cc-trap-title cc-trap-desc">
+  <title id="cc-trap-title">கிரெடிட் கார்டு உத்திகள் மற்றும் 4 முக்கியக் கடன் பொறிகள்</title>
+  <desc id="cc-trap-desc">Credit Card Optimization and 4 Major Traps: 42% Revolving APR, Minimum Due Spiral, Zero-Cost EMI Hidden GST, and Reward Monetization.</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&amp;family=Noto+Sans+Tamil:wght@500;600;700&amp;display=swap');
+      .header-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        fill: #ffffff;
+      }
+      .header-sub {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        fill: #d5e7e3;
+      }
+      .cc-pill-text {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10.5px;
+        font-weight: 700;
+      }
+      .card-title-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 14.5px;
+        font-weight: 700;
+        fill: #0f172a;
+        text-anchor: middle;
+      }
+      .card-sub-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        text-anchor: middle;
+      }
+      .section-heading {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10.5px;
+        font-weight: 700;
+      }
+      .bullet-text {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10.5px;
+        font-weight: 500;
+        fill: #334155;
+      }
+      .tag-text {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10.5px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .footer-title-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 12.5px;
+        font-weight: 700;
+        fill: #0D7377;
+      }
+      .footer-desc-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 11.2px;
+        font-weight: 500;
+        fill: #334155;
+      }
+    </style>
+
+    <linearGradient id="headerGradCC" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D7377"/>
+      <stop offset="100%" stop-color="#102e31"/>
+    </linearGradient>
+
+    <filter id="cardShadowCC" x="-5%" y="-3%" width="110%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="600" rx="18" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- Top Header Banner -->
+  <rect x="2" y="2" width="1196" height="85" rx="16" fill="url(#headerGradCC)"/>
+  <circle cx="50" cy="44" r="24" fill="#14b8a6" fill-opacity="0.2"/>
+  
+  <!-- Credit Card & Shield Icon -->
+  <rect x="39" y="35" width="22" height="15" rx="2" fill="none" stroke="#5eead4" stroke-width="1.8"/>
+  <line x1="39" y1="40" x2="61" y2="40" stroke="#5eead4" stroke-width="1.5"/>
+  <circle cx="45" cy="46" r="1.5" fill="#5eead4"/>
+
+  <text x="86" y="38" class="header-tamil">கிரெடிட் கார்டு உத்திகள் &amp; 4 முக்கியக் கடன் பொறிகள்</text>
+  <text x="86" y="60" class="header-sub">Revolving APR, Minimum Due, Zero-Cost EMI Hidden GST &amp; Reward Points Optimization — வழிகாட்டி</text>
+
+  <!-- ================= 4 COMPARISON CARDS ================= -->
+
+  <!-- CARD 1: 42% சுழல் வட்டிப் பொறி -->
+  <g transform="translate(32, 100)" filter="url(#cardShadowCC)">
+    <rect width="260" height="385" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="260" height="5" rx="2.5" fill="#dc2626"/>
+    
+    <rect x="85" y="14" width="90" height="22" rx="11" fill="#fef2f2"/>
+    <text x="130" y="29" class="cc-pill-text" fill="#dc2626" text-anchor="middle">கண்ணிவெடி 1</text>
+    
+    <circle cx="130" cy="58" r="18" fill="#fef2f2"/>
+    <path d="M 130 48 L 140 66 L 120 66 Z" stroke="#dc2626" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+    <circle cx="130" cy="62" r="1.2" fill="#dc2626"/>
+    <line x1="130" y1="54" x2="130" y2="59" stroke="#dc2626" stroke-width="1.6" stroke-linecap="round"/>
+
+    <text x="130" y="96" class="card-title-tamil">42% சுழல் வட்டிப் பொறி</text>
+    <text x="130" y="113" class="card-sub-tamil" fill="#dc2626">Revolving Balance APR</text>
+
+    <!-- Trap Box -->
+    <rect x="14" y="128" width="232" height="95" rx="8" fill="#fef2f2" stroke="#fee2e2" stroke-width="1"/>
+    <text x="22" y="145" class="section-heading" fill="#991b1b">⚠️ மறைமுக ஆபத்து (Trap):</text>
+    <text x="22" y="163" class="bullet-text">• ₹1 பாக்கி வைத்தாலும் வட்டி.</text>
+    <text x="22" y="179" class="bullet-text">• 45 நாள் சலுகை ரத்தாகும்.</text>
+    <text x="22" y="195" class="bullet-text">• பரிவர்த்தனை நாளிலிருந்து வட்டி.</text>
+    <text x="22" y="211" class="bullet-text">• புதிய வாங்குதல்களுக்கும் வட்டி!</text>
+
+    <!-- Optimization Box -->
+    <rect x="14" y="233" width="232" height="95" rx="8" fill="#ecfdf5" stroke="#d1fae5" stroke-width="1"/>
+    <text x="22" y="250" class="section-heading" fill="#065f46">💡 தீர்வு &amp; உத்தி (Optimization):</text>
+    <text x="22" y="268" class="bullet-text">• பில் தொகையை 100% கட்டுங்கள்.</text>
+    <text x="22" y="284" class="bullet-text">• ஒருபோதும் பாக்கி வைக்காதீர்கள்.</text>
+    <text x="22" y="300" class="bullet-text">• 45 நாள் இலவசக் கடனைப் பெறுங்கள்.</text>
+    <text x="22" y="316" class="bullet-text">• ஏடிஎம் பணம் எடுக்காதீர்கள்.</text>
+
+    <rect x="20" y="342" width="220" height="26" rx="13" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+    <text x="130" y="359" class="tag-text" fill="#b91c1c">வட்டி இல்லாச் சலுகை இழப்பு!</text>
+  </g>
+
+  <!-- CARD 2: மினிமம் ட்யூ மாயை -->
+  <g transform="translate(324, 100)" filter="url(#cardShadowCC)">
+    <rect width="260" height="385" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="260" height="5" rx="2.5" fill="#ea580c"/>
+    
+    <rect x="85" y="14" width="90" height="22" rx="11" fill="#fff7ed"/>
+    <text x="130" y="29" class="cc-pill-text" fill="#ea580c" text-anchor="middle">கண்ணிவெடி 2</text>
+    
+    <circle cx="130" cy="58" r="18" fill="#fff7ed"/>
+    <circle cx="130" cy="58" r="11" fill="none" stroke="#ea580c" stroke-width="1.8"/>
+    <path d="M 130 52 L 130 58 L 135 61" stroke="#ea580c" stroke-width="1.6" stroke-linecap="round"/>
+
+    <text x="130" y="96" class="card-title-tamil">மினிமம் ட்யூ மாயை</text>
+    <text x="130" y="113" class="card-sub-tamil" fill="#ea580c">Minimum Due Trap</text>
+
+    <!-- Trap Box -->
+    <rect x="14" y="128" width="232" height="95" rx="8" fill="#fff7ed" stroke="#ffedd5" stroke-width="1"/>
+    <text x="22" y="145" class="section-heading" fill="#c2410c">⚠️ மறைமுக ஆபத்து (Trap):</text>
+    <text x="22" y="163" class="bullet-text">• வெறும் 5% செலுத்தினால் போதும்.</text>
+    <text x="22" y="179" class="bullet-text">• அசல் தொகை குறையவே செய்யாது.</text>
+    <text x="22" y="195" class="bullet-text">• கடன் தீர 15-20 ஆண்டுகள் ஆகும்.</text>
+    <text x="22" y="211" class="bullet-text">• வட்டி அசலை விட 3 மடங்கு!</text>
+
+    <!-- Optimization Box -->
+    <rect x="14" y="233" width="232" height="95" rx="8" fill="#ecfdf5" stroke="#d1fae5" stroke-width="1"/>
+    <text x="22" y="250" class="section-heading" fill="#065f46">💡 தீர்வு &amp; உத்தி (Optimization):</text>
+    <text x="22" y="268" class="bullet-text">• Auto-Debit அமைத்துவிடுங்கள்.</text>
+    <text x="22" y="284" class="bullet-text">• "Total Amount Due"-ஐத் தேர்ந்தெடுக்கவும்.</text>
+    <text x="22" y="300" class="bullet-text">• தாமதக் கட்டணம் &amp; வட்டி ₹0.</text>
+    <text x="22" y="316" class="bullet-text">• சிபில் ஸ்கோர் 780+ பராமரிப்பு.</text>
+
+    <rect x="20" y="342" width="220" height="26" rx="13" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+    <text x="130" y="359" class="tag-text" fill="#c2410c">20 ஆண்டுகால கடன் சுழல்!</text>
+  </g>
+
+  <!-- CARD 3: ஜீரோ காஸ்ட் EMI பொறி -->
+  <g transform="translate(616, 100)" filter="url(#cardShadowCC)">
+    <rect width="260" height="385" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="260" height="5" rx="2.5" fill="#d97706"/>
+    
+    <rect x="85" y="14" width="90" height="22" rx="11" fill="#fffbeb"/>
+    <text x="130" y="29" class="cc-pill-text" fill="#d97706" text-anchor="middle">கண்ணிவெடி 3</text>
+    
+    <circle cx="130" cy="58" r="18" fill="#fffbeb"/>
+    <text x="130" y="63" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#d97706" text-anchor="middle">0% EMI</text>
+
+    <text x="130" y="96" class="card-title-tamil">ஜீரோ காஸ்ட் EMI பொறி</text>
+    <text x="130" y="113" class="card-sub-tamil" fill="#d97706">Hidden GST &amp; Fees</text>
+
+    <!-- Trap Box -->
+    <rect x="14" y="128" width="232" height="95" rx="8" fill="#fffbeb" stroke="#fef3c7" stroke-width="1"/>
+    <text x="22" y="145" class="section-heading" fill="#b45309">⚠️ மறைமுக ஆபத்து (Trap):</text>
+    <text x="22" y="163" class="bullet-text">• RBI 0% வட்டியைத் தடை செய்துள்ளது.</text>
+    <text x="22" y="179" class="bullet-text">• வட்டிக்கு 18% GST உண்டு.</text>
+    <text x="22" y="195" class="bullet-text">• ₹199 + GST பிராசசிங் கட்டணம்.</text>
+    <text x="22" y="211" class="bullet-text">• உடனடி கேஷ்பேக் தள்ளுபடி இழப்பு.</text>
+
+    <!-- Optimization Box -->
+    <rect x="14" y="233" width="232" height="95" rx="8" fill="#ecfdf5" stroke="#d1fae5" stroke-width="1"/>
+    <text x="22" y="250" class="section-heading" fill="#065f46">💡 தீர்வு &amp; உத்தி (Optimization):</text>
+    <text x="22" y="268" class="bullet-text">• ரொக்கத் தள்ளுபடியை ஒப்பிடுக.</text>
+    <text x="22" y="284" class="bullet-text">• ஜிஎஸ்டி &amp; கட்டணத்தைக் கணக்கிடுக.</text>
+    <text x="22" y="300" class="bullet-text">• சேமித்து முழுப்பணம் செலுத்துக.</text>
+    <text x="22" y="316" class="bullet-text">• முன்கூட்டியே அடைக்க 3% கட்டணம்.</text>
+
+    <rect x="20" y="342" width="220" height="26" rx="13" fill="#fffbeb" stroke="#fde68a" stroke-width="1"/>
+    <text x="130" y="359" class="tag-text" fill="#b45309">18% GST + மறைமுகக் கட்டணம்</text>
+  </g>
+
+  <!-- CARD 4: ரிவார்டு புள்ளிகளைப் பணமாக்குதல் -->
+  <g transform="translate(908, 100)" filter="url(#cardShadowCC)">
+    <rect width="260" height="385" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="260" height="5" rx="2.5" fill="#059669"/>
+    
+    <rect x="85" y="14" width="90" height="22" rx="11" fill="#ecfdf5"/>
+    <text x="130" y="29" class="cc-pill-text" fill="#059669" text-anchor="middle">உகப்பாக்கம் 4</text>
+    
+    <circle cx="130" cy="58" r="18" fill="#ecfdf5"/>
+    <polygon points="130,48 133,55 140,55 134,60 136,67 130,63 124,67 126,60 120,55 127,55" fill="#059669"/>
+
+    <text x="130" y="96" class="card-title-tamil">ரிவார்டு உகப்பாக்கம்</text>
+    <text x="130" y="113" class="card-sub-tamil" fill="#059669">Reward Points Monetization</text>
+
+    <!-- Trap Box -->
+    <rect x="14" y="128" width="232" height="95" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="22" y="145" class="section-heading" fill="#334155">⚠️ மறைமுக ஆபத்து (Trap):</text>
+    <text x="22" y="163" class="bullet-text">• பொருட்களில் 1 pt = ₹0.20 மட்டுமே.</text>
+    <text x="22" y="179" class="bullet-text">• ₹99 புள்ளிகள் மீட்புக் கட்டணம்.</text>
+    <text x="22" y="195" class="bullet-text">• 2-3 ஆண்டுகளில் காலாவதி.</text>
+    <text x="22" y="211" class="bullet-text">• அடிக்கடி மதிப்பிழப்பு (Devaluation).</text>
+
+    <!-- Optimization Box -->
+    <rect x="14" y="233" width="232" height="95" rx="8" fill="#ecfdf5" stroke="#d1fae5" stroke-width="1"/>
+    <text x="22" y="250" class="section-heading" fill="#065f46">💡 தீர்வு &amp; உத்தி (Optimization):</text>
+    <text x="22" y="268" class="bullet-text">• நேரடி கேஷ்பேக் கார்டுகள் (1:1).</text>
+    <text x="22" y="284" class="bullet-text">• ஏர் மைல்ஸ் / ஹோட்டல் புள்ளிகள்.</text>
+    <text x="22" y="300" class="bullet-text">• மைல்ஸ்டோன் கட்டணத் தள்ளுபடி.</text>
+    <text x="22" y="316" class="bullet-text">• 1 pt = ₹1 வரை மதிப்பு பெறுக!</text>
+
+    <rect x="20" y="342" width="220" height="26" rx="13" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+    <text x="130" y="359" class="tag-text" fill="#065f46">நேரடி கேஷ்பேக் &amp; ஏர் மைல்ஸ்</text>
+  </g>
+
+  <!-- ================= BOTTOM HORIZONTAL SUMMARY BAR ================= -->
+  <g transform="translate(32, 502)" filter="url(#cardShadowCC)">
+    <rect width="1136" height="76" rx="12" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+    
+    <circle cx="28" cy="38" r="16" fill="#fef3c7"/>
+    <!-- Golden Shield Motif -->
+    <path d="M 28 26 L 36 30 L 36 38 Q 36 45 28 48 Q 20 45 20 38 L 20 30 Z" fill="#d97706"/>
+
+    <text x="56" y="28" class="footer-title-tamil">🌟 முதலீட்டாளர்களின் பொன் விதி (The Master Golden Rule):</text>
+    <text x="56" y="47" class="footer-desc-tamil">கிரெடிட் கார்டு என்பது பணப்பரிவர்த்தனைக் கருவி மட்டுமே; அது இலவசக் கூடுதல் வருமானம் அல்ல!</text>
+    <text x="56" y="64" class="footer-desc-tamil">முழுப் பில் தொகையையும் குறித்த தேதிக்குள் செலுத்தி 45 நாள் வட்டி இல்லாச் சலுகையையும், ரிவார்டு புள்ளிகளையும் உங்கள் லாபமாக மாற்றுங்கள்; குறைந்தபட்சத் தொகையை மட்டும் ஒருபோதும் செலுத்தாதீர்கள்!</text>
+  </g>
+</svg>
+

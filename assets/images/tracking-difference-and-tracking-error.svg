@@ -1,0 +1,235 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="540" viewBox="0 0 1200 540" role="img" aria-labelledby="tdte-title tdte-desc">
+  <title id="tdte-title">குறியீட்டு நிதித் திட்ட செயல்பாட்டுக் காரணிகள்: Tracking Difference vs Tracking Error</title>
+  <desc id="tdte-desc">Visual explanation of Tracking Difference (net return gap) vs Tracking Error (standard deviation of daily returns) and the three key drivers: Cash Drag, Dividend Lag, and Rebalancing Costs.</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700;800&amp;family=Noto+Sans+Tamil:wght@500;600;700;800&amp;display=swap');
+      .hdr-title {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 18.5px;
+        font-weight: 700;
+        fill: #ffffff;
+      }
+      .hdr-sub {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        fill: #d5e7e3;
+      }
+      .box-title {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+      }
+      .box-sub {
+        font-family: 'DM Sans', 'Noto Sans Tamil', sans-serif;
+        font-size: 11.5px;
+        font-weight: 600;
+      }
+      .metric-title {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        fill: #475569;
+      }
+      .metric-val {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 800;
+      }
+      .desc-text {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 11.5px;
+        font-weight: 500;
+        fill: #334155;
+        line-height: 1.5;
+      }
+      .cause-title {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .cause-desc {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10.8px;
+        font-weight: 500;
+        fill: #475569;
+      }
+      .badge-txt {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .ftr-txt {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        fill: #92400e;
+        text-anchor: middle;
+      }
+    </style>
+
+    <linearGradient id="hdrGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D7377"/>
+      <stop offset="100%" stop-color="#102e31"/>
+    </linearGradient>
+
+    <filter id="cardShadow" x="-3%" y="-4%" width="106%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="540" fill="#f8fafc" rx="14"/>
+  <rect width="1200" height="540" fill="none" stroke="#e2e8f0" stroke-width="1.5" rx="14"/>
+
+  <!-- Header Banner -->
+  <rect x="0" y="0" width="1200" height="72" fill="url(#hdrGrad)" rx="14"/>
+  <rect x="0" y="58" width="1200" height="14" fill="#102e31"/>
+
+  <g transform="translate(40, 24)">
+    <circle cx="16" cy="16" r="16" fill="rgba(255,255,255,0.12)"/>
+    <path d="M10 16 L14 20 L22 12" stroke="#e5c58e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="44" y="16" class="hdr-title">குறியீட்டு நிதித் திட்ட செயல்பாட்டுக் காரணிகள்: Tracking Difference vs Tracking Error</text>
+    <text x="44" y="34" class="hdr-sub">பெஞ்ச்மார்க் குறியீட்டின் வருமானத்திற்கும் குறியீட்டு நிதித் திட்ட NAV-க்கும் இடையிலான இடைவெளி &amp; அதன் காரணங்கள்</text>
+  </g>
+
+  <!-- TOP SECTION: 2 COMPARISON CARDS (y: 86 to 292, height: 206) -->
+
+  <!-- Left Card: Tracking Difference -->
+  <g transform="translate(40, 86)">
+    <rect width="545" height="206" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <rect width="545" height="6" rx="3" fill="#0D7377"/>
+
+    <!-- Title Block -->
+    <text x="24" y="32" class="box-title" fill="#0D7377">1. Tracking Difference (பின்தொடர்தல் வேறுபாடு)</text>
+    <text x="24" y="49" class="box-sub" fill="#64748b">நிகர வருமான இடைவெளி (Net Return Gap over a specific period)</text>
+
+    <!-- Visual Comparison Bars -->
+    <g transform="translate(24, 60)">
+      <!-- Benchmark Bar -->
+      <rect x="0" y="0" width="497" height="38" rx="8" fill="#f1f5f9" stroke="#e2e8f0"/>
+      <rect x="0" y="0" width="370" height="38" rx="8" fill="#2563eb" fill-opacity="0.12"/>
+      <rect x="0" y="0" width="6" height="38" rx="3" fill="#2563eb"/>
+      <text x="16" y="24" class="metric-title">Nifty 50 TRI பெஞ்ச்மார்க் வருமானம்</text>
+      <text x="480" y="24" class="metric-val" fill="#2563eb" text-anchor="end">12.00%</text>
+
+      <!-- Index Fund NAV Bar -->
+      <rect x="0" y="46" width="497" height="38" rx="8" fill="#f1f5f9" stroke="#e2e8f0"/>
+      <rect x="0" y="46" width="350" height="38" rx="8" fill="#0D7377" fill-opacity="0.15"/>
+      <rect x="0" y="46" width="6" height="38" rx="3" fill="#0D7377"/>
+      <text x="16" y="70" class="metric-title">குறியீட்டு நிதித் திட்ட NAV நிகர வருமானம்</text>
+      <text x="480" y="70" class="metric-val" fill="#0D7377" text-anchor="end">11.80%</text>
+    </g>
+
+    <!-- Return Gap Indicator -->
+    <g transform="translate(24, 154)">
+      <rect width="497" height="42" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+      <text x="14" y="17" class="cause-title" fill="#b91c1c">வேறுபாடு (Tracking Difference): -0.20%</text>
+      <text x="14" y="32" font-family="'Noto Sans Tamil', 'DM Sans', sans-serif" font-size="11px" font-weight="600" fill="#dc2626">காரணம்: TER (0.15%) + Cash Drag (0.05%)</text>
+    </g>
+  </g>
+
+  <!-- Right Card: Tracking Error -->
+  <g transform="translate(615, 86)">
+    <rect width="545" height="206" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <rect width="545" height="6" rx="3" fill="#059669"/>
+
+    <!-- Title Block -->
+    <text x="24" y="32" class="box-title" fill="#059669">2. Tracking Error (பின்தொடர்தல் பிழை)</text>
+    <text x="24" y="49" class="box-sub" fill="#64748b">தினசரி நகலின் நிலையற்ற தன்மை (Standard Deviation of daily return spread)</text>
+
+    <!-- Visual Curve/Deviation Display -->
+    <g transform="translate(24, 60)">
+      <rect x="0" y="0" width="497" height="84" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+
+      <!-- Benchmark Baseline -->
+      <line x1="20" y1="42" x2="477" y2="42" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4"/>
+      <text x="25" y="36" font-family="'DM Sans', sans-serif" font-size="10px" font-weight="600" fill="#64748b">Benchmark Index (Zero Line)</text>
+
+      <!-- Sine-like deviation wave of Fund NAV spread -->
+      <path d="M 20 42 Q 60 22 100 42 T 180 42 T 260 42 T 340 42 T 420 42 T 477 42" fill="none" stroke="#059669" stroke-width="2.5"/>
+      <circle cx="140" cy="22" r="3.5" fill="#059669"/>
+      <circle cx="220" cy="62" r="3.5" fill="#059669"/>
+      <circle cx="300" cy="22" r="3.5" fill="#059669"/>
+      <circle cx="380" cy="62" r="3.5" fill="#059669"/>
+
+      <rect x="365" y="10" width="112" height="22" rx="4" fill="#ecfdf5" stroke="#a7f3d0"/>
+      <text x="421" y="25" class="badge-txt" fill="#065f46">σ = 0.03% (சிறப்பு)</text>
+    </g>
+
+    <!-- Interpretation Box -->
+    <g transform="translate(24, 154)">
+      <rect width="497" height="42" rx="6" fill="#f0fdf4" stroke="#bbf7d0"/>
+      <text x="14" y="17" class="cause-title" fill="#15803d">இலக்கு: 0.05%-க்கும் குறைவான Tracking Error</text>
+      <text x="14" y="32" font-family="'Noto Sans Tamil', 'DM Sans', sans-serif" font-size="11px" font-weight="600" fill="#059669">துல்லியமான நகலெடுப்புக்கான அடையாளம் (Precise Tracking)</text>
+    </g>
+  </g>
+
+  <!-- BOTTOM SECTION: 3 CAUSES CARDS (y: 304 to 456, height: 152) -->
+
+  <!-- Cause 1: Cash Drag -->
+  <g transform="translate(40, 304)">
+    <rect width="350" height="152" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#cardShadow)"/>
+    <rect x="0" y="0" width="350" height="4" rx="2" fill="#d97706"/>
+
+    <g transform="translate(18, 22)">
+      <rect x="0" y="0" width="32" height="32" rx="6" fill="#fef3c7"/>
+      <text x="16" y="21" font-family="'DM Sans', sans-serif" font-size="16px" font-weight="700" fill="#d97706" text-anchor="middle">₹</text>
+      <text x="42" y="15" class="cause-title">1. ரொக்கக் கையிருப்பு</text>
+      <text x="42" y="30" class="box-sub" fill="#b45309">(Cash Drag - 1% to 3%)</text>
+    </g>
+
+    <text x="18" y="76" class="cause-desc">முதலீட்டாளர்கள் விற்கும்போது (Redemption)</text>
+    <text x="18" y="93" class="cause-desc">உடனடிப் பணத்திற்காக நிதித் திட்டங்கள் 1%–3%</text>
+    <text x="18" y="110" class="cause-desc">ரொக்கமாக வைத்திருக்கும். சந்தை உயரும்போது</text>
+    <text x="18" y="127" class="cause-desc">இந்த ரொக்கப் பணம் லாபம் தராமல் பின்தங்கும்.</text>
+  </g>
+
+  <!-- Cause 2: Dividend Reinvestment Lag -->
+  <g transform="translate(425, 304)">
+    <rect width="350" height="152" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#cardShadow)"/>
+    <rect x="0" y="0" width="350" height="4" rx="2" fill="#2563eb"/>
+
+    <g transform="translate(18, 22)">
+      <rect x="0" y="0" width="32" height="32" rx="6" fill="#dbeafe"/>
+      <path d="M10 20 L16 12 L22 20 Z" fill="#2563eb"/>
+      <text x="42" y="15" class="cause-title">2. டிவிடெண்ட் மறுமுதலீடு</text>
+      <text x="42" y="30" class="box-sub" fill="#1d4ed8">(Corporate Action / Dividend Lag)</text>
+    </g>
+
+    <text x="18" y="76" class="cause-desc">நிறுவனங்கள் வழங்கும் டிவிடெண்ட் தொகை</text>
+    <text x="18" y="93" class="cause-desc">நிதித் திட்டத்தின் கைக்கு வந்து மீண்டும்</text>
+    <text x="18" y="110" class="cause-desc">சந்தையில் முதலீடு செய்ய 2–3 நாட்கள் ஆகும்.</text>
+    <text x="18" y="127" class="cause-desc">இந்தக் காலதாமதத்தால் சிறிய இடைவெளி வரும்.</text>
+  </g>
+
+  <!-- Cause 3: Rebalancing & Impact Cost -->
+  <g transform="translate(810, 304)">
+    <rect width="350" height="152" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#cardShadow)"/>
+    <rect x="0" y="0" width="350" height="4" rx="2" fill="#0D7377"/>
+
+    <g transform="translate(18, 22)">
+      <rect x="0" y="0" width="32" height="32" rx="6" fill="#ccfbf1"/>
+      <path d="M12 16 L20 16 M16 12 L20 16 L16 20" stroke="#0D7377" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <text x="42" y="15" class="cause-title">3. அரையாண்டு மறுசீரமைப்பு</text>
+      <text x="42" y="30" class="box-sub" fill="#0f766e">(Rebalancing &amp; Impact Cost)</text>
+    </g>
+
+    <text x="18" y="76" class="cause-desc">ஆண்டுக்கு 2 முறை (மார்ச் / செப்டம்பர்)</text>
+    <text x="18" y="93" class="cause-desc">Nifty 50 குறியீட்டுப் பங்குகள் மாறும்போது</text>
+    <text x="18" y="110" class="cause-desc">ஏற்படும் பரிவர்த்தனை வரி (STT), முத்திரைத்தாள் கட்டணம்</text>
+    <text x="18" y="127" class="cause-desc">மற்றும் விலை மாறுபாட்டுச் செலவுகள் (Impact Cost).</text>
+  </g>
+
+  <!-- FOOTER RULE BANNER (y: 468, height: 48) -->
+  <g transform="translate(40, 468)">
+    <rect width="1120" height="48" rx="8" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5"/>
+    <text x="560" y="20" class="ftr-txt">💡 பொன்னான தேர்வு விதி: வெறும் Expense Ratio-ஐ மட்டும் பார்க்காதீர்கள்!</text>
+    <text x="560" y="37" class="ftr-txt">கடந்த 3 ஆண்டுகளில் மிகக் குறைந்த Tracking Difference &amp; Tracking Error கொண்ட குறியீட்டு நிதித் திட்டத்தையே தேர்ந்தெடுக்கவும்!</text>
+  </g>
+</svg>
+

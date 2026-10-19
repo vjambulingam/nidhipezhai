@@ -1,0 +1,593 @@
+---
+title: "குறியீட்டு நிதித் திட்ட தேர்வு சரிபார்ப்புப் பட்டியல் (Excel ஏற்றுமதியுடன்)"
+ogTitle: "குறியீட்டு நிதித் திட்ட தேர்வு சரிபார்ப்புப் பட்டியல் · நிதிப்பேழை"
+description: "குறைந்த நிதித்திட்ட நிர்வாகச் செலவு விகிதம் (TER), குறைந்த பின்தொடர்தல் பிழை (Tracking Error), மற்றும் சிறந்த Nifty 50 / Next 50 குறியீட்டு நிதித் திட்டங்களைத் தேர்ந்தெடுப்பதற்கான விரிவான தமிழ் சரிபார்ப்புப் பட்டியல்."
+ogDescription: "குறைந்த நிதித்திட்ட நிர்வாகச் செலவு விகிதம் (TER), பின்தொடர்தல் வித்தியாசம் (Tracking Difference) மற்றும் AUM அடிப்படையில் சிறந்த செயல் வேண்டா மியூச்சுவல் நிதித் திட்டங்களைத் தேர்வு செய்யும் சரிபார்ப்புப் பட்டியல்."
+keywords: "குறியீட்டு நிதித் திட்டம், செயல் வேண்டா மியூச்சுவல் நிதி, நிஃப்டி 50, பின்தொடர்தல் பிழை, பின்தொடர்தல் வித்தியாசம், index fund selection checklist Tamil, nifty 50 index fund eppadi choose panrathu, tracking error tamil, tracking difference tamil, expense ratio index fund, best index funds India Tamil"
+---
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-grow space-y-6">
+
+    <!-- Interactive Progress Summary Banner -->
+    <div class="bg-gradient-to-r from-emerald-600 to-teal-800 rounded-2xl p-6 text-white shadow-md flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div>
+        <h2 class="text-lg font-bold">குறியீட்டு நிதித் திட்ட தேர்வு சரிபார்ப்புப் பட்டியல் <br class="hidden sm:block"> (Index Fund Selection Checklist)</h2>
+        <p class="text-xs text-emerald-100 mt-1">கீழேயுள்ள அளவுகோல்களை நீங்கள் முதலீடு செய்ய விரும்பும் குறியீட்டு நிதித் திட்டத்தோடு ஒப்பிட்டுச் சரிபாருங்கள்.</p>
+      </div>
+      <div class="bg-white/10 backdrop-blur-xs rounded-xl p-3.5 px-5 flex items-center gap-4 border border-white/20">
+        <div>
+          <span class="text-xs text-emerald-200 block">நிறைவு செய்தவை</span>
+          <span class="text-2xl font-extrabold" id="progressCount">0 / 20</span>
+        </div>
+        <div class="h-10 w-px bg-white/20"></div>
+        <div>
+          <span class="text-xs text-emerald-200 block">தேர்வு சதவீதம்</span>
+          <span class="text-2xl font-extrabold" id="progressPercent">0%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Excel Export & Educational Notice Card -->
+    <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-200/80 space-y-3 text-xs text-emerald-950">
+      <div class="flex items-center gap-2">
+        <span class="text-base">📊</span>
+        <strong class="text-sm">குறியீட்டு முதலீட்டின் பொன்னான கோட்பாடுகள் (Index Investing Principles):</strong>
+      </div>
+      <p class="leading-relaxed text-slate-700">
+        குறியீட்டு நிதித் திட்டங்களின் (Index Funds) வெற்றி என்பது நிதித் திட்ட மேலாளரின் கணிப்புகளில் இல்லை; மாறாக, <strong>குறைந்த நிதித்திட்ட நிர்வாகச் செலவு விகிதம் (TER), குறைந்த பின்தொடர்தல் பிழை (Low Tracking Error) மற்றும் ஒழுங்கான நீண்டகால மாதாந்திர இடைவிடா முதலீட்டுத் திட்டம் (SIP)</strong> ஆகியவற்றிலேயே அடங்கியுள்ளது. ஒரு திட்டத்தில் இணையும் முன் பின்வரும் 6 முக்கியப் பிரிவுகளில் உள்ள அனைத்து அளவுகோல்களையும் சரிபார்க்கவும்.
+      </p>
+      <div class="pt-2 border-t border-emerald-200/60 flex flex-wrap items-center justify-between gap-2 text-[11px] font-semibold text-emerald-800">
+        <div class="flex items-center gap-2">
+          <span>📗 அனைத்து 20 அளவுகோல்களையும் Excel அட்டவணையாகப் பதிவிறக்கலாம்:</span>
+        </div>
+        <button onclick="document.getElementById('btnDownloadExcel').click()" class="shrink-0 font-bold underline hover:text-emerald-900 text-emerald-800 flex items-center gap-1">
+          <span>Excel கோப்பாகப் பதிவிறக்க &rarr;</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Interactive Checklist Categories Container -->
+    <div id="interactiveContainer" class="space-y-6">
+
+      <!-- Category 1: Plan Type & Growth Option -->
+      <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">1</span>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">திட்டம் &amp; வளர்ச்சித் தேர்வு (Plan Type &amp; Growth Option)</h3>
+              <p class="text-xs text-slate-500">இடைத்தரகர் கமிஷன்களைத் தவிர்த்து நேரடி கூட்டு வட்டி வளர்ச்சியை உறுதி செய்தல்</p>
+            </div>
+          </div>
+          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">அடிப்படைத் தேர்வு</span>
+        </div>
+        <div class="space-y-3">
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="1">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">எப்போதும் நேரடித் திட்டம் (Direct Plan) மட்டுமே தேர்வு செய்தல்:</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-red-50 text-red-800">மிக முக்கியம்</span>
+              </div>
+              வழக்கமான மியூச்சுவல் நிதித் திட்டம் (Regular Plan) எடுக்காமல் நேரடி மியூச்சுவல் நிதித் திட்டம் (Direct Plan) என்பதை உறுதிப்படுத்துங்கள். குறியீட்டு நிதித் திட்டத்தில் இடைத்தரகர்களுக்கு ஆண்டுதோறும் 0.50% - 1.00% கமிஷன் தருவது தேவையற்ற பண விரயம்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="2">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">வளர்ச்சித் திட்டம் (Growth Option) தேர்வு (IDCW / ஈவுத்தொகை தவிர்க்கவும்):</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-red-50 text-red-800">மிக முக்கியம்</span>
+              </div>
+              ஆதாயப்பங்கு அல்லது ஈவுத்தொகை (IDCW / Dividend) எடுக்கும்போது மூலதன வளர்ச்சி தடைபட்டு வரிச்சுமை கூடும். வளர்ச்சித் திட்டத்தில் (Growth Option) நிறுவனங்கள் தரும் ஈவுத்தொகை தானாகவே NAV மதிப்பில் மறுமுதலீடு செய்யப்பட்டு கூட்டு வட்டியாகப் பெருகும்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="3">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">நேரடி AMC அல்லது அங்கீகரிக்கப்பட்ட தளம் பயன்பாடு:</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-sky-100 text-sky-800">அவசியம்</span>
+              </div>
+              MF Central, மியூச்சுவல் நிதித் திட்ட நிறுவன அதிகாரப்பூர்வ இணையதளம் அல்லது அங்கீகரிக்கப்பட்ட நேரடி முதலீட்டுத் தளங்கள் வழியே பூஜ்ஜிய தரகில் முதலீடு செய்தல்.
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Category 2: Total Expense Ratio (TER) -->
+      <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">2</span>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">நிதித்திட்ட நிர்வாகச் செலவு விகிதம் (Total Expense Ratio - TER)</h3>
+              <p class="text-xs text-slate-500">கூட்டு வட்டிச் செல்வத்தை உறிஞ்சும் நிர்வாகக் கட்டணங்களைக் குறைந்தபட்ச அளவில் வைத்தல்</p>
+            </div>
+          </div>
+          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">செலவுக் கட்டுப்பாடு</span>
+        </div>
+        <div class="space-y-3">
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="4">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">NIFTY 50 குறைந்த நிர்வாகச் செலவு விகிதம் (TER &le; 0.20%):</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-red-50 text-red-800">மிக முக்கியம்</span>
+              </div>
+              இந்தியாவில் முன்னணி Nifty 50 நேரடி குறியீட்டு நிதித் திட்டங்களின் நிர்வாகச் செலவு விகிதம் (TER) 0.10% முதல் 0.20%-க்குள் மட்டுமே இருக்க வேண்டும். 0.30%-க்கு மேல் உள்ள திட்டங்களைத் தவிர்க்கவும்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="5">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">NIFTY NEXT 50 நியாயமான செலவு விகிதம் (TER &le; 0.35%):</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-sky-100 text-sky-800">அவசியம்</span>
+              </div>
+              Nifty Next 50 குறியீட்டு நிதித் திட்டங்களுக்குப் பரிவர்த்தனை மற்றும் தாக்கம் சற்றே அதிகம் என்பதால் TER 0.20% முதல் 0.35%-க்குள் இருப்பது ஏற்கத்தக்கது.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="6">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">நிர்வாகச் செலவு விகித வரலாற்று நிலைத்தன்மை (TER Consistency):</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700">பரிந்துரை</span>
+              </div>
+              நிதித் திட்ட நிறுவனம் முதலீட்டாளர்களைக் கவர தொடக்கத்தில் 0.05% எனக் காட்டிவிட்டு, பின்னர் படிப்படியாக 0.40% என உயர்த்துகிறதா என்பதைக் கடந்த 2-3 ஆண்டு Factsheet தரவுகளில் சரிபார்த்தல்.
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Category 3: Tracking Difference & Tracking Error -->
+      <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">3</span>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">பின்தொடர்தல் காரணிகள் (Tracking Difference &amp; Tracking Error)</h3>
+              <p class="text-xs text-slate-500">சந்தைக் குறியீட்டின் வருமானத்தை ஃபண்ட் எவ்வளவு துல்லியமாக நகலெடுக்கிறது என அளவிடுதல்</p>
+            </div>
+          </div>
+          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">துல்லியம்</span>
+        </div>
+        <div class="space-y-3">
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="7">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">குறைந்த பின்தொடர்தல் வித்தியாசம் (Tracking Difference &le; TER + 0.10%):</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-red-50 text-red-800">மிக முக்கியம்</span>
+              </div>
+              கடந்த 1 மற்றும் 3 ஆண்டுகளில் பெஞ்ச்மார்க் TRI வருமானத்திற்கும் குறியீட்டு நிதித் திட்டத்தின் NAV வருமானத்திற்கும் இடையே உள்ள இடைவெளி அந்தத் திட்டத்தின் நிர்வாகச் செலவு விகிதத்தை (TER) ஒட்டியே (உதா: -0.20% வரை) உள்ளதா எனப் பார்த்தல்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="8">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">குறைந்த பின்தொடர்தல் பிழை (Tracking Error &lt; 0.05% - 0.10%):</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-red-50 text-red-800">மிக முக்கியம்</span>
+              </div>
+              AMFI அல்லது Factsheet அறிக்கையில் தினசரி பின்தொடர்தல் பிழை (Tracking Error) நிலையற்ற தன்மை 0.05% அல்லது அதற்கும் குறைவாக இருப்பதை உறுதிசெய்தல். இது குறைவாக இருந்தால் நிதித் திட்ட மேலாளர் தாமதமின்றி சந்தையை நகலெடுக்கிறார் எனப் பொருள்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="9">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">ரொக்கக் கையிருப்பு இழப்பு தவிர்த்தல் (Cash Drag &lt; 2%):</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700">பரிந்துரை</span>
+              </div>
+              மீட்புக் கோரிக்கைகளுக்காக (Redemptions) நிதி நிறுவனம் 1% முதல் 2%-க்குள் மட்டுமே ரொக்கமாக வைத்திருக்க வேண்டும். அளவுக்கு அதிகமாக ரொக்கம் வைத்திருந்தால் வேகமாக ஏறும் சந்தையில் திட்டம் பின்தங்கிவிடும்.
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Category 4: AUM & Liquidity -->
+      <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">4</span>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">சொத்து மதிப்பு &amp; பணப்புழக்கம் (AUM &amp; Liquidity)</h3>
+              <p class="text-xs text-slate-500">பெரிய அளவிலான பரிவர்த்தனைகளின்போது தாக்கம் ஏற்படாமல் பாதுகாத்தல்</p>
+            </div>
+          </div>
+          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">நிலைத்தன்மை</span>
+        </div>
+        <div class="space-y-3">
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="10">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">மொத்த சொத்து மதிப்பு (AUM &ge; ₹1,000 கோடி):</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-red-50 text-red-800">மிக முக்கியம்</span>
+              </div>
+              Nifty 50-ல் குறைந்தபட்சம் ₹1,000 கோடிக்கு அதிகமான AUM உள்ள குறியீட்டு நிதித் திட்டங்களையே தேர்வு செய்யவும். மிகச் சிறிய AUM (உதா: ₹50 கோடி) உள்ள திட்டங்களில் பெரிய முதலீட்டாளர்கள் வெளியேறும்போது பின்தொடர்தல் பிழை (Tracking Error) கூடும்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="11">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">முன்னணி சொத்து மேலாண்மை நிறுவன நம்பகத்தன்மை (Reputable AMC):</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-sky-100 text-sky-800">அவசியம்</span>
+              </div>
+              குறியீட்டு நிதித் திட்ட நிர்வாகத்தில் 5+ ஆண்டுகளுக்கும் மேலாகச் சிறந்த கட்டமைப்பு மற்றும் கணினி மயமாக்கப்பட்ட வழிமுறைகள் கொண்ட முன்னணி நிறுவனங்களைத் தேர்வு செய்தல் (HDFC, UTI, ICICI Pru, SBI, Nippon போன்றவை).
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="12">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">வெளியேறும் கட்டணம் அறிதல் (Zero or Minimal Exit Load):</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700">பரிந்துரை</span>
+              </div>
+              பெரும்பாலான குறியீட்டு நிதித் திட்டங்களுக்கு Exit Load 0% (பூஜ்ஜியம்) அல்லது 7 நாட்களுக்குள் விற்றால் மட்டுமே 0.25% போன்ற குறைந்த கட்டுப்பாடுகள் உள்ளதை முதலீட்டுக்கு முன் உறுதி செய்தல்.
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Category 5: Portfolio Allocation Strategy -->
+      <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">5</span>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">முதலீட்டுத் தொகுப்பு ஒதுக்கீடு (Portfolio Allocation Strategy)</h3>
+              <p class="text-xs text-slate-500">மைய-துணை முதலீட்டுத் தொகுப்பு முறையில் நிலைத்தன்மை மற்றும் வளர்ச்சி விகிதங்களை அமைத்தல்</p>
+            </div>
+          </div>
+          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">சொத்து வகை ஒதுக்கீடு</span>
+        </div>
+        <div class="space-y-3">
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="13">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">70% மைய முதலீட்டுத் தொகுப்பு அடித்தளம் (Core Portfolio Allocation):</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-red-50 text-red-800">மிக முக்கியம்</span>
+              </div>
+              மொத்தப் பங்கு முதலீட்டில் குறைந்தபட்சம் 70% பகுதியை Nifty 50 மற்றும் Nifty Next 50 செயல் வேண்டா குறியீட்டு நிதித் திட்டங்களிலேயே அமைத்து மனிதத் தவறுகளற்ற பாறை போன்ற அரணை உருவாக்குதல்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="14">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">70:30 அல்லது 50:50 விகிதம் தேர்வு செய்தல்:</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-sky-100 text-sky-800">அவசியம்</span>
+              </div>
+              சமச்சீர் அணுகுமுறைக்கு 70% Nifty 50 + 30% Next 50; இளைய முதலீட்டாளர்கள் அல்லது 15+ ஆண்டு எல்லைக்கு 50% Nifty 50 + 50% Next 50 என உத்தியைத் தீர்மானித்தல்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="15">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">30% துணை முதலீட்டுத் தொகுப்புப் பிரிவு (Satellite Portfolio Allocation):</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700">பரிந்துரை</span>
+              </div>
+              கூடுதல் ஆல்ஃபா ஈட்ட விரும்பினால் மட்டுமே மீதி 30% நிதியை 1 தரமான நடு முதல் (Midcap) அல்லது சிறு முதல் (Smallcap) செயலுள்ள மியூச்சுவல் நிதித் திட்டத்தில் முதலீடு செய்தல்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="16">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">முதலீட்டுத் தொகுப்பு ஆண்டு மறுசீரமைப்பு ஒழுக்கம் (Annual Portfolio Rebalancing):</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-sky-100 text-sky-800">அவசியம்</span>
+              </div>
+              ஆண்டுக்கு ஒருமுறை முதலீட்டுத் தொகுப்பை (Portfolio) ஆய்வு செய்து, Next 50 வேகமாக உயர்ந்து 50%-க்கும் மேல் சென்றிருந்தால், லாபத்தை எடுத்து மீண்டும் 70:30 அல்லது 50:50 விகிதத்திற்குச் சீரமைத்தல்.
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Category 6: Disciplined SIP Execution -->
+      <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">6</span>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">நீண்டகால ஒழுங்குமுறை &amp; இடைவிடா முதலீட்டுத் திட்டம் (Disciplined SIP Execution)</h3>
+              <p class="text-xs text-slate-500">உணர்ச்சிகளை அகற்றி தானியங்கி கூட்டு வட்டி இயந்திரத்தை இயக்குதல்</p>
+            </div>
+          </div>
+          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">ஒழுங்குமுறை</span>
+        </div>
+        <div class="space-y-3">
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="17">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">குறைந்தபட்சம் 7 முதல் 10+ ஆண்டு முதலீட்டு எல்லை:</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-red-50 text-red-800">மிக முக்கியம்</span>
+              </div>
+              குறியீட்டு முதலீடு என்பது குறுகிய கால ஊக வணிகமல்ல. நாட்டின் பொருளாதார வளர்ச்சியோடு இணைந்து முழு பலனைப் பெற 10+ ஆண்டுகள் பொறுமையுடன் முதலீடு செய்யும் மனநிலையை உறுதி செய்தல்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="18">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">தானியங்கி மாதாந்திர இடைவிடா முதலீட்டுத் திட்டம் (Auto-Debit SIP):</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-sky-100 text-sky-800">அவசியம்</span>
+              </div>
+              சந்தை ஏறுமா இறங்குமா எனக் கணிக்காமல், சம்பள நாளுக்கு அடுத்த 2-3 நாட்களில் தானாக வங்கிக் கணக்கிலிருந்து பிடித்தம் செய்யப்படும் ஆட்டோ-டெபிட் இடைவிடா முதலீட்டுத் திட்டத்தை (SIP) அமைத்தல்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="19">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">சந்தைச் சரிவுகளில் SIP தவணையை நிறுத்தாதிருத்தல்:</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-red-50 text-red-800">மிக முக்கியம்</span>
+              </div>
+              பங்குச்சந்தை 10% முதல் 20% வரை சரியும்போது பதற்றமடையாமல் அதே SIP தவணையைத் தொடர்தல்; சரிவுகளில் குறைந்த விலையில் கூடுதல் யூனிட்கள் கிடைப்பதே ரூபாய் செலவுச் சராசரி (Rupee Cost Averaging) மூலம் நீண்டகாலப் பெருஞ்செல்வத்திற்கு வழிவகுக்கும்.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="20">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">100% நியமனதாரர் (Nominee) பதிவு மற்றும் வரிச் சலுகை அறிதல்:</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-sky-100 text-sky-800">அவசியம்</span>
+              </div>
+              அனைத்து மியூச்சுவல் நிதித் திட்ட போலியோக்களிலும் நியமனதாரரைப் (Nominee) பதிவு செய்தல்; 1 ஆண்டுக்கு மேற்பட்ட நீண்டகால மூலதன ஆதாயங்களுக்கு (LTCG) ₹1.25 லட்சம் வரை ஆண்டுதோறும் முழு வரிவிலக்கு உண்டு என்பதை அறிந்து திட்டமிடுதல்.
+            </div>
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Actions & Reset Bar -->
+    <div class="flex flex-wrap items-center justify-between gap-4 p-4 bg-white rounded-2xl border border-slate-200 no-print">
+      <div class="flex items-center gap-2">
+        <button id="btnResetChecklist" type="button" class="px-4 py-2 text-xs font-semibold text-slate-600 hover:text-red-800 hover:bg-red-50 rounded-xl transition-colors border border-slate-200">
+          🔄 சரிபார்ப்பை மீட்டமை (Reset)
+        </button>
+      </div>
+      <div class="flex items-center gap-3">
+        <button onclick="window.print()" type="button" class="px-4 py-2 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors border border-slate-300">
+          🖨️ அச்சிடு (Print)
+        </button>
+        <button onclick="document.getElementById('btnDownloadExcel').click()" type="button" class="px-5 py-2 text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-xl shadow-xs transition-colors">
+          📗 Excel (.xlsx) பதிவிறக்கு
+        </button>
+      </div>
+    </div>
+
+    <!-- Related Articles & Calculators Section -->
+    <section class="calculator-group no-print pt-6" aria-labelledby="related-resources-heading">
+      <h2 id="related-resources-heading">தொடர்புடைய வழிகாட்டிகள் &amp; கணிப்பேடுகள்</h2>
+      <div class="calculator-grid">
+        <a class="calculator-card" href="../articles/index-funds-vs-active-mutual-funds/">
+          <span class="calculator-card__type">முதன்மை வழிகாட்டுக் கட்டுரை</span>
+          <h3>குறியீட்டு நிதித் திட்டம் vs செயலுள்ள மியூச்சுவல் நிதித் திட்டம்</h3>
+          <p>கட்டண இழப்பு, SPIVA இந்தியா ஆய்வு மற்றும் Nifty 100 இரட்டைக் கூட்டணி உத்திகள் குறித்த விரிவான வழிகாட்டியைப் படியுங்கள்.</p>
+          <span class="calculator-card__open">கட்டுரையைப் படிக்க <span aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a class="calculator-card" href="../calculators/mf_sip_calculator.html">
+          <span class="calculator-card__type">கணிப்பேடு</span>
+          <h3>மியூச்சுவல் நிதித் திட்ட SIP கணிப்பேடு</h3>
+          <p>மாதாந்திர SIP மூலம் 10, 20, 25 ஆண்டுகளில் குவியும் மூலதனத்தையும் கூட்டு வட்டி வளர்ச்சியையும் கணக்கிடுங்கள்.</p>
+          <span class="calculator-card__open">கணிப்பேட்டைத் திறக்க <span aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a class="calculator-card" href="../calculators/goal-based-investing-calculator.html">
+          <span class="calculator-card__type">கணிப்பேடு</span>
+          <h3>இலக்கு சார்ந்த முதலீட்டுக் கணிப்பேடு</h3>
+          <p>வீடு, குழந்தைகள் கல்வி அல்லது ஓய்வூதிய இலக்குகளுக்கு எவ்வளவு மாதாந்திர SIP தேவை எனக் கணக்கிடுங்கள்.</p>
+          <span class="calculator-card__open">கணிப்பேட்டைத் திறக்க <span aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a class="calculator-card" href="../checklists/personal-finance-fortification-checklist.html">
+          <span class="calculator-card__type">சரிபார்ப்புப் பட்டியல்</span>
+          <h3>தனிநபர் நிதிநிலை வலுவூட்டல் பட்டியல்</h3>
+          <p>அவசர நிதி, காப்பீடு, கடன், முதலீடு மற்றும் குடும்ப ஆவணப் பாதுகாப்பை முழுமையாக மதிப்பாய்வு செய்யுங்கள்.</p>
+          <span class="calculator-card__open">சரிபார்ப்புப் பட்டியலைத் திறக்க <span aria-hidden="true">&rarr;</span></span>
+        </a>
+      </div>
+    </section>
+
+</main>
+
+<script>
+    // Master Checklist Data for Index Fund Selection
+    const indexFundChecklistData = [
+      {
+        category: "1. திட்டம் & வளர்ச்சித் தேர்வு (Plan Type & Growth Option)",
+        items: [
+          { id: 1, priority: "Critical", title: "எப்போதும் நேரடித் திட்டம் (Direct Plan) மட்டுமே தேர்வு செய்தல்", desc: "வழக்கமான மியூச்சுவல் நிதித் திட்டம் (Regular Plan) தவிர்க்கவும்; இடைத்தரகர் கமிஷன்களை முற்றிலும் ஒழித்தல்.", checked: false },
+          { id: 2, priority: "Critical", title: "வளர்ச்சித் திட்டம் (Growth Option) தேர்வு (IDCW / ஈவுத்தொகை தவிர்க்கவும்)", desc: "ஈவுத்தொகைகள் தானாகவே NAV மதிப்பில் மறுமுதலீடு செய்யப்பட்டு கூட்டு வட்டியாகப் பெருகும்.", checked: false },
+          { id: 3, priority: "High", title: "நேரடி AMC அல்லது அங்கீகரிக்கப்பட்ட தளம் பயன்பாடு", desc: "MF Central, நிதி நிறுவன இணையதளம் அல்லது நேரடி தளங்கள் வழியே பூஜ்ஜிய தரகில் முதலீடு செய்தல்.", checked: false }
+        ]
+      },
+      {
+        category: "2. நிதித்திட்ட நிர்வாகச் செலவு விகிதம் (Total Expense Ratio - TER)",
+        items: [
+          { id: 4, priority: "Critical", title: "NIFTY 50 குறைந்த நிர்வாகச் செலவு விகிதம் (TER <= 0.20%)", desc: "Nifty 50 நேரடி குறியீட்டு நிதித் திட்டங்களுக்கு TER 0.10% முதல் 0.20%-க்குள் மட்டுமே இருக்க வேண்டும்.", checked: false },
+          { id: 5, priority: "High", title: "NIFTY NEXT 50 நியாயமான செலவு விகிதம் (TER <= 0.35%)", desc: "Nifty Next 50 குறியீட்டு நிதித் திட்டங்களுக்கு TER 0.20% முதல் 0.35%-க்குள் இருப்பது ஏற்கத்தக்கது.", checked: false },
+          { id: 6, priority: "Medium", title: "நிர்வாகச் செலவு விகித வரலாற்று நிலைத்தன்மை (TER Consistency)", desc: "கடந்த 2-3 ஆண்டுகளில் ஃபண்ட் நிறுவனம் அடிக்கடி தன் நிர்வாகச் செலவு விகிதத்தை உயர்த்தாமல் உள்ளதா எனப் பார்த்தல்.", checked: false }
+        ]
+      },
+      {
+        category: "3. பின்தொடர்தல் காரணிகள் (Tracking Difference & Tracking Error)",
+        items: [
+          { id: 7, priority: "Critical", title: "குறைந்த பின்தொடர்தல் வித்தியாசம் (Tracking Difference <= TER + 0.10%)", desc: "குறியீட்டின் TRI வருமானத்திற்கும் ஃபண்டின் NAV வருமானத்திற்கும் இடையே உள்ள நிகர இடைவெளி TER-ஐ ஒட்டியே இருத்தல்.", checked: false },
+          { id: 8, priority: "Critical", title: "குறைந்த பின்தொடர்தல் பிழை (Tracking Error < 0.05% - 0.10%)", desc: "தினசரி நிலையற்ற தன்மை 0.05%-க்கும் குறைவாக இருந்து சந்தையைக் கச்சிதமாகப் பின்தொடர்தல்.", checked: false },
+          { id: 9, priority: "Medium", title: "ரொக்கக் கையிருப்பு இழப்பு தவிர்த்தல் (Cash Drag < 2%)", desc: "மீட்புகளுக்காக 1% முதல் 2% மட்டுமே ரொக்கமாக வைத்து, மீதித் தொகை முழுமையாகச் சந்தையில் முதலீடு செய்யப்படுதல்.", checked: false }
+        ]
+      },
+      {
+        category: "4. சொத்து மதிப்பு & பணப்புழக்கம் (AUM & Liquidity)",
+        items: [
+          { id: 10, priority: "Critical", title: "மொத்த சொத்து மதிப்பு (AUM >= ₹1,000 கோடி)", desc: "Nifty 50-ல் குறைந்தபட்சம் ₹1,000 கோடிக்கு அதிகமான AUM உள்ள திட்டங்களையே தேர்வு செய்து Impact Cost-ஐத் தவிர்த்தல்.", checked: false },
+          { id: 11, priority: "High", title: "முன்னணி சொத்து மேலாண்மை நிறுவன நம்பகத்தன்மை (Reputable AMC)", desc: "குறியீட்டு நிதி நிர்வாகத்தில் 5+ ஆண்டுகள் அனுபவம் மற்றும் கணினி வழிமுறைக் கட்டமைப்பு கொண்ட நிறுவனங்களைத் தேர்வு செய்தல்.", checked: false },
+          { id: 12, priority: "Medium", title: "வெளியேறும் கட்டணம் அறிதல் (Zero or Minimal Exit Load)", desc: "பெரும்பாலான குறியீட்டு நிதித் திட்டங்களுக்கு Exit Load 0% (பூஜ்ஜியம்) அல்லது மிகக் குறைந்த கட்டுப்பாடுகள் உள்ளதை அறிதல்.", checked: false }
+        ]
+      },
+      {
+        category: "5. முதலீட்டுத் தொகுப்பு ஒதுக்கீடு (Portfolio Allocation Strategy)",
+        items: [
+          { id: 13, priority: "Critical", title: "70% மைய முதலீட்டுத் தொகுப்பு அடித்தளம் (Core Portfolio Allocation)", desc: "மொத்தப் பங்கு முதலீட்டில் குறைந்தபட்சம் 70% பகுதியை Nifty 50 மற்றும் Next 50 செயல் வேண்டா நிதிகளில் அமைத்தல்.", checked: false },
+          { id: 14, priority: "High", title: "70:30 அல்லது 50:50 விகிதம் தேர்வு செய்தல்", desc: "சமச்சீர் அணுகுமுறைக்கு 70% N50 + 30% NN50; துடிப்பான வளர்ச்சிக்கு 50% N50 + 50% NN50 என உத்தியைத் தீர்மானித்தல்.", checked: false },
+          { id: 15, priority: "Medium", title: "30% துணை முதலீட்டுத் தொகுப்புப் பிரிவு (Satellite Portfolio Allocation)", desc: "கூடுதல் ஆல்ஃபா ஈட்ட விரும்பினால் மட்டுமே மீதி 30% நிதியை 1 தரமான நடு முதல் (Midcap) அல்லது சிறு முதல் (Smallcap) செயலுள்ள நிதித் திட்டத்தில் முதலீடு செய்தல்.", checked: false },
+          { id: 16, priority: "High", title: "முதலீட்டுத் தொகுப்பு ஆண்டு மறுசீரமைப்பு ஒழுக்கம் (Annual Portfolio Rebalancing)", desc: "ஆண்டுக்கு ஒருமுறை முதலீட்டுத் தொகுப்பை ஆய்வு செய்து, நிர்ணயித்த 70:30 அல்லது 50:50 விகிதத்திற்குச் சீரமைத்தல்.", checked: false }
+        ]
+      },
+      {
+        category: "6. நீண்டகால ஒழுங்குமுறை & இடைவிடா முதலீட்டுத் திட்டம் (Disciplined SIP Execution)",
+        items: [
+          { id: 17, priority: "Critical", title: "குறைந்தபட்சம் 7 முதல் 10+ ஆண்டு முதலீட்டு எல்லை", desc: "நாட்டின் பொருளாதார வளர்ச்சியோடு இணைந்து முழு பலனைப் பெற 10+ ஆண்டுகள் பொறுமையுடன் முதலீடு செய்யும் மனநிலை.", checked: false },
+          { id: 18, priority: "High", title: "தானியங்கி மாதாந்திர இடைவிடா முதலீட்டுத் திட்டம் (Auto-Debit SIP)", desc: "சந்தை ஏற்ற இறக்கங்களைக் கணிக்காமல், மாதந்தோறும் தானாக வங்கியிலிருந்து பிடித்தம் செய்யப்படும் ஆட்டோ-டெபிட் SIP.", checked: false },
+          { id: 19, priority: "Critical", title: "சந்தைச் சரிவுகளில் SIP தவணையை நிறுத்தாதிருத்தல்", desc: "சந்தை சரியும்போது பதற்றமடையாமல் தொடர்ந்து முதலீடு செய்து ரூபாய் செலவுச் சராசரி மூலம் கூடுதல் யூனிட்களைக் குவித்தல்.", checked: false },
+          { id: 20, priority: "High", title: "100% நியமனதாரர் (Nominee) பதிவு மற்றும் வரிச் சலுகை அறிதல்", desc: "அனைத்துப் போலியோக்களிலும் நியமனதாரரைப் பதிவு செய்தல்; ஆண்டுக்கு ₹1.25L வரை LTCG வரிவிலக்கை அறிதல்.", checked: false }
+        ]
+      }
+    ];
+
+    const STORAGE_KEY = "np_index_fund_selection_checklist_state";
+    const totalTasks = 20;
+
+    // Load saved state from localStorage
+    function loadSavedState() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (!saved) return;
+        const savedIds = JSON.parse(saved);
+        if (!Array.isArray(savedIds)) return;
+
+        indexFundChecklistData.forEach(cat => {
+          cat.items.forEach(item => {
+            if (savedIds.includes(item.id)) {
+              item.checked = true;
+            }
+          });
+        });
+
+        document.querySelectorAll('.task-checkbox').forEach(box => {
+          const id = parseInt(box.dataset.id, 10);
+          if (savedIds.includes(id)) {
+            box.checked = true;
+          }
+        });
+      } catch (err) {
+        console.warn("Could not load checklist state from localStorage", err);
+      }
+    }
+
+    // Save state to localStorage
+    function saveState() {
+      try {
+        const checkedIds = [];
+        indexFundChecklistData.forEach(cat => {
+          cat.items.forEach(item => {
+            if (item.checked) checkedIds.push(item.id);
+          });
+        });
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(checkedIds));
+      } catch (err) {
+        console.warn("Could not save checklist state to localStorage", err);
+      }
+    }
+
+    // Update Progress Counter & Percentage
+    function updateProgress() {
+      let completed = 0;
+      indexFundChecklistData.forEach(cat => {
+        cat.items.forEach(item => {
+          if (item.checked) completed++;
+        });
+      });
+
+      const pct = Math.round((completed / totalTasks) * 100);
+      document.getElementById('progressCount').textContent = `${completed} / ${totalTasks}`;
+      document.getElementById('progressPercent').textContent = `${pct}%`;
+    }
+
+    // Checkbox Listeners
+    document.querySelectorAll('.task-checkbox').forEach(box => {
+      box.addEventListener('change', (e) => {
+        const id = parseInt(e.target.dataset.id, 10);
+        const isChecked = e.target.checked;
+
+        indexFundChecklistData.forEach(cat => {
+          cat.items.forEach(item => {
+            if (item.id === id) item.checked = isChecked;
+          });
+        });
+
+        saveState();
+        updateProgress();
+      });
+    });
+
+    // Native Excel (.xlsx) Download Handler using SheetJS
+    document.getElementById('btnDownloadExcel').addEventListener('click', () => {
+      const excelRows = [
+        ["வரிசை எண் (S.No)", "பிரிவு (Category)", "சரிபார்ப்பு அளவுகோல் (Index Fund Checklist Item)", "விளக்கம் (Details)", "முன்னுரிமை (Priority)", "தற்போதைய நிலை (Status)"]
+      ];
+
+      let rowIdx = 1;
+      indexFundChecklistData.forEach(cat => {
+        cat.items.forEach(item => {
+          excelRows.push([
+            rowIdx++,
+            cat.category,
+            item.title,
+            item.desc,
+            item.priority,
+            item.checked ? "சரிபார்க்கப்பட்டது (Verified) ✓" : "நிலுவையில் உள்ளது (Pending)"
+          ]);
+        });
+      });
+
+      const worksheet = XLSX.utils.aoa_to_sheet(excelRows);
+
+      worksheet['!cols'] = [
+        { wch: 16 },
+        { wch: 42 },
+        { wch: 48 },
+        { wch: 65 },
+        { wch: 16 },
+        { wch: 24 }
+      ];
+
+      const workbook = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(workbook, worksheet, "குறியீட்டு_நிதி_சரிபார்ப்பு");
+
+      XLSX.writeFile(workbook, `Index_Fund_Selection_Checklist_${Date.now()}.xlsx`);
+    });
+
+    // Reset Checklist Handler
+    document.getElementById('btnResetChecklist').addEventListener('click', () => {
+      if (confirm("நீங்கள் சேமித்த அனைத்து சரிபார்ப்புகளையும் அழிக்க விரும்புகிறீர்களா?")) {
+        try {
+          localStorage.removeItem(STORAGE_KEY);
+        } catch (e) {
+          console.warn("Could not clear localStorage", e);
+        }
+
+        document.querySelectorAll('.task-checkbox').forEach(box => {
+          box.checked = false;
+        });
+
+        indexFundChecklistData.forEach(cat => {
+          cat.items.forEach(item => {
+            item.checked = false;
+          });
+        });
+
+        updateProgress();
+      }
+    });
+
+    // Initialize progress on load
+    loadSavedState();
+    updateProgress();
+</script>

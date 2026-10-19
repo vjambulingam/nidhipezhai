@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img" aria-labelledby="flow-desc">
-  <desc id="flow-desc">படி 1: மனத்தகுதி அறிவிப்பு, படி 2: சொத்து பட்டியல், படி 3: நிறைவேற்றுநர் தேர்வு, படி 4: பயனாளிகள் ஒதுக்கீடு, படி 5: சாட்சிகள் கையொப்பம், படி 6: விருப்பப் பதிவு.</desc>
+  <desc id="flow-desc">படி 1: மனத்தகுதி அறிவிப்பு, படி 2: சொத்துப் பட்டியல், படி 3: நிறைவேற்றுநர் தேர்வு, படி 4: பயனாளிகள் ஒதுக்கீடு, படி 5: சாட்சிகள் கையொப்பம், படி 6: விருப்பப் பதிவு.</desc>
 
   <defs>
     <style>
@@ -61,7 +61,7 @@
     <path d="M 162 51 L 164 53 L 168 49 M 171 51 L 178 51" stroke="#10b981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
     <path d="M 162 58 L 164 60 L 168 56 M 171 58 L 178 58" stroke="#10b981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
     <!-- Step Text -->
-    <text x="170" y="118" class="step-text">படி 2: சொத்து பட்டியல்</text>
+    <text x="170" y="118" class="step-text">படி 2: சொத்துப் பட்டியல்</text>
   </g>
 
   <!-- Arrow 2 -> 3 (Horizontal) -->

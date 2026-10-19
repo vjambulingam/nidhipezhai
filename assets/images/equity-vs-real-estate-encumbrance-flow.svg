@@ -112,7 +112,7 @@
     <circle cx="50" cy="96" r="16" fill="#ecfdf5"/>
     <text x="50" y="101" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#059669" text-anchor="middle">1</text>
     <text x="78" y="86" class="step-head">வாங்குபவர் ஆணை &amp; நிதி மாற்றம் (Order &amp; Funds)</text>
-    <text x="78" y="106" class="step-body">உங்கள் வங்கிக் கணக்கிலிருந்து புரோக்கர் மூலம் நிதி செலுத்தப்படுகிறது.</text>
+    <text x="78" y="106" class="step-body">உங்கள் வங்கிக் கணக்கிலிருந்து பங்குத் தரகர் மூலம் நிதி செலுத்தப்படுகிறது.</text>
 
     <!-- Arrow 1 -> 2 -->
     <path d="M 277 132 L 277 142" stroke="#059669" stroke-width="2" marker-end="url(#arrowGreen)"/>
@@ -123,7 +123,7 @@
     <text x="50" y="190" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#059669" text-anchor="middle">2</text>
     <text x="78" y="170" class="step-head">கிளியரிங் கார்ப்பரேஷன் தீர்வு (ICCL / NSE Clearing)</text>
     <text x="78" y="190" class="step-body">பங்குகளின் முந்தைய அடையாளம் முற்றிலுமாக அழிக்கப்படுகிறது (<tspan font-weight="700" fill="#047857">Fungible Asset</tspan>).</text>
-    <text x="78" y="208" class="step-body">விற்பவர் யார், அவரின் குடும்பப் பிரச்சனைகள் என்ன என்பது மறைந்துவிடும்.</text>
+    <text x="78" y="208" class="step-body">விற்பவர் யார், அவரின் குடும்பப் பிரச்சினைகள் என்ன என்பது மறைந்துவிடும்.</text>
 
     <!-- Arrow 2 -> 3 -->
     <path d="M 277 226 L 277 236" stroke="#059669" stroke-width="2" marker-end="url(#arrowGreen)"/>
@@ -166,7 +166,7 @@
     <circle cx="50" cy="96" r="16" fill="#fff7ed"/>
     <text x="50" y="101" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#ea580c" text-anchor="middle">1</text>
     <text x="78" y="86" class="step-head">விற்பனையாளரிடம் நேரடிப் பேச்சு &amp; முன்பணம்</text>
-    <text x="78" y="106" class="step-body">விற்பவர் காட்டும் பத்திரங்களையும் ஆவணங்களையும் நம்பி ஒப்பந்தம் போடுதல்.</text>
+    <text x="78" y="106" class="step-body">விற்பவர் காட்டும் பத்திரங்களையும் ஆவணங்களையும் நம்பி ஒப்பந்தம் செய்தல்.</text>
 
     <!-- Arrow 1 -> 2 -->
     <path d="M 277 132 L 277 142" stroke="#d97706" stroke-width="2" marker-end="url(#arrowAmber)"/>
@@ -176,7 +176,7 @@
     <circle cx="50" cy="185" r="16" fill="#ffedd5"/>
     <text x="50" y="190" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#ea580c" text-anchor="middle">2</text>
     <text x="78" y="170" class="step-head">சார்பதிவாளர் பதிவு (Sub-Registrar Office)</text>
-    <text x="78" y="190" class="step-body">அரசு கட்டணம் பெற்று ஆவணத்தைப் பதிவு மட்டுமே செய்கிறது (<tspan font-weight="700" fill="#c2410c">Caveat Emptor</tspan>).</text>
+    <text x="78" y="190" class="step-body">அரசுக் கட்டணம் பெற்று ஆவணத்தைப் பதிவு மட்டுமே செய்கிறது (<tspan font-weight="700" fill="#c2410c">Caveat Emptor</tspan>).</text>
     <text x="78" y="208" class="step-body">சொத்து 100% வில்லங்கமற்றது என்று அரசு எந்த உத்தரவாதமும் அளிக்காது!</text>
 
     <!-- Arrow 2 -> 3 -->
@@ -195,8 +195,8 @@
     <circle cx="52" cy="374" r="18" fill="#ef4444"/>
     <path d="M 52 364 L 52 376 M 52 382 L 52 384" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
     <text x="82" y="352" class="takeaway-title" fill="#991b1b">தலைமுறைச் சுமைகள் (Historical Baggage Risk):</text>
-    <text x="82" y="374" class="takeaway-desc" fill="#b91c1c">கடந்த 30-50 ஆண்டு முந்தைய உரிமையாளர்களின் ரகசிய முதல் திருமணம்,</text>
-    <text x="82" y="394" class="takeaway-desc" fill="#b91c1c">பாகப்பிரிவினை விடுபட்ட வாரிசுகள், வேறு ஊரில் பதியப்பட்ட உயில்கள் மற்றும்</text>
+    <text x="82" y="374" class="takeaway-desc" fill="#b91c1c">கடந்த 30–50 ஆண்டுகளுக்கு முந்தைய உரிமையாளர்களின் ரகசிய முதல் திருமணம்,</text>
+    <text x="82" y="394" class="takeaway-desc" fill="#b91c1c">பாகப்பிரிவினையில் விடுபட்ட வாரிசுகள், வேறு ஊரில் பதியப்பட்ட உயில்கள் மற்றும்</text>
     <text x="82" y="414" class="takeaway-desc" fill="#b91c1c">சுற்றுச்சூழல் மீறல்களால் உங்கள் சொத்து எந்த நேரத்திலும் பறிபோகலாம்!</text>
   </g>
 </svg>

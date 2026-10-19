@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="545" viewBox="0 0 1200 545" role="img" aria-labelledby="flow-title flow-desc">
   <title id="flow-title">அவசர காலக் கையேடு (ICE KIT) - 5-படி செயல் திட்ட வரைபடம்</title>
-  <desc id="flow-desc">படி 1: ஆவணங்களைச் சேகரித்தல், படி 2: மாஸ்டர் எக்செல் அட்டவணை தயாரித்தல், படி 3: காகிதக் கோப்புறை உருவாக்குதல், படி 4: வாழ்க்கைத்துணையுடன் மனம் திறந்த உரையாடல், படி 5: ஆண்டுக்கொரு முறை புதுப்பித்தல்.</desc>
+  <desc id="flow-desc">படி 1: ஆவணங்களைச் சேகரித்தல், படி 2: மாஸ்டர் எக்செல் அட்டவணைத் தயாரித்தல், படி 3: காகிதக் கோப்புறை உருவாக்குதல், படி 4: வாழ்க்கைத்துணையுடன் மனந்திறந்த உரையாடல், படி 5: ஆண்டுக்கொரு முறை புதுப்பித்தல்.</desc>
 
   <defs>
     <linearGradient id="flowHeaderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -39,7 +39,7 @@
   </g>
 
   <!-- Header Title -->
-  <text x="110" y="70" fill="#ffffff" font-family="'Noto Sans Tamil', 'DM Sans', sans-serif" font-size="25" font-weight="700">அவசர காலக் கையேடு (ICE KIT) — 5-படி செயல் திட்டம் (Action Plan Flow)</text>
+  <text x="110" y="70" fill="#ffffff" font-family="'Noto Sans Tamil', 'DM Sans', sans-serif" font-size="25" font-weight="700">அவசர காலக் கையேடு (ICE KIT) — 5-படி செயல்திட்டம் (Action Plan Flow)</text>
 
   <!-- ================= ROW 1 (Steps 1, 2, 3) ================= -->
 
@@ -75,7 +75,7 @@
     <text x="273" y="52" fill="#10b981" font-family="'DM Sans', sans-serif" font-size="13" font-weight="700" text-anchor="middle">STEP 02</text>
     <!-- Line 1: Tamil Step (Wrapped cleanly into 2 lines) -->
     <text x="22" y="94" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="15" font-weight="700">படி 2: மாஸ்டர் எக்செல்</text>
-    <text x="22" y="117" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="15" font-weight="700">அட்டவணை தயாரித்தல்</text>
+    <text x="22" y="117" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="15" font-weight="700">அட்டவணைத் தயாரித்தல்</text>
     <!-- Line 2: English Equivalent -->
     <text x="22" y="142" fill="#10b981" font-family="'DM Sans', sans-serif" font-size="13.5" font-weight="600">(Master Spreadsheet)</text>
   </g>
@@ -149,7 +149,7 @@
     <text x="273" y="52" fill="#0D7377" font-family="'DM Sans', sans-serif" font-size="13" font-weight="700" text-anchor="middle">STEP 04</text>
     <!-- Line 1: Tamil Step (Wrapped cleanly into 2 lines) -->
     <text x="22" y="94" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="15" font-weight="700">படி 4: வாழ்க்கைத்துணையுடன்</text>
-    <text x="22" y="117" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="15" font-weight="700">மனம் திறந்த உரையாடல்</text>
+    <text x="22" y="117" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="15" font-weight="700">மனந்திறந்த உரையாடல்</text>
     <!-- Line 2: English Equivalent -->
     <text x="22" y="142" fill="#0D7377" font-family="'DM Sans', sans-serif" font-size="13.5" font-weight="600">(The Family Conversation)</text>
   </g>

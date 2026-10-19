@@ -1,0 +1,283 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="590" viewBox="0 0 1200 590" role="img" aria-labelledby="idx-act-title idx-act-desc">
+  <title id="idx-act-title">குறியீட்டு நிதித் திட்டம் vs செயலுள்ள மியூச்சுவல் நிதித் திட்டம் முழு ஒப்பீடு</title>
+  <desc id="idx-act-desc">Index Funds vs. Active Mutual Funds Comparison: Passive Indexing vs Active Stock Picking, Expense Ratio Drag, Alpha &amp; Performance, Manager Risk &amp; Tracking Error, and Portfolio Allocation.</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&amp;family=Noto+Sans+Tamil:wght@500;600;700&amp;display=swap');
+      .header-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 17.5px;
+        font-weight: 700;
+        fill: #ffffff;
+      }
+      .header-sub {
+        font-family: 'Noto Sans Tamil', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        fill: #d5e7e3;
+      }
+      .idx-pill-text {
+        font-family: 'Noto Sans Tamil', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 10.5px;
+        font-weight: 700;
+      }
+      .card-title-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 14.5px;
+        font-weight: 700;
+        fill: #0f172a;
+        text-anchor: middle;
+      }
+      .card-sub-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 10.5px;
+        font-weight: 600;
+        text-anchor: middle;
+      }
+      .section-heading {
+        font-family: 'Noto Sans Tamil', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+      }
+      .bullet-text {
+        font-family: 'Noto Sans Tamil', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 9.8px;
+        font-weight: 500;
+        fill: #334155;
+        letter-spacing: -0.15px;
+      }
+      .tag-text {
+        font-family: 'Noto Sans Tamil', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .footer-title-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 12.5px;
+        font-weight: 700;
+        fill: #0D7377;
+      }
+      .footer-desc-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        fill: #334155;
+      }
+    </style>
+
+    <linearGradient id="headerGradIdxAct" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D7377"/>
+      <stop offset="100%" stop-color="#102e31"/>
+    </linearGradient>
+
+    <filter id="cardShadowIdxAct" x="-5%" y="-3%" width="110%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="590" rx="18" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- Top Header Banner -->
+  <rect x="2" y="2" width="1196" height="85" rx="16" fill="url(#headerGradIdxAct)"/>
+  <circle cx="50" cy="44" r="24" fill="#14b8a6" fill-opacity="0.2"/>
+  
+  <!-- Index Prism & Chart Icon -->
+  <path d="M 40 52 L 50 34 L 60 52 Z" stroke="#5eead4" stroke-width="2" fill="none" stroke-linejoin="round"/>
+  <line x1="50" y1="34" x2="50" y2="52" stroke="#5eead4" stroke-width="1.5" stroke-dasharray="2 2"/>
+  <circle cx="50" cy="34" r="2" fill="#5eead4"/>
+
+  <text x="86" y="38" class="header-tamil">குறியீட்டு நிதித் திட்டம் vs செயலுள்ள மியூச்சுவல் நிதித் திட்டம்: ஒப்பீட்டு வழிகாட்டி</text>
+  <text x="86" y="60" class="header-sub">செயல் வேண்டா நிதி (Passive) vs செயலுள்ள மேலாண்மை (Active): நீண்டகால முதலீட்டாளருக்கு எது உகந்தது? — 5 பரிமாணங்கள்</text>
+
+  <!-- ================= 5 COMPARISON CARDS ================= -->
+
+  <!-- CARD 1: முதலீட்டுத் தத்துவம் -->
+  <g transform="translate(20, 100)" filter="url(#cardShadowIdxAct)">
+    <rect width="220" height="390" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="220" height="5" rx="2.5" fill="#0D7377"/>
+    
+    <rect x="75" y="14" width="70" height="20" rx="10" fill="#e6f5f3"/>
+    <text x="110" y="28" class="idx-pill-text" fill="#0D7377" text-anchor="middle">காரணி 1</text>
+    
+    <circle cx="110" cy="60" r="18" fill="#e6f5f3"/>
+    <path d="M 102 64 L 107 59 L 111 63 L 118 56 M 114 56 L 118 56 L 118 60" stroke="#0D7377" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="110" y="99" class="card-title-tamil">முதலீட்டுத் தத்துவம்</text>
+    <text x="110" y="116" class="card-sub-tamil" fill="#0D7377">Strategy &amp; Philosophy</text>
+
+    <!-- Active Box -->
+    <rect x="7" y="129" width="206" height="100" rx="8" fill="#fff7ed" stroke="#ffedd5" stroke-width="1"/>
+    <text x="15" y="146" class="section-heading" fill="#c2410c">⚡ செயலுள்ள நிதி (Active):</text>
+    <text x="15" y="164" class="bullet-text">• மேலாளர் பங்குத் தேர்வு.</text>
+    <text x="15" y="180" class="bullet-text">• சந்தையை முந்த முயற்சி.</text>
+    <text x="15" y="196" class="bullet-text">• அடிக்கடி வாங்குதல்/விற்றல்.</text>
+    <text x="15" y="212" class="bullet-text">• மனித விருப்பு/வெறுப்புகள்.</text>
+
+    <!-- Index Box -->
+    <rect x="7" y="237" width="206" height="100" rx="8" fill="#f0fdfa" stroke="#ccfbf1" stroke-width="1"/>
+    <text x="15" y="254" class="section-heading" fill="#0f766e">📊 செயல் வேண்டா நிதி:</text>
+    <text x="15" y="272" class="bullet-text">• விதிமுறை சார்ந்த முதலீடு.</text>
+    <text x="15" y="288" class="bullet-text">• சந்தைக் குறியீட்டு நகல்.</text>
+    <text x="15" y="304" class="bullet-text">• மனிதச் சார்பற்றது.</text>
+    <text x="15" y="320" class="bullet-text">• நிலையான நீண்டகால உத்தி.</text>
+
+    <rect x="14" y="347" width="192" height="26" rx="13" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1"/>
+    <text x="110" y="364" class="tag-text" fill="#0f766e">மனித கணிப்பு vs விதிமுறை</text>
+  </g>
+
+  <!-- CARD 2: கட்டணம் & செலவு விகிதம் -->
+  <g transform="translate(255, 100)" filter="url(#cardShadowIdxAct)">
+    <rect width="220" height="390" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="220" height="5" rx="2.5" fill="#dc2626"/>
+    
+    <rect x="75" y="14" width="70" height="20" rx="10" fill="#fef2f2"/>
+    <text x="110" y="28" class="idx-pill-text" fill="#dc2626" text-anchor="middle">காரணி 2</text>
+    
+    <circle cx="110" cy="60" r="18" fill="#fef2f2"/>
+    <circle cx="110" cy="60" r="10" fill="none" stroke="#dc2626" stroke-width="1.8"/>
+    <path d="M 106 60 L 114 60 M 110 55 L 110 65" stroke="#dc2626" stroke-width="1.6" stroke-linecap="round"/>
+
+    <text x="110" y="99" class="card-title-tamil">கட்டணம் &amp; செலவு</text>
+    <text x="110" y="116" class="card-sub-tamil" fill="#dc2626">Expense Ratio Drag (TER)</text>
+
+    <!-- Active Box -->
+    <rect x="7" y="129" width="206" height="100" rx="8" fill="#fef2f2" stroke="#fee2e2" stroke-width="1"/>
+    <text x="15" y="146" class="section-heading" fill="#991b1b">⚡ செயலுள்ள நிதிச் செலவு:</text>
+    <text x="15" y="164" class="bullet-text">• 1.0% - 2.2% அதிக TER.</text>
+    <text x="15" y="180" class="bullet-text">• ஆய்வாளர் ஊதியக் கட்டணம்.</text>
+    <text x="15" y="196" class="bullet-text">• பங்குகள் அடிக்கடி சுழற்சி (Churn).</text>
+    <text x="15" y="212" class="bullet-text">• 20 ஆண்டுகளில் பெருத்த சுமை.</text>
+
+    <!-- Index Box -->
+    <rect x="7" y="237" width="206" height="100" rx="8" fill="#ecfdf5" stroke="#d1fae5" stroke-width="1"/>
+    <text x="15" y="254" class="section-heading" fill="#065f46">📊 குறியீட்டு நிதிச் செலவு:</text>
+    <text x="15" y="272" class="bullet-text">• 0.10% - 0.25% குறைந்த TER.</text>
+    <text x="15" y="288" class="bullet-text">• குறைந்த நிர்வாகச் செலவு.</text>
+    <text x="15" y="304" class="bullet-text">• மிகக் குறைந்த வர்த்தக வரி.</text>
+    <text x="15" y="320" class="bullet-text">• 25 ஆண்டுகளில் ₹40L+ மிச்சம்!</text>
+
+    <rect x="14" y="347" width="192" height="26" rx="13" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+    <text x="110" y="364" class="tag-text" fill="#065f46">1.5% சேமிப்பு = பல லட்சம்!</text>
+  </g>
+
+  <!-- CARD 3: வெற்றி விகிதம் & ஆல்ஃபா -->
+  <g transform="translate(490, 100)" filter="url(#cardShadowIdxAct)">
+    <rect width="220" height="390" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="220" height="5" rx="2.5" fill="#2563eb"/>
+    
+    <rect x="75" y="14" width="70" height="20" rx="10" fill="#eff6ff"/>
+    <text x="110" y="28" class="idx-pill-text" fill="#2563eb" text-anchor="middle">காரணி 3</text>
+    
+    <circle cx="110" cy="60" r="18" fill="#eff6ff"/>
+    <polygon points="110,50 113,57 120,57 114,62 116,69 110,65 104,69 106,62 100,57 107,57" fill="#2563eb"/>
+
+    <text x="110" y="99" class="card-title-tamil">வெற்றி விகிதம்</text>
+    <text x="110" y="116" class="card-sub-tamil" fill="#2563eb">Alpha &amp; SPIVA Report</text>
+
+    <!-- Active Box -->
+    <rect x="7" y="129" width="206" height="100" rx="8" fill="#eff6ff" stroke="#dbeafe" stroke-width="1"/>
+    <text x="15" y="146" class="section-heading" fill="#1e40af">⚡ மேலாளர் செயல்பாடு:</text>
+    <text x="15" y="164" class="bullet-text">• 75%+ நிதித் திட்டங்கள் தோல்வி.</text>
+    <text x="15" y="180" class="bullet-text">• SPIVA ஆய்வின் நிதர்சனம்.</text>
+    <text x="15" y="196" class="bullet-text">• தொடர் ஆல்ஃபா மிக அரிது.</text>
+    <text x="15" y="212" class="bullet-text">• அதிக கட்டணப் பின்னடைவு.</text>
+
+    <!-- Index Box -->
+    <rect x="7" y="237" width="206" height="100" rx="8" fill="#f0fdf4" stroke="#dcfce7" stroke-width="1"/>
+    <text x="15" y="254" class="section-heading" fill="#15803d">📊 குறியீட்டுச் செயல்பாடு:</text>
+    <text x="15" y="272" class="bullet-text">• 100% சந்தை சராசரி லாபம்.</text>
+    <text x="15" y="288" class="bullet-text">• இந்தியப் பொருளாதார வளர்ச்சி.</text>
+    <text x="15" y="304" class="bullet-text">• முதல் 50/100 நிறுவன பலம்.</text>
+    <text x="15" y="320" class="bullet-text">• சமரசமற்ற கூட்டு வளர்ச்சி.</text>
+
+    <rect x="14" y="347" width="192" height="26" rx="13" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+    <text x="110" y="364" class="tag-text" fill="#1e40af">நிதர்சனம் vs வாக்குறுதி</text>
+  </g>
+
+  <!-- CARD 4: மேலாளர் இடர் & டிராக்கிங் பிழை -->
+  <g transform="translate(725, 100)" filter="url(#cardShadowIdxAct)">
+    <rect width="220" height="390" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="220" height="5" rx="2.5" fill="#d97706"/>
+    
+    <rect x="75" y="14" width="70" height="20" rx="10" fill="#fffbeb"/>
+    <text x="110" y="28" class="idx-pill-text" fill="#d97706" text-anchor="middle">காரணி 4</text>
+    
+    <circle cx="110" cy="60" r="18" fill="#fffbeb"/>
+    <path d="M 110 50 L 120 67 L 100 67 Z" stroke="#d97706" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+    <circle cx="110" cy="63" r="1.2" fill="#d97706"/>
+    <line x1="110" y1="56" x2="110" y2="60" stroke="#d97706" stroke-width="1.6" stroke-linecap="round"/>
+
+    <text x="110" y="99" class="card-title-tamil">மனித இடர் &amp; பிழை</text>
+    <text x="110" y="116" class="card-sub-tamil" fill="#d97706">Manager Risk &amp; Tracking Error</text>
+
+    <!-- Active Box -->
+    <rect x="7" y="129" width="206" height="100" rx="8" fill="#fffbeb" stroke="#fef3c7" stroke-width="1"/>
+    <text x="15" y="146" class="section-heading" fill="#b45309">⚡ செயலுள்ள மனித இடர்:</text>
+    <text x="15" y="164" class="bullet-text">• மேலாளர் விலகும் ஆபத்து.</text>
+    <text x="15" y="180" class="bullet-text">• பாணி விலகல்/மாற்றம்.</text>
+    <text x="15" y="196" class="bullet-text">• தவறான கணிப்பு இழப்புகள்.</text>
+    <text x="15" y="212" class="bullet-text">• சந்தை வீழ்ச்சித் தடுமாற்றம்.</text>
+
+    <!-- Index Box -->
+    <rect x="7" y="237" width="206" height="100" rx="8" fill="#f0fdfa" stroke="#ccfbf1" stroke-width="1"/>
+    <text x="15" y="254" class="section-heading" fill="#0f766e">📊 குறியீட்டு நிதிப் பிழை:</text>
+    <text x="15" y="272" class="bullet-text">• குறைந்த பின்தொடர்தல் பிழை.</text>
+    <text x="15" y="288" class="bullet-text">• குறைந்த வருமான இடைவெளி.</text>
+    <text x="15" y="304" class="bullet-text">• பெரிய AUM நிதிப் பாதுகாப்பு.</text>
+    <text x="15" y="320" class="bullet-text">• எளிய தானியங்கி சீரமைப்பு.</text>
+
+    <rect x="14" y="347" width="192" height="26" rx="13" fill="#fffbeb" stroke="#fde68a" stroke-width="1"/>
+    <text x="110" y="364" class="tag-text" fill="#b45309">மேலாளர் இடரற்றது</text>
+  </g>
+
+  <!-- CARD 5: முதலீட்டுத் தொகுப்பு ஒதுக்கீடு -->
+  <g transform="translate(960, 100)" filter="url(#cardShadowIdxAct)">
+    <rect width="220" height="390" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="220" height="5" rx="2.5" fill="#059669"/>
+    
+    <rect x="75" y="14" width="70" height="20" rx="10" fill="#ecfdf5"/>
+    <text x="110" y="28" class="idx-pill-text" fill="#059669" text-anchor="middle">காரணி 5</text>
+    
+    <circle cx="110" cy="60" r="18" fill="#ecfdf5"/>
+    <path d="M 103 60 L 108 65 L 117 54" stroke="#059669" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="110" y="99" class="card-title-tamil">யாருக்கு எது உகந்தது?</text>
+    <text x="110" y="116" class="card-sub-tamil" fill="#059669">Portfolio Allocation</text>
+
+    <!-- Active Box -->
+    <rect x="7" y="129" width="206" height="100" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="15" y="146" class="section-heading" fill="#334155">⚡ செயலுள்ள நிதி ஒதுக்கீடு:</text>
+    <text x="15" y="164" class="bullet-text">• நடு முதல் (Midcap) பங்குகள்.</text>
+    <text x="15" y="180" class="bullet-text">• சிறு முதல் (Smallcap) பங்குகள்.</text>
+    <text x="15" y="196" class="bullet-text">• 20% - 30% துணைக் கட்டமைப்பு.</text>
+    <text x="15" y="212" class="bullet-text">• அதிக ரிஸ்க் எடுக்கும் திறன்.</text>
+
+    <!-- Index Box -->
+    <rect x="7" y="237" width="206" height="100" rx="8" fill="#ecfdf5" stroke="#d1fae5" stroke-width="1"/>
+    <text x="15" y="254" class="section-heading" fill="#065f46">📊 குறியீட்டு அடித்தளம்:</text>
+    <text x="15" y="272" class="bullet-text">• Nifty 50 + Next 50 கலவை.</text>
+    <text x="15" y="288" class="bullet-text">• 70% முதலீட்டுத் தொகுப்பு.</text>
+    <text x="15" y="304" class="bullet-text">• 10+ ஆண்டு கால இலக்குகள்.</text>
+    <text x="15" y="320" class="bullet-text">• நிம்மதியான செல்வப் பெருக்கம்.</text>
+
+    <rect x="14" y="347" width="192" height="26" rx="13" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+    <text x="110" y="364" class="tag-text" fill="#065f46">70:30 கோர்-சாட்டிலைட் உத்தி</text>
+  </g>
+
+  <!-- ================= BOTTOM HORIZONTAL SUMMARY BAR ================= -->
+  <g transform="translate(20, 505)" filter="url(#cardShadowIdxAct)">
+    <rect width="1160" height="72" rx="12" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+    
+    <circle cx="28" cy="36" r="16" fill="#fef3c7"/>
+    <!-- Golden Star / Shield Motif -->
+    <polygon points="28,26 31,33 38,33 32,37 34,44 28,40 22,44 24,37 18,33 25,33" fill="#d97706"/>
+
+    <text x="56" y="29" class="footer-title-tamil">🌟 தங்கச் சமநிலை முடிவு (The Golden Takeaway):</text>
+    <text x="56" y="49" class="footer-desc-tamil">பெரு முதல் (Large Cap) பிரிவில் Nifty 50 + Next 50 செயல் வேண்டா குறியீட்டு நிதிகளே உங்கள் 70% முதலீட்டுக்குச் சிறந்த அடித்தளம்!</text>
+    <text x="56" y="65" class="footer-desc-tamil">அதிக செலவு விகிதத்தை (TER) தவிர்த்து சந்தை வளர்ச்சியைப் பெறுங்கள்; மிட்கேப் / ஸ்மால்கேப் பிரிவுகளில் மட்டுமே செயலுள்ள நிதித் திட்டங்கள் உகந்தவை.</text>
+  </g>
+</svg>

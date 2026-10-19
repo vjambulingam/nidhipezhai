@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="535" viewBox="0 0 1200 535" role="img" aria-labelledby="sec-title sec-desc">
-  <title id="sec-title">அவசர காலக் கையேடு (ICE KIT)  - 8 முக்கியப் பிரிவுகள்</title>
+  <title id="sec-title">அவசர காலக் கையேடு (ICE KIT) - 8 முக்கியப் பிரிவுகள்</title>
   <desc id="sec-desc">அவசரத் தொடர்பு, அடையாள ஆவணங்கள், மருத்துவக் காப்பீடு, வங்கிக் கணக்குகள், முதலீடுகள், சொத்துகள், டிஜிட்டல் சொத்துகள் மற்றும் உயில் ஆகிய 8 முக்கியப் பிரிவுகள்.</desc>
 
   <defs>
@@ -31,7 +31,7 @@
   </g>
 
   <!-- Header Title -->
-  <text x="110" y="70" fill="#ffffff" font-family="'Noto Sans Tamil', 'DM Sans', sans-serif" font-size="25" font-weight="700">அவசர காலக் கையேடு (ICE KIT)  - 8 முக்கியப் பிரிவுகள்</text>
+  <text x="110" y="70" fill="#ffffff" font-family="'Noto Sans Tamil', 'DM Sans', sans-serif" font-size="25" font-weight="700">அவசர காலக் கையேடு (ICE KIT) - 8 முக்கியப் பிரிவுகள்</text>
 
   <!-- ================= ROW 1 (Cards 1 to 4) ================= -->
 
@@ -131,7 +131,7 @@
     <text x="47" y="145" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="18" font-weight="700">ஓய்வூதியம்</text>
   </g>
 
-  <!-- Card 6: 6. சொத்துகள் & லாக்கர் விவரம் -->
+  <!-- Card 6: 6. சொத்துகள் & பெட்டக விவரம் -->
   <g transform="translate(325, 325)" filter="url(#cardShadow)">
     <rect width="265" height="175" rx="14" fill="#ffffff" stroke="#dbe7e1" stroke-width="1.5"/>
     <rect width="265" height="5" rx="2.5" fill="#0D7377"/>
@@ -146,7 +146,7 @@
     <text x="222" y="54" fill="#0D7377" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" text-anchor="middle">06</text>
     <!-- Card Title -->
     <text x="24" y="115" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="18" font-weight="700">6. சொத்துகள் &amp;</text>
-    <text x="47" y="145" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="18" font-weight="700">லாக்கர் விவரம்</text>
+    <text x="47" y="145" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="18" font-weight="700">பெட்டக விவரம்</text>
   </g>
 
   <!-- Card 7: 7. டிஜிட்டல் சொத்துகள் & அணுகல் -->

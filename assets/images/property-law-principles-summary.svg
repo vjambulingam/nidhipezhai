@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="580" viewBox="0 0 1200 580" role="img" aria-labelledby="doctrines-title doctrines-desc">
   <title id="doctrines-title">நிலம் மற்றும் சொத்துரிமை குறித்த 5 மிக முக்கியமான சட்டக் கோட்பாடுகள்</title>
-  <desc id="doctrines-desc">5 Core Legal Doctrines of Property Law in India: 1. Article 300A, 2. தானியங்கி சொத்துரிமை, 3. Caveat Emptor, 4. Title Deed is Not Proof of Title, 5. Nemo Dat Quod Non Habet.</desc>
+  <desc id="doctrines-desc">5 Core Legal Doctrines of Property Law in India: 1. Article 300A, 2. தானியங்கிச் சொத்துரிமை, 3. Caveat Emptor, 4. Title Deed is Not Proof of Title, 5. Nemo Dat Quod Non Habet.</desc>
 
   <defs>
     <style>
@@ -118,10 +118,10 @@
     <circle cx="18" cy="205" r="2.8" fill="#0D7377"/>
     <text x="26" y="209" class="bullet-text">எத்தனை கைகள் மாறினாலும்,</text>
     <text x="26" y="225" class="bullet-text">பட்டா மாற்றம் பெற்றாலும்,</text>
-    <text x="26" y="241" class="bullet-text">உரிமையை பறிக்க முடியாது.</text>
+    <text x="26" y="241" class="bullet-text">உரிமையைப் பறிக்க முடியாது.</text>
 
     <circle cx="18" cy="265" r="2.8" fill="#0D7377"/>
-    <text x="26" y="269" class="bullet-text">உண்மையான உரிமையாளர்</text>
+    <text x="26" y="269" class="bullet-text">உண்மையான உரிமையாளரின்</text>
     <text x="26" y="285" class="bullet-text">அனுமதியின்றி கிரயம்</text>
     <text x="26" y="301" class="bullet-text">செய்தால் செல்லாது.</text>
 
@@ -148,7 +148,7 @@
     <circle cx="116" cy="72" r="2.5" fill="#059669"/>
 
     <!-- Title & Subtitle -->
-    <text x="108" y="104" class="card-title-tamil">தானியங்கி சொத்துரிமை</text>
+    <text x="108" y="104" class="card-title-tamil">தானியங்கிச் சொத்துரிமை</text>
     <text x="108" y="122" class="card-sub-tamil" fill="#059669">Automatic Rights</text>
 
     <!-- Bullets -->
@@ -198,8 +198,8 @@
     <text x="26" y="181" class="bullet-text">என உத்தரவாதம் தராது!</text>
 
     <circle cx="18" cy="205" r="2.8" fill="#d97706"/>
-    <text x="26" y="209" class="bullet-text">பதிவுத்துறை கட்டணம்</text>
-    <text x="26" y="225" class="bullet-text">பெற்று ஆவணம் பதிவு செய்யும்</text>
+    <text x="26" y="209" class="bullet-text">பதிவுத்துறைக் கட்டணம்</text>
+    <text x="26" y="225" class="bullet-text">பெற்று ஆவணத்தைப் பதிவு செய்யும்</text>
     <text x="26" y="241" class="bullet-text">நிர்வாக முகமை மட்டுமே.</text>
 
     <circle cx="18" cy="265" r="2.8" fill="#d97706"/>

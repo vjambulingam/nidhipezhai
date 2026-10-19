@@ -1,0 +1,192 @@
+---
+title: நிதி அகராதி (Financial Glossary)
+description: பங்குச்சந்தை, மியூச்சுவல் ஃபண்ட், கடன், வரி, காப்பீடு மற்றும் சட்ட விதிமுறைகளுக்கான எளிய தமிழ் மற்றும் ஆங்கிலக் கலைச்சொற்கள் அகராதி.
+keywords: [நிதி அகராதி, தமிழ் நிதி கலைச்சொற்கள், Financial Glossary Tamil, பங்குச்சந்தை அகராதி, முதலீட்டு கலைச்சொற்கள், Large Cap, Mid Cap, Small Cap, Micro Cap, Flexi Cap, Multi Cap, Passive Mutual Fund, Passive Fund, Passive Income, Tracking Error, Tracking Difference, Repo Rate, CAR, P/B Ratio, ROE, HUF, CAGR, XIRR, IRR, Sharpe Ratio, EBITA, PAT, PE ratio, IPO, T-Bills, Gov Bonds, CRISIL, NCD, Demat Account, Trading Account, Floating Rate, Alpha, Beta, Inflation, CIBIL Score, Credit Card, ICoE Kit, Financial Dossier, LRS, TCS]
+permalink: /glossary/index.html
+---
+<main class="glossary-page">
+  <header class="directory-intro wrap">
+    <p class="eyebrow eyebrow--light">கலைச்சொற்கள் · தெளிவு பெறுங்கள்</p>
+    <h1>நிதி அகராதி (Financial Glossary)</h1>
+    <p>பங்குச்சந்தை, மியூச்சுவல் ஃபண்ட், வங்கி, கடன், வரி, காப்பீடு மற்றும் வாரிசுரிமைச் சட்டங்களின் முக்கியக் கலைச்சொற்களுக்கான எளிய தமிழ் மற்றும் ஆங்கில விளக்கக் கையேடு.</p>
+
+    <!-- Controls: Search & Category Filters -->
+    <div class="glossary-controls">
+      <div class="glossary-search-row">
+        <label class="glossary-search-field" for="glossary-search-input">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.8" cy="10.8" r="6.3"></circle><path d="m15.5 15.5 4.2 4.2"></path></svg>
+          <input id="glossary-search-input" type="search" placeholder="தமிழிலோ அல்லது ஆங்கிலத்திலோ தேடுங்கள் (எ.கா: போர்ட்ஃபோலியோ, LRS, CAGR, CIBIL, IPO, PE ratio...)" autocomplete="off">
+        </label>
+        <span class="glossary-count" id="glossary-count" aria-live="polite">{{ glossary | length }} கலைச்சொற்கள்</span>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="glossary-categories" role="group" aria-label="துறை வாரியாக வடிகட்டுங்கள்">
+        <button class="glossary-cat-btn is-active" type="button" data-cat="all" aria-pressed="true">அனைத்தும்</button>
+        <button class="glossary-cat-btn" type="button" data-cat="முதலீடு &amp; பங்குச்சந்தை" aria-pressed="false">முதலீடு &amp; பங்குச்சந்தை</button>
+        <button class="glossary-cat-btn" type="button" data-cat="சர்வதேச முதலீடு" aria-pressed="false">சர்வதேச முதலீடு</button>
+        <button class="glossary-cat-btn" type="button" data-cat="கடன் &amp; வங்கி" aria-pressed="false">கடன் &amp; வங்கி</button>
+        <button class="glossary-cat-btn" type="button" data-cat="காப்பீடு" aria-pressed="false">காப்பீடு</button>
+        <button class="glossary-cat-btn" type="button" data-cat="சொத்து &amp; உயில்" aria-pressed="false">சொத்து &amp; உயில்</button>
+      </div>
+
+      <!-- Quick Letter Filter Bar -->
+      <div class="glossary-alphabet-bar" id="glossary-alpha-bar" aria-label="ஆங்கில எழுத்து வாரியாக வடிகட்டுங்கள்">
+        <button class="glossary-letter-btn is-active" type="button" data-letter="all">ALL</button>
+        {% for letter in ["A","B","C","D","E","F","G","H","I","J","L","M","N","P","R","S","T","U","W","X","Y"] %}
+        <button class="glossary-letter-btn" type="button" data-letter="{{ letter }}">{{ letter }}</button>
+        {% endfor %}
+      </div>
+    </div>
+  </header>
+
+  <!-- Glossary Cards Grid -->
+  <div class="wrap">
+    <div class="glossary-grid" id="glossary-grid">
+      {% for item in glossary %}
+      <article class="glossary-card" id="{{ item.id }}" data-tamil="{{ item.termTamil | lower }}" data-english="{{ item.termEnglish | lower }}" data-cat="{{ item.category }}" data-letter="{{ item.letterEnglish | upper }}" data-def="{{ item.definition | lower }}" data-example="{{ item.example | lower }}">
+        <header class="glossary-card__header">
+          <div class="glossary-card__titles">
+            <h2 class="glossary-card__tamil">{{ item.termTamil }}</h2>
+            <span class="glossary-card__english">{{ item.termEnglish }}</span>
+          </div>
+          <span class="glossary-card__category">{{ item.category }}</span>
+        </header>
+
+        <p class="glossary-card__def">{{ item.definition }}</p>
+
+        {% if item.example %}
+        <div class="glossary-card__example">
+          <strong>💡 நடைமுறை உதாரணம்:</strong> {{ item.example }}
+        </div>
+        {% endif %}
+
+        {% if item.relatedLink %}
+        <a class="glossary-card__link" href="{{ item.relatedLink.url | url }}">
+          <span>தொடர்புடைய கட்டுரை / கணிப்பான்: {{ item.relatedLink.title }}</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+        {% endif %}
+      </article>
+      {% endfor %}
+
+      <!-- Empty State -->
+      <div class="glossary-empty" id="glossary-empty" style="display: none;">
+        <p>நீங்கள் தேடிய சொல் அல்லது விவரம் கிடைக்கவில்லை.</p>
+        <button class="topic-filter topic-filter--tool" id="glossary-reset-btn" type="button">வடிகட்டிகளை மீட்டமைக்க (Reset)</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('glossary-search-input');
+    const catButtons = document.querySelectorAll('.glossary-cat-btn');
+    const letterButtons = document.querySelectorAll('.glossary-letter-btn');
+    const cards = document.querySelectorAll('.glossary-card');
+    const countEl = document.getElementById('glossary-count');
+    const emptyEl = document.getElementById('glossary-empty');
+    const resetBtn = document.getElementById('glossary-reset-btn');
+
+    let currentCat = 'all';
+    let currentLetter = 'all';
+    let searchQuery = '';
+
+    function filterGlossary() {
+      let visibleCount = 0;
+      const q = searchQuery.trim().toLowerCase();
+
+      cards.forEach(card => {
+        const tamil = card.dataset.tamil || '';
+        const english = card.dataset.english || '';
+        const cat = card.dataset.cat || '';
+        const letter = card.dataset.letter || '';
+        const def = card.dataset.def || '';
+        const example = card.dataset.example || '';
+
+        const matchesCat = (currentCat === 'all' || cat === currentCat);
+        const matchesLetter = (currentLetter === 'all' || letter === currentLetter);
+        const matchesSearch = !q || 
+          tamil.includes(q) || 
+          english.includes(q) || 
+          cat.toLowerCase().includes(q) || 
+          def.includes(q) || 
+          example.includes(q);
+
+        if (matchesCat && matchesLetter && matchesSearch) {
+          card.style.display = '';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      countEl.textContent = visibleCount + ' கலைச்சொற்கள் காட்டப்படுகின்றன';
+      emptyEl.style.display = (visibleCount === 0) ? 'block' : 'none';
+    }
+
+    searchInput.addEventListener('input', function(e) {
+      searchQuery = e.target.value;
+      // If user is searching, clear letter filter for better matching
+      if (searchQuery && currentLetter !== 'all') {
+        currentLetter = 'all';
+        letterButtons.forEach(b => b.classList.toggle('is-active', b.dataset.letter === 'all'));
+      }
+      filterGlossary();
+    });
+
+    catButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        catButtons.forEach(b => {
+          b.classList.remove('is-active');
+          b.setAttribute('aria-pressed', 'false');
+        });
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-pressed', 'true');
+        currentCat = btn.dataset.cat;
+        filterGlossary();
+      });
+    });
+
+    letterButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        letterButtons.forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        currentLetter = btn.dataset.letter;
+        filterGlossary();
+      });
+    });
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function() {
+        searchQuery = '';
+        searchInput.value = '';
+        currentCat = 'all';
+        currentLetter = 'all';
+        catButtons.forEach(b => {
+          b.classList.toggle('is-active', b.dataset.cat === 'all');
+          b.setAttribute('aria-pressed', b.dataset.cat === 'all' ? 'true' : 'false');
+        });
+        letterButtons.forEach(b => {
+          b.classList.toggle('is-active', b.dataset.letter === 'all');
+        });
+        filterGlossary();
+      });
+    }
+
+    // Hash anchor scroll and highlight
+    if (window.location.hash) {
+      const targetId = window.location.hash.substring(1);
+      const targetCard = document.getElementById(targetId);
+      if (targetCard) {
+        setTimeout(() => {
+          targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          targetCard.style.borderColor = '#0D7377';
+          targetCard.style.boxShadow = '0 0 0 3px rgba(13, 115, 119, 0.25)';
+        }, 300);
+      }
+    }
+  });
+</script>
+

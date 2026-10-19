@@ -1,0 +1,311 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="570" viewBox="0 0 1140 570" role="img" aria-labelledby="lrs-flow-title lrs-flow-desc">
+  <title id="lrs-flow-title">நேரடி LRS வெளிநாட்டுப் பணப்பரிமாற்ற நடைமுறை மற்றும் TCS விதிகள்</title>
+  <desc id="lrs-flow-desc">Flowchart of Direct LRS Remittance from Indian Bank via Form A2 to US Broker and 20% TCS Thresholds</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&amp;family=Noto+Sans+Tamil:wght@500;600;700&amp;display=swap');
+      .header-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 19px;
+        font-weight: 700;
+        fill: #ffffff;
+      }
+      .header-sub {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        fill: #d5e7e3;
+      }
+      .card-step-badge {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10.5px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .card-title-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        fill: #0f172a;
+        text-anchor: middle;
+      }
+      .card-sub-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10.5px;
+        font-weight: 600;
+        text-anchor: middle;
+      }
+      .bullet-text {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        fill: #334155;
+      }
+      .arrow-label {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 9.5px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .tcs-section-title {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        fill: #0D7377;
+      }
+      .tcs-section-sub {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        fill: #64748b;
+      }
+      .tcs-card-title {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 12.5px;
+        font-weight: 700;
+      }
+      .tcs-card-badge {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10.2px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .tcs-desc {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10.2px;
+        font-weight: 500;
+        fill: #334155;
+      }
+      .tip-title {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10.5px;
+        font-weight: 700;
+        fill: #0f766e;
+        text-anchor: middle;
+      }
+      .tip-line {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10.2px;
+        font-weight: 600;
+        fill: #0f766e;
+      }
+    </style>
+
+    <linearGradient id="headerGradLRS" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D7377"/>
+      <stop offset="100%" stop-color="#102e31"/>
+    </linearGradient>
+
+    <filter id="cardShadowLRS" x="-3%" y="-2%" width="106%" height="106%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.05"/>
+    </filter>
+
+    <marker id="arrowHeadTeal" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <polygon points="0 0, 7 3.5, 0 7" fill="#0D7377"/>
+    </marker>
+    <marker id="arrowHeadBlue" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <polygon points="0 0, 7 3.5, 0 7" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1140" height="570" rx="16" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Top Header Banner -->
+  <rect x="2" y="2" width="1136" height="80" rx="14" fill="url(#headerGradLRS)"/>
+  <circle cx="44" cy="42" r="22" fill="#14b8a6" fill-opacity="0.2"/>
+  
+  <!-- Icon: Bank to Global Remittance -->
+  <path d="M 36 48 L 52 48 M 36 40 L 52 40 M 44 33 L 34 38 L 54 38 Z" stroke="#5eead4" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+  <path d="M 48 38 Q 56 38 56 46 Q 56 51 49 51" stroke="#fcd34d" stroke-width="1.6" fill="none" stroke-dasharray="2 2"/>
+
+  <text x="78" y="35" class="header-tamil">நேரடி LRS வெளிநாட்டுப் பணப்பரிமாற்ற நடைமுறை &amp; TCS விதிகள்</text>
+  <text x="78" y="56" class="header-sub">இந்திய சேமிப்பு வங்கி ➔ படிவம் A2 (FEMA) ➔ வெளிநாட்டுப் புரோக்கர் கணக்கு (IBKR / Vested) &amp; 20% TCS வரம்புகள்</text>
+
+  <!-- ================= 3 STEP FLOW PIPELINE ================= -->
+
+  <!-- CARD 1: இந்திய சேமிப்பு வங்கி -->
+  <g transform="translate(30, 96)" filter="url(#cardShadowLRS)">
+    <rect width="310" height="208" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="310" height="5" rx="2.5" fill="#0D7377"/>
+    
+    <!-- Step Badge -->
+    <rect x="85" y="14" width="140" height="22" rx="11" fill="#e6f5f3" stroke="#b2dfdb" stroke-width="1"/>
+    <text x="155" y="29" class="card-step-badge" fill="#0D7377">படி 1: வங்கிப் பரிமாற்றம்</text>
+
+    <!-- Icon: Bank -->
+    <circle cx="155" cy="58" r="16" fill="#f0fdfa" stroke="#ccfbf1" stroke-width="1"/>
+    <path d="M 147 64 L 163 64 M 148 58 L 148 64 M 155 58 L 155 64 M 162 58 L 162 64 M 146 58 L 164 58 M 155 51 L 145 55 L 165 55 Z" stroke="#0D7377" stroke-width="1.3" fill="none" stroke-linejoin="round"/>
+
+    <text x="155" y="90" class="card-title-tamil">இந்திய சேமிப்பு வங்கி</text>
+    <text x="155" y="107" class="card-sub-tamil" fill="#0f766e">HDFC / ICICI / SBI / Axis Bank</text>
+
+    <line x1="20" y1="117" x2="290" y2="117" stroke="#f1f5f9" stroke-width="1.5"/>
+
+    <circle cx="24" cy="133" r="3" fill="#0D7377"/>
+    <text x="34" y="136" class="bullet-text">இந்திய ரூபாய் சேமிப்புக் கணக்கு (INR Savings)</text>
+
+    <circle cx="24" cy="153" r="3" fill="#0D7377"/>
+    <text x="34" y="156" class="bullet-text">Netbanking Forex தளம் (Outward Remittance)</text>
+
+    <circle cx="24" cy="173" r="3" fill="#0D7377"/>
+    <text x="34" y="176" class="bullet-text">படிவம் A2 &amp; FEMA சுய அறிவிப்பு சமர்ப்பிப்பு</text>
+
+    <circle cx="24" cy="193" r="3" fill="#0D7377"/>
+    <text x="34" y="196" class="bullet-text">PAN கார்டு இணைக்கப்பட்ட தனிநபர் சுய கணக்கு</text>
+  </g>
+
+  <!-- ARROW 1: Transfer Connector -->
+  <g transform="translate(340, 175)">
+    <line x1="4" y1="20" x2="68" y2="20" stroke="#0D7377" stroke-width="2.5" stroke-dasharray="4 3" marker-end="url(#arrowHeadTeal)"/>
+    <rect x="0" y="-18" width="74" height="28" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="37" y="-5" class="arrow-label" fill="#0f766e">படிவம் A2</text>
+    <text x="37" y="6" class="arrow-label" fill="#64748b" style="font-size: 8px;">FEMA அறிவிப்பு</text>
+  </g>
+
+  <!-- CARD 2: RBI LRS & SWIFT பரிமாற்றம் -->
+  <g transform="translate(415, 96)" filter="url(#cardShadowLRS)">
+    <rect width="310" height="208" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="310" height="5" rx="2.5" fill="#2563eb"/>
+    
+    <!-- Step Badge -->
+    <rect x="85" y="14" width="140" height="22" rx="11" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+    <text x="155" y="29" class="card-step-badge" fill="#1d4ed8">படி 2: டாலர் மாற்றம்</text>
+
+    <!-- Icon: SWIFT / Currency -->
+    <circle cx="155" cy="58" r="16" fill="#eff6ff" stroke="#dbeafe" stroke-width="1"/>
+    <path d="M 150 53 L 160 53 M 155 53 L 155 63 M 152 63 L 158 63" stroke="#2563eb" stroke-width="1.4" stroke-linecap="round"/>
+    <path d="M 148 58 Q 155 49 162 58" stroke="#3b82f6" stroke-width="1.2" fill="none"/>
+
+    <text x="155" y="90" class="card-title-tamil">RBI LRS &amp; SWIFT பரிமாற்றம்</text>
+    <text x="155" y="107" class="card-sub-tamil" fill="#2563eb">தாராளமயமாக்கப்பட்ட பணப்பரிமாற்றம்</text>
+
+    <line x1="20" y1="117" x2="290" y2="117" stroke="#f1f5f9" stroke-width="1.5"/>
+
+    <circle cx="24" cy="133" r="3" fill="#2563eb"/>
+    <text x="34" y="136" class="bullet-text">ஆண்டு LRS வரம்பு: $250,000 (சுமார் ₹2.1 கோடி)</text>
+
+    <circle cx="24" cy="153" r="3" fill="#2563eb"/>
+    <text x="34" y="156" class="bullet-text">INR ➔ USD அந்நியச் செலாவணி மாற்றம்</text>
+
+    <circle cx="24" cy="173" r="3" fill="#2563eb"/>
+    <text x="34" y="176" class="bullet-text">வங்கி Forex மார்க்-அப்: 0.5% முதல் 1.5%</text>
+
+    <circle cx="24" cy="193" r="3" fill="#2563eb"/>
+    <text x="34" y="196" class="bullet-text">SWIFT நெட்வொர்க் வழியே T+1 / T+2 வரவு</text>
+  </g>
+
+  <!-- ARROW 2: Transfer Connector -->
+  <g transform="translate(725, 175)">
+    <line x1="4" y1="20" x2="68" y2="20" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="4 3" marker-end="url(#arrowHeadBlue)"/>
+    <rect x="0" y="-18" width="74" height="28" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="37" y="-5" class="arrow-label" fill="#1d4ed8">USD வரவு</text>
+    <text x="37" y="6" class="arrow-label" fill="#64748b" style="font-size: 8px;">SWIFT நெட்வொர்க்</text>
+  </g>
+
+  <!-- CARD 3: வெளிநாட்டுப் புரோக்கர் கணக்கு -->
+  <g transform="translate(800, 96)" filter="url(#cardShadowLRS)">
+    <rect width="310" height="208" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="310" height="5" rx="2.5" fill="#059669"/>
+    
+    <!-- Step Badge -->
+    <rect x="85" y="14" width="140" height="22" rx="11" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+    <text x="155" y="29" class="card-step-badge" fill="#059669">படி 3: பங்கு வர்த்தகம்</text>
+
+    <!-- Icon: Broker Wallet -->
+    <circle cx="155" cy="58" r="16" fill="#ecfdf5" stroke="#d1fae5" stroke-width="1"/>
+    <rect x="148" y="51" width="14" height="13" rx="2" stroke="#059669" stroke-width="1.4" fill="none"/>
+    <circle cx="158" cy="57.5" r="1.5" fill="#059669"/>
+
+    <text x="155" y="90" class="card-title-tamil">வெளிநாட்டுப் புரோக்கர் கணக்கு</text>
+    <text x="155" y="107" class="card-sub-tamil" fill="#059669">IBKR / Vested / INDmoney</text>
+
+    <line x1="20" y1="117" x2="290" y2="117" stroke="#f1f5f9" stroke-width="1.5"/>
+
+    <circle cx="24" cy="133" r="3" fill="#059669"/>
+    <text x="34" y="136" class="bullet-text">USD வாலட்டில் உடனடியாகப் பணம் தயார்</text>
+
+    <circle cx="24" cy="153" r="3" fill="#059669"/>
+    <text x="34" y="156" class="bullet-text">US பங்குகள் &amp; சர்வதேச ETFs நேரடி வர்த்தகம்</text>
+
+    <circle cx="24" cy="173" r="3" fill="#059669"/>
+    <text x="34" y="176" class="bullet-text">பின்னப் பங்குகள் (Fractional Shares) வசதி</text>
+
+    <circle cx="24" cy="193" r="3" fill="#059669"/>
+    <text x="34" y="196" class="bullet-text">SIPC முதலீட்டுக் காப்பீடு: $500,000 வரை</text>
+  </g>
+
+  <!-- ================= BOTTOM SECTION: TCS RULES & THRESHOLDS ================= -->
+
+  <g transform="translate(30, 318)">
+    <!-- Container -->
+    <rect width="1080" height="236" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+
+    <!-- Header bar within Container -->
+    <path d="M 0 14 Q 0 0 14 0 L 1066 0 Q 1080 0 1080 14 L 1080 36 L 0 36 Z" fill="#f8fafc"/>
+    <line x1="0" y1="36" x2="1080" y2="36" stroke="#e2e8f0" stroke-width="1"/>
+
+    <text x="20" y="23" class="tcs-section-title">மூலத்தில் வரி வசூல் (TCS - Tax Collected at Source) விதிகள் &amp; பணப்பரிமாற்ற வரம்புகள்</text>
+    <text x="1060" y="23" text-anchor="end" class="tcs-section-sub">Finance Act விதிகள் (ஒரு நிதியாண்டிற்கான வரம்பு)</text>
+
+    <!-- Sub-card 1: 0% TCS (Up to ₹7 Lakhs) -->
+    <g transform="translate(18, 46)">
+      <rect width="512" height="122" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2"/>
+      <rect width="512" height="4" rx="2" fill="#16a34a"/>
+
+      <text x="16" y="24" class="tcs-card-title" fill="#166534">ஆண்டுக்கு ₹7,00,000 வரை பணப்பரிமாற்றம்</text>
+      
+      <!-- 0% TCS Badge -->
+      <rect x="348" y="9" width="148" height="22" rx="11" fill="#dcfce7" stroke="#86efac" stroke-width="1"/>
+      <text x="422" y="24" class="tcs-card-badge" fill="#15803d">0% TCS (வரிப் பிடித்தம் இல்லை)</text>
+
+      <line x1="16" y1="38" x2="496" y2="38" stroke="#dcfce7" stroke-width="1"/>
+
+      <circle cx="24" cy="56" r="2.5" fill="#16a34a"/>
+      <text x="34" y="59" class="tcs-desc">எந்தவொரு முன்கூட்டிய வரியும் (TCS) வங்கியால் பிடித்தம் செய்யப்படாது.</text>
+
+      <circle cx="24" cy="78" r="2.5" fill="#16a34a"/>
+      <text x="34" y="81" class="tcs-desc">அனுப்பும் முழுத் தொகையும் (100%) வெளிநாட்டு முதலீட்டிற்குச் சென்று சேரும்.</text>
+
+      <circle cx="24" cy="100" r="2.5" fill="#16a34a"/>
+      <text x="34" y="103" class="tcs-desc">பண முடக்கம் பூஜ்ஜியம்; தொடக்க நிலை முதலீட்டாளர்களுக்கு மிகவும் உகந்தது.</text>
+    </g>
+
+    <!-- Sub-card 2: 20% TCS (Above ₹7 Lakhs) -->
+    <g transform="translate(550, 46)">
+      <rect width="512" height="122" rx="10" fill="#fffbeb" stroke="#fde68a" stroke-width="1.2"/>
+      <rect width="512" height="4" rx="2" fill="#d97706"/>
+
+      <text x="16" y="24" class="tcs-card-title" fill="#92400e">ஆண்டுக்கு ₹7,00,000-க்கு மேல் பரிமாற்றம்</text>
+      
+      <!-- 20% TCS Badge -->
+      <rect x="340" y="9" width="156" height="22" rx="11" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
+      <text x="418" y="24" class="tcs-card-badge" fill="#b45309">20% TCS அட்வான்ஸ் வரி</text>
+
+      <line x1="16" y1="38" x2="496" y2="38" stroke="#fef3c7" stroke-width="1"/>
+
+      <circle cx="24" cy="56" r="2.5" fill="#d97706"/>
+      <text x="34" y="59" class="tcs-desc">₹7 லட்சத்தைத் தாண்டிய கூடுதல் தொகைக்கு மட்டும் <tspan font-weight="700" fill="#92400e">20% TCS</tspan> பிடித்தம் உண்டு.</text>
+
+      <circle cx="24" cy="78" r="2.5" fill="#d97706"/>
+      <text x="34" y="81" class="tcs-desc"><tspan font-weight="700" fill="#92400e">இது கூடுதல் வரி அல்ல:</tspan> உங்கள் PAN கணக்கில் சேமிக்கப்படும் முன்கூட்டிய வரி.</text>
+
+      <circle cx="24" cy="100" r="2.5" fill="#d97706"/>
+      <text x="34" y="103" class="tcs-desc">ITR தாக்கல் செய்யும்போது செலுத்த வேண்டிய வரியுடன் ஈடுசெய்யலாம் (Set off) அல்லது ரீஃபண்ட் பெறலாம்.</text>
+    </g>
+
+    <!-- Bottom Tip Box with 2-line layout -->
+    <g transform="translate(18, 178)">
+      <rect width="1044" height="46" rx="8" fill="#f0fdfa" stroke="#ccfbf1" stroke-width="1.2"/>
+      
+      <!-- Tip Badge -->
+      <rect x="12" y="11" width="144" height="24" rx="12" fill="#ccfbf1" stroke="#99f6e4" stroke-width="1"/>
+      <text x="84" y="27" class="tip-title">💡 குடும்ப உத்தி (Tip)</text>
+
+      <!-- Tip Text (2 clean, spacious lines) -->
+      <text x="172" y="21" class="tip-line">கணவன் மற்றும் மனைவி இருவரும் தலா ₹7 லட்சம் வீதம் தனித்தனியாகப் பணப்பரிமாற்றம் செய்தால்,</text>
+      <text x="172" y="37" class="tip-line">ஆண்டுக்கு மொத்தம் ₹14 லட்சம் வரை 0% TCS வரம்பிற்குள் எவ்வித பண முடக்கமுமின்றி முதலீடு செய்யலாம்!</text>
+    </g>
+  </g>
+</svg>

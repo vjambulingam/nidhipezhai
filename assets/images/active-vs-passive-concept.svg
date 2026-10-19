@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="act-pas-title act-pas-desc">
+  <title id="act-pas-title">செயலுள்ள vs செயல் வேண்டா மியூச்சுவல் நிதித் திட்டம் - அடிப்படைக் கோட்பாடுகள்</title>
+  <desc id="act-pas-desc">Active Mutual Fund vs. Passive Mutual Fund: Core Philosophy, Alpha vs. Beta, Expense Ratio, and Risk Comparison.</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&amp;family=Noto+Sans+Tamil:wght@500;600;700&amp;display=swap');
+      .header-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 19px;
+        font-weight: 700;
+        fill: #ffffff;
+      }
+      .header-sub {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 12.5px;
+        font-weight: 500;
+        fill: #d5e7e3;
+      }
+      .card-title-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+      }
+      .card-sub-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 11.5px;
+        font-weight: 600;
+      }
+      .row-label {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .row-desc {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10.5px;
+        font-weight: 500;
+        fill: #334155;
+      }
+      .tag-text {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 10.2px;
+        font-weight: 700;
+        text-anchor: start;
+      }
+      .footer-text {
+        font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        fill: #92400e;
+      }
+    </style>
+
+    <linearGradient id="headerGradActPas" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D7377"/>
+      <stop offset="100%" stop-color="#102e31"/>
+    </linearGradient>
+
+    <filter id="shadowActPas" x="-3%" y="-4%" width="106%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="520" rx="16" fill="#f8fafc"/>
+
+  <!-- Top Banner -->
+  <rect width="1200" height="78" rx="16" fill="url(#headerGradActPas)"/>
+  <rect y="62" width="1200" height="16" fill="url(#headerGradActPas)"/>
+
+  <!-- Banner Icon -->
+  <g transform="translate(36, 16)">
+    <circle cx="23" cy="23" r="21" fill="#14b8a6" fill-opacity="0.25"/>
+    <path d="M 15 23 L 31 23 M 23 15 L 23 31" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="23" cy="23" r="13" fill="none" stroke="#ffffff" stroke-width="2"/>
+  </g>
+
+  <text x="95" y="34" class="header-tamil">செயலுள்ள மியூச்சுவல் நிதித் திட்டம் vs செயல் வேண்டா மியூச்சுவல் நிதித் திட்டம்</text>
+  <text x="95" y="56" class="header-sub">அடிப்படை முதலீட்டுத் தத்துவங்கள்: மனிதக் கணிப்பு சார்ந்த சந்தை வேட்டை vs கணித விதிமுறை சார்ந்த சந்தைக் கூட்டு வளர்ச்சி</text>
+
+  <!-- ================= CARD 1: ACTIVE FUND ================= -->
+  <g transform="translate(40, 96)" filter="url(#shadowActPas)">
+    <rect width="540" height="340" rx="12" fill="#ffffff" stroke="#fecaca" stroke-width="1.5"/>
+    <rect width="540" height="6" rx="3" fill="#dc2626"/>
+
+    <!-- Header Badge -->
+    <rect x="20" y="16" width="34" height="34" rx="17" fill="#fee2e2"/>
+    <text x="37" y="38" font-size="16" text-anchor="middle">⚡</text>
+
+    <text x="64" y="27" class="card-title-tamil" fill="#991b1b">செயலுள்ள மியூச்சுவல் நிதித் திட்டம்</text>
+    <text x="64" y="45" class="card-sub-tamil" fill="#dc2626">Active Fund • "சந்தையை முந்தும் முயற்சி" (Alpha)</text>
+
+    <!-- Attribute 1: இலக்கு -->
+    <rect x="20" y="62" width="500" height="46" rx="8" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+    <text x="34" y="80"><tspan class="row-label">🎯 இலக்கு: </tspan><tspan class="row-desc">குறியீட்டை விட அதிக வருமானம் (Alpha) ஈட்ட முயற்சிப்பது.</tspan></text>
+    <text x="34" y="97" class="row-desc" fill="#ea580c">⚠️ நிதர்சனம்: 80% செயலுள்ள நிதிகள் சந்தை சராசரியை முந்துவதில்லை!</text>
+
+    <!-- Attribute 2: செயல்முறை -->
+    <rect x="20" y="116" width="500" height="46" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="34" y="134"><tspan class="row-label">🧠 முறை: </tspan><tspan class="row-desc">நிதி மேலாளரின் சொந்தக் கணிப்பு &amp; ஆய்வாளர்களின் முடிவுகள்.</tspan></text>
+    <text x="34" y="151" class="row-desc">சந்தையைக் கணிக்க முயன்று (Timing) பங்குகளை அடிக்கடி மாற்றுதல்.</text>
+
+    <!-- Attribute 3: கட்டணம் -->
+    <rect x="20" y="170" width="500" height="46" rx="8" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+    <text x="34" y="188"><tspan class="row-label" fill="#991b1b">💸 கட்டணம் (TER): </tspan><tspan class="row-desc" font-weight="700" fill="#dc2626">1.00% முதல் 2.25% வரை (மிக அதிகச் செலவு!)</tspan></text>
+    <text x="34" y="205" class="row-desc">ஆய்வாளர் ஊதியம், மேலாண்மை மற்றும் அதிக வர்த்தகத் தரகு வரிகள்.</text>
+
+    <!-- Attribute 4: இடர் -->
+    <rect x="20" y="224" width="500" height="46" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="34" y="242"><tspan class="row-label">⚠️ ஆபத்து: </tspan><tspan class="row-desc">மேலாளர் விலகும் ஆபத்து (Key Person Risk) மிக அதிகம்.</tspan></text>
+    <text x="34" y="259" class="row-desc">மேலாளர் மாறும்போது பாணி விலகி (Style Drift) வருமானம் சரியும்.</text>
+
+    <!-- Pill Tag -->
+    <rect x="20" y="286" width="500" height="34" rx="8" fill="#fee2e2"/>
+    <text x="34" y="307" class="tag-text" fill="#991b1b">🚨 அதிகக் கட்டணம்: 25 ஆண்டுகளில் ₹38L–₹51L வரை செல்வம் விரயம்!</text>
+  </g>
+
+  <!-- ================= CARD 2: PASSIVE FUND ================= -->
+  <g transform="translate(620, 96)" filter="url(#shadowActPas)">
+    <rect width="540" height="340" rx="12" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.5"/>
+    <rect width="540" height="6" rx="3" fill="#059669"/>
+
+    <!-- Header Badge -->
+    <rect x="20" y="16" width="34" height="34" rx="17" fill="#d1fae5"/>
+    <text x="37" y="38" font-size="16" text-anchor="middle">📊</text>
+
+    <text x="64" y="27" class="card-title-tamil" fill="#065f46">செயல் வேண்டா மியூச்சுவல் நிதித் திட்டம்</text>
+    <text x="64" y="45" class="card-sub-tamil" fill="#059669">Passive Index Fund • "முழுச் சந்தைக் கூட்டு வளர்ச்சி" (Beta)</text>
+
+    <!-- Attribute 1: இலக்கு -->
+    <rect x="20" y="62" width="500" height="46" rx="8" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+    <text x="34" y="80"><tspan class="row-label" fill="#065f46">🎯 இலக்கு: </tspan><tspan class="row-desc">Nifty 50 குறியீட்டு வருமானத்தை 100% அப்படியே தருவது (Beta).</tspan></text>
+    <text x="34" y="97" class="row-desc" fill="#047857">✨ முழுச் சந்தை வளர்ச்சி; நீண்டகாலத்தில் 80%+ நிதிகளைவிட முன்னணி!</text>
+
+    <!-- Attribute 2: செயல்முறை -->
+    <rect x="20" y="116" width="500" height="46" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="34" y="134"><tspan class="row-label">📐 முறை: </tspan><tspan class="row-desc">NSE/BSE நிர்ணயித்த குறியீட்டு விகிதத்தில் 1:1 நகலெடுத்தல்.</tspan></text>
+    <text x="34" y="151" class="row-desc">கணித விதிமுறை மறுசீரமைப்பு (Rule-based); மேலாளர் விருப்பு இல்லை.</text>
+
+    <!-- Attribute 3: கட்டணம் -->
+    <rect x="20" y="170" width="500" height="46" rx="8" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+    <text x="34" y="188"><tspan class="row-label" fill="#065f46">💎 கட்டணம் (TER): </tspan><tspan class="row-desc" font-weight="700" fill="#059669">0.10% முதல் 0.25% மட்டுமே (மிக மிகக் குறைவு!)</tspan></text>
+    <text x="34" y="205" class="row-desc">ஆய்வாளர்களின் சம்பளச் சுமை இல்லை; குறைந்த வர்த்தகச் செலவால் மிச்சம்.</text>
+
+    <!-- Attribute 4: இடர் -->
+    <rect x="20" y="224" width="500" height="46" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="34" y="242"><tspan class="row-label">🛡️ பாதுகாப்பு: </tspan><tspan class="row-desc">மனிதச் சார்பற்றது; மேலாளர் மாறினாலும் நிதி இயங்கும்.</tspan></text>
+    <text x="34" y="259" class="row-desc">எந்தவொரு தனிநபரின் தவறான முடிவும் முதலீட்டைப் பாதிக்காது.</text>
+
+    <!-- Pill Tag -->
+    <rect x="20" y="286" width="500" height="34" rx="8" fill="#d1fae5"/>
+    <text x="34" y="307" class="tag-text" fill="#065f46">💡 சிறந்த தீர்வு: குறைந்த செலவில் Nifty 50-ன் முழு கூட்டு வளர்ச்சி!</text>
+  </g>
+
+  <!-- ================= BOTTOM STRIP ================= -->
+  <g transform="translate(40, 452)">
+    <rect width="1120" height="52" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+    <text x="25" y="32" font-size="18">🌟</text>
+    <text x="55" y="23" class="footer-text">தங்க விதி: தனிநபர் கணிப்புகளை விட தெளிவான கணித விதிமுறைகளும், அதிகக் கட்டணங்களை விட குறைந்த செலவுக் கூட்டு வட்டியுமே வெல்லும்!</text>
+    <text x="55" y="41" font-family="'Noto Sans Tamil', 'DM Sans', sans-serif" font-size="11.5px" font-weight="600" fill="#b45309">நேரடி குறியீட்டு நிதித் திட்டங்கள் (Direct Index Funds) மூலம் சந்தையின் கூட்டு வளர்ச்சியை முழுமையாகப் பெறுங்கள்.</text>
+  </g>
+</svg>

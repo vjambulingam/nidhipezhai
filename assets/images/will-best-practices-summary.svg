@@ -137,12 +137,12 @@
 
     <!-- Bullets -->
     <circle cx="20" cy="94" r="2.5" fill="#059669"/>
-    <text x="30" y="98" class="bullet-text">"எஞ்சிய அனைத்து சொத்துகளும் என்</text>
+    <text x="30" y="98" class="bullet-text">"எஞ்சிய அனைத்துச் சொத்துகளும் என்</text>
     <text x="30" y="113" class="bullet-text">வாரிசைச் சேரும்" என எழுதுவது கட்டாயம்.</text>
 
     <circle cx="20" cy="132" r="2.5" fill="#059669"/>
     <text x="30" y="136" class="bullet-text">புதிய சொத்துகளும் விடுபட்ட நிதி</text>
-    <text x="30" y="151" class="bullet-text">சேமிப்புகளும் நீதிமன்ற வழக்கில் மாட்டாது.</text>
+    <text x="30" y="151" class="bullet-text">சேமிப்புகளும் நீதிமன்ற வழக்குகளில் சிக்காது.</text>
 
     <!-- Bottom Tag -->
     <rect x="16" y="170" width="140" height="22" rx="11" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
@@ -212,7 +212,7 @@
     <text x="88" y="185" class="tag-text" fill="#1d4ed8">சட்டப்பூர்வ நம்பகத்தன்மை</text>
   </g>
 
-  <!-- CARD 5: வீடியோ பதிவு செய்தல் -->
+  <!-- CARD 5: வீடியோப் பதிவு செய்தல் -->
   <g transform="translate(420, 320)" filter="url(#cardShadowBP)">
     <rect width="360" height="205" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
     <rect width="360" height="4.5" rx="2.25" fill="#7c3aed"/>
@@ -226,7 +226,7 @@
     <path d="M 333 21 L 338 18 L 338 29 L 333 26 Z" fill="#7c3aed"/>
 
     <!-- Title & Subtitle -->
-    <text x="16" y="55" class="card-title-tamil">வீடியோ பதிவு செய்தல் (Video Proof)</text>
+    <text x="16" y="55" class="card-title-tamil">வீடியோப் பதிவு செய்தல் (Video Proof)</text>
     <text x="16" y="72" class="card-sub-tamil" fill="#7c3aed">Video Recording of Execution</text>
 
     <!-- Bullets -->
@@ -294,7 +294,7 @@
 
     <!-- Bullets -->
     <circle cx="20" cy="94" r="2.5" fill="#0284c7"/>
-    <text x="30" y="98" class="bullet-text">திருமணம், குழந்தை பிறப்பு, சொத்து</text>
+    <text x="30" y="98" class="bullet-text">திருமணம், குழந்தைப் பிறப்பு, சொத்து</text>
     <text x="30" y="113" class="bullet-text">மாற்றங்களின்போது புதுப்பிக்கவும்.</text>
 
     <circle cx="20" cy="132" r="2.5" fill="#0284c7"/>
@@ -324,11 +324,11 @@
 
     <!-- Bullets -->
     <circle cx="20" cy="94" r="2.5" fill="#b45309"/>
-    <text x="30" y="98" class="bullet-text">வாரிசுகளுக்கு சமமற்ற ஒதுக்கீட்டிற்கு</text>
+    <text x="30" y="98" class="bullet-text">வாரிசுகளுக்குச் சமமற்ற ஒதுக்கீட்டிற்கான</text>
     <text x="30" y="113" class="bullet-text">நியாயமான காரணங்களை விளக்குக.</text>
 
     <circle cx="20" cy="132" r="2.5" fill="#b45309"/>
-    <text x="30" y="136" class="bullet-text">முந்தைய நிதி உதவி &amp; பராமரிப்பைக்</text>
+    <text x="30" y="136" class="bullet-text">முந்தைய நிதியுதவி &amp; பராமரிப்பைக்</text>
     <text x="30" y="151" class="bullet-text">குறிப்பிடுவது வழக்குகளைத் தடுக்கும்.</text>
 
     <!-- Bottom Tag -->
@@ -358,10 +358,10 @@
     <!-- Bullets -->
     <circle cx="20" cy="94" r="2.5" fill="#0f766e"/>
     <text x="30" y="98" class="bullet-text">சமவயதினரைத் தவிர்த்து 15–20 வயது</text>
-    <text x="30" y="113" class="bullet-text">இளைய நடுநிலை சாட்சிகளை நியமிக்க.</text>
+    <text x="30" y="113" class="bullet-text">இளைய நடுநிலைச் சாட்சிகளை நியமிக்க.</text>
 
     <circle cx="20" cy="132" r="2.5" fill="#0f766e"/>
-    <text x="30" y="136" class="bullet-text">மறைவுக்குப் பின் நீதிமன்ற சாட்சியம்</text>
+    <text x="30" y="136" class="bullet-text">மறைவுக்குப் பின் நீதிமன்றச் சாட்சியம்</text>
     <text x="30" y="151" class="bullet-text">அளிக்க அவர்கள் நலமுடன் இருப்பர்.</text>
 
     <!-- Bottom Tag -->
@@ -382,6 +382,6 @@
 
     <!-- Two-Line Contained Text -->
     <text x="78" y="29" class="footer-title-tamil">பொன்னான விதி (Golden Rule): பயனாளிகள் (Beneficiaries) ஒருபோதும் உயிலில் சாட்சிகளாகக் கையொப்பமிடக் கூடாது!</text>
-    <text x="78" y="52" class="footer-desc-tamil">மருத்துவரிடம் பெறும் மனத்தகுதிச் சான்றிதழும், நம்மை விட 15–20 வயது இளைய சாட்சிகளும் உயிலுக்கு அசைக்க முடியாத சட்ட வலிமையை வழங்கும்.</text>
+    <text x="78" y="52" class="footer-desc-tamil">மருத்துவரிடம் பெறும் மனத்தகுதிச் சான்றிதழும், நம்மைவிட 15–20 வயது இளைய சாட்சிகளும் உயிலுக்கு அசைக்க முடியாத சட்ட வலிமையை வழங்கும்.</text>
   </g>
 </svg>
