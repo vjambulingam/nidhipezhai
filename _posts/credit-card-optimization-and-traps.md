@@ -2,6 +2,8 @@
 title: "கடன் அட்டையின் (Credit Card) உத்திகள் & கண்ணிவெடிகள்"
 description: "கிரெடிட் கார்டை சாதுரியமாகப் பயன்படுத்தி லாபம் ஈட்டுவது எப்படி? 42% Revolving APR வட்டிப் பொறி, Minimum Due அபாயம், Zero-Cost EMI-ல் மறைந்துள்ள 18% GST மற்றும் ரிவார்டு புள்ளிகளைப் பணமாக்கும் முழுமையான வழிகாட்டி."
 date: 2026-10-19
+lastModified: 2026-10-19
+ogImage: "/assets/images/credit-card-optimization-and-traps-banner.jpg"
 topics:
   - கிரெடிட் கார்டு
   - கடன் அட்டை

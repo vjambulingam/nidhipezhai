@@ -8,7 +8,7 @@ hasCsvExport: false
 footerTitle: "நிதிப்பேழை மருத்துவக் காப்பீட்டுத் தொகைக் கணிப்பேடு"
 footerNote: "பொறுப்புத் துறப்பு: இந்தக் கணிப்பேடு கல்வி மற்றும் விழிப்புணர்வு நோக்கத்திற்காக மட்டுமே. காட்டப்படும் கணக்கீடுகளின் துல்லியம் அல்லது முழுமைக்கு உத்தரவாதம் அளிக்கப்படாது; அவற்றின் அடிப்படையில் எடுக்கப்படும் முடிவுகள் அல்லது ஏற்படும் இழப்புகளுக்கு நாங்கள் பொறுப்பேற்க மாட்டோம். மருத்துவக் காப்பீடு குறித்த முடிவெடுப்பதற்கு முன் <a href=\"../articles/sebi-registered-investment-advisors/\">தகுதியான நிதி ஆலோசகரைக்</a> கலந்தாலோசித்து இறுதி முடிவெடுக்கவும்."
 ---
-<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full space-y-6">
+<main id="main-content" tabindex="-1" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full space-y-6">
     <div>
       <h1 class="text-xl font-bold tracking-tight text-slate-900 leading-tight">மருத்துவக் காப்பீட்டுத் தொகைக் கணிப்பேடு</h1>
       <p class="text-xs text-slate-500 font-medium">குடும்ப உறுப்பினர்களின் வயது மற்றும் நீங்கள் தேர்ந்தெடுக்கும் மருத்துவமனை அறை வாடகையின் அடிப்படையில் ஒரு திட்டமிடல் இலக்கை மதிப்பிடுங்கள்.</p>
@@ -26,6 +26,11 @@ footerNote: "பொறுப்புத் துறப்பு: இந்த�
               <p class="text-[11px] text-slate-400 mt-1">காப்பீட்டில் சேர்க்க நினைக்கும் ஒவ்வொருவரின் தற்போதைய வயதை உள்ளிடுங்கள். இயல்புநிலையில் பெற்றோர் மற்றும் இரண்டு குழந்தைகள் சேர்க்கப்பட்டுள்ளனர்.</p>
             </div>
             <button id="addMember" type="button" class="no-print px-3 py-1.5 text-xs font-semibold text-emerald-700 bg-emerald-100 rounded-lg hover:bg-emerald-200">+ உறுப்பினரைச் சேர்</button>
+        
+          <button id="btnReset" type="button" class="calc-reset-btn" title="அனைத்து உள்ளீடுகளையும் மீட்டமைக்க">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            <span>மீட்டமைக்க</span>
+          </button>
           </div>
           <div id="members" class="space-y-2"></div>
           <p class="text-[11px] text-slate-400">இந்த மதிப்பீட்டில் வயதுக் காரணி: 40–49 வயது 1.25×, 50–59 வயது 1.5×, 60+ வயது 2×; 40 வயதுக்குக் கீழ் 1×.</p>
@@ -156,6 +161,19 @@ footerNote: "பொறுப்புத் துறப்பு: இந்த�
       <p class="text-xs text-slate-600 leading-relaxed">குடும்பக் காப்பீட்டுத் திட்டத்தில் அதிக வயதுடைய உறுப்பினரின் வயதுக் காரணியும், முதல் உறுப்பினருக்குப் பிறகு உள்ள ஒவ்வொரு உறுப்பினருக்கும் 20% குடும்ப அளவு சரிசெய்தலும் பயன்படுத்தப்படும்; குறைந்தபட்ச இலக்கு ₹10 லட்சம். தனிநபர் முறையில் ஒவ்வொருவரின் மதிப்பீட்டிற்கும் குறைந்தபட்சம் ₹5 லட்சம் வைத்துப் பின்னர் கூட்டப்படும்.</p>
       <p class="text-xs text-slate-600 leading-relaxed">இவை திட்டமிடலுக்கான எளிய உதாரணக் கருதுகோள்கள் மட்டுமே; உண்மையான மருத்துவச் செலவு நோய், மருத்துவமனை, நகரம், சிகிச்சை மற்றும் பாலிசி விதிகளைப் பொறுத்து மாறும். ஏற்கெனவே உள்ள அல்லது வேலை வழங்குநரின் காப்பீடு இந்த மதிப்பீட்டிலிருந்து கழிக்கப்படவில்லை. பாலிசியின் அறை வாடகை வரம்பு மற்றும் காப்புறுதி விதிகளைத் தனியாகச் சரிபார்க்கவும்.</p>
     </section>
+  
+        <!-- Key Assumptions Card -->
+        <div class="calc-assumptions-card mt-6">
+          <div class="calc-assumptions-card__title">
+            <svg class="w-4 h-4 text-sky-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>கணக்கீட்டு அனுமானங்கள் (Key Assumptions)</span>
+          </div>
+          <ul class="calc-assumptions-card__list">
+            <li>மருத்துவமனைகளின் அறை வாடகை வரம்பு (Room Rent Capping) மற்றும் விகிதாச்சாரக் கழிவுகளைத் தவிர்க்கும் வகையில் கணக்கிடப்படுகிறது.</li>
+            <li>மருத்துவப் பணவீக்கம் ஆண்டுக்கு 10%–14% என்ற உயர் வீதத்தில் கணக்கில் கொள்ளப்படுகிறது.</li>
+            <li>குடும்ப உறுப்பினர்களின் வயது மற்றும் பெருநகர தனியார் மருத்துவமனை சிகிச்சைச் செலவுகள் அடிப்படையாகக் கொள்ளப்பட்டுள்ளன.</li>
+          </ul>
+        </div>
   </main>
 
 <script>

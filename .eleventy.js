@@ -35,21 +35,90 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection("articlesByDate", (collectionApi) => {
     return collectionApi.getFilteredByTag("articles").sort((a, b) => {
-      const timeB = toDate(b.date).getTime() || 0;
-      const timeA = toDate(a.date).getTime() || 0;
+      const timeB = toDate(b.data.lastModified || b.date).getTime() || 0;
+      const timeA = toDate(a.data.lastModified || a.date).getTime() || 0;
       return timeB - timeA;
     });
   });
 
-  eleventyConfig.addCollection("topics", (collectionApi) => {
-    const topicSet = new Set();
-    for (const item of collectionApi.getFilteredByTag("articles")) {
-      const topics = normalizeList(item.data.topics);
-      for (const topic of topics) {
-        if (topic) topicSet.add(topic);
-      }
-    }
-    return [...topicSet];
+  const PRIMARY_TOPICS = [
+    "சேமிப்பு",
+    "முதலீடு",
+    "பங்குச்சந்தை",
+    "மியூச்சுவல் ஃபண்ட்",
+    "கடன் & கிரெடிட்",
+    "காப்பீடு & பாதுகாப்பு",
+    "தங்கம் & சொத்துகள்"
+  ];
+
+  const TOPIC_MAPPING = {
+    "சேமிப்பு": [
+      "banking-and-savings-products-india",
+      "chit-funds",
+      "gold-chits-jeweller-gold-schemes",
+      "how-to-start-investing",
+      "in-case-of-emergency-kit",
+      "personal-finance-fortification",
+      "savings-and-debt-instruments-india"
+    ],
+    "முதலீடு": [
+      "chit-funds",
+      "cryptocurrency-and-nft-trading-india",
+      "currency-and-commodity-trading-india",
+      "equity-investments-in-india",
+      "gold-investing-options-india",
+      "hidden-risks-of-real-estate-investments-india",
+      "how-to-start-investing",
+      "index-funds-vs-active-mutual-funds",
+      "investing-in-foreign-equity-from-india",
+      "invit",
+      "loan-prepayment-vs-equity-investment",
+      "portfolio-creation-approach",
+      "regular-vs-direct-mutual-funds",
+      "reit",
+      "savings-and-debt-instruments-india",
+      "sebi-registered-investment-advisors"
+    ],
+    "பங்குச்சந்தை": [
+      "currency-and-commodity-trading-india",
+      "equity-investments-in-india",
+      "index-funds-vs-active-mutual-funds",
+      "investing-in-foreign-equity-from-india",
+      "invit",
+      "loan-prepayment-vs-equity-investment",
+      "reit"
+    ],
+    "மியூச்சுவல் ஃபண்ட்": [
+      "equity-investments-in-india",
+      "index-funds-vs-active-mutual-funds",
+      "loan-prepayment-vs-equity-investment",
+      "regular-vs-direct-mutual-funds"
+    ],
+    "கடன் & கிரெடிட்": [
+      "chit-funds",
+      "credit-card-optimization-and-traps",
+      "credit-score",
+      "lending-products-india",
+      "loan-prepayment-vs-equity-investment"
+    ],
+    "காப்பீடு & பாதுகாப்பு": [
+      "importance-of-writing-a-will",
+      "in-case-of-emergency-kit",
+      "insurance-products-in-india",
+      "personal-finance-fortification"
+    ],
+    "தங்கம் & சொத்துகள்": [
+      "cryptocurrency-and-nft-trading-india",
+      "gold-chits-jeweller-gold-schemes",
+      "gold-investing-options-india",
+      "hidden-risks-of-real-estate-investments-india",
+      "invit",
+      "reit"
+    ]
+  };
+
+  eleventyConfig.addCollection("topics", () => {
+    return PRIMARY_TOPICS;
   });
 
   eleventyConfig.addCollection("seoPages", (collectionApi) => {
@@ -62,6 +131,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("dateIso", (value) => toDate(value).toISOString().split("T")[0]);
   eleventyConfig.addFilter("dateTamil", (value) => tamilDateFormatter.format(toDate(value)));
   eleventyConfig.addFilter("jsonify", (value) => JSON.stringify(value).replace(/</g, "\\u003c"));
+  eleventyConfig.addFilter("urlEncode", (value) => encodeURIComponent(String(value || "")));
   eleventyConfig.addFilter("absoluteUrl", (value) => {
     return siteOrigin ? new URL(value, siteOrigin).toString() : value;
   });
@@ -80,7 +150,16 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("articleDataTopics", (article) => {
     const topics = normalizeList(article?.data?.topics);
     const keywords = normalizeList(article?.data?.keywords);
-    return Array.from(new Set([...topics, ...keywords])).join("|");
+    const slug = article?.fileSlug;
+    const mappedPrimary = [];
+    if (slug) {
+      for (const [primaryTopic, slugs] of Object.entries(TOPIC_MAPPING)) {
+        if (slugs.includes(slug)) {
+          mappedPrimary.push(primaryTopic);
+        }
+      }
+    }
+    return Array.from(new Set([...topics, ...keywords, ...mappedPrimary])).join("|");
   });
 
   eleventyConfig.addFilter("articleTopicsString", (article, delimiter = " · ") => {

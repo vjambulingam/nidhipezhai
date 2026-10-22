@@ -7,11 +7,15 @@
         <span class="brand__tagline">நிதி நலம் காக்கத் தெளிவான நிதி அறிவு</span>
       </span>
     </a>
-    <nav class="site-nav" aria-label="முதன்மை வழிசெலுத்தல்">
-      <a class="site-nav__articles" href="{{ '/#articles' | url }}">கட்டுரைகள்</a>
-      <a class="site-nav__tool" href="{{ '/calculators/' | url }}">கணிப்பேடுகள்</a>
-      <a class="site-nav__checklists" href="{{ '/checklists/' | url }}">சரிபார்ப்புப் பட்டியல்கள்</a>
-      <a class="site-nav__glossary" href="{{ '/glossary/' | url }}">நிதி அகராதி</a>
-    </nav>
+    <div class="site-header__actions">
+      <nav class="site-nav" aria-label="முதன்மை வழிசெலுத்தல்">
+        <a class="site-nav__start" href="{{ '/start-here/' | url }}">வழிகாட்டி</a>
+        <a class="site-nav__articles" href="{{ '/#articles' | url }}">கட்டுரைகள்</a>
+        <a class="site-nav__tool" href="{{ '/calculators/' | url }}">கணிப்பேடுகள்</a>
+        <a class="site-nav__checklists" href="{{ '/checklists/' | url }}">சரிபார்ப்புப் பட்டியல்கள்</a>
+        <a class="site-nav__glossary" href="{{ '/glossary/' | url }}">நிதி அகராதி</a>
+      </nav>
+      {% include "partials/theme-toggle.njk" %}
+    </div>
   </div>
 </header>

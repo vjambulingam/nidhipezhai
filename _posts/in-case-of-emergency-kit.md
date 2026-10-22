@@ -2,6 +2,8 @@
 title: அவசர காலக் கையேடு (In case of Emergency Kit)
 description: எதிர்பாராத அவசர காலங்களில் குடும்பத்திற்கு முழுமையான நிதிப் பாதுகாப்பையும் தெளிவையும் வழங்க, Financial Dossier அல்லது In Case of Emergency (ICE) Kit தயாரிப்பது, ஆவணங்களை ஒழுங்குபடுத்துவது மற்றும் பராமரிப்பது குறித்த விரிவான வழிகாட்டி.
 date: 2026-10-17
+lastModified: 2026-10-19
+ogImage: "/assets/images/in-case-of-emergency-kit-banner.jpg"
 topics:
   - தனிநபர் நிதி
   - நிதிப் பாதுகாப்பு
@@ -395,7 +397,7 @@ keywords:
 
 ### தொடர்புடைய வழிகாட்டிகள் & கருவிகள்:
 * [உயில் (Will) எழுதுவதன் முக்கியத்துவம்: முழுமையான வாரிசுரிமை வழிகாட்டி](/articles/importance-of-writing-a-will/)
-* [அவசர காலக் கையேடு (ICE Kit) 36 அம்ச செயலாற்றும் சரிபார்ப்புப் பட்டியல் (Excel ஏற்றுமதியுடன்)](/checklists/icoe-checklist.html)
+* [அவசர காலக் கையேடு (ICE Kit) 36 அம்ச செயலாற்றும் சரிபார்ப்புப் பட்டியல் (Excel பதிவிறக்கம்)](/checklists/icoe-checklist.html)
 * [தமிழ்நாடு & இந்தியச் சட்டங்களுக்கான வாரிசுரிமை மற்றும் உயில் சரிபார்ப்புப் பட்டியல்](/checklists/estate-planning-checklist.html)
 * [தனிநபர் நிதிநிலை வலுவூட்டல் 25 அம்ச முழுமையான சரிபார்ப்புப் பட்டியல்](/checklists/personal-finance-fortification-checklist.html)
 * [குடும்ப அவசரகால நிதித் தேவைக் கணிப்பான்](/calculators/emergency-fund-planner.html)

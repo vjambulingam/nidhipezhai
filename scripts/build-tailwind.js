@@ -124,6 +124,7 @@ function compileBaseRule(core) {
     "min-w-[520px]": "min-width:520px",
     "min-w-[560px]": "min-width:560px",
     "min-w-[620px]": "min-width:620px",
+    "whitespace-nowrap": "white-space:nowrap",
     "max-w-3xl": "max-width:48rem",
     "max-w-6xl": "max-width:72rem",
     "max-w-7xl": "max-width:80rem",
@@ -231,6 +232,9 @@ function compileBaseRule(core) {
 
   // Width / Height / Spacing
   let m;
+  if ((m = core.match(/^min-w-\[(\d+px)\]$/))) {
+    return { decl: `min-width:${m[1]}` };
+  }
   if ((m = core.match(/^w-(.+)$/))) {
     if (SPACING[m[1]]) return { decl: `width:${SPACING[m[1]]}` };
   }
@@ -325,7 +329,8 @@ const IGNORED_CUSTOM_CLASSES = new Set([
   "site-footer__brand", "site-footer__disclaimer", "site-footer__license",
   "site-footer__links", "site-footer__main", "site-header", "site-header__inner",
   "site-nav", "site-nav__articles", "site-nav__checklists", "site-nav__tool",
-  "strategy-btn", "task-checkbox", "wrap"
+  "skip-link", "strategy-btn", "task-checkbox", "theme-toggle", "theme-toggle__icon",
+  "theme-toggle__icon--moon", "theme-toggle__icon--sun", "wrap"
 ]);
 
 function extractClassesFromFile(filePath) {
@@ -391,7 +396,7 @@ const mediaRules = { sm: [], md: [], lg: [], xl: [] };
 const unknown = [];
 
 for (const token of [...allTokens].sort()) {
-  if (IGNORED_CUSTOM_CLASSES.has(token) || token.startsWith("article") || token.startsWith("featured") || token.startsWith("hero") || token.startsWith("eyebrow") || token.startsWith("topic") || token.startsWith("search") || token.startsWith("section") || token.startsWith("simple") || token.startsWith("legal") || token.startsWith("directory") || token.startsWith("tools") || token.startsWith("breadcrumbs") || token.startsWith("visually") || token.startsWith("empty") || token.startsWith("results")) {
+  if (IGNORED_CUSTOM_CLASSES.has(token) || token.startsWith("calc-") || token.startsWith("article") || token.startsWith("featured") || token.startsWith("hero") || token.startsWith("eyebrow") || token.startsWith("topic") || token.startsWith("search") || token.startsWith("section") || token.startsWith("simple") || token.startsWith("legal") || token.startsWith("directory") || token.startsWith("tools") || token.startsWith("breadcrumbs") || token.startsWith("visually") || token.startsWith("empty") || token.startsWith("results")) {
     continue;
   }
 

@@ -8,7 +8,7 @@ hasCsvExport: true
 footerTitle: "நிதிப்பேழை காப்பீட்டுத் தேவைக் கணிப்பேடு &bull; அறிவியல் பூர்வமான DIME (Debt, Income, Mortgage, Education) அணுகுமுறை"
 footerNote: "பொறுப்புத் துறப்பு: இந்தக் கணிப்பேடு கல்வி மற்றும் விழிப்புணர்வு நோக்கத்திற்காக மட்டுமே. காட்டப்படும் கணக்கீடுகளின் துல்லியம் அல்லது முழுமைக்கு உத்தரவாதம் அளிக்கப்படாது; அவற்றின் அடிப்படையில் எடுக்கப்படும் முடிவுகள் அல்லது ஏற்படும் இழப்புகளுக்கு நாங்கள் பொறுப்பேற்க மாட்டோம். காப்பீடு குறித்த முடிவெடுப்பதற்கு முன் <a href=\"../articles/sebi-registered-investment-advisors/\">தகுதியான நிதி ஆலோசகரைக்</a> கலந்தாலோசித்து இறுதி முடிவெடுக்கவும்."
 ---
-<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full space-y-6">
+<main id="main-content" tabindex="-1" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full space-y-6">
     <div>
       <h1 class="text-xl font-bold tracking-tight text-slate-900 leading-tight">
         ஆயுள் காப்பீட்டுத் தேவைக் கணிப்பேடு
@@ -36,6 +36,14 @@ footerNote: "பொறுப்புத் துறப்பு: இந்த�
       
       <!-- Left Column: Inputs Accordion / Sections (7 cols) -->
       <div class="lg:col-span-7 space-y-5">
+        <div class="flex items-center justify-between pb-3 border-b border-gray-100">
+          <h2 class="text-base font-bold text-gray-900">உள்ளீட்டு விவரங்கள்</h2>
+          
+          <button id="btnReset" type="button" class="calc-reset-btn" title="அனைத்து உள்ளீடுகளையும் மீட்டமைக்க">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            <span>மீட்டமைக்க</span>
+          </button>
+        </div>
         
         <!-- SECTION 1: Income & Living Expense Sustenance -->
         <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-xs border border-slate-200 space-y-4">
@@ -367,6 +375,19 @@ footerNote: "பொறுப்புத் துறப்பு: இந்த�
       </div>
     </div>
 
+  
+        <!-- Key Assumptions Card -->
+        <div class="calc-assumptions-card mt-6">
+          <div class="calc-assumptions-card__title">
+            <svg class="w-4 h-4 text-sky-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>கணக்கீட்டு அனுமானங்கள் (Key Assumptions)</span>
+          </div>
+          <ul class="calc-assumptions-card__list">
+            <li>மனித வாழ்வு மதிப்பு (Human Life Value - HLV) மற்றும் குடும்பத் தேவைப் பகுப்பாய்வு அடிப்படையில் கணக்கிடப்படுகிறது.</li>
+            <li>ஆண்டு வருமானத்தின் 15–20 மடங்கு தொகை, குடும்பத்தின் மாதாந்திரச் செலவுகள் மற்றும் எதிர்கால இலக்குகள் சேர்க்கப்படுகின்றன.</li>
+            <li>நிலுவையில் உள்ள வீட்டுக் கடன், வாகனக் கடன்கள் கூட்டப்பட்டு, தற்போதைய சொத்துகள் மற்றும் சேமிப்புகள் கழிக்கப்படுகின்றன.</li>
+          </ul>
+        </div>
   </main>
 
 <script>

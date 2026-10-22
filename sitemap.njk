@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: true
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {% if siteOrigin %}
 {% for item in collections.seoPages %}
-<url><loc>{{ item.url | url | absoluteUrl }}</loc>{% if item.data.tags and ('articles' in item.data.tags) %}<lastmod>{{ item.date | dateIso }}</lastmod>{% endif %}</url>
+<url><loc>{{ item.url | url | absoluteUrl }}</loc>{% if item.data.tags and ('articles' in item.data.tags) %}<lastmod>{{ (item.data.lastModified or item.date) | dateIso }}</lastmod>{% endif %}</url>
 {% endfor %}
 {% for group in calculators %}
 {% for calculator in group.items %}

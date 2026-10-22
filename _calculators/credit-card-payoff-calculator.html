@@ -7,7 +7,7 @@ hasChart: false
 hasCsvExport: true
 footerTitle: "கடன் அட்டை நிலுவைத் தொகை அடைப்புக் கணிப்பேடு · நிதிப்பேழை"
 ---
-<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-1">
+<main id="main-content" tabindex="-1" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-1">
     <div class="mb-6">
       <p class="text-xs font-semibold text-sky-700">கடன் மேலாண்மை</p>
       <h1 class="mt-1 text-2xl sm:text-3xl font-bold text-gray-900">கடன் அட்டை நிலுவைத் தொகை அடைப்புக் கணிப்பேடு</h1>
@@ -16,7 +16,14 @@ footerTitle: "கடன் அட்டை நிலுவைத் தொகை
 
     <div class="grid gap-6 lg:grid-cols-5">
       <section class="lg:col-span-2 bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-gray-200" aria-labelledby="inputHeading">
-        <h3 id="inputHeading" class="text-lg font-bold text-gray-900">உங்கள் விவரங்கள்</h3>
+        <div class="flex items-center justify-between pb-2 border-b border-gray-100">
+          <h3 id="inputHeading" class="text-lg font-bold text-gray-900">உங்கள் விவரங்கள்</h3>
+          
+          <button id="btnReset" type="button" class="calc-reset-btn" title="அனைத்து உள்ளீடுகளையும் மீட்டமைக்க">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            <span>மீட்டமைக்க</span>
+          </button>
+        </div>
         <div class="mt-5 space-y-5">
           <div>
             <label for="balanceInput" class="block text-sm font-semibold text-gray-700">தற்போதைய நிலுவைத் தொகை</label>
@@ -24,6 +31,7 @@ footerTitle: "கடன் அட்டை நிலுவைத் தொகை
               <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">₹</span>
               <input id="balanceInput" type="number" min="1" max="100000000" step="100" value="50000" inputmode="decimal" class="w-full rounded-lg border border-gray-300 py-2.5 pl-8 pr-3 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
             </div>
+            <input type="range" id="balanceSlider" min="5000" max="500000" step="5000" value="50000" class="mt-2 w-full">
           </div>
           <div>
             <label for="aprInput" class="block text-sm font-semibold text-gray-700">ஆண்டு வட்டி விகிதம் (APR)</label>
@@ -31,6 +39,7 @@ footerTitle: "கடன் அட்டை நிலுவைத் தொகை
               <input id="aprInput" type="number" min="0" max="100" step="0.1" value="36" inputmode="decimal" class="w-full rounded-lg border border-gray-300 py-2.5 pl-3 pr-9 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
               <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500">%</span>
             </div>
+            <input type="range" id="aprSlider" min="12" max="48" step="0.5" value="36" class="mt-2 w-full">
             <p class="mt-1 text-xs text-gray-500">உங்கள் அட்டை அறிக்கையில் உள்ள வட்டி விகிதத்தைப் பயன்படுத்துங்கள்.</p>
           </div>
           <div>
@@ -46,6 +55,7 @@ footerTitle: "கடன் அட்டை நிலுவைத் தொகை
               <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">₹</span>
               <input id="fixedPaymentInput" type="number" min="1" max="100000000" step="100" value="5000" inputmode="decimal" class="w-full rounded-lg border border-gray-300 py-2.5 pl-8 pr-3 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
             </div>
+            <input type="range" id="fixedPaymentSlider" min="500" max="50000" step="500" value="5000" class="mt-2 w-full">
           </div>
           <div id="minimumPaymentFields" class="hidden space-y-4">
             <div>
@@ -125,6 +135,20 @@ footerTitle: "கடன் அட்டை நிலுவைத் தொகை
         </div>
       </section>
     </div>
+  
+        <!-- Key Assumptions Card -->
+        <div class="calc-assumptions-card mt-6">
+          <div class="calc-assumptions-card__title">
+            <svg class="w-4 h-4 text-sky-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>கணக்கீட்டு அனுமானங்கள் (Key Assumptions)</span>
+          </div>
+          <ul class="calc-assumptions-card__list">
+            <li>ஆண்டு வட்டி விகிதம் (APR) 12 மாதங்களாகப் பிரிக்கப்பட்டு மாதாந்திரக் கூட்டு வட்டியாகக் கணக்கிடப்படுகிறது.</li>
+            <li>அடைப்புக் காலத்தில் அட்டையில் புதிய கொள்முதல்கள் அல்லது பரிவர்த்தனைகள் செய்யப்படாது என்று கருதப்படுகிறது.</li>
+            <li>தாமதக் கட்டணங்கள் (Late Payment Charges) மற்றும் வட்டி மீதான 18% ஜிஎஸ்டி இதில் சேர்க்கப்படவில்லை.</li>
+            <li>குறைந்தபட்சத் தொகை (Minimum Due) மட்டுமே செலுத்தினால் வட்டி பெருமளவில் அதிகரித்து கடன் தீர பல ஆண்டுகள் ஆகும்.</li>
+          </ul>
+        </div>
   </main>
 
 <script>
@@ -269,13 +293,13 @@ footerTitle: "கடன் அட்டை நிலுவைத் தொகை
         body.append(tr);
       }
       document.getElementById("scheduleNote").textContent = isPaidOff
-        ? `முதல் ${Math.min(12, schedule.length)} மாதங்கள் காட்டப்படுகின்றன. CSV-யில் முழு அட்டவணையையும் ஏற்றுமதி செய்யலாம்.`
+        ? `முதல் ${Math.min(12, schedule.length)} மாதங்கள் காட்டப்படுகின்றன. CSV-யில் முழு அட்டவணையையும் பதிவிறக்கம் செய்யலாம்.`
         : "நிலுவை முழுமையாக அடைபடாததால் கிடைக்கும் மாதங்கள் மட்டும் காட்டப்படுகின்றன.";
     }
 
     function exportCsv() {
       if (!payoffSchedule.length) {
-        setError("ஏற்றுமதி செய்யக்கூடிய அடைப்பு அட்டவணை இல்லை.");
+        setError("பதிவிறக்கம் செய்யக்கூடிய அடைப்பு அட்டவணை இல்லை.");
         return;
       }
       const rows = [
@@ -288,6 +312,23 @@ footerTitle: "கடன் அட்டை நிலுவைத் தொகை
       link.download = "credit-card-payoff-schedule.csv";
       link.click();
       URL.revokeObjectURL(link.href);
+    }
+
+    const balanceSlider = document.getElementById("balanceSlider");
+    const aprSlider = document.getElementById("aprSlider");
+    const fixedPaymentSlider = document.getElementById("fixedPaymentSlider");
+
+    if (balanceSlider && fields.balanceInput) {
+      balanceSlider.addEventListener("input", (e) => { fields.balanceInput.value = e.target.value; calculatePayoff(); });
+      fields.balanceInput.addEventListener("input", () => { balanceSlider.value = fields.balanceInput.value; });
+    }
+    if (aprSlider && fields.aprInput) {
+      aprSlider.addEventListener("input", (e) => { fields.aprInput.value = e.target.value; calculatePayoff(); });
+      fields.aprInput.addEventListener("input", () => { aprSlider.value = fields.aprInput.value; });
+    }
+    if (fixedPaymentSlider && fields.fixedPaymentInput) {
+      fixedPaymentSlider.addEventListener("input", (e) => { fields.fixedPaymentInput.value = e.target.value; calculatePayoff(); });
+      fields.fixedPaymentInput.addEventListener("input", () => { fixedPaymentSlider.value = fields.fixedPaymentInput.value; });
     }
 
     inputIds.forEach((id) => {

@@ -8,7 +8,7 @@ hasCsvExport: true
 footerTitle: "ஊழியர் சேமநல நிதி (EPF) கணிப்பேடு &bull; இந்தியத் தொழிலாளர் வைப்பு நிதி நிறுவன (EPFO) விதிகளின்படி உருவாக்கப்பட்டது"
 footerNote: "குறிப்பு: ஒரு நிதியாண்டில் பணியாளர் பங்களிப்பு ₹2.5 லட்சத்தைத் தாண்டினால் (நிறுவனப் பங்களிப்பு இல்லாதபோது ₹5 லட்சம்), உபரித் தொகைக்குக் கிடைக்கும் வட்டிக்கு வருமான வரி பொருந்தும். அரசு உத்தரவுகளின்படி ஆண்டுதோறும் வட்டி விகிதங்கள் மாற்றியமைக்கப்படலாம்."
 ---
-<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full space-y-6">
+<main id="main-content" tabindex="-1" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full space-y-6">
     <span class="brand__text">
             <h1 class="brand__name text-xl font-bold tracking-tight text-gray-900 leading-tight">
               ஓய்வூதிய வைப்பு நிதி (EPF) கணிப்பேடு
@@ -36,6 +36,14 @@ footerNote: "குறிப்பு: ஒரு நிதியாண்டி�
       
       <!-- Left Column: Inputs & Sliders (7 cols) -->
       <div class="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-7 shadow-xs border border-gray-200 space-y-6">
+        <div class="flex items-center justify-between pb-3 border-b border-gray-100">
+          <h2 class="text-base font-bold text-gray-900">உள்ளீட்டு விவரங்கள்</h2>
+          
+          <button id="btnReset" type="button" class="calc-reset-btn" title="அனைத்து உள்ளீடுகளையும் மீட்டமைக்க">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            <span>மீட்டமைக்க</span>
+          </button>
+        </div>
         
         <!-- Field 1: Monthly Basic Salary + DA -->
         <div class="space-y-3">
@@ -266,6 +274,19 @@ footerNote: "குறிப்பு: ஒரு நிதியாண்டி�
       </div>
     </div>
 
+  
+        <!-- Key Assumptions Card -->
+        <div class="calc-assumptions-card mt-6">
+          <div class="calc-assumptions-card__title">
+            <svg class="w-4 h-4 text-sky-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>கணக்கீட்டு அனுமானங்கள் (Key Assumptions)</span>
+          </div>
+          <ul class="calc-assumptions-card__list">
+            <li>நடப்பு EPF வட்டி விகிதம் ஆண்டுக்கு 8.25% கூட்டு வட்டி அடிப்படையில் கணக்கிடப்படுகிறது (EPFO அவ்வப்போது மாற்றும்).</li>
+            <li>ஊழியர் பங்களிப்பு 12%, முதலாளி பங்களிப்பில் 3.67% EPF-க்கும், 8.33% EPS (ஓய்வூதிய நிதி)க்கும் ஒதுக்கப்படுகிறது.</li>
+            <li>ஆண்டு சம்பள உயர்வு (Annual Salary Increment) கூட்டு முறையில் ஊழியரின் ஊதியத்துடன் கூட்டப்படுகிறது.</li>
+          </ul>
+        </div>
   </main>
 
 <script>

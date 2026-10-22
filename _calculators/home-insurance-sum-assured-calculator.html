@@ -8,7 +8,7 @@ hasCsvExport: false
 footerTitle: "நிதிப்பேழை வீட்டுக் காப்பீட்டுத் தொகைக் கணிப்பேடு"
 footerNote: "பொறுப்புத் துறப்பு: இந்தக் கணிப்பேடு கல்வி மற்றும் விழிப்புணர்வு நோக்கத்திற்காக மட்டுமே. காட்டப்படும் கணக்கீடுகளின் துல்லியம் அல்லது முழுமைக்கு உத்தரவாதம் அளிக்கப்படாது; அவற்றின் அடிப்படையில் எடுக்கப்படும் முடிவுகள் அல்லது ஏற்படும் இழப்புகளுக்கு நாங்கள் பொறுப்பேற்க மாட்டோம். காப்பீடு குறித்த முடிவெடுப்பதற்கு முன் <a href=\"../articles/sebi-registered-investment-advisors/\">தகுதியான நிதி ஆலோசகரைக்</a> கலந்தாலோசித்து இறுதி முடிவெடுக்கவும்."
 ---
-<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full space-y-6">
+<main id="main-content" tabindex="-1" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full space-y-6">
     <div>
       <h1 class="text-xl font-bold tracking-tight text-slate-900 leading-tight">வீட்டுக் காப்பீட்டுத் தொகைக் கணிப்பேடு</h1>
       <p class="text-xs text-slate-500 font-medium">வீட்டு உரிமையாளர் மற்றும் வாடகைதாரர் – இருவருக்கும் ஏற்ற காப்பீட்டுத் தொகையை மதிப்பிடுங்கள்</p>
@@ -25,6 +25,14 @@ footerNote: "பொறுப்புத் துறப்பு: இந்த�
         <!-- Building (owners only) -->
         <div id="buildingSection" class="bg-white rounded-2xl p-5 sm:p-6 shadow-xs border border-slate-200 space-y-4">
           <div class="pb-2 border-b border-slate-100">
+        <div class="flex items-center justify-between pb-2">
+          <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">கணக்கீட்டு உள்ளீடுகள்</span>
+          
+          <button id="btnReset" type="button" class="calc-reset-btn" title="அனைத்து உள்ளீடுகளையும் மீட்டமைக்க">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            <span>மீட்டமைக்க</span>
+          </button>
+        </div>
             <h2 class="text-sm font-bold text-slate-900 flex items-center gap-2">
               <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">1</span>
               வீட்டுக் கட்டடம் (Building – மறுகட்டுமான மதிப்பு)
@@ -153,6 +161,19 @@ footerNote: "பொறுப்புத் துறப்பு: இந்த�
         <div class="bg-white rounded-2xl p-5 shadow-xs border border-slate-200 text-xs text-slate-600 space-y-2" id="tips"></div>
       </div>
     </div>
+  
+        <!-- Key Assumptions Card -->
+        <div class="calc-assumptions-card mt-6">
+          <div class="calc-assumptions-card__title">
+            <svg class="w-4 h-4 text-sky-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>கணக்கீட்டு அனுமானங்கள் (Key Assumptions)</span>
+          </div>
+          <ul class="calc-assumptions-card__list">
+            <li>நிலத்தின் மதிப்பு (Land Value) சேர்க்கப்படாது; கட்டடத்தின் மறுசீரமைப்புச் செலவு (Reconstruction Cost) மட்டுமே அடிப்படை.</li>
+            <li>சதுர அடி கட்டுமானச் செலவு கட்டுமானத் தரம் மற்றும் நகர அமைவிடத்தைப் பொறுத்து மாறுபடும்.</li>
+            <li>தளவாடப் பொருட்கள் (Contents) தேய்மானக் கழிவுக்கு (Depreciation) உட்பட்ட மதிப்பீடாகும்.</li>
+          </ul>
+        </div>
   </main>
 
 <script>

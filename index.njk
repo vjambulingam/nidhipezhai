@@ -4,7 +4,7 @@ description: சேமிப்பு, முதலீடு, ஓய்வூத
 permalink: /index.html
 bodyClass: home-page
 ---
-<main>
+<main id="main-content" tabindex="-1">
   <section class="hero">
     <div class="wrap hero__inner">
       <div class="hero__copy">
@@ -20,7 +20,7 @@ bodyClass: home-page
         <span class="featured__topic">{{ featured.data.topics[0] }}</span>
         <span class="featured__title">{{ featured.data.title }}</span>
         <span class="featured__description">{{ featured.data.description }}</span>
-        <span class="featured__meta"><span>{{ featured.date | dateTamil }} <span aria-hidden="true">·</span> {{ featured | readingTime }} நிமிட வாசிப்பு</span> <span class="featured__meta-arrow" aria-hidden="true">↗</span></span>
+        <span class="featured__meta"><span>{{ (featured.data.lastModified or featured.date) | dateTamil }} <span aria-hidden="true">·</span> {{ featured | readingTime }} நிமிட வாசிப்பு</span> <span class="featured__meta-arrow" aria-hidden="true">↗</span></span>
       </a>
       {% else %}
       <div class="featured featured--empty">
@@ -29,6 +29,29 @@ bodyClass: home-page
         <span class="featured__description">புதிய தலைப்புகள் தானாகவே இங்கே தோன்றும்.</span>
       </div>
       {% endif %}
+    </div>
+  </section>
+
+  <section class="start-here-banner wrap" aria-label="கற்றல் வழிகாட்டி">
+    <div class="start-here-banner__inner">
+      <div class="start-here-banner__info">
+        <span class="start-here-banner__pill">புதியவர்களுக்கான கற்றல் பாதை · Start Here</span>
+        <h2 class="start-here-banner__title">நிதித் திட்டமிடலை எங்கிருந்து தொடங்குவது?</h2>
+        <p class="start-here-banner__desc">அவசர நிதி & கடன் அடைப்பு முதல் இன்டெக்ஸ் ஃபண்ட் மற்றும் வாரிசுரிமைத் திட்டமிடல் வரை — 3 எளிய படிநிலைகளில் உங்கள் நிதிப் பயணத்தைத் திட்டமிடுங்கள்.</p>
+        <div class="start-here-banner__steps" aria-hidden="true">
+          <span class="step-chip"><span class="step-num">1</span> அடித்தளம் & பாதுகாப்பு</span>
+          <span class="step-chip-arrow">→</span>
+          <span class="step-chip"><span class="step-num">2</span> வளர்ச்சி & முதலீடு</span>
+          <span class="step-chip-arrow">→</span>
+          <span class="step-chip"><span class="step-num">3</span> செல்வப் பெருக்கம்</span>
+        </div>
+      </div>
+      <div class="start-here-banner__cta">
+        <a class="start-here-banner__btn" href="{{ '/start-here/' | url }}">
+          <span>வழிகாட்டிப் பாதையைத் தொடங்குங்கள்</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -60,7 +83,7 @@ bodyClass: home-page
       <article class="article-card" data-search-result data-search-type="article" data-topics="{{ article | articleDataTopics | escape }}" data-all-topics="{{ article | articleTopicsString('|') | escape }}" data-search="{{ article | articleSearchText | escape }}">
         <div class="article-card__meta">
           <span class="article-card__info">
-            <time datetime="{{ article.date | dateIso }}">{{ article.date | dateTamil }}</time>
+            <time datetime="{{ (article.data.lastModified or article.date) | dateIso }}">{{ (article.data.lastModified or article.date) | dateTamil }}</time>
             <span aria-hidden="true">·</span>
             <span>{{ article | readingTime }} நிமிட வாசிப்பு</span>
           </span>

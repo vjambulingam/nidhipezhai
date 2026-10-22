@@ -2,6 +2,8 @@
 title: "Index Fund vs Active Mutual Fund ஒப்பீடு"
 description: "குறியீட்டு நிதித் திட்டம் (Index Fund) vs செயலுள்ள மியூச்சுவல் நிதித் திட்டம் (Active Mutual Fund) முழு ஒப்பீடு: SPIVA அறிக்கை நிதர்சனம், செலவு விகிதத்தின் (Expense Ratio Drag) ₹50+ லட்சம் மறைமுக இழப்பு, Tracking Error மற்றும் Nifty 50 + Next 50 இரட்டைக் கூட்டணி வழிகாட்டி."
 date: 2026-10-19
+lastModified: 2026-10-19
+ogImage: "/assets/images/index-funds-vs-active-mutual-funds-banner.jpg"
 topics:
   - மியூச்சுவல் நிதித் திட்டம்
   - குறியீட்டு நிதித் திட்டம்
@@ -362,7 +364,7 @@ keywords:
           <span>சரிபார்ப்புப் பட்டியலைத் திறக்க</span>
           <span aria-hidden="true">&rarr;</span>
         </a>
-        <span style="font-size: 12px; font-weight: 600; color: #047857;">📗 Excel (.xlsx) ஏற்றுமதி &amp; அச்சிடும் வசதியுடன்</span>
+        <span style="font-size: 12px; font-weight: 600; color: #047857;">📗 Excel (.xlsx) பதிவிறக்கம் &amp; அச்சிடும் வசதியுடன்</span>
       </div>
     </div>
   </div>

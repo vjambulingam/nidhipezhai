@@ -14,10 +14,12 @@
   {% if siteOrigin %}
   <link rel="canonical" href="{{ canonicalUrl }}">
   <meta property="og:url" content="{{ canonicalUrl }}">
-  <meta property="og:image" content="{{ '/assets/images/nidhipezhai-og.png' | url | absoluteUrl }}">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:image" content="{{ '/assets/images/nidhipezhai-og.png' | url | absoluteUrl }}">
+  {% set pageOgImage = ogImage or image or '/assets/images/nidhipezhai-og.png' %}
+  {% set pageOgImageUrl = pageOgImage | url | absoluteUrl %}
+  <meta property="og:image" content="{{ pageOgImageUrl }}">
+  <meta property="og:image:width" content="{{ ogImageWidth or '1200' }}">
+  <meta property="og:image:height" content="{{ ogImageHeight or '630' }}">
+  <meta name="twitter:image" content="{{ pageOgImageUrl }}">
   {% endif %}
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:locale" content="ta_IN">
@@ -45,11 +47,14 @@
   } %}
   <script type="application/ld+json">{{ websiteSchema | jsonify | safe }}</script>
   {% endif %}
+  {% include "partials/theme-init.njk" %}
 </head>
 <body class="{{ bodyClass or '' }}">
+  <a class="skip-link" href="#main-content">முதன்மை உள்ளடக்கத்திற்குத் தாவவும்</a>
   {% include "partials/site-header.njk" %}
   {{ content | safe }}
   {% include "partials/site-footer.njk" %}
+  <script src="{{ '/assets/js/theme.js' | url }}" defer></script>
   <script src="{{ '/assets/js/site.js' | url }}" defer></script>
 </body>
 </html>

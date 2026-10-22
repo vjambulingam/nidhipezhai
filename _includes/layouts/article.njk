@@ -2,12 +2,15 @@
 layout: layouts/base.njk
 ---
 {% if siteOrigin %}
+{% set articleOgImage = (ogImage or image or '/assets/images/nidhipezhai-og.png') | url | absoluteUrl %}
 {% set articleSchema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": title,
   "description": description,
+  "image": [articleOgImage],
   "datePublished": date | dateIso,
+  "dateModified": (lastModified or date) | dateIso,
   "inLanguage": "ta-IN",
   "mainEntityOfPage": page.url | url | absoluteUrl,
   "author": { "@type": "Organization", "name": site.title },
@@ -16,7 +19,7 @@ layout: layouts/base.njk
 } %}
 <script type="application/ld+json">{{ articleSchema | jsonify | safe }}</script>
 {% endif %}
-<main class="article-page">
+<main class="article-page" id="main-content" tabindex="-1">
   <div class="wrap article-page__wrap">
     <nav class="breadcrumbs" aria-label="நீங்கள் இருக்கும் இடம்">
       <a href="{{ '/' | url }}">முகப்பு</a>
@@ -33,16 +36,21 @@ layout: layouts/base.njk
         <h1>{{ title }}</h1>
         <p class="article__description">{{ description }}</p>
         <div class="article__meta">
-          <time datetime="{{ date | dateIso }}">{{ date | dateTamil }}</time>
+          <time datetime="{{ (lastModified or date) | dateIso }}">{{ (lastModified or date) | dateTamil }}</time>
           <span aria-hidden="true">·</span>
           <span>{{ content | readingTime }} நிமிட வாசிப்பு</span>
         </div>
+        {% set shareVariant = "compact" %}
+        {% include "partials/social-share.njk" %}
       </header>
       <nav class="article-toc" id="article-toc" aria-label="பொருளடக்கம்" hidden>
         <p class="article-toc__title">பொருளடக்கம்</p>
         <ol class="article-toc__list" id="article-toc-list"></ol>
       </nav>
       <div class="article__body">{{ content | safe }}</div>
+      {% set shareVariant = "box" %}
+      {% set shareContext = "article" %}
+      {% include "partials/social-share.njk" %}
       {% set prevArticle = null %}
       {% set nextArticle = null %}
       {% for item in collections.articlesByDate %}

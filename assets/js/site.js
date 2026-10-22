@@ -62,7 +62,16 @@ if (searchInput && searchResults.length) {
       } else if (selectedTopic === "all") {
         matchesFilter = isArticle || query.length > 0;
       } else {
-        matchesFilter = isArticle && topics.includes(selectedTopic);
+        matchesFilter = isArticle && (
+          topics.includes(selectedTopic) ||
+          (selectedTopic === "சேமிப்பு" && (topics.includes("சேமிப்பு") || topics.includes("வங்கி") || topics.includes("வைப்புத்தொகை"))) ||
+          (selectedTopic === "முதலீடு" && topics.includes("முதலீடு")) ||
+          (selectedTopic === "பங்குச்சந்தை" && (topics.includes("பங்குச்சந்தை") || topics.includes("பங்கு முதலீடு"))) ||
+          (selectedTopic === "மியூச்சுவல் ஃபண்ட்" && (topics.includes("மியூச்சுவல் ஃபண்ட்") || topics.includes("மியூச்சுவல் நிதித் திட்டம்") || topics.includes("பரஸ்பர நிதி"))) ||
+          (selectedTopic === "கடன் & கிரெடிட்" && (topics.includes("கடன் & கிரெடிட்") || topics.includes("கடன்") || topics.includes("கிரெடிட் கார்டு") || topics.includes("கிரெடிட் ஸ்கோர்") || topics.includes("கடன் மேலாண்மை"))) ||
+          (selectedTopic === "காப்பீடு & பாதுகாப்பு" && (topics.includes("காப்பீடு & பாதுகாப்பு") || topics.includes("காப்பீடு") || topics.includes("நிதிப் பாதுகாப்பு") || topics.includes("அவசர நிதி") || topics.includes("உயில்") || topics.includes("வாரிசுரிமைத் திட்டமிடல்"))) ||
+          (selectedTopic === "தங்கம் & சொத்துகள்" && (topics.includes("தங்கம் & சொத்துகள்") || topics.includes("தங்கம்") || topics.includes("ரியல் எஸ்டேட்") || topics.includes("REIT") || topics.includes("டிஜிட்டல் சொத்துகள்")))
+        );
       }
 
       const visible = matchesQuery && matchesFilter;

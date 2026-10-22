@@ -21,6 +21,7 @@ module.exports = {
     permalink: (data) => `/articles/${data.page.fileSlug}/index.html`,
     seoType: "article",
     topics: (data) => normalizeList(data.topics),
-    keywords: (data) => normalizeList(data.keywords)
+    keywords: (data) => normalizeList(data.keywords),
+    lastModified: (data) => data.lastModified || data.date
   }
 };
