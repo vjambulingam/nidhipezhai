@@ -1,0 +1,459 @@
+---
+title: "நிகர மதிப்புக் கணிப்பேடு & கூகுள் ஷீட் வழிகாட்டி · நிதிப்பேழை"
+ogTitle: "நிகர மதிப்புக் கணிப்பேடு (Net Worth Calculator) & Google Sheet வழிகாட்டி · நிதிப்பேழை"
+description: "உங்கள் மொத்த சொத்துக்கள், முதலீடுகள் மற்றும் கடன்களைக் கணக்கிட்டு, உங்கள் உண்மையான நிதிநிலையைத் துல்லியமாகக் கண்காணிக்கும் இலவச Google Sheet வழிகாட்டி மற்றும் டெம்ப்ளேட்."
+keywords: "net worth calculator Tamil, net worth Google Sheet, net worth calculator in Tamil, nikara madhippu, sothu kadan kanakkeedu, net worth tracker Tamil Nadu, personal net worth sheet Tamil, google sheet networth template"
+hasChart: false
+hasCsvExport: false
+footerTitle: "நிகர மதிப்புக் கணிப்பேடு & கூகுள் ஷீட் வழிகாட்டி · நிதிப்பேழை"
+footerNote: "இந்த Google Sheet டெம்ப்ளேட் உங்கள் சொந்த Google Drive-ல் நகலெடுக்கப்பட்டு 100% தனிப்பட்ட முறையில் இயங்கும். உங்கள் நிதித் தகவல்கள் எந்த மூன்றாம் தரப்பு தளத்துடனும் பகிரப்படாது."
+---
+<style>
+  #btnHeaderReset { display: none !important; }
+  .calc-sheet-badge {
+    background-color: #ecfdf5;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+  }
+  .dark .calc-sheet-badge {
+    background-color: #064e3b;
+    color: #a7f3d0;
+    border-color: #065f46;
+  }
+</style>
+
+<main id="main-content" tabindex="-1" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-1 space-y-8">
+
+  <!-- Breadcrumb & Category Eyebrow -->
+  <div class="flex items-center justify-between">
+    <div class="flex items-center space-x-2 text-xs font-semibold text-sky-700">
+      <a href="/calculators/index.html" class="hover:underline">கணிப்பேடுகள்</a>
+      <span class="text-gray-400">/</span>
+      <span>முதலீட்டு மேலாண்மை</span>
+    </div>
+    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold calc-sheet-badge">
+      <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H6v-2h6v2zm4-4H6v-2h10v2zm0-4H6V7h10v2z"/>
+      </svg>
+      Google Sheet டெம்ப்ளேட்
+    </span>
+  </div>
+
+  <!-- Hero Header & Primary Download Card -->
+  <section class="bg-gradient-to-br from-sky-600 to-indigo-700 rounded-2xl p-6 sm:p-10 text-white shadow-md relative overflow-hidden" aria-labelledby="heroHeading">
+    <div class="absolute -right-8 -bottom-8 w-36 h-36 bg-white/10 rounded-full blur-sm pointer-events-none"></div>
+    <div class="relative max-w-3xl space-y-4">
+      <p class="text-xs sm:text-sm font-semibold tracking-wider uppercase text-sky-200">இலவச நிதி மேலாண்மைக் கருவி</p>
+      <h1 id="heroHeading" class="text-2xl sm:text-4xl font-extrabold tracking-tight leading-tight text-white">
+        நிகர மதிப்புக் கணிப்பேடு & கூகுள் ஷீட் வழிகாட்டி
+      </h1>
+      <p class="text-sm sm:text-base text-sky-100 leading-relaxed">
+        உங்கள் ஒட்டுமொத்த சொத்துக்கள் (Assets) மற்றும் கடன்களைப் (Liabilities) பதிவு செய்து, உண்மையான நிகர சொத்து மதிப்பையும் செல்வ வளர்ச்சியையும் துல்லியமாகக் கண்காணிக்க உதவும் கூகுள் ஷீட் வார்ப்புரு (Google Sheet Template).
+      </p>
+
+      <!-- Primary Action Box -->
+      <div class="pt-3 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <a href="https://docs.google.com/spreadsheets/d/1q0xgoVvBrxDZrvQYwy4OOLkkhtJ65-DJYn9z7hBUDbc/copy" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="inline-flex items-center justify-center gap-3 px-6 py-4 bg-white hover:bg-slate-50 text-gray-900 font-bold rounded-xl shadow-md transition-all text-sm sm:text-base">
+          <svg class="w-5 h-5 text-sky-700" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+          </svg>
+          <span>Google Sheet-ல் நகலெடுக்கவும் (Make a Copy)</span>
+          <svg class="w-4 h-4 text-sky-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+
+        <div class="flex items-center gap-2 text-xs text-sky-100">
+          <svg class="w-4 h-4 text-sky-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+          </svg>
+          <span>100% தனிநபர் பாதுகாப்பு — உங்கள் சொந்த Google Drive-ல் மட்டுமே சேமிக்கப்படும்</span>
+        </div>
+      </div>
+
+      <!-- Feature Pill Badges -->
+      <div class="pt-4 border-t border-white/10 flex flex-wrap gap-2 text-xs text-sky-100">
+        <span class="inline-flex items-center gap-1 bg-white/10 px-3 py-1 rounded-full">✓ தானியங்கும் சூத்திரக் கணக்கீடு</span>
+        <span class="inline-flex items-center gap-1 bg-white/10 px-3 py-1 rounded-full">✓ சொத்துப் பகிர்வு பகுப்பாய்வு</span>
+        <span class="inline-flex items-center gap-1 bg-white/10 px-3 py-1 rounded-full">✓ மொபைல் & கணினியில் இயங்கும்</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formula Callout Card -->
+  <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 space-y-4" aria-labelledby="formulaHeading">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl bg-sky-100 flex items-center justify-center text-sky-700 font-bold text-xl" aria-hidden="true">
+        ⚖️
+      </div>
+      <div>
+        <h2 id="formulaHeading" class="text-lg sm:text-xl font-bold text-gray-900">நிகர மதிப்பு (Net Worth) என்றால் என்ன?</h2>
+        <p class="text-xs sm:text-sm text-gray-500">தனிநபர் நிதிநிலையை அளவிடுவதற்கான மிக அடிப்படையான மற்றும் உண்மையான அளவுகோல்</p>
+      </div>
+    </div>
+
+    <!-- The Formula Box -->
+    <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 text-center">
+      <p class="text-xs uppercase font-bold tracking-wider text-slate-500 mb-2">அடிப்படை நிதிச் சூத்திரம் (Formula)</p>
+      <div class="text-base sm:text-2xl font-extrabold text-gray-900 flex flex-wrap items-center justify-center gap-2 sm:gap-4">
+        <span class="text-emerald-700 bg-emerald-50 px-3 py-1 rounded-lg border border-emerald-200"><span aria-hidden="true">₹ </span>மொத்த சொத்துக்கள் (Assets)</span>
+        <span class="text-gray-400 font-bold">−</span>
+        <span class="text-red-800 bg-red-50 px-3 py-1 rounded-lg border border-red-200"><span aria-hidden="true">📉 </span>மொத்த கடன்கள் (Liabilities)</span>
+        <span class="text-gray-400 font-bold">=</span>
+        <span class="text-sky-700 bg-sky-50 px-3 py-1 rounded-lg border border-sky-200"><span aria-hidden="true">⚖️ </span>நிகர மதிப்பு (Net Worth)</span>
+      </div>
+    </div>
+
+    <p class="text-sm text-gray-600 leading-relaxed">
+      பலர் தங்களின் மாத வருமானம் அல்லது வாங்கிய புதிய வாகனங்களை வைத்துத் தங்களின் பொருளாதார வளர்ச்சியை மதிப்பிடுகின்றனர். ஆனால், வருமானம் என்பது கைக்கு வரும் பணம் மட்டுமே; <strong>நிகர மதிப்பு (Net Worth)</strong> மட்டுமே நீங்கள் இதுவரை சேர்த்து வைத்த உண்மையான சொத்துப் பலத்தைக் காட்டும். கடன்கள் அனைத்தையும் ஒரே நாளில் அடைத்துவிட்டால் மீதம் உங்களிடம் எஞ்சுவதே உங்கள் நிகர மதிப்பு.
+    </p>
+  </section>
+
+  <!-- Spreadsheet Blueprint / Structure Breakdown -->
+  <section class="space-y-6" aria-labelledby="structureHeading">
+    <div>
+      <h2 id="structureHeading" class="text-xl font-bold text-gray-900"> கூகுள் ஷீட் வார்ப்புருவின் கட்டமைப்பு</h2>
+      <p class="text-xs sm:text-sm text-gray-500 mt-1">இந்த Google Sheet-ல் உள்ள சொத்துக்கள், கடன்கள் மற்றும் தானியங்கி பகுப்பாய்வுப் பிரிவுகள் கீழே விளக்கப்பட்டுள்ளன.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <!-- Column 1: Assets (பச்சை அட்டை) -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-emerald-200 space-y-4 flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-emerald-100">
+            <div class="flex items-center gap-2">
+              <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-extrabold text-base" aria-hidden="true">₹</span>
+              <h3 class="text-base font-bold text-emerald-900">1. சொத்துக்கள் (Assets)</h3>
+            </div>
+            <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">உங்களுக்குச் சொந்தமானவை</span>
+          </div>
+
+          <p class="text-xs text-gray-600">நீங்கள் முதலீடு செய்துள்ள மற்றும் எப்போது வேண்டுமானாலும் பணமாக மாற்றக்கூடிய அனைத்து உருப்படிகள்:</p>
+
+          <ul class="space-y-3 text-xs sm:text-sm text-gray-700">
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-600 font-bold">✓</span>
+              <div>
+                <strong>திரவச் சொத்துக்கள் (Liquid Cash & Deposits):</strong>
+                <p class="text-xs text-gray-500">வங்கி சேமிப்புக் கணக்கு இருப்பு, அவசரகால நிதி, நிலையான வைப்பு (FD), தொடர் வைப்பு (RD).</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-600 font-bold">✓</span>
+              <div>
+                <strong>சந்தை முதலீடுகள் (Market Investments):</strong>
+                <p class="text-xs text-gray-500">பங்குச்சந்தை பங்குகள் (Direct Stocks), மியூச்சுவல் ஃபண்டுகள் (Equity & Debt MF), ETF-கள்.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-600 font-bold">✓</span>
+              <div>
+                <strong>ஓய்வூதியச் சேமிப்பு (Retirement Funds):</strong>
+                <p class="text-xs text-gray-500">வருங்கால வைப்பு நிதி (EPF / VPF), பொது வருங்கால வைப்பு நிதி (PPF), தேசிய ஓய்வூதியத் திட்டம் (NPS).</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-600 font-bold">✓</span>
+              <div>
+                <strong>உலோகங்கள் (Precious Metals):</strong>
+                <p class="text-xs text-gray-500">தங்கப் பத்திரங்கள் (SGB), டிஜிட்டல் தங்கம், உடல் வடிவிலான தங்கம் மற்றும் வெள்ளி நாணயங்கள்/கட்டிகள்.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-600 font-bold">✓</span>
+              <div>
+                <strong>நிலையான சொத்துக்கள் (Real Estate / Fixed Assets):</strong>
+                <p class="text-xs text-gray-500">சொந்த வீடு, காலி மனை / நிலம், வாடகை வரும் வணிகக் கட்டடங்கள் (நியாயமான தற்போதைய சந்தை மதிப்பில்).</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-3 bg-emerald-50 rounded-xl text-xs text-emerald-900 border border-emerald-100 mt-4">
+          💡 <strong>முக்கியக் குறிப்பு:</strong> கார், பைக், ஸ்மார்ட்போன் போன்ற தேய்மானம் அடையும் உபயோகப் பொருட்களைச் சொத்தாகக் கூட்ட வேண்டாம்.
+        </div>
+      </div>
+
+      <!-- Column 2: Liabilities (சிகப்பு அட்டை) -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-red-200 space-y-4 flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-red-200">
+            <div class="flex items-center gap-2">
+              <span class="w-8 h-8 rounded-lg bg-red-50 text-red-800 flex items-center justify-center font-bold text-sm">📉</span>
+              <h3 class="text-base font-bold text-red-800">2. கடன்கள் (Liabilities)</h3>
+            </div>
+            <span class="text-xs font-semibold text-red-800 bg-red-50 px-2.5 py-1 rounded-full border border-red-200">நீங்கள் அடைக்க வேண்டியவை</span>
+          </div>
+
+          <p class="text-xs text-gray-600">நீங்கள் வங்கிகளுக்கோ அல்லது நபர்களுக்கோ திருப்பிச் செலுத்த வேண்டிய மொத்த அசல் நிலுவைகள்:</p>
+
+          <ul class="space-y-3 text-xs sm:text-sm text-gray-700">
+            <li class="flex items-start gap-2.5">
+              <span class="text-red-800 font-bold">✕</span>
+              <div>
+                <strong>வீட்டுக் கடன் (Home Loan):</strong>
+                <p class="text-xs text-gray-500">சொந்த வீடு அல்லது நிலத்திற்கான கடன் நிலுவையில் மீதமுள்ள அசல் தொகை (Principal Outstanding).</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-red-800 font-bold">✕</span>
+              <div>
+                <strong>வாகனக் கடன் (Vehicle Loan):</strong>
+                <p class="text-xs text-gray-500">கார், இருசக்கர வாகனம் வாங்க வாங்கிய கடனின் தற்போதைய நிலுவைத் தொகை.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-red-800 font-bold">✕</span>
+              <div>
+                <strong>தனிநபர் & கல்விக் கடன்கள் (Personal & Education Loans):</strong>
+                <p class="text-xs text-gray-500">வங்கிகள் அல்லது செயலிகளில் வாங்கிய தனிநபர் கடன்கள் மற்றும் உயர் படிப்புக் கடன்கள்.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-red-800 font-bold">✕</span>
+              <div>
+                <strong>கடன் அட்டை நிலுவைகள் (Credit Card Dues):</strong>
+                <p class="text-xs text-gray-500">அடைக்கப்படாமல் நிலுவையில் உள்ள கடன் அட்டை கட்டணங்கள் மற்றும் கார்டு EMI மாற்றங்கள்.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-red-800 font-bold">✕</span>
+              <div>
+                <strong>பிற கடன்கள் (Other Liabilities):</strong>
+                <p class="text-xs text-gray-500">நகைக் கடன், நண்பர்கள்/உறவினர்களிடம் பெற்ற கைமாத்துக் கடன்கள், தனிப்பட்ட பொறுப்புகள்.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-3 bg-red-50 rounded-xl text-xs text-red-800 border border-red-200 mt-4">
+          ⚠️ <strong>முக்கியக் குறிப்பு:</strong> கடன்களை உள்ளிடும்போது வட்டியைக் கூட்டாமல், வங்கியின் ஸ்டேட்மெண்ட்டில் உள்ள 'அசல் நிலுவையை' (Principal Balance) மட்டும் உள்ளிடவும்.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step by Step Guide: How to use the template -->
+  <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 space-y-6" aria-labelledby="stepsHeading">
+    <div>
+      <h2 id="stepsHeading" class="text-xl font-bold text-gray-900">Google Sheet-ஐ எவ்வாறு பயன்படுத்துவது? (படிநிலை வழிகாட்டி)</h2>
+      <p class="text-xs sm:text-sm text-gray-500 mt-1">நான்கு எளிய படிகளில் உங்கள் தனிப்பட்ட நிகர மதிப்பு கண்காணிப்பானை அமைத்துக்கொள்ளலாம்.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      
+      <!-- Step 1 -->
+      <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+        <div class="w-8 h-8 rounded-lg bg-sky-600 text-white flex items-center justify-center font-bold text-sm">
+          1
+        </div>
+        <h3 class="text-sm font-bold text-gray-900">நகலெடுக்கவும் (Make a Copy)</h3>
+        <p class="text-xs text-gray-600 leading-relaxed">
+          இந்தப் பக்கத்தில் உள்ள <strong>'Google Sheet-ல் நகலெடுக்கவும்'</strong> இணைப்பை அழுத்தவும். Google திரையில் "Make a copy" என்பதைக் கிளிக் செய்ததும் உங்கள் Google Drive-ல் பிரத்தியேக பிரதி சேமிக்கப்படும்.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+        <div class="w-8 h-8 rounded-lg bg-sky-600 text-white flex items-center justify-center font-bold text-sm">
+          2
+        </div>
+        <h3 class="text-sm font-bold text-gray-900">சொத்துக்களை உள்ளிடவும்</h3>
+        <p class="text-xs text-gray-600 leading-relaxed">
+          உங்கள் வங்கி செயலிகள், மியூச்சுவல் ஃபண்ட் முதலீட்டுத் தொகுப்பு (Groww / Zerodha / CAMS), EPF பாஸ்புக் ஆகியவற்றைப் பார்த்து சொத்துக்களின் தற்போதைய சந்தை மதிப்பை உள்ளிடவும்.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+        <div class="w-8 h-8 rounded-lg bg-sky-600 text-white flex items-center justify-center font-bold text-sm">
+          3
+        </div>
+        <h3 class="text-sm font-bold text-gray-900">கடன்களைப் பதிவு செய்யவும்</h3>
+        <p class="text-xs text-gray-600 leading-relaxed">
+          வீட்டுக் கடன், வாகனக் கடன், கிரெடிட் கார்டு ஸ்டேட்மெண்ட்களைப் பார்த்து நிலுவையிலுள்ள அசல் தொகையை நேர்மையாகப் பதிவு செய்யவும்.
+        </p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+        <div class="w-8 h-8 rounded-lg bg-sky-600 text-white flex items-center justify-center font-bold text-sm">
+          4
+        </div>
+        <h3 class="text-sm font-bold text-gray-900">காலாண்டுக்கு ஒருமுறை புதுப்பிக்கவும்</h3>
+        <p class="text-xs text-gray-600 leading-relaxed">
+          ஃபார்முலா தானாக உங்கள் நிகர மதிப்பைக் கணக்கிட்டு வரைபடங்களில் காட்டும். ஒவ்வொரு 3 அல்லது 6 மாதங்களுக்கு ஒருமுறை புதிய எண்களைப் புதுப்பித்து செல்வ வளர்ச்சியைக் கண்காணிக்கவும்.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Do's and Don'ts / Best Practices -->
+  <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 space-y-6" aria-labelledby="bestPracticesHeading">
+    <div>
+      <h2 id="bestPracticesHeading" class="text-xl font-bold text-gray-900">நிகர மதிப்பைக் கணக்கிடும்போது கவனிக்க வேண்டிய முக்கிய விதிகள்</h2>
+      <p class="text-xs sm:text-sm text-gray-500 mt-1">துல்லியமான மற்றும் யதார்த்தமான நிதிநிலையை அறிய இந்த வழிகாட்டுதல்களைப் பின்பற்றவும்.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <!-- Do's -->
+      <div class="p-5 rounded-xl bg-emerald-50 border border-emerald-200 space-y-3">
+        <h3 class="text-sm font-bold text-emerald-900 flex items-center gap-2">
+          <span class="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs">✓</span>
+          செய்ய வேண்டியவை (Do's)
+        </h3>
+        <ul class="space-y-2 text-xs sm:text-sm text-emerald-900">
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-700 font-bold">•</span>
+            <span><strong>அனைத்துக் கடன்களையும் நேர்மையாகப் பதிவு செய்யுங்கள்:</strong> நண்பர்களிடம் வாங்கிய சிறு கடன்கள் மற்றும் கார்டு நிலுவைகள் உட்பட அனைத்தையும் எழுதுங்கள்.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-700 font-bold">•</span>
+            <span><strong>நிலையான சொத்துக்களைக் கட்டுப்படுத்தப்பட்ட மதிப்பில் வையுங்கள்:</strong> வீட்டின் மதிப்பை மிகைப்படுத்தாமல், இன்று விற்க முயன்றால் உடனடியாகக் கிடைக்கக்கூடிய சந்தை மதிப்பை (Fair Market Value) மட்டும் குறிக்கவும்.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-700 font-bold">•</span>
+            <span><strong>தொடர்ச்சியான காலமுறைப் பதிவு:</strong> ஒவ்வொரு நிதி ஆண்டின் தொடக்கத்திலும் (ஏப்ரல் 1) மற்றும் காலாண்டுகளிலும் எண்களைப் புதுப்பிப்பது நிதி ஒழுக்கத்தை வளர்க்கும்.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Don'ts -->
+      <div class="p-5 rounded-xl bg-red-50 border border-red-200 space-y-3">
+        <h3 class="text-sm font-bold text-red-800 flex items-center gap-2">
+          <span class="w-5 h-5 rounded-full bg-red-800 text-white flex items-center justify-center text-xs">✕</span>
+          தவிர்க்க வேண்டியவை (Don'ts)
+        </h3>
+        <ul class="space-y-2 text-xs sm:text-sm text-red-800">
+          <li class="flex items-start gap-2">
+            <span class="text-red-800 font-bold">•</span>
+            <span><strong>தேய்மானப் பொருட்களைச் சொத்தாக எண்ணாதீர்கள்:</strong> நீங்கள் அன்றாடம் பயன்படுத்தும் கார், பைக், டிவி, மடிக்கணினி போன்றவை காலப்போக்கில் மதிப்பிழப்பவை; அவற்றை சொத்துப்பட்டியலில் சேர்க்கக் கூடாது.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-red-800 font-bold">•</span>
+            <span><strong>எதிர்மறை நிகர மதிப்பைக் கண்டு பயப்பட வேண்டாம்:</strong> தொழில் வாழ்க்கையின் தொடக்கத்திலோ அல்லது புதிதாக வீட்டுக் கடன் வாங்கியபோதோ நிகர மதிப்பு எதிர்மறையில் (Negative) இருப்பது இயல்பானது. காலப்போக்கில் கடன் குறையக் குறைய நிகர மதிப்பு உயரும்.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-red-800 font-bold">•</span>
+            <span><strong>எதிர்கால வருமானத்தைக் கூட்டாதீர்கள்:</strong> வரவிருக்கும் சம்பள உயர்வு, போனஸ் அல்லது இன்னும் வராத சொத்துக்களை நிகர மதிப்பில் சேர்க்கக் கூடாது.</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 space-y-6" aria-labelledby="faqHeading">
+    <div>
+      <h2 id="faqHeading" class="text-xl font-bold text-gray-900">அடிக்கடி கேட்கப்படும் கேள்விகள் (FAQ)</h2>
+      <p class="text-xs sm:text-sm text-gray-500 mt-1">நிகர மதிப்புக் கணக்கீடு மற்றும் Google Sheet பயன்பாடு குறித்த சந்தேகங்கள்.</p>
+    </div>
+
+    <div class="space-y-4">
+      <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
+        <h3 class="text-sm font-bold text-gray-900">1. இந்தக் கூகுள் ஷீட்டில் உள்ளீடு செய்யும் என் நிதி விவரங்கள் யாருக்கேனும் தெரியுமா?</h3>
+        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+          <strong>இல்லை, முற்றிலும் தெரியாது.</strong> நீங்கள் 'Make a Copy' இணைப்பை அழுத்தும்போது, அந்த ஃபைலின் ஒரு தனிப்பட்ட பிரதி நேரடியாக உங்கள் சொந்த Google Drive கணக்கில் மட்டுமே சேமிக்கப்படுகிறது. நிதிப்பேழை நிர்வாகிகளோ அல்லது வேறு எந்தப் பயனரோ உங்கள் எண்களைப் பார்க்க முடியாது.
+        </p>
+      </div>
+
+      <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
+        <h3 class="text-sm font-bold text-gray-900">2. எவ்வளவு காலத்திற்கு ஒருமுறை நிகர மதிப்பைப் புதுப்பிக்க வேண்டும்?</h3>
+        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+          ஒவ்வொரு நாளும் அல்லது வாரமும் பார்க்க வேண்டிய அவசியமில்லை. <strong>3 மாதங்களுக்கு ஒருமுறை (Quarterly) அல்லது 6 மாதங்களுக்கு ஒருமுறை</strong> புதுப்பிப்பதே சிறந்தது. பங்குச்சந்தை ஏற்ற இறக்கங்களால் தினசரி நிகர மதிப்பு மாறக்கூடும் என்பதால் நீண்டகாலப் போக்கைக் கவனிப்பதே நலம்.
+        </p>
+      </div>
+
+      <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
+        <h3 class="text-sm font-bold text-gray-900">3. எனது நிகர மதிப்பு எதிர்மறையாக (Negative Net Worth) இருந்தால் என்ன செய்வது?</h3>
+        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+          உங்கள் கடன்கள் சொத்துக்களை விட அதிகமாக இருந்தால் நிகர மதிப்பு நெகட்டிவாக இருக்கும். இதைக் கண்டு அச்சப்படத் தேவையில்லை. உங்கள் முதல் இலக்கு: கிரெடிட் கார்டு மற்றும் தனிநபர் கடன் போன்ற அதிக வட்டிக் கடன்களை விரைவாக அடைப்பதாகும். எங்கள் <a href="/calculators/credit-card-payoff-calculator.html" class="text-sky-700 underline font-semibold">கடன் அட்டை நிலுவை அடைப்புக் கணிப்பேடு</a> மூலம் திட்டமிடுங்கள்.
+        </p>
+      </div>
+
+      <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
+        <h3 class="text-sm font-bold text-gray-900">4. தங்கம் மற்றும் ரியல் எஸ்டேட் சொத்துக்களை எப்படி மதிப்பிடுவது?</h3>
+        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+          தங்க ஆபரணங்கள் எனில் செய்கூலி/சேதாரம் போக இன்றைய தங்க விலையின் அடிப்படையில் கணக்கிடுங்கள். வீடு/நிலத்திற்கு நீங்கள் வாங்கிய விலையை விட, இன்றைய அரசு வழிகாட்டி மதிப்பு (Guideline value) அல்லது தற்போதைய சந்தை மதிப்பில் 80-90% பாதுகாப்பான தொகையாகக் கொள்ளலாம்.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Tools on NidhiPezhai -->
+  <section class="space-y-4" aria-labelledby="relatedHeading">
+    <div class="flex items-center justify-between">
+      <h2 id="relatedHeading" class="text-lg font-bold text-gray-900">தொடர்புடைய பிற நிதிக் கருவிகள்</h2>
+      <a href="/calculators/index.html" class="text-xs font-semibold text-sky-700 hover:underline flex items-center gap-1">
+        அனைத்துக் கணிப்பேடுகளும் <span>→</span>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <a href="/calculators/emergency-fund-planner.html" class="p-4 rounded-xl bg-white border border-gray-200 hover:border-sky-500 hover:shadow-sm transition-all group block">
+        <span class="text-xs font-semibold text-sky-700 bg-sky-50 px-2 py-0.5 rounded">சேமிப்பு</span>
+        <h3 class="text-sm font-bold text-gray-900 mt-2 group-hover:text-sky-700">அவசரகால நிதித் திட்டமிடல் ↗</h3>
+        <p class="text-xs text-gray-500 mt-1">மாதச் செலவுகளுக்கு ஏற்ப திரவ அவசர நிதியைத் திட்டமிடுங்கள்.</p>
+      </a>
+
+      <a href="/calculators/credit-card-payoff-calculator.html" class="p-4 rounded-xl bg-white border border-gray-200 hover:border-sky-500 hover:shadow-sm transition-all group block">
+        <span class="text-xs font-semibold text-red-800 bg-red-50 px-2 py-0.5 rounded">கடன் மேலாண்மை</span>
+        <h3 class="text-sm font-bold text-gray-900 mt-2 group-hover:text-red-800">கடன் அட்டை நிலுவை அடைப்பு ↗</h3>
+        <p class="text-xs text-gray-500 mt-1">அதிக வட்டிக் கடன்களை விரைந்து முடிப்பதற்கான வழி.</p>
+      </a>
+
+      <a href="/calculators/retirement-calculator.html" class="p-4 rounded-xl bg-white border border-gray-200 hover:border-sky-500 hover:shadow-sm transition-all group block">
+        <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">முதலீடு</span>
+        <h3 class="text-sm font-bold text-gray-900 mt-2 group-hover:text-emerald-700">ஓய்வூதிய நிதித் திட்டமிடல் ↗</h3>
+        <p class="text-xs text-gray-500 mt-1">ஓய்வுக் காலத்திற்கான நிதி இலக்கையும் சேமிப்பையும் கணக்கிடுங்கள்.</p>
+      </a>
+
+      <a href="/checklists/personal-finance-fortification-checklist.html" class="p-4 rounded-xl bg-white border border-gray-200 hover:border-sky-500 hover:shadow-sm transition-all group block">
+        <span class="text-xs font-semibold text-teal-700 bg-teal-50 px-2 py-0.5 rounded">சரிபார்ப்புப் பட்டியல்</span>
+        <h3 class="text-sm font-bold text-gray-900 mt-2 group-hover:text-teal-700">நிதிநிலை வலுவூட்டல் ↗</h3>
+        <p class="text-xs text-gray-500 mt-1">உங்கள் காப்பீடு, சேமிப்பு, கடன்களை 100% பாதுகாக்கும் பட்டியல்.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Bottom CTA Banner -->
+  <section class="bg-gradient-to-br from-sky-600 to-indigo-700 rounded-2xl p-6 sm:p-10 text-white text-center space-y-4 shadow-md relative overflow-hidden">
+    <div class="absolute -right-8 -bottom-8 w-36 h-36 bg-white/10 rounded-full blur-sm pointer-events-none"></div>
+    <div class="relative max-w-3xl mx-auto space-y-3">
+      <h2 class="text-xl sm:text-2xl font-bold text-white">இன்றே உங்கள் செல்வ வளர்ச்சியைக் கண்காணிக்கத் தொடங்குங்கள்</h2>
+      <p class="text-xs sm:text-sm text-sky-100 leading-relaxed">
+        இலவச Google Sheet டெம்ப்ளேட்டை நகலெடுத்து, உங்கள் சொத்து மற்றும் கடன்களைப் பதிவு செய்து உண்மையான நிதிச் சுதந்திரத்தை நோக்கிப் பயணியுங்கள்.
+      </p>
+      <div class="pt-2">
+        <a href="https://docs.google.com/spreadsheets/d/1q0xgoVvBrxDZrvQYwy4OOLkkhtJ65-DJYn9z7hBUDbc/copy" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white hover:bg-slate-50 text-gray-900 font-bold rounded-xl shadow-md transition-all text-sm">
+          <svg class="w-4 h-4 text-sky-700" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+          </svg>
+          <span>Google Sheet-ல் நகலெடுக்கவும் (Make a Copy)</span>
+          <svg class="w-4 h-4 text-sky-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const printBtn = document.getElementById('btnPrint');
+    if (printBtn) {
+      printBtn.addEventListener('click', () => window.print());
+    }
+  });
+</script>
