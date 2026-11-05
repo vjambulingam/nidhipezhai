@@ -145,7 +145,6 @@ module.exports = function (eleventyConfig) {
     return Math.max(1, Math.ceil(wordCount / 200));
   });
 
-  eleventyConfig.addFilter("normalizeList", normalizeList);
 
   eleventyConfig.addFilter("articleDataTopics", (article) => {
     const topics = normalizeList(article?.data?.topics);

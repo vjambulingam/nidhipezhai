@@ -77,15 +77,11 @@ input[type="range"]::-moz-range-thumb {
   box-shadow: 0 2px 6px rgb(13 115 119 / 35%) !important;
 }
 
-.bg-sky-50, .bg-indigo-50, .bg-sky-50\/70, .bg-emerald-50 { background-color: var(--calc-brand-pale) !important; }
+.bg-sky-50, .bg-sky-50\/70, .bg-emerald-50 { background-color: var(--calc-brand-pale) !important; }
 .bg-sky-100, .bg-indigo-100, .bg-emerald-100 { background-color: #dceee9 !important; }
 .bg-sky-500 { background-color: #16898a !important; }
 .bg-sky-600, .bg-emerald-600 { background-color: var(--calc-brand) !important; }
 .bg-sky-700 { background-color: var(--calc-brand-dark) !important; }
-.bg-indigo-500 { background-color: #23816f !important; }
-.bg-indigo-600 { background-color: var(--calc-green) !important; }
-.bg-gradient-to-tr.from-sky-600.to-indigo-600,
-.bg-gradient-to-tr.from-emerald-600.to-teal-700 { background-image: linear-gradient(to top right, #0D7377, #176b58) !important; }
 .bg-gradient-to-br.from-sky-600.to-indigo-700 { background-image: linear-gradient(to bottom right, #0D7377, #135b55) !important; }
 .bg-gradient-to-br.from-sky-600.via-sky-700.to-indigo-800 { background-image: linear-gradient(to bottom right, #0D7377, #0b6665, #104d49) !important; }
 .bg-gradient-to-br[class*="from-indigo-50/70"][class*="to-sky-50/70"] { background-image: linear-gradient(to bottom right, #f0f7f4, #e3f1ed) !important; }
@@ -181,7 +177,7 @@ input[type="range"]::-moz-range-thumb {
 @media print {
   .no-print { display: none !important; }
   body { background-color: #fff !important; }
-  .shadow-xs, .shadow-sm, .shadow-md, .shadow-lg, .shadow-xl { box-shadow: none !important; }
+  .shadow-xs, .shadow-sm, .shadow-md, .shadow-lg { box-shadow: none !important; }
   .print-border { border: 1px solid #e5e7eb !important; }
 }
 
@@ -390,7 +386,6 @@ input[type="range"]::-moz-range-thumb {
 }
 
 [data-theme="dark"] .bg-sky-50,
-[data-theme="dark"] .bg-indigo-50,
 [data-theme="dark"] .bg-emerald-50 {
   background-color: #132a27 !important;
 }

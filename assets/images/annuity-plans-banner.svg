@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="banner-title banner-desc">
+  <title id="banner-title">ஆனுவிட்டி (Annuity) ஓய்வூதியத் திட்டங்கள் - முழுமையான வழிகாட்டி</title>
+  <desc id="banner-desc">ஆனுவிட்டி வகைகள், NPS கட்டாய விதிகள், முன்னணி நிறுவனங்கள் மற்றும் சிறந்த மாற்றுத் திட்டங்கள் பற்றிய விரிவான வழிகாட்டி.</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700;800&amp;display=swap');
+      .font-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+    </style>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0D7377"/>
+      <stop offset="60%" stop-color="#0a4649"/>
+      <stop offset="100%" stop-color="#082224"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Decorative Geometry -->
+  <circle cx="1120" cy="90" r="260" fill="#ffffff" opacity="0.03"/>
+  <circle cx="980" cy="540" r="320" fill="#ffffff" opacity="0.02"/>
+  <circle cx="150" cy="580" r="180" fill="#ffffff" opacity="0.02"/>
+  <path d="M -50 200 Q 300 120 600 320 T 1250 280" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.05"/>
+  <path d="M -50 240 Q 300 160 600 360 T 1250 320" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.03"/>
+
+  <!-- LEFT CONTENT -->
+  <g class="font-tamil" transform="translate(60, 65)">
+    <!-- Eyebrow Pill -->
+    <g transform="translate(0, 0)">
+      <rect width="420" height="36" rx="18" fill="#ffffff" opacity="0.12"/>
+      <circle cx="20" cy="18" r="6" fill="#34d399"/>
+      <text x="38" y="23" fill="#e6f5f3" font-size="13" font-weight="700">ஓய்வூதிய நிதி வழிகாட்டி · RETIREMENT GUIDE</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="95" fill="#ffffff" font-size="42" font-weight="800">ஆனுவிட்டி (Annuity)</text>
+    <text x="0" y="150" fill="#fbbf24" font-size="38" font-weight="800">ஓய்வூதியத் திட்டங்கள்</text>
+
+    <!-- Description -->
+    <text x="0" y="205" fill="#d1e5e0" font-size="18" font-weight="400">வாழ்நாள் முழுவதும் உத்தரவாத மாதாந்திர வருமானம்,</text>
+    <text x="0" y="235" fill="#d1e5e0" font-size="18" font-weight="400">NPS கட்டாய விதிகள் மற்றும் சிறந்த முதலீட்டு மாற்றுகள்.</text>
+
+    <!-- 4 Feature Pills in 2x2 Grid -->
+    <g transform="translate(0, 275)">
+      <!-- Pill 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="275" height="44" rx="10" fill="#ffffff" opacity="0.1"/>
+        <text x="16" y="28" fill="#ffffff" font-size="12.5" font-weight="600">🛡️ வாழ்நாள் உத்தரவாத ஓய்வூதியம்</text>
+      </g>
+      <!-- Pill 2 -->
+      <g transform="translate(290, 0)">
+        <rect width="275" height="44" rx="10" fill="#ffffff" opacity="0.1"/>
+        <text x="16" y="28" fill="#ffffff" font-size="12.5" font-weight="600">📜 100% அசல் திரும்பப் பெறல்</text>
+      </g>
+      <!-- Pill 3 -->
+      <g transform="translate(0, 56)">
+        <rect width="275" height="44" rx="10" fill="#ffffff" opacity="0.1"/>
+        <text x="16" y="28" fill="#ffffff" font-size="12.5" font-weight="600">🏛️ NPS 40% கட்டாய ஆனுவிட்டி</text>
+      </g>
+      <!-- Pill 4 -->
+      <g transform="translate(290, 56)">
+        <rect width="275" height="44" rx="10" fill="#ffffff" opacity="0.1"/>
+        <text x="16" y="28" fill="#ffffff" font-size="12.5" font-weight="600">📊 SCSS &amp; SWP மாற்றுகள்</text>
+      </g>
+    </g>
+
+    <!-- Branding Footer -->
+    <g transform="translate(0, 430)">
+      <circle cx="16" cy="16" r="16" fill="#14b8a6"/>
+      <path d="M 11 16 L 15 20 L 22 12" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <text x="42" y="22" fill="#a7cfc6" font-size="15" font-weight="600">நிதிப்பேழை · www.nidhipezhai.com</text>
+    </g>
+  </g>
+
+  <!-- RIGHT CARD -->
+  <g class="font-tamil" transform="translate(660, 55)" filter="url(#cardShadow)">
+    <rect width="470" height="520" rx="22" fill="#ffffff"/>
+    
+    <!-- Card Header -->
+    <rect width="470" height="74" rx="22" fill="#f0fdfa"/>
+    <rect x="0" y="52" width="470" height="22" fill="#f0fdfa"/>
+    <line x1="0" y1="74" x2="470" y2="74" stroke="#ccfbf1" stroke-width="1.5"/>
+
+    <circle cx="45" cy="37" r="18" fill="#0D7377"/>
+    <text x="45" y="43" fill="#ffffff" font-size="15" font-weight="700" text-anchor="middle">₹</text>
+    <text x="75" y="36" fill="#0f766e" font-size="16.5" font-weight="700">ஓய்வூதிய வருமான ஓட்டம்</text>
+    <text x="75" y="55" fill="#64748b" font-size="12" font-weight="600">Guaranteed Lifelong Cash Flow</text>
+
+    <!-- Step 1: Purchase Price -->
+    <g transform="translate(25, 95)">
+      <rect width="420" height="68" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2"/>
+      <circle cx="34" cy="34" r="18" fill="#e0f2fe"/>
+      <!-- Money Bag with INR Symbol -->
+      <g id="money-bag-inr">
+        <!-- Main Pouch -->
+        <path d="M 31 23 C 25 24, 21 28.5, 21 34.5 C 21 41, 25.5 45, 34 45 C 42.5 45, 47 41, 47 34.5 C 47 28.5, 43 24, 37 23 Z" fill="#f59e0b" stroke="#d97706" stroke-width="1.2"/>
+        <!-- Ruffled Top Opening -->
+        <path d="M 28 19 C 30 17.5, 32 20, 34 19.5 C 36 20, 38 17.5, 40 19 C 39.5 21.5, 38 23, 36.5 23 L 31.5 23 C 30 23, 28.5 21.5, 28 19 Z" fill="#fbbf24" stroke="#d97706" stroke-width="1.2"/>
+        <!-- Tied String / Knot -->
+        <ellipse cx="34" cy="23.5" rx="4.5" ry="1.8" fill="#b45309"/>
+        <path d="M 35 24.5 Q 37 26 38 28 M 33 24.5 Q 32 26 31 27.5" stroke="#b45309" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+        <!-- INR (₹) Currency Symbol -->
+        <text x="34" y="36.5" fill="#78350f" font-size="11.5" font-weight="900" font-family="'Noto Sans Tamil', 'DM Sans', -apple-system, sans-serif" text-anchor="middle" dominant-baseline="central">₹</text>
+      </g>
+      <text x="65" y="29" fill="#1e293b" font-size="14.5" font-weight="700">அசல் தொகை (Purchase Price)</text>
+      <text x="65" y="49" fill="#64748b" font-size="12">ஓய்வுக்காலக் கார்பஸ் (எ.கா: ₹50 லட்சம்)</text>
+    </g>
+
+    <!-- Downward Arrow 1 -->
+    <path d="M 235 167 L 235 187" stroke="#0D7377" stroke-width="2.5" stroke-dasharray="4 3"/>
+    <polygon points="230,185 235,193 240,185" fill="#0D7377"/>
+
+    <!-- Step 2: Annuity Service Provider -->
+    <g transform="translate(25, 195)">
+      <rect width="420" height="68" rx="10" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1.2"/>
+      <circle cx="34" cy="34" r="18" fill="#10b981"/>
+      <text x="34" y="40" fill="#ffffff" font-size="15" text-anchor="middle">🏛️</text>
+      <text x="65" y="29" fill="#065f46" font-size="14.5" font-weight="700">காப்பீட்டு நிறுவனம் (ASP)</text>
+      <text x="65" y="49" fill="#047857" font-size="12">LIC · SBI Life · HDFC Life · ICICI Pru</text>
+    </g>
+
+    <!-- Downward Arrow 2 -->
+    <path d="M 235 267 L 235 287" stroke="#0D7377" stroke-width="2.5" stroke-dasharray="4 3"/>
+    <polygon points="230,285 235,293 240,285" fill="#0D7377"/>
+
+    <!-- Step 3: Monthly Guaranteed Pension -->
+    <g transform="translate(25, 295)">
+      <rect width="420" height="72" rx="10" fill="#fffbeb" stroke="#fde68a" stroke-width="1.2"/>
+      <circle cx="34" cy="36" r="18" fill="#f59e0b"/>
+      <text x="34" y="42" fill="#ffffff" font-size="15" text-anchor="middle">📅</text>
+      <text x="65" y="30" fill="#92400e" font-size="14.5" font-weight="700">மாதாந்திர உத்தரவாத ஓய்வூதியம்</text>
+      <text x="65" y="51" fill="#b45309" font-size="12" font-weight="600">வாழ்நாள் இறுதி வரை மாறாத வருமானம்</text>
+    </g>
+
+    <!-- Bottom Feature Box -->
+    <g transform="translate(25, 395)">
+      <rect width="420" height="98" rx="10" fill="#f1f5f9"/>
+      <text x="18" y="27" fill="#334155" font-size="13" font-weight="700">📌 முக்கிய பாதுகாப்பு நன்மைகள்:</text>
+      <text x="18" y="51" fill="#475569" font-size="12">✓ வாழ்நாள் முழுவதும் வட்டி விகிதம் மாறாது</text>
+      <text x="18" y="72" fill="#475569" font-size="12">✓ மறைவுக்குப் பின் 100% அசல் நாமினிக்குத் திரும்பும்</text>
+    </g>
+  </g>
+</svg>
