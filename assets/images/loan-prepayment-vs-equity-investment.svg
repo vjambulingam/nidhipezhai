@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="665" viewBox="0 0 1200 665" role="img" aria-labelledby="hl-mf-title hl-mf-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="705" viewBox="0 0 1200 705" role="img" aria-labelledby="hl-mf-title hl-mf-desc">
   <title id="hl-mf-title">வீட்டுக் கடன் முன்கூட்டியே அடைப்பு vs பங்குச் சந்தையில் முதலீடு: ஒப்பீட்டு வழிகாட்டி</title>
   <desc id="hl-mf-desc">Home Loan Prepayment vs. Mutual Fund Investment Comparison: Returns, Liquidity, Tax Impact, Behavioral Psychology, Suitability, and Alpha Definition.</desc>
 
@@ -310,4 +310,5 @@
     <text x="64" y="46" class="alpha-desc-tamil"><tspan font-weight="700" fill="#1e40af">ஆல்ஃபா (Alpha):</tspan> வீட்டுக் கடன் வட்டி (8.5%) போன்ற அடிப்படைச் செலவு / அளவுகோலைவிட முதலீட்டில் கூடுதலாக ஈட்டப்படும் நிகர உபரி லாபமாகும் (Excess Return).</text>
     <text x="64" y="60" class="alpha-desc-tamil">எ.கா: கடன் வட்டி 8.5% ஆக உள்ளபோது, மியூச்சுவல் ஃபண்ட் 12% தந்தால், இடையில் கிடைக்கும் கூடுதல் <tspan font-weight="700" fill="#15803d">+3.5% உபரி லாபமே பாசிட்டிவ் ஆல்ஃபா (Positive Alpha)!</tspan></text>
   </g>
+  <text id="brand-watermark" x="600" y="692" text-anchor="middle" font-family="'Noto Sans Tamil', 'Tamil Sangam MN', 'Latha', sans-serif" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">நிதிப்பேழை</text>
 </svg>

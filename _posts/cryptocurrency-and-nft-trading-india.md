@@ -3,6 +3,7 @@ title: கிரிப்டோகரன்சி மற்றும் NFT வ�
 description: கிரிப்டோ சொத்துகள், NFT-கள், பரிமாற்றத் தளங்கள், FIU-IND பதிவு, வரி மற்றும் பாதுகாப்பு ஆபத்துகளைப் புரிந்துகொள்வோம்.
 date: 2026-09-26
 lastModified: 2026-10-12
+ogImage: "/assets/images/investing-in-us-stocks-from-india-banner.jpg"
 topics:
   - கிரிப்டோகரன்சி
   - NFT

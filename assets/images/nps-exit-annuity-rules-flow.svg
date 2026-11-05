@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840" role="img" aria-labelledby="nps-title nps-desc">
+  <title id="nps-title">NPS ஓய்வுக்கால விதிமுறைகள் (NPS Exit &amp; Annuity Rules Flowchart)</title>
+  <desc id="nps-desc">60 வயதில் வழக்கமான ஓய்வு மற்றும் 60 வயதுக்கு முன் முன்கூட்டியே வெளியேறுதல் ஆகியவற்றிற்கான PFRDA ஆனுவிட்டி விதிமுறைகள் வரைபடம்.</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700;800&amp;display=swap');
+      .font-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+    </style>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="800" rx="16" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Top Title Node (Centered, Width 840) -->
+  <g class="font-tamil" transform="translate(180, 20)" filter="url(#cardShadow)">
+    <rect width="840" height="66" rx="14" fill="#0D7377"/>
+    <text x="420" y="32" fill="#ffffff" font-size="18.5" font-weight="800" text-anchor="middle">🏛️ தேசிய ஓய்வூதியத் திட்டம் (NPS) - வெளியேறும் விதிமுறைகள்</text>
+    <text x="420" y="53" fill="#a7f3d0" font-size="12.5" font-weight="600" text-anchor="middle">PFRDA சட்டப்பூர்வ ஆனுவிட்டி மற்றும் ஒட்டுமொத்தத் தொகை (Lump sum) வழிகாட்டுதல்கள்</text>
+  </g>
+
+  <!-- ================= SECTION 1: 60 வயதில் வழக்கமான ஓய்வு (SUPERANNUATION) ================= -->
+  <g class="font-tamil">
+    <!-- Section 1 Header Banner (Width 1120) -->
+    <g transform="translate(40, 102)" filter="url(#cardShadow)">
+      <rect width="1120" height="44" rx="10" fill="#047857"/>
+      <text x="24" y="27" fill="#ffffff" font-size="15" font-weight="700">விருப்பம் 1: 60 வயதில் வழக்கமான பணி ஓய்வு (Superannuation / Regular Exit at 60+)</text>
+      <text x="1096" y="27" fill="#a7f3d0" font-size="12" font-weight="600" text-anchor="end">60 வயதை எட்டும்போது கிடைக்கும் சலுகைகள்</text>
+    </g>
+
+    <!-- Subcard 1A: Corpus > 5 Lakhs (Width 545) -->
+    <g transform="translate(40, 156)" filter="url(#cardShadow)">
+      <rect width="545" height="268" rx="12" fill="#ffffff" stroke="#10b981" stroke-width="1.8"/>
+      <rect width="545" height="34" rx="12" fill="#ecfdf5"/>
+      <rect x="0" y="22" width="545" height="12" fill="#ecfdf5"/>
+      <text x="272" y="23" fill="#065f46" font-size="13" font-weight="700" text-anchor="middle">மொத்த மூலதனம் &gt; ₹5,00,000 (Corpus above ₹5 Lakhs)</text>
+
+      <!-- 40% Annuity -->
+      <g transform="translate(20, 44)">
+        <rect width="505" height="64" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+        <text x="16" y="22" fill="#15803d" font-size="12.5" font-weight="700">குறைந்தபட்சம் 40% ஆனுவிட்டி (Mandatory Annuity)</text>
+        <text x="16" y="42" fill="#166534" font-size="11">
+          <tspan x="16" dy="0">PFRDA அங்கீகரித்த காப்பீட்டு நிறுவனம் (ASP) மூலம்</tspan>
+          <tspan x="16" dy="16">வாழ்நாள் உத்தரவாத ஓய்வூதியம் வாங்குவது கட்டாயம்.</tspan>
+        </text>
+      </g>
+
+      <!-- 60% Lumpsum -->
+      <g transform="translate(20, 116)">
+        <rect width="505" height="64" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1"/>
+        <text x="16" y="22" fill="#1d4ed8" font-size="12.5" font-weight="700">அதிகபட்சம் 60% ஒட்டுமொத்தத் தொகை (Tax-free Lump sum)</text>
+        <text x="16" y="42" fill="#1e40af" font-size="11">
+          <tspan x="16" dy="0">முழு 60% தொகையையும் மொத்தமாகத் திரும்பப் பெறலாம்;</tspan>
+          <tspan x="16" dy="16">பிரிவு 10(12A)-ன் கீழ் 100% முழு வரிவிலக்கு உண்டு.</tspan>
+        </text>
+      </g>
+
+      <!-- SLW Option -->
+      <g transform="translate(20, 188)">
+        <rect width="505" height="62" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+        <text x="14" y="20" fill="#334155" font-size="12" font-weight="700">💡 புதிய SLW வசதி (Systematic Lumpsum Withdrawal):</text>
+        <text x="14" y="38" fill="#64748b" font-size="11">
+          <tspan x="14" dy="0">60% நிதியை 75 வயது வரை மாதாந்திரத் தவணையாகப்</tspan>
+          <tspan x="14" dy="16">பெறும் புதிய Systematic Lumpsum வசதி.</tspan>
+        </text>
+      </g>
+    </g>
+
+    <!-- Subcard 1B: Corpus <= 5 Lakhs (Width 545) -->
+    <g transform="translate(615, 156)" filter="url(#cardShadow)">
+      <rect width="545" height="268" rx="12" fill="#ffffff" stroke="#0284c7" stroke-width="1.8"/>
+      <rect width="545" height="34" rx="12" fill="#f0f9ff"/>
+      <rect x="0" y="22" width="545" height="12" fill="#f0f9ff"/>
+      <text x="272" y="23" fill="#0369a1" font-size="13" font-weight="700" text-anchor="middle">மொத்த மூலதனம் ≤ ₹5,00,000 (Corpus ₹5 Lakhs or less)</text>
+
+      <!-- 100% Lumpsum Allowed -->
+      <g transform="translate(20, 44)">
+        <rect width="505" height="74" rx="8" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1"/>
+        <text x="16" y="24" fill="#0369a1" font-size="13" font-weight="700">🎉 100% ஒட்டுமொத்தத் தொகை திரும்பப் பெற முழு அனுமதி!</text>
+        <text x="16" y="46" fill="#0284c7" font-size="11">
+          <tspan x="16" dy="0">மொத்தக் கார்பஸ் ₹5 லட்சத்திற்குள் இருந்தால்,</tspan>
+          <tspan x="16" dy="16">முழுத் தொகையையும் வரியின்றி ஒரே தவணையில் எடுக்கலாம்.</tspan>
+        </text>
+      </g>
+
+      <!-- Exemption & Investment -->
+      <g transform="translate(20, 126)">
+        <rect width="505" height="124" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+        <text x="16" y="22" fill="#1e293b" font-size="12.5" font-weight="700">📌 சிறப்பு விதிவிலக்கு (Small Corpus Exemption):</text>
+        <text x="16" y="44" fill="#475569" font-size="11.5">ஆனுவிட்டி பாலிசி வாங்க வேண்டிய கட்டாயம் ஏதுமில்லை.</text>
+        <line x1="16" y1="60" x2="489" y2="60" stroke="#e2e8f0" stroke-width="1"/>
+        <text x="16" y="80" fill="#059669" font-size="11">
+          <tspan x="16" dy="0">முழுப் பணத்தையும் SCSS போன்ற அதிக வட்டித் திட்டங்களில்</tspan>
+          <tspan x="16" dy="17">சுயமாக முதலீடு செய்து கூடுதல் வருமானம் பெறலாம்.</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= SECTION 2: 60 வயதுக்கு முன் வெளியேறுதல் (PREMATURE EXIT) ================= -->
+  <g class="font-tamil">
+    <!-- Section 2 Header Banner (Width 1120) -->
+    <g transform="translate(40, 438)" filter="url(#cardShadow)">
+      <rect width="1120" height="58" rx="10" fill="#b45309"/>
+      <text x="24" y="25" fill="#ffffff" font-size="15" font-weight="700">விருப்பம் 2: 60 வயதுக்கு முன் முன்கூட்டியே வெளியேறுதல் (Premature Exit before 60)</text>
+      <text x="24" y="46" fill="#fef3c7" font-size="12" font-weight="600">குறைந்தபட்சம் 5 ஆண்டுகள் சந்தாதாரராக இருந்து விலகுதல்</text>
+    </g>
+
+    <!-- Subcard 2A: Corpus > 2.5 Lakhs (Width 545) -->
+    <g transform="translate(40, 508)" filter="url(#cardShadow)">
+      <rect width="545" height="206" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="1.8"/>
+      <rect width="545" height="34" rx="12" fill="#fffbeb"/>
+      <rect x="0" y="22" width="545" height="12" fill="#fffbeb"/>
+      <text x="272" y="23" fill="#92400e" font-size="13" font-weight="700" text-anchor="middle">மொத்த மூலதனம் &gt; ₹2,50,000 (Corpus above ₹2.5 Lakhs)</text>
+
+      <!-- 80% Annuity -->
+      <g transform="translate(20, 44)">
+        <rect width="505" height="66" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
+        <text x="16" y="22" fill="#dc2626" font-size="12.5" font-weight="700">குறைந்தபட்சம் 80% ஆனுவிட்டி (80% Mandatory Annuity)</text>
+        <text x="16" y="42" fill="#b91c1c" font-size="11">
+          <tspan x="16" dy="0">மொத்தக் கார்பஸில் குறைந்தபட்சம் 80% தொகையைக் கொண்டு</tspan>
+          <tspan x="16" dy="16">ஆனுவிட்டி பாலிசி வாங்குவது சட்டப்படியாகக் கட்டாயம்.</tspan>
+        </text>
+      </g>
+
+      <!-- 20% Lumpsum -->
+      <g transform="translate(20, 118)">
+        <rect width="505" height="66" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+        <text x="16" y="22" fill="#334155" font-size="12.5" font-weight="700">வெறும் 20% ஒட்டுமொத்தத் தொகை (20% Lump sum)</text>
+        <text x="16" y="42" fill="#64748b" font-size="11">
+          <tspan x="16" dy="0">வெறும் 20% தொகை மட்டுமே கையில் ரொக்கமாகக் கிடைக்கும்</tspan>
+          <tspan x="16" dy="16">(விதிகளுக்கு உட்பட்டு வரிவிலக்கு பொருந்தும்).</tspan>
+        </text>
+      </g>
+    </g>
+
+    <!-- Subcard 2B: Corpus <= 2.5 Lakhs (Width 545) -->
+    <g transform="translate(615, 508)" filter="url(#cardShadow)">
+      <rect width="545" height="206" rx="12" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+      <rect width="545" height="34" rx="12" fill="#f1f5f9"/>
+      <rect x="0" y="22" width="545" height="12" fill="#f1f5f9"/>
+      <text x="272" y="23" fill="#334155" font-size="13" font-weight="700" text-anchor="middle">மொத்த மூலதனம் ≤ ₹2,50,000 (Corpus ₹2.5 Lakhs or less)</text>
+
+      <!-- 100% Lumpsum -->
+      <g transform="translate(20, 44)">
+        <rect width="505" height="66" rx="8" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+        <text x="16" y="22" fill="#047857" font-size="12.5" font-weight="700">🎉 100% ஒட்டுமொத்தத் தொகை அனுமதி (முழு விலக்கு)</text>
+        <text x="16" y="42" fill="#065f46" font-size="11">
+          <tspan x="16" dy="0">தொகை சிறியதாக (≤ ₹2.5 லட்சம்) இருப்பதால்,</tspan>
+          <tspan x="16" dy="16">முழு 100% தொகையையும் ஒரே தவணையில் மொத்தமாகப் பெறலாம்.</tspan>
+        </text>
+      </g>
+
+      <!-- Warning Note -->
+      <g transform="translate(20, 118)">
+        <rect width="505" height="66" rx="8" fill="#fffbeb" stroke="#fde68a" stroke-width="1"/>
+        <text x="16" y="20" fill="#92400e" font-size="12" font-weight="700">⚠️ முக்கிய எச்சரிக்கை (Premature Exit Impact):</text>
+        <text x="16" y="38" fill="#78350f" font-size="11">
+          <tspan x="16" dy="0">60 வயதுக்கு முன் விலகுவது ஓய்வூதிய நிதியைப் பாதிக்கும்;</tspan>
+          <tspan x="16" dy="16">அவசரத் தேவை இல்லையெனில் 60 வயது வரை தொடர்வதே சிறந்தது.</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= BOTTOM GLOBAL FOOTER BAR ================= -->
+  <g class="font-tamil" transform="translate(40, 728)">
+    <rect width="1120" height="52" rx="10" fill="#f0fdfa" stroke="#ccfbf1" stroke-width="1.2"/>
+    <text x="560" y="22" fill="#0f766e" font-size="11.5" font-weight="700" text-anchor="middle">📌 முக்கிய வரி விதி: NPS-ல் திரும்பப் பெறப்படும் 60% லம்ப்சம் தொகைக்கு 100% முழு வரிவிலக்கு உண்டு;</text>
+    <text x="560" y="40" fill="#134e4a" font-size="11" text-anchor="middle">ஆனுவிட்டி மூலம் பெறப்படும் மாதாந்திர ஓய்வூதியம் வழக்கமான வருமான வரி வரம்பிற்கு உட்பட்டது.</text>
+  </g>
+  <text id="brand-watermark" x="600" y="827" text-anchor="middle" font-family="'Noto Sans Tamil', 'Tamil Sangam MN', 'Latha', sans-serif" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">நிதிப்பேழை</text>
+</svg>

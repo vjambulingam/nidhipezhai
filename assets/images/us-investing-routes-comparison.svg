@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="us-inv-title us-inv-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img" aria-labelledby="us-inv-title us-inv-desc">
   <title id="us-inv-title">இந்தியாவிலிருந்து அமெரிக்கப் பங்குச்சந்தையில் முதலீடு செய்யும் 3 வழிகள்: ஒப்பீடு</title>
   <desc id="us-inv-desc">Comparison of 3 routes to invest in US stocks from India: Indian Feeder Funds, Direct LRS Brokers, and GIFT City IFSC NSE IX.</desc>
 
@@ -225,4 +225,5 @@
     <text x="56" y="65" class="footer-desc-tamil">• நேரடி US பங்குகள் / ETFs முதலீட்டாளர்கள் ஆண்டிற்கு ₹7 லட்சத்திற்குள் அனுப்புவதன் மூலம் 20% TCS பண முடக்கத்தைத் தவிர்க்கலாம்.</text>
     <text x="56" y="83" class="footer-desc-tamil">• $60,000-க்கு மேல் அமெரிக்க 40% எஸ்டேட் வரியைத் தவிர்க்க அயர்லாந்தில் பதிவு செய்யப்பட்ட (Irish-Domiciled) Irish UCITS ETFs-ஐத் தேர்ந்தெடுக்கவும்.</text>
   </g>
+  <text id="brand-watermark" x="600" y="647" text-anchor="middle" font-family="'Noto Sans Tamil', 'Tamil Sangam MN', 'Latha', sans-serif" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">நிதிப்பேழை</text>
 </svg>

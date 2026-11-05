@@ -45,7 +45,7 @@ keywords:
 
 <img src="/assets/images/in-case-of-emergency-kit-banner.jpg" alt="குடும்ப அவசரகால நிதி ஆவணக் கோப்பு (ICE Kit / Financial Dossier) - அவசர காலக் கையேடு மற்றும் குடும்ப நிதிப் பாதுகாப்பு பெட்டகம்" width="1376" height="768" style="display:block;max-width:100%;height:auto;border-radius:12px">
 
-<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 20px; margin: 24px 0;">
+<div id="quick-jump" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 20px; margin: 24px 0;">
   <div style="font-weight: 700; color: #0D7377; font-size: 15px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
     <span>⚡ விரைவு வழிசெலுத்தல் (Quick Jump):</span>
   </div>
@@ -72,6 +72,12 @@ keywords:
 * **ஒற்றை வருமானம் ஈட்டுபவர்கள் (Sole Breadwinners):** குடும்பம் நிதி முடக்கத்தில் சிக்காமல் இருக்க.
 * **முதலீட்டாளர்கள்:** பங்குச்சந்தை, மியூச்சுவல் ஃபண்ட், பி.எஃப் மற்றும் கிரிப்டோ போன்ற பரவலாக்கப்பட்ட சொத்துகள் உள்ளவர்கள்.
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="two-tier-approach">2. ICE Kit தொகுப்பின் இரு அடுக்கு அணுகுமுறை (Physical & Digital)</h2>
@@ -91,13 +97,19 @@ keywords:
 > **முக்கியப் பாதுகாப்புக் குறிப்பு:**  
 > நெட் பேங்கிங் பாஸ்வேர்டுகள், ஏடிஎம் பின் (ATM PIN) எண்கள் மற்றும் கிரெடிட் கார்டு CVV எண்களை ஒருபோதும் வெற்றுத் தாளில் எழுதி வைக்கக் கூடாது. அவற்றை நவீனக் கடவுச்சொல் மேலாளர் (Bitwarden, 1Password போன்றவை) மூலமாக மட்டுமே நிர்வகிக்க வேண்டும்.
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="ice-kit-sections">3. அவசர காலக் கையேட்டில் இடம்பெற வேண்டிய 8 முக்கியப் பிரிவுகள்</h2>
 
 ஒரு முழுமையான அவசரகால நிதி ஆவணத் தொகுப்பில் கீழ்க்கண்ட எட்டுப் பிரிவுகள் வரிசைக்கிரமமாகத் தொகுக்கப்பட வேண்டும்:
 
-<img src="/assets/images/ice-kit-sections.svg" alt="அவசர காலக் கையேடு (ICE KIT)  - 8 முக்கியப் பிரிவுகள்: 1. அவசரத் தொடர்பு அடைவு, 2. தனிநபர் அடையாள ஆவணங்கள், 3. மருத்துவக் காப்பீடு & குறிப்புகள், 4. வங்கிக் கணக்குகள் & கடன்கள், 5. முதலீடுகள் & ஓய்வூதியம், 6. சொத்துகள் & லாக்கர் விவரம், 7. டிஜிட்டல் சொத்துகள் & அணுகல், 8. உயில் & விருப்பக் கடிதம்" width="1200" height="535" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
+<img src="/assets/images/ice-kit-sections.svg" alt="அவசர காலக் கையேடு (ICE KIT)  - 8 முக்கியப் பிரிவுகள்: 1. அவசரத் தொடர்பு அடைவு, 2. தனிநபர் அடையாள ஆவணங்கள், 3. மருத்துவக் காப்பீடு & குறிப்புகள், 4. வங்கிக் கணக்குகள் & கடன்கள், 5. முதலீடுகள் & ஓய்வூதியம், 6. சொத்துகள் & லாக்கர் விவரம், 7. டிஜிட்டல் சொத்துகள் & அணுகல், 8. உயில் & விருப்பக் கடிதம்" width="1200" height="575" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
 ---
 
@@ -299,6 +311,12 @@ keywords:
 </div>
 </details>
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="will-and-wishes">4. உயில் (Will) மற்றும் விருப்பக் கடிதம் (Letter of Wishes)</h2>
@@ -323,13 +341,19 @@ keywords:
 - "எந்தெந்த நிதி ஆலோசகர்களை நம்பி அணுகலாம், யாரிடம் கடன் கேட்கக் கூடாது."  
 போன்ற நடைமுறை ஆலோசனைகளை இதில் மனம் திறந்து எழுதலாம்.
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="action-plan">5. அவசர காலக் கையேடு தயாரிப்பதற்கான 5-படி செயல் திட்டம் (Action Plan)</h2>
 
 ஒரு வார இறுதி நாளில் அமர்ந்து இதை நீங்கள் முழுமையாகத் தயார் செய்துவிடலாம்:
 
-<img src="/assets/images/ice-kit-action-plan-flow.svg" alt="ICE Kit தயாரிப்பதற்கான 5-படி செயல் திட்டம்: படி 1: ஆவணங்களைச் சேகரித்தல் (Document Gathering), படி 2: மாஸ்டர் எக்செல் அட்டவணை தயாரித்தல் (Master Spreadsheet), படி 3: காகிதக் கோப்புறை உருவாக்குதல் (ICE Paper Folder), படி 4: வாழ்க்கைத்துணையுடன் மனம் திறந்த உரையாடல் (The Family Conversation), படி 5: ஆண்டுக்கொரு முறை புதுப்பித்தல் (Annual Review/Update)" width="1200" height="545" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
+<img src="/assets/images/ice-kit-action-plan-flow.svg" alt="ICE Kit தயாரிப்பதற்கான 5-படி செயல் திட்டம்: படி 1: ஆவணங்களைச் சேகரித்தல் (Document Gathering), படி 2: மாஸ்டர் எக்செல் அட்டவணை தயாரித்தல் (Master Spreadsheet), படி 3: காகிதக் கோப்புறை உருவாக்குதல் (ICE Paper Folder), படி 4: வாழ்க்கைத்துணையுடன் மனம் திறந்த உரையாடல் (The Family Conversation), படி 5: ஆண்டுக்கொரு முறை புதுப்பித்தல் (Annual Review/Update)" width="1200" height="585" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin: 20px 0;">
   <div style="background: #ffffff; border: 1px solid #cbd5e1; border-left: 4px solid #0D7377; border-radius: 8px; padding: 14px 16px;">
@@ -354,6 +378,12 @@ keywords:
   </div>
 </div>
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="checklist">6. அவசர காலக் கையேடு சரிபார்ப்புப் பட்டியல் (Interactive ICE Kit Checklist)</h2>
@@ -366,6 +396,12 @@ keywords:
 - **அச்சிடும் வசதி (Print Friendly):** உங்கள் குடும்பப் பெட்டகத்தில் இணைக்கக்கூடிய வகையில் நேர்த்தியாக அச்சிட்டு வைத்துக் கொள்ளலாம்.
 
 [அவசர காலக் கையேடு சரிபார்ப்புப் பட்டியலைத் திறந்து (ICE Kit Checklist), 36 அம்சங்களையும் மதிப்பாய்வு செய்யுங்கள் & எக்செல் பதிவிறக்குங்கள்](/checklists/icoe-checklist.html).
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 
 ---
 
@@ -383,6 +419,12 @@ keywords:
 ### கே 4: எனது குடும்பத்தினருக்கு நிதி சார்ந்த விஷயங்களில் அனுபவம் இல்லையென்றால் என்ன செய்வது?
 **பதில்:** ICE Kit-ன் முதல் பக்கத்திலேயே உங்கள் பட்டயக் கணக்காளர் (CA), SEBI பதிவு பெற்ற முதலீட்டு ஆலோசகர் (RIA) அல்லது நம்பிக்கைக்குரிய குடும்ப நண்பரின் தொடர்பு விவரத்தைக் குறிப்பிட்டு, "எந்த நிதி முடிவு எடுக்கும் முன்பும் இவரை அணுகவும்" என்று எழுதி வையுங்கள்.
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 ## முடிவுரை: அன்பின் இறுதி வெளிப்பாடு
@@ -392,6 +434,12 @@ keywords:
 "நாம் இருக்கும் போது அவர்களைக் கவனித்துக் கொள்வது கடமை; நாம் இல்லாத போதும் அவர்கள் கண்ணியத்துடன் வாழ வழிவகை செய்வது உண்மையான அன்பு."
 
 இன்றே உங்கள் குடும்பத்திற்கான அவசரகால நிதி ஆவணக் கோப்பை (Financial Dossier / ICE Kit) உருவாக்கத் தொடங்குங்கள்!
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 
 ---
 

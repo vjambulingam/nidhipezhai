@@ -70,7 +70,7 @@ keywords:
 </div>
 
 <!-- ================= QUICK JUMP NAVIGATION ================= -->
-<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 20px; margin: 24px 0;">
+<div id="quick-jump" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 20px; margin: 24px 0;">
   <div style="font-weight: 700; color: #0D7377; font-size: 15px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
     <span>⚡ விரைவு வழிசெலுத்தல் (Quick Jump):</span>
   </div>
@@ -89,7 +89,7 @@ keywords:
 
 ---
 
-<img src="/assets/images/index-funds-vs-active-funds-comparison.svg" alt="குறியீட்டு நிதித் திட்டம் vs செயலுள்ள மியூச்சுவல் நிதித் திட்டம் முழு ஒப்பீடு" width="1200" height="590" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
+<img src="/assets/images/index-funds-vs-active-funds-comparison.svg" alt="குறியீட்டு நிதித் திட்டம் vs செயலுள்ள மியூச்சுவல் நிதித் திட்டம் முழு ஒப்பீடு" width="1200" height="630" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
 ---
 
@@ -101,7 +101,7 @@ keywords:
 
 மியூச்சுவல் நிதித் திட்டங்களில் முதலீடு செய்வதற்கு முன், இரண்டு முற்றிலும் மாறுபட்ட முதலீட்டுத் தத்துவங்களை நாம் தெளிவாகப் புரிந்துகொள்ள வேண்டும்: **செயலுள்ள மியூச்சுவல் நிதித் திட்டம் (Active Mutual Fund)** vs **செயல் வேண்டா மியூச்சுவல் நிதித் திட்டம் (Passive Mutual Fund)**.
 
-<img src="/assets/images/active-vs-passive-concept.svg" alt="செயலுள்ள vs செயல் வேண்டா மியூச்சுவல் நிதித் திட்டம் - அடிப்படைக் கோட்பாடுகள்" width="1200" height="520" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
+<img src="/assets/images/active-vs-passive-concept.svg" alt="செயலுள்ள vs செயல் வேண்டா மியூச்சுவல் நிதித் திட்டம் - அடிப்படைக் கோட்பாடுகள்" width="1200" height="560" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
 ### செயலுள்ள மியூச்சுவல் நிதித் திட்டம் (Active Mutual Fund): "சந்தையை முந்தும் முயற்சி"
 - **செயல்முறை:** ஒரு நிதித் திட்ட மேலாளரும் (Fund Manager) அவரது ஆய்வாளர்கள் குழுவும் (Research Analysts) இணைந்து நிறுவனங்களின் இருப்புநிலைக் குறிப்புகளை (Balance Sheets) ஆய்வு செய்து, "எந்தப் பங்கு எதிர்காலத்தில் வேகமாக ஏறும்?" என்று கணித்துத் தங்கள் விருப்பப்படி பங்குகளை வாங்கி விற்கிறார்கள்.
@@ -112,6 +112,12 @@ keywords:
 - **செயல்முறை:** இதில் நிதித் திட்ட மேலாளருக்கு எந்தச் சொந்த விருப்பு வெறுப்பும் கிடையாது. அவர் தானாகப் பங்குகளைத் தேர்ந்தெடுக்க மாட்டார். உதாரணமாக, ஒரு Nifty 50 குறியீட்டு நிதித் திட்டம் (Index Fund) என்பது இந்தியாவின் முன்னணி 50 நிறுவனங்களை, தேசியப் பங்குச்சந்தை (NSE) நிர்ணயித்துள்ள அதே சதவிகிதத்தில் (Market-cap weightage) அப்படியே வாங்கி வைத்திருக்கும்.
 - **இலக்கு:** சந்தைக் குறியீட்டின் சராசரி வருமானத்தை (இதை நிதித்துறையில் **'Beta'** என்பார்கள்) எந்தத் தடங்கலுமின்றி முதலீட்டாளருக்குத் துல்லியமாக வழங்குவது.
 - **நன்மை:** பங்குகளைத் தேர்ந்தெடுக்க ஆய்வாளர் தேவையில்லை என்பதால், செலவு விகிதம் மிக மிகக் குறைவு (**0.10% முதல் 0.25% மட்டுமே!**). நிதித் திட்ட மேலாளர் வேலையை விட்டுச் சென்றாலோ அல்லது தவறு செய்தாலோ உங்கள் முதலீட்டுத் தொகுப்பு பாதிக்கப்படாது.
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 
 ---
 
@@ -129,7 +135,7 @@ keywords:
 
 ### SPIVA India Scorecard (பெரு முதல் பங்கு நிதித் திட்டங்கள் - Large Cap Funds):
 
-<img src="/assets/images/spiva-india-scorecard-largecap.svg" alt="SPIVA இந்தியா அறிக்கை - பெரு முதல் செயலுள்ள நிதித் திட்டங்களின் தோல்வி விகிதம்" width="1200" height="540" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
+<img src="/assets/images/spiva-india-scorecard-largecap.svg" alt="SPIVA இந்தியா அறிக்கை - பெரு முதல் செயலுள்ள நிதித் திட்டங்களின் தோல்வி விகிதம்" width="1200" height="580" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
 > **முக்கிய உண்மை:** 5 முதல் 10 ஆண்டுகால நீண்டகால முதலீட்டில், **75% முதல் 80%க்கும் அதிகமான பெரு முதல் செயலுள்ள நிதித் திட்டங்கள் (Active Large Cap Funds) தங்களின் பெஞ்ச்மார்க் குறியீட்டை விடக் குறைவான வருமானத்தையே தருகின்றன!** அதாவது, முதலீட்டாளர்கள் அதிகக் கட்டணம் செலுத்தியும், செயல் வேண்டா நிதித் திட்டம் (Passive Fund) கொடுத்த குறைந்தபட்ச சந்தை வருமானத்தைக் கூடப் பெற முடிவதில்லை.
 
@@ -157,6 +163,12 @@ keywords:
 </div>
 </details>
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="expense-ratio-drag">3. செலவு விகிதத்தின் மறைமுகப் பாதிப்பு (Expense Ratio Drag) & கணித மாதிரி</h2>
@@ -178,7 +190,7 @@ keywords:
 - **விருப்பம் B: செயலுள்ள Direct Plan Mutual Fund (Active Direct)** (TER: **1.50%** -> நிகர வளர்ச்சி: **10.50%**)
 - **விருப்பம் C: செயலுள்ள Regular Plan Mutual Fund (Active Regular)** (ஏஜென்ட் கமிஷன் உட்பட TER: **2.00%** -> நிகர வளர்ச்சி: **10.00%**)
 
-<img src="/assets/images/expense-ratio-compounding-drag.svg" alt="₹10,000 மாத SIP 25 ஆண்டுகால மாதிரி ஒப்பீடு: செலவு விகித இழப்பு" width="1200" height="570" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
+<img src="/assets/images/expense-ratio-compounding-drag.svg" alt="₹10,000 மாத SIP 25 ஆண்டுகால மாதிரி ஒப்பீடு: செலவு விகித இழப்பு" width="1200" height="610" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
 <details style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:8px; padding:12px; margin:16px 0;">
 <summary style="font-weight:700; color:#0D7377; cursor:pointer;">🔍 இந்தக் கணித முடிவிலிருந்து நாம் கற்கும் அதிர்ச்சியூட்டும் 2 உண்மைகள் (விரித்துப் படிக்கக் கிளிக் செய்யவும்):</summary>
@@ -192,6 +204,12 @@ keywords:
    - இந்த ₹39 லட்சத்தை ஈடுகட்ட வேண்டுமென்றால், உங்கள் நிதித் திட்ட மேலாளர் தொடர்ந்து 25 ஆண்டுகளும் குறியீட்டு நிதித் திட்டத்தை விடக் கணிசமாக அதிக ரிஸ்க் எடுத்து ஜெயித்தாக வேண்டும். ஆனால் 80% நிதித் திட்ட மேலாளர்கள் தோற்றுப் போகிறார்கள் என்பதை SPIVA ஆய்வு தெளிவாக நிரூபித்துவிட்டது.
 </details>
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="tracking-error">4. பின்தொடர்தல் பிழை (Tracking Error) & பின்தொடர்தல் வித்தியாசம் (Tracking Difference)</h2>
@@ -204,7 +222,7 @@ keywords:
 
 இங்குதான் **Tracking Difference** மற்றும் **Tracking Error** என்ற இரண்டு தொழில்நுட்பக் காரணிகளை நாம் கவனிக்க வேண்டும்:
 
-<img src="/assets/images/tracking-difference-and-tracking-error.svg" alt="குறியீட்டு நிதித் திட்ட செயல்பாட்டுக் காரணிகள்: Tracking Difference vs Tracking Error" width="1200" height="540" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
+<img src="/assets/images/tracking-difference-and-tracking-error.svg" alt="குறியீட்டு நிதித் திட்ட செயல்பாட்டுக் காரணிகள்: Tracking Difference vs Tracking Error" width="1200" height="580" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
 ### 1. Tracking Difference (பின்தொடர்தல் வித்தியாசம்):
 - ஒரு குறிப்பிட்ட காலத்தில் (உதாரணமாக 1 ஆண்டு அல்லது 3 ஆண்டுகளில்) பெஞ்ச்மார்க் குறியீட்டின் மொத்த வருமானத்திற்கும் (Index TRI), உங்கள் நிதித் திட்டத்தின் NAV வருமானத்திற்கும் இடையே உள்ள **நிகர இடைவெளி**.
@@ -236,6 +254,12 @@ keywords:
 
 > **முதலீட்டாளர் செய்ய வேண்டியது:** ஒரு குறியீட்டு நிதித் திட்டத்தைத் தேர்ந்தெடுக்கும்போது, வெறும் Expense Ratio-வை மட்டும் பார்க்காமல், **கடந்த 3 ஆண்டுகளில் மிகக் குறைந்த பின்தொடர்தல் வித்தியாசம் (Tracking Difference) மற்றும் பின்தொடர்தல் பிழை (Tracking Error) கொண்டுள்ள நிதித் திட்டத்தைத் தேர்ந்தெடுக்க வேண்டும்!** மேலும், அதிக AUM (குறைந்தபட்சம் ₹1,000 கோடிக்கு மேல்) உள்ள நிதித் திட்டங்களில் Impact Cost குறைவாக இருக்கும்.
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="nifty50-niftynext50">5. Nifty 50 + Nifty Next 50 இரட்டைக் கூட்டணி: இந்தியாவின் Nifty 100 Powerhouse!</h2>
@@ -260,7 +284,7 @@ keywords:
 
 ### ஏன் இந்த இரட்டைக் கூட்டணி செயலுள்ள பெரு முதல் (Large Cap) நிதித் திட்டங்களை விடச் சிறந்தது?
 
-<img src="/assets/images/nifty50-niftynext50-powerhouse.svg" alt="Nifty 50 மற்றும் Nifty Next 50 இரட்டைக் கூட்டணி - Nifty 100 Powerhouse" width="1200" height="530" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
+<img src="/assets/images/nifty50-niftynext50-powerhouse.svg" alt="Nifty 50 மற்றும் Nifty Next 50 இரட்டைக் கூட்டணி - Nifty 100 Powerhouse" width="1200" height="570" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
 ### பரிந்துரைக்கப்படும் முதலீட்டுத் தொகுப்பு ஒதுக்கீடு (Ideal Asset Allocation):
 - **மிதமான / பாதுகாப்பான அணுகுமுறை (Conservative / Balanced):**
@@ -269,6 +293,12 @@ keywords:
 - **துடிப்பான / இளைய முதலீட்டாளர் அணுகுமுறை (Aggressive Growth - 15+ ஆண்டுகள்):**
   - **50% Nifty 50 Index Fund** + **50% Nifty Next 50 Index Fund**
   - அதிக வளர்ச்சி சாத்தியம்; ஆனால் சந்தைச் சரிவுகளில் சற்றே கூடுதல் பொறுமை தேவை.
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 
 ---
 
@@ -280,7 +310,7 @@ keywords:
 
 நாம் ஒருதலைப்பட்சமாக செயலுள்ள நிதித் திட்டங்களை (Active Funds) முற்றிலுமாகப் புறந்தள்ளிவிட முடியாது. நிதி அறிவியலின்படி, **"எந்த இடத்தில் சந்தைத் திறன் குறைவாக உள்ளதோ (Market Inefficiency), அங்கு மட்டுமே செயலுள்ள நிதித் திட்ட மேலாளர்களால் ஆல்ஃபா உருவாக்க முடியும்."**
 
-<img src="/assets/images/market-efficiency-core-satellite.svg" alt="சந்தைச் செயல்திறன் மற்றும் கோர்-சாட்டிலைட் முதலீட்டு உத்தி" width="1200" height="530" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
+<img src="/assets/images/market-efficiency-core-satellite.svg" alt="சந்தைச் செயல்திறன் மற்றும் கோர்-சாட்டிலைட் முதலீட்டு உத்தி" width="1200" height="570" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
 ### செயலுள்ள நிதித் திட்டங்கள் பயன்படும் இடங்கள்:
 1. **சிறு முதல் பிரிவுகள் (Small Cap Funds):**
@@ -297,6 +327,12 @@ keywords:
 - **Satellite Portfolio (30% - துணைப் பகுதி):**
   - தேர்ந்தெடுக்கப்பட்ட **1 தரமான Mid-Cap அல்லது Small-Cap செயலுள்ள நிதித் திட்டம் (Active Fund) / Flexi-cap நிதித் திட்டம்.**
   - கூடுதல் ரிஸ்க் எடுத்துக் கூடுதல் ஆல்ஃபா ஈட்டுவதற்கான வாய்ப்பு.
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 
 ---
 
@@ -340,6 +376,12 @@ keywords:
   </div>
 </div>
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="action-checklist">8. குறியீட்டு நிதித் திட்டத் தேர்வு சரிபார்ப்புப் பட்டியல் (Index Fund Selection Checklist)</h2>
@@ -368,6 +410,12 @@ keywords:
       </div>
     </div>
   </div>
+</div>
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
 </div>
 
 ---
@@ -418,6 +466,12 @@ Nifty 50 என்பது தேசியப் பங்குச்சந்
 ஏனெனில் மியூச்சுவல் நிதித் திட்டத்தில் டீமேட் கணக்குக் கட்டணம் இல்லை, தினசரி NAV விலையிலேயே யூனிட்கள் ஒதுக்கப்படும் (Liquidity/Premium discount சிக்கல் இல்லை), மற்றும் ஒவ்வொரு மாதமும் சம்பளத் தேதியில் தானாகவே வங்கிக் கணக்கிலிருந்து பணம் முதலீடு செய்யப்படும் எளிய ஆட்டோமேஷன் உண்டு. நாள் முழுவதும் வர்த்தகம் செய்யும் தினசரி டிரேடர்களுக்கு மட்டுமே ETF உகந்தது.
 </div>
 </details>
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 
 ---
 

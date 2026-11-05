@@ -65,7 +65,7 @@ keywords:
 </div>
 
 <!-- ================= QUICK JUMP NAVIGATION ================= -->
-<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 20px; margin: 24px 0;">
+<div id="quick-jump" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 20px; margin: 24px 0;">
   <div style="font-weight: 700; color: #0D7377; font-size: 15px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
     <span>⚡ விரைவு வழிசெலுத்தல் (Quick Jump):</span>
   </div>
@@ -122,7 +122,13 @@ keywords:
 மாறாக, அதே ₹5 லட்சத்தை அடுத்த 5 ஆண்டுகளுக்கு ஒரு நல்ல லார்ஜ்/ஃபிளெக்ஸி கேப் குறியீட்டு நிதித் திட்டத்தில் (Index Fund) 12% கூட்டு வளர்ச்சியில் முதலீடு செய்தால், அது ஐந்தாண்டுகளில் **கிட்டத்தட்ட ₹8.81 லட்சமாக வளரும்** (வரிக்குப் பிந்தைய நிகர மூலதன லாபம் ~₹3.5 லட்சம்!).  
 எனவே, **கடனின் கடைசி 5 ஆண்டுகளில் முன்கூட்டியே கடன் அடைப்பது நிதி ரீதியாக ஒரு தவறான முடிவு; அப்பணத்தை முழுமையாக முதலீட்டிற்குத் திருப்புவதே விவேகமானது!**
 
-<img src="/assets/images/loan-prepayment-vs-equity-investment.svg" alt="வீட்டுக் கடன் முன்கூட்டியே அடைப்பு vs பங்குச் சந்தையில் முதலீடு: ஒப்பீட்டு வழிகாட்டி" width="1200" height="665" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
+<img src="/assets/images/loan-prepayment-vs-equity-investment.svg" alt="வீட்டுக் கடன் முன்கூட்டியே அடைப்பு vs பங்குச் சந்தையில் முதலீடு: ஒப்பீட்டு வழிகாட்டி" width="1200" height="705" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 
 ---
 
@@ -215,6 +221,12 @@ keywords:
 </div>
 </details>
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="tax-impact">3. புதிய வரி முறை (New Tax Regime) vs மூலதன ஆதாய வரி நிதர்சனங்கள்</h2>
@@ -238,6 +250,12 @@ keywords:
 * மியூச்சுவல் ஃபண்ட் 12% CAGR வளர்ச்சி தந்தால், 12.5% வரி கழித்த பிறகும் நிகர வருமானம் **ஆண்டுக்கு 10.5% முதல் 11% வரை** கிடைக்கும்.
 * **நிகர இடைவெளி (Spread):** 10.5% முதலீட்டு வருமானம் - 8.5% கடன் வட்டி = **2% கூடுதல் லாபம் (Positive Alpha).**
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="liquidity-trap">4. பணப்புழக்க அபாயமும் "House-Rich, Cash-Poor" சிக்கலும்!</h2>
@@ -252,6 +270,12 @@ keywords:
 1. **கான்கிரீட்டில் பூட்டப்படும் பணம்:** வீட்டுக் கடனுக்குள் நீங்கள் போடும் கூடுதல் பணம் வீட்டின் செங்கற்களுக்குள் நிரந்தரமாகப் பூட்டப்படுகிறது; வங்கி மேலாளரிடம் கெஞ்சினாலும் அந்தப் பணத்தை உடனடியாகத் திருப்பித் தர மாட்டார்கள்!
 2. **முதலீட்டின் திரவத்தன்மை (Liquidity):** மியூச்சுவல் ஃபண்டில் உள்ள பணம் எப்போது வேண்டுமானாலும் உங்கள் விரல் நுனியில் மொபைல் ஆப் மூலம் 2 முதல் 3 வணிக நாட்களில் (T+2 Days) உங்கள் வங்கிக் கணக்கிற்கு வந்துவிடும்.
 3. **அவசர நிதி இன்றி கடன் அடைக்கக் கூடாது:** குறைந்தபட்சம் 6 முதல் 12 மாத குடும்பச் செலவுகள் மற்றும் EMI தொகைக்கான **அவசர கால நிதி (Emergency Fund)** கையில் இல்லாமல், ஒரு ரூபாய் கூட வீட்டுக் கடன் முன்கூட்டிய அடைப்பிற்குச் செலுத்தக் கூடாது!
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 
 ---
 
@@ -307,6 +331,12 @@ keywords:
 </div>
 </details>
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="golden-hybrid-strategy">6. தங்கச் சமநிலை உத்தி: 50:50 அல்லது 70:30 ஹைப்ரிட் மாடல்!</h2>
@@ -326,6 +356,12 @@ keywords:
 ### மைல்கல் உத்தி (Milestone-based Prepayment):
 முதலில் கடன் அசல் ₹50 லட்சத்திலிருந்து ₹25 லட்சமாகக் குறையும் வரை உங்களின் உபரிப் பணத்தில் 70%-ஐ கடன் அடைப்பிற்கும் 30%-ஐ முதலீட்டிற்கும் பயன்படுத்துங்கள். கடன் சுமை பாதியாகக் குறைந்ததும், மன அழுத்தம் நீங்கிவிடும். அதன் பிறகு 100% உபரிப் பணத்தையும் மியூச்சுவல் ஃபண்ட் முதலீட்டிற்கு மாற்றி அசுர வேகத்தில் செல்வத்தைப் பெருக்குங்கள்!
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="smart-overdraft">7. ஸ்மார்ட் ஓவர் டிராஃப்ட் கணக்குகள் (SBI Maxgain / Bank Home Loan OD)</h2>
@@ -340,6 +376,12 @@ keywords:
 
 > **கவனிக்க வேண்டிய குறைபாடு:** வழக்கமான வீட்டுக் கடன்களை விட இத்தகைய ஓவர் டிராஃப்ட் கடன்களுக்கு வங்கிகள் 0.25% முதல் 0.40% வரை கூடுதல் வட்டி வசூலிக்கலாம். மேலும், சேமிப்புக் கணக்கில் பணம் இருப்பதைக் கண்டு தேவையின்றி ஆடம்பரமாகச் செலவு செய்துவிடும் பலவீனமான நபர்களுக்கு இது பொருந்தாது.
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="decision-checklist">8. சுயமாக முடிவெடுப்பதற்கான 6-படி சரிபார்ப்புப் பட்டியல் (Action Checklist)</h2>
@@ -352,6 +394,12 @@ keywords:
 4. [ ] **கடனின் எந்தக் காலகட்டத்தில் உள்ளீர்கள்?** தொடக்க 1 முதல் 7 ஆண்டுகளுக்குள் இருந்தால் கூடுதல் கடன் அடைப்பிற்கு முன்னுரிமை கொடுங்கள்; கடைசி 5 ஆண்டுகளில் இருந்தால் 100% முதலீட்டிற்கு முன்னுரிமை கொடுங்கள்!
 5. [ ] **உங்கள் தற்போதைய கடன் வட்டி விகிதம் என்ன?** வட்டி 8.5%-க்கும் குறைவாக உள்ளதா (முதலீடு சிறந்தது) அல்லது 9.5%-க்கும் அதிகமாக உள்ளதா (கடன் அடைப்பு சிறந்தது)?
 6. [ ] **சந்தை வீழ்ச்சியைக் கையாளும் பக்குவம் உள்ளதா?** பங்குச்சந்தை குறையும்போது SIP-ஐ நிறுத்தாமல் 10 ஆண்டுகள் தொடரும் பொறுமை உங்களிடம் உள்ளதா?
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 
 ---
 
@@ -371,6 +419,12 @@ keywords:
 
 ### 5. வீட்டுக் கடன் காப்பீடு (Home Loan Protection Plan - HLPP) எடுத்திருப்பது அவசியமா?
 **பதில்:** வங்கி வழங்கும் விலையுயர்ந்த ஒற்றை பிரீமியம் கடன் காப்பீட்டை விட, கடன் தொகையை விட அதிக கவரேஜ் கொண்ட ஒரு தனிநபர் **தூய தவணைக் காப்பீட்டை (Pure Term Insurance Plan)** எடுத்துக்கொள்வதே பன்மடங்கு மலிவானதும் பாதுகாப்பானதுமாகும்.
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 
 ---
 

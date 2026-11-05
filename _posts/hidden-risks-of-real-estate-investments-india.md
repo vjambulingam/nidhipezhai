@@ -36,7 +36,7 @@ keywords:
 
 <img src="/assets/images/real-estate-encumbrance-risks-banner.jpg" alt="இந்தியாவில் ரியல் எஸ்டேட் முதலீட்டின் மறைமுக சட்ட அபாயங்கள் மற்றும் வில்லங்கங்கள் (Hidden Risks of Real Estate Investments in India)" width="1376" height="768" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
-<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 20px; margin: 24px 0;">
+<div id="quick-jump" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 20px; margin: 24px 0;">
   <div style="font-weight: 700; color: #0D7377; font-size: 15px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
     <span>⚡ விரைவு வழிசெலுத்தல் (Quick Jump):</span>
   </div>
@@ -57,7 +57,7 @@ keywords:
 
 பங்குச்சந்தைக்கும் அசையாச் சொத்துகளுக்கும் இடையே உள்ள மிகப்பெரிய சட்ட மற்றும் செயல்பாட்டு வேறுபாட்டை முதலில் நாம் ஆழமாகப் புரிந்து கொள்ள வேண்டும்.
 
-<img src="/assets/images/equity-vs-real-estate-encumbrance-flow.svg" alt="பங்குச்சந்தை vs ரியல் எஸ்டேட்: வில்லங்க அபாய ஒப்பீட்டு விளக்கப்படம் - பங்குகளின் Fungible தீர்வு vs நிலத்தின் தலைமுறைச் சுமைகள்" width="1200" height="580" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
+<img src="/assets/images/equity-vs-real-estate-encumbrance-flow.svg" alt="பங்குச்சந்தை vs ரியல் எஸ்டேட்: வில்லங்க அபாய ஒப்பீட்டு விளக்கப்படம் - பங்குகளின் Fungible தீர்வு vs நிலத்தின் தலைமுறைச் சுமைகள்" width="1200" height="690" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
 ### 1. பங்குச்சந்தையில் (Equity Shares / Mutual Funds) என்ன நடக்கிறது?
 நீங்கள் உங்கள் புரோக்கர் மூலம் ஒரு நிறுவனத்தின் 100 பங்குகளை வாங்குகிறீர்கள் என்று வைத்துக்கொள்வோம்:
@@ -77,13 +77,19 @@ keywords:
 
 விற்பனையாளர் உங்களுக்கு நேர்மையானவராக இருக்கலாம்; ஆனால் அவருக்கு 30 ஆண்டுகளுக்கு முன் அந்த நிலத்தை விற்ற நபரின் வாரிசுகளோ அல்லது அந்த நிலத்தின் மீது யாருக்கேனும் உள்ள பழைய சட்டப்பூர்வ உரிமைகளோ எந்த நேரத்திலும் உங்கள் கதவைத் தட்டக்கூடும்.
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="legal-principles">நிலம் மற்றும் சொத்துரிமை குறித்த 5 மிக முக்கியமான சட்டக் கோட்பாடுகள்</h2>
 
 ரியல் எஸ்டேட் விவகாரங்களில் இந்திய நீதிமன்றங்கள் பின்பற்றும் அடிப்படைச் சட்ட விதிகளை ஒவ்வொரு முதலீட்டாளரும் அவசியம் தெரிந்து கொள்ள வேண்டும்:
 
-<img src="/assets/images/property-law-principles-summary.svg" alt="நிலம் மற்றும் சொத்துரிமை குறித்த 5 மிக முக்கியமான சட்டக் கோட்பாடுகள்: 1. Article 300A அரசியலமைப்பு உரிமை, 2. தானியங்கி வாரிசுரிமை, 3. Caveat Emptor வாங்குபவரே விழிப்போடிரு, 4. கிரயப் பத்திரம் உரிமைக்கான சான்றல்ல, 5. Nemo Dat Quod Non Habet இல்லாத உரிமை கிடைக்காது" width="1200" height="580" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
+<img src="/assets/images/property-law-principles-summary.svg" alt="நிலம் மற்றும் சொத்துரிமை குறித்த 5 மிக முக்கியமான சட்டக் கோட்பாடுகள்: 1. Article 300A அரசியலமைப்பு உரிமை, 2. தானியங்கி வாரிசுரிமை, 3. Caveat Emptor வாங்குபவரே விழிப்போடிரு, 4. கிரயப் பத்திரம் உரிமைக்கான சான்றல்ல, 5. Nemo Dat Quod Non Habet இல்லாத உரிமை கிடைக்காது" width="1200" height="620" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
 <details open style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
 <summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
@@ -160,6 +166,12 @@ keywords:
 
 </div>
 </details>
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 
 ---
 
@@ -405,6 +417,12 @@ keywords:
 </div>
 </details>
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="bank-legal-myth">"வங்கி வழக்கறிஞர் சரிபார்த்துவிட்டாரே, அப்புறம் என்ன பயம்?" – மிகப்பெரிய மாயை!</h2>
@@ -420,6 +438,12 @@ keywords:
    இடிக்கப்பட்ட 345 சொகுசு வீடுகளில் 310 வீடுகள் முன்னணி வங்கிகளால் அனைத்து சட்ட ஆய்வுகளும் செய்யப்பட்டு கடன் வழங்கப்பட்டவை! உச்ச நீதிமன்றத்தால் கட்டடங்கள் இடிக்கப்பட்ட பிறகும் கூட, "பிணையச் சொத்து (Collateral) அழிந்துவிட்டதால் கடனைத் திருப்பிச் செலுத்துங்கள்" என்று வங்கிகள் வாடிக்கையாளர்களைத் துரத்தின ([தி இந்து புலனாய்வு அறிக்கை](https://www.thehindu.com/news/national/kerala/maradu-demolition-case-history-how-the-saga-unfolded-over-13-years/article30536481.ece) & [உச்ச நீதிமன்ற கடன் வட்டி தொடர்பான ஆணை](https://indiankanoon.org/doc/41415629/)).
 3. **வங்கியின் நிலைப்பாடு என்ன?**  
    சொத்து நீதிமன்றத்தால் முடக்கப்பட்டாலோ அல்லது இடிக்கப்பட்டாலோ வங்கிகளுக்கு ஒரு பைசா நஷ்டமில்லை. நீங்கள் கையொப்பமிட்ட வீட்டுக் கடன் ஒப்பந்தத்தின்படி, சொத்து போனாலும் வாங்கிய கடனை நீங்கள் மாதத் தவணையாகக் கட்டித் தீர்க்க வேண்டும்; கட்டத் தவறினால் உங்கள் பிற வங்கிக் கணக்குகள், சம்பளம் மற்றும் நகைகளை ஜப்தி செய்ய வங்கிக்கு முழு சட்ட அதிகாரம் உண்டு!
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 
 ---
 
@@ -526,13 +550,19 @@ keywords:
 </div>
 </details>
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="due-diligence-safety">ரியல் எஸ்டேட் முதலீட்டாளர்கள் என்ன செய்ய வேண்டும்? (முக்கியப் பாதுகாப்பு உத்திகள்)</h2>
 
 ரியல் எஸ்டேட்டில் உள்ள இந்த மறைமுக வில்லங்கங்களிலிருந்து தப்பிக்க முதலீட்டாளர்கள் பின்பற்ற வேண்டிய நடைமுறை வழிகாட்டுதல்கள்:
 
-<img src="/assets/images/real-estate-due-diligence-roadmap.svg" alt="நிலம் வாங்கும் முன் 5 அடுக்கு சட்டப் பாதுகாப்புச் சோதனைகள்: 1. 30-50 ஆண்டு வில்லங்கச் சான்றிதழ், 2. தாய் பத்திரங்கள் & பட்டா, 3. உள்ளூர் கள ஆய்வு, 4. நாளிதழ் பொது அறிவிப்பு, 5. சுயாதீன வழக்கறிஞர் சட்ட ஒப்புதல்" width="1200" height="520" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
+<img src="/assets/images/real-estate-due-diligence-roadmap.svg" alt="நிலம் வாங்கும் முன் 5 அடுக்கு சட்டப் பாதுகாப்புச் சோதனைகள்: 1. 30-50 ஆண்டு வில்லங்கச் சான்றிதழ், 2. தாய் பத்திரங்கள் & பட்டா, 3. உள்ளூர் கள ஆய்வு, 4. நாளிதழ் பொது அறிவிப்பு, 5. சுயாதீன வழக்கறிஞர் சட்ட ஒப்புதல்" width="1200" height="560" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
 <details open style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
 <summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
@@ -608,6 +638,13 @@ keywords:
 > **நினைவில் கொள்க:** <br>
 >"பங்குச்சந்தை முதலீடுகள் சந்தை அபாயங்களுக்கு உட்பட்டவை. ஆனால் ரியல் எஸ்டேட் முதலீடுகளோ சந்தை அபாயங்களைத் தாண்டி இன்னும் எண்ணற்ற சட்ட, நிர்வாக, வாரிசுரிமை மற்றும் மறைமுக வில்லங்க அபாயங்களுக்கு உட்பட்டவை!"  
 > Equity investments are subject to market risks. Real-estate investments are subject to many hidden risks.
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="faqs">அடிக்கடி கேட்கப்படும் கேள்விகள் (FAQs)</h2>
@@ -621,6 +658,12 @@ keywords:
 ### 3. நீண்ட காலமாக ஒருவர் நிலத்தை அனுபவித்து வந்தால் அவருக்கு உரிமை கிடைக்குமா?
 **பதில்:** எதிர் அனுபவ பாத்தியதை (Adverse Possession) என்ற சட்டப் பிரிவு இருந்தாலும், உண்மையான உரிமையாளருக்குத் தெரியாமல் கள்ளத்தனமாகவோ அல்லது குத்தகைதாரராகவோ இருந்து அனுபவிப்பது உரிமை தராது. மேலும், மைனர்கள் மற்றும் மனநலம் பாதிக்கப்பட்டவர்களின் சொத்துகளில் இத்தகைய உரிமை கோர முடியாது.
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 ## தொடர்புடைய வழிகாட்டிகள் & கணிப்பான்கள்
@@ -631,6 +674,12 @@ keywords:
 * [தனிநபர் நிதிநிலை வலுவூட்டல் வழிகாட்டி & 25 அம்ச சரிபார்ப்புப் பட்டியல்](/articles/personal-finance-fortification/)
 * [வீட்டுக் கடன் EMI கணிப்பான் (Home Loan EMI Calculator)](/calculators/home_loan_emi_calculator.html)
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 ## முடிவுரை: விழிப்புணர்வே முதலீட்டின் மூலதனம்
@@ -639,6 +688,18 @@ keywords:
 
 "மண்ணில் போட்டால் வீணாகாது" என்ற பழைய பழமொழியை மட்டும் நம்பாமல், நவீன சட்ட நிதர்சனங்களையும், தலைமுறைத் தலைமுறையாகத் தொடரும் வில்லங்க அபாயங்களையும் உணர்ந்து, தகுதியான சட்ட வல்லுநர்களின் துணையோடும், சரியான சொத்து வகை ஒதுக்கீட்டோடு (Asset Allocation) விவேகமாக முதலீடு செய்வதே புத்திசாலித்தனமான நிதி மேலாண்மையாகும்!
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 > **பொறுப்புத் துறப்பு (Disclaimer):**  
 > இக்கட்டுரை பொதுவான சட்ட விழிப்புணர்வு மற்றும் நிதிசார் கல்வி நோக்கங்களுக்காக மட்டுமே எழுதப்பட்டுள்ளது. இது தனிப்பட்ட சட்ட ஆலோசனையோ அல்லது முதலீட்டுப் பரிந்துரையோ அல்ல. சொத்து விவகாரங்கள், நில அளவீடுகள் மற்றும் வாரிசுரிமைச் சிக்கல்கள் மாநிலத்திற்கு மாநிலம் மாறுபடலாம். எந்தவொரு அசையாச் சொத்தையும் வாங்குவதற்கு அல்லது விற்பதற்கு முன் தகுதியான சட்ட வல்லுநர் அல்லது வழக்கறிஞரை அணுகி ஆலோசிக்கவும்.
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 

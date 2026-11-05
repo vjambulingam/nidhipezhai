@@ -30,9 +30,24 @@ keywords:
 
 <img src="/assets/images/chit-funds-banner.jpg" alt="ஏலச்சீட்டு நிதிச் சேமிப்பு மற்றும் ஏல முறை - ஏலச்சுத்தியல் (Auction Gavel) மற்றும் கூட்டு நிதிச் சுழற்சி" width="1376" height="768" style="display:block;max-width:100%;height:auto;border-radius:12px">
 
----
+<div id="quick-jump" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 20px; margin: 24px 0;">
+  <div style="font-weight: 700; color: #0D7377; font-size: 15px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+    <span>⚡ விரைவு வழிசெலுத்தல் (Quick Jump):</span>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+    <a href="#how-chit-funds-work" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">1. ஏலச்சீட்டு செயல்முறை</a>
+    <a href="#chit-fund-benefits" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">2. சாத்தியமான பயன்கள்</a>
+    <a href="#chit-fund-credit-risks" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">3. கடன் அபாயங்கள்</a>
+    <a href="#other-chit-risks" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">4. மற்ற அபாயங்கள்</a>
+    <a href="#chit-fund-example" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">5. 20 மாத மாதிரி</a>
+    <a href="#chit-fund-xirr" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">6. XIRR கணக்கீடு</a>
+    <a href="#who-chit-funds-suit" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">7. யாருக்கு ஏற்றது?</a>
+    <a href="#chit-fund-regulations" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">8. ஒழுங்குமுறை</a>
+    <a href="#chit-fund-checklist" style="font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 9999px; background: #e6f5f3; color: #0D7377; text-decoration: none; border: 1px solid #b2dfdb;">9. சரிபார்ப்புப் பட்டியல்</a>
+  </div>
+</div>
 
-## 1. ஏலச்சீட்டு எவ்வாறு செயல்படுகிறது?
+<h2 id="how-chit-funds-work">1. ஏலச்சீட்டு எவ்வாறு செயல்படுகிறது?</h2>
 
 ஏலச்சீட்டின் செயல்முறை ஒரு குறிப்பிட்ட எண்ணிக்கையிலான உறுப்பினர்கள் மற்றும் நிர்ணயிக்கப்பட்ட கால அளவைக் கொண்டது. ஏலச்சீட்டில் பொதுவாக உறுப்பினர்கள், சீட்டு நடத்துநர் (foreman), ஒப்பந்தத்தில் நிர்ணயிக்கப்பட்ட சீட்டு மதிப்பு மற்றும் கால அளவு இருக்கும். உதாரணமாக, 20 உறுப்பினர்கள் தலா ₹5,000 வீதம் 20 மாதங்கள் செலுத்தும் ஒரு திட்டத்தின் சீட்டு மதிப்பு ₹1,00,000. இதனை வழக்கத்தில் பொதுவாக ₹5000 ஏலச்சீட்டு எனக் கூறுவார்கள்.
 
@@ -56,7 +71,13 @@ keywords:
 
 **ஏலத்தொகையைப் பெற்ற பிறகும் தவணைகள் முடிவதில்லை.** வெற்றிபெற்ற உறுப்பினர் மீதமுள்ள தவணைகளைச் செலுத்துவது அவசியம். பரிசுத் தொகை வழங்கும் முன் உத்தரவாததாரர் அல்லது பிணையம் கேட்கப்படுமா என்பது திட்டத்தின் ஒப்பந்தம் மற்றும் பொருந்தும் விதிகளைப் பொறுத்தது; அரசு ஊழியர் உத்தரவாதம், சொத்துப் பத்திரம் அல்லது FD ஆவணம் எல்லாத் திட்டங்களிலும் கட்டாயம் என்று கருத வேண்டாம். உத்தரவாததாரரும் பிணையமும் வெவ்வேறு பாதுகாப்பு ஏற்பாடுகள்.
 
-## 2. ஏலச்சீட்டின் சாத்தியமான பயன்கள்
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
+<h2 id="chit-fund-benefits">2. ஏலச்சீட்டின் சாத்தியமான பயன்கள்</h2>
 
 * **இரட்டைப் பலன்:** ஒரே அமைப்பில் சேமிப்பு மற்றும் கடன் பெறும் வசதி.
 * **மாற்று நிதி வாய்ப்பு:** சில திட்டங்களில் வருமான ஆவணங்களுடன் கூடுதல் உத்தரவாதம் அல்லது பிணையம் கேட்கப்படலாம்; தகுதி மற்றும் பணம் வழங்கும் நிபந்தனைகள் நடத்துநர் மற்றும் ஒப்பந்தத்தைப் பொறுத்து மாறும்.
@@ -66,7 +87,13 @@ keywords:
 
 இவை திட்டத்தின் நன்மைகள் உறுதி செய்யப்பட்டுள்ளன என்று பொருளல்ல. ஏலத்தில் வெற்றிபெறும் நேரம், ஒவ்வொரு மாத ஏலத் தள்ளுபடி, தவறிய தவணை மற்றும் நடத்துநரின் செயல்பாடு ஆகியவை உங்கள் அனுபவத்தை மாற்றும். இது வங்கி FD/RD போன்ற பாதுகாப்பான வருமானத் திட்டமும் அல்ல.
 
-## 3. கடன் அபாயங்கள் (Credit Risks)
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
+<h2 id="chit-fund-credit-risks">3. கடன் அபாயங்கள் (Credit Risks)</h2>
 
 ### அ. சீட்டு நடத்துநரின் அபாயம் (Foreman / Operator Credit Risk)
 * **ஏமாற்றுதல் மற்றும் நிதி முறைகேடு:** பதிவு செய்யப்படாத (Unregistered / Informal) ஏலச்சீட்டு நடத்துநர்கள் நிதியைத் தவறாகப் பயன்படுத்திவிட்டுத் தலைமறைவாகும் அபாயம். நடத்துநர் கணக்குகளைச் சரியாகப் பராமரிக்காதது, பணம் வழங்கத் தாமதிப்பது அல்லது செயல்பாட்டை நிறுத்துவது உறுப்பினர்களுக்கு இழப்பை ஏற்படுத்தலாம். 
@@ -78,7 +105,13 @@ keywords:
 * தவணைத் தவறுதலைக் குறைப்பதற்கான உத்தரவாதம் அல்லது பிணைய நிபந்தனைகள் திட்டத்திற்கேற்ப மாறும்; பதிவு பெற்ற எல்லா நிறுவனங்களும் அரசு ஊழியர் உத்தரவாதம், நில ஆவணம் அல்லது காசோலை கேட்கும் என்று கருத வேண்டாம்.
 
 
-## 4. மற்ற அபாயங்கள்
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
+<h2 id="other-chit-risks">4. மற்ற அபாயங்கள்</h2>
 
 ### அ. பணத் தேவையும் ஏலத்தின் நேரமும்
 
@@ -88,7 +121,13 @@ keywords:
 
 நடுவில் வெளியேறுதல், தவணை தவறுதல், பரிசுத் தொகை பெற்ற பின் விலகுதல், உறுப்பினர் உரிமையை மாற்றுதல், இறுதி மாதத்தில் தொகை வழங்குதல் ஆகியவற்றுக்கான விதிகள் ஒப்பந்தத்தில் இருக்க வேண்டும். பணத்தை உடனடியாகத் திரும்பப் பெறலாம் என்று நினைத்து அவசர நிதியை ஏலச்சீட்டில் வைக்க வேண்டாம்.
 
-## 5. 20 மாத மாதிரி அட்டவணை (Full 20-Month Chit Table)
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
+<h2 id="chit-fund-example">5. 20 மாத மாதிரி அட்டவணை (Full 20-Month Chit Table)</h2>
 
 * **உறுப்பினர்கள் எண்ணிக்கை:** 20 | **அடிப்படைத் தவணை:** ₹5,000 | **மொத்தச் சீட்டு மதிப்பு:** ₹1,00,000 | **நடத்துநர் கமிஷன் (7%):** ₹7,000
 * இந்த மாதிரிக் கணக்கில் ஒவ்வொரு மாத ஏலக் கழிவும் ₹7,000 அல்லது அதற்கு மேல்; பகிரத்தக்க ஈவுத்தொகை = ஏலக் கழிவு − ₹7,000 கமிஷன். பிற கட்டணங்கள் சேர்க்கப்படவில்லை.
@@ -150,9 +189,15 @@ keywords:
 </div>
 </details>
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
-## 6. XIRR கணக்கீடு (XIRR Return & Borrowing Cost Calculation)
+<h2 id="chit-fund-xirr">6. XIRR கணக்கீடு (XIRR Return & Borrowing Cost Calculation)</h2>
 
 ஏலச்சீட்டில் மாதாந்திரப் பணப்பரிமாற்றம் சமமற்ற முறையில் இருப்பதால், உண்மையான வருடாந்திர வருமானம் அல்லது கடன் வட்டியைத் துல்லியமாகக் கணக்கிட **XIRR (Extended Internal Rate of Return)** சூத்திரம் பயன்படுகிறது.
 
@@ -168,7 +213,13 @@ keywords:
 * **கடன் செலவு (Effective Borrowing Cost XIRR):** **சுமார் 38.09% (ஆண்டுக்கு)**
 * **பகுப்பாய்வு:** இந்த எடுத்துக்காட்டின் XIRR-ல் ஏலத்திற்கு முன் செலுத்திய முதல் மாதத் தவணையும் சேர்க்கப்பட்டுள்ளது. முன்பணம் செலுத்திய பிறகு பரிசுத் தொகை வந்து, அதன் பின் மீண்டும் தவணைகள் செலுத்தப்படுவதால் பணப்புழக்கக் குறிகள் ஒன்றுக்கு மேற்பட்ட முறை மாறுகின்றன; இதனால் வேறு கணக்கீட்டு முறையில் ஒன்றுக்கு மேற்பட்ட கணித வேர்கள் கிடைக்கலாம். இங்கு 10% தொடக்க மதிப்பில் கிடைக்கும் 38.09% வேரைத் தெரிவிக்கிறோம். உண்மையான திட்டத்தில் ஏலத் தேதி, பரிசுத் தொகை வழங்கும் நாள், தவணை/ஈவுத்தொகை நேரம் மற்றும் பிற கட்டணங்கள் மாறுவதால் கடன் செலவும் மாறும்; தனிநபர் கடன் உள்ளிட்ட மாற்றுகளுடன் உண்மையான தேதிகளின் பணப்புழக்கத்தை ஒப்பிடுங்கள்.
 
-## 7. ஏலச்சீட்டு யாருக்கு மிகவும் பொருத்தமானது? (Who is this Best Suited For?)
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
+<h2 id="who-chit-funds-suit">7. ஏலச்சீட்டு யாருக்கு மிகவும் பொருத்தமானது? (Who is this Best Suited For?)</h2>
 
 குறைந்த கடன் தகுதி மதிப்பெண் காரணமாக வழக்கமான கடன் கிடைப்பதில் சிரமம் உள்ளவர்கள் ஏலச்சீட்டை மாற்று நிதி ஏற்பாடாகப் பரிசீலிக்கலாம். ஆனால் தகுதி, உத்தரவாதம்/பிணையத் தேவை, ஏலத்தில் வெற்றி மற்றும் பணம் வழங்கும் நேரம் ஆகியவை நடத்துநர், ஒப்பந்தம் மற்றும் பொருந்தும் விதிகளைப் பொறுத்து மாறும்; கடன் கிடைப்பது உறுதி அல்ல.
 
@@ -188,7 +239,13 @@ keywords:
 
 > **முக்கியக் குறிப்பு:** கடன் பெற ஏலச்சீட்டு ஒரு நடைமுறை வழியே தவிர, செல்வத்தை உருவாக்குவதற்கான சிறந்த **முதலீட்டு வழி அல்ல**.
 
-## 8. ஒழுங்குமுறை மற்றும் அதிகாரப்பூர்வ இணைப்புகள் (Regulations & Official Links)
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
+<h2 id="chit-fund-regulations">8. ஒழுங்குமுறை மற்றும் அதிகாரப்பூர்வ இணைப்புகள் (Regulations & Official Links)</h2>
 
 இந்தியாவில் ஏலச்சீட்டு அமைப்புகள் **மத்திய சீட்டு நிதிச் சட்டம், 1982 (Chit Funds Act, 1982)** மற்றும் அந்தந்த மாநில அரசு விதிகளின் கீழ் கட்டுப்படுத்தப்படுகின்றன. எந்தச் சட்ட விதி, பதிவு நடைமுறை அல்லது ஏல வரம்பு பொருந்துகிறது என்பதைத் திட்டத்தின் விவரங்களையும் நடைமுறையிலுள்ள சட்டத்தையும் வைத்துச் சரிபார்க்க வேண்டும்.
 
@@ -202,7 +259,13 @@ keywords:
 * நிறுவனப் பதிவு, GST பதிவு அல்லது RBI-யின் வேறு வகைப் பதிவு இருப்பது மட்டும் அந்தக் குறிப்பிட்ட ஏலச்சீட்டிற்கு உரிய அனுமதி உள்ளது என்பதை நிரூபிக்காது. RBI அல்லது SEBI புகார் தளங்கள் எல்லா ஏலச்சீட்டுப் பிரச்சினைகளுக்கும் பொருந்தும் என்றும் கருத வேண்டாம்.
 * இது ஒழுங்குபடுத்தப்படாத வைப்பு அல்லது நிதி திரட்டும் திட்டம் எனச் சந்தேகம் இருந்தால், [RBI Sachet](https://sachet.rbi.org.in/) தளத்தில் புகார்/வழிகாட்டலைப் பார்க்கலாம்; எந்த அதிகார அமைப்பு பொருந்தும் என்பது திட்டத்தின் தன்மையைப் பொறுத்தது.
 
-## 9. சேர்வதற்கு முன் சரிபார்க்க வேண்டிய பட்டியல்
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
+<h2 id="chit-fund-checklist">9. சேர்வதற்கு முன் சரிபார்க்க வேண்டிய பட்டியல்</h2>
 
 1. **சீட்டு விவரங்கள்:** குறிப்பிட்ட சீட்டு/குழுவுக்கான பதிவு அல்லது அனுமதிச் சான்று, பதிவு எண் மற்றும் அதை உறுதிப்படுத்தும் அதிகாரப்பூர்வ வழியைப் பெறுங்கள்.
 2. **முழு ஒப்பந்தம்:** சீட்டு மதிப்பு, உறுப்பினர்கள், காலம், தவணைத் தேதி, ஏல நடைமுறை, அதிகபட்ச/குறைந்தபட்ச ஏல விதி, கமிஷன், செலவுகள் மற்றும் ஈவுத்தொகைப் பகிர்வு ஆகியவை தெளிவாக உள்ளனவா?
@@ -213,5 +276,10 @@ keywords:
 7. **தாங்கக்கூடிய தவணை:** வருமானம் குறைந்தாலும் அல்லது அவசரச் செலவு வந்தாலும் தவணை செலுத்த முடியுமா? அவசர நிதியை இதற்குப் பதிலாகப் பயன்படுத்த வேண்டாம்.
 8. **செலவு ஒப்பீடு:** கடன் தேவைப்பட்டால், ஏலச்சீட்டில் உண்மையில் பெறும் தொகை மற்றும் தேதிகளைத் தனிநபர் கடன் உள்ளிட்ட மாற்றுகளின் மொத்தச் செலவுடன் ஒப்பிடுங்கள். “குறைந்த வட்டி” அல்லது “உறுதியான லாபம்” என்ற வாய்மொழி வாக்குறுதியை மட்டும் நம்ப வேண்டாம்.
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 
 > இந்தக் கட்டுரை கல்வி மற்றும் விழிப்புணர்வு நோக்கத்திற்காக மட்டுமே; தனிப்பட்ட முதலீட்டு ஆலோசனை அல்ல. கணக்கீடுகளின் துல்லியம் அல்லது முழுமைக்கு உத்தரவாதமில்லை. முதலீடு அல்லது கடன் முடிவெடுப்பதற்கு முன் தகுதியான நிதி ஆலோசகரை அணுகவும்.

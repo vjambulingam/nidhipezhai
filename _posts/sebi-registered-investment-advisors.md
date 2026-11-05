@@ -3,6 +3,7 @@ title: SEBI பதிவு பெற்ற முதலீட்டு ஆல�
 description: SEBI பதிவு பெற்ற முதலீட்டு ஆலோசகர்களைப் பற்றிப் புரிந்துகொள்வோம்.
 date: 2026-10-05
 lastModified: 2026-10-16
+ogImage: "/assets/images/regular-vs-direct-mutual-funds-banner.jpg"
 topics:
   - நிதி ஆலோசனை
   - நிதி விழிப்புணர்வு

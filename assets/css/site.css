@@ -79,7 +79,6 @@ main[tabindex="-1"]:focus {
 
 .site-header { position: relative; z-index: 2; background: var(--white); border-bottom: 1px solid var(--line); }
 .site-header__inner { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.checklist-site-header .site-header__inner { gap: 18px; }
 .site-header__actions { display: flex; align-items: center; gap: 20px; }
 .brand { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; }
 .brand__mark { display: block; width: 54px; height: 54px; object-fit: contain; flex: 0 0 auto; }
@@ -95,10 +94,6 @@ main[tabindex="-1"]:focus {
 .theme-toggle:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
 .theme-toggle__icon--sun { display: none; }
 .theme-toggle__icon--moon { display: block; }
-.checklist-header__actions { display: flex; align-items: center; gap: 7px; flex: 0 0 auto; }
-.checklist-header__actions button { white-space: nowrap; }
-.checklist-header__actions #btnDownloadExcel { background-color: var(--ink) !important; }
-.checklist-header__actions #btnDownloadExcel:hover { background-color: #095e61 !important; }
 
 .checklist-page { background: var(--paper) !important; color: var(--ink-deep) !important; font-family: var(--body) !important; }
 .checklist-page h2, .checklist-page h3 { font-family: var(--display); }
@@ -758,13 +753,7 @@ main[tabindex="-1"]:focus {
   .site-nav { gap: 14px; font-size: 12.5px; }
   .theme-toggle { width: 32px; height: 32px; flex-basis: 32px; border-radius: 6px; }
   .theme-toggle svg { width: 16px; height: 16px; }
-  .checklist-site-header .site-header__inner { flex-wrap: wrap; gap: 8px 12px; padding-block: 9px; }
-  .checklist-site-header .brand { flex: 1 1 100%; min-width: 0; }
-  .checklist-site-header .site-nav { order: 2; margin-left: 52px; }
-  .checklist-header__actions { order: 3; margin-left: auto; }
-  .checklist-header__actions button { padding: 7px !important; font-size: 0 !important; }
-  .checklist-header__actions button svg { width: 16px; height: 16px; }
-  .hero__inner { min-height: 0; grid-template-columns: 1fr; gap: 27px; padding-block: 37px; }
+        .hero__inner { min-height: 0; grid-template-columns: 1fr; gap: 27px; padding-block: 37px; }
   .hero h1 { font-size: 28px; }
   .hero__summary { font-size: 15px; line-height: 1.7; }
   .featured { min-height: 205px; padding: 18px; }
@@ -809,7 +798,6 @@ main[tabindex="-1"]:focus {
   .site-nav__articles { display: none; }
   .theme-toggle { width: 30px; height: 30px; flex-basis: 30px; }
   .theme-toggle svg { width: 15px; height: 15px; }
-  .checklist-site-header .site-nav { margin-left: 42px; }
   .brand__tagline { display: none; }
   .hero__inner { gap: 14px; padding-block: 20px; }
   .hero__copy .eyebrow { margin-bottom: 9px; }
@@ -1697,3 +1685,72 @@ main[tabindex="-1"]:focus {
 [data-theme="dark"] .roadmap-rule p {
   color: #cbdad5;
 }
+
+/* Sub-header bars (breadcrumbs + tools) shared by calculator and checklist pages */
+.calc-toolbar {
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.calc-toolbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding-block: 8px;
+}
+
+.calc-toolbar__inner button { white-space: nowrap; }
+
+.calc-toolbar:not(.calc-toolbar--actions) + .calc-toolbar--actions { border-top: 0; }
+.calc-toolbar:not(.calc-toolbar--actions) { border-bottom-style: dashed; }
+
+.calc-toolbar__next {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  max-width: 100%;
+  color: #0D7377;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.calc-toolbar__next:hover { text-decoration: underline; }
+.calc-toolbar__next-label { color: #5b6b68; font-weight: 500; }
+@media (max-width: 680px) {
+  .calc-toolbar__next { margin-left: 0; flex: 1 0 100%; }
+}
+
+.calc-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  margin-right: auto;
+  color: #5b6b68;
+  font-size: 12.5px;
+}
+.calc-breadcrumbs a { color: #0D7377; text-decoration: none; }
+.calc-breadcrumbs a:hover { text-decoration: underline; }
+.calc-breadcrumbs [aria-current] { color: #334240; font-weight: 600; }
+
+.calc-toolbar--checklist #btnDownloadExcel { background-color: var(--ink) !important; color: #fff !important; }
+.calc-toolbar--checklist #btnDownloadExcel:hover { background-color: #095e61 !important; }
+
+@media (max-width: 680px) {
+  .calc-toolbar__inner button { gap: 0 !important; padding: 7px !important; font-size: 0 !important; }
+  .calc-toolbar__inner button svg { width: 16px; height: 16px; }
+}
+
+@media (max-width: 360px) {
+  .calc-toolbar__inner button { padding: 6px !important; }
+}
+
+[data-theme="dark"] .calc-toolbar { background-color: #132221; border-color: #263c3a; }
+[data-theme="dark"] .calc-breadcrumbs { color: #9db5ae; }
+[data-theme="dark"] .calc-breadcrumbs a,
+[data-theme="dark"] .calc-toolbar__next { color: #2dd4bf; }
+[data-theme="dark"] .calc-breadcrumbs [aria-current] { color: #e2f1ec; }
+[data-theme="dark"] .calc-toolbar__next-label { color: #9db5ae; }

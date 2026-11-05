@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="590" viewBox="0 0 1200 590" role="img" aria-labelledby="idx-act-title idx-act-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="idx-act-title idx-act-desc">
   <title id="idx-act-title">குறியீட்டு நிதித் திட்டம் vs செயலுள்ள மியூச்சுவல் நிதித் திட்டம் முழு ஒப்பீடு</title>
   <desc id="idx-act-desc">Index Funds vs. Active Mutual Funds Comparison: Passive Indexing vs Active Stock Picking, Expense Ratio Drag, Alpha &amp; Performance, Manager Risk &amp; Tracking Error, and Portfolio Allocation.</desc>
 
@@ -280,4 +280,5 @@
     <text x="56" y="49" class="footer-desc-tamil">பெரு முதல் (Large Cap) பிரிவில் Nifty 50 + Next 50 செயல் வேண்டா குறியீட்டு நிதிகளே உங்கள் 70% முதலீட்டுக்குச் சிறந்த அடித்தளம்!</text>
     <text x="56" y="65" class="footer-desc-tamil">அதிக செலவு விகிதத்தை (TER) தவிர்த்து சந்தை வளர்ச்சியைப் பெறுங்கள்; மிட்கேப் / ஸ்மால்கேப் பிரிவுகளில் மட்டுமே செயலுள்ள நிதித் திட்டங்கள் உகந்தவை.</text>
   </g>
+  <text id="brand-watermark" x="600" y="617" text-anchor="middle" font-family="'Noto Sans Tamil', 'Tamil Sangam MN', 'Latha', sans-serif" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">நிதிப்பேழை</text>
 </svg>

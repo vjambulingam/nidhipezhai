@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title description">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="540" viewBox="0 0 1200 540" role="img" aria-labelledby="title description">
   <title id="title">முதலீட்டுப் பயணத்தைத் திட்டமிட்டு தொடங்குங்கள்</title>
   <desc id="description">நிதி அடித்தளத்திலிருந்து இலக்கை நோக்கி படிப்படியாக உயர்ந்து செல்லும் பாதையும் வளர்ச்சியைக் குறிக்கும் வரைபடமும்.</desc>
   <defs>
@@ -54,4 +54,5 @@
       <text x="308" y="344">மதிப்பாய்வு</text>
     </g>
   </g>
+  <text id="brand-watermark" x="600" y="527" text-anchor="middle" font-family="'Noto Sans Tamil', 'Tamil Sangam MN', 'Latha', sans-serif" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">நிதிப்பேழை</text>
 </svg>

@@ -64,7 +64,7 @@ keywords:
 </div>
 
 <!-- ================= QUICK JUMP NAVIGATION ================= -->
-<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 20px; margin: 24px 0;">
+<div id="quick-jump" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 20px; margin: 24px 0;">
   <div style="font-weight: 700; color: #0D7377; font-size: 15px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
     <span>⚡ விரைவு வழிசெலுத்தல் (Quick Jump):</span>
   </div>
@@ -83,7 +83,7 @@ keywords:
 
 ---
 
-<img src="/assets/images/credit-card-optimization-and-traps-summary.svg" alt="கிரெடிட் கார்டு உத்திகள் மற்றும் 4 முக்கியக் கடன் பொறிகள்" width="1200" height="600" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
+<img src="/assets/images/credit-card-optimization-and-traps-summary.svg" alt="கிரெடிட் கார்டு உத்திகள் மற்றும் 4 முக்கியக் கடன் பொறிகள்" width="1200" height="640" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
 ---
 
@@ -111,6 +111,12 @@ keywords:
    - **வங்கிகளின் கிரெடிட் கார்டு லாபத்தில் 75% முதல் 85% வரை ஈட்டித் தருவது இந்தச் சுழல் பயனாளர்கள்தான்!** ஆண்டுக்கு 42% முதல் 49% வட்டி, தாமதக் கட்டணங்கள், ஓவர் லிமிட் கட்டணங்கள், மற்றும் அதன் மீதான 18% ஜிஎஸ்டி என இவர்கள் மூலம் வங்கிகள் கொழிக்கும்.
 
 > **உங்களின் இலக்கு:** நீங்கள் எப்போதும் ஒரு **'Transactor'** ஆக மட்டுமே இருக்க வேண்டும்; ஒருபோதும் வங்கிகளின் பொறிக்குள் சிக்கி **'Revolver'** ஆக மாறிவிடக் கூடாது!
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 
 ---
 
@@ -155,6 +161,12 @@ keywords:
 
 > **பாடம்:** வெறும் ₹1,000 பாக்கி வைத்ததற்காக அருண் செலுத்திய அபராத வட்டி ₹2,400-க்கு மேல் (பாக்கித் தொகையை விட 240% அதிகம்!). எனவே, கிரெடிட் கார்டில் எப்போதும் **முழுத் தொகையையும் 100% செலுத்த வேண்டும்.**
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="minimum-due-spiral">3. மினிமம் ட்யூ (Minimum Due) மரணச் சுழல் & 18.5 ஆண்டுகால அடிமைத்தனம்</h2>
@@ -189,6 +201,12 @@ keywords:
 - நீங்கள் வாங்கிய செல்போனோ, ஆடம்பரப் பொருளோ 3-4 ஆண்டுகளில் குப்பையாகிப் போயிருக்கும்; ஆனால் அதற்காக நீங்கள் 18 ஆண்டுகள் வட்டி கட்டிக் கொண்டிருப்பீர்கள்!
 - உங்கள் கிரெடிட் கார்டு கடனை அடைக்க எவ்வளவு காலம் ஆகும் என்பதை நேரடியாகக் கணக்கிட நமது [கடன் அட்டை நிலுவைத் தொகை அடைப்புக் கணிப்பேடு](../../calculators/credit-card-payoff-calculator.html) கருவியைப் பயன்படுத்துங்கள்.
 </details>
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 
 ---
 
@@ -232,6 +250,12 @@ keywords:
 
 > **நிதர்சனம்:** "வட்டியே இல்லாத தவணை" என்று நினைத்து வாங்கிய அருண், முழுப் பணம் செலுத்தி வாங்கியிருந்தால் ₹56,000-க்கு வாங்கியிருக்கலாம்; ஆனால் ஜீரோ காஸ்ட் EMI-ல் வாங்கியதால் அவருக்கு **₹4,707 ரூபாய் நஷ்டம்!**
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="reward-monetization">5. ரிவார்டு புள்ளிகளை உண்மையான பணமாக மாற்றுவது எப்படி? (Reward Monetization)</h2>
@@ -262,6 +286,12 @@ keywords:
 2. **மீட்புக் கட்டணம் (Redemption Fee):** ஒவ்வொரு முறை புள்ளிகளை மாற்றும்போதும் வங்கி ₹99 + 18% GST கட்டணம் வசூலிக்கும். எனவே ₹500 மதிப்புள்ள புள்ளிகளை மாற்றாமல், குறைந்தது ₹5,000 மதிப்பு சேரும் வரை காத்திருந்து மொத்தமாக மாற்றுங்கள்.
 3. **மதிப்பிழப்பு அலைகள் (Devaluations):** வங்கிகள் ஆண்டுக்கு ஒருமுறை தங்களின் ரிவார்டு விதிமுறைகளை முதலீட்டாளர்களுக்குத் தெரியாமல் மாற்றி அமைக்கும் (Devaluation). எனவே பெருமளவு புள்ளிகளைப் பதுக்கி வைக்காமல் உடனுக்குடன் பயன்படுத்துங்கள்.
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="other-hidden-traps">6. பிற மறைமுகக் கண்ணிவெடிகள் (Other Hidden Traps)</h2>
@@ -276,6 +306,12 @@ keywords:
 
 ### 3. டைனமிக் கரன்சி கன்வெர்ஷன் (Dynamic Currency Conversion - DCC):
 வெளிநாட்டு இணையதளங்களில் (Netflix US, Coursera, அல்லது வெளிநாட்டுப் பயணங்களில்) ஷாப்பிங் செய்யும்போது, "ரூபாயில் செலுத்தவா அல்லது டாலரில் செலுத்தவா?" என்று கேட்கும். நீங்கள் ரூபாயைத் தேர்வு செய்தால், வெளிநாட்டு வணிகர் 3% முதல் 5% வரை மோசமான மாற்று விகிதத்தை எடுப்பார்; மேலும் இந்திய வங்கியும் **1% + GST DCC கட்டணத்தை** வசூலிக்கும்! எப்போதும் **உள்ளூர் நாணயத்திலேயே (USD/EUR) செலுத்துங்கள்.**
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 
 ---
 
@@ -294,6 +330,12 @@ keywords:
 5. **விதி 5: உங்கள் முதல்/பழைய கார்டை ஒருபோதும் ரத்துச் செய்யாதீர்கள்:**
    - நீங்கள் 10 ஆண்டுகளாக வைத்திருக்கும் பழைய லைஃப்டைம் ஃப்ரீ கார்டை ரத்துச் செய்தால், உங்கள் கடன் வரலாறு (Credit History Length) குறைந்து சிபில் ஸ்கோர் சரியும். அதில் சிறிய ரீசார்ஜ் மட்டும் செய்து அதை உயிருடன் வைத்திருங்கள்.
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="debt-escape-plan">8. கிரெடிட் கார்டு கடனில் சிக்கியவர்கள் மீள்வது எப்படி? (Debt Escape Blueprint)</h2>
@@ -308,6 +350,12 @@ keywords:
    - அல்லது குறைந்த வட்டியில் **தனிநபர் கடன் (11% - 13%)** அல்லது தங்க நகைக் கடன் (9% - 10%) பெற்று, ஒரே நாளில் கிரெடிட் கார்டு கடனை முழுமையாக அடைத்துவிடுங்கள். இதன் மூலம் ஆண்டுக்கு 30% வட்டி உடனடியாக மிச்சமாகும்!
 3. **பனிப்பந்து உத்தி (Debt Snowball Method):**
    - பல கார்டுகளில் கடன் இருந்தால், மிகச் சிறிய பாக்கி உள்ள கார்டை முதலில் முழுமையாக அடைத்து மன அமைதியைப் பெறுங்கள்; பின்னர் பெரிய கடன்களை ஒவ்வொன்றாக முடியுங்கள்.
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 
 ---
 
@@ -352,6 +400,12 @@ keywords:
 உங்கள் அனுமதி இன்றி அல்லது ஓடிபி (OTP) பகிராமல் உங்கள் கார்டில் மோசடி நடந்தால், அது நடந்த <strong>3 வேலை நாட்களுக்குள்</strong> வங்கிக்குத் தகவல் தெரிவித்தால் உங்கள் பொறுப்பு பூஜ்ஜியம் (Zero Liability)! அந்தத் தொகைக்கான முழு இழப்பையும் வங்கியே ஏற்க வேண்டும். 4 முதல் 7 நாட்களுக்குள் தெரிவித்தால் அதிகபட்சமாக ₹10,000 வரை மட்டுமே உங்கள் பொறுப்பாகும்.
 </div>
 </details>
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 
 ---
 

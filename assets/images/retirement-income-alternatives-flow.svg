@@ -1,0 +1,216 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="alt-title alt-desc">
+  <title id="alt-title">ஓய்வூதிய வருமான மாற்றுகள் (Retirement Income Alternatives)</title>
+  <desc id="alt-desc">SCSS, RBI Floating Bonds, அஞ்சலக MIS மற்றும் மியூச்சுவல் ஃபண்ட் SWP ஆகியவற்றின் விரிவான ஒப்பீடு மற்றும் பக்கெட் உத்தி.</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700;800&amp;display=swap');
+      .font-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+    </style>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="600" rx="16" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Top Title Banner -->
+  <g class="font-tamil" transform="translate(40, 22)">
+    <rect width="1120" height="58" rx="12" fill="#0D7377"/>
+    <circle cx="34" cy="29" r="15" fill="#ffffff" opacity="0.2"/>
+    <text x="34" y="35" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle">📊</text>
+    <text x="65" y="36" fill="#ffffff" font-size="19" font-weight="700">ஓய்வூதிய வருமான மாற்றுகள் (Retirement Income Alternatives)</text>
+    <text x="1100" y="35" fill="#ccfbf1" font-size="13" font-weight="600" text-anchor="end">ஆனுவிட்டியுடன் ஒப்பிடும் போது உள்ள சிறந்த தேர்வுகள்</text>
+  </g>
+
+  <!-- 4 Alternative Cards -->
+  <g class="font-tamil">
+    <!-- OPTION 1: SCSS -->
+    <g transform="translate(40, 98)" filter="url(#cardShadow)">
+      <rect width="265" height="340" rx="12" fill="#ffffff" stroke="#10b981" stroke-width="1.8"/>
+      <rect width="265" height="46" rx="12" fill="#ecfdf5"/>
+      <rect x="0" y="28" width="265" height="18" fill="#ecfdf5"/>
+      <text x="132" y="22" fill="#065f46" font-size="13" font-weight="700" text-anchor="middle">1. மூத்த குடிமக்கள் திட்டம்</text>
+      <text x="132" y="38" fill="#047857" font-size="10.5" font-weight="600" text-anchor="middle">(SCSS - Govt of India)</text>
+
+      <!-- Pill -->
+      <g transform="translate(10, 54)">
+        <rect width="245" height="26" rx="6" fill="#d1fae5"/>
+        <text x="122" y="18" fill="#065f46" font-size="11" font-weight="700" text-anchor="middle">🛡️ 100% மத்திய அரசு உத்தரவாதம்</text>
+      </g>
+
+      <!-- Stats -->
+      <g transform="translate(14, 92)">
+        <text x="0" y="16" fill="#1e293b" font-size="11.5" font-weight="700">வட்டி விகிதம்:</text>
+        <text x="105" y="16" fill="#047857" font-size="13" font-weight="800">~8.2% p.a.</text>
+
+        <text x="0" y="42" fill="#1e293b" font-size="11.5" font-weight="700">வழங்கும் முறை:</text>
+        <text x="105" y="42" fill="#475569" font-size="11.5">காலாண்டுதோறும்</text>
+
+        <text x="0" y="68" fill="#1e293b" font-size="11.5" font-weight="700">முதலீட்டு வரம்பு:</text>
+        <text x="105" y="68" fill="#475569" font-size="11.5">₹30 லட்சம் (தனிநபர்)</text>
+
+        <text x="0" y="94" fill="#1e293b" font-size="11.5" font-weight="700">கால அளவு:</text>
+        <text x="105" y="94" fill="#475569" font-size="11.5">5 ஆண்டுகள் (+3 நீட்டிப்பு)</text>
+      </g>
+
+      <!-- Benefit Box -->
+      <g transform="translate(10, 224)">
+        <rect width="245" height="100" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+        <text x="12" y="20" fill="#15803d" font-size="11" font-weight="700">✓ சிறந்த பலன்:</text>
+        <text x="12" y="40" fill="#166534" font-size="10.5">• ஆனுவிட்டியை விட அதிக வட்டி</text>
+        <text x="12" y="60" fill="#166534" font-size="10.5">• தம்பதியர் ₹60L வரை சேமிக்கலாம்</text>
+        <text x="12" y="80" fill="#166534" font-size="10.5">• அசல் பணம் 100% பாதுகாப்பானது</text>
+      </g>
+    </g>
+
+    <!-- OPTION 2: RBI Floating Rate Bonds -->
+    <g transform="translate(325, 98)" filter="url(#cardShadow)">
+      <rect width="265" height="340" rx="12" fill="#ffffff" stroke="#0284c7" stroke-width="1.8"/>
+      <rect width="265" height="46" rx="12" fill="#f0f9ff"/>
+      <rect x="0" y="28" width="265" height="18" fill="#f0f9ff"/>
+      <text x="132" y="22" fill="#0369a1" font-size="13" font-weight="700" text-anchor="middle">2. RBI சேமிப்புப் பத்திரம்</text>
+      <text x="132" y="38" fill="#0284c7" font-size="10.5" font-weight="600" text-anchor="middle">(Floating Rate Bonds - FRSB)</text>
+
+      <!-- Pill -->
+      <g transform="translate(10, 54)">
+        <rect width="245" height="26" rx="6" fill="#e0f2fe"/>
+        <text x="122" y="18" fill="#0369a1" font-size="11" font-weight="700" text-anchor="middle">🏛️ 100% ரிசர்வ் வங்கி பாதுகாப்பு</text>
+      </g>
+
+      <!-- Stats -->
+      <g transform="translate(14, 92)">
+        <text x="0" y="16" fill="#1e293b" font-size="11.5" font-weight="700">வட்டி விகிதம்:</text>
+        <text x="105" y="16" fill="#0284c7" font-size="13" font-weight="800">8.05% p.a. (மாறும்)</text>
+
+        <text x="0" y="42" fill="#1e293b" font-size="11.5" font-weight="700">வழங்கும் முறை:</text>
+        <text x="105" y="42" fill="#475569" font-size="11.5">அரையாண்டுதோறும்</text>
+
+        <text x="0" y="68" fill="#1e293b" font-size="11.5" font-weight="700">முதலீட்டு வரம்பு:</text>
+        <text x="105" y="68" fill="#0284c7" font-size="11.5" font-weight="700">உச்சவரம்பு இல்லை!</text>
+
+        <text x="0" y="94" fill="#1e293b" font-size="11.5" font-weight="700">கால அளவு:</text>
+        <text x="105" y="94" fill="#475569" font-size="11.5">7 ஆண்டுகள்</text>
+      </g>
+
+      <!-- Benefit Box -->
+      <g transform="translate(10, 224)">
+        <rect width="245" height="100" rx="8" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1"/>
+        <text x="12" y="20" fill="#0369a1" font-size="11" font-weight="700">✓ சிறந்த பலன்:</text>
+        <text x="12" y="40" fill="#0284c7" font-size="10.5">• முதலீட்டு உச்சவரம்பு கிடையாது</text>
+        <text x="12" y="60" fill="#0284c7" font-size="10.5">• எவ்வளவு தொகையும் சேர்க்கலாம்</text>
+        <text x="12" y="80" fill="#0284c7" font-size="10.5">• சந்தைக்கேற்ப வட்டி உயரும் வசதி</text>
+      </g>
+    </g>
+
+    <!-- OPTION 3: Post Office MIS -->
+    <g transform="translate(610, 98)" filter="url(#cardShadow)">
+      <rect width="265" height="340" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+      <rect width="265" height="46" rx="12" fill="#f8fafc"/>
+      <rect x="0" y="28" width="265" height="18" fill="#f8fafc"/>
+      <text x="132" y="22" fill="#334155" font-size="13" font-weight="700" text-anchor="middle">3. அஞ்சலக MIS திட்டம்</text>
+      <text x="132" y="38" fill="#64748b" font-size="10.5" font-weight="600" text-anchor="middle">(Post Office Monthly Income)</text>
+
+      <!-- Pill -->
+      <g transform="translate(10, 54)">
+        <rect width="245" height="26" rx="6" fill="#f1f5f9"/>
+        <text x="122" y="18" fill="#475569" font-size="11" font-weight="700" text-anchor="middle">📮 அஞ்சலக நேரடிப் பாதுகாப்பு</text>
+      </g>
+
+      <!-- Stats -->
+      <g transform="translate(14, 92)">
+        <text x="0" y="16" fill="#1e293b" font-size="11.5" font-weight="700">வட்டி விகிதம்:</text>
+        <text x="105" y="16" fill="#334155" font-size="13" font-weight="800">~7.4% p.a.</text>
+
+        <text x="0" y="42" fill="#1e293b" font-size="11.5" font-weight="700">வழங்கும் முறை:</text>
+        <text x="105" y="42" fill="#475569" font-size="11.5">மாதந்தோறும் வரவு</text>
+
+        <text x="0" y="68" fill="#1e293b" font-size="11.5" font-weight="700">முதலீட்டு வரம்பு:</text>
+        <text x="105" y="68" fill="#475569" font-size="11.5">₹9L (தனி) / ₹15L (கூட்டு)</text>
+
+        <text x="0" y="94" fill="#1e293b" font-size="11.5" font-weight="700">கால அளவு:</text>
+        <text x="105" y="94" fill="#475569" font-size="11.5">5 ஆண்டுகள்</text>
+      </g>
+
+      <!-- Benefit Box -->
+      <g transform="translate(10, 224)">
+        <rect width="245" height="100" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+        <text x="12" y="20" fill="#334155" font-size="11" font-weight="700">✓ சிறந்த பலன்:</text>
+        <text x="12" y="40" fill="#64748b" font-size="10.5">• மாதாந்திர வட்டி வரவு உண்டு</text>
+        <text x="12" y="60" fill="#64748b" font-size="10.5">• தம்பதியர் ₹15L வரை சேமிக்கலாம்</text>
+        <text x="12" y="80" fill="#64748b" font-size="10.5">• அஞ்சலக எளிய நேரடிச் செயல்முறை</text>
+      </g>
+    </g>
+
+    <!-- OPTION 4: Mutual Fund SWP -->
+    <g transform="translate(895, 98)" filter="url(#cardShadow)">
+      <rect width="265" height="340" rx="12" fill="#ffffff" stroke="#8b5cf6" stroke-width="1.8"/>
+      <rect width="265" height="46" rx="12" fill="#f5f3ff"/>
+      <rect x="0" y="28" width="265" height="18" fill="#f5f3ff"/>
+      <text x="132" y="22" fill="#6d28d9" font-size="13" font-weight="700" text-anchor="middle">4. மியூச்சுவல் ஃபண்ட் SWP</text>
+      <text x="132" y="38" fill="#7c3aed" font-size="10.5" font-weight="600" text-anchor="middle">(Systematic Withdrawal Plan)</text>
+
+      <!-- Pill -->
+      <g transform="translate(10, 54)">
+        <rect width="245" height="26" rx="6" fill="#ede9fe"/>
+        <text x="122" y="18" fill="#6d28d9" font-size="11" font-weight="700" text-anchor="middle">📈 பணவீக்கத்தை வெல்லும் வளர்ச்சி</text>
+      </g>
+
+      <!-- Stats -->
+      <g transform="translate(14, 92)">
+        <text x="0" y="16" fill="#1e293b" font-size="11.5" font-weight="700">வருமான வாய்ப்பு:</text>
+        <text x="105" y="16" fill="#7c3aed" font-size="13" font-weight="800">~8% - 10% (சந்தை)</text>
+
+        <text x="0" y="42" fill="#1e293b" font-size="11.5" font-weight="700">வழங்கும் முறை:</text>
+        <text x="105" y="42" fill="#475569" font-size="11.5">மாதந்தோறும் திரும்பல்</text>
+
+        <text x="0" y="68" fill="#1e293b" font-size="11.5" font-weight="700">வரிச் சலுகை:</text>
+        <text x="105" y="68" fill="#047857" font-size="11.5" font-weight="700">மிக அதிகம் (Gains only)</text>
+
+        <text x="0" y="94" fill="#1e293b" font-size="11.5" font-weight="700">இடர் நிலை:</text>
+        <text x="105" y="94" fill="#d97706" font-size="11" font-weight="600">மிதமான சந்தை இடர்</text>
+      </g>
+
+      <!-- Benefit Box -->
+      <g transform="translate(10, 224)">
+        <rect width="245" height="100" rx="8" fill="#faf5ff" stroke="#ddd6fe" stroke-width="1"/>
+        <text x="12" y="20" fill="#6d28d9" font-size="11" font-weight="700">✓ சிறந்த பலன்:</text>
+        <text x="12" y="40" fill="#7c3aed" font-size="10.5">• மூலதன ஆதாயத்துக்கு மட்டுமே வரி</text>
+        <text x="12" y="60" fill="#7c3aed" font-size="10.5">• நீண்ட காலத்திற்கு அசல் வளரும்</text>
+        <text x="12" y="80" fill="#d97706" font-size="10.5">• (மிதமான சந்தை இடர் உண்டு)</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= BOTTOM SYNTHESIS BOX: BUCKET STRATEGY ================= -->
+  <g class="font-tamil" transform="translate(40, 455)">
+    <rect width="1120" height="120" rx="12" fill="#0f172a"/>
+    <text x="24" y="28" fill="#fbbf24" font-size="14" font-weight="700">💡 பரிந்துரைக்கப்பட்ட 'பக்கெட் அணுகுமுறை' (Smart Hybrid Retirement Strategy):</text>
+
+    <!-- 3 Mini Blocks -->
+    <!-- Block 1 -->
+    <g transform="translate(24, 40)">
+      <rect width="350" height="66" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" fill="#34d399" font-size="12" font-weight="700">1. உத்தரவாத தளம் (Floor Income)</text>
+      <text x="14" y="48" fill="#e2e8f0" font-size="11">SCSS + ஆனுவிட்டி (அத்தியாவசியச் செலவுகள்)</text>
+    </g>
+
+    <!-- Block 2 -->
+    <g transform="translate(390, 40)">
+      <rect width="350" height="66" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" fill="#a78bfa" font-size="12" font-weight="700">2. பணவீக்க வளர்ச்சி (Growth)</text>
+      <text x="14" y="48" fill="#e2e8f0" font-size="11">மியூச்சுவல் ஃபண்ட் SWP (நீண்ட கால வளர்ச்சி)</text>
+    </g>
+
+    <!-- Block 3 -->
+    <g transform="translate(755, 40)">
+      <rect width="340" height="66" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="24" fill="#38bdf8" font-size="12" font-weight="700">3. அவசர நிதி (Liquid Buffer)</text>
+      <text x="14" y="48" fill="#e2e8f0" font-size="11">1 - 2 ஆண்டு செலவுகள் வங்கி FD-யில்</text>
+    </g>
+  </g>
+  <text id="brand-watermark" x="600" y="627" text-anchor="middle" font-family="'Noto Sans Tamil', 'Tamil Sangam MN', 'Latha', sans-serif" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">நிதிப்பேழை</text>
+</svg>

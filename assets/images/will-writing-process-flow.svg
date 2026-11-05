@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img" aria-labelledby="flow-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="510" viewBox="0 0 1200 510" role="img" aria-labelledby="flow-desc">
   <desc id="flow-desc">படி 1: மனத்தகுதி அறிவிப்பு, படி 2: சொத்துப் பட்டியல், படி 3: நிறைவேற்றுநர் தேர்வு, படி 4: பயனாளிகள் ஒதுக்கீடு, படி 5: சாட்சிகள் கையொப்பம், படி 6: விருப்பப் பதிவு.</desc>
 
   <defs>
@@ -145,5 +145,6 @@
     <text x="170" y="118" class="step-text">படி 6: விருப்பப் பதிவு</text>
   </g>
 
+  <text id="brand-watermark" x="600" y="497" text-anchor="middle" font-family="'Noto Sans Tamil', 'Tamil Sangam MN', 'Latha', sans-serif" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">நிதிப்பேழை</text>
 </svg>
 

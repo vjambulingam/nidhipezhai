@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="cc-trap-title cc-trap-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="cc-trap-title cc-trap-desc">
   <title id="cc-trap-title">கிரெடிட் கார்டு உத்திகள் மற்றும் 4 முக்கியக் கடன் பொறிகள்</title>
   <desc id="cc-trap-desc">Credit Card Optimization and 4 Major Traps: 42% Revolving APR, Minimum Due Spiral, Zero-Cost EMI Hidden GST, and Reward Monetization.</desc>
 
@@ -244,5 +244,6 @@
     <text x="56" y="47" class="footer-desc-tamil">கிரெடிட் கார்டு என்பது பணப்பரிவர்த்தனைக் கருவி மட்டுமே; அது இலவசக் கூடுதல் வருமானம் அல்ல!</text>
     <text x="56" y="64" class="footer-desc-tamil">முழுப் பில் தொகையையும் குறித்த தேதிக்குள் செலுத்தி 45 நாள் வட்டி இல்லாச் சலுகையையும், ரிவார்டு புள்ளிகளையும் உங்கள் லாபமாக மாற்றுங்கள்; குறைந்தபட்சத் தொகையை மட்டும் ஒருபோதும் செலுத்தாதீர்கள்!</text>
   </g>
+  <text id="brand-watermark" x="600" y="627" text-anchor="middle" font-family="'Noto Sans Tamil', 'Tamil Sangam MN', 'Latha', sans-serif" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">நிதிப்பேழை</text>
 </svg>
 

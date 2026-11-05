@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="530" viewBox="0 0 1200 530" role="img" aria-labelledby="n50-title n50-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="570" viewBox="0 0 1200 570" role="img" aria-labelledby="n50-title n50-desc">
   <title id="n50-title">Nifty 50 + Nifty Next 50 இரட்டைக் கூட்டணி: இந்தியாவின் Nifty 100 Powerhouse!</title>
   <desc id="n50-desc">How combining Nifty 50 and Nifty Next 50 creates India's Nifty 100 powerhouse covering ~70% of market capitalization with low cost and zero manager bias.</desc>
 
@@ -234,5 +234,6 @@
     <text x="560" y="20" class="n-ftr-txt">🎯 தீர்ப்பு: செயலுள்ள பெரு முதல் நிதித் திட்டங்களுக்கு 1.5%–2% கட்டணம் செலுத்துவதைவிட,</text>
     <text x="560" y="37" class="n-ftr-txt">Nifty 50 + Next 50 இரட்டைக் கூட்டணி ~0.18% செலவில் இந்தியாவின் 70% சந்தையை முழுமையாகச் சொந்தமாக்குகிறது!</text>
   </g>
+  <text id="brand-watermark" x="600" y="557" text-anchor="middle" font-family="'Noto Sans Tamil', 'Tamil Sangam MN', 'Latha', sans-serif" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">நிதிப்பேழை</text>
 </svg>
 

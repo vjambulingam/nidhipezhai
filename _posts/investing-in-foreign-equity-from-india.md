@@ -67,7 +67,7 @@ keywords:
 </div>
 
 <!-- ================= QUICK JUMP NAVIGATION ================= -->
-<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 20px; margin: 24px 0;">
+<div id="quick-jump" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 20px; margin: 24px 0;">
   <div style="font-weight: 700; color: #0D7377; font-size: 15px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
     <span>⚡ விரைவு வழிசெலுத்தல் (Quick Jump):</span>
   </div>
@@ -104,13 +104,19 @@ keywords:
 ### 3. ஈடுசெய்ய முடியாத உலகளாவிய கண்டுபிடிப்பாளர்கள் (Non-Replicable Global Innovators):
 இந்தியப் பங்குச்சந்தையில் வங்கி, நிதி, ஐடி சர்வீசஸ், எப்எம்சிஜி, எண்ணெய் மற்றும் பார்மா துறைகள் ஆதிக்கம் செலுத்துகின்றன. ஆனால் அதிநவீன செயற்கை நுண்ணறிவு (Generative AI), விண்வெளித் தொழில்நுட்பம், கிளவுட் கம்ப்யூட்டிங், செமிகண்டக்டர் சிப் வடிவமைப்பு மற்றும் உலகளாவிய மின்-வணிகம் (Global E-Commerce) ஆகியவற்றில் கோலோச்சும் நிறுவனங்கள் இந்தியாவில் இல்லை. அவற்றின் பங்குகளை வாங்க அமெரிக்கச் சந்தையே ஒரே வழி.
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="three-routes">2. இந்தியாவிலிருந்து முதலீடு செய்யும் 3 முக்கிய வழிகள்</h2>
 
 இந்தியக் குடிமக்கள் சர்வதேசப் பங்குகளை அடைவதற்கு 3 முக்கியப் பாதைகள் உள்ளன:
 
-<img src="/assets/images/us-investing-routes-comparison.svg" alt="இந்தியாவிலிருந்து அமெரிக்கப் பங்குச்சந்தையில் முதலீடு செய்யும் 3 வழிகள் ஒப்பீடு" width="1200" height="620" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
+<img src="/assets/images/us-investing-routes-comparison.svg" alt="இந்தியாவிலிருந்து அமெரிக்கப் பங்குச்சந்தையில் முதலீடு செய்யும் 3 வழிகள் ஒப்பீடு" width="1200" height="660" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
 | ஒப்பீட்டு அளவுகோல் | வழி 1: இந்திய ஃபீடர் ஃபண்ட் (FoF) | வழி 2: நேரடி US புரோக்கர் (LRS) | வழி 3: GIFT City IFSC (NSE IX) |
 | :--- | :--- | :--- | :--- |
@@ -164,7 +170,7 @@ keywords:
 
 நீங்கள் நேரடியாக Apple, Microsoft, Nvidia, Tesla ஆகிய தனித்தனிப் பங்குகளையோ, அல்லது அமெரிக்காவின் புகழ்பெற்ற Vanguard S&P 500 ETF (VOO), Invesco QQQ போன்றவற்றை வாங்க விரும்பினால், **நேரடி அமெரிக்க புரோக்கர் கணக்கு** தொடங்குவதே சரியான வழி.
 
-<img src="/assets/images/direct-lrs-remittance-process.svg" alt="நேரடி LRS வெளிநாட்டுப் பணப்பரிமாற்ற நடைமுறை மற்றும் TCS விதிகள்" width="1140" height="570" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
+<img src="/assets/images/direct-lrs-remittance-process.svg" alt="நேரடி LRS வெளிநாட்டுப் பணப்பரிமாற்ற நடைமுறை மற்றும் TCS விதிகள்" width="1140" height="610" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
 #### 1. தாராளமயமாக்கப்பட்ட பணப்பரிமாற்றத் திட்டம் (LRS - Liberalised Remittance Scheme):
 - இந்திய ரிசர்வ் வங்கியின் (RBI) விதிகளின்படி, இந்தியாவில் வசிக்கும் ஒவ்வொரு தனிநபரும் (மைனர் குழந்தைகள் உட்பட) ஒரு நிதியாண்டில் (ஏப்ரல் 1 முதல் மார்ச் 31 வரை) அதிகபட்சமாக **$2,50,000 (சுமார் ₹2.1 கோடி)** வரை வெளிநாட்டிற்குப் பணமாக அனுப்ப முடியும்.
@@ -204,6 +210,12 @@ keywords:
 </div>
 </details>
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="w8ben-and-taxes">3. படிவம் W-8BEN & அமெரிக்கா - இந்தியா இரட்டை வரித் தவிர்ப்பு (DTAA)</h2>
@@ -237,6 +249,12 @@ keywords:
 </div>
 </details>
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="us-estate-tax-danger">4. அமெரிக்க எஸ்டேட் வரி (US Estate Tax): பலரும் அறியாத $60,000 மறைமுக ஆபத்து!</h2>
@@ -245,7 +263,7 @@ keywords:
 
 அமெரிக்காவில் **எஸ்டேட் வரி (Estate Tax)** என்ற ஒரு சட்டம் உண்டு. ஒரு முதலீட்டாளர் எதிர்பாராதவிதமாக இறந்துவிட்டால், அவரது பங்குகள் அவரது வாரிசுகளுக்கு மாற்றப்படும்போது அமெரிக்க அரசு இந்த வரியை வசூலிக்கிறது.
 
-<img src="/assets/images/us-estate-tax-comparison.svg" alt="அமெரிக்க எஸ்டேட் வரி (US Estate Tax) ஒப்பீடு மற்றும் $60,000 மறைமுக ஆபத்து" width="1140" height="580" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
+<img src="/assets/images/us-estate-tax-comparison.svg" alt="அமெரிக்க எஸ்டேட் வரி (US Estate Tax) ஒப்பீடு மற்றும் $60,000 மறைமுக ஆபத்து" width="1140" height="620" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
 - நீங்கள் ஆப்பிள், கூகுள் போன்ற நேரடிப் பங்குகளையோ அல்லது அமெரிக்காவில் பதிவு செய்யப்பட்ட Vanguard (VOO), SPDR (SPY) போன்ற அமெரிக்க ETFs-களையோ வாங்கி வைத்திருந்து, உங்கள் முதலீட்டுத் தொகுப்பின் மதிப்பு (Portfolio Value) $60,000-ஐத் (சுமார் ₹50 லட்சம்) தாண்டும்போது நீங்கள் இறக்க நேரிட்டால்:
 - **$60,000-க்கு மேற்பட்ட உங்கள் சொத்து மதிப்பில் 40% வரை அமெரிக்க அரசு வரியாகப் பிடித்துக்கொள்ளும்!** உங்கள் குடும்ப வாரிசுகளுக்கு மீதமுள்ள பணம் மட்டுமே போய்ச் சேரும்.
@@ -266,6 +284,12 @@ keywords:
 
 </div>
 </details>
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 
 ---
 
@@ -363,11 +387,17 @@ keywords:
 > **SIPC காப்பீட்டுப் பாதுகாப்பு (Safety of Funds):**
 > அமெரிக்க புரோக்கர் நிறுவனங்கள் (DriveWealth, Interactive Brokers போன்றவை) அமெரிக்காவின் **SIPC (Securities Investor Protection Corporation)** அமைப்பால் காப்பீடு செய்யப்பட்டுள்ளன. புரோக்கர் நிறுவனம் திவாலானாலும், ஒவ்வொரு முதலீட்டாளரின் கணக்கிற்கும் **$5,00,000 வரை (சுமார் ₹4.2 கோடி)** முழுமையான சட்டப் பாதுகாப்பு உண்டு!
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="action-plan">6. அமெரிக்க முதலீட்டைத் தொடங்குவதற்கான 5-படி செயல் திட்டம் (5-Step Action Plan)</h2>
 
-<img src="/assets/images/us-investing-5-step-action-plan.svg" alt="அமெரிக்க முதலீட்டைத் தொடங்குவதற்கான 5-படி செயல் திட்டம்" width="1140" height="620" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
+<img src="/assets/images/us-investing-5-step-action-plan.svg" alt="அமெரிக்க முதலீட்டைத் தொடங்குவதற்கான 5-படி செயல் திட்டம்" width="1140" height="660" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
 1. **படி 1: உங்கள் பாதையைத் தேர்வு செய்யுங்கள் (Route Selection):**
    - மாதம் ₹2,000 முதல் ₹25,000 வரை முதலீடு செய்பவரா? இந்திய ஃபீடர் ஃபண்டுகள் (Feeder FoF) வழியே தொடங்குங்கள்.
@@ -384,6 +414,12 @@ keywords:
 5. **படி 5: வரி ஆவணங்களைப் பராமரியுங்கள் (ITR Schedule FA Compliance):**
    - ஆண்டு இறுதியில் புரோக்கர் தரும் கணக்கு அறிக்கையைப் பெற்று, ITR-2 அல்லது ITR-3 தாக்கல் செய்து **Schedule FA** அட்டவணையில் வெளிநாட்டுச் சொத்து விவரங்களைக் கட்டாயம் அறிவிக்க வேண்டும்.
    - பிடித்தம் செய்யப்பட்ட 25% அமெரிக்க டிவிடெண்ட் வரிக்கு **படிவம் 67 (Form 67 - FTC)** தாக்கல் செய்து இந்திய வரியிலிருந்து விலக்குப் பெறுங்கள்.
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 
 ---
 
@@ -438,6 +474,12 @@ keywords:
 சந்தை நேரத்தைக் கணிக்க முயற்சிப்பது (Market Timing) வீண் வேலை. டாலர் மதிப்பு உயர்வு மற்றும் கூட்டு வட்டியின் ஆற்றல் ஆகியவை நீண்டகாலத்திலேயே முழுப் பலனைத் தரும். எனவே ஒவ்வொரு காலாண்டிலும் அல்லது ஆண்டுக்கு 1-2 முறை குறிப்பிட்ட தொகையைத் திட்டமிட்டு முதலீடு செய்யும் முறையான டாலர் செலவுச் சராசரி (Dollar Cost Averaging - DCA) முறையைப் பின்பற்றுவதே சிறந்தது.
 </div>
 </details>
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 
 ---
 

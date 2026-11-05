@@ -127,7 +127,7 @@
   },
   {
     "id": "large-cap",
-    "termTamil": "பெரு முதல் (Large Cap)",
+    "termTamil": "பெரு முதல்",
     "termEnglish": "Large Cap",
     "category": "முதலீடு & பங்குச்சந்தை",
     "letterTamil": "பெ",
@@ -141,7 +141,7 @@
   },
   {
     "id": "midcap",
-    "termTamil": "நடு முதல் (Midcap)",
+    "termTamil": "நடு முதல்",
     "termEnglish": "Mid Cap",
     "category": "முதலீடு & பங்குச்சந்தை",
     "letterTamil": "ந",
@@ -155,7 +155,7 @@
   },
   {
     "id": "smallcap",
-    "termTamil": "சிறு முதல் (Smallcap)",
+    "termTamil": "சிறு முதல்",
     "termEnglish": "Small Cap",
     "category": "முதலீடு & பங்குச்சந்தை",
     "letterTamil": "சி",
@@ -169,7 +169,7 @@
   },
   {
     "id": "micro-cap",
-    "termTamil": "குறு முதல் (Micro Cap)",
+    "termTamil": "குறு முதல்",
     "termEnglish": "Micro Cap",
     "category": "முதலீடு & பங்குச்சந்தை",
     "letterTamil": "நு",
@@ -183,7 +183,7 @@
   },
   {
     "id": "flexi-cap",
-    "termTamil": "நெகிழ்வு முதலீடு (Flexi Cap)",
+    "termTamil": "நெகிழ் முதல் முதலீடு",
     "termEnglish": "Flexi Cap Fund",
     "category": "முதலீடு & பங்குச்சந்தை",
     "letterTamil": "ந",
@@ -197,7 +197,7 @@
   },
   {
     "id": "multi-cap",
-    "termTamil": "பன்முக முதலீடு (Multi Cap)",
+    "termTamil": "பல்முதல் முதலீடு",
     "termEnglish": "Multi Cap Fund",
     "category": "முதலீடு & பங்குச்சந்தை",
     "letterTamil": "ப",
@@ -295,7 +295,7 @@
   },
   {
     "id": "sgb",
-    "termTamil": "இறையாண்மை தங்கப் பத்திரம் (SGB)",
+    "termTamil": "இறையாண்மை தங்கப் பத்திரம்",
     "termEnglish": "Sovereign Gold Bond (SGB)",
     "category": "முதலீடு & பங்குச்சந்தை",
     "letterTamil": "இ",
@@ -435,7 +435,7 @@
   },
   {
     "id": "emi",
-    "termTamil": "சமமான மாதாந்திர தவணை (EMI)",
+    "termTamil": "சமமான மாதாந்திர தவணை",
     "termEnglish": "Equated Monthly Installment (EMI)",
     "category": "கடன் & வங்கி",
     "letterTamil": "ச",
@@ -589,7 +589,7 @@
   },
   {
     "id": "encumbrance-certificate",
-    "termTamil": "வில்லங்கச் சான்றிதழ் (EC)",
+    "termTamil": "வில்லங்கச் சான்றிதழ்",
     "termEnglish": "Encumbrance Certificate (EC)",
     "category": "கடன் & வங்கி",
     "letterTamil": "வி",
@@ -1457,7 +1457,7 @@
   },
   {
     "id": "sebi-ria",
-    "termTamil": "செபி பதிவுபெற்ற முதலீட்டு ஆலோசகர் (SEBI RIA)",
+    "termTamil": "செபி பதிவுபெற்ற முதலீட்டு ஆலோசகர்",
     "termEnglish": "SEBI Registered Investment Advisor (RIA)",
     "category": "முதலீடு & பங்குச்சந்தை",
     "letterTamil": "செ",
@@ -1541,7 +1541,7 @@
   },
   {
     "id": "spiva",
-    "termTamil": "ஸ்பைவா அறிக்கை (SPIVA)",
+    "termTamil": "ஸ்பைவா அறிக்கை",
     "termEnglish": "S&P Indices Versus Active (SPIVA)",
     "category": "முதலீடு & பங்குச்சந்தை",
     "letterTamil": "ஸ",
@@ -1877,7 +1877,7 @@
   },
   {
     "id": "stcg",
-    "termTamil": "குறுகிய கால மூலதன ஆதாயம் (STCG)",
+    "termTamil": "குறுகிய கால மூலதன ஆதாயம்",
     "termEnglish": "Short Term Capital Gains (STCG)",
     "category": "முதலீடு & பங்குச்சந்தை",
     "letterTamil": "கு",
@@ -2221,8 +2221,22 @@
     "definition": "ஒரு காப்பீட்டு நிறுவனத்திடம் மொத்தமாக ஒரு பெரும் தொகையைச் செலுத்திய பிறகு, முதலீட்டாளரின் வாழ்நாள் முழுவதும் (அல்லது குறிப்பிட்ட காலத்திற்கு) மாதாந்திர, காலாண்டு அல்லது ஆண்டு அடிப்படையில் தொடர்ச்சியாக உத்தரவாதத்துடன் வழங்கப்படும் நிலையான ஓய்வூதிய ஒப்பந்தம். NPS ஓய்வூதிய நிதியில் 40% தொகையைக் கொண்டு இத்தகைய அன்னுயிட்டி வாங்குவது கட்டாயமாகும்.",
     "example": "60 வயதில் ஓய்வு பெறும்போது ₹50 லட்சத்திற்கு 'Life Annuity with Return of Purchase Price' வாங்கினால், வாழ்நாள் முழுவதும் மாதம் சுமார் ₹28,000 உத்தரவாத ஓய்வூதியம் கிடைக்கும்; மறைவுக்குப் பின் அசல் ₹50 லட்சம் வாரிசுக்குத் திரும்பக் கிடைக்கும்.",
     "relatedLink": {
-      "title": "ஓய்வூதிய நிதித் திட்டமிடல் கணிப்பேடு",
-      "url": "/calculators/retirement-calculator.html"
+      "title": "ஆனுவிட்டி (Annuity) ஓய்வூதியத் திட்டங்கள் முழுமையான வழிகாட்டி",
+      "url": "/articles/annuity-plans-guide-india/"
+    }
+  },
+  {
+    "id": "annuity-service-providers",
+    "termTamil": "தவணை ஓய்வூதியத் திட்ட சேவை வழங்குநர்கள்",
+    "termEnglish": "Annuity Service Providers (ASP)",
+    "category": "காப்பீடு",
+    "letterTamil": "த",
+    "letterEnglish": "A",
+    "definition": "இந்தியாவில் IRDAI மற்றும் ஓய்வூதிய ஒழுங்குமுறை ஆணையத்தால் (PFRDA) அங்கீகரிக்கப்பட்டு, சந்தாதாரர்களுக்கு (குறிப்பாக NPS ஓய்வுபெறுபவர்களுக்கு) தவணை ஓய்வூதியத் திட்டங்களை (Annuity) வழங்கி, வாழ்நாள் முழுவதும் மாதந்தோறும் தவறாமல் ஓய்வூதியம் வழங்கும் அதிகாரப்பூர்வ ஆயுள் காப்பீட்டு நிறுவனங்கள்.",
+    "example": "ஒருவர் தனது 60 வயதில் NPS கணக்கிலிருந்து ஓய்வு பெறும்போது, PFRDA பட்டியலிட்டுள்ள LIC, SBI Life, HDFC Life போன்ற அங்கீகரிக்கப்பட்ட தவணை ஓய்வூதிய சேவை வழங்குநர்களில் (ASP) ஒருவரைத் தேர்ந்தெடுத்து தனது ஓய்வூதிய பாலிசியைப் பெறுதல்.",
+    "relatedLink": {
+      "title": "ஆனுவிட்டி (Annuity) ஓய்வூதியத் திட்டங்கள் முழுமையான வழிகாட்டி",
+      "url": "/articles/annuity-plans-guide-india/"
     }
   },
   {

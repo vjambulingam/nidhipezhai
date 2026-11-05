@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="530" viewBox="0 0 1200 530" role="img" aria-labelledby="cs-title cs-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="570" viewBox="0 0 1200 570" role="img" aria-labelledby="cs-title cs-desc">
   <title id="cs-title">சந்தை செயல்திறன் மற்றும் நவீன கோர்-சாட்டிலைட் முதலீட்டு உத்தி</title>
   <desc id="cs-desc">Market Efficiency across Large, Mid, and Small Cap segments, and the modern Core and Satellite portfolio strategy allocating 70% to passive index funds and 30% to active satellite funds.</desc>
 
@@ -195,4 +195,5 @@
     <text x="560" y="20" class="cs-ftr-txt">💡 பொன்மொழி: 70% செல்வத்தை செயல் வேண்டா குறியீட்டு நிதிகளிலும் (Core),</text>
     <text x="560" y="37" class="cs-ftr-txt">30% தொகையை ஆல்ஃபா வாய்ப்புள்ள சிறிய நிறுவன செயலுள்ள நிதித் திட்டங்களிலும் (Satellite) முதலீடு செய்வதே தலைசிறந்த உத்தி!</text>
   </g>
+  <text id="brand-watermark" x="600" y="557" text-anchor="middle" font-family="'Noto Sans Tamil', 'Tamil Sangam MN', 'Latha', sans-serif" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">நிதிப்பேழை</text>
 </svg>

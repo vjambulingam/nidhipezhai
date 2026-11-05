@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="535" viewBox="0 0 1200 535" role="img" aria-labelledby="sec-title sec-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="575" viewBox="0 0 1200 575" role="img" aria-labelledby="sec-title sec-desc">
   <title id="sec-title">அவசர காலக் கையேடு (ICE KIT) - 8 முக்கியப் பிரிவுகள்</title>
   <desc id="sec-desc">அவசரத் தொடர்பு, அடையாள ஆவணங்கள், மருத்துவக் காப்பீடு, வங்கிக் கணக்குகள், முதலீடுகள், சொத்துகள், டிஜிட்டல் சொத்துகள் மற்றும் உயில் ஆகிய 8 முக்கியப் பிரிவுகள்.</desc>
 
@@ -187,4 +187,5 @@
     <text x="47" y="145" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="18" font-weight="700">விருப்பக் கடிதம்</text>
   </g>
 
+  <text id="brand-watermark" x="600" y="562" text-anchor="middle" font-family="'Noto Sans Tamil', 'Tamil Sangam MN', 'Latha', sans-serif" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">நிதிப்பேழை</text>
 </svg>

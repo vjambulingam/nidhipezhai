@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="570" viewBox="0 0 1140 570" role="img" aria-labelledby="lrs-flow-title lrs-flow-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="610" viewBox="0 0 1140 610" role="img" aria-labelledby="lrs-flow-title lrs-flow-desc">
   <title id="lrs-flow-title">நேரடி LRS வெளிநாட்டுப் பணப்பரிமாற்ற நடைமுறை மற்றும் TCS விதிகள்</title>
   <desc id="lrs-flow-desc">Flowchart of Direct LRS Remittance from Indian Bank via Form A2 to US Broker and 20% TCS Thresholds</desc>
 
@@ -308,4 +308,5 @@
       <text x="172" y="37" class="tip-line">ஆண்டுக்கு மொத்தம் ₹14 லட்சம் வரை 0% TCS வரம்பிற்குள் எவ்வித பண முடக்கமுமின்றி முதலீடு செய்யலாம்!</text>
     </g>
   </g>
+  <text id="brand-watermark" x="570" y="597" text-anchor="middle" font-family="'Noto Sans Tamil', 'Tamil Sangam MN', 'Latha', sans-serif" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">நிதிப்பேழை</text>
 </svg>

@@ -3,6 +3,7 @@ title: வங்கி நிதிப் பொருட்கள்
 description: நடப்புக் கணக்கு, சேமிப்புக் கணக்கு, மிகைப்பற்று, அட்டை, இணைய மற்றும் கைபேசி வங்கி, காசோலை, கேட்பு வரைவோலை ஆகியவற்றைப் புரிந்துகொள்வோம்.
 date: 2026-09-26
 lastModified: 2026-10-16
+ogImage: "/assets/images/credit-card-optimization-and-traps-banner.jpg"
 topics:
   - சேமிப்பு
   - வங்கி

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="620" viewBox="0 0 1140 620" role="img" aria-labelledby="plan-title plan-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="660" viewBox="0 0 1140 660" role="img" aria-labelledby="plan-title plan-desc">
   <title id="plan-title">அமெரிக்க முதலீட்டைத் தொடங்குவதற்கான 5-படி செயல் திட்டம்</title>
   <desc id="plan-desc">Step-by-step 5-stage action plan for Indian investors: Route Selection, KYC &amp; W-8BEN, LRS Remittance, Index Portfolio &amp; Irish ETFs, and ITR Schedule FA Compliance.</desc>
 
@@ -259,4 +259,5 @@
     <text x="946" y="35" class="highlight-badge-title" fill="#b91c1c">Schedule FA &amp; படிவம் 67 FTC</text>
     <text x="946" y="52" class="highlight-badge-sub" fill="#991b1b">₹10L அபராதம் தவிர்ப்பு &amp; ரீஃபண்ட்</text>
   </g>
+  <text id="brand-watermark" x="570" y="647" text-anchor="middle" font-family="'Noto Sans Tamil', 'Tamil Sangam MN', 'Latha', sans-serif" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">நிதிப்பேழை</text>
 </svg>

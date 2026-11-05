@@ -3,6 +3,7 @@ title: கடன் நிதிப் பொருட்கள்
 description: கிரெடிட் கார்டு, வீடு, வாகனம், கல்வி, தனிநபர், தங்கம், தொழில், விவசாயம் மற்றும் பத்திரங்களுக்கு எதிரான கடன்களைப் புரிந்துகொள்வோம்.
 date: 2026-09-26
 lastModified: 2026-10-16
+ogImage: "/assets/images/home-loan-prepayment-vs-mutual-fund-banner.jpg"
 topics:
   - கடன்
   - கடன் மேலாண்மை

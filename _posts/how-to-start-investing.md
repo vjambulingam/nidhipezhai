@@ -26,7 +26,7 @@ keywords:
 
 இந்த வழிகாட்டி பொதுவான கல்வித் தகவல் மட்டுமே; குறிப்பிட்ட முதலீட்டை வாங்குவதற்கான தனிப்பட்ட பரிந்துரை அல்ல.
 
-<img src="/assets/images/investing-journey-banner.svg" alt="நிதி அடித்தளத்திலிருந்து இலக்கை நோக்கி, முதலீட்டைத் திட்டமிட்டுப் படிப்படியாகத் தொடங்கும் பயணம்" width="1200" height="500" style="display:block;max-width:100%;height:auto">
+<img src="/assets/images/investing-journey-banner.svg" alt="நிதி அடித்தளத்திலிருந்து இலக்கை நோக்கி, முதலீட்டைத் திட்டமிட்டுப் படிப்படியாகத் தொடங்கும் பயணம்" width="1200" height="540" style="display:block;max-width:100%;height:auto">
 
 ---
 

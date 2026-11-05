@@ -3,6 +3,7 @@ title: பங்குசார் மற்றும் சந்தை சா�
 description: பரஸ்பர நிதி, பங்குகள், Futures/Options, REITs மற்றும் InvITs எவ்வாறு வேறுபடுகின்றன?
 date: 2026-09-26
 lastModified: 2026-10-16
+ogImage: "/assets/images/index-funds-vs-active-mutual-funds-banner.jpg"
 topics:
   - முதலீடு
   - பங்குச்சந்தை

@@ -64,37 +64,49 @@
 </head>
 <body class="min-h-screen flex flex-col justify-between antialiased checklist-page">
   <a class="skip-link" href="#main-content">முதன்மை உள்ளடக்கத்திற்குத் தாவவும்</a>
-  <header class="site-header checklist-site-header">
-    <div class="wrap site-header__inner">
-      <a class="brand" href="{{ '/index.html' | url }}" aria-label="{{ site.title }} முகப்பு">
-        <img class="brand__mark" src="{{ '/assets/images/nidhipezhai-logo.svg' | url }}" alt="">
-        <span class="brand__text">
-          <span class="brand__name">{{ site.title }}</span>
-          <span class="brand__tagline">{{ site.tagline }}</span>
-        </span>
-      </a>
-      <nav class="site-nav" aria-label="முதன்மை வழிசெலுத்தல்">
-        <a class="site-nav__articles" href="{{ '/index.html#articles' | url }}">கட்டுரைகள்</a>
-        <a class="site-nav__tool" href="{{ '/calculators/' | url }}">கணிப்பேடுகள்</a>
-        <a class="site-nav__checklists" href="{{ '/checklists/' | url }}">சரிபார்ப்புப் பட்டியல்கள்</a>
+  {% include "partials/site-header.njk" %}
+  {% set checklistCategory = "" %}
+  {% set checklistGroupId = "" %}
+  {% for group in checklists %}
+    {% set groupIndex = loop.index %}
+    {% for item in group.items %}
+      {% if item.url == page.url %}
+        {% set checklistCategory = group.category %}
+        {% set checklistGroupId = groupIndex %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+  <div class="calc-toolbar no-print">
+    <div class="wrap calc-toolbar__inner">
+      <nav class="calc-breadcrumbs" aria-label="நீங்கள் இருக்கும் இடம்">
+        <a href="{{ '/' | url }}">முகப்பு</a>
+        <span aria-hidden="true">/</span>
+        <a href="{{ '/checklists/' | url }}">சரிபார்ப்புப் பட்டியல்கள்</a>
+        {% if checklistCategory %}
+        <span aria-hidden="true">/</span>
+        <a href="{{ '/checklists/' | url }}#checklist-group-{{ checklistGroupId }}">{{ checklistCategory }}</a>
+        {% endif %}
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">{{ title }}</span>
       </nav>
-      <div class="checklist-header__actions no-print">
-        {% include "partials/theme-toggle.njk" %}
+    </div>
+  </div>
+  <div class="calc-toolbar calc-toolbar--actions calc-toolbar--checklist no-print">
+    <div class="wrap calc-toolbar__inner">
         {% set shareVariant = "icons-only" %}
         {% include "partials/social-share.njk" %}
-        <button id="btnPrint" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors border border-slate-300">
+        <button id="btnPrint" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors border border-slate-300">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
           <span>அச்சிடு</span>
         </button>
-        <button id="btnDownloadExcel" type="button" class="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg shadow-sm transition-colors">
+        <button id="btnDownloadExcel" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg shadow-sm transition-colors">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM6 20V4h7v5h5v11H6zm10-7.5l-2.2 3.5 2.2 3.5h-1.6l-1.4-2.4-1.4 2.4H10l2.2-3.5L10 12.5h1.6l1.4 2.3 1.4-2.3H16z"/>
           </svg>
           <span>Excel பதிவிறக்கம்</span>
         </button>
-      </div>
     </div>
-  </header>
+  </div>
 
   {{ content | safe }}
 

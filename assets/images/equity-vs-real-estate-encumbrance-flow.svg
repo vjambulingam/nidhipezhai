@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="580" viewBox="0 0 1200 580" role="img" aria-labelledby="comp-title comp-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="690" viewBox="0 0 1200 690" role="img" aria-labelledby="comp-title comp-desc">
   <title id="comp-title">பங்குச்சந்தை vs ரியல் எஸ்டேட்: வில்லங்க அபாய ஒப்பீடு</title>
   <desc id="comp-desc">பங்குச்சந்தையின் அடையாளமற்ற தீர்வு (Zero Encumbrance) vs ரியல் எஸ்டேட்டின் தலைமுறைச் சுமைகள் (High Encumbrance Risk) ஒப்பீட்டு விளக்கப்படம்.</desc>
 
@@ -19,24 +19,24 @@
       }
       .col-title {
         font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
-        font-size: 19px;
+        font-size: 16px;
         font-weight: 700;
       }
       .badge-text {
         font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
-        font-size: 12px;
+        font-size: 10px;
         font-weight: 700;
-        letter-spacing: 0.3px;
+        letter-spacing: 0.1px;
       }
       .step-head {
         font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
-        font-size: 14.5px;
+        font-size: 13px;
         font-weight: 700;
         fill: #1e293b;
       }
       .step-body {
         font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
-        font-size: 12.5px;
+        font-size: 11px;
         font-weight: 500;
         fill: #475569;
       }
@@ -47,7 +47,7 @@
       }
       .takeaway-desc {
         font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
-        font-size: 12px;
+        font-size: 10px;
         font-weight: 600;
         line-height: 1.4;
       }
@@ -81,7 +81,7 @@
   </defs>
 
   <!-- Background Base Canvas -->
-  <rect width="1200" height="580" rx="18" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <rect width="1200" height="650" rx="18" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
 
   <!-- Top Banner Header -->
   <rect x="2" y="2" width="1196" height="85" rx="16" fill="url(#headerGrad)"/>
@@ -95,109 +95,122 @@
   <!-- ================= LEFT COLUMN: EQUITY SHARES (ZERO ENCUMBRANCE) ================= -->
   <g transform="translate(30, 105)" filter="url(#shadow)">
     <!-- Column Card Frame -->
-    <rect width="555" height="445" rx="14" fill="url(#equityCardGrad)" stroke="#bbf7d0" stroke-width="1.8"/>
+    <rect width="555" height="520" rx="14" fill="url(#equityCardGrad)" stroke="#bbf7d0" stroke-width="1.8"/>
     <!-- Top Accent Bar -->
     <rect width="555" height="6" rx="3" fill="#059669"/>
 
     <!-- Column Header -->
-    <text x="24" y="38" class="col-title" fill="#065f46">பங்குச்சந்தை (Equity Shares / Mutual Funds)</text>
+    <text x="24" y="38" class="col-title" fill="#065f46">பங்குச்சந்தை (Equity)</text>
     
     <!-- Badge -->
-    <rect x="365" y="20" width="168" height="26" rx="13" fill="#dcfce7" stroke="#86efac" stroke-width="1.2"/>
-    <circle cx="378" cy="33" r="5" fill="#16a34a"/>
-    <text x="390" y="37" class="badge-text" fill="#15803d">பூஜ்ஜிய வில்லங்க அபாயம்</text>
+    <rect x="344" y="20" width="189" height="26" rx="13" fill="#dcfce7" stroke="#86efac" stroke-width="1.2"/>
+    <circle cx="357" cy="33" r="5" fill="#16a34a"/>
+    <text x="369" y="37" class="badge-text" fill="#15803d">பூஜ்ஜிய வில்லங்க அபாயம்</text>
 
     <!-- STEP 1 -->
-    <rect x="22" y="62" width="511" height="68" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
-    <circle cx="50" cy="96" r="16" fill="#ecfdf5"/>
-    <text x="50" y="101" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#059669" text-anchor="middle">1</text>
-    <text x="78" y="86" class="step-head">வாங்குபவர் ஆணை &amp; நிதி மாற்றம் (Order &amp; Funds)</text>
-    <text x="78" y="106" class="step-body">உங்கள் வங்கிக் கணக்கிலிருந்து பங்குத் தரகர் மூலம் நிதி செலுத்தப்படுகிறது.</text>
+    <rect x="22" y="62" width="511" height="84" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+    <circle cx="50" cy="104" r="16" fill="#ecfdf5"/>
+    <text x="50" y="109" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#059669" text-anchor="middle">1</text>
+    <text x="78" y="82" class="step-head">வாங்குபவர் ஆணை &amp; நிதி மாற்றம் (Order &amp; Funds)</text>
+    <text x="78" y="101" class="step-body">உங்கள் வங்கிக் கணக்கிலிருந்து பங்குத் தரகர் மூலம்</text>
+    <text x="78" y="116" class="step-body">நிதி செலுத்தப்படுகிறது.</text>
 
     <!-- Arrow 1 -> 2 -->
-    <path d="M 277 132 L 277 142" stroke="#059669" stroke-width="2" marker-end="url(#arrowGreen)"/>
+    <path d="M 277 148 L 277 158" stroke="#059669" stroke-width="2" marker-end="url(#arrowGreen)"/>
 
     <!-- STEP 2 (The Key Mechanism) -->
-    <rect x="22" y="146" width="511" height="78" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
-    <circle cx="50" cy="185" r="16" fill="#dcfce7"/>
-    <text x="50" y="190" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#059669" text-anchor="middle">2</text>
-    <text x="78" y="170" class="step-head">கிளியரிங் கார்ப்பரேஷன் தீர்வு (ICCL / NSE Clearing)</text>
-    <text x="78" y="190" class="step-body">பங்குகளின் முந்தைய அடையாளம் முற்றிலுமாக அழிக்கப்படுகிறது (<tspan font-weight="700" fill="#047857">Fungible Asset</tspan>).</text>
-    <text x="78" y="208" class="step-body">விற்பவர் யார், அவரின் குடும்பப் பிரச்சினைகள் என்ன என்பது மறைந்துவிடும்.</text>
+    <rect x="22" y="162" width="511" height="108" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+    <circle cx="50" cy="216" r="16" fill="#dcfce7"/>
+    <text x="50" y="221" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#059669" text-anchor="middle">2</text>
+    <text x="78" y="182" class="step-head">கிளியரிங் கார்ப்பரேஷன் தீர்வு (ICCL / NSE Clearing)</text>
+    <text x="78" y="201" class="step-body">பங்குகளின் முந்தைய அடையாளம் முற்றிலுமாக</text>
+    <text x="78" y="216" class="step-body">அழிக்கப்படுகிறது (<tspan font-weight="700" fill="#047857">Fungible Asset</tspan>).</text>
+    <text x="78" y="231" class="step-body">விற்பவர் யார், அவரின் குடும்பப் பிரச்சினைகள்</text>
+    <text x="78" y="246" class="step-body">என்ன என்பது மறைந்துவிடும்.</text>
 
     <!-- Arrow 2 -> 3 -->
-    <path d="M 277 226 L 277 236" stroke="#059669" stroke-width="2" marker-end="url(#arrowGreen)"/>
+    <path d="M 277 272 L 277 282" stroke="#059669" stroke-width="2" marker-end="url(#arrowGreen)"/>
 
     <!-- STEP 3 -->
-    <rect x="22" y="240" width="511" height="68" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
-    <circle cx="50" cy="274" r="16" fill="#ecfdf5"/>
-    <text x="50" y="279" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#059669" text-anchor="middle">3</text>
-    <text x="78" y="264" class="step-head">டீமேட் கணக்கில் நேரடி வரவு (Final Settlement)</text>
-    <text x="78" y="284" class="step-body">பரிவர்த்தனை முடிந்த மறுநொடி பங்குகள் 100% முழுமையாக உங்களுக்குச் சொந்தம்.</text>
+    <rect x="22" y="286" width="511" height="84" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+    <circle cx="50" cy="328" r="16" fill="#ecfdf5"/>
+    <text x="50" y="333" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#059669" text-anchor="middle">3</text>
+    <text x="78" y="306" class="step-head">டீமேட் கணக்கில் நேரடி வரவு (Final Settlement)</text>
+    <text x="78" y="325" class="step-body">பரிவர்த்தனை முடிந்த மறுநொடி பங்குகள் 100%</text>
+    <text x="78" y="340" class="step-body">முழுமையாக உங்களுக்குச் சொந்தம்.</text>
 
     <!-- Takeaway Summary Box -->
-    <rect x="22" y="324" width="511" height="100" rx="10" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1.5"/>
+    <rect x="22" y="380" width="511" height="126" rx="10" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1.5"/>
     <!-- Shield Check Icon -->
-    <circle cx="52" cy="374" r="18" fill="#10b981"/>
-    <path d="M 45 374 L 50 379 L 59 370" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <text x="82" y="352" class="takeaway-title" fill="#065f46">சட்டப் பாதுகாப்பு நிலை (Legal Immunity):</text>
-    <text x="82" y="374" class="takeaway-desc" fill="#047857">முந்தைய உரிமையாளரின் தனிப்பட்ட வங்கிக் கடன்கள், விவாகரத்து வழக்குகள்</text>
-    <text x="82" y="394" class="takeaway-desc" fill="#047857">அல்லது குடும்ப வாரிசுச் சண்டைகளுக்காக உங்கள் டீமேட் பங்குகளை எந்த</text>
-    <text x="82" y="414" class="takeaway-desc" fill="#047857">நீதிமன்றமும் ஒருபோதும் முடக்கவோ (Attach) அல்லது பறிக்கவோ முடியாது!</text>
+    <circle cx="52" cy="443" r="18" fill="#10b981"/>
+    <path d="M 45 443 L 50 448 L 59 439" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="82" y="401" class="takeaway-title" fill="#065f46">சட்டப் பாதுகாப்பு நிலை (Legal Immunity):</text>
+    <text x="82" y="421" class="takeaway-desc" fill="#047857">முந்தைய உரிமையாளரின் தனிப்பட்ட வங்கிக் கடன்கள்,</text>
+    <text x="82" y="434" class="takeaway-desc" fill="#047857">விவாகரத்து வழக்குகள் அல்லது குடும்ப வாரிசுச்</text>
+    <text x="82" y="447" class="takeaway-desc" fill="#047857">சண்டைகளுக்காக உங்கள் டீமேட் பங்குகளை எந்த</text>
+    <text x="82" y="460" class="takeaway-desc" fill="#047857">நீதிமன்றமும் ஒருபோதும் முடக்கவோ (Attach)</text>
+    <text x="82" y="473" class="takeaway-desc" fill="#047857">அல்லது பறிக்கவோ முடியாது!</text>
   </g>
 
   <!-- ================= RIGHT COLUMN: REAL ESTATE (HIGH ENCUMBRANCE RISK) ================= -->
   <g transform="translate(615, 105)" filter="url(#shadow)">
     <!-- Column Card Frame -->
-    <rect width="555" height="445" rx="14" fill="url(#reCardGrad)" stroke="#fed7aa" stroke-width="1.8"/>
+    <rect width="555" height="520" rx="14" fill="url(#reCardGrad)" stroke="#fed7aa" stroke-width="1.8"/>
     <!-- Top Accent Bar -->
     <rect width="555" height="6" rx="3" fill="#ea580c"/>
 
     <!-- Column Header -->
-    <text x="24" y="38" class="col-title" fill="#9a3412">ரியல் எஸ்டேட் (Real Estate / நிலம் &amp; வீடுகள்)</text>
+    <text x="24" y="38" class="col-title" fill="#9a3412">ரியல் எஸ்டேட் (Real Estate)</text>
     
     <!-- Badge -->
-    <rect x="360" y="20" width="173" height="26" rx="13" fill="#fee2e2" stroke="#fca5a5" stroke-width="1.2"/>
-    <circle cx="373" cy="33" r="5" fill="#dc2626"/>
-    <text x="385" y="37" class="badge-text" fill="#b91c1c">தீவிர வில்லங்க அபாயம்</text>
+    <rect x="344" y="20" width="189" height="26" rx="13" fill="#fee2e2" stroke="#fca5a5" stroke-width="1.2"/>
+    <circle cx="357" cy="33" r="5" fill="#dc2626"/>
+    <text x="369" y="37" class="badge-text" fill="#b91c1c">தீவிர வில்லங்க அபாயம்</text>
 
     <!-- STEP 1 -->
-    <rect x="22" y="62" width="511" height="68" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
-    <circle cx="50" cy="96" r="16" fill="#fff7ed"/>
-    <text x="50" y="101" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#ea580c" text-anchor="middle">1</text>
-    <text x="78" y="86" class="step-head">விற்பனையாளரிடம் நேரடிப் பேச்சு &amp; முன்பணம்</text>
-    <text x="78" y="106" class="step-body">விற்பவர் காட்டும் பத்திரங்களையும் ஆவணங்களையும் நம்பி ஒப்பந்தம் செய்தல்.</text>
+    <rect x="22" y="62" width="511" height="84" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+    <circle cx="50" cy="104" r="16" fill="#fff7ed"/>
+    <text x="50" y="109" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#ea580c" text-anchor="middle">1</text>
+    <text x="78" y="82" class="step-head">விற்பனையாளரிடம் நேரடிப் பேச்சு &amp; முன்பணம்</text>
+    <text x="78" y="101" class="step-body">விற்பவர் காட்டும் பத்திரங்களையும் ஆவணங்களையும்</text>
+    <text x="78" y="116" class="step-body">நம்பி ஒப்பந்தம் செய்தல்.</text>
 
     <!-- Arrow 1 -> 2 -->
-    <path d="M 277 132 L 277 142" stroke="#d97706" stroke-width="2" marker-end="url(#arrowAmber)"/>
+    <path d="M 277 148 L 277 158" stroke="#d97706" stroke-width="2" marker-end="url(#arrowAmber)"/>
 
     <!-- STEP 2 (The Legal Catch) -->
-    <rect x="22" y="146" width="511" height="78" rx="10" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5"/>
-    <circle cx="50" cy="185" r="16" fill="#ffedd5"/>
-    <text x="50" y="190" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#ea580c" text-anchor="middle">2</text>
-    <text x="78" y="170" class="step-head">சார்பதிவாளர் பதிவு (Sub-Registrar Office)</text>
-    <text x="78" y="190" class="step-body">அரசுக் கட்டணம் பெற்று ஆவணத்தைப் பதிவு மட்டுமே செய்கிறது (<tspan font-weight="700" fill="#c2410c">Caveat Emptor</tspan>).</text>
-    <text x="78" y="208" class="step-body">சொத்து 100% வில்லங்கமற்றது என்று அரசு எந்த உத்தரவாதமும் அளிக்காது!</text>
+    <rect x="22" y="162" width="511" height="108" rx="10" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5"/>
+    <circle cx="50" cy="216" r="16" fill="#ffedd5"/>
+    <text x="50" y="221" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#ea580c" text-anchor="middle">2</text>
+    <text x="78" y="182" class="step-head">சார்பதிவாளர் பதிவு (Sub-Registrar Office)</text>
+    <text x="78" y="201" class="step-body">அரசுக் கட்டணம் பெற்று ஆவணத்தைப் பதிவு</text>
+    <text x="78" y="216" class="step-body">மட்டுமே செய்கிறது (<tspan font-weight="700" fill="#c2410c">Caveat Emptor</tspan>).</text>
+    <text x="78" y="231" class="step-body">சொத்து 100% வில்லங்கமற்றது என்று அரசு</text>
+    <text x="78" y="246" class="step-body">எந்த உத்தரவாதமும் அளிக்காது!</text>
 
     <!-- Arrow 2 -> 3 -->
-    <path d="M 277 226 L 277 236" stroke="#d97706" stroke-width="2" marker-end="url(#arrowAmber)"/>
+    <path d="M 277 272 L 277 282" stroke="#d97706" stroke-width="2" marker-end="url(#arrowAmber)"/>
 
     <!-- STEP 3 -->
-    <rect x="22" y="240" width="511" height="68" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
-    <circle cx="50" cy="274" r="16" fill="#fff7ed"/>
-    <text x="50" y="279" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#ea580c" text-anchor="middle">3</text>
-    <text x="78" y="264" class="step-head">கிரயப் பத்திரம் பெறுதல் (Title Deed ≠ Proof of Title)</text>
-    <text x="78" y="284" class="step-body">விற்பவரின் குறைபாடான உரிமையே உங்களுக்கும் வரும் (<tspan font-weight="700" fill="#c2410c">Nemo Dat Quod Non Habet</tspan>).</text>
+    <rect x="22" y="286" width="511" height="84" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+    <circle cx="50" cy="328" r="16" fill="#fff7ed"/>
+    <text x="50" y="333" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#ea580c" text-anchor="middle">3</text>
+    <text x="78" y="306" class="step-head">கிரயப் பத்திரம் பெறுதல் (Title Deed ≠ Proof of Title)</text>
+    <text x="78" y="325" class="step-body">விற்பவரின் குறைபாடான உரிமையே உங்களுக்கும்</text>
+    <text x="78" y="340" class="step-body">வரும் (<tspan font-weight="700" fill="#c2410c">Nemo Dat Quod Non Habet</tspan>).</text>
 
     <!-- Takeaway Summary Box -->
-    <rect x="22" y="324" width="511" height="100" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+    <rect x="22" y="380" width="511" height="126" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
     <!-- Warning Triangle Icon -->
-    <circle cx="52" cy="374" r="18" fill="#ef4444"/>
-    <path d="M 52 364 L 52 376 M 52 382 L 52 384" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
-    <text x="82" y="352" class="takeaway-title" fill="#991b1b">தலைமுறைச் சுமைகள் (Historical Baggage Risk):</text>
-    <text x="82" y="374" class="takeaway-desc" fill="#b91c1c">கடந்த 30–50 ஆண்டுகளுக்கு முந்தைய உரிமையாளர்களின் ரகசிய முதல் திருமணம்,</text>
-    <text x="82" y="394" class="takeaway-desc" fill="#b91c1c">பாகப்பிரிவினையில் விடுபட்ட வாரிசுகள், வேறு ஊரில் பதியப்பட்ட உயில்கள் மற்றும்</text>
-    <text x="82" y="414" class="takeaway-desc" fill="#b91c1c">சுற்றுச்சூழல் மீறல்களால் உங்கள் சொத்து எந்த நேரத்திலும் பறிபோகலாம்!</text>
+    <circle cx="52" cy="443" r="18" fill="#ef4444"/>
+    <path d="M 52 433 L 52 445 M 52 451 L 52 453" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="82" y="401" class="takeaway-title" fill="#991b1b">தலைமுறைச் சுமைகள் (Historical Baggage Risk):</text>
+    <text x="82" y="421" class="takeaway-desc" fill="#b91c1c">கடந்த 30–50 ஆண்டுகளுக்கு முந்தைய</text>
+    <text x="82" y="434" class="takeaway-desc" fill="#b91c1c">உரிமையாளர்களின் ரகசிய முதல் திருமணம்,</text>
+    <text x="82" y="447" class="takeaway-desc" fill="#b91c1c">பாகப்பிரிவினையில் விடுபட்ட வாரிசுகள்,</text>
+    <text x="82" y="460" class="takeaway-desc" fill="#b91c1c">வேறு ஊரில் பதியப்பட்ட உயில்கள் மற்றும்</text>
+    <text x="82" y="473" class="takeaway-desc" fill="#b91c1c">சுற்றுச்சூழல் மீறல்களால் உங்கள் சொத்து</text>
+    <text x="82" y="486" class="takeaway-desc" fill="#b91c1c">எந்த நேரத்திலும் பறிபோகலாம்!</text>
   </g>
+  <text id="brand-watermark" x="600" y="677" text-anchor="middle" font-family="'Noto Sans Tamil', 'Tamil Sangam MN', 'Latha', sans-serif" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">நிதிப்பேழை</text>
 </svg>
-

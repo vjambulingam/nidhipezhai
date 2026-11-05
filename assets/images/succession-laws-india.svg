@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="644" viewBox="0 0 1200 644" role="img" aria-labelledby="laws-title laws-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="684" viewBox="0 0 1200 684" role="img" aria-labelledby="laws-title laws-desc">
   <title id="laws-title">இந்தியாவில் வாரிசுரிமைச் சட்டங்கள் - Succession Laws in India</title>
   <desc id="laws-desc">1. இந்து வாரிசுரிமைச் சட்டம் 1956, 2. இந்திய வாரிசுரிமைச் சட்டம் 1925, 3. முஸ்லிம் தனிநபர் சட்டம் (ஷரியத்) 1937, 4. சிறப்புத் திருமணச் சட்டம் 1954 - வாய்மையே வெல்லும்.</desc>
 
@@ -254,4 +254,5 @@
     </text>
   </g>
 
+  <text id="brand-watermark" x="600" y="671" text-anchor="middle" font-family="'Noto Sans Tamil', 'Tamil Sangam MN', 'Latha', sans-serif" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">நிதிப்பேழை</text>
 </svg>

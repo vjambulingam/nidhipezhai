@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="855" viewBox="0 0 1200 855" role="img" aria-labelledby="best-practices-title best-practices-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="895" viewBox="0 0 1200 895" role="img" aria-labelledby="best-practices-title best-practices-desc">
   <title id="best-practices-title">உயில் எழுதும்போது பின்பற்ற வேண்டிய 9 சிறந்த நடைமுறைகள்</title>
   <desc id="best-practices-desc">9 Essential Best Practices for Will Writing in India: 1. Revocation of Prior Wills, 2. Residuary Clause, 3. Sign Every Page, 4. Optional Registration, 5. Video Recording, 6. Letter of Wishes, 7. Periodic Updates, 8. Reasons for Unequal Shares, 9. Younger Witnesses.</desc>
 
@@ -384,4 +384,5 @@
     <text x="78" y="29" class="footer-title-tamil">பொன்னான விதி (Golden Rule): பயனாளிகள் (Beneficiaries) ஒருபோதும் உயிலில் சாட்சிகளாகக் கையொப்பமிடக் கூடாது!</text>
     <text x="78" y="52" class="footer-desc-tamil">மருத்துவரிடம் பெறும் மனத்தகுதிச் சான்றிதழும், நம்மைவிட 15–20 வயது இளைய சாட்சிகளும் உயிலுக்கு அசைக்க முடியாத சட்ட வலிமையை வழங்கும்.</text>
   </g>
+  <text id="brand-watermark" x="600" y="882" text-anchor="middle" font-family="'Noto Sans Tamil', 'Tamil Sangam MN', 'Latha', sans-serif" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">நிதிப்பேழை</text>
 </svg>

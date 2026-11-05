@@ -38,7 +38,7 @@ keywords:
 
 <img src="/assets/images/will-writing-banner.jpg" alt="உயில் எழுதுவதன் முக்கியத்துவம் மற்றும் வாரிசுரிமைத் திட்டமிடல் வழிகாட்டி (Will Writing & Estate Planning Guide)" width="1376" height="768" style="display:block;max-width:100%;height:auto;border-radius:12px">
 
-<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 20px; margin: 24px 0;">
+<div id="quick-jump" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 20px; margin: 24px 0;">
   <div style="font-weight: 700; color: #0D7377; font-size: 15px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
     <span>⚡ விரைவு வழிசெலுத்தல் (Quick Jump):</span>
   </div>
@@ -68,6 +68,12 @@ keywords:
 > **முக்கியத் தெளிவு:**  
 > சொத்துத் திட்டமிடல் என்பது கோடீஸ்வரர்களுக்கும் பெரும் தொழிலதிபர்களுக்கும் மட்டுமேயானது அல்ல. ஒரு சிறிய சேமிப்புக் கணக்கு, ஒரு இருசக்கர வாகனம் அல்லது ஒரு சிறிய வீடு வைத்திருக்கும் ஒவ்வொரு சாதாரண நடுத்தரக் குடும்பத்திற்கும் இது அவசியமான வாழ்வாதாரப் பாதுகாப்பாகும்.
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="why-write-a-will">உயில் (Will) எழுதுவதன் இன்றியமையாத முக்கியத்துவம்</h2>
@@ -87,6 +93,12 @@ keywords:
 
 ### 4. விருப்பமான நபர்கள் அல்லது அறக்கட்டளைகளுக்கு வழங்குதல்
 உங்கள் ரத்த உறவு அல்லாத, இக்கட்டான காலத்தில் உங்களுக்கு உதவிய நண்பர், முதியோர் இல்லம் அல்லது சேவை நிறுவனங்களுக்குச் சிறிதளவு நிதி வழங்க விரும்பினால், அதை உயில் மூலமாக மட்டுமே சாதிக்க முடியும். உயில் இல்லையெனில் சட்டம் ரத்த வாரிசுகளுக்கு மட்டுமே சொத்துகளை ஒதுக்கும்.
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 
 ---
 
@@ -118,13 +130,19 @@ keywords:
 
 உங்கள் குடும்பத்தின் அனைத்து நாமினேஷன்களையும், சொத்து விவரங்களையும் ஒரே இடத்தில் சரிபார்க்க எங்களின் [35 அம்ச வாரிசுரிமை மற்றும் உயில் சரிபார்ப்புப் பட்டியலைப் (Estate Planning Checklist)](/checklists/estate-planning-checklist.html) பயன்படுத்தலாம்.
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="succession-laws-india">இந்தியாவில் மத ரீதியான வாரிசுரிமைச் சட்டங்கள் (Succession Laws in India)</h2>
 
 இந்தியாவில் பொதுவான சிவில் சட்டம் (Uniform Civil Code) இல்லாததால், ஒருவர் உயில் எழுதாமல் இறக்கும்போது, அவருடைய மதம் சார்ந்த தனிநபர் சட்டங்களின்படியே சொத்துகள் பிரிக்கப்படுகின்றன.
 
-<img src="/assets/images/succession-laws-india.svg" alt="இந்தியாவில் வாரிசுரிமைச் சட்டங்கள் (Succession Laws in India): 1. இந்து வாரிசுரிமைச் சட்டம் 1956, 2. இந்திய வாரிசுரிமைச் சட்டம் 1925, 3. முஸ்லிம் தனிநபர் சட்டம் (ஷரியத்) 1937, 4. சிறப்புத் திருமணச் சட்டம் 1954" width="1200" height="644" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
+<img src="/assets/images/succession-laws-india.svg" alt="இந்தியாவில் வாரிசுரிமைச் சட்டங்கள் (Succession Laws in India): 1. இந்து வாரிசுரிமைச் சட்டம் 1956, 2. இந்திய வாரிசுரிமைச் சட்டம் 1925, 3. முஸ்லிம் தனிநபர் சட்டம் (ஷரியத்) 1937, 4. சிறப்புத் திருமணச் சட்டம் 1954" width="1200" height="684" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
 <details open style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
 <summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
@@ -191,13 +209,19 @@ keywords:
 </div>
 </details>
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="step-by-step-guide">உயில் எழுதும் முறை: படிப்படியான வழிகாட்டி (Step-by-Step Process)</h2>
 
 உயில் எழுதுவது என்பது மிகவும் சிக்கலான சட்டச் செயல்முறை அல்ல; ஒரு வெள்ளைத் தாளில் நீங்களே கைப்படவோ அல்லது தட்டச்சு செய்தோ முறையான வழிகாட்டுதலுடன் உயிலை உருவாக்கிவிடலாம்:
 
-<img src="/assets/images/will-writing-process-flow.svg" alt="உயில் எழுதும் முறை: படிப்படியான வழிகாட்டி - படி 1: மனத்தகுதி அறிவிப்பு ➔ படி 2: சொத்து பட்டியல் ➔ படி 3: நிறைவேற்றுநர் தேர்வு ➔ படி 4: பயனாளிகள் ஒதுக்கீடு ➔ படி 5: சாட்சிகள் கையொப்பம் ➔ படி 6: விருப்பப் பதிவு" width="1200" height="470" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
+<img src="/assets/images/will-writing-process-flow.svg" alt="உயில் எழுதும் முறை: படிப்படியான வழிகாட்டி - படி 1: மனத்தகுதி அறிவிப்பு ➔ படி 2: சொத்து பட்டியல் ➔ படி 3: நிறைவேற்றுநர் தேர்வு ➔ படி 4: பயனாளிகள் ஒதுக்கீடு ➔ படி 5: சாட்சிகள் கையொப்பம் ➔ படி 6: விருப்பப் பதிவு" width="1200" height="510" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
 <details open style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
 <summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
@@ -286,13 +310,19 @@ keywords:
 </div>
 </details>
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="best-practices">உயில் எழுதும்போது பின்பற்ற வேண்டிய சிறந்த நடைமுறைகள் (Best Practices)</h2>
 
 உயில் தயாரிக்கும்போது எதிர்காலத்தில் எந்தவொரு சட்டச் சிக்கலோ, தவறான புரிதலோ அல்லது குடும்ப உறுப்பினர்களிடையே மனக்கசப்போ ஏற்படாமல் இருக்க கீழ்க்கண்ட 9 சிறந்த நடைமுறைகளைப் பின்பற்றுவது அவசியமாகும்:
 
-<img src="/assets/images/will-best-practices-summary.svg" alt="உயில் எழுதும்போது பின்பற்ற வேண்டிய 9 சிறந்த நடைமுறைகள்: 1. முந்தைய உயில்கள் ரத்து, 2. எஞ்சிய சொத்துகள் பிரிவு, 3. பக்கங்கள் தோறும் கையொப்பம், 4. விருப்பப் பதிவு, 5. வீடியோ பதிவு, 6. விருப்பக் கடிதம், 7. காலத்திற்கேற்ப புதுப்பித்தல், 8. சமமற்ற பங்கீட்டிற்கு விளக்கம், 9. இளைய சாட்சிகள் தேர்வு" width="1200" height="855" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
+<img src="/assets/images/will-best-practices-summary.svg" alt="உயில் எழுதும்போது பின்பற்ற வேண்டிய 9 சிறந்த நடைமுறைகள்: 1. முந்தைய உயில்கள் ரத்து, 2. எஞ்சிய சொத்துகள் பிரிவு, 3. பக்கங்கள் தோறும் கையொப்பம், 4. விருப்பப் பதிவு, 5. வீடியோ பதிவு, 6. விருப்பக் கடிதம், 7. காலத்திற்கேற்ப புதுப்பித்தல், 8. சமமற்ற பங்கீட்டிற்கு விளக்கம், 9. இளைய சாட்சிகள் தேர்வு" width="1200" height="895" style="display:block;max-width:100%;height:auto;margin:20px 0;border-radius:12px">
 
 <details open style="margin-bottom: 14px; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; background: #ffffff;">
 <summary style="padding: 14px 18px; cursor: pointer; font-weight: 700; color: #0f766e; background: #f0fdfa; border-bottom: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
@@ -420,6 +450,12 @@ keywords:
 </div>
 </details>
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="beyond-will">உயிலையும் தாண்டி அவசியமான சொத்துரிமை அரண்கள் (Comprehensive Estate Planning Beyond Will)</h2>
@@ -510,6 +546,12 @@ keywords:
 </div>
 </details>
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="online-platforms">இந்தியாவில் ஆன்லைன் மூலம் உயில் எழுதும் முன்னணிச் சேவை நிறுவனங்கள்</h2>
@@ -531,6 +573,12 @@ keywords:
 * **ஆன்லைன் தளங்கள்:** உங்கள் சொத்துகள் நேரடியானவையாக இருந்து (சுய சம்பாத்திய வீடு, பிக்சட் டெபாசிட், மியூச்சுவல் ஃபண்ட்), குடும்பத்தில் எந்தப் பெரிய சிக்கலும் இல்லையெனில், ஆன்லைன் தளங்கள் ₹1,500 முதல் ₹5,000 வரையிலான குறைந்த கட்டணத்தில் சில மணி நேரங்களில் உயிலைத் தயாரிக்க மிகச் சிறந்த தேர்வாகும்.
 * **வழக்கறிஞர் நேரடி வரைவு:** பூர்வீகச் சொத்துகள், சிக்கலான குடும்பப் பின்னணி, பல்வேறு மாநிலங்களில் சொத்துகள் அல்லது வணிகப் பங்குகள் இருந்தால், ஒரு மூத்த வழக்கறிஞரை நேரில் அணுகி வரைவு செய்வதே பாதுகாப்பானது.
 
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
+
 ---
 
 <h2 id="faqs">அடிக்கடி கேட்கப்படும் கேள்விகள் (FAQs)</h2>
@@ -549,6 +597,12 @@ keywords:
 
 ### 5. உயிலை எங்கு பாதுகாப்பாக வைக்க வேண்டும்?
 **பதில்:** அசல் உயிலை வங்கி லாக்கரில் வைக்கலாம் அல்லது உங்கள் நம்பகமான வழக்கறிஞரிடம் வைக்கலாம். அதன் நகலை உங்கள் வீட்டின் பாதுகாப்பான காகிதக் கோப்புறையிலும் (ICE Paper Folder), மறையாக்கப்பட்ட டிஜிட்டல் பெட்டகத்திலும் வைக்க வேண்டும். அசல் உயில் எங்குள்ளது என்ற தகவலை உங்கள் குடும்பத்தினருக்கும் நிறைவேற்றுநருக்கும் முன்கூட்டியே தெரியப்படுத்த வேண்டும்.
+
+<div style="text-align: right; margin: 16px 0 24px 0;">
+  <a href="#quick-jump" style="font-size: 13px; font-weight: 600; color: #0D7377; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 6px; background: #f0fdfa; border: 1px solid #ccfbf1;">
+    <span>↑ மேலே செல்ல (Back to Top)</span>
+  </a>
+</div>
 
 ---
 

@@ -3,6 +3,7 @@ title: முதலீட்டுத் தொகுப்பை (portfolio) �
 description: பணவீக்கத்தை (Inflation) வெல்லவும், ஏற்ற இறக்கத்தைக் (Volatility) கட்டுப்படுத்தவும், வயதுக்குழு வாரியான சொத்து வகை ஒதுக்கீட்டுக்கான (Asset allocation) வழிகாட்டி.
 date: 2026-10-05
 lastModified: 2026-10-16
+ogImage: "/assets/images/regular-vs-direct-mutual-funds-banner.jpg"
 topics:
   - முதலீடு
   - நிதித் திட்டமிடல்
