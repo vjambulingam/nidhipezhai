@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840" role="img" aria-labelledby="nps-title nps-desc">
+  <title id="nps-title">NPS exit and annuity rules</title>
+  <desc id="nps-desc">Illustrative NPS normal and premature exit provisions. Rules vary and may change; verify current PFRDA rules.</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700;800&amp;display=swap');
+      .font-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+    </style>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  
+  <rect width="1200" height="800" rx="16" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+
+  
+  <g class="font-tamil" transform="translate(180, 20)" filter="url(#cardShadow)">
+    <rect width="840" height="66" rx="14" fill="#0D7377" />
+    <text x="420" y="32" fill="#ffffff" font-size="18.5" font-weight="800" text-anchor="middle">National Pension System (NPS): exit rules</text>
+    <text x="420" y="53" fill="#a7f3d0" font-size="12.5" font-weight="600" text-anchor="middle">Historical examples only; verify current PFRDA rules before acting</text>
+  </g>
+
+  
+  <g class="font-tamil">
+    
+    <g transform="translate(40, 102)" filter="url(#cardShadow)">
+      <rect width="1120" height="44" rx="10" fill="#047857" />
+      <text x="24" y="27" fill="#ffffff" font-size="15" font-weight="700">Option 1: Normal retirement at age 60 or above</text>
+      <text x="1096" y="27" fill="#a7f3d0" font-size="12" font-weight="600" text-anchor="end">Illustrative normal exit provisions</text>
+    </g>
+
+    
+    <g transform="translate(40, 156)" filter="url(#cardShadow)">
+      <rect width="545" height="268" rx="12" fill="#ffffff" stroke="#10b981" stroke-width="1.8" />
+      <rect width="545" height="34" rx="12" fill="#ecfdf5" />
+      <rect x="0" y="22" width="545" height="12" fill="#ecfdf5" />
+      <text x="272" y="23" fill="#065f46" font-size="13" font-weight="700" text-anchor="middle">Corpus above ₹5 lakh (illustrative threshold)</text>
+
+      
+      <g transform="translate(20, 44)">
+        <rect width="505" height="64" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1" />
+        <text x="16" y="22" fill="#15803d" font-size="12.5" font-weight="700">At least 40% for an annuity</text>
+        <text x="16" y="42" fill="#166534" font-size="11">
+          <tspan x="16" dy="0">An annuity is purchased from a PFRDA-</tspan>
+          <tspan x="16" dy="16">empanelled annuity service provider.</tspan>
+        </text>
+      </g>
+
+      
+      <g transform="translate(20, 116)">
+        <rect width="505" height="64" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1" />
+        <text x="16" y="22" fill="#1d4ed8" font-size="12.5" font-weight="700">Up to 60% as a lump sum</text>
+        <text x="16" y="42" fill="#1e40af" font-size="11">
+          <tspan x="16" dy="0">The eligible lump sum may be withdrawn;</tspan>
+          <tspan x="16" dy="16">tax treatment is subject to applicable rules.</tspan>
+        </text>
+      </g>
+
+      
+      <g transform="translate(20, 188)">
+        <rect width="505" height="62" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
+        <text x="14" y="20" fill="#334155" font-size="12" font-weight="700">Systematic lump-sum withdrawal (SLW):</text>
+        <text x="14" y="38" fill="#64748b" font-size="11">
+          <tspan x="14" dy="0">The eligible portion may be withdrawn</tspan>
+          <tspan x="14" dy="16">periodically up to age 75, subject to rules.</tspan>
+        </text>
+      </g>
+    </g>
+
+    
+    <g transform="translate(615, 156)" filter="url(#cardShadow)">
+      <rect width="545" height="268" rx="12" fill="#ffffff" stroke="#0284c7" stroke-width="1.8" />
+      <rect width="545" height="34" rx="12" fill="#f0f9ff" />
+      <rect x="0" y="22" width="545" height="12" fill="#f0f9ff" />
+      <text x="272" y="23" fill="#0369a1" font-size="13" font-weight="700" text-anchor="middle">Corpus at or below ₹5 lakh (illustrative threshold)</text>
+
+      
+      <g transform="translate(20, 44)">
+        <rect width="505" height="74" rx="8" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1" />
+        <text x="16" y="24" fill="#0369a1" font-size="13" font-weight="700">Illustrative small-corpus exemption</text>
+        <text x="16" y="46" fill="#0284c7" font-size="11">
+          <tspan x="16" dy="0">A full lump-sum withdrawal may be allowed</tspan>
+          <tspan x="16" dy="16">subject to the applicable rules and tax treatment.</tspan>
+        </text>
+      </g>
+
+      
+      <g transform="translate(20, 126)">
+        <rect width="505" height="124" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+        <text x="16" y="22" fill="#1e293b" font-size="12.5" font-weight="700">Small corpus exemption:</text>
+        <text x="16" y="44" fill="#475569" font-size="11.5">An annuity may not be mandatory.</text>
+        <line x1="16" y1="60" x2="489" y2="60" stroke="#e2e8f0" stroke-width="1" />
+        <text x="16" y="80" fill="#059669" font-size="11">
+          <tspan x="16" dy="0">Compare available options and verify current</tspan>
+          <tspan x="16" dy="17">limits and eligibility before taking action.</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+
+  
+  <g class="font-tamil">
+    
+    <g transform="translate(40, 438)" filter="url(#cardShadow)">
+      <rect width="1120" height="58" rx="10" fill="#b45309" />
+      <text x="24" y="25" fill="#ffffff" font-size="15" font-weight="700">Option 2: Premature exit before age 60</text>
+      <text x="24" y="46" fill="#fef3c7" font-size="12" font-weight="600">Eligibility depends on applicable NPS rules</text>
+    </g>
+
+    
+    <g transform="translate(40, 508)" filter="url(#cardShadow)">
+      <rect width="545" height="206" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="1.8" />
+      <rect width="545" height="34" rx="12" fill="#fffbeb" />
+      <rect x="0" y="22" width="545" height="12" fill="#fffbeb" />
+      <text x="272" y="23" fill="#92400e" font-size="13" font-weight="700" text-anchor="middle">Corpus above ₹2.5 lakh (illustrative threshold)</text>
+
+      
+      <g transform="translate(20, 44)">
+        <rect width="505" height="66" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="1" />
+        <text x="16" y="22" fill="#dc2626" font-size="12.5" font-weight="700">At least 80% for an annuity</text>
+        <text x="16" y="42" fill="#b91c1c" font-size="11">
+          <tspan x="16" dy="0">The illustrative requirement allocates at least</tspan>
+          <tspan x="16" dy="16">80% of the corpus to an annuity.</tspan>
+        </text>
+      </g>
+
+      
+      <g transform="translate(20, 118)">
+        <rect width="505" height="66" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+        <text x="16" y="22" fill="#334155" font-size="12.5" font-weight="700">Up to 20% as a lump sum</text>
+        <text x="16" y="42" fill="#64748b" font-size="11">
+          <tspan x="16" dy="0">The remaining amount may be withdrawn,</tspan>
+          <tspan x="16" dy="16">subject to applicable rules and taxes.</tspan>
+        </text>
+      </g>
+    </g>
+
+    
+    <g transform="translate(615, 508)" filter="url(#cardShadow)">
+      <rect width="545" height="206" rx="12" fill="#ffffff" stroke="#64748b" stroke-width="1.5" />
+      <rect width="545" height="34" rx="12" fill="#f1f5f9" />
+      <rect x="0" y="22" width="545" height="12" fill="#f1f5f9" />
+      <text x="272" y="23" fill="#334155" font-size="13" font-weight="700" text-anchor="middle">Corpus at or below ₹2.5 lakh (illustrative threshold)</text>
+
+      
+      <g transform="translate(20, 44)">
+        <rect width="505" height="66" rx="8" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1" />
+        <text x="16" y="22" fill="#047857" font-size="12.5" font-weight="700">Illustrative small-corpus exemption</text>
+        <text x="16" y="42" fill="#065f46" font-size="11">
+          <tspan x="16" dy="0">A full withdrawal may be permitted</tspan>
+          <tspan x="16" dy="16">subject to the applicable exit rules.</tspan>
+        </text>
+      </g>
+
+      
+      <g transform="translate(20, 118)">
+        <rect width="505" height="66" rx="8" fill="#fffbeb" stroke="#fde68a" stroke-width="1" />
+        <text x="16" y="20" fill="#92400e" font-size="12" font-weight="700">Premature exit: important consideration</text>
+        <text x="16" y="38" fill="#78350f" font-size="11">
+          <tspan x="16" dy="0">Early exit can reduce retirement savings.</tspan>
+          <tspan x="16" dy="16">Consider your needs and verify current rules.</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+
+  
+  <g class="font-tamil" transform="translate(40, 728)">
+    <rect width="1120" height="52" rx="10" fill="#f0fdfa" stroke="#ccfbf1" stroke-width="1.2" />
+    <text x="560" y="22" fill="#0f766e" font-size="11.5" font-weight="700" text-anchor="middle">Tax treatment depends on the withdrawal and current law;</text>
+    <text x="560" y="40" fill="#134e4a" font-size="11" text-anchor="middle">annuity pension payments are generally taxable as income.</text>
+  </g>
+  <text id="brand-watermark" x="600" y="827" text-anchor="middle" font-family="'Noto Sans Tamil', 'Tamil Sangam MN', 'Latha', sans-serif" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">Nidhi Pezhai</text>
+</svg>

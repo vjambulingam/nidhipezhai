@@ -11,7 +11,7 @@ layout: layouts/base.njk
   "image": [articleOgImage],
   "datePublished": date | dateIso,
   "dateModified": (lastModified or date) | dateIso,
-  "inLanguage": "ta-IN",
+  "inLanguage": "en-IN" if language == "en" else "ta-IN",
   "mainEntityOfPage": page.url | url | absoluteUrl,
   "author": { "@type": "Organization", "name": site.title },
   "publisher": { "@type": "Organization", "name": site.title },
@@ -21,10 +21,10 @@ layout: layouts/base.njk
 {% endif %}
 <main class="article-page" id="main-content" tabindex="-1">
   <div class="wrap article-page__wrap">
-    <nav class="breadcrumbs" aria-label="நீங்கள் இருக்கும் இடம்">
-      <a href="{{ '/' | url }}">முகப்பு</a>
+    <nav class="breadcrumbs" aria-label="{{ 'Breadcrumb' if language == 'en' else 'நீங்கள் இருக்கும் இடம்' }}">
+      <a href="{{ ('/en/' if language == 'en' else '/') | url }}">{{ 'Home' if language == 'en' else 'முகப்பு' }}</a>
       <span aria-hidden="true">/</span>
-      <a href="{{ '/#articles' | url }}">கட்டுரைகள்</a>
+      <a href="{{ ('/en/#articles' if language == 'en' else '/#articles') | url }}">{{ 'Articles' if language == 'en' else 'கட்டுரைகள்' }}</a>
       <span aria-hidden="true">/</span>
       <span aria-current="page">{{ title }}</span>
     </nav>
@@ -36,15 +36,15 @@ layout: layouts/base.njk
         <h1>{{ title }}</h1>
         <p class="article__description">{{ description }}</p>
         <div class="article__meta">
-          <time datetime="{{ (lastModified or date) | dateIso }}">{{ (lastModified or date) | dateTamil }}</time>
+          <time datetime="{{ (lastModified or date) | dateIso }}">{% if language == 'en' %}{{ (lastModified or date) | dateEnglish }}{% else %}{{ (lastModified or date) | dateTamil }}{% endif %}</time>
           <span aria-hidden="true">·</span>
-          <span>{{ content | readingTime }} நிமிட வாசிப்பு</span>
+          <span>{{ content | readingTime }} {{ 'min read' if language == 'en' else 'நிமிட வாசிப்பு' }}</span>
         </div>
         {% set shareVariant = "compact" %}
         {% include "partials/social-share.njk" %}
       </header>
-      <nav class="article-toc" id="article-toc" aria-label="பொருளடக்கம்" hidden>
-        <p class="article-toc__title">பொருளடக்கம்</p>
+      <nav class="article-toc" id="article-toc" aria-label="{{ 'Contents' if language == 'en' else 'பொருளடக்கம்' }}" hidden>
+        <p class="article-toc__title">{{ 'Contents' if language == 'en' else 'பொருளடக்கம்' }}</p>
         <ol class="article-toc__list" id="article-toc-list"></ol>
       </nav>
       <div class="article__body">{{ content | safe }}</div>
@@ -53,27 +53,28 @@ layout: layouts/base.njk
       {% include "partials/social-share.njk" %}
       {% set prevArticle = null %}
       {% set nextArticle = null %}
-      {% for item in collections.articlesByDate %}
+      {% set articleList = collections.englishArticlesByDate if language == 'en' else collections.articlesByDate %}
+      {% for item in articleList %}
         {% if item.url == page.url %}
           {% if not loop.first %}
-            {% set nextArticle = collections.articlesByDate[loop.index0 - 1] %}
+            {% set nextArticle = articleList[loop.index0 - 1] %}
           {% endif %}
           {% if not loop.last %}
-            {% set prevArticle = collections.articlesByDate[loop.index0 + 1] %}
+            {% set prevArticle = articleList[loop.index0 + 1] %}
           {% endif %}
         {% endif %}
       {% endfor %}
       {% if prevArticle or nextArticle %}
-      <nav class="article-pagination" aria-label="மற்ற கட்டுரைகள்">
+      <nav class="article-pagination" aria-label="{{ 'Other articles' if language == 'en' else 'மற்ற கட்டுரைகள்' }}">
         {% if prevArticle %}
         <a class="article-pagination__link article-pagination__link--prev" href="{{ prevArticle.url | url }}">
-          <span class="article-pagination__label">← முந்தைய கட்டுரை</span>
+          <span class="article-pagination__label">{{ '← Previous article' if language == 'en' else '← முந்தைய கட்டுரை' }}</span>
           <span class="article-pagination__title">{{ prevArticle.data.title }}</span>
         </a>
         {% endif %}
         {% if nextArticle %}
         <a class="article-pagination__link article-pagination__link--next" href="{{ nextArticle.url | url }}">
-          <span class="article-pagination__label">அடுத்த கட்டுரை →</span>
+          <span class="article-pagination__label">{{ 'Next article →' if language == 'en' else 'அடுத்த கட்டுரை →' }}</span>
           <span class="article-pagination__title">{{ nextArticle.data.title }}</span>
         </a>
         {% endif %}
@@ -81,9 +82,9 @@ layout: layouts/base.njk
       {% endif %}
       {% set relatedCount = 0 %}
       <section class="article-related" aria-labelledby="related-articles-heading">
-        <h2 id="related-articles-heading" class="article-related__heading">தொடர்புடைய கட்டுரைகள்</h2>
+        <h2 id="related-articles-heading" class="article-related__heading">{{ 'Related articles' if language == 'en' else 'தொடர்புடைய கட்டுரைகள்' }}</h2>
         <div class="article-related__grid">
-          {% for item in collections.articlesByDate %}
+          {% for item in articleList %}
             {% if item.url != page.url and relatedCount < 3 %}
               {% set hasSharedTopic = false %}
               {% for t in item.data.topics %}
@@ -96,7 +97,7 @@ layout: layouts/base.njk
                 <a class="article-related__card" href="{{ item.url | url }}">
                   <span class="article-related__topic">{{ item.data.topics[0] }}</span>
                   <span class="article-related__title">{{ item.data.title }}</span>
-                  <span class="article-related__read">கட்டுரையைப் படிக்க ↗</span>
+                  <span class="article-related__read">{{ 'Read article ↗' if language == 'en' else 'கட்டுரையைப் படிக்க ↗' }}</span>
                 </a>
               {% endif %}
             {% endif %}
@@ -104,8 +105,8 @@ layout: layouts/base.njk
         </div>
       </section>
       <footer class="article__end">
-        <p>இந்தக் கட்டுரை கல்வி மற்றும் விழிப்புணர்வு நோக்கத்திற்காக மட்டுமே; தனிப்பட்ட நிதி ஆலோசனை அல்ல.</p>
-        <a href="{{ '/' | url }}#articles">← மேலும் கட்டுரைகள்</a>
+        <p>{{ 'This article is for education and awareness only; it is not personal financial advice.' if language == 'en' else 'இந்தக் கட்டுரை கல்வி மற்றும் விழிப்புணர்வு நோக்கத்திற்காக மட்டுமே; தனிப்பட்ட நிதி ஆலோசனை அல்ல.' }}</p>
+        <a href="{{ ('/en/' if language == 'en' else '/') | url }}#articles">{{ '← More articles' if language == 'en' else '← மேலும் கட்டுரைகள்' }}</a>
       </footer>
     </article>
   </div>

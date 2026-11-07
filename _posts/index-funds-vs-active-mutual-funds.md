@@ -1,4 +1,5 @@
 ---
+language: ta
 title: "Index Fund vs Active Mutual Fund ஒப்பீடு"
 description: "குறியீட்டு நிதித் திட்டம் (Index Fund) vs செயலுள்ள மியூச்சுவல் நிதித் திட்டம் (Active Mutual Fund) முழு ஒப்பீடு: SPIVA அறிக்கை நிதர்சனம், செலவு விகிதத்தின் (Expense Ratio Drag) ₹50+ லட்சம் மறைமுக இழப்பு, Tracking Error மற்றும் Nifty 50 + Next 50 இரட்டைக் கூட்டணி வழிகாட்டி."
 date: 2026-10-19

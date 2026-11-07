@@ -33,13 +33,18 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addGlobalData("layout", "layouts/base.njk");
   eleventyConfig.addGlobalData("siteOrigin", siteOrigin);
 
-  eleventyConfig.addCollection("articlesByDate", (collectionApi) => {
-    return collectionApi.getFilteredByTag("articles").sort((a, b) => {
+  function articlesByDate(collectionApi, language) {
+    return collectionApi.getFilteredByTag("articles").filter((article) =>
+      article.url && (language === "en" ? article.data.language === "en" : article.data.language !== "en")
+    ).sort((a, b) => {
       const timeB = toDate(b.data.lastModified || b.date).getTime() || 0;
       const timeA = toDate(a.data.lastModified || a.date).getTime() || 0;
       return timeB - timeA;
     });
-  });
+  }
+
+  eleventyConfig.addCollection("articlesByDate", (collectionApi) => articlesByDate(collectionApi, "ta"));
+  eleventyConfig.addCollection("englishArticlesByDate", (collectionApi) => articlesByDate(collectionApi, "en"));
 
   const PRIMARY_TOPICS = [
     "சேமிப்பு",
@@ -128,8 +133,33 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => a.url.localeCompare(b.url));
   });
 
+  eleventyConfig.addFilter("englishCalculatorGroups", (groups, pages) => {
+    const englishPages = pages.filter((page) =>
+      page.data.language === "en" && page.data.toolKind === "calculator"
+    );
+    const byUrl = new Map(englishPages.map((page) => [page.url, page]));
+    const used = new Set();
+    const result = groups.map((group) => ({
+      category: group.categoryEnglish,
+      items: group.items.flatMap((item) => {
+        const page = byUrl.get(`/en${item.url}`);
+        if (!page) return [];
+        used.add(page.url);
+        return [{ url: page.url, title: page.data.title, description: page.data.description, type: item.type }];
+      })
+    }));
+    const other = englishPages.filter((page) => !used.has(page.url)).map((page) => ({
+      url: page.url, title: page.data.title, description: page.data.description, type: "Calculator"
+    }));
+    if (other.length) result.push({ category: "Other calculators", items: other });
+    return result;
+  });
+
   eleventyConfig.addFilter("dateIso", (value) => toDate(value).toISOString().split("T")[0]);
   eleventyConfig.addFilter("dateTamil", (value) => tamilDateFormatter.format(toDate(value)));
+  eleventyConfig.addFilter("dateEnglish", (value) => new Intl.DateTimeFormat("en-IN", {
+    day: "numeric", month: "long", year: "numeric", timeZone: "UTC"
+  }).format(toDate(value)));
   eleventyConfig.addFilter("jsonify", (value) => JSON.stringify(value).replace(/</g, "\\u003c"));
   eleventyConfig.addFilter("urlEncode", (value) => encodeURIComponent(String(value || "")));
   eleventyConfig.addFilter("absoluteUrl", (value) => {

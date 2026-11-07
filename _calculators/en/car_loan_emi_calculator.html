@@ -1,0 +1,930 @@
+---
+title: "Car Loan EMI Calculator"
+ogTitle: "Car Loan EMI Calculator · Nidhi Pezhai"
+description: "Estimate monthly EMI, down payment, total interest, and loan tenure for new and used cars in India."
+keywords: "car loan EMI calculator, vehicle loan EMI calculator, auto loan EMI India, car loan down payment, car EMI calculation"
+language: en
+publishedEnglish: true
+eleventyExcludeFromCollections: false
+hasChart: true
+hasCsvExport: true
+---
+<main id="main-content" tabindex="-1" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full space-y-6">
+    <div>
+      <h1 class="text-xl font-bold tracking-tight text-gray-900 leading-tight">
+        Car Loan EMI Calculator
+      </h1>
+      <p class="text-xs text-gray-500 font-medium hidden sm:block">Estimate monthly installment, down payment, and repayment schedule for new and used vehicles</p>
+    </div>
+
+    <!-- Car Type Preset Tabs -->
+    <div class="bg-white rounded-xl shadow-xs border border-gray-200 p-1.5 flex flex-wrap gap-1.5">
+      <button class="car-type-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 bg-sky-600 text-white shadow-xs" data-type="hatchback">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h8m-8 4h8m-9 8h10M5 19a2 2 0 01-2-2V7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5z"/></svg>
+        Hatchback / Budget Car (₹7L @ 8.8%)
+      </button>
+      <button class="car-type-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100" data-type="suv">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/></svg>
+        Sedan / SUV (₹15L @ 8.6%)
+      </button>
+      <button class="car-type-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100" data-type="used">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+        Used Car (₹5L @ 12.5%)
+      </button>
+    </div>
+
+    <!-- Main Interactive Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+      
+      <!-- Left Column: Inputs & Sliders (7 cols) -->
+      <div class="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-7 shadow-xs border border-gray-200 space-y-6">
+        <div class="flex items-center justify-between pb-3 border-b border-gray-100">
+          <h2 class="text-base font-bold text-gray-900">Input Details</h2>
+          
+          <button id="btnReset" type="button" class="calc-reset-btn" title="Reset all inputs">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            <span>Reset</span>
+          </button>
+        </div>
+        
+        <!-- Field 1: On-Road Car Price -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <label for="carPriceInput" class="text-sm font-semibold text-gray-700 flex items-center gap-1.5">
+              On-Road Car Price
+              <span id="carPriceInWords" class="text-xs font-normal text-sky-600 bg-sky-50 px-2 py-0.5 rounded-full border border-sky-100">₹ 12 L</span>
+            </label>
+            <div class="relative w-40 sm:w-48">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500 font-semibold text-sm">₹</span>
+              <input type="number" id="carPriceInput" min="100000" max="20000000" step="25000" value="1200000" 
+                     class="w-full pl-8 pr-3 py-1.5 border border-gray-300 rounded-lg text-right font-bold text-gray-800 text-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-all outline-none">
+            </div>
+          </div>
+          <input type="range" id="carPriceSlider" min="100000" max="20000000" step="25000" value="1200000">
+          <div class="flex justify-between text-[11px] font-medium text-gray-400">
+            <span>₹ 1L</span>
+            <span>₹ 10L</span>
+            <span>₹ 20L</span>
+            <span>₹ 35L</span>
+            <span>₹ 2Cr</span>
+          </div>
+        </div>
+
+        <!-- Field 2: Down Payment -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <label for="downPaymentInput" class="text-sm font-semibold text-gray-700 flex items-center gap-1.5">
+              Down Payment
+              <span id="downPaymentPercentBadge" class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100">20% Down Payment</span>
+            </label>
+            <div class="relative w-40 sm:w-48">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500 font-semibold text-sm">₹</span>
+              <input type="number" id="downPaymentInput" min="0" max="15000000" step="10000" value="240000" 
+                     class="w-full pl-8 pr-3 py-1.5 border border-gray-300 rounded-lg text-right font-bold text-gray-800 text-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-all outline-none">
+            </div>
+          </div>
+          <input type="range" id="downPaymentSlider" min="0" max="15000000" step="10000" value="240000">
+          <div class="flex justify-between text-[11px] font-medium text-gray-400">
+            <span>₹ 0</span>
+            <span>10%</span>
+            <span>20%</span>
+            <span>30%</span>
+            <span>50%</span>
+          </div>
+        </div>
+
+        <!-- Loan Amount Display Banner -->
+        <div class="p-3 bg-sky-50/70 rounded-xl border border-sky-100 flex items-center justify-between text-xs sm:text-sm">
+          <span class="font-medium text-sky-900">Net Loan Amount (Car Price - Down Payment):</span>
+          <span class="font-bold text-sky-700 text-base" id="netLoanAmountDisplay">₹ 9,60,000</span>
+        </div>
+
+        <!-- Field 3: Interest Rate -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <label for="rateInput" class="text-sm font-semibold text-gray-700">Annual Interest Rate (% p.a.)</label>
+            <div class="relative w-28 sm:w-32">
+              <input type="number" id="rateInput" min="5" max="22" step="0.05" value="8.75" 
+                     class="w-full pr-8 pl-3 py-1.5 border border-gray-300 rounded-lg text-right font-bold text-gray-800 text-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-all outline-none">
+              <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 font-semibold text-sm">%</span>
+            </div>
+          </div>
+          <input type="range" id="rateSlider" min="5" max="22" step="0.05" value="8.75">
+          <div class="flex justify-between text-[11px] font-medium text-gray-400">
+            <span>5%</span>
+            <span>8.5%</span>
+            <span>10.5%</span>
+            <span>13%</span>
+            <span>15%</span>
+            <span>22%</span>
+          </div>
+        </div>
+
+        <!-- Field 4: Loan Tenure -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <label for="tenureInput" class="text-sm font-semibold text-gray-700">Loan Tenure</label>
+            <div class="flex items-center space-x-2">
+              <div class="relative w-24">
+                <input type="number" id="tenureInput" min="1" max="8" step="1" value="5" 
+                       class="w-full px-3 py-1.5 border border-gray-300 rounded-lg text-right font-bold text-gray-800 text-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-all outline-none">
+              </div>
+              <div class="inline-flex rounded-lg border border-gray-300 bg-gray-100 p-0.5 text-xs font-semibold">
+                <button type="button" id="tenureYrBtn" class="px-2.5 py-1 rounded-md bg-white text-sky-700 shadow-xs">Years</button>
+                <button type="button" id="tenureMoBtn" class="px-2.5 py-1 rounded-md text-gray-500 hover:text-gray-900">Months</button>
+              </div>
+            </div>
+          </div>
+          <input type="range" id="tenureSlider" min="1" max="8" step="1" value="5">
+          <div id="tenureScaleMarks" class="flex justify-between text-[11px] font-medium text-gray-400">
+            <span>1 Yr</span>
+            <span>2 Yrs</span>
+            <span>3 Yrs</span>
+            <span>4 Yrs</span>
+            <span>5 Yrs</span>
+            <span>6 Yrs</span>
+            <span>7 Yrs</span>
+            <span>8 Yrs</span>
+          </div>
+        </div>
+
+        <!-- Processing Fees Option -->
+        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200/80 space-y-3">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <label for="processingFeeInput" class="text-xs font-semibold text-gray-700 block">Bank Processing Fee (%):</label>
+              <span class="text-[10px] text-gray-400">Typically 0.5% to 1.5% plus GST is charged by banks</span>
+            </div>
+            <div class="relative w-28">
+              <input type="number" id="processingFeeInput" min="0" max="5" step="0.1" value="0.5" 
+                     class="w-full pr-7 pl-3 py-1.5 border border-gray-300 rounded-lg text-right font-bold text-gray-800 text-xs focus:ring-2 focus:ring-sky-500 outline-none">
+              <span class="absolute inset-y-0 right-0 flex items-center pr-2.5 text-gray-500 font-semibold text-xs">%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car Loan Tip Card -->
+        <div class="p-3 bg-amber-50 rounded-xl border border-amber-200/60 flex items-start gap-3">
+          <span class="text-amber-600 mt-0.5">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </span>
+          <div class="text-xs text-amber-900 leading-relaxed" id="tipText">
+            <strong>Car Loan Guidance:</strong> Since a vehicle is a depreciating asset, putting down at least <strong>20% as down payment</strong> and capping the loan tenure to <strong>5 years</strong> avoids excessive interest outflow.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Summary & Chart (5 cols) -->
+      <div class="lg:col-span-5 bg-white rounded-2xl p-6 sm:p-7 shadow-xs border border-gray-200 flex flex-col justify-between space-y-6">
+        
+        <!-- Monthly EMI Highlight Card -->
+        <div class="bg-gradient-to-br from-sky-600 to-indigo-700 rounded-xl p-5 text-white shadow-md relative overflow-hidden">
+          <div class="absolute -right-6 -bottom-6 w-28 h-28 bg-white/10 rounded-full pointer-events-none"></div>
+          <p class="text-xs uppercase tracking-wider font-semibold text-sky-100">Monthly Car Loan EMI</p>
+          <div class="flex items-baseline gap-2 mt-1">
+            <span class="text-3xl sm:text-4xl font-extrabold tracking-tight" id="emiDisplay">₹ 19,833</span>
+            <span class="text-xs text-sky-200 font-medium">/ month</span>
+          </div>
+        </div>
+
+        <!-- Donut Chart & Breakdown Stats -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 items-center">
+          <!-- Canvas for Chart.js -->
+          <div class="relative w-44 h-44 mx-auto flex items-center justify-center">
+            <canvas id="breakdownChart"></canvas>
+            <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
+              <span class="text-[10px] uppercase font-bold text-gray-400">Total</span>
+              <span id="chartCenterTotal" class="text-xs font-bold text-gray-700">₹ 11.90 L</span>
+            </div>
+          </div>
+
+          <!-- Numbers Legend -->
+          <div class="space-y-3.5 text-sm">
+            <div class="border-l-4 border-sky-500 pl-3">
+              <span class="text-xs text-gray-500 font-medium block">Principal Loan Amount</span>
+              <span id="summaryPrincipal" class="font-bold text-gray-900 text-base">₹ 9,60,000</span>
+              <span id="principalRatio" class="text-[11px] text-sky-600 font-semibold block">(80.7%)</span>
+            </div>
+
+            <div class="border-l-4 border-amber-500 pl-3">
+              <span class="text-xs text-gray-500 font-medium block">Total Interest Outflow</span>
+              <span id="summaryInterest" class="font-bold text-amber-600 text-base">₹ 2,29,974</span>
+              <span id="interestRatio" class="text-[11px] text-amber-600 font-semibold block">(19.3%)</span>
+            </div>
+
+            <div class="border-l-4 border-indigo-500 pl-3 pt-1 border-t border-gray-100">
+              <span class="text-xs text-gray-500 font-medium block">Total Amount Payable to Bank</span>
+              <span id="summaryTotal" class="font-bold text-gray-900 text-base">₹ 11,89,974</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Complete Outlay Breakdown Card -->
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200/80 text-xs space-y-1.5">
+          <div class="flex justify-between text-gray-600">
+            <span>On-Road Car Price:</span>
+            <span class="font-semibold text-gray-800" id="cardCarPrice">₹ 12,00,000</span>
+          </div>
+          <div class="flex justify-between text-gray-600">
+            <span>Down Payment Paid:</span>
+            <span class="font-semibold text-emerald-700" id="cardDownPayment">₹ 2,40,000</span>
+          </div>
+          <div class="flex justify-between text-gray-600">
+            <span>Processing Fee (Approx):</span>
+            <span class="font-semibold text-gray-800" id="cardProcessingFee">₹ 4,800</span>
+          </div>
+          <div class="flex justify-between text-gray-700 border-t border-slate-200 pt-1.5 font-bold">
+            <span>Total Vehicle Outlay (Down Payment + EMI):</span>
+            <span class="text-sky-700 font-bold" id="cardTotalOutlay">₹ 14,34,774</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Yearly Amortization Stacked Bar + Line Chart Section -->
+    <div class="bg-white rounded-2xl p-6 shadow-xs border border-gray-200 space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-gray-100">
+        <div>
+          <h2 class="text-lg font-bold text-gray-900">Yearly Repayment & Loan Balance Breakdown</h2>
+          <p class="text-xs text-gray-500">Visualizing annual principal repaid, interest paid, and remaining loan balance</p>
+        </div>
+        <div class="flex items-center gap-4 text-xs font-semibold">
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-xs bg-sky-500 inline-block"></span> Principal</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-xs bg-amber-500 inline-block"></span> Interest</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-1.5 rounded-full bg-rose-600 inline-block"></span> Balance</span>
+        </div>
+      </div>
+      <div class="w-full h-72 sm:h-80">
+        <canvas id="amortizationBarChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Amortization Schedule Table Section -->
+    <div class="bg-white rounded-2xl p-6 shadow-xs border border-gray-200 space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-gray-100">
+        <div>
+          <h2 class="text-lg font-bold text-gray-900">Car Loan Repayment Schedule</h2>
+          <p class="text-xs text-gray-500">Click on any year to view monthly principal and interest breakdown.</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="btnExpandAll" class="px-3 py-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">Expand All</button>
+          <button id="btnCollapseAll" class="px-3 py-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">Collapse All</button>
+        </div>
+      </div>
+
+      <!-- Schedule Table -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs sm:text-sm border-collapse min-w-[850px]" id="amortizationTable">
+          <thead>
+            <tr class="bg-gray-50 border-b border-gray-200 text-gray-600 uppercase font-semibold text-[11px] tracking-wider">
+              <th class="py-3 px-4 min-w-[140px] whitespace-nowrap">Year / Month</th>
+              <th class="py-3 px-4 text-right min-w-[120px] whitespace-nowrap">Opening Balance</th>
+              <th class="py-3 px-4 text-right min-w-[120px] whitespace-nowrap">Principal Paid</th>
+              <th class="py-3 px-4 text-right min-w-[120px] whitespace-nowrap">Interest Paid</th>
+              <th class="py-3 px-4 text-right min-w-[140px] whitespace-nowrap">Total Installment</th>
+              <th class="py-3 px-4 text-right min-w-[125px] whitespace-nowrap">Closing Balance</th>
+              <th class="py-3 px-4 text-right min-w-[110px] whitespace-nowrap">Loan Paid %</th>
+            </tr>
+          </thead>
+          <tbody id="amortizationBody" class="divide-y divide-gray-100 text-gray-700">
+            <!-- Populated dynamically via JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Key Assumptions Card -->
+    <div class="calc-assumptions-card mt-6">
+      <div class="calc-assumptions-card__title">
+        <svg class="w-4 h-4 text-sky-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <span>Key Assumptions</span>
+      </div>
+      <ul class="calc-assumptions-card__list">
+        <li>Calculated using the monthly reducing balance method.</li>
+        <li>Assumes a fixed interest rate with EMIs payable at the end of each monthly cycle.</li>
+        <li>Processing fees, documentation charges, and applicable GST may vary across lenders.</li>
+        <li>Prepayment and foreclosure conditions are subject to individual bank/NBFC guidelines (RBI mandates zero foreclosure charges on floating-rate loans to individuals).</li>
+      </ul>
+    </div>
+</main>
+
+<script>
+    /* Override formatAmountToWords with English notation for this page */
+    function formatAmountToWords(amount) {
+      if (amount >= 10000000) {
+        const cr = (amount / 10000000).toFixed(2);
+        return `₹ ${parseFloat(cr)} Cr`;
+      } else if (amount >= 100000) {
+        const lk = (amount / 100000).toFixed(2);
+        return `₹ ${parseFloat(lk)} L`;
+      } else if (amount >= 1000) {
+        return `₹ ${(amount / 1000).toFixed(1)} K`;
+      }
+      return `₹ ${Math.round(amount)}`;
+    }
+
+    /* State */
+    const state = {
+      carType: 'hatchback',
+      carPrice: 1200000,
+      downPayment: 240000,
+      annualRate: 8.75,
+      tenureValue: 5,
+      tenureType: 'yr', // 'yr' or 'mo'
+      processingFeePercent: 0.5,
+      scheduleData: []
+    };
+
+    /* Chart instances */
+    let breakdownChartInstance = null;
+    let amortizationBarChartInstance = null;
+
+    // Presets for Car Types
+    const presets = {
+      hatchback: {
+        price: 700000,
+        downPayment: 140000,
+        rate: 8.8,
+        tenure: 5,
+        fee: 0.5,
+        tip: "<strong>Hatchback Car Loan:</strong> Public sector banks typically offer competitive rates between 8.75% and 9.0% for entry-level cars. A 5-year tenure maintains a balanced EMI and interest burden."
+      },
+      suv: {
+        price: 1500000,
+        downPayment: 300000,
+        rate: 8.6,
+        tenure: 5,
+        fee: 0.5,
+        tip: "<strong>Sedan / SUV Loan:</strong> For higher ticket loans, putting down 20% or more as down payment significantly reduces cumulative interest outflow."
+      },
+      used: {
+        price: 500000,
+        downPayment: 150000,
+        rate: 12.5,
+        tenure: 4,
+        fee: 1.0,
+        tip: "<strong>Used Car Loan:</strong> Interest rates on pre-owned cars are usually 3% to 5% higher than new vehicles. Keeping tenure between 3 to 4 years prevents excessive interest costs."
+      }
+    };
+
+    /* Standard Reducing-Balance EMI Calculation */
+    function calculateCarLoan() {
+      const P = Math.max(0, state.carPrice - state.downPayment);
+      const totalMonths = state.tenureType === 'yr' ? state.tenureValue * 12 : state.tenureValue;
+      const r = (state.annualRate / 12) / 100;
+
+      let emi = 0;
+      if (r === 0) {
+        emi = totalMonths > 0 ? P / totalMonths : 0;
+      } else if (totalMonths > 0) {
+        const factor = Math.pow(1 + r, totalMonths);
+        emi = (P * r * factor) / (factor - 1);
+      }
+
+      let openingBalance = P;
+      const yearlyRecords = [];
+      let totalInterest = 0;
+
+      let currentYear = 1;
+      let yearlyPrincipal = 0;
+      let yearlyInterest = 0;
+      let monthlyBreakdown = [];
+      let yearStartBalance = openingBalance;
+
+      for (let m = 1; m <= totalMonths; m++) {
+        const interestForMonth = openingBalance * r;
+        let principalForMonth = emi - interestForMonth;
+
+        if (principalForMonth > openingBalance || m === totalMonths) {
+          principalForMonth = openingBalance;
+        }
+
+        const closingBalance = Math.max(0, openingBalance - principalForMonth);
+        yearlyPrincipal += principalForMonth;
+        yearlyInterest += interestForMonth;
+        totalInterest += interestForMonth;
+
+        monthlyBreakdown.push({
+          month: m,
+          monthName: `Month ${m}`,
+          openingBalance,
+          principal: principalForMonth,
+          interest: interestForMonth,
+          total: principalForMonth + interestForMonth,
+          closingBalance
+        });
+
+        openingBalance = closingBalance;
+
+        if (m % 12 === 0 || m === totalMonths) {
+          const totalPaidCumulative = P - closingBalance;
+          const paidPercentage = P > 0 ? ((totalPaidCumulative / P) * 100).toFixed(1) : 100;
+
+          yearlyRecords.push({
+            year: currentYear,
+            yearName: `Year ${currentYear}`,
+            openingBalance: yearStartBalance,
+            principal: yearlyPrincipal,
+            interest: yearlyInterest,
+            total: yearlyPrincipal + yearlyInterest,
+            closingBalance: closingBalance,
+            paidPercentage: paidPercentage,
+            months: [...monthlyBreakdown]
+          });
+
+          currentYear++;
+          yearlyPrincipal = 0;
+          yearlyInterest = 0;
+          monthlyBreakdown = [];
+          yearStartBalance = openingBalance;
+        }
+
+        if (openingBalance <= 0) break;
+      }
+
+      const totalPayment = P + totalInterest;
+      const processingFeeAmount = (P * (state.processingFeePercent || 0)) / 100;
+      const totalOutlay = state.downPayment + totalPayment + processingFeeAmount;
+
+      return {
+        principalLoanAmount: Math.round(P),
+        emi: Math.round(emi),
+        totalInterest: Math.round(totalInterest),
+        totalPayment: Math.round(totalPayment),
+        processingFeeAmount: Math.round(processingFeeAmount),
+        totalOutlay: Math.round(totalOutlay),
+        schedule: yearlyRecords
+      };
+    }
+
+    /* Chart Renderers */
+    function updateCharts(calcResults) {
+      const { principalLoanAmount, totalInterest, totalPayment, schedule } = calcResults;
+
+      // 1. Donut Breakdown Chart
+      const donutCtx = document.getElementById('breakdownChart').getContext('2d');
+      const donutData = {
+        labels: ['Principal Loan Amount', 'Total Interest'],
+        datasets: [{
+          data: [principalLoanAmount, totalInterest],
+          backgroundColor: ['#0D7377', '#f59e0b'],
+          hoverBackgroundColor: ['#095e61', '#d97706'],
+          borderWidth: 2,
+          borderColor: '#ffffff'
+        }]
+      };
+
+      if (breakdownChartInstance) {
+        breakdownChartInstance.data = donutData;
+        breakdownChartInstance.update();
+      } else {
+        breakdownChartInstance = new Chart(donutCtx, {
+          type: 'doughnut',
+          data: donutData,
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '72%',
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    const val = context.parsed;
+                    const pct = totalPayment > 0 ? ((val / totalPayment) * 100).toFixed(1) : 0;
+                    return ` ${context.label}: ${formatINR(val)} (${pct}%)`;
+                  }
+                }
+              }
+            }
+          }
+        });
+      }
+
+      // 2. Yearly Amortization Stacked Bar + Line Chart
+      const barCtx = document.getElementById('amortizationBarChart').getContext('2d');
+      const labels = schedule.map(item => `Year ${item.year}`);
+      const principalPaidData = schedule.map(item => Math.round(item.principal));
+      const interestPaidData = schedule.map(item => Math.round(item.interest));
+      const balanceData = schedule.map(item => Math.round(item.closingBalance));
+
+      const barData = {
+        labels: labels,
+        datasets: [
+          {
+            type: 'line',
+            label: 'Outstanding Balance',
+            data: balanceData,
+            borderColor: '#e11d48',
+            backgroundColor: '#e11d48',
+            borderWidth: 2.5,
+            pointRadius: 3.5,
+            yAxisID: 'y1',
+            tension: 0.2
+          },
+          {
+            type: 'bar',
+            label: 'Principal Paid',
+            data: principalPaidData,
+            backgroundColor: '#0D7377',
+            stack: 'payments',
+            borderRadius: 3
+          },
+          {
+            type: 'bar',
+            label: 'Interest Paid',
+            data: interestPaidData,
+            backgroundColor: '#f59e0b',
+            stack: 'payments',
+            borderRadius: 3
+          }
+        ]
+      };
+
+      if (amortizationBarChartInstance) {
+        amortizationBarChartInstance.data = barData;
+        amortizationBarChartInstance.update();
+      } else {
+        amortizationBarChartInstance = new Chart(barCtx, {
+          data: barData,
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: {
+              mode: 'index',
+              intersect: false
+            },
+            scales: {
+              x: {
+                grid: { display: false },
+                ticks: { font: { size: 11 } }
+              },
+              y: {
+                stacked: true,
+                position: 'left',
+                grid: { color: '#f1f5f9' },
+                ticks: {
+                  font: { size: 10 },
+                  callback: (value) => formatAmountToWords(value)
+                }
+              },
+              y1: {
+                position: 'right',
+                grid: { drawOnChartArea: false },
+                ticks: {
+                  font: { size: 10 },
+                  callback: (value) => formatAmountToWords(value)
+                }
+              }
+            },
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    return ` ${context.dataset.label}: ${formatINR(context.parsed.y)}`;
+                  }
+                }
+              }
+            }
+          }
+        });
+      }
+    }
+
+    /* Table Renderer */
+    function renderScheduleTable(schedule) {
+      const tbody = document.getElementById('amortizationBody');
+      tbody.innerHTML = '';
+
+      schedule.forEach((row) => {
+        // Parent Year Row
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-sky-50/60 transition-colors cursor-pointer group border-b border-gray-100 font-medium';
+        tr.dataset.year = row.year;
+        tr.innerHTML = `
+          <td class="py-3 px-4 font-bold text-sky-700 flex items-center gap-2 whitespace-nowrap">
+            <svg id="arrow-${row.year}" class="w-4 h-4 transform transition-transform text-gray-400 group-hover:text-sky-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+            Year ${row.year}
+          </td>
+          <td class="py-3 px-4 text-right text-gray-600 whitespace-nowrap">${formatINR(row.openingBalance)}</td>
+          <td class="py-3 px-4 text-right text-sky-700 font-semibold whitespace-nowrap">${formatINR(row.principal)}</td>
+          <td class="py-3 px-4 text-right text-amber-700 font-semibold whitespace-nowrap">${formatINR(row.interest)}</td>
+          <td class="py-3 px-4 text-right text-gray-900 font-bold whitespace-nowrap">${formatINR(row.total)}</td>
+          <td class="py-3 px-4 text-right text-gray-800 font-semibold whitespace-nowrap">${formatINR(row.closingBalance)}</td>
+          <td class="py-3 px-4 text-right whitespace-nowrap">
+            <div class="inline-flex items-center gap-1.5 font-bold text-gray-700">
+              <span>${row.paidPercentage}%</span>
+              <div class="w-12 bg-gray-200 rounded-full h-1.5 hidden sm:inline-block overflow-hidden">
+                <div class="bg-emerald-500 h-1.5 rounded-full" style="width: ${row.paidPercentage}%"></div>
+              </div>
+            </div>
+          </td>
+        `;
+
+        // Monthly Breakdown Row
+        const subTr = document.createElement('tr');
+        subTr.id = `sub-year-${row.year}`;
+        subTr.className = 'hidden bg-slate-50 border-b border-gray-200';
+        
+        let monthRowsHtml = '';
+        row.months.forEach(m => {
+          monthRowsHtml += `
+            <tr class="hover:bg-slate-100/70 border-b border-slate-200/50 text-[11px] sm:text-xs">
+              <td class="py-2 px-4 pl-10 text-gray-500 font-medium whitespace-nowrap">Month ${m.month}</td>
+              <td class="py-2 px-4 text-right text-gray-500 whitespace-nowrap">${formatINR(m.openingBalance)}</td>
+              <td class="py-2 px-4 text-right text-sky-600 font-medium whitespace-nowrap">${formatINR(m.principal)}</td>
+              <td class="py-2 px-4 text-right text-amber-600 font-medium whitespace-nowrap">${formatINR(m.interest)}</td>
+              <td class="py-2 px-4 text-right text-gray-700 font-medium whitespace-nowrap">${formatINR(m.total)}</td>
+              <td class="py-2 px-4 text-right text-gray-600 whitespace-nowrap">${formatINR(m.closingBalance)}</td>
+              <td class="py-2 px-4 text-right text-gray-400 whitespace-nowrap">-</td>
+            </tr>
+          `;
+        });
+
+        subTr.innerHTML = `
+          <td colspan="7" class="p-0">
+            <table class="w-full text-left min-w-[850px]">
+              <tbody class="divide-y divide-slate-100">
+                ${monthRowsHtml}
+              </tbody>
+            </table>
+          </td>
+        `;
+
+        tbody.appendChild(tr);
+        tbody.appendChild(subTr);
+
+        // Click to toggle monthly details
+        tr.addEventListener('click', () => {
+          const isHidden = subTr.classList.contains('hidden');
+          const arrow = document.getElementById(`arrow-${row.year}`);
+          if (isHidden) {
+            subTr.classList.remove('hidden');
+            arrow.classList.add('rotate-90');
+          } else {
+            subTr.classList.add('hidden');
+            arrow.classList.remove('rotate-90');
+          }
+        });
+      });
+    }
+
+    /* Update Complete UI State */
+    function updateUI() {
+      // Validate Down Payment does not exceed car price
+      if (state.downPayment > state.carPrice) {
+        state.downPayment = state.carPrice;
+        document.getElementById('downPaymentInput').value = state.downPayment;
+        document.getElementById('downPaymentSlider').value = state.downPayment;
+      }
+
+      // Update Down Payment slider max
+      document.getElementById('downPaymentSlider').max = state.carPrice;
+
+      const calc = calculateCarLoan();
+      state.scheduleData = calc.schedule;
+
+      // Update Highlights
+      document.getElementById('emiDisplay').textContent = formatINR(calc.emi);
+      document.getElementById('summaryPrincipal').textContent = formatINR(calc.principalLoanAmount);
+      document.getElementById('summaryInterest').textContent = formatINR(calc.totalInterest);
+      document.getElementById('summaryTotal').textContent = formatINR(calc.totalPayment);
+
+      const princPct = calc.totalPayment > 0 ? ((calc.principalLoanAmount / calc.totalPayment) * 100).toFixed(1) : 0;
+      const intPct = (100 - parseFloat(princPct)).toFixed(1);
+      document.getElementById('principalRatio').textContent = `(${princPct}%)`;
+      document.getElementById('interestRatio').textContent = `(${intPct}%)`;
+
+      document.getElementById('chartCenterTotal').textContent = formatAmountToWords(calc.totalPayment);
+      document.getElementById('carPriceInWords').textContent = formatAmountToWords(state.carPrice);
+      document.getElementById('netLoanAmountDisplay').textContent = formatINR(calc.principalLoanAmount);
+
+      // Down Payment % Badge
+      const downPct = state.carPrice > 0 ? ((state.downPayment / state.carPrice) * 100).toFixed(0) : 0;
+      document.getElementById('downPaymentPercentBadge').textContent = `${downPct}% Down Payment`;
+
+      // Full Outlay Card
+      document.getElementById('cardCarPrice').textContent = formatINR(state.carPrice);
+      document.getElementById('cardDownPayment').textContent = formatINR(state.downPayment);
+      document.getElementById('cardProcessingFee').textContent = formatINR(calc.processingFeeAmount);
+      document.getElementById('cardTotalOutlay').textContent = formatINR(calc.totalOutlay);
+
+      // Sync Controls
+      document.getElementById('carPriceInput').value = state.carPrice;
+      document.getElementById('carPriceSlider').value = state.carPrice;
+
+      document.getElementById('downPaymentInput').value = state.downPayment;
+      document.getElementById('downPaymentSlider').value = state.downPayment;
+
+      document.getElementById('rateInput').value = state.annualRate;
+      document.getElementById('rateSlider').value = state.annualRate;
+
+      document.getElementById('tenureInput').value = state.tenureValue;
+      document.getElementById('tenureSlider').value = state.tenureValue;
+
+      document.getElementById('processingFeeInput').value = state.processingFeePercent;
+
+      // Update Charts & Table
+      updateCharts(calc);
+      renderScheduleTable(calc.schedule);
+    }
+
+    /* Event Listeners */
+    const carPriceInput = document.getElementById('carPriceInput');
+    const carPriceSlider = document.getElementById('carPriceSlider');
+
+    carPriceInput.addEventListener('input', (e) => {
+      let val = Number(e.target.value);
+      if (val >= 0) {
+        state.carPrice = val;
+        carPriceSlider.value = val;
+        updateUI();
+      }
+    });
+
+    carPriceSlider.addEventListener('input', (e) => {
+      state.carPrice = Number(e.target.value);
+      carPriceInput.value = state.carPrice;
+      updateUI();
+    });
+
+    const downPaymentInput = document.getElementById('downPaymentInput');
+    const downPaymentSlider = document.getElementById('downPaymentSlider');
+
+    downPaymentInput.addEventListener('input', (e) => {
+      let val = Number(e.target.value);
+      if (val >= 0) {
+        state.downPayment = val;
+        downPaymentSlider.value = val;
+        updateUI();
+      }
+    });
+
+    downPaymentSlider.addEventListener('input', (e) => {
+      state.downPayment = Number(e.target.value);
+      downPaymentInput.value = state.downPayment;
+      updateUI();
+    });
+
+    const rateInput = document.getElementById('rateInput');
+    const rateSlider = document.getElementById('rateSlider');
+
+    rateInput.addEventListener('input', (e) => {
+      let val = Number(e.target.value);
+      if (val >= 0) {
+        state.annualRate = val;
+        rateSlider.value = val;
+        updateUI();
+      }
+    });
+
+    rateSlider.addEventListener('input', (e) => {
+      state.annualRate = Number(e.target.value);
+      rateInput.value = state.annualRate;
+      updateUI();
+    });
+
+    const tenureInput = document.getElementById('tenureInput');
+    const tenureSlider = document.getElementById('tenureSlider');
+    const tenureYrBtn = document.getElementById('tenureYrBtn');
+    const tenureMoBtn = document.getElementById('tenureMoBtn');
+    const tenureScaleMarks = document.getElementById('tenureScaleMarks');
+
+    function setTenureMode(mode) {
+      if (state.tenureType === mode) return;
+      state.tenureType = mode;
+
+      if (mode === 'yr') {
+        tenureYrBtn.className = 'px-2.5 py-1 rounded-md bg-white text-sky-700 shadow-xs font-semibold';
+        tenureMoBtn.className = 'px-2.5 py-1 rounded-md text-gray-500 hover:text-gray-900 font-semibold';
+        
+        tenureSlider.min = 1;
+        tenureSlider.max = 8;
+        state.tenureValue = Math.min(8, Math.max(1, Math.round(state.tenureValue / 12)));
+        
+        tenureScaleMarks.innerHTML = `
+          <span>1 Yr</span><span>2 Yrs</span><span>3 Yrs</span><span>4 Yrs</span><span>5 Yrs</span><span>6 Yrs</span><span>7 Yrs</span><span>8 Yrs</span>
+        `;
+      } else {
+        tenureMoBtn.className = 'px-2.5 py-1 rounded-md bg-white text-sky-700 shadow-xs font-semibold';
+        tenureYrBtn.className = 'px-2.5 py-1 rounded-md text-gray-500 hover:text-gray-900 font-semibold';
+        
+        tenureSlider.min = 12;
+        tenureSlider.max = 96;
+        state.tenureValue = state.tenureValue * 12;
+
+        tenureScaleMarks.innerHTML = `
+          <span>12 Mo</span><span>24 Mo</span><span>36 Mo</span><span>48 Mo</span><span>60 Mo</span><span>72 Mo</span><span>84 Mo</span><span>96 Mo</span>
+        `;
+      }
+
+      tenureInput.value = state.tenureValue;
+      tenureSlider.value = state.tenureValue;
+      updateUI();
+    }
+
+    tenureYrBtn.addEventListener('click', () => setTenureMode('yr'));
+    tenureMoBtn.addEventListener('click', () => setTenureMode('mo'));
+
+    tenureInput.addEventListener('input', (e) => {
+      let val = Number(e.target.value);
+      if (val > 0) {
+        state.tenureValue = val;
+        tenureSlider.value = val;
+        updateUI();
+      }
+    });
+
+    tenureSlider.addEventListener('input', (e) => {
+      state.tenureValue = Number(e.target.value);
+      tenureInput.value = state.tenureValue;
+      updateUI();
+    });
+
+    document.getElementById('processingFeeInput').addEventListener('input', (e) => {
+      state.processingFeePercent = Number(e.target.value) || 0;
+      updateUI();
+    });
+
+    // Preset Tabs (Hatchback, SUV, Used Car)
+    document.querySelectorAll('.car-type-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.car-type-btn').forEach(b => {
+          b.className = 'car-type-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100';
+        });
+        btn.className = 'car-type-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 bg-sky-600 text-white shadow-xs';
+
+        const type = btn.dataset.type;
+        state.carType = type;
+        const config = presets[type];
+
+        state.carPrice = config.price;
+        state.downPayment = config.downPayment;
+        state.annualRate = config.rate;
+        state.tenureValue = config.tenure;
+        state.processingFeePercent = config.fee;
+        document.getElementById('tipText').innerHTML = config.tip;
+
+        setTenureMode('yr');
+        updateUI();
+      });
+    });
+
+    // Expand / Collapse Table Accordions
+    document.getElementById('btnExpandAll').addEventListener('click', () => {
+      state.scheduleData.forEach(row => {
+        const sub = document.getElementById(`sub-year-${row.year}`);
+        const arrow = document.getElementById(`arrow-${row.year}`);
+        if (sub) sub.classList.remove('hidden');
+        if (arrow) arrow.classList.add('rotate-90');
+      });
+    });
+
+    document.getElementById('btnCollapseAll').addEventListener('click', () => {
+      state.scheduleData.forEach(row => {
+        const sub = document.getElementById(`sub-year-${row.year}`);
+        const arrow = document.getElementById(`arrow-${row.year}`);
+        if (sub) sub.classList.add('hidden');
+        if (arrow) arrow.classList.remove('rotate-90');
+      });
+    });
+
+    // Print Button
+    document.getElementById('btnPrint').addEventListener('click', () => {
+      window.print();
+    });
+
+    // Export CSV
+    document.getElementById('btnExportCSV').addEventListener('click', () => {
+      if (!state.scheduleData || state.scheduleData.length === 0) return;
+
+      let csv = 'Year/Month,Opening Balance,Principal Paid,Interest Paid,Total Installment,Closing Balance,Loan Paid Percentage\n';
+
+      state.scheduleData.forEach(y => {
+        csv += `Year ${y.year},"${y.openingBalance}","${y.principal}","${y.interest}","${y.total}","${y.closingBalance}","${y.paidPercentage}%"\n`;
+        y.months.forEach(m => {
+          csv += `Month ${m.month},"${m.openingBalance}","${m.principal}","${m.interest}","${m.total}","${m.closingBalance}","-"\n`;
+        });
+      });
+
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.setAttribute('href', url);
+      link.setAttribute('download', `Car_Loan_EMI_Schedule_${Date.now()}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+
+    /* Initial Load */
+    window.addEventListener('DOMContentLoaded', () => {
+      updateUI();
+    });
+</script>

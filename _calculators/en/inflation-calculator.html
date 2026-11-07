@@ -1,0 +1,253 @@
+---
+title: "Inflation Calculator"
+ogTitle: "Inflation Calculator · NidhiPezhai"
+description: "Estimate future costs, price increases, and the erosion of purchasing power over time using an annual inflation rate."
+keywords: "inflation calculator, future cost calculator India, purchasing power calculator, inflation impact calculator, inflation rate India"
+language: en
+publishedEnglish: true
+eleventyExcludeFromCollections: false
+ogImage: /assets/images/nidhipezhai-og.png
+hasChart: false
+hasCsvExport: true
+---
+<main id="main-content" tabindex="-1" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-1">
+    <div class="mb-6">
+      <p class="text-xs font-semibold text-sky-700">Plan for future costs</p>
+      <h1 class="mt-1 text-2xl sm:text-3xl font-bold text-gray-900">Inflation calculator</h1>
+      <p class="mt-2 max-w-3xl text-sm text-gray-600">Estimate the future cost of today's expenses and the purchasing power of a future amount in today's terms.</p>
+    </div>
+
+    <div class="grid gap-6 lg:grid-cols-5">
+      <section class="lg:col-span-2 bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-gray-200" aria-labelledby="inputHeading">
+        <div class="flex items-center justify-between pb-2 border-b border-gray-100">
+          <h3 id="inputHeading" class="text-lg font-bold text-gray-900">Your Details</h3>
+          
+          <button id="btnReset" type="button" class="calc-reset-btn" title="Reset all inputs">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            <span>Reset</span>
+          </button>
+        </div>
+        <div class="mt-5 space-y-5">
+          <div>
+            <label for="amountInput" class="block text-sm font-semibold text-gray-700">Today's amount / cost</label>
+            <div class="relative mt-2">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">₹</span>
+              <input id="amountInput" type="number" min="0.01" max="100000000" step="100" value="10000" inputmode="decimal" class="w-full rounded-lg border border-gray-300 py-2.5 pl-8 pr-3 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
+            </div>
+            <input type="range" id="amountSlider" aria-label="Today's amount slider" min="1000" max="1000000" step="1000" value="10000" class="mt-2 w-full">
+          </div>
+          <div>
+            <label for="rateInput" class="block text-sm font-semibold text-gray-700">Annual inflation rate</label>
+            <div class="relative mt-2">
+              <input id="rateInput" type="number" min="0" max="100" step="0.1" value="6" inputmode="decimal" class="w-full rounded-lg border border-gray-300 py-2.5 pl-3 pr-9 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
+              <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500">%</span>
+            </div>
+            <input type="range" id="rateSlider" aria-label="Annual inflation rate slider" min="1" max="25" step="0.5" value="6" class="mt-2 w-full">
+            <p class="mt-1 text-xs text-gray-500">Enter an estimated rate for your planning.</p>
+          </div>
+          <div>
+            <label for="yearsInput" class="block text-sm font-semibold text-gray-700">Period</label>
+            <div class="mt-2 flex">
+              <input id="yearsInput" type="number" min="1" max="100" step="1" value="10" inputmode="numeric" class="w-full min-w-0 rounded-l-lg rounded-r-none border border-r-0 border-gray-300 py-2.5 pl-3 pr-3 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
+              <span class="inline-flex shrink-0 items-center rounded-r-lg border border-gray-300 bg-slate-50 px-3 text-sm text-gray-500">years</span>
+            </div>
+            <input type="range" id="yearsSlider" aria-label="Period slider" min="1" max="40" step="1" value="10" class="mt-2 w-full">
+          </div>
+          <p id="errorMessage" class="hidden rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-800" role="alert"></p>
+          <p class="rounded-lg border border-amber-200 bg-amber-50 p-3 text-xs leading-relaxed text-amber-900">This mathematical estimate assumes a constant annual inflation rate. Actual inflation can vary each year, and prices of specific goods and services may change differently.</p>
+        </div>
+      </section>
+
+      <section class="lg:col-span-3 space-y-6" aria-labelledby="resultsHeading" aria-live="polite">
+        <div class="bg-gradient-to-br from-sky-600 to-indigo-700 rounded-2xl p-6 text-white shadow-md">
+          <h3 id="resultsHeading" class="text-sm font-semibold text-sky-100">Future value of today's cost</h3>
+          <p class="mt-2 flex flex-wrap items-baseline gap-x-2">
+            <span id="futureValueDisplay" class="text-3xl sm:text-4xl font-extrabold">₹ 0</span>
+            <span class="text-sm text-sky-100" id="futureLabel">in 10 years</span>
+          </p>
+          <p class="mt-2 text-sm text-sky-100">The approximate amount needed to buy the same goods or services.</p>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-3">
+          <div class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
+            <p class="text-xs text-gray-500">Estimated price increase</p>
+            <p id="increaseDisplay" class="mt-1 text-xl font-bold text-amber-700">₹ 0</p>
+          </div>
+          <div class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
+            <p class="text-xs text-gray-500">Purchasing power in today's money</p>
+            <p id="presentValueDisplay" class="mt-1 text-xl font-bold text-sky-700">₹ 0</p>
+            <p id="presentValueExplanation" class="mt-2 text-xs leading-relaxed text-gray-500"></p>
+          </div>
+          <div class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
+            <p class="text-xs text-gray-500">Loss of purchasing power</p>
+            <p id="erosionDisplay" class="mt-1 text-xl font-bold text-gray-900">0%</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-gray-200">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <h3 class="text-lg font-bold text-gray-900">Year-by-year estimate</h3>
+              <p class="text-xs text-gray-500">How prices and purchasing power may change each year.</p>
+            </div>
+            <div class="text-xs text-gray-500">Starting amount: <strong id="principalDisplay" class="text-gray-800">₹ 0</strong></div>
+          </div>
+          <div class="mt-4 overflow-x-auto">
+            <table class="w-full min-w-[520px] text-left text-xs sm:text-sm">
+              <thead>
+                <tr class="border-b border-gray-200 bg-slate-50 text-xs font-semibold text-gray-600">
+                  <th class="px-3 py-3">Year</th>
+                  <th class="px-3 py-3 text-right">Future cost</th>
+                  <th class="px-3 py-3 text-right">Purchasing power today</th>
+                  <th class="px-3 py-3 text-right">Price increase</th>
+                </tr>
+              </thead>
+              <tbody id="scheduleBody" class="divide-y divide-gray-100 text-gray-700"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  
+        <!-- Key Assumptions Card -->
+        <div class="calc-assumptions-card mt-6">
+          <div class="calc-assumptions-card__title">
+            <svg class="w-4 h-4 text-sky-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Key Assumptions</span>
+          </div>
+          <ul class="calc-assumptions-card__list">
+            <li>The calculation compounds a constant annual inflation rate.</li>
+            <li>Medical and education costs may rise faster than general consumer inflation.</li>
+            <li>Inflation varies from year to year; this is only an approximate guide for planning future costs.</li>
+          </ul>
+        </div>
+  </main>
+
+<script>
+    const currency = new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+      maximumFractionDigits: 0
+    });
+    const amountInput = document.getElementById("amountInput");
+    const rateInput = document.getElementById("rateInput");
+    const yearsInput = document.getElementById("yearsInput");
+
+    function formatMoney(value) {
+      return currency.format(Math.round(value));
+    }
+
+    function updateCalculator() {
+      const amount = Number(amountInput.value);
+      const rate = Number(rateInput.value);
+      const years = Number(yearsInput.value);
+      let error = "";
+
+      if (!Number.isFinite(amount) || amount <= 0 || amount > 100000000) {
+        error = "The amount must be greater than ₹0 and no more than ₹10,00,00,000.";
+      } else if (!Number.isFinite(rate) || rate < 0 || rate > 100) {
+        error = "The inflation rate must be between 0% and 100%.";
+      } else if (!Number.isInteger(years) || years < 1 || years > 100) {
+        error = "The period must be a whole number between 1 and 100 years.";
+      }
+
+      const errorElement = document.getElementById("errorMessage");
+      errorElement.textContent = error;
+      errorElement.classList.toggle("hidden", !error);
+      if (error) {
+        document.getElementById("futureValueDisplay").textContent = "—";
+        document.getElementById("increaseDisplay").textContent = "—";
+        document.getElementById("presentValueDisplay").textContent = "—";
+        document.getElementById("presentValueExplanation").textContent = "";
+        document.getElementById("erosionDisplay").textContent = "—";
+        document.getElementById("principalDisplay").textContent = "—";
+        document.getElementById("scheduleBody").replaceChildren();
+        return;
+      }
+
+      const annualFactor = 1 + rate / 100;
+      const futureValue = amount * annualFactor ** years;
+      const presentValue = amount / annualFactor ** years;
+      const increase = futureValue - amount;
+      const erosionPercent = amount === 0 ? 0 : (1 - presentValue / amount) * 100;
+
+      document.getElementById("futureValueDisplay").textContent = formatMoney(futureValue);
+      document.getElementById("futureLabel").textContent = `in ${years} ${years === 1 ? "year" : "years"}`;
+      document.getElementById("increaseDisplay").textContent = formatMoney(increase);
+      document.getElementById("presentValueDisplay").textContent = formatMoney(presentValue);
+      document.getElementById("presentValueExplanation").textContent =
+        `In ${years} ${years === 1 ? "year" : "years"}, ${formatMoney(amount)} would buy goods worth ${formatMoney(presentValue)} today.`;
+      document.getElementById("erosionDisplay").textContent = `${erosionPercent.toLocaleString("en-IN", { maximumFractionDigits: 1 })}%`;
+      document.getElementById("principalDisplay").textContent = formatMoney(amount);
+
+      const schedule = Array.from({ length: years }, (_, index) => {
+        const year = index + 1;
+        const projectedValue = amount * annualFactor ** year;
+        const equivalentValue = amount / annualFactor ** year;
+        return { year, projectedValue, equivalentValue, increase: projectedValue - amount };
+      });
+      const body = document.getElementById("scheduleBody");
+      body.replaceChildren();
+      schedule.forEach((row) => {
+        const tr = document.createElement("tr");
+        [String(row.year), formatMoney(row.projectedValue), formatMoney(row.equivalentValue), formatMoney(row.increase)]
+          .forEach((value, index) => {
+            const cell = document.createElement("td");
+            cell.className = `px-3 py-3 ${index ? "text-right" : ""}`;
+            cell.textContent = value;
+            tr.append(cell);
+          });
+        body.append(tr);
+      });
+    }
+
+    function exportCsv() {
+      if (document.getElementById("errorMessage").textContent) {
+        return;
+      }
+      const amount = Number(amountInput.value);
+      const rate = Number(rateInput.value);
+      const years = Number(yearsInput.value);
+      const factor = 1 + rate / 100;
+      const rows = [
+        ["Year", "Future cost (INR)", "Purchasing power today (INR)", "Price increase (INR)"],
+        ...Array.from({ length: years }, (_, index) => {
+          const year = index + 1;
+          const projected = amount * factor ** year;
+          return [year, projected.toFixed(2), (amount / factor ** year).toFixed(2), (projected - amount).toFixed(2)];
+        })
+      ];
+      const csv = "\uFEFF" + rows.map((row) => row.join(",")).join("\r\n");
+      const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "inflation-estimate.csv";
+      link.click();
+      setTimeout(() => URL.revokeObjectURL(url), 0);
+    }
+
+    const amountSlider = document.getElementById("amountSlider");
+    const rateSlider = document.getElementById("rateSlider");
+    const yearsSlider = document.getElementById("yearsSlider");
+
+    if (amountSlider) {
+      amountSlider.addEventListener("input", (e) => { amountInput.value = e.target.value; updateCalculator(); });
+      amountInput.addEventListener("input", () => { amountSlider.value = amountInput.value; });
+    }
+    if (rateSlider) {
+      rateSlider.addEventListener("input", (e) => { rateInput.value = e.target.value; updateCalculator(); });
+      rateInput.addEventListener("input", () => { rateSlider.value = rateInput.value; });
+    }
+    if (yearsSlider) {
+      yearsSlider.addEventListener("input", (e) => { yearsInput.value = e.target.value; updateCalculator(); });
+      yearsInput.addEventListener("input", () => { yearsSlider.value = yearsInput.value; });
+    }
+
+    [amountInput, rateInput, yearsInput].forEach((input) => {
+      input.addEventListener("input", updateCalculator);
+      input.addEventListener("change", updateCalculator);
+    });
+    document.getElementById("btnPrint").addEventListener("click", () => window.print());
+    document.getElementById("btnExportCSV").addEventListener("click", exportCsv);
+    updateCalculator();
+  </script>

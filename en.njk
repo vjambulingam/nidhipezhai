@@ -1,0 +1,55 @@
+---
+title: Financial education
+description: Clear financial education for savings, investing, retirement and debt in India.
+keywords: [financial education, savings, investing, retirement, debt, India]
+permalink: /en/index.html
+language: en
+bodyClass: home-page
+---
+<main id="main-content" tabindex="-1">
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <div class="hero__copy">
+        <p class="eyebrow"><span class="eyebrow__rule"></span> {{ site.englishTagline }}</p>
+        <h1>Understand your money,<br><span>plan with confidence.</span></h1>
+        <p class="hero__summary">Explore financial education on savings, investing, retirement and debt in India.</p>
+        <a class="hero__link" href="{{ '/en/start-here/' | url }}">Start here <span aria-hidden="true">↗</span></a>
+      </div>
+      {% set featured = collections.englishArticlesByDate[0] %}
+      {% if featured %}
+      <a class="featured" href="{{ featured.url | url }}">
+        <span class="featured__eyebrow">Latest article</span>
+        <span class="featured__topic">{{ featured.data.topics[0] }}</span>
+        <span class="featured__title">{{ featured.data.title }}</span>
+        <span class="featured__description">{{ featured.data.description }}</span>
+        <span class="featured__meta"><span>{{ (featured.data.lastModified or featured.date) | dateEnglish }} · {{ featured | readingTime }} min read</span><span class="featured__meta-arrow" aria-hidden="true">↗</span></span>
+      </a>
+      {% endif %}
+    </div>
+  </section>
+  <section class="articles-section wrap" id="articles" aria-labelledby="articles-heading">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow eyebrow--light">Read · Learn · Plan</p>
+        <h2 id="articles-heading">Articles</h2>
+      </div>
+    </div>
+    <div class="article-grid">
+      {% for article in collections.englishArticlesByDate %}
+      <article class="article-card">
+        <div class="article-card__meta"><span class="article-card__info"><time datetime="{{ (article.data.lastModified or article.date) | dateIso }}">{{ (article.data.lastModified or article.date) | dateEnglish }}</time> · {{ article | readingTime }} min read</span></div>
+        <h3><a href="{{ article.url | url }}">{{ article.data.title }}</a></h3>
+        <p>{{ article.data.description }}</p>
+        <a class="article-card__read" href="{{ article.url | url }}">Read article <span aria-hidden="true">↗</span></a>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  <section class="articles-section wrap" id="resources" aria-labelledby="resources-heading">
+    <div class="section-heading"><div><h2 id="resources-heading">Financial tools</h2><p>Explore financial calculators and checklists in English.</p></div></div>
+    <div class="article-grid">
+      <article class="article-card"><h3><a href="{{ '/en/calculators/' | url }}">Calculators</a></h3><p>Explore savings, loans, insurance, investing and retirement.</p><a class="article-card__read" href="{{ '/en/calculators/' | url }}">Open calculators ↗</a></article>
+      <article class="article-card"><h3><a href="{{ '/en/checklists/' | url }}">Checklists</a></h3><p>Organise financial and family planning tasks.</p><a class="article-card__read" href="{{ '/en/checklists/' | url }}">Browse checklists ↗</a></article>
+    </div>
+  </section>
+</main>

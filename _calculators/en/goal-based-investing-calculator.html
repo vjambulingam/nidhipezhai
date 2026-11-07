@@ -1,0 +1,433 @@
+---
+title: "Goal-Based Investing Calculator"
+ogTitle: "Goal-Based Investing Calculator · NidhiPezhai"
+description: "Calculate your future inflation-adjusted target corpus and required monthly SIP for major life goals such as buying a home, higher education, wedding, or retirement."
+keywords: "goal based investment calculator, financial goal SIP calculator, goal based investing India, future cost calculator inflation, retirement SIP calculator, child education SIP planner"
+hasChart: false
+hasCsvExport: true
+language: en
+publishedEnglish: true
+eleventyExcludeFromCollections: false
+---
+<main id="main-content" tabindex="-1" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-1">
+    <div class="mb-6">
+      <p class="text-xs font-semibold text-sky-700">Goal-Based Investment Planning</p>
+      <h1 class="mt-1 text-2xl sm:text-3xl font-bold text-gray-900">Goal-Based Investing Calculator</h1>
+      <p class="mt-2 max-w-3xl text-sm text-gray-600">Determine your future goal cost adjusted for inflation and calculate the exact monthly SIP needed to reach your target for home buying, college education, children's weddings, domestic/international vacations, retirement, or custom financial milestones.</p>
+    </div>
+
+    <div class="grid gap-6 lg:grid-cols-5">
+      <section class="lg:col-span-2 bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-gray-200" aria-labelledby="inputHeading">
+        <div class="flex items-center justify-between pb-2 border-b border-gray-100">
+          <h3 id="inputHeading" class="text-lg font-bold text-gray-900">Goal Details</h3>
+          
+          <button id="btnReset" type="button" class="calc-reset-btn" title="Reset all inputs">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            <span>Reset</span>
+          </button>
+        </div>
+        <div class="mt-5 space-y-5">
+          <div>
+            <label for="goalInput" class="block text-sm font-semibold text-gray-700">Financial Goal</label>
+            <select id="goalInput" class="mt-2 w-full rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm text-gray-900 focus:ring-2 focus:ring-sky-500">
+              <option value="home">Home Purchase</option>
+              <option value="education">College Education</option>
+              <option value="wedding">Child's Wedding</option>
+              <option value="retirement">Retirement Corpus</option>
+              <option value="domesticTour">Domestic Vacation</option>
+              <option value="foreignTour">International Vacation</option>
+              <option value="other">Other Goal</option>
+            </select>
+            <p class="mt-1 text-xs text-gray-500">Preset values are provided for each goal type as a baseline; customize them freely to reflect your personal goals.</p>
+          </div>
+          <div>
+            <label for="targetInput" class="block text-sm font-semibold text-gray-700">Target Cost at Today's Value</label>
+            <div class="relative mt-2">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">₹</span>
+              <input id="targetInput" type="number" min="1" max="10000000000" step="10000" value="5000000" inputmode="decimal" class="w-full rounded-lg border border-gray-300 py-2.5 pl-8 pr-3 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
+            </div>
+            <input type="range" id="targetSlider" min="50000" max="20000000" step="50000" value="5000000" class="mt-2 w-full">
+            <p class="mt-1 text-xs text-gray-500">Enter today's estimated cost, not the future inflated figure—the calculator projects inflation automatically.</p>
+          </div>
+          <div>
+            <label for="yearsInput" class="block text-sm font-semibold text-gray-700">Time Horizon to Achieve Goal</label>
+            <div class="mt-2 flex">
+              <input id="yearsInput" type="number" min="1" max="60" step="1" value="10" inputmode="numeric" class="w-full min-w-0 rounded-l-lg rounded-r-none border border-r-0 border-gray-300 py-2.5 pl-3 pr-3 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
+              <span class="inline-flex shrink-0 items-center rounded-r-lg border border-gray-300 bg-slate-50 px-3 text-sm text-gray-500">years</span>
+            </div>
+            <input type="range" id="yearsSlider" min="1" max="40" step="1" value="10" class="mt-2 w-full">
+          </div>
+          <div>
+            <label for="inflationInput" class="block text-sm font-semibold text-gray-700">Expected Annual Inflation Rate</label>
+            <div class="relative mt-2">
+              <input id="inflationInput" type="number" min="0" max="30" step="0.1" value="6" inputmode="decimal" class="w-full rounded-lg border border-gray-300 py-2.5 pl-3 pr-9 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
+              <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500">%</span>
+            </div>
+            <input type="range" id="inflationSlider" min="1" max="15" step="0.5" value="6" class="mt-2 w-full">
+          </div>
+          <div>
+            <label for="returnInput" class="block text-sm font-semibold text-gray-700">Expected Annual Return on Investment</label>
+            <div class="relative mt-2">
+              <input id="returnInput" type="number" min="0" max="30" step="0.1" value="10" inputmode="decimal" class="w-full rounded-lg border border-gray-300 py-2.5 pl-3 pr-9 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
+              <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500">%</span>
+            </div>
+            <input type="range" id="returnSlider" min="4" max="25" step="0.5" value="10" class="mt-2 w-full">
+            <p class="mt-1 text-xs text-gray-500">Assumed rate of return for planning purposes; actual market returns will fluctuate.</p>
+          </div>
+          <div>
+            <label for="corpusInput" class="block text-sm font-semibold text-gray-700">Existing Investments for this Goal</label>
+            <div class="relative mt-2">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">₹</span>
+              <input id="corpusInput" type="number" min="0" max="10000000000" step="10000" value="500000" inputmode="decimal" class="w-full rounded-lg border border-gray-300 py-2.5 pl-8 pr-3 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
+            </div>
+            <input type="range" id="corpusSlider" min="0" max="10000000" step="50000" value="500000" class="mt-2 w-full">
+          </div>
+          <p id="errorMessage" class="hidden rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-800" role="alert"></p>
+          <p class="rounded-lg border border-amber-200 bg-amber-50 p-3 text-xs leading-relaxed text-amber-900">Projections assume the goal cost compounds with annual inflation and existing savings as well as monthly SIPs earn the estimated rate of return. Market investments are subject to risk and returns are not guaranteed.</p>
+        </div>
+      </section>
+
+      <section class="lg:col-span-3 space-y-6" aria-labelledby="resultsHeading" aria-live="polite">
+        <div class="bg-gradient-to-br from-sky-600 to-indigo-700 rounded-2xl p-6 text-white shadow-md">
+          <h3 id="resultsHeading" class="text-sm font-semibold text-sky-100">Required Monthly SIP for <span id="goalNameDisplay">Home Purchase</span></h3>
+          <p class="mt-2 flex flex-wrap items-baseline gap-x-2">
+            <span id="sipDisplay" class="text-3xl sm:text-4xl font-extrabold">₹ 0</span>
+            <span class="text-sm text-sky-100">per month</span>
+          </p>
+          <p class="mt-2 text-sm text-sky-100">Calculated assuming monthly investments made at the end of each month until the target year.</p>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
+            <p class="text-xs text-gray-500">Future Goal Cost (Inflation-Adjusted)</p>
+            <p id="futureTargetDisplay" class="mt-1 text-xl font-bold text-amber-700">₹ 0</p>
+          </div>
+          <div class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
+            <p class="text-xs text-gray-500">Future Value of Existing Investments</p>
+            <p id="futureCorpusDisplay" class="mt-1 text-xl font-bold text-sky-700">₹ 0</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-gray-200">
+          <h3 class="text-lg font-bold text-gray-900">Projected Portfolio Growth vs. Goal Target</h3>
+          <p class="mt-1 text-xs text-gray-500">Year-by-year trajectory of your projected investment corpus against the rising inflation-adjusted goal target.</p>
+          <div class="mt-4 overflow-x-auto">
+            <svg id="corpusChart" class="w-full min-w-[520px]" viewBox="0 0 760 330" role="img" aria-labelledby="chartTitle chartDescription">
+              <title id="chartTitle">Projected Investment Growth vs. Goal Cost</title>
+              <desc id="chartDescription"></desc>
+            </svg>
+          </div>
+          <div class="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-xs text-gray-600">
+            <span class="inline-flex items-center gap-2"><span class="h-0.5 w-5 bg-sky-700"></span>Projected Portfolio Corpus</span>
+            <span class="inline-flex items-center gap-2"><span class="h-0.5 w-5 border-t-2 border-dashed border-amber-700"></span>Inflation-Adjusted Goal Target</span>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-gray-200">
+          <h3 class="text-lg font-bold text-gray-900">Plan Summary</h3>
+          <p id="summaryMessage" class="mt-2 text-sm leading-relaxed text-gray-600"></p>
+          <p class="mt-4 rounded-lg bg-slate-50 p-3 text-xs leading-relaxed text-gray-600">Formula: Future Goal = Current Cost × (1 + Inflation)<sup>Years</sup>. The future compounding value of current investments is deducted, and the remaining shortfall is bridged by the required monthly SIP. Taxes, expense ratios, and sequence-of-returns risk are excluded.</p>
+          <p class="mt-4 text-sm text-gray-600">Learn how to build an optimal asset allocation for your goals in our <a class="font-semibold text-sky-700 underline underline-offset-2 hover:text-sky-800" href="../articles/portfolio-creation-approach/">Portfolio Creation Guide</a>.</p>
+        </div>
+      </section>
+    </div>
+  
+        <!-- Key Assumptions Card -->
+        <div class="calc-assumptions-card mt-6">
+          <div class="calc-assumptions-card__title">
+            <svg class="w-4 h-4 text-sky-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Key Assumptions</span>
+          </div>
+          <ul class="calc-assumptions-card__list">
+            <li>Future goal target costs are adjusted using compounded annual inflation (lifestyle/education inflation may be higher than headline CPI).</li>
+            <li>Monthly SIP investments are compounded monthly at the assumed constant annual rate of return.</li>
+            <li>Mutual fund investments are subject to market volatility; actual annualized returns will vary across market cycles.</li>
+          </ul>
+        </div>
+  </main>
+
+<script>
+    const currency = new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+      maximumFractionDigits: 0
+    });
+    const goalInput = document.getElementById("goalInput");
+    const targetInput = document.getElementById("targetInput");
+    const yearsInput = document.getElementById("yearsInput");
+    const inflationInput = document.getElementById("inflationInput");
+    const returnInput = document.getElementById("returnInput");
+    const corpusInput = document.getElementById("corpusInput");
+
+    const goalNames = {
+      home: "Home Purchase",
+      education: "College Education",
+      wedding: "Child's Wedding",
+      retirement: "Retirement Corpus",
+      domesticTour: "Domestic Vacation",
+      foreignTour: "International Vacation",
+      other: "Custom Goal"
+    };
+    const goalDefaults = {
+      home: { target: 5000000, years: 10, inflation: 6, annualReturn: 10, corpus: 500000 },
+      education: { target: 2500000, years: 15, inflation: 8, annualReturn: 10, corpus: 250000 },
+      wedding: { target: 2000000, years: 15, inflation: 6, annualReturn: 10, corpus: 200000 },
+      retirement: { target: 10000000, years: 25, inflation: 6, annualReturn: 10, corpus: 1000000 },
+      domesticTour: { target: 200000, years: 2, inflation: 6, annualReturn: 6, corpus: 50000 },
+      foreignTour: { target: 500000, years: 3, inflation: 6, annualReturn: 6, corpus: 100000 },
+      other: { target: 500000, years: 5, inflation: 6, annualReturn: 8, corpus: 50000 }
+    };
+
+    function formatMoney(value) {
+      return currency.format(Math.round(value));
+    }
+
+    function createSvgElement(name, attributes = {}, text = "") {
+      const element = document.createElementNS("http://www.w3.org/2000/svg", name);
+      Object.entries(attributes).forEach(([key, value]) => element.setAttribute(key, String(value)));
+      if (text) {
+        element.textContent = text;
+      }
+      return element;
+    }
+
+    function formatCompactMoney(value) {
+      if (value >= 10000000) {
+        return `₹${(value / 10000000).toLocaleString("en-IN", { maximumFractionDigits: 1 })} Cr`;
+      }
+      if (value >= 100000) {
+        return `₹${(value / 100000).toLocaleString("en-IN", { maximumFractionDigits: 1 })} L`;
+      }
+      if (value >= 1000) {
+        return `₹${(value / 1000).toLocaleString("en-IN", { maximumFractionDigits: 0 })} K`;
+      }
+      return formatMoney(value);
+    }
+
+    function drawChart(plan) {
+      const chart = document.getElementById("corpusChart");
+      chart.replaceChildren();
+      chart.append(
+        createSvgElement("title", { id: "chartTitle" }, "Projected Investment Growth vs. Goal Cost"),
+        createSvgElement("desc", { id: "chartDescription" }, plan
+          ? `In ${plan.years} years, inflation-adjusted goal target is ${formatMoney(plan.futureTarget)}; projected investment corpus is ${formatMoney(plan.projectedCorpus)}.`
+          : "The chart will be rendered after reviewing inputs.")
+      );
+      if (!plan) {
+        return;
+      }
+
+      const width = 760;
+      const height = 330;
+      const left = 118;
+      const right = 20;
+      const top = 18;
+      const bottom = 272;
+      const chartWidth = width - left - right;
+      const chartHeight = bottom - top;
+      const monthlyReturn = plan.annualReturn / 1200;
+      let projectedCorpus = plan.corpus;
+      const points = [{ year: 0, goal: plan.target, corpus: projectedCorpus }];
+
+      for (let year = 1; year <= plan.years; year += 1) {
+        for (let month = 0; month < 12; month += 1) {
+          projectedCorpus = projectedCorpus * (1 + monthlyReturn) + plan.sip;
+        }
+        points.push({
+          year,
+          goal: plan.target * (1 + plan.inflation / 100) ** year,
+          corpus: projectedCorpus
+        });
+      }
+
+      const maxValue = Math.max(...points.map((point) => Math.max(point.goal, point.corpus)), 1);
+      const xForYear = (year) => left + (year / plan.years) * chartWidth;
+      const yForValue = (value) => bottom - (value / maxValue) * chartHeight;
+
+      for (let tick = 0; tick <= 4; tick += 1) {
+        const value = maxValue * tick / 4;
+        const y = yForValue(value);
+        chart.append(
+          createSvgElement("line", {
+            x1: left, y1: y, x2: width - right, y2: y,
+            stroke: "#d8e3de", "stroke-width": 1
+          }),
+          createSvgElement("text", {
+            x: left - 9, y: y + 4, "text-anchor": "end",
+            fill: "#64748b", "font-size": 11
+          }, formatCompactMoney(value))
+        );
+      }
+
+      const yearStep = Math.max(1, Math.ceil(plan.years / 5));
+      for (let year = 0; year <= plan.years; year += yearStep) {
+        const x = xForYear(year);
+        chart.append(
+          createSvgElement("line", {
+            x1: x, y1: top, x2: x, y2: bottom,
+            stroke: "#eef2f0", "stroke-width": 1
+          }),
+          createSvgElement("text", {
+            x, y: bottom + 20, "text-anchor": "middle",
+            fill: "#64748b", "font-size": 11
+          }, String(year))
+        );
+      }
+      if (plan.years % yearStep !== 0) {
+        chart.append(createSvgElement("text", {
+          x: xForYear(plan.years), y: bottom + 20, "text-anchor": "middle",
+          fill: "#64748b", "font-size": 11
+        }, String(plan.years)));
+      }
+      chart.append(createSvgElement("text", {
+        x: left + chartWidth / 2, y: height - 10, "text-anchor": "middle",
+        fill: "#475569", "font-size": 11
+      }, "Years"));
+
+      const makePath = (key) => points.map((point, index) =>
+        `${index === 0 ? "M" : "L"} ${xForYear(point.year)} ${yForValue(point[key])}`
+      ).join(" ");
+      chart.append(
+        createSvgElement("path", {
+          d: makePath("goal"), fill: "none", stroke: "#b45309",
+          "stroke-width": 3, "stroke-dasharray": "7 6", "stroke-linecap": "round"
+        }),
+        createSvgElement("path", {
+          d: makePath("corpus"), fill: "none", stroke: "#0D7377",
+          "stroke-width": 3, "stroke-linecap": "round", "stroke-linejoin": "round"
+        })
+      );
+    }
+
+    function applyGoalDefaults() {
+      const defaults = goalDefaults[goalInput.value];
+      targetInput.value = String(defaults.target);
+      yearsInput.value = String(defaults.years);
+      inflationInput.value = String(defaults.inflation);
+      returnInput.value = String(defaults.annualReturn);
+      corpusInput.value = String(defaults.corpus);
+      if (targetSlider) targetSlider.value = String(defaults.target);
+      if (yearsSlider) yearsSlider.value = String(defaults.years);
+      if (inflationSlider) inflationSlider.value = String(defaults.inflation);
+      if (returnSlider) returnSlider.value = String(defaults.annualReturn);
+      if (corpusSlider) corpusSlider.value = String(defaults.corpus);
+      calculatePlan();
+    }
+
+    function calculatePlan() {
+      const target = Number(targetInput.value);
+      const years = Number(yearsInput.value);
+      const inflation = Number(inflationInput.value);
+      const annualReturn = Number(returnInput.value);
+      const corpus = Number(corpusInput.value);
+      let error = "";
+
+      if (!Number.isFinite(target) || target <= 0 || target > 10000000000) {
+        error = "Current goal cost must be greater than ₹0 and up to ₹1,000 Crore.";
+      } else if (!Number.isInteger(years) || years < 1 || years > 60) {
+        error = "Time horizon must be between 1 and 60 full years.";
+      } else if (!Number.isFinite(inflation) || inflation < 0 || inflation > 30) {
+        error = "Inflation rate must be between 0% and 30%.";
+      } else if (!Number.isFinite(annualReturn) || annualReturn < 0 || annualReturn > 30) {
+        error = "Expected annual return must be between 0% and 30%.";
+      } else if (!Number.isFinite(corpus) || corpus < 0 || corpus > 10000000000) {
+        error = "Existing investments must be between ₹0 and ₹1,000 Crore.";
+      }
+
+      const errorElement = document.getElementById("errorMessage");
+      errorElement.textContent = error;
+      errorElement.classList.toggle("hidden", !error);
+      if (error) {
+        document.getElementById("sipDisplay").textContent = "—";
+        document.getElementById("futureTargetDisplay").textContent = "—";
+        document.getElementById("futureCorpusDisplay").textContent = "—";
+        document.getElementById("summaryMessage").textContent = "";
+        drawChart(null);
+        return null;
+      }
+
+      const months = years * 12;
+      const monthlyReturn = annualReturn / 1200;
+      const corpusFactor = (1 + monthlyReturn) ** months;
+      const futureTarget = target * (1 + inflation / 100) ** years;
+      const futureCorpus = corpus * corpusFactor;
+      const remaining = Math.max(futureTarget - futureCorpus, 0);
+      const sip = remaining === 0
+        ? 0
+        : monthlyReturn === 0
+          ? Math.ceil(remaining / months)
+          : Math.ceil(remaining * monthlyReturn / (corpusFactor - 1));
+      const projectedCorpus = futureCorpus + (sip === 0
+        ? 0
+        : monthlyReturn === 0
+          ? sip * months
+          : sip * (corpusFactor - 1) / monthlyReturn);
+      const plan = { target, years, inflation, annualReturn, corpus, months, futureTarget, futureCorpus, projectedCorpus, remaining, sip };
+
+      document.getElementById("goalNameDisplay").textContent = goalNames[goalInput.value];
+      document.getElementById("sipDisplay").textContent = formatMoney(sip);
+      document.getElementById("futureTargetDisplay").textContent = formatMoney(futureTarget);
+      document.getElementById("futureCorpusDisplay").textContent = formatMoney(futureCorpus);
+      document.getElementById("summaryMessage").textContent = remaining === 0
+        ? `If your existing investments grow at the expected return, the projected future corpus will exceed your goal target by ${formatMoney(futureCorpus - futureTarget)}. No additional monthly SIP is needed.`
+        : `For an inflation-adjusted future target of ${formatMoney(futureTarget)}, your existing investments are projected to grow to ${formatMoney(futureCorpus)}. To bridge the remaining gap of ${formatMoney(remaining)}, a monthly SIP of ${formatMoney(sip)} is required.`;
+      drawChart(plan);
+      return plan;
+    }
+
+    function exportCsv() {
+      const plan = calculatePlan();
+      if (!plan) {
+        return;
+      }
+      const rows = [
+        ["Goal", "Target Cost Today (INR)", "Time Horizon (Years)", "Inflation Rate (%)", "Expected Return (%)", "Current Investments (INR)", "Future Goal Cost (INR)", "Future Value of Current Investments (INR)", "Required Monthly SIP (INR)"],
+        [goalNames[goalInput.value], plan.target.toFixed(2), plan.years, plan.inflation, plan.annualReturn, plan.corpus.toFixed(2), plan.futureTarget.toFixed(2), plan.futureCorpus.toFixed(2), plan.sip.toFixed(2)]
+      ];
+      const csv = "\uFEFF" + rows.map((row) => row.join(",")).join("\r\n");
+      const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "goal-based-investing-plan.csv";
+      link.click();
+      setTimeout(() => URL.revokeObjectURL(url), 0);
+    }
+
+    const targetSlider = document.getElementById("targetSlider");
+    const yearsSlider = document.getElementById("yearsSlider");
+    const inflationSlider = document.getElementById("inflationSlider");
+    const returnSlider = document.getElementById("returnSlider");
+    const corpusSlider = document.getElementById("corpusSlider");
+
+    if (targetSlider) {
+      targetSlider.addEventListener("input", (e) => { targetInput.value = e.target.value; calculatePlan(); });
+      targetInput.addEventListener("input", () => { targetSlider.value = targetInput.value; });
+    }
+    if (yearsSlider) {
+      yearsSlider.addEventListener("input", (e) => { yearsInput.value = e.target.value; calculatePlan(); });
+      yearsInput.addEventListener("input", () => { yearsSlider.value = yearsInput.value; });
+    }
+    if (inflationSlider) {
+      inflationSlider.addEventListener("input", (e) => { inflationInput.value = e.target.value; calculatePlan(); });
+      inflationInput.addEventListener("input", () => { inflationSlider.value = inflationInput.value; });
+    }
+    if (returnSlider) {
+      returnSlider.addEventListener("input", (e) => { returnInput.value = e.target.value; calculatePlan(); });
+      returnInput.addEventListener("input", () => { returnSlider.value = returnInput.value; });
+    }
+    if (corpusSlider) {
+      corpusSlider.addEventListener("input", (e) => { corpusInput.value = e.target.value; calculatePlan(); });
+      corpusInput.addEventListener("input", () => { corpusSlider.value = corpusInput.value; });
+    }
+
+    [targetInput, yearsInput, inflationInput, returnInput, corpusInput].forEach((input) => {
+      input.addEventListener("input", calculatePlan);
+      input.addEventListener("change", calculatePlan);
+    });
+    goalInput.addEventListener("change", applyGoalDefaults);
+    const printBtn = document.getElementById("btnPrint");
+    if (printBtn) printBtn.addEventListener("click", () => window.print());
+    const csvBtn = document.getElementById("btnExportCSV");
+    if (csvBtn) csvBtn.addEventListener("click", exportCsv);
+    calculatePlan();
+  </script>

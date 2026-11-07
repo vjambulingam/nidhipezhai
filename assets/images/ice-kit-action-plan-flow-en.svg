@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="585" viewBox="0 0 1200 585" role="img" aria-labelledby="flow-title flow-desc">
+  <title id="flow-title">In Case of Emergency (ICE Kit) - 5-Step Action Plan Flow</title>
+  <desc id="flow-desc">Step 1: Document Gathering, Step 2: Master Spreadsheet Creation, Step 3: Physical Binder Assembly, Step 4: The Family Conversation, Step 5: Annual Review and Update.</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700;800&amp;display=swap');
+      .font-en {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+    </style>
+    <linearGradient id="flowHeaderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D7377"/>
+      <stop offset="100%" stop-color="#102e31"/>
+    </linearGradient>
+    <linearGradient id="flowGoldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c59b27"/>
+      <stop offset="100%" stop-color="#e5c58e"/>
+    </linearGradient>
+    <filter id="flowShadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0d2b26" flood-opacity="0.06"/>
+    </filter>
+    <marker id="arrowTeal" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#0D7377"/>
+    </marker>
+    <marker id="arrowEmerald" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#10b981"/>
+    </marker>
+    <marker id="arrowGold" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#c59b27"/>
+    </marker>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="545" rx="18" fill="#f4f7f6" stroke="#d5e2dc" stroke-width="2"/>
+
+  <!-- Header Banner -->
+  <rect x="24" y="24" width="1152" height="76" rx="14" fill="url(#flowHeaderGrad)"/>
+  <rect x="24" y="24" width="1152" height="5" rx="2.5" fill="url(#flowGoldGrad)"/>
+
+  <!-- Header Icon Badge -->
+  <g transform="translate(46, 38)">
+    <rect width="48" height="48" rx="10" fill="#ffffff" fill-opacity="0.12" stroke="#e5c58e" stroke-width="1.5"/>
+    <text x="24" y="32" font-size="22" text-anchor="middle">📋</text>
+  </g>
+
+  <!-- Header Title -->
+  <text x="110" y="70" fill="#ffffff" class="font-en" font-size="24" font-weight="700">In Case of Emergency (ICE Kit) — 5-Step Action Plan Flow</text>
+
+  <!-- ================= ROW 1 (Steps 1, 2, 3) ================= -->
+
+  <!-- STEP 1 -->
+  <g transform="translate(40, 130)" filter="url(#flowShadow)">
+    <rect width="330" height="160" rx="14" fill="#ffffff" stroke="#dbe7e1" stroke-width="1.5"/>
+    <rect width="330" height="5" rx="2.5" fill="#0D7377"/>
+    <!-- Icon Container -->
+    <circle cx="48" cy="48" r="22" fill="#e8f5f1"/>
+    <text x="48" y="55" font-size="22" text-anchor="middle">📂</text>
+    <!-- Step Badge -->
+    <rect x="240" y="34" width="66" height="26" rx="13" fill="#e8f5f1"/>
+    <text x="273" y="52" fill="#0D7377" class="font-en" font-size="13" font-weight="700" text-anchor="middle">STEP 01</text>
+    <!-- Line 1: Main Step -->
+    <text x="22" y="94" fill="#102e31" class="font-en" font-size="16" font-weight="700">Step 1: Document</text>
+    <text x="22" y="118" fill="#102e31" class="font-en" font-size="16" font-weight="700">Gathering &amp; Inventory</text>
+    <!-- Line 2: Subtitle -->
+    <text x="22" y="142" fill="#0D7377" class="font-en" font-size="13" font-weight="600">(Assemble physical &amp; digital records)</text>
+  </g>
+
+  <!-- Arrow 1 -> 2 (Horizontal, Row 1) -->
+  <path d="M 370 210 L 426 210" fill="none" stroke="#0D7377" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowTeal)"/>
+
+  <!-- STEP 2 -->
+  <g transform="translate(435, 130)" filter="url(#flowShadow)">
+    <rect width="330" height="160" rx="14" fill="#ffffff" stroke="#dbe7e1" stroke-width="1.5"/>
+    <rect width="330" height="5" rx="2.5" fill="#10b981"/>
+    <!-- Icon Container -->
+    <circle cx="48" cy="48" r="22" fill="#eafaf3"/>
+    <text x="48" y="55" font-size="22" text-anchor="middle">💻</text>
+    <!-- Step Badge -->
+    <rect x="240" y="34" width="66" height="26" rx="13" fill="#eafaf3"/>
+    <text x="273" y="52" fill="#10b981" class="font-en" font-size="13" font-weight="700" text-anchor="middle">STEP 02</text>
+    <!-- Line 1: Main Step -->
+    <text x="22" y="94" fill="#102e31" class="font-en" font-size="16" font-weight="700">Step 2: Master Digital</text>
+    <text x="22" y="118" fill="#102e31" class="font-en" font-size="16" font-weight="700">Spreadsheet Creation</text>
+    <!-- Line 2: Subtitle -->
+    <text x="22" y="142" fill="#10b981" class="font-en" font-size="13" font-weight="600">(Password-protected central index)</text>
+  </g>
+
+  <!-- Arrow 2 -> 3 (Horizontal, Row 1) -->
+  <path d="M 765 210 L 821 210" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowEmerald)"/>
+
+  <!-- STEP 3 -->
+  <g transform="translate(830, 130)" filter="url(#flowShadow)">
+    <rect width="330" height="160" rx="14" fill="#ffffff" stroke="#dbe7e1" stroke-width="1.5"/>
+    <rect width="330" height="5" rx="2.5" fill="#c59b27"/>
+    <!-- Icon Container -->
+    <circle cx="48" cy="48" r="22" fill="#fdf8ed"/>
+    <text x="48" y="55" font-size="22" text-anchor="middle">🗂️</text>
+    <!-- Step Badge -->
+    <rect x="240" y="34" width="66" height="26" rx="13" fill="#fdf8ed"/>
+    <text x="273" y="52" fill="#c59b27" class="font-en" font-size="13" font-weight="700" text-anchor="middle">STEP 03</text>
+    <!-- Line 1: Main Step -->
+    <text x="22" y="94" fill="#102e31" class="font-en" font-size="16" font-weight="700">Step 3: Physical Hardcopy</text>
+    <text x="22" y="118" fill="#102e31" class="font-en" font-size="16" font-weight="700">Binder Assembly</text>
+    <!-- Line 2: Subtitle -->
+    <text x="22" y="142" fill="#c59b27" class="font-en" font-size="13" font-weight="600">(Fireproof folder with photocopies)</text>
+  </g>
+
+  <!-- Arrow 3 -> 4 (Vertical, Straight Down from Step 3 to Step 4) -->
+  <path d="M 995 290 L 995 346" fill="none" stroke="#c59b27" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowGold)"/>
+
+  <!-- ================= ROW 2 (Steps 5 & 4, and Return Loop) ================= -->
+
+  <!-- Return Loop Box / Cycle Indicator in Col 1 -->
+  <g transform="translate(40, 355)">
+    <rect width="330" height="160" rx="14" fill="#ffffff" stroke="#c2e9d7" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <circle cx="48" cy="48" r="22" fill="#eafaf3"/>
+    <text x="48" y="56" font-size="22" text-anchor="middle">🔄</text>
+    <rect x="200" y="34" width="106" height="26" rx="13" fill="#eafaf3"/>
+    <text x="253" y="52" fill="#10b981" class="font-en" font-size="12" font-weight="700" text-anchor="middle">ANNUAL CYCLE</text>
+    <text x="22" y="94" fill="#102e31" class="font-en" font-size="16" font-weight="700">Continuous Review</text>
+    <text x="22" y="118" fill="#102e31" class="font-en" font-size="16" font-weight="700">Annual Habit Loop</text>
+    <text x="22" y="142" fill="#10b981" class="font-en" font-size="13" font-weight="600">(Keeps data fresh &amp; actionable)</text>
+  </g>
+
+  <!-- STEP 5 -->
+  <g transform="translate(435, 355)" filter="url(#flowShadow)">
+    <rect width="330" height="160" rx="14" fill="#ffffff" stroke="#dbe7e1" stroke-width="1.5"/>
+    <rect width="330" height="5" rx="2.5" fill="#10b981"/>
+    <!-- Icon Container -->
+    <circle cx="48" cy="48" r="22" fill="#eafaf3"/>
+    <text x="48" y="55" font-size="22" text-anchor="middle">📅</text>
+    <!-- Step Badge -->
+    <rect x="240" y="34" width="66" height="26" rx="13" fill="#eafaf3"/>
+    <text x="273" y="52" fill="#10b981" class="font-en" font-size="13" font-weight="700" text-anchor="middle">STEP 05</text>
+    <!-- Line 1: Main Step -->
+    <text x="22" y="94" fill="#102e31" class="font-en" font-size="16" font-weight="700">Step 5: Annual Review</text>
+    <text x="22" y="118" fill="#102e31" class="font-en" font-size="16" font-weight="700">&amp; Periodic Updates</text>
+    <!-- Line 2: Subtitle -->
+    <text x="22" y="142" fill="#10b981" class="font-en" font-size="13" font-weight="600">(Audit nominees, cards &amp; balances)</text>
+  </g>
+
+  <!-- Arrow 4 -> 5 (Horizontal, Pointing Left from Step 4 to Step 5) -->
+  <path d="M 830 435 L 774 435" fill="none" stroke="#0D7377" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowTeal)"/>
+
+  <!-- STEP 4 -->
+  <g transform="translate(830, 355)" filter="url(#flowShadow)">
+    <rect width="330" height="160" rx="14" fill="#ffffff" stroke="#dbe7e1" stroke-width="1.5"/>
+    <rect width="330" height="5" rx="2.5" fill="#0D7377"/>
+    <!-- Icon Container -->
+    <circle cx="48" cy="48" r="22" fill="#e8f5f1"/>
+    <text x="48" y="55" font-size="22" text-anchor="middle">👨‍👩‍👧‍👦</text>
+    <!-- Step Badge -->
+    <rect x="240" y="34" width="66" height="26" rx="13" fill="#e8f5f1"/>
+    <text x="273" y="52" fill="#0D7377" class="font-en" font-size="13" font-weight="700" text-anchor="middle">STEP 04</text>
+    <!-- Line 1: Main Step -->
+    <text x="22" y="94" fill="#102e31" class="font-en" font-size="16" font-weight="700">Step 4: The Family</text>
+    <text x="22" y="118" fill="#102e31" class="font-en" font-size="16" font-weight="700">Emergency Conversation</text>
+    <!-- Line 2: Subtitle -->
+    <text x="22" y="142" fill="#0D7377" class="font-en" font-size="13" font-weight="600">(Walkthrough with spouse &amp; trustees)</text>
+  </g>
+
+  <!-- Return Flow Arrow (Step 5 to Step 1 loop through Col 1) -->
+  <path d="M 435 435 L 379 435" fill="none" stroke="#10b981" stroke-width="2.5" stroke-dasharray="6,4" stroke-linecap="round" marker-end="url(#arrowEmerald)"/>
+  <path d="M 205 355 L 205 299" fill="none" stroke="#10b981" stroke-width="2.5" stroke-dasharray="6,4" stroke-linecap="round" marker-end="url(#arrowEmerald)"/>
+
+  <text id="brand-watermark" x="600" y="572" text-anchor="middle" class="font-en" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">Nidhi Pezhai</text>
+</svg>

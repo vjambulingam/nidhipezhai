@@ -1,4 +1,5 @@
 ---
+language: ta
 title: பொறுப்புத் துறப்புகள்
 description: இந்த வலைப்பதிவின் தகவல் மற்றும் நிதி உள்ளடக்கத்திற்கான பொறுப்புத் துறப்பு.
 permalink: /disclaimer/index.html

@@ -2,7 +2,32 @@
 {% set currentShareTitle = (shareTitle or ogTitle or title or site.title) %}
 {% set waShareText = currentShareTitle + " - " + currentShareUrl %}
 
-{% if shareVariant == "icons-only" %}
+{% if language == "en" %}
+{% if shareVariant == "box" %}
+<section class="social-share-box" aria-labelledby="share-box-heading-{{ shareContext or 'main' }}">
+  <div class="social-share-box__inner">
+    <div class="social-share-box__text">
+      <h3 id="share-box-heading-{{ shareContext or 'main' }}" class="social-share-box__title">Found this useful? Share it with friends!</h3>
+      <p class="social-share-box__subtitle">Share financial knowledge with your family and friends.</p>
+    </div>
+    <div class="social-share-box__actions">
+      <a class="social-share-pill social-share-pill--whatsapp" href="https://api.whatsapp.com/send?text={{ waShareText | urlEncode }}" target="_blank" rel="noopener noreferrer" aria-label="Share on WhatsApp">WhatsApp</a>
+      <a class="social-share-pill social-share-pill--telegram" href="https://t.me/share/url?url={{ currentShareUrl | urlEncode }}&text={{ currentShareTitle | urlEncode }}" target="_blank" rel="noopener noreferrer" aria-label="Share on Telegram">Telegram</a>
+      <a class="social-share-pill social-share-pill--x" href="https://x.com/intent/post?text={{ currentShareTitle | urlEncode }}&url={{ currentShareUrl | urlEncode }}" target="_blank" rel="noopener noreferrer" aria-label="Share on X">X</a>
+    </div>
+  </div>
+</section>
+{% else %}
+<div class="social-share social-share--compact" aria-label="Share on social media">
+  <span class="social-share__label">Share:</span>
+  <div class="social-share__links">
+    <a class="social-share__btn social-share__btn--whatsapp" href="https://api.whatsapp.com/send?text={{ waShareText | urlEncode }}" target="_blank" rel="noopener noreferrer" aria-label="Share on WhatsApp">WhatsApp</a>
+    <a class="social-share__btn social-share__btn--telegram" href="https://t.me/share/url?url={{ currentShareUrl | urlEncode }}&text={{ currentShareTitle | urlEncode }}" target="_blank" rel="noopener noreferrer" aria-label="Share on Telegram">Telegram</a>
+    <a class="social-share__btn social-share__btn--x" href="https://x.com/intent/post?text={{ currentShareTitle | urlEncode }}&url={{ currentShareUrl | urlEncode }}" target="_blank" rel="noopener noreferrer" aria-label="Share on X">X</a>
+  </div>
+</div>
+{% endif %}
+{% elif shareVariant == "icons-only" %}
 <div class="social-share social-share--icons-only" aria-label="சமூக வலைதளப் பகிர்வு">
   <div class="social-share__links">
     <a class="social-share__btn social-share__btn--whatsapp" href="https://api.whatsapp.com/send?text={{ waShareText | urlEncode }}" target="_blank" rel="noopener noreferrer" title="WhatsApp-ல் பகிர்க" aria-label="WhatsApp-ல் பகிர்க">

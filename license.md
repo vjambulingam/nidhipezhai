@@ -1,4 +1,5 @@
 ---
+language: ta
 title: உரிமங்கள்
 description: நிதிப்பேழை தளத்தின் உள்ளடக்க உரிமம் மற்றும் பகிர்வு விதிகள்.
 permalink: /license/index.html

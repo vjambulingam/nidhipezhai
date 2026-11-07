@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.language }}">
+<html lang="{{ 'en' if language == 'en' else site.language }}">
 <head>
   {% set canonicalUrl = page.url | url | absoluteUrl %}
   {% set socialTitle = ogTitle or (title + " · " + site.title) %}
@@ -13,7 +13,7 @@
   <link rel="canonical" href="{{ canonicalUrl }}">
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/nidhipezhai-logo.svg' | url }}">
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="ta_IN">
+  <meta property="og:locale" content="{{ 'en_IN' if language == 'en' else 'ta_IN' }}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:title" content="{{ socialTitle }}">
   <meta property="og:description" content="{{ description }}">
@@ -43,7 +43,7 @@
     "@type": "WebApplication",
     "name": title,
     "description": description,
-    "inLanguage": "ta-IN",
+    "inLanguage": "en-IN" if language == "en" else "ta-IN",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "Web",
     "url": canonicalUrl,
@@ -58,30 +58,34 @@
   {% include "partials/theme-init.njk" %}
 </head>
 <body class="min-h-screen flex flex-col justify-between antialiased">
-  <a class="skip-link" href="#main-content">முதன்மை உள்ளடக்கத்திற்குத் தாவவும்</a>
+  <a class="skip-link" href="#main-content">{{ 'Skip to main content' if language == 'en' else 'முதன்மை உள்ளடக்கத்திற்குத் தாவவும்' }}</a>
   {% include "partials/site-header.njk" %}
   <div class="calc-toolbar no-print">
     <div class="wrap calc-toolbar__inner">
           {% set calcCategory = "" %}
           {% set calcGroupId = "" %}
           {% set nextCalc = null %}
-          {% for group in calculators %}
+          {% set calculatorDirectory = '/en/calculators/' if language == 'en' else '/calculators/' %}
+          {% set calculatorGroups = (calculators | englishCalculatorGroups(collections.seoPages)) if language == 'en' else calculators %}
+          {% for group in calculatorGroups %}
             {% set groupIndex = loop.index %}
             {% for item in group.items %}
               {% if item.url == page.url %}
                 {% set calcCategory = group.category %}
                 {% set calcGroupId = groupIndex %}
-                {% set nextCalc = group.items[(loop.index0 + 1) % group.items | length] %}
+                {% if language != 'en' or group.items | length > 1 %}
+                  {% set nextCalc = group.items[(loop.index0 + 1) % group.items | length] %}
+                {% endif %}
               {% endif %}
             {% endfor %}
           {% endfor %}
-          <nav class="calc-breadcrumbs" aria-label="நீங்கள் இருக்கும் இடம்">
-            <a href="{{ '/' | url }}">முகப்பு</a>
+          <nav class="calc-breadcrumbs" aria-label="{{ 'Breadcrumb' if language == 'en' else 'நீங்கள் இருக்கும் இடம்' }}">
+            <a href="{{ ('/en/' if language == 'en' else '/') | url }}">{{ 'Home' if language == 'en' else 'முகப்பு' }}</a>
             <span aria-hidden="true">/</span>
-            <a href="{{ '/calculators/' | url }}">கணிப்பேடுகள்</a>
+            <a href="{{ calculatorDirectory | url }}">{{ 'Calculators' if language == 'en' else 'கணிப்பேடுகள்' }}</a>
             {% if calcCategory %}
             <span aria-hidden="true">/</span>
-            <a href="{{ '/calculators/' | url }}#calculator-group-{{ calcGroupId }}">{{ calcCategory }}</a>
+            <a href="{{ calculatorDirectory | url }}#calculator-group-{{ calcGroupId }}">{{ calcCategory }}</a>
             {% endif %}
             <span aria-hidden="true">/</span>
             <span aria-current="page">{{ title }}</span>
@@ -92,23 +96,23 @@
     <div class="wrap calc-toolbar__inner">
           {% set shareVariant = "icons-only" %}
           {% include "partials/social-share.njk" %}
-          <button id="btnHeaderReset" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors" title="இயல்புநிலைக்கு மீட்டமைக்க">
+          <button id="btnHeaderReset" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors" title="{{ 'Reset to defaults' if language == 'en' else 'இயல்புநிலைக்கு மீட்டமைக்க' }}">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
-            <span>மீட்டமை</span>
+            <span>{{ 'Reset' if language == 'en' else 'மீட்டமை' }}</span>
           </button>
           <button id="btnPrint" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
-            அச்சிடு
+            {{ 'Print' if language == 'en' else 'அச்சிடு' }}
           </button>
           {% if hasCsvExport != false %}
           <button id="btnExportCSV" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-700 rounded-lg shadow-sm transition-colors">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-            <span>Excel பதிவிறக்கம்</span>
+            <span>{{ 'Download CSV' if language == 'en' else 'Excel பதிவிறக்கம்' }}</span>
           </button>
           {% endif %}
           {% if nextCalc %}
-          <a class="calc-toolbar__next" href="{{ nextCalc.url | url }}" title="அடுத்த கணிப்பேடு: {{ nextCalc.title }}">
-            <span class="calc-toolbar__next-label">அடுத்த கணிப்பேடு:</span>
+          <a class="calc-toolbar__next" href="{{ nextCalc.url | url }}" title="{{ 'Next calculator' if language == 'en' else 'அடுத்த கணிப்பேடு' }}: {{ nextCalc.title }}">
+            <span class="calc-toolbar__next-label">{{ 'Next calculator:' if language == 'en' else 'அடுத்த கணிப்பேடு:' }}</span>
             <span class="calc-toolbar__next-title">{{ nextCalc.title }}</span> &rarr;
           </a>
           {% endif %}
@@ -119,11 +123,11 @@
   {{ content | safe }}
 
   {% if nextCalc %}
-  <nav class="calc-next no-print" aria-label="அடுத்த கணிப்பேடு">
+  <nav class="calc-next no-print" aria-label="{{ 'Next calculator' if language == 'en' else 'அடுத்த கணிப்பேடு' }}">
     <div class="wrap calc-next__inner">
-      <a class="calc-next__all" href="{{ '/calculators/' | url }}#calculator-group-{{ calcGroupId }}">&larr; எல்லாக் கணிப்பேடுகளும்</a>
+      <a class="calc-next__all" href="{{ calculatorDirectory | url }}#calculator-group-{{ calcGroupId }}">&larr; {{ 'All calculators' if language == 'en' else 'எல்லாக் கணிப்பேடுகளும்' }}</a>
       <a class="calc-next__link" href="{{ nextCalc.url | url }}">
-        <span class="calc-next__label">அடுத்த கணிப்பேடு · {{ calcCategory }}</span>
+        <span class="calc-next__label">{{ 'Next calculator' if language == 'en' else 'அடுத்த கணிப்பேடு' }} · {{ calcCategory }}</span>
         <span class="calc-next__title">{{ nextCalc.title }} &rarr;</span>
       </a>
     </div>
@@ -140,4 +144,3 @@
   <script src="{{ '/assets/js/theme.js' | url }}" defer></script>
 </body>
 </html>
-

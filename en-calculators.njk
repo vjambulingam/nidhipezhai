@@ -1,0 +1,32 @@
+---
+title: Financial calculators
+description: Financial calculators in English.
+permalink: /en/calculators/index.html
+language: en
+---
+<main id="main-content" tabindex="-1">
+  <header class="directory-intro wrap">
+    <p class="eyebrow eyebrow--light">Plan · Compare</p>
+    <h1>Financial calculators</h1>
+    <p>Explore calculators for savings, loans, insurance, investing and retirement. <a href="{{ '/calculators/' | url }}" hreflang="ta">View calculators in Tamil.</a></p>
+  </header>
+  <div class="calculator-groups wrap">
+    {% for group in calculators | englishCalculatorGroups(collections.seoPages) %}
+    {% if group.items | length %}
+    <section class="calculator-group" aria-labelledby="calculator-group-{{ loop.index }}">
+      <h2 id="calculator-group-{{ loop.index }}">{{ group.category }}</h2>
+      <div class="calculator-grid">
+        {% for item in group.items %}
+        <a class="calculator-card" href="{{ item.url | url }}">
+          <span class="calculator-card__type">{{ item.type }}</span>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+          <span class="calculator-card__open">Open calculator <span aria-hidden="true">↗</span></span>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+    {% endfor %}
+  </div>
+</main>

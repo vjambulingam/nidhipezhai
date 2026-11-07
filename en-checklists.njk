@@ -1,0 +1,30 @@
+---
+title: Financial checklists
+description: Financial planning and investment checklists in English.
+permalink: /en/checklists/index.html
+language: en
+---
+<main id="main-content" tabindex="-1">
+  <header class="directory-intro wrap">
+    <p class="eyebrow eyebrow--light">Plan · Protect</p>
+    <h1>Financial checklists</h1>
+    <p>Review your family finances and investments step by step. <a href="{{ '/checklists/' | url }}" hreflang="ta">View checklists in Tamil.</a></p>
+  </header>
+  <div class="calculator-groups wrap">
+    <section class="calculator-group">
+      <h2>Checklists</h2>
+      <div class="calculator-grid">
+        {% for item in collections.seoPages %}
+        {% if item.data.language == 'en' and item.data.toolKind == 'checklist' %}
+        <a class="calculator-card" href="{{ item.url | url }}">
+          <span class="calculator-card__type">Checklist</span>
+          <h3>{{ item.data.title }}</h3>
+          <p>{{ item.data.description }}</p>
+          <span class="calculator-card__open">Open checklist <span aria-hidden="true">↗</span></span>
+        </a>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+</main>

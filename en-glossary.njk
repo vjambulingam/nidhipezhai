@@ -1,0 +1,60 @@
+---
+title: Financial glossary
+description: English explanations of financial terms covering investing, banking, insurance and more.
+keywords: [financial glossary, investment terms, finance, India]
+permalink: /en/glossary/index.html
+language: en
+---
+<main class="glossary-page" id="main-content" tabindex="-1">
+  <header class="directory-intro wrap">
+    <p class="eyebrow eyebrow--light">Financial terms · Explained</p>
+    <h1>Financial glossary</h1>
+    <p>Explore English explanations and examples of the terms in the <a href="{{ '/glossary/' | url }}" hreflang="ta">Tamil master glossary</a>.</p>
+    <div class="glossary-controls">
+      <div class="glossary-search-row">
+        <label class="glossary-search-field" for="glossary-search-input">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.8" cy="10.8" r="6.3"></circle><path d="m15.5 15.5 4.2 4.2"></path></svg>
+          <span class="visually-hidden">Search financial terms</span>
+          <input id="glossary-search-input" type="search" placeholder="Search terms, definitions or examples" autocomplete="off">
+        </label>
+        <span class="glossary-count" id="glossary-count" aria-live="polite">{{ englishGlossary | length }} terms</span>
+      </div>
+      <div class="glossary-categories" role="group" aria-label="Filter by category">
+        <button class="glossary-cat-btn is-active" type="button" data-cat="all" aria-pressed="true">All</button>
+        {% for category in ["Investing & stock markets", "International investing", "Loans & banking", "Insurance", "Property & wills"] %}
+        <button class="glossary-cat-btn" type="button" data-cat="{{ category }}" aria-pressed="false">{{ category }}</button>
+        {% endfor %}
+      </div>
+      <div class="glossary-alphabet-bar" id="glossary-alpha-bar" role="group" aria-label="Filter by first letter">
+        <button class="glossary-letter-btn is-active" type="button" data-letter="all" aria-pressed="true">ALL</button>
+        {% for letter in ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"] %}
+        <button class="glossary-letter-btn" type="button" data-letter="{{ letter }}" aria-pressed="false">{{ letter }}</button>
+        {% endfor %}
+      </div>
+    </div>
+  </header>
+  <div class="wrap">
+    <div class="glossary-grid" id="glossary-grid">
+      {% for item in englishGlossary %}
+      <article class="glossary-card" id="{{ item.id }}" data-cat="{{ item.category }}" data-letter="{{ item.term | first | upper }}" data-search="{{ (item.term ~ ' ' ~ item.category ~ ' ' ~ item.definition ~ ' ' ~ item.example) | lower }}">
+        <header class="glossary-card__header">
+          <div class="glossary-card__titles"><h2 class="glossary-card__tamil">{{ item.term }}</h2></div>
+          <span class="glossary-card__category">{{ item.category }}</span>
+        </header>
+        <p class="glossary-card__def">{{ item.definition }}</p>
+        {% if item.example %}<div class="glossary-card__example"><strong>Example:</strong> {{ item.example }}</div>{% endif %}
+        {% if item.relatedLink %}
+        <a class="glossary-card__link" href="{{ item.relatedLink.url | url }}" hreflang="{{ item.relatedLink.language }}">
+          <span>Related: {{ item.relatedLink.title }}{% if item.relatedLink.language == 'ta' %} (Tamil){% endif %}</span><span aria-hidden="true">↗</span>
+        </a>
+        {% endif %}
+      </article>
+      {% endfor %}
+      <div class="glossary-empty" id="glossary-empty" hidden>
+        <p>No matching terms found.</p>
+        <button class="topic-filter topic-filter--tool" id="glossary-reset-btn" type="button">Reset filters</button>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="{{ '/assets/js/glossary-en.js' | url }}" defer></script>

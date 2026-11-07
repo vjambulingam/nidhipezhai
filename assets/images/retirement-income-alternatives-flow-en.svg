@@ -1,0 +1,216 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="alt-title alt-desc">
+  <title id="alt-title">Retirement income alternatives</title>
+  <desc id="alt-desc">A comparison of SCSS, RBI floating-rate bonds, Post Office MIS and mutual fund SWP, plus a bucket strategy.</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700;800&amp;display=swap');
+      .font-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+    </style>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  
+  <rect width="1200" height="600" rx="16" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+
+  
+  <g class="font-tamil" transform="translate(40, 22)">
+    <rect width="1120" height="58" rx="12" fill="#0D7377" />
+    <circle cx="34" cy="29" r="15" fill="#ffffff" opacity="0.2" />
+    <text x="34" y="35" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle">📊</text>
+    <text x="65" y="36" fill="#ffffff" font-size="19" font-weight="700">Retirement income alternatives</text>
+    <text x="1100" y="35" fill="#ccfbf1" font-size="13" font-weight="600" text-anchor="end">Options to consider alongside annuities</text>
+  </g>
+
+  
+  <g class="font-tamil">
+    
+    <g transform="translate(40, 98)" filter="url(#cardShadow)">
+      <rect width="265" height="340" rx="12" fill="#ffffff" stroke="#10b981" stroke-width="1.8" />
+      <rect width="265" height="46" rx="12" fill="#ecfdf5" />
+      <rect x="0" y="28" width="265" height="18" fill="#ecfdf5" />
+      <text x="132" y="22" fill="#065f46" font-size="13" font-weight="700" text-anchor="middle">1. Senior Citizens’ Savings Scheme</text>
+      <text x="132" y="38" fill="#047857" font-size="10.5" font-weight="600" text-anchor="middle">(SCSS - Govt of India)</text>
+
+      
+      <g transform="translate(10, 54)">
+        <rect width="245" height="26" rx="6" fill="#d1fae5" />
+        <text x="122" y="18" fill="#065f46" font-size="11" font-weight="700" text-anchor="middle">Government-backed savings scheme</text>
+      </g>
+
+      
+      <g transform="translate(14, 92)">
+        <text x="0" y="16" fill="#1e293b" font-size="11.5" font-weight="700">Interest rate:</text>
+        <text x="105" y="16" fill="#047857" font-size="13" font-weight="800">~8.2% (example)</text>
+
+        <text x="0" y="42" fill="#1e293b" font-size="11.5" font-weight="700">Payment:</text>
+        <text x="105" y="42" fill="#475569" font-size="11.5">Quarterly</text>
+
+        <text x="0" y="68" fill="#1e293b" font-size="11.5" font-weight="700">Investment limit:</text>
+        <text x="105" y="68" fill="#475569" font-size="11.5">₹30 lakh (individual)</text>
+
+        <text x="0" y="94" fill="#1e293b" font-size="11.5" font-weight="700">Term:</text>
+        <text x="105" y="94" fill="#475569" font-size="11.5">5 years (extendable)</text>
+      </g>
+
+      
+      <g transform="translate(10, 224)">
+        <rect width="245" height="100" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1" />
+        <text x="12" y="20" fill="#15803d" font-size="11" font-weight="700">Potential benefits:</text>
+        <text x="12" y="40" fill="#166534" font-size="10.5">• Competitive interest rate</text>
+        <text x="12" y="60" fill="#166534" font-size="10.5">• Eligible spouses may invest separately</text>
+        <text x="12" y="80" fill="#166534" font-size="10.5">• Government-backed principal</text>
+      </g>
+    </g>
+
+    
+    <g transform="translate(325, 98)" filter="url(#cardShadow)">
+      <rect width="265" height="340" rx="12" fill="#ffffff" stroke="#0284c7" stroke-width="1.8" />
+      <rect width="265" height="46" rx="12" fill="#f0f9ff" />
+      <rect x="0" y="28" width="265" height="18" fill="#f0f9ff" />
+      <text x="132" y="22" fill="#0369a1" font-size="13" font-weight="700" text-anchor="middle">2. RBI savings bonds</text>
+      <text x="132" y="38" fill="#0284c7" font-size="10.5" font-weight="600" text-anchor="middle">(Floating Rate Bonds - FRSB)</text>
+
+      
+      <g transform="translate(10, 54)">
+        <rect width="245" height="26" rx="6" fill="#e0f2fe" />
+        <text x="122" y="18" fill="#0369a1" font-size="11" font-weight="700" text-anchor="middle">Government-backed RBI bond</text>
+      </g>
+
+      
+      <g transform="translate(14, 92)">
+        <text x="0" y="16" fill="#1e293b" font-size="11.5" font-weight="700">Interest rate:</text>
+        <text x="105" y="16" fill="#0284c7" font-size="13" font-weight="800">8.05% (example)</text>
+
+        <text x="0" y="42" fill="#1e293b" font-size="11.5" font-weight="700">Payment:</text>
+        <text x="105" y="42" fill="#475569" font-size="11.5">Half-yearly</text>
+
+        <text x="0" y="68" fill="#1e293b" font-size="11.5" font-weight="700">Investment limit:</text>
+        <text x="105" y="68" fill="#0284c7" font-size="11.5" font-weight="700">No upper limit</text>
+
+        <text x="0" y="94" fill="#1e293b" font-size="11.5" font-weight="700">Term:</text>
+        <text x="105" y="94" fill="#475569" font-size="11.5">7 years</text>
+      </g>
+
+      
+      <g transform="translate(10, 224)">
+        <rect width="245" height="100" rx="8" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1" />
+        <text x="12" y="20" fill="#0369a1" font-size="11" font-weight="700">Potential benefits:</text>
+        <text x="12" y="40" fill="#0284c7" font-size="10.5">• No investment ceiling</text>
+        <text x="12" y="60" fill="#0284c7" font-size="10.5">• Invest according to your needs</text>
+        <text x="12" y="80" fill="#0284c7" font-size="10.5">• Floating rate can change</text>
+      </g>
+    </g>
+
+    
+    <g transform="translate(610, 98)" filter="url(#cardShadow)">
+      <rect width="265" height="340" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+      <rect width="265" height="46" rx="12" fill="#f8fafc" />
+      <rect x="0" y="28" width="265" height="18" fill="#f8fafc" />
+      <text x="132" y="22" fill="#334155" font-size="13" font-weight="700" text-anchor="middle">3. Post Office MIS</text>
+      <text x="132" y="38" fill="#64748b" font-size="10.5" font-weight="600" text-anchor="middle">(Post Office Monthly Income)</text>
+
+      
+      <g transform="translate(10, 54)">
+        <rect width="245" height="26" rx="6" fill="#f1f5f9" />
+        <text x="122" y="18" fill="#475569" font-size="11" font-weight="700" text-anchor="middle">Government-backed savings scheme</text>
+      </g>
+
+      
+      <g transform="translate(14, 92)">
+        <text x="0" y="16" fill="#1e293b" font-size="11.5" font-weight="700">Interest rate:</text>
+        <text x="105" y="16" fill="#334155" font-size="13" font-weight="800">~7.4% p.a.</text>
+
+        <text x="0" y="42" fill="#1e293b" font-size="11.5" font-weight="700">Payment:</text>
+        <text x="105" y="42" fill="#475569" font-size="11.5">Monthly interest</text>
+
+        <text x="0" y="68" fill="#1e293b" font-size="11.5" font-weight="700">Investment limit:</text>
+        <text x="105" y="68" fill="#475569" font-size="11.5">₹9L individual / ₹15L joint</text>
+
+        <text x="0" y="94" fill="#1e293b" font-size="11.5" font-weight="700">Term:</text>
+        <text x="105" y="94" fill="#475569" font-size="11.5">5 years</text>
+      </g>
+
+      
+      <g transform="translate(10, 224)">
+        <rect width="245" height="100" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+        <text x="12" y="20" fill="#334155" font-size="11" font-weight="700">Potential benefits:</text>
+        <text x="12" y="40" fill="#64748b" font-size="10.5">• Monthly interest income</text>
+        <text x="12" y="60" fill="#64748b" font-size="10.5">• Joint account option available</text>
+        <text x="12" y="80" fill="#64748b" font-size="10.5">• Available through post offices</text>
+      </g>
+    </g>
+
+    
+    <g transform="translate(895, 98)" filter="url(#cardShadow)">
+      <rect width="265" height="340" rx="12" fill="#ffffff" stroke="#8b5cf6" stroke-width="1.8" />
+      <rect width="265" height="46" rx="12" fill="#f5f3ff" />
+      <rect x="0" y="28" width="265" height="18" fill="#f5f3ff" />
+      <text x="132" y="22" fill="#6d28d9" font-size="13" font-weight="700" text-anchor="middle">4. Mutual fund SWP</text>
+      <text x="132" y="38" fill="#7c3aed" font-size="10.5" font-weight="600" text-anchor="middle">(Systematic Withdrawal Plan)</text>
+
+      
+      <g transform="translate(10, 54)">
+        <rect width="245" height="26" rx="6" fill="#ede9fe" />
+        <text x="122" y="18" fill="#6d28d9" font-size="11" font-weight="700" text-anchor="middle">Market-linked withdrawals</text>
+      </g>
+
+      
+      <g transform="translate(14, 92)">
+        <text x="0" y="16" fill="#1e293b" font-size="11.5" font-weight="700">Return:</text>
+        <text x="105" y="16" fill="#7c3aed" font-size="13" font-weight="800">~8%–10% (illustrative)</text>
+
+        <text x="0" y="42" fill="#1e293b" font-size="11.5" font-weight="700">Payment:</text>
+        <text x="105" y="42" fill="#475569" font-size="11.5">Periodic withdrawals</text>
+
+        <text x="0" y="68" fill="#1e293b" font-size="11.5" font-weight="700">Tax:</text>
+        <text x="105" y="68" fill="#047857" font-size="11.5" font-weight="700">Gains and rules apply</text>
+
+        <text x="0" y="94" fill="#1e293b" font-size="11.5" font-weight="700">Risk:</text>
+        <text x="105" y="94" fill="#d97706" font-size="11" font-weight="600">Market risk applies</text>
+      </g>
+
+      
+      <g transform="translate(10, 224)">
+        <rect width="245" height="100" rx="8" fill="#faf5ff" stroke="#ddd6fe" stroke-width="1" />
+        <text x="12" y="20" fill="#6d28d9" font-size="11" font-weight="700">Key considerations:</text>
+        <text x="12" y="40" fill="#7c3aed" font-size="10.5">• Tax depends on gains and rules</text>
+        <text x="12" y="60" fill="#7c3aed" font-size="10.5">• Capital can grow or fall</text>
+        <text x="12" y="80" fill="#d97706" font-size="10.5">• Returns are not guaranteed</text>
+      </g>
+    </g>
+  </g>
+
+  
+  <g class="font-tamil" transform="translate(40, 455)">
+    <rect width="1120" height="120" rx="12" fill="#0f172a" />
+    <text x="24" y="28" fill="#fbbf24" font-size="14" font-weight="700">A possible bucket approach to retirement income:</text>
+
+    
+    
+    <g transform="translate(24, 40)">
+      <rect width="350" height="66" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="14" y="24" fill="#34d399" font-size="12" font-weight="700">1. Income floor</text>
+      <text x="14" y="48" fill="#e2e8f0" font-size="11">SCSS + annuity for essential expenses</text>
+    </g>
+
+    
+    <g transform="translate(390, 40)">
+      <rect width="350" height="66" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="14" y="24" fill="#a78bfa" font-size="12" font-weight="700">2. Growth</text>
+      <text x="14" y="48" fill="#e2e8f0" font-size="11">Mutual fund SWP for longer-term needs</text>
+    </g>
+
+    
+    <g transform="translate(755, 40)">
+      <rect width="340" height="66" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="14" y="24" fill="#38bdf8" font-size="12" font-weight="700">3. Liquid buffer</text>
+      <text x="14" y="48" fill="#e2e8f0" font-size="11">1–2 years of expenses in bank deposits</text>
+    </g>
+  </g>
+  <text id="brand-watermark" x="600" y="627" text-anchor="middle" font-family="'Noto Sans Tamil', 'Tamil Sangam MN', 'Latha', sans-serif" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">Nidhi Pezhai</text>
+</svg>

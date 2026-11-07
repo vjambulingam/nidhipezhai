@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="740" viewBox="0 0 1200 740" role="img" aria-labelledby="flow-title flow-desc">
+  <title id="flow-title">Five core annuity plan options</title>
+  <desc id="flow-desc">Five annuity choices: life only, return of purchase price, joint life, guaranteed period and increasing annuity.</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700;800&amp;display=swap');
+      .font-tamil {
+        font-family: 'Noto Sans Tamil', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+    </style>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  
+  <rect width="1200" height="700" rx="16" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+
+  
+  <g class="font-tamil" transform="translate(40, 18)">
+    <rect width="1120" height="68" rx="12" fill="#0D7377" />
+    <circle cx="36" cy="34" r="18" fill="#ffffff" opacity="0.18" />
+    
+    <path d="M 36 21 L 46 25.5 C 46 33.5 36 42.5 36 42.5 C 36 42.5 26 33.5 26 25.5 Z" fill="#ffffff" />
+    <path d="M 31.5 32 L 34.5 35 L 40.5 28.5" stroke="#0D7377" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+
+    
+    <text x="70" y="32" fill="#ffffff" font-size="20" font-weight="800">Five core annuity plan options</text>
+
+    
+    <text x="70" y="53" fill="#ccfbf1" font-size="12.5" font-weight="500">A guide to pension policy options before you buy</text>
+
+    
+    <g transform="translate(880, 19)">
+      <rect width="220" height="30" rx="15" fill="#ffffff" opacity="0.15" />
+      <circle cx="18" cy="15" r="4.5" fill="#34d399" />
+      <text x="32" y="19" fill="#ffffff" font-size="11" font-weight="700">Annuity options</text>
+    </g>
+  </g>
+
+  
+  <g class="font-tamil">
+    
+    <g transform="translate(40, 98)" filter="url(#shadow)">
+      <rect width="350" height="255" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" />
+      <rect width="350" height="6" rx="3" fill="#64748b" />
+      
+      
+      <text x="20" y="30" fill="#1e293b" font-size="15.5" font-weight="700">1. Life-only annuity</text>
+      <text x="20" y="48" fill="#64748b" font-size="11.5" font-weight="600">Life Annuity without Return of Purchase Price</text>
+
+      
+      <rect x="20" y="60" width="240" height="26" rx="6" fill="#f1f5f9" />
+      <text x="140" y="77" fill="#334155" font-size="11" font-weight="700" text-anchor="middle">Higher initial pension (illustrative)</text>
+
+      
+      <text x="20" y="110" fill="#334155" font-size="11">
+        <tspan x="20" dy="0">• <tspan font-weight="700">Pension:</tspan> Paid for the annuitant’s lifetime.</tspan>
+        <tspan x="32" dy="18">Paid throughout your lifetime.</tspan>
+      </text>
+
+      <text x="20" y="154" fill="#dc2626" font-size="11">
+        <tspan x="20" dy="0">• <tspan font-weight="700">After death:</tspan> Purchase price is not returned.</tspan>
+        <tspan x="32" dy="18">Payments stop; no capital returned.</tspan>
+      </text>
+
+      
+      <g transform="translate(20, 196)">
+        <rect width="310" height="44" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1" />
+        <text x="12" y="18" fill="#991b1b" font-size="11" font-weight="700">Who might consider it?</text>
+        <text x="12" y="34" fill="#b91c1c" font-size="10.5">Those without dependants.</text>
+      </g>
+    </g>
+
+    
+    <g transform="translate(425, 98)" filter="url(#shadow)">
+      <rect width="350" height="255" rx="12" fill="#ffffff" stroke="#10b981" stroke-width="2" />
+      <rect width="350" height="6" rx="3" fill="#10b981" />
+
+      
+      <text x="20" y="30" fill="#065f46" font-size="15.5" font-weight="700">2. Return of purchase price</text>
+      <text x="20" y="48" fill="#047857" font-size="11.5" font-weight="600">Life Annuity with Return of Purchase Price</text>
+
+      
+      <rect x="20" y="60" width="240" height="26" rx="6" fill="#ecfdf5" />
+      <text x="140" y="77" fill="#047857" font-size="11" font-weight="700" text-anchor="middle">Capital return option (illustrative)</text>
+
+      
+      <text x="20" y="110" fill="#334155" font-size="11">
+        <tspan x="20" dy="0">• <tspan font-weight="700">Pension:</tspan> Paid for the annuitant’s lifetime.</tspan>
+        <tspan x="32" dy="18">Paid throughout your lifetime.</tspan>
+      </text>
+
+      <text x="20" y="154" fill="#047857" font-size="11">
+        <tspan x="20" dy="0">• <tspan font-weight="700">After death:</tspan> Purchase price is returned to the nominee.</tspan>
+        <tspan x="32" dy="18">Purchase price returned to nominee.</tspan>
+      </text>
+
+      
+      <g transform="translate(20, 196)">
+        <rect width="310" height="44" rx="6" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1" />
+        <text x="12" y="18" fill="#065f46" font-size="11" font-weight="700">Who might consider it?</text>
+        <text x="12" y="34" fill="#047857" font-size="10.5">Those seeking capital for family.</text>
+      </g>
+    </g>
+
+    
+    <g transform="translate(810, 98)" filter="url(#shadow)">
+      <rect width="350" height="255" rx="12" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" />
+      <rect width="350" height="6" rx="3" fill="#0284c7" />
+
+      
+      <text x="20" y="30" fill="#0369a1" font-size="15.5" font-weight="700">3. Joint-life annuity</text>
+      <text x="20" y="48" fill="#0284c7" font-size="11" font-weight="600">For both spouses</text>
+
+      
+      <rect x="20" y="60" width="250" height="26" rx="6" fill="#e0f2fe" />
+      <text x="145" y="77" fill="#0284c7" font-size="11" font-weight="700" text-anchor="middle">Income for a surviving spouse</text>
+
+      
+      <text x="20" y="110" fill="#334155" font-size="11">
+        <tspan x="20" dy="0">• <tspan font-weight="700">Pension:</tspan> Covers both spouses under the policy.</tspan>
+        <tspan x="32" dy="18">Continues as specified in the policy.</tspan>
+      </text>
+
+      <text x="20" y="154" fill="#0284c7" font-size="11">
+        <tspan x="20" dy="0">• <tspan font-weight="700">After both deaths:</tspan> Return of capital depends on the policy.</tspan>
+        <tspan x="32" dy="18">Capital return depends on the policy.</tspan>
+      </text>
+
+      
+      <g transform="translate(20, 196)">
+        <rect width="310" height="44" rx="6" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1" />
+        <text x="12" y="18" fill="#0369a1" font-size="11" font-weight="700">Who might consider it?</text>
+        <text x="12" y="34" fill="#0284c7" font-size="10.5">Those protecting a spouse’s income.</text>
+      </g>
+    </g>
+  </g>
+
+  
+  <g class="font-tamil">
+    
+    <g transform="translate(40, 368)" filter="url(#shadow)">
+      <rect width="535" height="240" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" />
+      <rect width="535" height="6" rx="3" fill="#d97706" />
+
+      
+      <text x="20" y="28" fill="#92400e" font-size="15" font-weight="700">4. Guaranteed-period annuity</text>
+      <text x="20" y="46" fill="#b45309" font-size="11" font-weight="600">Guaranteed Period Annuity (5, 10, 15 or 20 Years &amp; for Life)</text>
+
+      
+      <rect x="20" y="58" width="300" height="24" rx="6" fill="#fef3c7" />
+      <text x="170" y="74" fill="#92400e" font-size="11" font-weight="700" text-anchor="middle">5 / 10 / 15 / 20-year guarantee options</text>
+
+      
+      <text x="20" y="104" fill="#334155" font-size="11.5">
+        <tspan x="20" dy="0">• <tspan font-weight="700">How it works:</tspan> Payments are guaranteed for the chosen period.</tspan>
+        <tspan x="32" dy="17">Payments are guaranteed for the chosen period.</tspan>
+      </text>
+
+      <text x="20" y="146" fill="#334155" font-size="11.5">
+        <tspan x="20" dy="0">• <tspan font-weight="700">Thereafter:</tspan> After the guaranteed period,</tspan>
+        <tspan x="32" dy="17">Payments continue while the annuitant lives.</tspan>
+      </text>
+
+      
+      <g transform="translate(20, 186)">
+        <rect width="495" height="42" rx="6" fill="#fffbeb" stroke="#fde68a" stroke-width="1" />
+        <text x="14" y="17" fill="#92400e" font-size="11" font-weight="700">Who might consider it?</text>
+        <text x="14" y="32" fill="#b45309" font-size="10.5">Those seeking income for a specified period.</text>
+      </g>
+    </g>
+
+    
+    <g transform="translate(625, 368)" filter="url(#shadow)">
+      <rect width="535" height="240" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" />
+      <rect width="535" height="6" rx="3" fill="#8b5cf6" />
+
+      
+      <text x="20" y="28" fill="#6d28d9" font-size="15" font-weight="700">5. Increasing annuity</text>
+      <text x="20" y="46" fill="#7c3aed" font-size="11" font-weight="600">Increasing / Escalating Annuity (3% to 5% Annual Increment)</text>
+
+      
+      <rect x="20" y="58" width="280" height="24" rx="6" fill="#ede9fe" />
+      <text x="160" y="74" fill="#6d28d9" font-size="11" font-weight="700" text-anchor="middle">Annual increases as specified in the policy</text>
+
+      
+      <text x="20" y="104" fill="#334155" font-size="11.5">
+        <tspan x="20" dy="0">• <tspan font-weight="700">How it works:</tspan> Starting at the policy’s initial rate,</tspan>
+        <tspan x="32" dy="17">Pension increases at the policy’s stated rate.</tspan>
+      </text>
+
+      <text x="20" y="146" fill="#334155" font-size="11.5">
+        <tspan x="20" dy="0">• <tspan font-weight="700">Purpose:</tspan> To help address inflation,</tspan>
+        <tspan x="32" dy="17">May help offset the impact of inflation.</tspan>
+      </text>
+
+      
+      <g transform="translate(20, 186)">
+        <rect width="495" height="42" rx="6" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1" />
+        <text x="14" y="17" fill="#6d28d9" font-size="11" font-weight="700">Who might consider it?</text>
+        <text x="14" y="32" fill="#7c3aed" font-size="10.5">Those seeking inflation protection in retirement.</text>
+      </g>
+    </g>
+  </g>
+
+  
+  <g class="font-tamil" transform="translate(40, 622)">
+    <rect width="1120" height="58" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2" />
+    <text x="560" y="24" fill="#0f766e" font-size="13" font-weight="700" text-anchor="middle">Compare policy terms:</text>
+    <text x="560" y="44" fill="#134e4a" font-size="12" text-anchor="middle">Return-of-purchase-price or joint-life options may suit different family needs; compare policy terms.</text>
+  </g>
+  <text id="brand-watermark" x="600" y="727" text-anchor="middle" font-family="'Noto Sans Tamil', 'Tamil Sangam MN', 'Latha', sans-serif" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">Nidhi Pezhai</text>
+</svg>

@@ -1,0 +1,460 @@
+---
+title: "Net Worth Calculator & Google Sheet Guide"
+ogTitle: "Net Worth Calculator & Google Sheet Guide · NidhiPezhai"
+description: "Track your total assets, investments, and liabilities with our free Net Worth Calculator and Google Sheet template to assess your true financial health."
+keywords: "net worth calculator, net worth tracker India, personal net worth Google Sheet, assets and liabilities calculator, financial health tracker"
+hasChart: false
+hasCsvExport: false
+language: en
+publishedEnglish: true
+eleventyExcludeFromCollections: false
+---
+<style>
+  #btnHeaderReset { display: none !important; }
+  .calc-sheet-badge {
+    background-color: #ecfdf5;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+  }
+  .dark .calc-sheet-badge {
+    background-color: #064e3b;
+    color: #a7f3d0;
+    border-color: #065f46;
+  }
+</style>
+
+<main id="main-content" tabindex="-1" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-1 space-y-8">
+
+  <!-- Breadcrumb & Category Eyebrow -->
+  <div class="flex items-center justify-between">
+    <div class="flex items-center space-x-2 text-xs font-semibold text-sky-700">
+      <a href="../calculators/index.html" class="hover:underline">Calculators</a>
+      <span class="text-gray-400">/</span>
+      <span>Wealth Management</span>
+    </div>
+    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold calc-sheet-badge">
+      <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H6v-2h6v2zm4-4H6v-2h10v2zm0-4H6V7h10v2z"/>
+      </svg>
+      Google Sheet Template
+    </span>
+  </div>
+
+  <!-- Hero Header & Primary Download Card -->
+  <section class="bg-gradient-to-br from-sky-600 to-indigo-700 rounded-2xl p-6 sm:p-10 text-white shadow-md relative overflow-hidden" aria-labelledby="heroHeading">
+    <div class="absolute -right-8 -bottom-8 w-36 h-36 bg-white/10 rounded-full blur-sm pointer-events-none"></div>
+    <div class="relative max-w-3xl space-y-4">
+      <p class="text-xs sm:text-sm font-semibold tracking-wider uppercase text-sky-200">Free Financial Management Tool</p>
+      <h1 id="heroHeading" class="text-2xl sm:text-4xl font-extrabold tracking-tight leading-tight text-white">
+        Net Worth Calculator & Google Sheet Guide
+      </h1>
+      <p class="text-sm sm:text-base text-sky-100 leading-relaxed">
+        A structured Google Sheet template to record all your assets and liabilities, helping you accurately monitor your true net worth and long-term wealth accumulation.
+      </p>
+
+      <!-- Primary Action Box -->
+      <div class="pt-3 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <a href="https://docs.google.com/spreadsheets/d/1q0xgoVvBrxDZrvQYwy4OOLkkhtJ65-DJYn9z7hBUDbc/copy" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="inline-flex items-center justify-center gap-3 px-6 py-4 bg-white hover:bg-slate-50 text-gray-900 font-bold rounded-xl shadow-md transition-all text-sm sm:text-base">
+          <svg class="w-5 h-5 text-sky-700" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+          </svg>
+          <span>Make a Copy in Google Sheets</span>
+          <svg class="w-4 h-4 text-sky-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+
+        <div class="flex items-center gap-2 text-xs text-sky-100">
+          <svg class="w-4 h-4 text-sky-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+          </svg>
+          <span>100% Private & Secure — Saved only in your personal Google Drive</span>
+        </div>
+      </div>
+
+      <!-- Feature Pill Badges -->
+      <div class="pt-4 border-t border-white/10 flex flex-wrap gap-2 text-xs text-sky-100">
+        <span class="inline-flex items-center gap-1 bg-white/10 px-3 py-1 rounded-full">✓ Automated formula calculations</span>
+        <span class="inline-flex items-center gap-1 bg-white/10 px-3 py-1 rounded-full">✓ Asset allocation breakdown</span>
+        <span class="inline-flex items-center gap-1 bg-white/10 px-3 py-1 rounded-full">✓ Works seamlessly on mobile & desktop</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formula Callout Card -->
+  <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 space-y-4" aria-labelledby="formulaHeading">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl bg-sky-100 flex items-center justify-center text-sky-700 font-bold text-xl" aria-hidden="true">
+        ⚖️
+      </div>
+      <div>
+        <h2 id="formulaHeading" class="text-lg sm:text-xl font-bold text-gray-900">What is Net Worth?</h2>
+        <p class="text-xs sm:text-sm text-gray-500">The single most reliable metric to evaluate your true personal financial health.</p>
+      </div>
+    </div>
+
+    <!-- The Formula Box -->
+    <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 text-center">
+      <p class="text-xs uppercase font-bold tracking-wider text-slate-500 mb-2">Basic Financial Formula</p>
+      <div class="text-base sm:text-2xl font-extrabold text-gray-900 flex flex-wrap items-center justify-center gap-2 sm:gap-4">
+        <span class="text-emerald-700 bg-emerald-50 px-3 py-1 rounded-lg border border-emerald-200"><span aria-hidden="true">₹ </span>Total Assets</span>
+        <span class="text-gray-400 font-bold">−</span>
+        <span class="text-red-800 bg-red-50 px-3 py-1 rounded-lg border border-red-200"><span aria-hidden="true">📉 </span>Total Liabilities</span>
+        <span class="text-gray-400 font-bold">=</span>
+        <span class="text-sky-700 bg-sky-50 px-3 py-1 rounded-lg border border-sky-200"><span aria-hidden="true">⚖️ </span>Net Worth</span>
+      </div>
+    </div>
+
+    <p class="text-sm text-gray-600 leading-relaxed">
+      Many people evaluate their economic progress by looking at monthly income or newly purchased vehicles. However, income is merely cash flow; only your <strong>Net Worth</strong> reveals the true cumulative strength of your wealth. If all your debts and loans were cleared today, what remains in your possession is your actual net worth.
+    </p>
+  </section>
+
+  <!-- Spreadsheet Blueprint / Structure Breakdown -->
+  <section class="space-y-6" aria-labelledby="structureHeading">
+    <div>
+      <h2 id="structureHeading" class="text-xl font-bold text-gray-900">Structure of the Google Sheet Template</h2>
+      <p class="text-xs sm:text-sm text-gray-500 mt-1">Detailed below are the asset categories, liability groups, and automated analytical sections included in the template.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <!-- Column 1: Assets -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-emerald-200 space-y-4 flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-emerald-100">
+            <div class="flex items-center gap-2">
+              <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-extrabold text-base" aria-hidden="true">₹</span>
+              <h3 class="text-base font-bold text-emerald-900">1. Assets</h3>
+            </div>
+            <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">What You Own</span>
+          </div>
+
+          <p class="text-xs text-gray-600">All financial holdings and possessions that can be converted into cash:</p>
+
+          <ul class="space-y-3 text-xs sm:text-sm text-gray-700">
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-600 font-bold">✓</span>
+              <div>
+                <strong>Liquid Cash & Bank Deposits:</strong>
+                <p class="text-xs text-gray-500">Savings account balances, emergency funds, Fixed Deposits (FD), and Recurring Deposits (RD).</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-600 font-bold">✓</span>
+              <div>
+                <strong>Market Investments:</strong>
+                <p class="text-xs text-gray-500">Direct equity stocks, mutual funds (Equity & Debt MF), and Exchange Traded Funds (ETFs).</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-600 font-bold">✓</span>
+              <div>
+                <strong>Retirement Savings:</strong>
+                <p class="text-xs text-gray-500">Employees' Provident Fund (EPF / VPF), Public Provident Fund (PPF), and National Pension System (NPS).</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-600 font-bold">✓</span>
+              <div>
+                <strong>Precious Metals:</strong>
+                <p class="text-xs text-gray-500">Sovereign Gold Bonds (SGB), digital gold, and physical gold/silver bullion or coins.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-emerald-600 font-bold">✓</span>
+              <div>
+                <strong>Real Estate & Fixed Assets:</strong>
+                <p class="text-xs text-gray-500">Residential homes, vacant plots/land, and commercial rental properties (valued conservatively at fair market value).</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-3 bg-emerald-50 rounded-xl text-xs text-emerald-900 border border-emerald-100 mt-4">
+          💡 <strong>Key Note:</strong> Do not count depreciating consumer items such as cars, motorcycles, or smartphones as assets.
+        </div>
+      </div>
+
+      <!-- Column 2: Liabilities -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-red-200 space-y-4 flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-red-200">
+            <div class="flex items-center gap-2">
+              <span class="w-8 h-8 rounded-lg bg-red-50 text-red-800 flex items-center justify-center font-bold text-sm">📉</span>
+              <h3 class="text-base font-bold text-red-800">2. Liabilities</h3>
+            </div>
+            <span class="text-xs font-semibold text-red-800 bg-red-50 px-2.5 py-1 rounded-full border border-red-200">What You Owe</span>
+          </div>
+
+          <p class="text-xs text-gray-600">Total principal outstanding balances owed to banks, lenders, or individuals:</p>
+
+          <ul class="space-y-3 text-xs sm:text-sm text-gray-700">
+            <li class="flex items-start gap-2.5">
+              <span class="text-red-800 font-bold">✕</span>
+              <div>
+                <strong>Home Loan:</strong>
+                <p class="text-xs text-gray-500">Principal balance remaining on your residential property or land purchase loan.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-red-800 font-bold">✕</span>
+              <div>
+                <strong>Vehicle Loan:</strong>
+                <p class="text-xs text-gray-500">Current outstanding principal on your four-wheeler or two-wheeler loans.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-red-800 font-bold">✕</span>
+              <div>
+                <strong>Personal & Education Loans:</strong>
+                <p class="text-xs text-gray-500">Unsecured personal loans from banks or lending apps, and higher education loans.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-red-800 font-bold">✕</span>
+              <div>
+                <strong>Credit Card Dues:</strong>
+                <p class="text-xs text-gray-500">Unsettled credit card statement balances and outstanding card EMI plans.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-red-800 font-bold">✕</span>
+              <div>
+                <strong>Other Liabilities:</strong>
+                <p class="text-xs text-gray-500">Gold loans, informal loans from family or friends, and other private obligations.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-3 bg-red-50 rounded-xl text-xs text-red-800 border border-red-200 mt-4">
+          ⚠️ <strong>Key Note:</strong> Enter only the 'Principal Outstanding' from your loan statement—do not add prospective future interest.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step by Step Guide: How to use the template -->
+  <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 space-y-6" aria-labelledby="stepsHeading">
+    <div>
+      <h2 id="stepsHeading" class="text-xl font-bold text-gray-900">How to Use the Google Sheet (Step-by-Step Guide)</h2>
+      <p class="text-xs sm:text-sm text-gray-500 mt-1">Set up your personal net worth dashboard in four simple steps.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      
+      <!-- Step 1 -->
+      <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+        <div class="w-8 h-8 rounded-lg bg-sky-600 text-white flex items-center justify-center font-bold text-sm">
+          1
+        </div>
+        <h3 class="text-sm font-bold text-gray-900">Make a Copy</h3>
+        <p class="text-xs text-gray-600 leading-relaxed">
+          Click the <strong>'Make a Copy in Google Sheets'</strong> button on this page. When prompted by Google, click "Make a copy" to save an independent version directly into your Google Drive.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+        <div class="w-8 h-8 rounded-lg bg-sky-600 text-white flex items-center justify-center font-bold text-sm">
+          2
+        </div>
+        <h3 class="text-sm font-bold text-gray-900">Enter Your Assets</h3>
+        <p class="text-xs text-gray-600 leading-relaxed">
+          Check your banking apps, investment portfolios (Groww, Zerodha, CAMS, MF Central), and EPF passbook to log the current values of your assets.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+        <div class="w-8 h-8 rounded-lg bg-sky-600 text-white flex items-center justify-center font-bold text-sm">
+          3
+        </div>
+        <h3 class="text-sm font-bold text-gray-900">Record Your Liabilities</h3>
+        <p class="text-xs text-gray-600 leading-relaxed">
+          Review your home loan, vehicle loan, and credit card statements to record all outstanding principal balances accurately.
+        </p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+        <div class="w-8 h-8 rounded-lg bg-sky-600 text-white flex items-center justify-center font-bold text-sm">
+          4
+        </div>
+        <h3 class="text-sm font-bold text-gray-900">Update Quarterly</h3>
+        <p class="text-xs text-gray-600 leading-relaxed">
+          Built-in formulas automatically calculate your net worth and update breakdown charts. Update your figures every 3 to 6 months to monitor your wealth growth.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Do's and Don'ts / Best Practices -->
+  <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 space-y-6" aria-labelledby="bestPracticesHeading">
+    <div>
+      <h2 id="bestPracticesHeading" class="text-xl font-bold text-gray-900">Key Rules for Calculating Net Worth</h2>
+      <p class="text-xs sm:text-sm text-gray-500 mt-1">Follow these best practices to ensure an accurate, realistic evaluation of your financial standing.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <!-- Do's -->
+      <div class="p-5 rounded-xl bg-emerald-50 border border-emerald-200 space-y-3">
+        <h3 class="text-sm font-bold text-emerald-900 flex items-center gap-2">
+          <span class="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs">✓</span>
+          Do's
+        </h3>
+        <ul class="space-y-2 text-xs sm:text-sm text-emerald-900">
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-700 font-bold">•</span>
+            <span><strong>Record all debts honestly:</strong> Include small hand loans from friends, family, and active credit card balances without omitting anything.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-700 font-bold">•</span>
+            <span><strong>Value fixed assets conservatively:</strong> Avoid inflating property values; record only the realistic fair market value you could realize promptly if sold today.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-emerald-700 font-bold">•</span>
+            <span><strong>Maintain regular periodic updates:</strong> Updating numbers at the start of every financial year (April 1) and quarterly fosters consistent financial discipline.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Don'ts -->
+      <div class="p-5 rounded-xl bg-red-50 border border-red-200 space-y-3">
+        <h3 class="text-sm font-bold text-red-800 flex items-center gap-2">
+          <span class="w-5 h-5 rounded-full bg-red-800 text-white flex items-center justify-center text-xs">✕</span>
+          Don'ts
+        </h3>
+        <ul class="space-y-2 text-xs sm:text-sm text-red-800">
+          <li class="flex items-start gap-2">
+            <span class="text-red-800 font-bold">•</span>
+            <span><strong>Do not include depreciating items as assets:</strong> Personal vehicles, smartphones, televisions, and electronics lose value rapidly; exclude them from your net worth inventory.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-red-800 font-bold">•</span>
+            <span><strong>Do not be discouraged by a negative net worth:</strong> Early in your career or immediately after purchasing a home via a mortgage, a negative net worth is normal. It turns positive as debt reduces and investments compound.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-red-800 font-bold">•</span>
+            <span><strong>Do not factor in unearned future income:</strong> Expected salary increments, upcoming bonuses, or prospective inheritances should never be counted until actually received.</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 space-y-6" aria-labelledby="faqHeading">
+    <div>
+      <h2 id="faqHeading" class="text-xl font-bold text-gray-900">Frequently Asked Questions (FAQ)</h2>
+      <p class="text-xs sm:text-sm text-gray-500 mt-1">Common queries regarding net worth tracking and using the Google Sheet template.</p>
+    </div>
+
+    <div class="space-y-4">
+      <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
+        <h3 class="text-sm font-bold text-gray-900">1. Can anyone else see the financial details I enter into this Google Sheet?</h3>
+        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+          <strong>No, absolutely not.</strong> When you click the 'Make a Copy' link, an independent duplicate is generated and saved exclusively within your personal Google Drive account. NidhiPezhai administrators and third parties have zero access to your data or sheet.
+        </p>
+      </div>
+
+      <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
+        <h3 class="text-sm font-bold text-gray-900">2. How often should I update my net worth?</h3>
+        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+          There is no need to check or update every day or week. <strong>Once every quarter (3 months) or every 6 months</strong> is ideal. Because market fluctuations cause daily portfolio movements, observing the broad multi-year trend provides the clearest picture.
+        </p>
+      </div>
+
+      <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
+        <h3 class="text-sm font-bold text-gray-900">3. What should I do if my net worth is negative?</h3>
+        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+          If your liabilities exceed your assets, your net worth will be negative. There is no reason to panic. Your immediate focus should be systematically eliminating high-interest debt such as credit cards and personal loans. Use our <a href="../calculators/credit-card-payoff-calculator.html" class="text-sky-700 underline font-semibold">Credit Card Payoff Calculator</a> to structure an accelerated debt payoff plan.
+        </p>
+      </div>
+
+      <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
+        <h3 class="text-sm font-bold text-gray-900">4. How should I value gold and real estate assets?</h3>
+        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+          For physical gold jewellery, calculate based on current prevailing bullion spot rates, discounting making charges and wastage. For real estate or plots, use the government guideline value or 80–90% of realistic market sales value as a safe, conservative estimate.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Tools on NidhiPezhai -->
+  <section class="space-y-4" aria-labelledby="relatedHeading">
+    <div class="flex items-center justify-between">
+      <h2 id="relatedHeading" class="text-lg font-bold text-gray-900">Related Financial Tools</h2>
+      <a href="../calculators/index.html" class="text-xs font-semibold text-sky-700 hover:underline flex items-center gap-1">
+        All Calculators <span>→</span>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <a href="../calculators/emergency-fund-planner.html" class="p-4 rounded-xl bg-white border border-gray-200 hover:border-sky-500 hover:shadow-sm transition-all group block">
+        <span class="text-xs font-semibold text-sky-700 bg-sky-50 px-2 py-0.5 rounded">Savings</span>
+        <h3 class="text-sm font-bold text-gray-900 mt-2 group-hover:text-sky-700">Emergency Fund Planner ↗</h3>
+        <p class="text-xs text-gray-500 mt-1">Plan a dedicated liquid contingency cushion based on your monthly living expenses.</p>
+      </a>
+
+      <a href="../calculators/credit-card-payoff-calculator.html" class="p-4 rounded-xl bg-white border border-gray-200 hover:border-sky-500 hover:shadow-sm transition-all group block">
+        <span class="text-xs font-semibold text-red-800 bg-red-50 px-2 py-0.5 rounded">Debt Management</span>
+        <h3 class="text-sm font-bold text-gray-900 mt-2 group-hover:text-red-800">Credit Card Payoff Calculator ↗</h3>
+        <p class="text-xs text-gray-500 mt-1">Design an effective repayment plan to clear high-interest card dues rapidly.</p>
+      </a>
+
+      <a href="../calculators/retirement-calculator.html" class="p-4 rounded-xl bg-white border border-gray-200 hover:border-sky-500 hover:shadow-sm transition-all group block">
+        <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Investment</span>
+        <h3 class="text-sm font-bold text-gray-900 mt-2 group-hover:text-emerald-700">Retirement Calculator ↗</h3>
+        <p class="text-xs text-gray-500 mt-1">Estimate your required retirement corpus and necessary monthly savings.</p>
+      </a>
+
+      <a href="../checklists/personal-finance-fortification-checklist.html" class="p-4 rounded-xl bg-white border border-gray-200 hover:border-sky-500 hover:shadow-sm transition-all group block">
+        <span class="text-xs font-semibold text-teal-700 bg-teal-50 px-2 py-0.5 rounded">Checklist</span>
+        <h3 class="text-sm font-bold text-gray-900 mt-2 group-hover:text-teal-700">Financial Fortification Checklist ↗</h3>
+        <p class="text-xs text-gray-500 mt-1">A comprehensive checklist covering term insurance, emergency funds, and healthcare safeguards.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Bottom CTA Banner -->
+  <section class="bg-gradient-to-br from-sky-600 to-indigo-700 rounded-2xl p-6 sm:p-10 text-white text-center space-y-4 shadow-md relative overflow-hidden">
+    <div class="absolute -right-8 -bottom-8 w-36 h-36 bg-white/10 rounded-full blur-sm pointer-events-none"></div>
+    <div class="relative max-w-3xl mx-auto space-y-3">
+      <h2 class="text-xl sm:text-2xl font-bold text-white">Start Tracking Your Wealth Growth Today</h2>
+      <p class="text-xs sm:text-sm text-sky-100 leading-relaxed">
+        Make a copy of our free Google Sheet template, record your assets and liabilities, and take full control of your path toward financial independence.
+      </p>
+      <div class="pt-2">
+        <a href="https://docs.google.com/spreadsheets/d/1q0xgoVvBrxDZrvQYwy4OOLkkhtJ65-DJYn9z7hBUDbc/copy" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white hover:bg-slate-50 text-gray-900 font-bold rounded-xl shadow-md transition-all text-sm">
+          <svg class="w-4 h-4 text-sky-700" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+          </svg>
+          <span>Make a Copy in Google Sheets</span>
+          <svg class="w-4 h-4 text-sky-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const printBtn = document.getElementById('btnPrint');
+    if (printBtn) {
+      printBtn.addEventListener('click', () => window.print());
+    }
+  });
+</script>
