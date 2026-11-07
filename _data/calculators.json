@@ -1,6 +1,7 @@
 [
   {
     "category": "கடன் மேலாண்மை (Loan Management)",
+    "categoryEnglish": "Loan Management",
     "items": [
       {
         "title": "வீட்டுக் கடன் தவணைக் கணிப்பேடு",
@@ -36,6 +37,7 @@
   },
   {
     "category": "சேமிப்பு மேலாண்மை (Savings Management)",
+    "categoryEnglish": "Savings Management",
     "items": [
       {
         "title": "ஓய்வூதிய வைப்பு நிதிக் கணிப்பேடு",
@@ -77,6 +79,7 @@
   },
   {
     "category": "காப்பீட்டு மேலாண்மை (Insurance Management)",
+    "categoryEnglish": "Insurance Management",
     "items": [
       {
         "title": "ஆயுள் காப்பீட்டுத் தொகைப் பரிந்துரைக் கணிப்பேடு",
@@ -100,6 +103,7 @@
   },
   {
     "category": "முதலீட்டு மேலாண்மை (Investment Management)",
+    "categoryEnglish": "Investment Management",
     "items": [
       {
         "title": "நிகர மதிப்புக் கணிப்பேடு (Google Sheet)",

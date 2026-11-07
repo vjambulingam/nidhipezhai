@@ -1,18 +1,23 @@
 <!doctype html>
-<html lang="{{ site.language }}">
+<html lang="{{ language or site.language }}">
 <head>
   {% set seoDescription = description or site.description %}
   {% set seoKeywords = keywords or topics or site.keywords %}
   {% set canonicalUrl = page.url | url | absoluteUrl %}
+  {% set siteTitle = site.englishTitle if language == 'en' else site.title %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0D7377">
   <meta name="description" content="{{ seoDescription }}">
   <meta name="keywords" content="{{ seoKeywords | join(', ') }}">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <title>{% if title %}{{ title }} · {% endif %}{{ site.title }}</title>
+  <title>{% if title %}{{ title }} · {% endif %}{{ siteTitle }}</title>
   {% if siteOrigin %}
   <link rel="canonical" href="{{ canonicalUrl }}">
+  {% if page.url == '/' or page.url == '/index.html' or page.url == '/en/' or page.url == '/en/index.html' %}
+  <link rel="alternate" hreflang="ta" href="{{ '/' | url | absoluteUrl }}">
+  <link rel="alternate" hreflang="en" href="{{ '/en/' | url | absoluteUrl }}">
+  {% endif %}
   <meta property="og:url" content="{{ canonicalUrl }}">
   {% set pageOgImage = ogImage or image or '/assets/images/nidhipezhai-og.png' %}
   {% set pageOgImageUrl = pageOgImage | url | absoluteUrl %}
@@ -21,13 +26,13 @@
   <meta property="og:image:height" content="{{ ogImageHeight or '630' }}">
   <meta name="twitter:image" content="{{ pageOgImageUrl }}">
   {% endif %}
-  <meta property="og:site_name" content="{{ site.title }}">
-  <meta property="og:locale" content="ta_IN">
+  <meta property="og:site_name" content="{{ siteTitle }}">
+  <meta property="og:locale" content="{{ 'en_IN' if language == 'en' else 'ta_IN' }}">
   <meta property="og:type" content="{{ seoType or 'website' }}">
-  <meta property="og:title" content="{% if title %}{{ title }} · {% endif %}{{ site.title }}">
+  <meta property="og:title" content="{% if title %}{{ title }} · {% endif %}{{ siteTitle }}">
   <meta property="og:description" content="{{ seoDescription }}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{% if title %}{{ title }} · {% endif %}{{ site.title }}">
+  <meta name="twitter:title" content="{% if title %}{{ title }} · {% endif %}{{ siteTitle }}">
   <meta name="twitter:description" content="{{ seoDescription }}">
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | url | absoluteUrl }}">
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/nidhipezhai-logo.svg' | url }}">
@@ -40,9 +45,9 @@
   {% set websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": site.title,
-    "description": site.description,
-    "inLanguage": "ta-IN",
+    "name": siteTitle,
+    "description": seoDescription,
+    "inLanguage": "en-IN" if language == "en" else "ta-IN",
     "url": canonicalUrl
   } %}
   <script type="application/ld+json">{{ websiteSchema | jsonify | safe }}</script>
@@ -50,7 +55,7 @@
   {% include "partials/theme-init.njk" %}
 </head>
 <body class="{{ bodyClass or '' }}">
-  <a class="skip-link" href="#main-content">முதன்மை உள்ளடக்கத்திற்குத் தாவவும்</a>
+  <a class="skip-link" href="#main-content">{{ 'Skip to main content' if language == 'en' else 'முதன்மை உள்ளடக்கத்திற்குத் தாவவும்' }}</a>
   {% include "partials/site-header.njk" %}
   {{ content | safe }}
   {% include "partials/site-footer.njk" %}

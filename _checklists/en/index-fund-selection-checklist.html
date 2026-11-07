@@ -1,0 +1,592 @@
+---
+title: "Index Fund Selection Checklist (Excel Download)"
+ogTitle: "Index Fund Selection Checklist · Nidhi Pezhai"
+description: "Comprehensive 20-point checklist for selecting low-cost Nifty 50 and Nifty Next 50 index funds based on expense ratio (TER), tracking error, tracking difference, and AUM in India."
+ogDescription: "Evaluate passive index mutual funds using Total Expense Ratio (TER), Tracking Difference, Tracking Error, and AUM with this 20-point checklist. Free Excel download included."
+keywords: "index fund checklist India, passive mutual funds India, nifty 50 index fund selection, tracking error mutual funds, tracking difference index fund, low expense ratio index fund"
+language: en
+publishedEnglish: true
+eleventyExcludeFromCollections: false
+---
+<main id="main-content" tabindex="-1" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-grow space-y-6">
+
+    <!-- Interactive Progress Summary Banner -->
+    <div class="bg-gradient-to-r from-emerald-600 to-teal-800 rounded-2xl p-6 text-white shadow-md flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div>
+        <h2 class="text-lg font-bold">Index Fund Selection Checklist</h2>
+        <p class="text-xs text-emerald-100 mt-1">Evaluate your prospective index mutual fund against these 20 objective criteria.</p>
+      </div>
+      <div class="bg-white/10 backdrop-blur-xs rounded-xl p-3.5 px-5 flex items-center gap-4 border border-white/20">
+        <div>
+          <span class="text-xs text-emerald-200 block">Completed</span>
+          <span class="text-2xl font-extrabold" id="progressCount">0 / 20</span>
+        </div>
+        <div class="h-10 w-px bg-white/20"></div>
+        <div>
+          <span class="text-xs text-emerald-200 block">Selection Score</span>
+          <span class="text-2xl font-extrabold" id="progressPercent">0%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Excel Export & Educational Notice Card -->
+    <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-200/80 space-y-3 text-xs text-emerald-950">
+      <div class="flex items-center gap-2">
+        <span class="text-base">📊</span>
+        <strong class="text-sm">Golden Principles of Index Investing:</strong>
+      </div>
+      <p class="leading-relaxed text-slate-700">
+        The success of index funds does not depend on fund manager predictions; rather, it hinges on a <strong>Low Total Expense Ratio (TER), Low Tracking Error, and Disciplined Long-Term Monthly SIPs</strong>. Review all 20 criteria across these 6 essential categories before investing in any fund.
+      </p>
+      <div class="pt-2 border-t border-emerald-200/60 flex flex-wrap items-center justify-between gap-2 text-[11px] font-semibold text-emerald-800">
+        <div class="flex items-center gap-2">
+          <span>📗 Download all 20 criteria as a structured Excel workbook:</span>
+        </div>
+        <button onclick="document.getElementById('btnDownloadExcel').click()" class="shrink-0 font-bold underline hover:text-emerald-900 text-emerald-800 flex items-center gap-1">
+          <span>Download Excel Workbook &rarr;</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Interactive Checklist Categories Container -->
+    <div id="interactiveContainer" class="space-y-6">
+
+      <!-- Category 1: Plan Type & Growth Option -->
+      <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">1</span>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">Plan Type &amp; Growth Option</h3>
+              <p class="text-xs text-slate-500">Eliminating distributor commissions and ensuring direct compound compounding</p>
+            </div>
+          </div>
+          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">Core Plan Selection</span>
+        </div>
+        <div class="space-y-3">
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="1">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">Always Select Direct Plan (Never Regular Plan):</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-red-50 text-red-800">Critical</span>
+              </div>
+              Verify that you are investing in the 'Direct Plan' rather than a 'Regular Plan'. Paying 0.50% to 1.00% annual commissions to intermediaries on an index fund erodes compounding wealth unnecessarily.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="2">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">Choose Growth Option (Avoid IDCW / Dividend Payout):</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-red-50 text-red-800">Critical</span>
+              </div>
+              Opt for the 'Growth Option' so dividends declared by constituent companies are automatically reinvested into the fund's NAV, maximizing tax-efficient compounding.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="3">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">Use Direct AMC Portals or Official Direct Platforms:</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-sky-100 text-sky-800">High</span>
+              </div>
+              Invest directly via MF Central, official AMC websites, or authorized zero-commission direct mutual fund platforms with zero brokerage.
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Category 2: Total Expense Ratio (TER) -->
+      <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">2</span>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">Total Expense Ratio (TER)</h3>
+              <p class="text-xs text-slate-500">Keeping administrative and management fees at bare minimums</p>
+            </div>
+          </div>
+          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">Cost Control</span>
+        </div>
+        <div class="space-y-3">
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="4">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">NIFTY 50 Low Expense Ratio (TER &le; 0.20%):</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-red-50 text-red-800">Critical</span>
+              </div>
+              Ensure the Total Expense Ratio (TER) of a Nifty 50 direct index fund is between 0.10% and 0.20%. Avoid funds charging more than 0.25% to 0.30% for a standard large-cap index.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="5">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">NIFTY NEXT 50 Reasonable Expense Ratio (TER &le; 0.35%):</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-sky-100 text-sky-800">High</span>
+              </div>
+              Because Nifty Next 50 involves higher transaction turnover and market impact cost, a direct plan TER between 0.20% and 0.35% is acceptable.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="6">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">Historical TER Consistency across Past 2-3 Years:</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700">Medium</span>
+              </div>
+              Examine past 2-3 years of factsheet data to confirm the AMC did not introduce an artificially low teaser TER (e.g., 0.05%) only to hike it significantly later.
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Category 3: Tracking Difference & Tracking Error -->
+      <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">3</span>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">Tracking Factors (Tracking Difference &amp; Tracking Error)</h3>
+              <p class="text-xs text-slate-500">Measuring how accurately the fund mirrors the total return of the benchmark index</p>
+            </div>
+          </div>
+          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">Precision</span>
+        </div>
+        <div class="space-y-3">
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="7">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">Low Tracking Difference (Tracking Difference &le; TER + 0.10%):</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-red-50 text-red-800">Critical</span>
+              </div>
+              Check that the net return gap between the benchmark TRI (Total Returns Index) and the fund's NAV over 1 and 3 years closely mirrors its expense ratio (TER).
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="8">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">Low Tracking Error (Tracking Error &lt; 0.05% - 0.10%):</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-red-50 text-red-800">Critical</span>
+              </div>
+              Verify from AMFI or monthly factsheets that annualized daily tracking error volatility is under 0.05% to 0.10%, indicating prompt index replication by the fund manager.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="9">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">Minimal Cash Drag (Cash Holdings &lt; 2%):</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700">Medium</span>
+              </div>
+              Confirm the fund holds no more than 1% to 2% in cash/derivatives for redemption liquidity, preventing cash drag during bull markets.
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Category 4: AUM & Liquidity -->
+      <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">4</span>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">Assets Under Management &amp; Liquidity</h3>
+              <p class="text-xs text-slate-500">Protecting large transactions from high impact cost and liquidity mismatches</p>
+            </div>
+          </div>
+          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">Stability</span>
+        </div>
+        <div class="space-y-3">
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="10">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">Substantial Assets Under Management (AUM &ge; ₹1,000 Crore):</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-red-50 text-red-800">Critical</span>
+              </div>
+              Choose Nifty 50 index funds with an AUM of at least ₹1,000 crore. Very small funds (e.g., under ₹100 crore) suffer higher tracking error during institutional inflows and redemptions.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="11">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">Reputable AMC with Proven Passive Track Record:</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-sky-100 text-sky-800">High</span>
+              </div>
+              Select established fund houses (e.g., HDFC, UTI, ICICI Prudential, SBI, Nippon) with 5+ years of institutional passive fund management experience and automated trading execution.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="12">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">Zero or Minimal Exit Load:</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700">Medium</span>
+              </div>
+              Ensure the fund has zero exit load or a minimal restriction (e.g., 0.25% only if redeemed within 7 days) to retain investment flexibility.
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Category 5: Portfolio Allocation Strategy -->
+      <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">5</span>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">Portfolio Allocation Strategy</h3>
+              <p class="text-xs text-slate-500">Structuring core and satellite portfolio ratios for stability and growth</p>
+            </div>
+          </div>
+          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">Asset Allocation</span>
+        </div>
+        <div class="space-y-3">
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="13">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">70% Core Portfolio Foundation in Index Funds:</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-red-50 text-red-800">Critical</span>
+              </div>
+              Allocate at least 70% of total equity exposure to low-cost Nifty 50 and Nifty Next 50 passive funds to establish a robust, low-maintenance foundation.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="14">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">Choosing 70:30 or 50:50 Large:Next Allocation:</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-sky-100 text-sky-800">High</span>
+              </div>
+              Adopt a 70% Nifty 50 + 30% Next 50 allocation for balanced stability, or 50:50 for younger investors with a 15+ year horizon seeking higher growth.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="15">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">30% Optional Satellite Portfolio Allocation:</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700">Medium</span>
+              </div>
+              Limit active mutual fund bets (e.g., quality midcap or smallcap funds) to the remaining 30% satellite portion if seeking potential alpha.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="16">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">Annual Portfolio Rebalancing Discipline:</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-sky-100 text-sky-800">High</span>
+              </div>
+              Review your asset allocation annually and rebalance back to target weights if market movements push Next 50 or midcaps significantly above targets.
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Category 6: Disciplined SIP Execution -->
+      <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">6</span>
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">Disciplined SIP Execution</h3>
+              <p class="text-xs text-slate-500">Removing emotion and automating long-term rupee-cost compounding</p>
+            </div>
+          </div>
+          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">Discipline</span>
+        </div>
+        <div class="space-y-3">
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="17">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">Minimum 7 to 10+ Year Investment Horizon:</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-red-50 text-red-800">Critical</span>
+              </div>
+              Index investing is not short-term speculative trading. Maintain a disciplined 7-10+ year perspective to capture the full trajectory of economic growth.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="18">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">Automated Monthly Auto-Debit SIP:</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-sky-100 text-sky-800">High</span>
+              </div>
+              Set up an automated bank auto-debit SIP scheduled 2-3 days after salary day, eliminating attempts to time market highs and lows.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="19">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">Never Pause SIPs during Market Corrections:</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-red-50 text-red-800">Critical</span>
+              </div>
+              Continue regular monthly investments during 10% to 20% market corrections; lower NAVs enable accumulation of more units, accelerating rupee-cost averaging.
+            </div>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+            <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500" data-id="20">
+            <div class="text-xs leading-relaxed text-slate-700">
+              <div class="flex items-center justify-between gap-2">
+                <strong class="text-slate-900 block text-sm">100% Nominee Registration &amp; Tax Awareness:</strong>
+                <span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-sky-100 text-sky-800">High</span>
+              </div>
+              Ensure nominees are active across all folios. Note that long-term capital gains (LTCG) beyond 1 year currently enjoy an annual exemption up to ₹1.25 lakh under Section 112A.
+            </div>
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Actions & Reset Bar -->
+    <div class="flex flex-wrap items-center justify-between gap-4 p-4 bg-white rounded-2xl border border-slate-200 no-print">
+      <div class="flex items-center gap-2">
+        <button id="btnResetChecklist" type="button" class="px-4 py-2 text-xs font-semibold text-slate-600 hover:text-red-800 hover:bg-red-50 rounded-xl transition-colors border border-slate-200">
+          🔄 Reset Checklist
+        </button>
+      </div>
+      <div class="flex items-center gap-3">
+        <button onclick="window.print()" type="button" class="px-4 py-2 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors border border-slate-300">
+          🖨️ Print
+        </button>
+        <button onclick="document.getElementById('btnDownloadExcel').click()" type="button" class="px-5 py-2 text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-xl shadow-xs transition-colors">
+          📗 Download Excel
+        </button>
+      </div>
+    </div>
+
+    <!-- Related Articles & Calculators Section -->
+    <section class="calculator-group no-print pt-6" aria-labelledby="related-resources-heading">
+      <h2 id="related-resources-heading">Related Financial Guides &amp; Calculators</h2>
+      <div class="calculator-grid">
+        <a class="calculator-card" href="../articles/index-funds-vs-active-mutual-funds/">
+          <span class="calculator-card__type">Guide · English</span>
+          <h3>Index Funds vs Active Mutual Funds</h3>
+          <p>Read our comprehensive analysis on fee drag, SPIVA India studies, and Nifty 100 core-satellite strategies.</p>
+          <span class="calculator-card__open">Read guide &rarr;</span>
+        </a>
+        <a class="calculator-card" href="../calculators/mf_sip_calculator.html">
+          <span class="calculator-card__type">Calculator</span>
+          <h3>Mutual Fund SIP Calculator</h3>
+          <p>Calculate capital accumulation and compound growth over 10, 20, or 25 years through monthly SIPs.</p>
+          <span class="calculator-card__open">Open calculator &rarr;</span>
+        </a>
+        <a class="calculator-card" href="../calculators/goal-based-investing-calculator.html">
+          <span class="calculator-card__type">Calculator</span>
+          <h3>Goal-Based Investing Calculator</h3>
+          <p>Estimate the monthly SIP required to achieve home purchase, children's education, or retirement goals.</p>
+          <span class="calculator-card__open">Open calculator &rarr;</span>
+        </a>
+        <a class="calculator-card" href="../checklists/personal-finance-fortification-checklist.html">
+          <span class="calculator-card__type">Checklist · English</span>
+          <h3>Personal Finance Fortification Checklist</h3>
+          <p>Review emergency funds, health insurance, debt elimination, long-term wealth, and retirement security.</p>
+          <span class="calculator-card__open">Open checklist &rarr;</span>
+        </a>
+      </div>
+    </section>
+
+</main>
+
+<script>
+    // Master Checklist Data for Index Fund Selection
+    const indexFundChecklistData = [
+      {
+        category: "1. Plan Type & Growth Option",
+        items: [
+          { id: 1, priority: "Critical", title: "Always Select Direct Plan (Never Regular Plan)", desc: "Avoid Regular plans to eliminate 0.50% to 1.00% annual intermediary commissions.", checked: false },
+          { id: 2, priority: "Critical", title: "Choose Growth Option (Avoid IDCW / Dividend Payout)", desc: "Ensure dividends are automatically reinvested into the fund's NAV for compound growth.", checked: false },
+          { id: 3, priority: "High", title: "Use Direct AMC Portals or Official Direct Platforms", desc: "Invest via MF Central, AMC portals, or zero-commission direct platforms with zero brokerage.", checked: false }
+        ]
+      },
+      {
+        category: "2. Total Expense Ratio (TER)",
+        items: [
+          { id: 4, priority: "Critical", title: "NIFTY 50 Low Expense Ratio (TER <= 0.20%)", desc: "Confirm the Total Expense Ratio (TER) of a Nifty 50 direct index fund is between 0.10% and 0.20%.", checked: false },
+          { id: 5, priority: "High", title: "NIFTY NEXT 50 Reasonable Expense Ratio (TER <= 0.35%)", desc: "A direct plan TER between 0.20% and 0.35% is acceptable given higher turnover in Next 50.", checked: false },
+          { id: 6, priority: "Medium", title: "Historical TER Consistency across Past 2-3 Years", desc: "Check past factsheets to verify the AMC has not introduced a teaser TER only to hike it later.", checked: false }
+        ]
+      },
+      {
+        category: "3. Tracking Factors (Tracking Difference & Tracking Error)",
+        items: [
+          { id: 7, priority: "Critical", title: "Low Tracking Difference (Tracking Difference <= TER + 0.10%)", desc: "The net gap between the benchmark TRI and fund NAV return should closely mirror the TER.", checked: false },
+          { id: 8, priority: "Critical", title: "Low Tracking Error (Tracking Error < 0.05% - 0.10%)", desc: "Annualized daily tracking error volatility should be under 0.05% to 0.10%.", checked: false },
+          { id: 9, priority: "Medium", title: "Minimal Cash Drag (Cash Holdings < 2%)", desc: "Ensure cash/derivative holdings for redemptions remain under 1% to 2% to avoid drag.", checked: false }
+        ]
+      },
+      {
+        category: "4. Assets Under Management & Liquidity",
+        items: [
+          { id: 10, priority: "Critical", title: "Substantial Assets Under Management (AUM >= ₹1,000 Crore)", desc: "Opt for Nifty 50 funds with at least ₹1,000 crore AUM to avoid high impact costs.", checked: false },
+          { id: 11, priority: "High", title: "Reputable AMC with Proven Passive Track Record", desc: "Select established AMCs with 5+ years of passive fund management experience.", checked: false },
+          { id: 12, priority: "Medium", title: "Zero or Minimal Exit Load", desc: "Verify that exit loads are zero or minimal (e.g., 0.25% only if redeemed within 7 days).", checked: false }
+        ]
+      },
+      {
+        category: "5. Portfolio Allocation Strategy",
+        items: [
+          { id: 13, priority: "Critical", title: "70% Core Portfolio Foundation in Index Funds", desc: "Allocate at least 70% of total equity to low-cost Nifty 50 and Next 50 index funds.", checked: false },
+          { id: 14, priority: "High", title: "Choosing 70:30 or 50:50 Large:Next Allocation", desc: "Adopt 70% N50 + 30% NN50 for balance, or 50:50 for higher long-term growth.", checked: false },
+          { id: 15, priority: "Medium", title: "30% Optional Satellite Portfolio Allocation", desc: "Limit active fund allocations (midcap or smallcap) to the remaining 30% satellite portion.", checked: false },
+          { id: 16, priority: "High", title: "Annual Portfolio Rebalancing Discipline", desc: "Review asset allocation annually and rebalance back to target 70:30 or 50:50 weights.", checked: false }
+        ]
+      },
+      {
+        category: "6. Disciplined SIP Execution",
+        items: [
+          { id: 17, priority: "Critical", title: "Minimum 7 to 10+ Year Investment Horizon", desc: "Maintain a disciplined 7-10+ year perspective to capture full economic growth.", checked: false },
+          { id: 18, priority: "High", title: "Automated Monthly Auto-Debit SIP", desc: "Automate monthly SIP deductions 2-3 days after salary day to remove emotional timing.", checked: false },
+          { id: 19, priority: "Critical", title: "Never Pause SIPs during Market Corrections", desc: "Continue regular investments during corrections to benefit from rupee-cost averaging.", checked: false },
+          { id: 20, priority: "High", title: "100% Nominee Registration & Tax Awareness", desc: "Ensure nominees are updated across folios and plan for the ₹1.25L annual LTCG tax exemption.", checked: false }
+        ]
+      }
+    ];
+
+    const totalTasks = 20;
+    const STORAGE_KEY = "nidhipezhai_index_fund_checklist_en_v1";
+
+    function saveState() {
+      try {
+        const state = {};
+        indexFundChecklistData.forEach(cat => {
+          cat.items.forEach(item => {
+            state[item.id] = !!item.checked;
+          });
+        });
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      } catch (e) {
+        console.warn("Could not save to localStorage", e);
+      }
+    }
+
+    function loadSavedState() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          const state = JSON.parse(saved);
+          indexFundChecklistData.forEach(cat => {
+            cat.items.forEach(item => {
+              if (state[item.id] !== undefined) {
+                item.checked = state[item.id];
+              }
+            });
+          });
+
+          document.querySelectorAll('.task-checkbox').forEach(box => {
+            const id = parseInt(box.dataset.id, 10);
+            if (state[id] !== undefined) {
+              box.checked = state[id];
+            }
+          });
+        }
+      } catch (e) {
+        console.warn("Could not load from localStorage", e);
+      }
+    }
+
+    function updateProgress() {
+      let completed = 0;
+      indexFundChecklistData.forEach(cat => {
+        cat.items.forEach(item => {
+          if (item.checked) completed++;
+        });
+      });
+
+      const pct = Math.round((completed / totalTasks) * 100);
+      document.getElementById('progressCount').textContent = `${completed} / ${totalTasks}`;
+      document.getElementById('progressPercent').textContent = `${pct}%`;
+    }
+
+    // Checkbox Listeners
+    document.querySelectorAll('.task-checkbox').forEach(box => {
+      box.addEventListener('change', (e) => {
+        const id = parseInt(e.target.dataset.id, 10);
+        const isChecked = e.target.checked;
+
+        indexFundChecklistData.forEach(cat => {
+          cat.items.forEach(item => {
+            if (item.id === id) item.checked = isChecked;
+          });
+        });
+
+        saveState();
+        updateProgress();
+      });
+    });
+
+    // Native Excel (.xlsx) Download Handler using SheetJS
+    document.getElementById('btnDownloadExcel').addEventListener('click', () => {
+      const excelRows = [
+        ["S.No", "Category", "Checklist Item", "Details", "Priority", "Status"]
+      ];
+
+      let rowIdx = 1;
+      indexFundChecklistData.forEach(cat => {
+        cat.items.forEach(item => {
+          excelRows.push([
+            rowIdx++,
+            cat.category,
+            item.title,
+            item.desc,
+            item.priority,
+            item.checked ? "Verified ✓" : "Pending"
+          ]);
+        });
+      });
+
+      const worksheet = XLSX.utils.aoa_to_sheet(excelRows);
+
+      worksheet['!cols'] = [
+        { wch: 10 },
+        { wch: 42 },
+        { wch: 48 },
+        { wch: 65 },
+        { wch: 15 },
+        { wch: 18 }
+      ];
+
+      const workbook = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(workbook, worksheet, "Index_Fund_Checklist");
+
+      XLSX.writeFile(workbook, `Index_Fund_Selection_Checklist_${Date.now()}.xlsx`);
+    });
+
+    // Reset Checklist Handler
+    document.getElementById('btnResetChecklist').addEventListener('click', () => {
+      if (confirm("Are you sure you want to reset all checklist items?")) {
+        try {
+          localStorage.removeItem(STORAGE_KEY);
+        } catch (e) {
+          console.warn("Could not clear localStorage", e);
+        }
+
+        document.querySelectorAll('.task-checkbox').forEach(box => {
+          box.checked = false;
+        });
+
+        indexFundChecklistData.forEach(cat => {
+          cat.items.forEach(item => {
+            item.checked = false;
+          });
+        });
+
+        updateProgress();
+      }
+    });
+
+    // Initialize progress on load
+    loadSavedState();
+    updateProgress();
+</script>

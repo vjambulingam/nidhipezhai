@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.language }}">
+<html lang="{{ 'en' if language == 'en' else site.language }}">
 <head>
   {% set canonicalUrl = page.url | url | absoluteUrl %}
   {% set socialTitle = ogTitle or (title + " · " + site.title) %}
@@ -14,7 +14,7 @@
   <link rel="canonical" href="{{ canonicalUrl }}">
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/nidhipezhai-logo.svg' | url }}">
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="ta_IN">
+  <meta property="og:locale" content="{{ 'en_IN' if language == 'en' else 'ta_IN' }}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:title" content="{{ socialTitle }}">
   <meta property="og:description" content="{{ socialDescription }}">
@@ -48,7 +48,7 @@
     "@type": "WebApplication",
     "name": title,
     "description": description,
-    "inLanguage": "ta-IN",
+    "inLanguage": "en-IN" if language == "en" else "ta-IN",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "Web",
     "url": canonicalUrl,
@@ -63,7 +63,7 @@
   {% include "partials/theme-init.njk" %}
 </head>
 <body class="min-h-screen flex flex-col justify-between antialiased checklist-page">
-  <a class="skip-link" href="#main-content">முதன்மை உள்ளடக்கத்திற்குத் தாவவும்</a>
+  <a class="skip-link" href="#main-content">{{ 'Skip to main content' if language == 'en' else 'முதன்மை உள்ளடக்கத்திற்குத் தாவவும்' }}</a>
   {% include "partials/site-header.njk" %}
   {% set checklistCategory = "" %}
   {% set checklistGroupId = "" %}
@@ -78,10 +78,10 @@
   {% endfor %}
   <div class="calc-toolbar no-print">
     <div class="wrap calc-toolbar__inner">
-      <nav class="calc-breadcrumbs" aria-label="நீங்கள் இருக்கும் இடம்">
-        <a href="{{ '/' | url }}">முகப்பு</a>
+      <nav class="calc-breadcrumbs" aria-label="{{ 'Breadcrumb' if language == 'en' else 'நீங்கள் இருக்கும் இடம்' }}">
+        <a href="{{ ('/en/' if language == 'en' else '/') | url }}">{{ 'Home' if language == 'en' else 'முகப்பு' }}</a>
         <span aria-hidden="true">/</span>
-        <a href="{{ '/checklists/' | url }}">சரிபார்ப்புப் பட்டியல்கள்</a>
+        <a href="{{ ('/en/checklists/' if language == 'en' else '/checklists/') | url }}">{{ 'Checklists' if language == 'en' else 'சரிபார்ப்புப் பட்டியல்கள்' }}</a>
         {% if checklistCategory %}
         <span aria-hidden="true">/</span>
         <a href="{{ '/checklists/' | url }}#checklist-group-{{ checklistGroupId }}">{{ checklistCategory }}</a>
@@ -97,13 +97,13 @@
         {% include "partials/social-share.njk" %}
         <button id="btnPrint" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors border border-slate-300">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
-          <span>அச்சிடு</span>
+          <span>{{ 'Print' if language == 'en' else 'அச்சிடு' }}</span>
         </button>
         <button id="btnDownloadExcel" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg shadow-sm transition-colors">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM6 20V4h7v5h5v11H6zm10-7.5l-2.2 3.5 2.2 3.5h-1.6l-1.4-2.4-1.4 2.4H10l2.2-3.5L10 12.5h1.6l1.4 2.3 1.4-2.3H16z"/>
           </svg>
-          <span>Excel பதிவிறக்கம்</span>
+          <span>{{ 'Download Excel' if language == 'en' else 'Excel பதிவிறக்கம்' }}</span>
         </button>
     </div>
   </div>
@@ -120,4 +120,3 @@
   <script src="{{ '/assets/js/theme.js' | url }}" defer></script>
 </body>
 </html>
-

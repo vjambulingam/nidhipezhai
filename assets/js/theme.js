@@ -42,7 +42,10 @@
 
     // Update all toggle buttons on page
     const toggles = document.querySelectorAll('.theme-toggle');
-    const label = isDark ? 'ஒளி முறைக்கு மாற்று' : 'இருள் முறைக்கு மாற்று';
+    const english = document.documentElement.lang === 'en';
+    const label = english
+      ? (isDark ? 'Switch to light mode' : 'Switch to dark mode')
+      : (isDark ? 'ஒளி முறைக்கு மாற்று' : 'இருள் முறைக்கு மாற்று');
     toggles.forEach(function (btn) {
       btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
       btn.setAttribute('aria-label', label);
@@ -60,7 +63,9 @@
         announcer.setAttribute('aria-atomic', 'true');
         document.body.appendChild(announcer);
       }
-      announcer.textContent = isDark ? 'இருள் முறை இயக்கப்பட்டது' : 'ஒளி முறை இயக்கப்பட்டது';
+      announcer.textContent = english
+        ? (isDark ? 'Dark mode enabled' : 'Light mode enabled')
+        : (isDark ? 'இருள் முறை இயக்கப்பட்டது' : 'ஒளி முறை இயக்கப்பட்டது');
     }
 
     // Synchronize Chart.js if present
@@ -113,4 +118,3 @@
     init();
   }
 })();
-

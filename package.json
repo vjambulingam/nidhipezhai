@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "og:calculators": "node scripts/generate-calculator-og.js",
+    "check:glossary": "node scripts/check-glossary-sync.js",
     "build": "node scripts/build-tailwind.js && node scripts/generate-calculator-og.js && eleventy",
     "dev": "node scripts/build-tailwind.js && node scripts/generate-calculator-og.js && eleventy --serve"
   },

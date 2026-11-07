@@ -1,0 +1,346 @@
+---
+title: "Credit Card Payoff Calculator"
+ogTitle: "Credit Card Payoff Calculator · Nidhi Pezhai"
+description: "Calculate your credit card payoff timeline, total interest outflow, and compare fixed payments vs minimum due in India."
+keywords: "credit card payoff calculator, credit card debt payoff India, credit card interest calculator, credit card minimum due trap, credit card debt free"
+language: en
+publishedEnglish: true
+eleventyExcludeFromCollections: false
+hasChart: false
+hasCsvExport: true
+---
+<main id="main-content" tabindex="-1" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-1">
+    <div class="mb-6">
+      <p class="text-xs font-semibold text-sky-700">Debt Management</p>
+      <h1 class="mt-1 text-2xl sm:text-3xl font-bold text-gray-900">Credit Card Payoff Calculator</h1>
+      <p class="mt-2 max-w-3xl text-sm text-gray-600">Enter your outstanding balance, annual percentage rate (APR), and monthly payment amount to estimate your debt-free timeline and total interest charges.</p>
+    </div>
+
+    <div class="grid gap-6 lg:grid-cols-5">
+      <section class="lg:col-span-2 bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-gray-200" aria-labelledby="inputHeading">
+        <div class="flex items-center justify-between pb-2 border-b border-gray-100">
+          <h3 id="inputHeading" class="text-lg font-bold text-gray-900">Your Details</h3>
+          
+          <button id="btnReset" type="button" class="calc-reset-btn" title="Reset all inputs">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            <span>Reset</span>
+          </button>
+        </div>
+        <div class="mt-5 space-y-5">
+          <div>
+            <label for="balanceInput" class="block text-sm font-semibold text-gray-700">Current Outstanding Balance</label>
+            <div class="relative mt-2">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">₹</span>
+              <input id="balanceInput" type="number" min="1" max="100000000" step="100" value="50000" inputmode="decimal" class="w-full rounded-lg border border-gray-300 py-2.5 pl-8 pr-3 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
+            </div>
+            <input type="range" id="balanceSlider" min="5000" max="500000" step="5000" value="50000" class="mt-2 w-full">
+          </div>
+          <div>
+            <label for="aprInput" class="block text-sm font-semibold text-gray-700">Annual Percentage Rate (APR %)</label>
+            <div class="relative mt-2">
+              <input id="aprInput" type="number" min="0" max="100" step="0.1" value="36" inputmode="decimal" class="w-full rounded-lg border border-gray-300 py-2.5 pl-3 pr-9 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
+              <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500">%</span>
+            </div>
+            <input type="range" id="aprSlider" min="12" max="48" step="0.5" value="36" class="mt-2 w-full">
+            <p class="mt-1 text-xs text-gray-500">Use the annual finance charge rate shown on your credit card statement (typically 36%–45% p.a.).</p>
+          </div>
+          <div>
+            <label for="paymentMode" class="block text-sm font-semibold text-gray-700">Monthly Payment Strategy</label>
+            <select id="paymentMode" class="mt-2 w-full rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm text-gray-900 focus:ring-2 focus:ring-sky-500">
+              <option value="fixed">Fixed Monthly Payment</option>
+              <option value="minimum">Minimum Due + Extra Payment</option>
+            </select>
+          </div>
+          <div id="fixedPaymentField">
+            <label for="fixedPaymentInput" class="block text-sm font-semibold text-gray-700">Monthly Payment Amount</label>
+            <div class="relative mt-2">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">₹</span>
+              <input id="fixedPaymentInput" type="number" min="1" max="100000000" step="100" value="5000" inputmode="decimal" class="w-full rounded-lg border border-gray-300 py-2.5 pl-8 pr-3 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
+            </div>
+            <input type="range" id="fixedPaymentSlider" min="500" max="50000" step="500" value="5000" class="mt-2 w-full">
+          </div>
+          <div id="minimumPaymentFields" class="hidden space-y-4">
+            <div>
+              <label for="minimumPercentInput" class="block text-sm font-semibold text-gray-700">Minimum Payment (% of balance)</label>
+              <div class="relative mt-2">
+                <input id="minimumPercentInput" type="number" min="0.1" max="100" step="0.1" value="5" inputmode="decimal" class="w-full rounded-lg border border-gray-300 py-2.5 pl-3 pr-9 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
+                <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500">%</span>
+              </div>
+            </div>
+            <div>
+              <label for="minimumFloorInput" class="block text-sm font-semibold text-gray-700">Minimum Floor Amount</label>
+              <div class="relative mt-2">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">₹</span>
+                <input id="minimumFloorInput" type="number" min="0" max="100000000" step="100" value="500" inputmode="decimal" class="w-full rounded-lg border border-gray-300 py-2.5 pl-8 pr-3 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
+              </div>
+            </div>
+            <div>
+              <label for="extraPaymentInput" class="block text-sm font-semibold text-gray-700">Extra Monthly Payment</label>
+              <div class="relative mt-2">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">₹</span>
+                <input id="extraPaymentInput" type="number" min="0" max="100000000" step="100" value="0" inputmode="decimal" class="w-full rounded-lg border border-gray-300 py-2.5 pl-8 pr-3 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
+              </div>
+            </div>
+          </div>
+          <p id="errorMessage" class="hidden rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-800" role="alert"></p>
+          <p class="rounded-lg border border-amber-200 bg-amber-50 p-3 text-xs leading-relaxed text-amber-900">Interest is compounded monthly for estimation; new purchases, late fees, cash advance charges, and 18% GST on interest are excluded. Minimum payment calculations vary by issuing bank.</p>
+        </div>
+      </section>
+
+      <section class="lg:col-span-3 space-y-6" aria-labelledby="resultsHeading" aria-live="polite">
+        <div class="bg-gradient-to-br from-sky-600 to-indigo-700 rounded-2xl p-6 text-white shadow-md">
+          <h3 id="resultsHeading" class="text-sm font-semibold text-sky-100">Estimated Payoff Timeline</h3>
+          <p class="mt-2 flex flex-wrap items-baseline gap-x-2">
+            <span id="payoffDisplay" class="text-3xl sm:text-4xl font-extrabold">--</span>
+            <span class="text-sm text-sky-100">Months</span>
+          </p>
+          <p id="payoffDetail" class="mt-2 text-sm text-sky-100">Update inputs to calculate payoff timeline.</p>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-3">
+          <div class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
+            <p class="text-xs text-gray-500">Total Interest Payable</p>
+            <p id="interestDisplay" class="mt-1 text-xl font-bold text-amber-700">₹ 0</p>
+          </div>
+          <div class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
+            <p class="text-xs text-gray-500">Total Amount Payable</p>
+            <p id="totalPaidDisplay" class="mt-1 text-xl font-bold text-gray-900">₹ 0</p>
+          </div>
+          <div class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
+            <p class="text-xs text-gray-500">First Month Payment</p>
+            <p id="firstPaymentDisplay" class="mt-1 text-xl font-bold text-sky-700">₹ 0</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-gray-200">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <h3 class="text-lg font-bold text-gray-900">Monthly Payoff Schedule</h3>
+              <p id="scheduleNote" class="text-xs text-gray-500">Showing the first 12 months of your repayment plan.</p>
+            </div>
+            <div class="text-xs text-gray-500">Total Principal: <strong id="principalDisplay" class="text-gray-800">₹ 0</strong></div>
+          </div>
+          <div class="mt-4 overflow-x-auto">
+            <table class="w-full min-w-[620px] text-left text-xs sm:text-sm">
+              <thead>
+                <tr class="border-b border-gray-200 bg-slate-50 text-xs font-semibold text-gray-600">
+                  <th class="px-3 py-3">Month</th>
+                  <th class="px-3 py-3 text-right">Opening Balance</th>
+                  <th class="px-3 py-3 text-right">Interest</th>
+                  <th class="px-3 py-3 text-right">Payment</th>
+                  <th class="px-3 py-3 text-right">Closing Balance</th>
+                </tr>
+              </thead>
+              <tbody id="scheduleBody" class="divide-y divide-gray-100 text-gray-700"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Key Assumptions Card -->
+    <div class="calc-assumptions-card mt-6">
+      <div class="calc-assumptions-card__title">
+        <svg class="w-4 h-4 text-sky-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <span>Key Assumptions</span>
+      </div>
+      <ul class="calc-assumptions-card__list">
+        <li>Annual Percentage Rate (APR) is divided by 12 and compounded on a monthly reducing balance basis.</li>
+        <li>Assumes no additional purchases, balance transfers, or cash advances are made during the payoff period.</li>
+        <li>Late payment fees, annual card charges, and 18% GST on finance charges are not included.</li>
+        <li>Paying only the minimum due substantially increases cumulative interest and can trap you in debt for decades.</li>
+      </ul>
+    </div>
+</main>
+
+<script>
+    const currency = new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+      maximumFractionDigits: 0
+    });
+    const inputIds = [
+      "balanceInput", "aprInput", "paymentMode", "fixedPaymentInput",
+      "minimumPercentInput", "minimumFloorInput", "extraPaymentInput"
+    ];
+    const fields = Object.fromEntries(inputIds.map((id) => [id, document.getElementById(id)]));
+    let payoffSchedule = [];
+
+    function displayMoney(value) {
+      return currency.format(Math.round(value));
+    }
+
+    function readNumber(id) {
+      return Number(fields[id].value);
+    }
+
+    function setError(message) {
+      const error = document.getElementById("errorMessage");
+      error.textContent = message;
+      error.classList.toggle("hidden", !message);
+    }
+
+    function updatePaymentFields() {
+      const isMinimumMode = fields.paymentMode.value === "minimum";
+      document.getElementById("fixedPaymentField").classList.toggle("hidden", isMinimumMode);
+      document.getElementById("minimumPaymentFields").classList.toggle("hidden", !isMinimumMode);
+    }
+
+    function validateInputs() {
+      const balance = readNumber("balanceInput");
+      const apr = readNumber("aprInput");
+      if (!Number.isFinite(balance) || balance <= 0 || balance > 100000000) {
+        return "Outstanding balance must be between ₹1 and ₹10,00,00,000.";
+      }
+      if (!Number.isFinite(apr) || apr < 0 || apr > 100) {
+        return "Annual interest rate (APR) must be between 0% and 100%.";
+      }
+      if (fields.paymentMode.value === "fixed") {
+        const payment = readNumber("fixedPaymentInput");
+        if (!Number.isFinite(payment) || payment <= 0) return "Monthly payment must be greater than zero.";
+      } else {
+        const percent = readNumber("minimumPercentInput");
+        const floor = readNumber("minimumFloorInput");
+        const extra = readNumber("extraPaymentInput");
+        if (!Number.isFinite(percent) || percent <= 0 || percent > 100) return "Minimum payment percentage must be greater than 0% and up to 100%.";
+        if (!Number.isFinite(floor) || floor < 0 || !Number.isFinite(extra) || extra < 0) return "Minimum payment floor and extra payment must be zero or positive numbers.";
+      }
+      return "";
+    }
+
+    function calculatePayoff() {
+      const error = validateInputs();
+      if (error) {
+        setError(error);
+        document.getElementById("payoffDisplay").textContent = "--";
+        document.getElementById("payoffDetail").textContent = "Please provide valid inputs.";
+        document.getElementById("scheduleBody").replaceChildren();
+        payoffSchedule = [];
+        return;
+      }
+      setError("");
+
+      let balance = readNumber("balanceInput");
+      const principal = balance;
+      const monthlyRate = readNumber("aprInput") / 1200;
+      let totalInterest = 0;
+      let totalPaid = 0;
+      const schedule = [];
+      const maxMonths = 1200;
+      let paymentDoesNotCoverInterest = false;
+
+      for (let month = 1; month <= maxMonths && balance > 0; month += 1) {
+        const openingBalance = balance;
+        const interest = Math.round(openingBalance * monthlyRate * 100) / 100;
+        const amountDue = openingBalance + interest;
+        const basePayment = fields.paymentMode.value === "fixed"
+          ? readNumber("fixedPaymentInput")
+          : Math.max(readNumber("minimumFloorInput"), amountDue * readNumber("minimumPercentInput") / 100) + readNumber("extraPaymentInput");
+        const payment = Math.min(amountDue, Math.round(basePayment * 100) / 100);
+
+        if (payment <= interest) {
+          setError("Your monthly payment does not cover monthly interest charges. Increase payment to reduce debt.");
+          paymentDoesNotCoverInterest = true;
+          break;
+        }
+
+        balance = Math.max(0, Math.round((amountDue - payment) * 100) / 100);
+        totalInterest += interest;
+        totalPaid += payment;
+        schedule.push({ month, openingBalance, interest, payment, closingBalance: balance });
+      }
+
+      payoffSchedule = schedule;
+      if (paymentDoesNotCoverInterest) {
+        document.getElementById("payoffDisplay").textContent = "—";
+        document.getElementById("payoffDetail").textContent = "At this payment amount, your debt balance will never decrease.";
+        document.getElementById("interestDisplay").textContent = "—";
+        document.getElementById("totalPaidDisplay").textContent = "—";
+        document.getElementById("firstPaymentDisplay").textContent = "—";
+        document.getElementById("principalDisplay").textContent = displayMoney(principal);
+        document.getElementById("scheduleBody").replaceChildren();
+        document.getElementById("scheduleNote").textContent = "Principal will only reduce if monthly payments exceed monthly interest.";
+        return;
+      }
+      const isPaidOff = balance <= 0;
+      if (isPaidOff) {
+        document.getElementById("payoffDisplay").textContent = String(schedule.length);
+        document.getElementById("payoffDetail").textContent = `Debt will be paid off in approximately ${Math.floor(schedule.length / 12)} years and ${schedule.length % 12} months.`;
+      } else {
+        document.getElementById("payoffDisplay").textContent = "1200+";
+        document.getElementById("payoffDetail").textContent = "At this payment rate, debt will not be paid off within 100 years.";
+      }
+      document.getElementById("interestDisplay").textContent = displayMoney(totalInterest);
+      document.getElementById("totalPaidDisplay").textContent = displayMoney(totalPaid);
+      document.getElementById("firstPaymentDisplay").textContent = schedule.length ? displayMoney(schedule[0].payment) : "—";
+      document.getElementById("principalDisplay").textContent = displayMoney(principal);
+
+      const body = document.getElementById("scheduleBody");
+      body.replaceChildren();
+      for (const row of schedule.slice(0, 12)) {
+        const tr = document.createElement("tr");
+        const values = [
+          String(row.month),
+          displayMoney(row.openingBalance),
+          displayMoney(row.interest),
+          displayMoney(row.payment),
+          displayMoney(row.closingBalance)
+        ];
+        values.forEach((value, index) => {
+          const cell = document.createElement("td");
+          cell.className = `px-3 py-3 ${index ? "text-right" : ""}`;
+          cell.textContent = value;
+          tr.append(cell);
+        });
+        body.append(tr);
+      }
+      document.getElementById("scheduleNote").textContent = isPaidOff
+        ? `Showing the first ${Math.min(12, schedule.length)} months. Download the CSV for the complete schedule.`
+        : "Showing available months as balance could not be fully cleared.";
+    }
+
+    function exportCsv() {
+      if (!payoffSchedule.length) {
+        setError("No payoff schedule available to export.");
+        return;
+      }
+      const rows = [
+        ["Month", "Opening Balance (INR)", "Interest (INR)", "Payment (INR)", "Closing Balance (INR)"],
+        ...payoffSchedule.map((row) => [row.month, row.openingBalance.toFixed(2), row.interest.toFixed(2), row.payment.toFixed(2), row.closingBalance.toFixed(2)])
+      ];
+      const csv = "\uFEFF" + rows.map((row) => row.join(",")).join("\r\n");
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+      link.download = "credit-card-payoff-schedule.csv";
+      link.click();
+      URL.revokeObjectURL(link.href);
+    }
+
+    const balanceSlider = document.getElementById("balanceSlider");
+    const aprSlider = document.getElementById("aprSlider");
+    const fixedPaymentSlider = document.getElementById("fixedPaymentSlider");
+
+    if (balanceSlider && fields.balanceInput) {
+      balanceSlider.addEventListener("input", (e) => { fields.balanceInput.value = e.target.value; calculatePayoff(); });
+      fields.balanceInput.addEventListener("input", () => { balanceSlider.value = fields.balanceInput.value; });
+    }
+    if (aprSlider && fields.aprInput) {
+      aprSlider.addEventListener("input", (e) => { fields.aprInput.value = e.target.value; calculatePayoff(); });
+      fields.aprInput.addEventListener("input", () => { aprSlider.value = fields.aprInput.value; });
+    }
+    if (fixedPaymentSlider && fields.fixedPaymentInput) {
+      fixedPaymentSlider.addEventListener("input", (e) => { fields.fixedPaymentInput.value = e.target.value; calculatePayoff(); });
+      fields.fixedPaymentInput.addEventListener("input", () => { fixedPaymentSlider.value = fields.fixedPaymentInput.value; });
+    }
+
+    inputIds.forEach((id) => {
+      fields[id].addEventListener("input", calculatePayoff);
+      fields[id].addEventListener("change", calculatePayoff);
+    });
+    fields.paymentMode.addEventListener("change", updatePaymentFields);
+    fields.paymentMode.addEventListener("change", calculatePayoff);
+    document.getElementById("btnPrint").addEventListener("click", () => window.print());
+    document.getElementById("btnExportCSV").addEventListener("click", exportCsv);
+    updatePaymentFields();
+    calculatePayoff();
+</script>

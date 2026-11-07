@@ -1,19 +1,82 @@
 <header class="site-header">
   <div class="wrap site-header__inner">
-    <a class="brand" href="{{ '/' | url }}" aria-label="நிதிப்பேழை முகப்பு">
+    <a class="brand" href="{{ ('/en/' if language == 'en' else '/') | url }}" aria-label="{{ 'Nidhi Pezhai home' if language == 'en' else 'நிதிப்பேழை முகப்பு' }}">
       <img class="brand__mark" src="{{ '/assets/images/nidhipezhai-logo.svg' | url }}" alt="">
       <span class="brand__text">
-        <span class="brand__name">நிதிப்பேழை</span>
-        <span class="brand__tagline">{{ site.tagline }}</span>
+        <span class="brand__name" lang="{{ 'en' if language == 'en' else 'ta' }}">{{ site.englishTitle if language == 'en' else site.title }}</span>
+        <span class="brand__tagline">{{ site.englishTagline if language == 'en' else site.tagline }}</span>
       </span>
     </a>
     <div class="site-header__actions">
+      {% if language == 'en' %}
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="{{ '/en/start-here/' | url }}">Guide</a>
+        <a href="{{ '/en/#articles' | url }}">Articles</a>
+        <a href="{{ '/en/calculators/' | url }}">Calculators</a>
+        <a href="{{ '/en/checklists/' | url }}">Checklists</a>
+        <a href="{{ '/en/glossary/' | url }}">Glossary</a>
+      </nav>
+      {% else %}
       <nav class="site-nav" aria-label="முதன்மை வழிசெலுத்தல்">
         <a class="site-nav__start" href="{{ '/start-here/' | url }}">வழிகாட்டி</a>
         <a class="site-nav__articles" href="{{ '/#articles' | url }}">கட்டுரைகள்</a>
         <a class="site-nav__tool" href="{{ '/calculators/' | url }}">கணிப்பேடுகள்</a>
         <a class="site-nav__checklists" href="{{ '/checklists/' | url }}">சரிபார்ப்புப் பட்டியல்கள்</a>
         <a class="site-nav__glossary" href="{{ '/glossary/' | url }}">நிதி அகராதி</a>
+      </nav>
+      {% endif %}
+      {% set isArticle = false %}
+      {% set tamilArticleUrl = null %}
+      {% set englishArticleUrl = null %}
+      {% for article in collections.articlesByDate %}
+        {% if article.url == page.url %}{% set isArticle = true %}{% endif %}
+        {% if article.page.fileSlug == page.fileSlug %}{% set tamilArticleUrl = article.url %}{% endif %}
+      {% endfor %}
+      {% for article in collections.englishArticlesByDate %}
+        {% if article.url == page.url %}{% set isArticle = true %}{% endif %}
+        {% if article.page.fileSlug == page.fileSlug %}{% set englishArticleUrl = article.url %}{% endif %}
+      {% endfor %}
+      {% set isTranslatedPage = isArticle or toolKind == 'calculator' or toolKind == 'checklist' %}
+      {% set tamilPageUrl = tamilArticleUrl %}
+      {% set englishPageUrl = englishArticleUrl %}
+      {% if toolKind == 'calculator' or toolKind == 'checklist' %}
+        {% set toolPath = 'calculators' if toolKind == 'calculator' else 'checklists' %}
+        {% set toolGroups = calculators if toolKind == 'calculator' else checklists %}
+        {% set tamilToolUrl = '/' ~ toolPath ~ '/' ~ page.fileSlug ~ '.html' %}
+        {% set englishToolUrl = '/en' ~ tamilToolUrl %}
+        {% set tamilPageUrl = null %}
+        {% set englishPageUrl = null %}
+        {% for group in toolGroups %}
+          {% for item in group.items %}
+            {% if item.url == tamilToolUrl %}{% set tamilPageUrl = item.url %}{% endif %}
+          {% endfor %}
+        {% endfor %}
+        {% for item in collections.seoPages %}
+          {% if item.url == englishToolUrl and item.data.language == 'en' %}
+            {% set englishPageUrl = item.url %}
+          {% endif %}
+        {% endfor %}
+        {% if language == 'en' %}{% set englishPageUrl = page.url %}{% else %}{% set tamilPageUrl = page.url %}{% endif %}
+      {% endif %}
+      {% for path in ['/about/', '/disclaimer/', '/license/', '/glossary/', '/start-here/', '/calculators/', '/checklists/'] %}
+        {% set englishPath = '/en' ~ path %}
+        {% if page.url == path or page.url == englishPath %}
+          {% set isTranslatedPage = true %}
+          {% set tamilPageUrl = path %}
+          {% set englishPageUrl = englishPath %}
+        {% endif %}
+      {% endfor %}
+      <nav class="language-selector" aria-label="{{ 'Language' if language == 'en' else 'மொழி' }}">
+        {% if isTranslatedPage and not tamilPageUrl %}
+        <span lang="ta" role="link" aria-disabled="true" tabindex="0" aria-label="Tamil translation unavailable" title="Tamil translation unavailable">தமிழ்</span>
+        {% else %}
+        <a href="{{ (tamilPageUrl if isTranslatedPage else ('/' if language == 'en' else page.url)) | url }}" lang="ta" hreflang="ta"{% if language != 'en' %} aria-current="true"{% endif %} aria-label="{{ 'Tamil translation' if isTranslatedPage and language == 'en' else ('Tamil home' if language == 'en' else 'தமிழ்') }}">தமிழ்</a>
+        {% endif %}
+        {% if isTranslatedPage and not englishPageUrl %}
+        <span lang="en" role="link" aria-disabled="true" tabindex="0" aria-label="ஆங்கில மொழிபெயர்ப்பு இன்னும் கிடைக்கவில்லை" title="ஆங்கில மொழிபெயர்ப்பு இன்னும் கிடைக்கவில்லை">English</span>
+        {% else %}
+        <a href="{{ (englishPageUrl if isTranslatedPage else ('/en/' if language != 'en' else page.url)) | url }}" lang="en" hreflang="en"{% if language == 'en' %} aria-current="true"{% endif %} aria-label="{{ 'English translation' if isTranslatedPage and language != 'en' else ('English' if language == 'en' else 'English home') }}" title="{{ 'English translation' if isTranslatedPage and language != 'en' else ('English' if language == 'en' else 'English home') }}">English</a>
+        {% endif %}
       </nav>
       {% include "partials/theme-toggle.njk" %}
     </div>

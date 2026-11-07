@@ -1,4 +1,5 @@
 ---
+language: ta
 title: நாணய மற்றும் சரக்கு வர்த்தகம்
 description: Currency மற்றும் commodity derivatives, அவற்றை வழங்கும் இந்திய எக்சேஞ்ச்கள், ஒப்பந்த அம்சங்கள் மற்றும் ஆபத்துகள்.
 date: 2026-09-26

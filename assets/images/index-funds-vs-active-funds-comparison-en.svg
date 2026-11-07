@@ -1,0 +1,282 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="idx-act-title idx-act-desc">
+  <title id="idx-act-title">Comprehensive Comparison: Index Funds vs Active Mutual Funds</title>
+  <desc id="idx-act-desc">Index Funds vs. Active Mutual Funds Comparison: Passive Indexing vs Active Stock Picking, Expense Ratio Drag, Alpha &amp; Performance, Manager Risk &amp; Tracking Error, and Portfolio Allocation.</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&amp;display=swap');
+      .header-title {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 19px;
+        font-weight: 700;
+        fill: #ffffff;
+      }
+      .header-sub {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        fill: #d5e7e3;
+      }
+      .idx-pill-text {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 10.5px;
+        font-weight: 700;
+      }
+      .card-title {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 14.5px;
+        font-weight: 700;
+        fill: #0f172a;
+        text-anchor: middle;
+      }
+      .card-sub {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 10.5px;
+        font-weight: 600;
+        text-anchor: middle;
+      }
+      .section-heading {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 10.5px;
+        font-weight: 700;
+      }
+      .bullet-text {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        fill: #334155;
+      }
+      .tag-text {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 10.5px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .footer-title {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 12.5px;
+        font-weight: 700;
+        fill: #0D7377;
+      }
+      .footer-desc {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        fill: #334155;
+      }
+    </style>
+
+    <linearGradient id="headerGradIdxAct" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D7377"/>
+      <stop offset="100%" stop-color="#102e31"/>
+    </linearGradient>
+
+    <filter id="cardShadowIdxAct" x="-5%" y="-3%" width="110%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="590" rx="18" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- Top Header Banner -->
+  <rect x="2" y="2" width="1196" height="85" rx="16" fill="url(#headerGradIdxAct)"/>
+  <circle cx="50" cy="44" r="24" fill="#14b8a6" fill-opacity="0.2"/>
+  
+  <!-- Index Prism & Chart Icon -->
+  <path d="M 40 52 L 50 34 L 60 52 Z" stroke="#5eead4" stroke-width="2" fill="none" stroke-linejoin="round"/>
+  <line x1="50" y1="34" x2="50" y2="52" stroke="#5eead4" stroke-width="1.5" stroke-dasharray="2 2"/>
+  <circle cx="50" cy="34" r="2" fill="#5eead4"/>
+
+  <text x="86" y="38" class="header-title">Index Funds vs. Active Mutual Funds: Comparative Guide</text>
+  <text x="86" y="60" class="header-sub">Passive Indexing vs. Active Fund Management: Which is best for long-term wealth creation? — 5 Dimensions</text>
+
+  <!-- ================= 5 COMPARISON CARDS ================= -->
+
+  <!-- CARD 1: Investment Philosophy -->
+  <g transform="translate(20, 100)" filter="url(#cardShadowIdxAct)">
+    <rect width="220" height="390" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="220" height="5" rx="2.5" fill="#0D7377"/>
+    
+    <rect x="70" y="14" width="80" height="20" rx="10" fill="#e6f5f3"/>
+    <text x="110" y="28" class="idx-pill-text" fill="#0D7377" text-anchor="middle">Dimension 1</text>
+    
+    <circle cx="110" cy="60" r="18" fill="#e6f5f3"/>
+    <path d="M 102 64 L 107 59 L 111 63 L 118 56 M 114 56 L 118 56 L 118 60" stroke="#0D7377" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="110" y="99" class="card-title">Investment Philosophy</text>
+    <text x="110" y="116" class="card-sub" fill="#0D7377">Strategy &amp; Approach</text>
+
+    <!-- Active Box -->
+    <rect x="7" y="129" width="206" height="100" rx="8" fill="#fff7ed" stroke="#ffedd5" stroke-width="1"/>
+    <text x="15" y="146" class="section-heading" fill="#c2410c">⚡ Active Funds (Discretionary):</text>
+    <text x="15" y="164" class="bullet-text">• Manager stock picking.</text>
+    <text x="15" y="180" class="bullet-text">• Attempt to beat the market.</text>
+    <text x="15" y="196" class="bullet-text">• Frequent portfolio churning.</text>
+    <text x="15" y="212" class="bullet-text">• Human biases &amp; emotions.</text>
+
+    <!-- Index Box -->
+    <rect x="7" y="237" width="206" height="100" rx="8" fill="#f0fdfa" stroke="#ccfbf1" stroke-width="1"/>
+    <text x="15" y="254" class="section-heading" fill="#0f766e">📊 Passive Index Funds:</text>
+    <text x="15" y="272" class="bullet-text">• Rule-based discipline.</text>
+    <text x="15" y="288" class="bullet-text">• Mirrors benchmark index.</text>
+    <text x="15" y="304" class="bullet-text">• Free from human bias.</text>
+    <text x="15" y="320" class="bullet-text">• Buy &amp; hold compounding.</text>
+
+    <rect x="14" y="347" width="192" height="26" rx="13" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1"/>
+    <text x="110" y="364" class="tag-text" fill="#0f766e">Human Prediction vs. Rules</text>
+  </g>
+
+  <!-- CARD 2: Fees & Expenses -->
+  <g transform="translate(255, 100)" filter="url(#cardShadowIdxAct)">
+    <rect width="220" height="390" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="220" height="5" rx="2.5" fill="#dc2626"/>
+    
+    <rect x="70" y="14" width="80" height="20" rx="10" fill="#fef2f2"/>
+    <text x="110" y="28" class="idx-pill-text" fill="#dc2626" text-anchor="middle">Dimension 2</text>
+    
+    <circle cx="110" cy="60" r="18" fill="#fef2f2"/>
+    <circle cx="110" cy="60" r="10" fill="none" stroke="#dc2626" stroke-width="1.8"/>
+    <path d="M 106 60 L 114 60 M 110 55 L 110 65" stroke="#dc2626" stroke-width="1.6" stroke-linecap="round"/>
+
+    <text x="110" y="99" class="card-title">Fees &amp; Expenses</text>
+    <text x="110" y="116" class="card-sub" fill="#dc2626">Expense Ratio Drag (TER)</text>
+
+    <!-- Active Box -->
+    <rect x="7" y="129" width="206" height="100" rx="8" fill="#fef2f2" stroke="#fee2e2" stroke-width="1"/>
+    <text x="15" y="146" class="section-heading" fill="#991b1b">⚡ Active Fund Costs:</text>
+    <text x="15" y="164" class="bullet-text">• 1.0% to 2.2% high TER.</text>
+    <text x="15" y="180" class="bullet-text">• Research &amp; analyst payroll.</text>
+    <text x="15" y="196" class="bullet-text">• High turnover brokerage &amp; STT.</text>
+    <text x="15" y="212" class="bullet-text">• Heavy drag over 20+ years.</text>
+
+    <!-- Index Box -->
+    <rect x="7" y="237" width="206" height="100" rx="8" fill="#ecfdf5" stroke="#d1fae5" stroke-width="1"/>
+    <text x="15" y="254" class="section-heading" fill="#065f46">📊 Index Fund Costs:</text>
+    <text x="15" y="272" class="bullet-text">• 0.10% to 0.25% ultra-low TER.</text>
+    <text x="15" y="288" class="bullet-text">• Minimal administrative cost.</text>
+    <text x="15" y="304" class="bullet-text">• Ultra-low trading taxes.</text>
+    <text x="15" y="320" class="bullet-text">• Saves ₹40L+ over 25 years!</text>
+
+    <rect x="14" y="347" width="192" height="26" rx="13" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+    <text x="110" y="364" class="tag-text" fill="#065f46">1.5% Fee Savings = Huge Wealth!</text>
+  </g>
+
+  <!-- CARD 3: Win Rate & Alpha -->
+  <g transform="translate(490, 100)" filter="url(#cardShadowIdxAct)">
+    <rect width="220" height="390" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="220" height="5" rx="2.5" fill="#2563eb"/>
+    
+    <rect x="70" y="14" width="80" height="20" rx="10" fill="#eff6ff"/>
+    <text x="110" y="28" class="idx-pill-text" fill="#2563eb" text-anchor="middle">Dimension 3</text>
+    
+    <circle cx="110" cy="60" r="18" fill="#eff6ff"/>
+    <polygon points="110,50 113,57 120,57 114,62 116,69 110,65 104,69 106,62 100,57 107,57" fill="#2563eb"/>
+
+    <text x="110" y="99" class="card-title">Performance &amp; Alpha</text>
+    <text x="110" y="116" class="card-sub" fill="#2563eb">Win Rate &amp; SPIVA Report</text>
+
+    <!-- Active Box -->
+    <rect x="7" y="129" width="206" height="100" rx="8" fill="#eff6ff" stroke="#dbeafe" stroke-width="1"/>
+    <text x="15" y="146" class="section-heading" fill="#1e40af">⚡ Active Fund Reality:</text>
+    <text x="15" y="164" class="bullet-text">• 75%+ funds fail benchmark.</text>
+    <text x="15" y="180" class="bullet-text">• Verified by SPIVA Scorecards.</text>
+    <text x="15" y="196" class="bullet-text">• Consistent alpha is very rare.</text>
+    <text x="15" y="212" class="bullet-text">• High fee drag hurts return.</text>
+
+    <!-- Index Box -->
+    <rect x="7" y="237" width="206" height="100" rx="8" fill="#f0fdf4" stroke="#dcfce7" stroke-width="1"/>
+    <text x="15" y="254" class="section-heading" fill="#15803d">📊 Index Delivery:</text>
+    <text x="15" y="272" class="bullet-text">• 100% market average return.</text>
+    <text x="15" y="288" class="bullet-text">• Captures India's growth.</text>
+    <text x="15" y="304" class="bullet-text">• Top 50/100 corporate power.</text>
+    <text x="15" y="320" class="bullet-text">• Zero compromise compounding.</text>
+
+    <rect x="14" y="347" width="192" height="26" rx="13" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+    <text x="110" y="364" class="tag-text" fill="#1e40af">Empirical Proof vs. Promises</text>
+  </g>
+
+  <!-- CARD 4: Manager Risk & Tracking Error -->
+  <g transform="translate(725, 100)" filter="url(#cardShadowIdxAct)">
+    <rect width="220" height="390" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="220" height="5" rx="2.5" fill="#d97706"/>
+    
+    <rect x="70" y="14" width="80" height="20" rx="10" fill="#fffbeb"/>
+    <text x="110" y="28" class="idx-pill-text" fill="#d97706" text-anchor="middle">Dimension 4</text>
+    
+    <circle cx="110" cy="60" r="18" fill="#fffbeb"/>
+    <path d="M 110 50 L 120 67 L 100 67 Z" stroke="#d97706" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+    <circle cx="110" cy="63" r="1.2" fill="#d97706"/>
+    <line x1="110" y1="56" x2="110" y2="60" stroke="#d97706" stroke-width="1.6" stroke-linecap="round"/>
+
+    <text x="110" y="99" class="card-title">Manager Risk &amp; Error</text>
+    <text x="110" y="116" class="card-sub" fill="#d97706">Key Person Risk vs. Error</text>
+
+    <!-- Active Box -->
+    <rect x="7" y="129" width="206" height="100" rx="8" fill="#fffbeb" stroke="#fef3c7" stroke-width="1"/>
+    <text x="15" y="146" class="section-heading" fill="#b45309">⚡ Active Manager Risk:</text>
+    <text x="15" y="164" class="bullet-text">• Key person exit risk.</text>
+    <text x="15" y="180" class="bullet-text">• Style drift &amp; strategy change.</text>
+    <text x="15" y="196" class="bullet-text">• Bad market timing losses.</text>
+    <text x="15" y="212" class="bullet-text">• Volatility in market downturns.</text>
+
+    <!-- Index Box -->
+    <rect x="7" y="237" width="206" height="100" rx="8" fill="#f0fdfa" stroke="#ccfbf1" stroke-width="1"/>
+    <text x="15" y="254" class="section-heading" fill="#0f766e">📊 Index Predictability:</text>
+    <text x="15" y="272" class="bullet-text">• Ultra-low tracking error.</text>
+    <text x="15" y="288" class="bullet-text">• Minimal tracking difference.</text>
+    <text x="15" y="304" class="bullet-text">• High AUM liquidity protection.</text>
+    <text x="15" y="320" class="bullet-text">• Automated rule rebalancing.</text>
+
+    <rect x="14" y="347" width="192" height="26" rx="13" fill="#fffbeb" stroke="#fde68a" stroke-width="1"/>
+    <text x="110" y="364" class="tag-text" fill="#b45309">Zero Manager Risk</text>
+  </g>
+
+  <!-- CARD 5: Portfolio Allocation -->
+  <g transform="translate(960, 100)" filter="url(#cardShadowIdxAct)">
+    <rect width="220" height="390" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="220" height="5" rx="2.5" fill="#059669"/>
+    
+    <rect x="70" y="14" width="80" height="20" rx="10" fill="#ecfdf5"/>
+    <text x="110" y="28" class="idx-pill-text" fill="#059669" text-anchor="middle">Dimension 5</text>
+    
+    <circle cx="110" cy="60" r="18" fill="#ecfdf5"/>
+    <path d="M 103 60 L 108 65 L 117 54" stroke="#059669" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="110" y="99" class="card-title">Portfolio Allocation</text>
+    <text x="110" y="116" class="card-sub" fill="#059669">Where Does Each Fit?</text>
+
+    <!-- Active Box -->
+    <rect x="7" y="129" width="206" height="100" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="15" y="146" class="section-heading" fill="#334155">⚡ Active Satellite Role:</text>
+    <text x="15" y="164" class="bullet-text">• Mid-cap equity funds.</text>
+    <text x="15" y="180" class="bullet-text">• Small-cap equity funds.</text>
+    <text x="15" y="196" class="bullet-text">• 20% to 30% satellite wing.</text>
+    <text x="15" y="212" class="bullet-text">• Higher risk capacity needed.</text>
+
+    <!-- Index Box -->
+    <rect x="7" y="237" width="206" height="100" rx="8" fill="#ecfdf5" stroke="#d1fae5" stroke-width="1"/>
+    <text x="15" y="254" class="section-heading" fill="#065f46">📊 Index Core Role:</text>
+    <text x="15" y="272" class="bullet-text">• Nifty 50 + Next 50 blend.</text>
+    <text x="15" y="288" class="bullet-text">• 70% of total portfolio core.</text>
+    <text x="15" y="304" class="bullet-text">• For 10+ year time horizons.</text>
+    <text x="15" y="320" class="bullet-text">• Stress-free wealth creation.</text>
+
+    <rect x="14" y="347" width="192" height="26" rx="13" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+    <text x="110" y="364" class="tag-text" fill="#065f46">70:30 Core-Satellite Approach</text>
+  </g>
+
+  <!-- ================= BOTTOM HORIZONTAL SUMMARY BAR ================= -->
+  <g transform="translate(20, 505)" filter="url(#cardShadowIdxAct)">
+    <rect width="1160" height="72" rx="12" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+    
+    <circle cx="28" cy="36" r="16" fill="#fef3c7"/>
+    <!-- Golden Star / Shield Motif -->
+    <polygon points="28,26 31,33 38,33 32,37 34,44 28,40 22,44 24,37 18,33 25,33" fill="#d97706"/>
+
+    <text x="56" y="29" class="footer-title">🌟 The Golden Rule &amp; Investor Takeaway:</text>
+    <text x="56" y="49" class="footer-desc">In the Large Cap universe, passive Nifty 50 + Next 50 index funds form the best 70% core foundation for your wealth!</text>
+    <text x="56" y="65" class="footer-desc">Eliminate high expense ratio (TER) drag and capture pure market growth; reserve active funds solely for midcap and smallcap segments.</text>
+  </g>
+  <text id="brand-watermark" x="600" y="617" text-anchor="middle" font-family="'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">Nidhi Pezhai</text>
+</svg>

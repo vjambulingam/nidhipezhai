@@ -1,0 +1,535 @@
+---
+title: "Education Loan EMI Calculator"
+ogTitle: "Education Loan EMI Calculator · Nidhi Pezhai"
+description: "Estimate monthly EMI, study course moratorium interest, and total repayment schedule for student loans in India."
+keywords: "education loan EMI calculator, student loan calculator India, education loan moratorium calculator, study loan EMI calculation, Vidya Lakshmi loan calculator"
+language: en
+publishedEnglish: true
+eleventyExcludeFromCollections: false
+hasChart: true
+hasCsvExport: true
+---
+<main id="main-content" tabindex="-1" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-1">
+    <div class="mb-6">
+      <p class="text-xs font-semibold text-sky-700">Education & Loan Planning</p>
+      <h1 class="mt-1 text-2xl sm:text-3xl font-bold text-gray-900">Education Loan EMI Calculator</h1>
+      <p class="mt-2 max-w-3xl text-sm text-gray-600">Estimate how interest is treated during your study and grace period (moratorium), and calculate your post-moratorium monthly EMI and total repayment schedule.</p>
+    </div>
+
+    <div class="grid gap-6 lg:grid-cols-5">
+      <section class="lg:col-span-2 bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-gray-200" aria-labelledby="inputHeading">
+        <div class="flex items-center justify-between pb-2 border-b border-gray-100">
+          <h3 id="inputHeading" class="text-lg font-bold text-gray-900">Loan Details</h3>
+          
+          <button id="btnReset" type="button" class="calc-reset-btn" title="Reset all inputs">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            <span>Reset</span>
+          </button>
+        </div>
+        <div class="mt-5 space-y-5">
+          <div>
+            <label for="loanAmountInput" class="block text-sm font-semibold text-gray-700">Loan Amount</label>
+            <div class="relative mt-2">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">₹</span>
+              <input id="loanAmountInput" type="number" min="1" max="1000000000" step="1000" value="1000000" inputmode="decimal" class="w-full rounded-lg border border-gray-300 py-2.5 pl-8 pr-3 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
+            </div>
+            <input type="range" id="loanAmountSlider" min="100000" max="5000000" step="50000" value="1000000" class="mt-2 w-full">
+          </div>
+          <div>
+            <label for="rateInput" class="block text-sm font-semibold text-gray-700">Annual Interest Rate (% p.a.)</label>
+            <div class="relative mt-2">
+              <input id="rateInput" type="number" min="0" max="100" step="0.1" value="10" inputmode="decimal" class="w-full rounded-lg border border-gray-300 py-2.5 pl-3 pr-9 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
+              <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500">%</span>
+            </div>
+            <input type="range" id="rateSlider" min="7" max="18" step="0.25" value="10" class="mt-2 w-full">
+            <p class="mt-1 text-xs text-gray-500">Enter the current effective interest rate offered by the lender.</p>
+          </div>
+          <div>
+            <label for="moratoriumInput" class="block text-sm font-semibold text-gray-700">Moratorium Period (Study + Grace Period)</label>
+            <div class="mt-2 flex">
+              <input id="moratoriumInput" type="number" min="0" max="120" step="1" value="48" inputmode="numeric" class="w-full min-w-0 rounded-l-lg rounded-r-none border border-r-0 border-gray-300 py-2.5 pl-3 pr-3 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
+              <span class="inline-flex shrink-0 items-center rounded-r-lg border border-gray-300 bg-slate-50 px-3 text-sm text-gray-500">Months</span>
+            </div>
+            <input type="range" id="moratoriumSlider" min="0" max="72" step="6" value="48" class="mt-2 w-full">
+            <p class="mt-1 text-xs text-gray-500">Typically covers course duration plus the bank's moratorium grace period (usually 6–12 months post-course). Verify with your sanction letter.</p>
+          </div>
+          <div>
+            <label for="tenureInput" class="block text-sm font-semibold text-gray-700">Post-Moratorium Repayment Tenure</label>
+            <div class="mt-2 flex">
+              <input id="tenureInput" type="number" min="1" max="30" step="1" value="10" inputmode="numeric" class="w-full min-w-0 rounded-l-lg rounded-r-none border border-r-0 border-gray-300 py-2.5 pl-3 pr-3 text-right font-semibold text-gray-900 focus:ring-2 focus:ring-sky-500">
+              <span class="inline-flex shrink-0 items-center rounded-r-lg border border-gray-300 bg-slate-50 px-3 text-sm text-gray-500">Years</span>
+            </div>
+            <input type="range" id="tenureSlider" min="1" max="20" step="1" value="10" class="mt-2 w-full">
+          </div>
+          <div>
+            <label for="interestMode" class="block text-sm font-semibold text-gray-700">Moratorium Interest Treatment</label>
+            <select id="interestMode" class="mt-2 w-full rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm text-gray-900 focus:ring-2 focus:ring-sky-500">
+              <option value="capitalize">Capitalize (Add accrued interest to loan principal)</option>
+              <option value="service">Simple Interest Servicing (Pay interest monthly during study)</option>
+            </select>
+            <p id="interestModeHelp" class="mt-1 text-xs text-gray-500">Simple interest accrued during the moratorium period is added to the principal when repayment commences.</p>
+          </div>
+          <p id="errorMessage" class="hidden rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-800" role="alert"></p>
+          <div class="rounded-lg border border-amber-200 bg-amber-50 p-3 text-xs leading-relaxed text-amber-900">
+            <p>For calculation purposes, the entire loan is assumed to be disbursed upfront. Simple interest is computed during the moratorium; interest rate is assumed constant. Actual disbursement schedules and subsidy rules depend on bank covenants and government schemes.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lg:col-span-3 space-y-6" aria-labelledby="resultsHeading" aria-live="polite">
+        <div class="bg-gradient-to-br from-sky-600 to-indigo-700 rounded-2xl p-6 text-white shadow-md">
+          <h3 id="resultsHeading" class="text-sm font-semibold text-sky-100">Post-Moratorium Monthly EMI</h3>
+          <p class="mt-2 flex flex-wrap items-baseline gap-x-2">
+            <span id="emiDisplay" class="text-3xl sm:text-4xl font-extrabold">₹ 0</span>
+            <span class="text-sm text-sky-100">during repayment period</span>
+          </p>
+          <p id="repaymentPrincipalNote" class="mt-2 text-sm text-sky-100">Starting balance at repayment: ₹ 0</p>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <div class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
+            <p class="text-xs text-gray-500">Moratorium Total Interest</p>
+            <p id="moratoriumInterestDisplay" class="mt-1 text-lg font-bold text-amber-700">₹ 0</p>
+          </div>
+          <div class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
+            <p class="text-xs text-gray-500">Monthly Interest in Moratorium</p>
+            <p id="monthlyInterestDisplay" class="mt-1 text-lg font-bold text-gray-900">₹ 0</p>
+          </div>
+          <div class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
+            <p class="text-xs text-gray-500">Total Cumulative Interest</p>
+            <p id="totalInterestDisplay" class="mt-1 text-lg font-bold text-amber-700">₹ 0</p>
+          </div>
+          <div class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
+            <p class="text-xs text-gray-500">Total Amount Payable</p>
+            <p id="totalPaidDisplay" class="mt-1 text-lg font-bold text-gray-900">₹ 0</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-gray-200 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-gray-100">
+            <div>
+              <h3 class="text-lg font-bold text-gray-900">Loan Balance & Repayment Trajectory</h3>
+              <p class="text-xs text-gray-500">Yearly principal repaid, interest paid, and remaining loan balance</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-semibold text-gray-500">View:</span>
+              <div class="inline-flex rounded-lg border border-gray-300 bg-slate-100 p-0.5 text-xs font-semibold">
+                <button type="button" id="chartViewYearly" class="px-2.5 py-1 rounded-md bg-white text-sky-700 shadow-sm" aria-pressed="true">Yearly</button>
+                <button type="button" id="chartViewCumulative" class="px-2.5 py-1 rounded-md text-gray-600 hover:text-gray-900" aria-pressed="false">Cumulative</button>
+              </div>
+            </div>
+          </div>
+          <div class="relative h-72 sm:h-80 w-full">
+            <canvas id="repaymentChart" role="img" aria-label="Education loan repayment chart displaying principal, interest, and outstanding balance"></canvas>
+          </div>
+          <div class="flex flex-wrap items-center justify-center gap-5 pt-1 text-xs font-semibold text-gray-600">
+            <span class="flex items-center gap-1.5"><span class="inline-block h-3 w-3 rounded-sm bg-teal-700"></span> Principal Paid</span>
+            <span class="flex items-center gap-1.5"><span class="inline-block h-3 w-3 rounded-sm bg-amber-500"></span> Interest (Accrued / Paid)</span>
+            <span class="flex items-center gap-1.5"><span class="inline-block h-1.5 w-3 rounded-full bg-rose-600"></span> Outstanding Balance</span>
+          </div>
+          <p class="text-xs leading-relaxed text-gray-500">No principal is amortized during the moratorium period; accrued interest is tracked in the interest series. The balance line highlights whether interest capitalization increases the opening debt.</p>
+        </div>
+
+      </section>
+    </div>
+
+    <div class="mt-6 space-y-6">
+        <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-gray-200">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <h3 class="text-lg font-bold text-gray-900">Monthly Repayment Schedule</h3>
+              <p id="scheduleNote" class="text-xs text-gray-500">Displaying moratorium period and repayment phase amortizations.</p>
+            </div>
+            <div class="text-xs text-gray-500">Initial Loan: <strong id="principalDisplay" class="text-gray-800">₹ 0</strong></div>
+          </div>
+          <div class="mt-4 overflow-x-auto">
+            <table class="w-full min-w-[560px] text-left text-xs sm:text-sm">
+              <thead>
+                <tr class="border-b border-gray-200 bg-slate-50 text-xs font-semibold text-gray-600">
+                  <th class="px-3 py-3">Phase</th>
+                  <th class="px-3 py-3 text-right">Month</th>
+                  <th class="px-3 py-3 text-right">Opening Balance</th>
+                  <th class="px-3 py-3 text-right">Interest</th>
+                  <th class="px-3 py-3 text-right">Payment</th>
+                  <th class="px-3 py-3 text-right">Closing Balance</th>
+                </tr>
+              </thead>
+              <tbody id="scheduleBody" class="divide-y divide-gray-100 text-gray-700"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <section class="bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-gray-200" aria-labelledby="officialLinksHeading">
+          <h3 id="officialLinksHeading" class="text-lg font-bold text-gray-900">Official Information Links</h3>
+          <ul class="mt-3 space-y-2 text-sm text-sky-700">
+            <li><a class="underline underline-offset-2 hover:text-sky-900" href="https://www.sbi.co.in/web/personal-banking/loans/education-loans/student-loan-scheme" target="_blank" rel="noopener noreferrer">SBI Student Loan Scheme <span aria-hidden="true">↗</span></a></li>
+            <li><a class="underline underline-offset-2 hover:text-sky-900" href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2070532" target="_blank" rel="noopener noreferrer">PM-Vidyalaxmi Scheme — Press Information Bureau (PIB) <span aria-hidden="true">↗</span></a></li>
+          </ul>
+          <p class="mt-3 text-xs leading-relaxed text-gray-500">Eligibility, interest subsidies (CSIS scheme), loan limits, and moratorium terms depend on specific schemes and lending institutions. Verify the latest rules and eligibility criteria on official bank and ministry portals.</p>
+        </section>
+    </div>
+
+    <!-- Key Assumptions Card -->
+    <div class="calc-assumptions-card mt-6">
+      <div class="calc-assumptions-card__title">
+        <svg class="w-4 h-4 text-sky-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <span>Key Assumptions</span>
+      </div>
+      <ul class="calc-assumptions-card__list">
+        <li>Simple interest applies during the moratorium period, and compound reducing balance interest applies during the repayment phase.</li>
+        <li>Government interest subsidies (e.g. Central Sector Interest Subsidy - CSIS) and female student concessions may reduce net interest cost.</li>
+        <li>Under Section 80E of the Income Tax Act, the entire interest paid on an education loan is deductible for up to 8 consecutive assessment years with no upper monetary cap.</li>
+      </ul>
+    </div>
+</main>
+
+<script>
+    const currency = new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+      maximumFractionDigits: 0
+    });
+    const fields = {
+      loanAmount: document.getElementById("loanAmountInput"),
+      annualRate: document.getElementById("rateInput"),
+      moratoriumMonths: document.getElementById("moratoriumInput"),
+      repaymentYears: document.getElementById("tenureInput"),
+      interestMode: document.getElementById("interestMode")
+    };
+    let paymentSchedule = [];
+    let repaymentChart = null;
+    let chartMode = "yearly";
+
+    function roundPaise(amount) {
+      return Math.round((amount + Number.EPSILON) * 100) / 100;
+    }
+
+    function formatMoney(amount) {
+      return currency.format(Math.round(amount));
+    }
+
+    function calculateEmi(principal, monthlyRate, months) {
+      if (monthlyRate === 0) return principal / months;
+      const factor = (1 + monthlyRate) ** months;
+      return principal * monthlyRate * factor / (factor - 1);
+    }
+
+    function showError(message) {
+      const error = document.getElementById("errorMessage");
+      error.textContent = message;
+      error.classList.toggle("hidden", !message);
+    }
+
+    function clearResults() {
+      ["emiDisplay", "moratoriumInterestDisplay", "monthlyInterestDisplay", "totalInterestDisplay", "totalPaidDisplay", "repaymentPrincipalNote", "principalDisplay"].forEach((id) => {
+        document.getElementById(id).textContent = "—";
+      });
+      document.getElementById("scheduleBody").replaceChildren();
+      document.getElementById("scheduleNote").textContent = "Please provide valid inputs.";
+      paymentSchedule = [];
+      if (repaymentChart) {
+        repaymentChart.data.labels = [];
+        repaymentChart.data.datasets.forEach((dataset) => { dataset.data = []; });
+        repaymentChart.update();
+      }
+    }
+
+    function formatAxisAmount(amount) {
+      if (amount >= 10000000) return `₹${(amount / 10000000).toFixed(1)} Cr`;
+      if (amount >= 100000) return `₹${(amount / 100000).toFixed(1)} L`;
+      if (amount >= 1000) return `₹${(amount / 1000).toFixed(0)} K`;
+      return `₹${Math.round(amount)}`;
+    }
+
+    function renderRepaymentChart(rows) {
+      const yearly = [];
+      rows.forEach((row, index) => {
+        const yearIndex = Math.floor(index / 12);
+        if (!yearly[yearIndex]) {
+          yearly[yearIndex] = {
+            year: yearIndex + 1,
+            principal: 0,
+            interest: 0,
+            closingBalance: row.closingBalance
+          };
+        }
+        const summary = yearly[yearIndex];
+        if (row.phase === "Repayment Phase") {
+          summary.principal += Math.max(0, row.payment - row.interest);
+        }
+        summary.interest += row.interest;
+        summary.closingBalance = row.closingBalance;
+      });
+
+      let principalData = yearly.map((year) => Math.round(year.principal));
+      let interestData = yearly.map((year) => Math.round(year.interest));
+      const balanceData = yearly.map((year) => Math.round(year.closingBalance));
+      if (chartMode === "cumulative") {
+        let principalTotal = 0;
+        let interestTotal = 0;
+        principalData = principalData.map((value) => {
+          principalTotal += value;
+          return principalTotal;
+        });
+        interestData = interestData.map((value) => {
+          interestTotal += value;
+          return interestTotal;
+        });
+      }
+
+      const chartData = {
+        labels: yearly.map((year) => `Year ${year.year}`),
+        datasets: [
+          {
+            type: "line",
+            label: "Outstanding Balance",
+            data: balanceData,
+            borderColor: "#e11d48",
+            backgroundColor: "#e11d48",
+            borderWidth: 2.5,
+            pointRadius: yearly.length > 20 ? 1 : 3,
+            yAxisID: "balance",
+            tension: 0.15
+          },
+          {
+            type: "bar",
+            label: "Principal Paid",
+            data: principalData,
+            backgroundColor: "#0D7377",
+            stack: "payments",
+            borderRadius: 3
+          },
+          {
+            type: "bar",
+            label: "Interest (Accrued / Paid)",
+            data: interestData,
+            backgroundColor: "#f59e0b",
+            stack: "payments",
+            borderRadius: 3
+          }
+        ]
+      };
+      const options = {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: "index", intersect: false },
+        scales: {
+          x: { grid: { display: false }, ticks: { font: { size: 10 } } },
+          y: {
+            stacked: true,
+            position: "left",
+            grid: { color: "#f1f5f9" },
+            ticks: { font: { size: 10 }, callback: formatAxisAmount }
+          },
+          balance: {
+            position: "right",
+            grid: { drawOnChartArea: false },
+            ticks: { font: { size: 10 }, callback: formatAxisAmount }
+          }
+        },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: (context) => ` ${context.dataset.label}: ${formatMoney(context.parsed.y)}`
+            }
+          }
+        }
+      };
+
+      if (repaymentChart) {
+        repaymentChart.data = chartData;
+        repaymentChart.options = options;
+        repaymentChart.update();
+      } else {
+        repaymentChart = new Chart(document.getElementById("repaymentChart").getContext("2d"), {
+          data: chartData,
+          options
+        });
+      }
+    }
+
+    function updateCalculator() {
+      const principal = Number(fields.loanAmount.value);
+      const annualRate = Number(fields.annualRate.value);
+      const moratoriumMonths = Number(fields.moratoriumMonths.value);
+      const repaymentYears = Number(fields.repaymentYears.value);
+      let error = "";
+
+      if (!Number.isFinite(principal) || principal <= 0 || principal > 1000000000) {
+        error = "Loan amount must be between ₹1 and ₹1,00,00,00,000.";
+      } else if (!Number.isFinite(annualRate) || annualRate < 0 || annualRate > 100) {
+        error = "Annual interest rate must be between 0% and 100%.";
+      } else if (!Number.isInteger(moratoriumMonths) || moratoriumMonths < 0 || moratoriumMonths > 120) {
+        error = "Moratorium period must be an integer between 0 and 120 months.";
+      } else if (!Number.isInteger(repaymentYears) || repaymentYears < 1 || repaymentYears > 30) {
+        error = "Repayment tenure must be an integer between 1 and 30 years.";
+      }
+
+      showError(error);
+      if (error) {
+        clearResults();
+        return;
+      }
+
+      const monthlyRate = annualRate / 1200;
+      const monthlyMoratoriumInterest = roundPaise(principal * monthlyRate);
+      const moratoriumInterest = roundPaise(monthlyMoratoriumInterest * moratoriumMonths);
+      const repaymentPrincipal = fields.interestMode.value === "capitalize"
+        ? roundPaise(principal + moratoriumInterest)
+        : principal;
+      const repaymentMonths = repaymentYears * 12;
+      const emi = roundPaise(calculateEmi(repaymentPrincipal, monthlyRate, repaymentMonths));
+      const rows = [];
+      let interestDuringRepayment = 0;
+      let totalRepaymentPaid = 0;
+      let outstanding = principal;
+
+      for (let month = 1; month <= moratoriumMonths; month += 1) {
+        const openingBalance = outstanding;
+        const interest = monthlyMoratoriumInterest;
+        const payment = fields.interestMode.value === "service" ? interest : 0;
+        outstanding = fields.interestMode.value === "capitalize"
+          ? roundPaise(outstanding + interest)
+          : principal;
+        rows.push({
+          phase: "Moratorium Period",
+          month,
+          openingBalance,
+          interest,
+          payment,
+          closingBalance: outstanding
+        });
+      }
+
+      outstanding = repaymentPrincipal;
+      for (let month = 1; month <= repaymentMonths && outstanding > 0; month += 1) {
+        const openingBalance = outstanding;
+        const interest = roundPaise(openingBalance * monthlyRate);
+        const payment = Math.min(roundPaise(openingBalance + interest), emi);
+        outstanding = Math.max(0, roundPaise(openingBalance + interest - payment));
+        interestDuringRepayment = roundPaise(interestDuringRepayment + interest);
+        totalRepaymentPaid = roundPaise(totalRepaymentPaid + payment);
+        rows.push({
+          phase: "Repayment Phase",
+          month,
+          openingBalance,
+          interest,
+          payment,
+          closingBalance: outstanding
+        });
+      }
+
+      const totalInterest = roundPaise(moratoriumInterest + interestDuringRepayment);
+      const totalPaid = roundPaise(totalRepaymentPaid + (fields.interestMode.value === "service" ? moratoriumInterest : 0));
+      paymentSchedule = rows;
+      renderRepaymentChart(rows);
+
+      document.getElementById("emiDisplay").textContent = formatMoney(emi);
+      document.getElementById("moratoriumInterestDisplay").textContent = formatMoney(moratoriumInterest);
+      document.getElementById("monthlyInterestDisplay").textContent = formatMoney(monthlyMoratoriumInterest);
+      document.getElementById("totalInterestDisplay").textContent = formatMoney(totalInterest);
+      document.getElementById("totalPaidDisplay").textContent = formatMoney(totalPaid);
+      document.getElementById("repaymentPrincipalNote").textContent = `Starting balance at repayment: ${formatMoney(repaymentPrincipal)}`;
+      document.getElementById("principalDisplay").textContent = formatMoney(principal);
+      document.getElementById("scheduleNote").textContent = `${moratoriumMonths} months moratorium + ${repaymentMonths} months repayment. Full schedule shown.`;
+
+      const body = document.getElementById("scheduleBody");
+      body.replaceChildren();
+      rows.forEach((row) => {
+        const tr = document.createElement("tr");
+        [
+          row.phase,
+          String(row.month),
+          formatMoney(row.openingBalance),
+          formatMoney(row.interest),
+          formatMoney(row.payment),
+          formatMoney(row.closingBalance)
+        ].forEach((value, index) => {
+          const cell = document.createElement("td");
+          cell.className = `px-3 py-3 ${index ? "text-right" : ""}`;
+          cell.textContent = value;
+          tr.append(cell);
+        });
+        body.append(tr);
+      });
+    }
+
+    function exportCsv() {
+      if (!paymentSchedule.length) {
+        showError("No schedule available to export. Please check your inputs.");
+        return;
+      }
+      const rows = [
+        ["Phase", "Month", "Opening Balance (INR)", "Interest (INR)", "Payment (INR)", "Closing Balance (INR)"],
+        ...paymentSchedule.map((row) => [
+          row.phase,
+          row.month,
+          row.openingBalance.toFixed(2),
+          row.interest.toFixed(2),
+          row.payment.toFixed(2),
+          row.closingBalance.toFixed(2)
+        ])
+      ];
+      const csv = "\uFEFF" + rows.map((row) => row.join(",")).join("\r\n");
+      const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "education-loan-repayment-schedule.csv";
+      link.click();
+      setTimeout(() => URL.revokeObjectURL(url), 0);
+    }
+
+    const loanAmountSlider = document.getElementById("loanAmountSlider");
+    const rateSlider = document.getElementById("rateSlider");
+    const moratoriumSlider = document.getElementById("moratoriumSlider");
+    const tenureSlider = document.getElementById("tenureSlider");
+
+    if (loanAmountSlider && fields.loanAmount) {
+      loanAmountSlider.addEventListener("input", (e) => { fields.loanAmount.value = e.target.value; updateCalculator(); });
+      fields.loanAmount.addEventListener("input", () => { loanAmountSlider.value = fields.loanAmount.value; });
+    }
+    if (rateSlider && fields.annualRate) {
+      rateSlider.addEventListener("input", (e) => { fields.annualRate.value = e.target.value; updateCalculator(); });
+      fields.annualRate.addEventListener("input", () => { rateSlider.value = fields.annualRate.value; });
+    }
+    if (moratoriumSlider && fields.moratoriumMonths) {
+      moratoriumSlider.addEventListener("input", (e) => { fields.moratoriumMonths.value = e.target.value; updateCalculator(); });
+      fields.moratoriumMonths.addEventListener("input", () => { moratoriumSlider.value = fields.moratoriumMonths.value; });
+    }
+    if (tenureSlider && fields.repaymentYears) {
+      tenureSlider.addEventListener("input", (e) => { fields.repaymentYears.value = e.target.value; updateCalculator(); });
+      fields.repaymentYears.addEventListener("input", () => { tenureSlider.value = fields.repaymentYears.value; });
+    }
+
+    Object.values(fields).forEach((field) => {
+      field.addEventListener("input", updateCalculator);
+      field.addEventListener("change", updateCalculator);
+    });
+    fields.interestMode.addEventListener("change", () => {
+      document.getElementById("interestModeHelp").textContent = fields.interestMode.value === "capitalize"
+        ? "Simple interest accrued during the moratorium period is added to the principal when repayment commences."
+        : "Interest is serviced monthly during the moratorium; initial loan principal remains unchanged.";
+    });
+    document.getElementById("btnPrint").addEventListener("click", () => window.print());
+    document.getElementById("btnExportCSV").addEventListener("click", exportCsv);
+    document.getElementById("chartViewYearly").addEventListener("click", (event) => {
+      chartMode = "yearly";
+      event.currentTarget.className = "px-2.5 py-1 rounded-md bg-white text-sky-700 shadow-sm";
+      event.currentTarget.setAttribute("aria-pressed", "true");
+      const cumulativeButton = document.getElementById("chartViewCumulative");
+      cumulativeButton.className = "px-2.5 py-1 rounded-md text-gray-600 hover:text-gray-900";
+      cumulativeButton.setAttribute("aria-pressed", "false");
+      if (paymentSchedule.length) renderRepaymentChart(paymentSchedule);
+    });
+    document.getElementById("chartViewCumulative").addEventListener("click", (event) => {
+      chartMode = "cumulative";
+      event.currentTarget.className = "px-2.5 py-1 rounded-md bg-white text-sky-700 shadow-sm";
+      event.currentTarget.setAttribute("aria-pressed", "true");
+      const yearlyButton = document.getElementById("chartViewYearly");
+      yearlyButton.className = "px-2.5 py-1 rounded-md text-gray-600 hover:text-gray-900";
+      yearlyButton.setAttribute("aria-pressed", "false");
+      if (paymentSchedule.length) renderRepaymentChart(paymentSchedule);
+    });
+    updateCalculator();
+</script>

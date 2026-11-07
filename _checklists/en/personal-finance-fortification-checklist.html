@@ -1,0 +1,176 @@
+---
+title: "Personal Finance Fortification Checklist"
+ogTitle: "Personal Finance Fortification Checklist · NidhiPezhai"
+description: "Review emergency savings, insurance, debt, investments, retirement and family financial documents."
+keywords: "personal finance checklist, emergency fund, insurance, debt, retirement, estate planning"
+language: en
+publishedEnglish: true
+eleventyExcludeFromCollections: false
+templateEngineOverride: njk
+sections:
+  - title: Emergency fund
+    items:
+      - title: "Keep 6 to 12 months of household expenses"
+        detail: "Build an easily accessible reserve covering rent, EMIs, groceries and school fees."
+        priority: High
+      - title: Allocate the fund for liquidity
+        detail: "Keep some in a savings account and the rest in a sweep-in fixed deposit or liquid funds, rather than shares or locked-in investments."
+        priority: High
+      - title: Use a separate emergency account
+        detail: "Keep the fund in a bank account not used for everyday UPI payments or shopping."
+        priority: Medium
+      - title: Keep emergency cash
+        detail: "Safely keep ₹25,000 to ₹50,000 in cash for disasters or network outages."
+        priority: Medium
+  - title: Health insurance
+    items:
+      - title: Have your own family health insurance
+        detail: "Consider ₹10 lakh to ₹15 lakh of family cover in addition to an employer's group policy."
+        priority: Critical
+      - title: Consider a super top-up
+        detail: "A super top-up with a ₹10 lakh deductible can provide ₹50 lakh to ₹1 crore of additional cover at a lower premium."
+        priority: High
+      - title: Check room-rent limits
+        detail: "Check that the policy does not impose room-rent caps or sub-limits."
+        priority: High
+      - title: Consider separate cover for parents
+        detail: "Consider a separate health policy for older parents rather than including them in the family policy."
+        priority: Medium
+  - title: Life and term insurance
+    items:
+      - title: Consider term cover of 15 to 20 times annual income
+        detail: "Consider adequate pure term insurance rather than an endowment or ULIP policy."
+        priority: Critical
+      - title: Consider the Married Women's Property Act
+        detail: "Consider whether section 6 of the Married Women's Property Act, 1874 applies to your policy and circumstances; seek professional advice about its protections."
+        priority: High
+      - title: Disclose health information fully
+        detail: "Disclose your health, habits and family medical history accurately when applying."
+        priority: Critical
+      - title: Consider an accidental disability rider
+        detail: "Consider cover for loss of income following an accident-related disability."
+        priority: Medium
+  - title: Debt management
+    items:
+      - title: Eliminate high-interest debt
+        detail: "Prioritise credit-card balances, personal loans and buy-now-pay-later debt."
+        priority: Critical
+      - title: Keep EMIs within your income
+        detail: "Aim to keep total monthly EMIs below 40% of take-home pay."
+        priority: High
+      - title: Consider home-loan prepayment
+        detail: "Consider paying an additional 5% of principal each year; the reduction in tenure depends on your loan terms."
+        priority: Medium
+      - title: Maintain a healthy credit score
+        detail: "Pay loan instalments and credit-card bills on time and aim to maintain a score above 750."
+        priority: High
+  - title: Long-term wealth building
+    items:
+      - title: Invest regularly through a monthly SIP
+        detail: "Consider investing 20% to 30% of income in mutual fund SIPs when affordable."
+        priority: High
+      - title: Step up SIP contributions
+        detail: "Consider increasing SIP contributions by 10% annually as income rises."
+        priority: Medium
+      - title: Review EPF and PPF
+        detail: "Make use of eligible EPF and PPF contributions and their applicable tax benefits."
+        priority: High
+      - title: Consider a 5% to 10% gold allocation
+        detail: "Consider gold ETFs or sovereign gold bonds rather than jewellery, keeping their risks and availability in mind."
+        priority: Medium
+      - title: Rebalance annually
+        detail: "Review equity and debt allocations once a year and rebalance toward your target."
+        priority: Medium
+  - title: Estate planning and document security
+    items:
+      - title: Update nominees
+        detail: "Verify nominees on bank, demat, mutual fund, EPF, PPF and insurance accounts."
+        priority: Critical
+      - title: Prepare a will
+        detail: "Document how you want your assets and investments distributed."
+        priority: High
+      - title: Prepare a family financial guide
+        detail: "Share bank account, insurance policy, locker and financial adviser contact details with your spouse or family for emergencies."
+        priority: High
+      - title: Protect digital documents
+        detail: "Safeguard PAN, Aadhaar, property documents and policies, including through DigiLocker where appropriate."
+        priority: Medium
+---
+<main id="main-content" tabindex="-1" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-grow space-y-6">
+  <div class="bg-gradient-to-r from-emerald-600 to-teal-800 rounded-2xl p-6 text-white shadow-md flex flex-col md:flex-row md:items-center justify-between gap-4">
+    <h1 class="text-lg font-bold">Personal finance fortification checklist</h1>
+    <div class="bg-white/10 rounded-xl p-3.5 px-5 flex items-center gap-4 border border-white/20" aria-live="polite">
+      <div><span class="text-xs text-emerald-200 block">Completed</span><span class="text-2xl font-extrabold" id="progressCount">0 / 25</span></div>
+      <div class="h-10 w-px bg-white/20"></div>
+      <div><span class="text-xs text-emerald-200 block">Progress</span><span class="text-2xl font-extrabold" id="progressPercent">0%</span></div>
+    </div>
+  </div>
+  <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-200/80 text-xs text-emerald-950">
+    Download all six categories, details, priorities and your current status as an Excel workbook.
+    <button type="button" id="btnQuickDownload" class="font-bold underline">Download now &rarr;</button>
+    <p id="exportError" role="alert" hidden></p>
+  </div>
+  <p class="text-sm text-slate-600">These are general planning guidelines, not personal financial advice. Adjust amounts and insurance cover to your circumstances.</p>
+  <div id="interactiveContainer" class="space-y-6">
+    {% for section in sections %}
+    <section class="checklist-section bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+      <h2 class="checklist-category font-bold text-slate-900 text-base">{{ loop.index }}. {{ section.title }}</h2>
+      <div class="space-y-3">
+        {% for item in section.items %}
+        <label class="checklist-item flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition" data-priority="{{ item.priority }}">
+          <input type="checkbox" class="task-checkbox mt-0.5 w-4 h-4 text-emerald-600 rounded-sm border-slate-300 focus:ring-emerald-500">
+          <span class="text-xs leading-relaxed text-slate-700"><strong class="item-title text-slate-900 block text-sm">{{ item.title }}</strong><span class="item-detail">{{ item.detail }}</span></span>
+        </label>
+        {% endfor %}
+      </div>
+    </section>
+    {% endfor %}
+  </div>
+  <section class="calculator-group">
+    <h2>Related financial resources</h2>
+    <div class="calculator-grid">
+      <a class="calculator-card" href="{{ '/en/calculators/inflation-calculator.html' | url }}"><span class="calculator-card__type">Calculator</span><h3>Inflation calculator</h3><p>Estimate the effect of inflation on future costs.</p><span class="calculator-card__open">Open calculator ↗</span></a>
+      <a class="calculator-card" href="{{ '/en/calculators/emergency-fund-planner.html' | url }}"><span class="calculator-card__type">Calculator</span><h3>Emergency fund planner</h3><p>Estimate your emergency fund goal and monthly savings.</p><span class="calculator-card__open">Open calculator ↗</span></a>
+      <a class="calculator-card" href="{{ '/en/articles/personal-finance-fortification/' | url }}"><span class="calculator-card__type">Article</span><h3>Personal finance fortification</h3><p>Learn more about protecting your finances.</p><span class="calculator-card__open">Read article ↗</span></a>
+      <a class="calculator-card" href="{{ '/en/articles/savings-and-debt-instruments-india/' | url }}"><span class="calculator-card__type">Article</span><h3>Savings and debt instruments</h3><p>Compare savings, deposits and debt options.</p><span class="calculator-card__open">Read article ↗</span></a>
+      <a class="calculator-card" href="{{ '/en/calculators/personal_loan_emi_calculator.html' | url }}"><span class="calculator-card__type">Calculator</span><h3>Personal loan EMI</h3><p>Estimate loan instalments based on amount, interest and term.</p><span class="calculator-card__open">Open calculator ↗</span></a>
+      <a class="calculator-card" href="{{ '/en/calculators/mf_sip_calculator.html' | url }}"><span class="calculator-card__type">Calculator</span><h3>SIP calculator</h3><p>Estimate the future value of regular investments.</p><span class="calculator-card__open">Open calculator ↗</span></a>
+      <a class="calculator-card" href="{{ '/en/calculators/goal-based-investing-calculator.html' | url }}"><span class="calculator-card__type">Calculator</span><h3>Goal-based investing</h3><p>Estimate monthly investments for your goals.</p><span class="calculator-card__open">Open calculator ↗</span></a>
+      <a class="calculator-card" href="{{ '/en/calculators/epf_calculator.html' | url }}"><span class="calculator-card__type">Calculator</span><h3>EPF calculator</h3><p>Estimate a retirement balance using EPF contributions and interest.</p><span class="calculator-card__open">Open calculator ↗</span></a>
+      <a class="calculator-card" href="{{ '/en/calculators/retirement-calculator.html' | url }}"><span class="calculator-card__type">Calculator</span><h3>Retirement planner</h3><p>Plan retirement needs and savings.</p><span class="calculator-card__open">Open calculator ↗</span></a>
+    </div>
+  </section>
+</main>
+<script>
+  const checkboxes = [...document.querySelectorAll(".task-checkbox")];
+  function updateProgress() {
+    const completed = checkboxes.filter((box) => box.checked).length;
+    document.getElementById("progressCount").textContent = `${completed} / ${checkboxes.length}`;
+    document.getElementById("progressPercent").textContent = `${Math.round(completed / checkboxes.length * 100)}%`;
+  }
+  checkboxes.forEach((box) => box.addEventListener("change", updateProgress));
+  document.getElementById("btnQuickDownload").addEventListener("click", () => document.getElementById("btnDownloadExcel").click());
+  document.getElementById("btnDownloadExcel").addEventListener("click", () => {
+    const error = document.getElementById("exportError");
+    if (typeof XLSX === "undefined") {
+      error.textContent = "Excel export is unavailable. Check your connection and reload the page.";
+      error.hidden = false;
+      return;
+    }
+    error.hidden = true;
+    const rows = [["No.", "Category", "Checklist item", "Details", "Priority", "Status"]];
+    document.querySelectorAll(".checklist-section").forEach((section) => {
+      const category = section.querySelector(".checklist-category").textContent;
+      section.querySelectorAll(".checklist-item").forEach((item) => {
+        rows.push([rows.length, category, item.querySelector(".item-title").textContent, item.querySelector(".item-detail").textContent, item.dataset.priority, item.querySelector("input").checked ? "Completed" : "Pending"]);
+      });
+    });
+    const sheet = XLSX.utils.aoa_to_sheet(rows);
+    sheet["!cols"] = [{ wch: 10 }, { wch: 35 }, { wch: 45 }, { wch: 65 }, { wch: 16 }, { wch: 18 }];
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, sheet, "Financial checklist");
+    XLSX.writeFile(workbook, `Personal_Financial_Fortification_Checklist_${Date.now()}.xlsx`);
+  });
+  document.getElementById("btnPrint").addEventListener("click", () => window.print());
+  updateProgress();
+</script>

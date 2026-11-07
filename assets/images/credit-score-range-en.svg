@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="510" viewBox="0 0 1200 510" role="img" aria-labelledby="title description">
+  <title id="title">Credit score ranges</title>
+  <desc id="description">Illustrative credit score ranges: 300–649 poor, 650–699 fair, 700–749 good and 750–900 excellent.</desc>
+  <rect width="1200" height="470" rx="18" fill="#f3f7f5" />
+  <text x="54" y="61" fill="#102e31" font-family="'Noto Sans Tamil', sans-serif" font-size="30" font-weight="700">Credit score ranges</text>
+  <text x="54" y="94" fill="#38524f" font-family="'Noto Sans Tamil', sans-serif" font-size="16">Illustrative 300–900 score scale commonly used in India</text>
+
+  <defs>
+    <clipPath id="bar-clip">
+      <rect x="54" y="136" width="1092" height="46" rx="12" />
+    </clipPath>
+  </defs>
+  <g clip-path="url(#bar-clip)">
+    <rect x="54" y="136" width="637" height="46" fill="#fc9a05" />
+    <rect x="691" y="136" width="91" height="46" fill="#df7275" />
+    <rect x="782" y="136" width="91" height="46" fill="#204497" />
+    <rect x="873" y="136" width="273" height="46" fill="#059669" />
+  </g>
+
+  <g stroke="#61746e" stroke-width="2">
+    <path d="M54 189v10" />
+    <path d="M691 189v10" />
+    <path d="M782 189v10" />
+    <path d="M873 189v10" />
+    <path d="M1146 189v10" />
+  </g>
+  <g fill="#38524f" font-family="DM Sans, sans-serif" font-size="15" font-weight="600">
+    <text x="54" y="222" text-anchor="start">300</text>
+    <text x="691" y="222" text-anchor="middle">650</text>
+    <text x="782" y="222" text-anchor="middle">700</text>
+    <text x="873" y="222" text-anchor="middle">750</text>
+    <text x="1146" y="222" text-anchor="end">900</text>
+  </g>
+
+  <g>
+    <rect x="54" y="250" width="258" height="132" rx="12" fill="#fff" stroke="#d8e3de" />
+    <rect x="54" y="250" width="5" height="132" rx="2.5" fill="#fc9a05" />
+    <text x="75" y="285" fill="#102e31" font-family="DM Sans, sans-serif" font-size="22" font-weight="700">300–649</text>
+    <text x="75" y="321" fill="#fc9a05" font-family="'Noto Sans Tamil', sans-serif" font-size="19" font-weight="600">Poor</text>
+    <text x="75" y="354" fill="#61746e" font-family="'Noto Sans Tamil', sans-serif" font-size="14">Needs improvement</text>
+
+    <rect x="330" y="250" width="258" height="132" rx="12" fill="#fff" stroke="#d8e3de" />
+    <rect x="330" y="250" width="5" height="132" rx="2.5" fill="#df7275" />
+    <text x="351" y="285" fill="#102e31" font-family="DM Sans, sans-serif" font-size="22" font-weight="700">650–699</text>
+    <text x="351" y="321" fill="#df7275" font-family="'Noto Sans Tamil', sans-serif" font-size="19" font-weight="600">Fair</text>
+    <text x="351" y="354" fill="#61746e" font-family="'Noto Sans Tamil', sans-serif" font-size="14">A moderate score</text>
+
+    <rect x="606" y="250" width="258" height="132" rx="12" fill="#fff" stroke="#d8e3de" />
+    <rect x="606" y="250" width="5" height="132" rx="2.5" fill="#204497" />
+    <text x="627" y="285" fill="#102e31" font-family="DM Sans, sans-serif" font-size="22" font-weight="700">700–749</text>
+    <text x="627" y="321" fill="#204497" font-family="'Noto Sans Tamil', sans-serif" font-size="19" font-weight="600">Good</text>
+    <text x="627" y="354" fill="#61746e" font-family="'Noto Sans Tamil', sans-serif" font-size="14">Approaching excellent</text>
+
+    <rect x="882" y="250" width="264" height="132" rx="12" fill="#fff" stroke="#d8e3de" />
+    <rect x="882" y="250" width="5" height="132" rx="2.5" fill="#059669" />
+    <text x="903" y="285" fill="#102e31" font-family="DM Sans, sans-serif" font-size="22" font-weight="700">750–900</text>
+    <text x="903" y="321" fill="#059669" font-family="'Noto Sans Tamil', sans-serif" font-size="19" font-weight="700">Excellent</text>
+    <text x="903" y="354" fill="#61746e" font-family="'Noto Sans Tamil', sans-serif" font-size="14">A strong score range</text>
+  </g>
+
+  <text x="54" y="426" fill="#61746e" font-family="'Noto Sans Tamil', sans-serif" font-size="14">Ranges can differ by credit bureau and lender.</text>
+  <text id="brand-watermark" x="600" y="497" text-anchor="middle" font-family="'Noto Sans Tamil', 'Tamil Sangam MN', 'Latha', sans-serif" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">Nidhi Pezhai</text>
+</svg>

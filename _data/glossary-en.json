@@ -1,0 +1,2030 @@
+[
+  {
+    "id": "portfolio",
+    "term": "Portfolio",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "How to build an investment portfolio",
+      "url": "/en/articles/portfolio-creation-approach/",
+      "language": "en"
+    },
+    "definition": "The combined collection of an individual's or organisation's financial investments, such as shares, mutual funds, debt securities, gold and real estate.",
+    "example": "A balanced portfolio comprising 70% domestic equity funds, 15% international equities and 15% debt securities."
+  },
+  {
+    "id": "diversification",
+    "term": "Diversification",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Investing in foreign equities from India",
+      "url": "/en/articles/investing-in-foreign-equity-from-india/",
+      "language": "en"
+    },
+    "definition": "A strategy of spreading money across different asset classes, countries and sectors to reduce overall investment risk, following the principle of not putting all your eggs in one basket.",
+    "example": "International dollar assets and gold can provide stability to a portfolio when Indian shares fall."
+  },
+  {
+    "id": "asset-allocation",
+    "term": "Asset Allocation",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "How to build an investment portfolio",
+      "url": "/en/articles/portfolio-creation-approach/",
+      "language": "en"
+    },
+    "definition": "A framework for proportionately dividing money among equity, debt, gold and cash according to an investor's age, future financial goals and risk tolerance.",
+    "example": "Subtract age from 100: for a 30-year-old, this would mean allocating 70% to equities and 30% to debt securities."
+  },
+  {
+    "id": "index-fund",
+    "term": "Index Fund",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "A low-cost passive mutual fund that buys and holds the same shares in the same proportions as a specified market index, such as the Nifty 50 or S&P 500, to mirror its performance.",
+    "example": "Investing in 50 leading Indian companies through a Nifty 50 index fund with a low management fee."
+  },
+  {
+    "id": "active-mutual-fund",
+    "term": "Active Mutual Fund",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "A mutual fund in which a fund manager selects shares to buy or sell using research and analysis, with the aim of earning returns above a benchmark index.",
+    "example": "A fund managed to outperform the market even though its expense ratio is relatively high at 1.5% to 2%."
+  },
+  {
+    "id": "feeder-fund",
+    "term": "Feeder Fund (Fund of Funds - FoF)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Investing in foreign equities from India",
+      "url": "/en/articles/investing-in-foreign-equity-from-india/",
+      "language": "en"
+    },
+    "definition": "A domestic mutual fund that collects money in rupees from Indian investors and invests it in a particular international mutual fund or ETF abroad.",
+    "example": "Investing in US equities from India through the Motilal Oswal Nasdaq 100 FoF without an overseas account."
+  },
+  {
+    "id": "expense-ratio",
+    "term": "Total Expense Ratio (TER)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "The annual percentage fee deducted from investors' funds by a mutual fund to manage investments, maintain accounts and operate the scheme.",
+    "example": "A direct plan may have an expense ratio of 0.2% to 0.5%, while a regular plan may charge 1.5% to 2%, including broker commission."
+  },
+  {
+    "id": "tracking-error",
+    "term": "Tracking Error",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "The standard deviation of the difference between an index fund's returns and the returns of the benchmark index it tracks. A lower tracking error is generally preferable.",
+    "example": "For a Nifty 50 fund, tracking error measures how consistently its returns differ from the index. A lower tracking error indicates closer tracking."
+  },
+  {
+    "id": "tracking-difference",
+    "term": "Tracking Difference",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "The direct difference in total returns between an index fund and the market index it tracks over a particular period. Because of the expense ratio (TER) and cash holdings, the fund's return is usually slightly lower than the index's.",
+    "example": "If an index fund returns 14.5% over one year and the Nifty 50 index returns 15.0%, the tracking difference is -0.50%."
+  },
+  {
+    "id": "large-cap",
+    "term": "Large Cap",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "Under SEBI's classification, shares of India's largest, leading companies (blue-chip companies) ranked 1st to 100th by market capitalization in the Indian stock market, or mutual funds that invest in them.",
+    "example": "Large companies such as Reliance, TCS and HDFC Bank. Large-cap investments may be less volatile than smaller-company investments, but their value can fall and capital is not guaranteed."
+  },
+  {
+    "id": "midcap",
+    "term": "Mid Cap",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "Shares of companies with medium market capitalization in the stock market (ranked 101st to 250th by market capitalization). These mid-sized companies combine growth opportunities with higher risk.",
+    "example": "A moderate-risk investment with faster growth than large-cap companies and more stability than small-cap companies."
+  },
+  {
+    "id": "smallcap",
+    "term": "Small Cap",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "Shares of developing companies with smaller market capitalizations in the stock market (ranked below 250th). They have the potential for higher returns, but also carry very high risk.",
+    "example": "An investment with the potential to grow into a large company in the future, but also with high risk and high return potential, as it may fall more sharply during a market downturn."
+  },
+  {
+    "id": "micro-cap",
+    "term": "Micro Cap",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "Shares of very small companies ranked below the top 500 companies by market capitalization in the Indian stock market (generally with a market value below ₹1,000 crore), or funds that invest in indices such as the Nifty Microcap 250.",
+    "example": "Small, early-stage businesses with high growth potential, but very low liquidity (liquidity risk) and a very high risk of price declines."
+  },
+  {
+    "id": "flexi-cap",
+    "term": "Flexi Cap Fund",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Loan prepayment versus equity investing",
+      "url": "/en/articles/loan-prepayment-vs-equity-investment/",
+      "language": "en"
+    },
+    "definition": "Diversified equity mutual funds in which the fund manager can flexibly select and invest in shares according to market conditions, without restrictions on market-capitalization categories such as large-cap, mid-cap or small-cap.",
+    "example": "The manager freely shifts investments to large-company shares when the market is at a peak, and to mid- and small-company shares when prices fall to attractive levels."
+  },
+  {
+    "id": "multi-cap",
+    "term": "Multi Cap Fund",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "Under SEBI rules, diversified equity mutual funds that must invest at least 25% each in the large-cap, mid-cap and small-cap categories.",
+    "example": "Through one fund, getting a mandatory, balanced allocation of 25% each to large, mid-sized and small companies; the manager cannot omit a category under the stated allocation rules."
+  },
+  {
+    "id": "sip",
+    "term": "Systematic Investment Plan (SIP)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Mutual fund SIP calculator",
+      "url": "/en/calculators/mf_sip_calculator.html",
+      "language": "en"
+    },
+    "definition": "An automated way to invest a specified amount regularly in a mutual fund, either monthly or at another set interval. It is not a mutual fund scheme in itself.",
+    "example": "Investing ₹5,000 regularly in a Nifty 50 index fund for 15 years as soon as the salary arrives each month."
+  },
+  {
+    "id": "swp",
+    "term": "Systematic Withdrawal Plan (SWP)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Mutual fund SWP calculator",
+      "url": "/en/calculators/mf_swp_calculator.html",
+      "language": "en"
+    },
+    "definition": "A facility that regularly or periodically withdraws a specified amount from a mutual fund investment and transfers it to a bank account for retirement needs or monthly expenses. It is not a mutual fund scheme in itself.",
+    "example": "After retirement, withdrawing ₹30,000 a month from a ₹50 lakh corpus as monthly income, with tax treatment depending on the applicable rules."
+  },
+  {
+    "id": "compound-interest",
+    "term": "Compound Interest",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Mutual fund SIP calculator",
+      "url": "/en/calculators/mf_sip_calculator.html",
+      "language": "en"
+    },
+    "definition": "A financial growth process in which interest accrues in subsequent periods not only on the original amount invested, but also on interest earned in earlier periods (called the eighth wonder of the world).",
+    "example": "At an annual return of 12%, invested money roughly doubles in six years and can grow substantially over the long term."
+  },
+  {
+    "id": "rupee-cost-averaging",
+    "term": "Rupee Cost Averaging",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "How to start investing",
+      "url": "/en/articles/how-to-start-investing/",
+      "language": "en"
+    },
+    "definition": "The principle that, when market prices fluctuate, regularly investing a fixed instalment automatically buys fewer units when the market is high and more units when it falls, which can lower the average purchase cost.",
+    "example": "Buying 50 units when the NAV is ₹100 during a market fall, and 25 units when the NAV rises to ₹200, thereby averaging the purchase price."
+  },
+  {
+    "id": "fractional-shares",
+    "term": "Fractional Shares",
+    "category": "International investing",
+    "relatedLink": {
+      "title": "Investing in foreign equities from India",
+      "url": "/en/articles/investing-in-foreign-equity-from-india/",
+      "language": "en"
+    },
+    "definition": "The facility to buy a small fraction of a share (for example, 0.05 or 0.1 of a share) instead of buying a whole share. It is popular in the US market.",
+    "example": "Buying and trading a fraction of a Booking Holdings share, priced at $3,000, with as little as $10 or $50."
+  },
+  {
+    "id": "dividend",
+    "term": "Dividend",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Equity and market-linked investment products",
+      "url": "/en/articles/equity-investments-in-india/",
+      "language": "en"
+    },
+    "definition": "Income distributed by a company to its shareholders from part of its net profits, either in cash or as additional shares.",
+    "example": "If a company declares a dividend of ₹10 per share, a person holding 1,000 shares receives ₹10,000 in their bank account."
+  },
+  {
+    "id": "sgb",
+    "term": "Sovereign Gold Bond (SGB)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Gold investment options",
+      "url": "/en/articles/gold-investing-options-india/",
+      "language": "en"
+    },
+    "definition": "A government gold bond issued by the Reserve Bank of India (RBI) on behalf of the Central Government. It is a way to hold gold without making charges, wastage or theft risk, and offers additional annual interest of 2.5%; tax exemption at maturity is subject to applicable tax rules and eligibility.",
+    "example": "An eligible holder who keeps an SGB until its eight-year maturity may qualify for a capital-gains tax exemption on redemption, subject to applicable rules."
+  },
+  {
+    "id": "reit",
+    "term": "Real Estate Investment Trust (REIT)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Real estate investment trusts",
+      "url": "/en/articles/reit/",
+      "language": "en"
+    },
+    "definition": "A SEBI-regulated trust that holds income-generating real estate, such as commercial buildings and IT parks. Subject to applicable rules, REITs distribute at least 90% of net distributable cash flows; the amount and timing depend on the trust and relevant rules.",
+    "example": "Buying one unit for ₹300–₹400 to participate in rental income from Grade-A IT parks worth crores of rupees."
+  },
+  {
+    "id": "invit",
+    "term": "Infrastructure Investment Trust (InvIT)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Infrastructure investment trusts",
+      "url": "/en/articles/invit/",
+      "language": "en"
+    },
+    "definition": "An investment structure that manages infrastructure assets such as national highways, toll plazas, power-transmission lines and solar parks, and distributes their cash flows to investors.",
+    "example": "PowerGrid Infrastructure Investment Trust (PGInvIT) invests in power-transmission assets. An illustrative 9% to 11% distribution yield is not a guaranteed return and can change."
+  },
+  {
+    "id": "lrs",
+    "term": "Liberalised Remittance Scheme (LRS)",
+    "category": "International investing",
+    "relatedLink": {
+      "title": "Investing in foreign equities from India",
+      "url": "/en/articles/investing-in-foreign-equity-from-india/",
+      "language": "en"
+    },
+    "definition": "Under Reserve Bank of India (RBI) rules, a scheme that allows each resident individual in India to remit up to $250,000 (about ₹2.1 crore) abroad in a financial year for overseas shares, education, travel and medical expenses.",
+    "example": "Submitting Form A2 through a bank's net banking and transferring funds in dollars to a US broker account (IBKR)."
+  },
+  {
+    "id": "tcs",
+    "term": "Tax Collected at Source (TCS)",
+    "category": "International investing",
+    "relatedLink": {
+      "title": "Investing in foreign equities from India",
+      "url": "/en/articles/investing-in-foreign-equity-from-india/",
+      "language": "en"
+    },
+    "definition": "Advance tax collected by a bank or seller during overseas remittances and certain transactions and paid to the government. It is not an additional tax; it may be claimed as a credit or refund in the income-tax return (ITR), subject to the applicable rules and assessment.",
+    "example": "A bank may collect TCS on an overseas remittance under LRS. The applicable rate and threshold depend on the purpose of the remittance and current rules; eligible TCS can be claimed when filing a tax return."
+  },
+  {
+    "id": "form-w8ben",
+    "term": "Form W-8BEN",
+    "category": "International investing",
+    "relatedLink": {
+      "title": "Investing in foreign equities from India",
+      "url": "/en/articles/investing-in-foreign-equity-from-india/",
+      "language": "en"
+    },
+    "definition": "A US tax form provided by a non-US individual to a withholding agent, such as a broker, to establish foreign status and, where applicable, claim treaty benefits. It does not by itself exempt all capital gains, and tax treatment depends on the applicable rules.",
+    "example": "An Indian investor may submit Form W-8BEN to their US broker to establish foreign status and claim an applicable treaty rate; the form does not itself guarantee exemption from US tax."
+  },
+  {
+    "id": "us-estate-tax",
+    "term": "US Estate Tax",
+    "category": "International investing",
+    "relatedLink": {
+      "title": "Investing in foreign equities from India",
+      "url": "/en/articles/investing-in-foreign-equity-from-india/#us-estate-tax-danger",
+      "language": "en"
+    },
+    "definition": "US estate tax may apply when a foreign investor dies holding US-situs assets such as US-domiciled shares. Thresholds, rates and liability depend on applicable law, treaties and individual circumstances.",
+    "example": "An Indian investor who dies holding $200,000 in direct US shares could face a risk of about $56,000 (~₹47 lakh) in US estate tax, depending on applicable rules and circumstances."
+  },
+  {
+    "id": "irish-ucits-etf",
+    "term": "Irish-Domiciled UCITS ETFs",
+    "category": "International investing",
+    "relatedLink": {
+      "title": "Investing in foreign equities from India",
+      "url": "/en/articles/investing-in-foreign-equity-from-india/#us-estate-tax-danger",
+      "language": "en"
+    },
+    "definition": "Exchange-traded funds domiciled in Ireland under the European UCITS framework, some of which trade on the London Stock Exchange. US estate-tax exposure depends on the fund structure and applicable law; a particular outcome is not guaranteed.",
+    "example": "Using Irish S&P 500 funds such as CSPX or VUAA may help protect heirs from US estate-tax exposure, subject to the fund structure and applicable rules."
+  },
+  {
+    "id": "loan-prepayment",
+    "term": "Loan Prepayment",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Loan prepayment versus equity investing",
+      "url": "/en/articles/loan-prepayment-vs-equity-investment/",
+      "language": "en"
+    },
+    "definition": "Paying loan principal early with surplus money, in addition to the regular monthly EMI on a long-term loan such as a home loan. This can substantially reduce the total loan term and interest burden, depending on the loan terms.",
+    "example": "Paying one additional EMI each year or 5% of the principal on a 20-year home loan may allow the loan to be completed in under 12 years, depending on its terms."
+  },
+  {
+    "id": "amortization",
+    "term": "Loan Amortization",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Home loan EMI calculator",
+      "url": "/en/calculators/home_loan_emi_calculator.html",
+      "language": "en"
+    },
+    "definition": "A schedule showing, for each monthly loan instalment (EMI), how much goes toward principal and how much toward interest, and how the outstanding principal is reduced.",
+    "example": "A schedule illustrating that, during the first five years of a home loan, 70–80% of the EMI you pay may go toward interest alone."
+  },
+  {
+    "id": "emi",
+    "term": "Equated Monthly Installment (EMI)",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Home loan EMI calculator",
+      "url": "/en/calculators/home_loan_emi_calculator.html",
+      "language": "en"
+    },
+    "definition": "The fixed monthly amount set by a bank to repay a loan and its interest over a specified period.",
+    "example": "A monthly payment of ₹43,391 for 20 years on a ₹50 lakh home loan at 8.5% interest."
+  },
+  {
+    "id": "credit-score",
+    "term": "Credit Score",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Understanding your credit score",
+      "url": "/en/articles/credit-score/",
+      "language": "en"
+    },
+    "definition": "A creditworthiness score from 300 to 900, based on how a person has repaid loans and credit-card balances in the past.",
+    "example": "Banks may offer customers with a credit score above 750 loans at lower interest rates, subject to their lending criteria."
+  },
+  {
+    "id": "revolving-credit",
+    "term": "Revolving Credit Trap",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Credit card strategies and traps",
+      "url": "/en/articles/credit-card-optimization-and-traps/",
+      "language": "en"
+    },
+    "definition": "A severe interest trap in which an annualized interest rate of 40% to 45% may be charged when a person pays only the minimum due on a credit-card bill instead of clearing it in full, carrying the remaining balance into the next month.",
+    "example": "If you pay only ₹5,000 of a ₹1,00,000 credit-card bill and carry over the rest, there is a risk that interest could accrue to ₹42,000 a year."
+  },
+  {
+    "id": "emergency-fund",
+    "term": "Emergency Fund",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Emergency fund planner",
+      "url": "/en/calculators/emergency-fund-planner.html",
+      "language": "en"
+    },
+    "definition": "A reserve kept in a safe, readily accessible bank deposit, equal to 6 to 12 months of essential household expenses, to meet job loss, sudden medical expenses or unexpected family emergencies.",
+    "example": "If monthly expenses are ₹40,000, keeping ₹2.4 lakh to ₹4.8 lakh for emergencies split between a savings account and fixed deposit (FD)."
+  },
+  {
+    "id": "term-insurance",
+    "term": "Term Life Insurance",
+    "category": "Insurance",
+    "relatedLink": {
+      "title": "Insurance products in India",
+      "url": "/en/articles/insurance-products-in-india/",
+      "language": "en"
+    },
+    "definition": "Pure protection insurance that provides a specified lump sum (sum assured) to support the family's future livelihood and repay debts if the household's earning member dies unexpectedly, subject to the policy terms.",
+    "example": "Pure term-life cover of ₹1 crore to ₹2 crore for family protection, at an annual premium of ₹15,000, as an illustration."
+  },
+  {
+    "id": "sum-assured",
+    "term": "Sum Assured",
+    "category": "Insurance",
+    "relatedLink": {
+      "title": "Life insurance needs calculator",
+      "url": "/en/calculators/life-insurance-sum-assured-calculator.html",
+      "language": "en"
+    },
+    "definition": "The amount an insurer is contractually required to pay the insured person's family beneficiaries if a covered event occurs, subject to the policy terms.",
+    "example": "Keeping insurance cover of at least 15 to 20 times the family's annual income."
+  },
+  {
+    "id": "copay",
+    "term": "Copayment (Copay)",
+    "category": "Insurance",
+    "relatedLink": {
+      "title": "Health insurance calculator",
+      "url": "/en/calculators/medical-insurance-sum-assured-calculator.html",
+      "language": "en"
+    },
+    "definition": "A condition in health insurance requiring the policyholder to pay a specified share (for example, 10% or 20%) of an admissible hospital bill from their own funds.",
+    "example": "If a ₹2,00,000 medical bill has a 20% copay, you pay ₹40,000 yourself and the insurer pays ₹1,60,000, subject to the policy terms."
+  },
+  {
+    "id": "waiting-period",
+    "term": "Waiting Period",
+    "category": "Insurance",
+    "relatedLink": {
+      "title": "Health insurance calculator",
+      "url": "/en/calculators/medical-insurance-sum-assured-calculator.html",
+      "language": "en"
+    },
+    "definition": "The mandatory period after taking out health insurance during which a person must wait before receiving benefits for pre-existing diseases or specified surgeries, as set out in the policy.",
+    "example": "A policy may have a waiting period of two to three years from its start date for diabetes or high blood pressure."
+  },
+  {
+    "id": "nominee",
+    "term": "Nominee",
+    "category": "Property & wills",
+    "relatedLink": {
+      "title": "Why writing a will matters",
+      "url": "/en/articles/importance-of-writing-a-will/",
+      "language": "en"
+    },
+    "definition": "A person designated to receive money from a bank account, mutual fund investment or insurance policy after the investor's death. The nominee's legal role (including whether they hold the proceeds as a trustee or have beneficial rights) depends on the instrument and applicable law; nomination does not necessarily make someone a legal heir.",
+    "example": "Where there is no will, the nominee may receive the money and need to distribute it among the legal heirs, depending on the applicable law and instrument."
+  },
+  {
+    "id": "will",
+    "term": "Will / Testament",
+    "category": "Property & wills",
+    "relatedLink": {
+      "title": "Why writing a will matters",
+      "url": "/en/articles/importance-of-writing-a-will/",
+      "language": "en"
+    },
+    "definition": "A legal declaration, written by a person during their lifetime, specifying who should receive the assets they earned and accumulated, and in what proportions, after their death.",
+    "example": "Writing and registering a clear will to help prevent property disputes among family heirs."
+  },
+  {
+    "id": "probate",
+    "term": "Probate of Will",
+    "category": "Property & wills",
+    "relatedLink": {
+      "title": "Why writing a will matters",
+      "url": "/en/articles/importance-of-writing-a-will/",
+      "language": "en"
+    },
+    "definition": "A court-certified grant confirming that a written will is genuine, valid and officially recognized. Probate may be required for certain properties in cities such as Chennai, Mumbai and Kolkata, depending on applicable law.",
+    "example": "Obtaining a probate grant from the High Court for a will relating to land or a house in Chennai before transferring it to the heirs, where required."
+  },
+  {
+    "id": "encumbrance-certificate",
+    "term": "Encumbrance Certificate (EC)",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Risks of real estate investing",
+      "url": "/en/articles/hidden-risks-of-real-estate-investments-india/",
+      "language": "en"
+    },
+    "definition": "A Sub-Registrar's Office record showing whether a particular plot of land or property has a mortgage, bank loan, court restriction, power-of-attorney document or legal claim by a third party recorded against it.",
+    "example": "Obtaining and thoroughly reviewing an encumbrance certificate covering the previous 30 to 50 years before buying a plot or house."
+  },
+  {
+    "id": "uds",
+    "term": "Undivided Share of Land (UDS)",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Risks of real estate investing",
+      "url": "/en/articles/hidden-risks-of-real-estate-investments-india/",
+      "language": "en"
+    },
+    "definition": "The legal share of land attributable to a particular apartment in the total land area held in common by all the residents of an apartment building.",
+    "example": "For a building constructed on 10,000 square feet of land, 500 square feet of UDS for your apartment being recorded in the patta."
+  },
+  {
+    "id": "schedule-fa",
+    "term": "Schedule FA (Foreign Assets)",
+    "category": "International investing",
+    "relatedLink": {
+      "title": "Investing in foreign equities from India",
+      "url": "/en/articles/investing-in-foreign-equity-from-india/#faqs",
+      "language": "en"
+    },
+    "definition": "A schedule in the Indian income-tax return (ITR-2 or ITR-3) requiring disclosure of shares, bank accounts, property and wallet balances held abroad.",
+    "example": "A person required to report foreign assets may need to disclose even a small holding of US shares. Failure to comply can have penalties; disclosure requirements and exceptions depend on residency and applicable rules."
+  },
+  {
+    "id": "foreign-tax-credit",
+    "term": "Foreign Tax Credit (Form 67 - FTC)",
+    "category": "International investing",
+    "relatedLink": {
+      "title": "Investing in foreign equities from India",
+      "url": "/en/articles/investing-in-foreign-equity-from-india/#w8ben-and-taxes",
+      "language": "en"
+    },
+    "definition": "A form submitted on the income-tax portal to claim, against tax payable in India, credit for tax withheld by a foreign government on income from overseas shares (for example, US dividends). The credit is subject to applicable rules and limits.",
+    "example": "Submitting Form 67 before filing the ITR to claim credit in India for the 25% dividend tax withheld in the US, subject to eligibility and applicable limits."
+  },
+  {
+    "id": "auction-chit-fund",
+    "term": "Auction Chit Fund",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Chit funds",
+      "url": "/en/articles/chit-funds/",
+      "language": "en"
+    },
+    "definition": "A traditional rotating savings arrangement in which a fixed group of members contributes monthly, and each month the pooled amount is auctioned and paid to the member willing to accept the largest discount.",
+    "example": "In a ₹1,00,000 chit with 20 members paying ₹5,000 a month, a member who urgently needs money bids to take ₹80,000; the remaining ₹20,000 is shared among the others as a dividend."
+  },
+  {
+    "id": "gold-chit",
+    "term": "Jeweller Gold Scheme / Gold Chit",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Jeweller gold savings schemes",
+      "url": "/en/articles/gold-chits-jeweller-gold-schemes/",
+      "language": "en"
+    },
+    "definition": "An 11-month monthly savings plan run by jewellery shops. After the customer pays 11 instalments, the shop provides jewellery with a one-month bonus or a discount on making charges and wastage, according to the scheme.",
+    "example": "Paying ₹5,000 a month for 11 months and redeeming the plan at maturity for jewellery worth ₹60,000."
+  },
+  {
+    "id": "cagr",
+    "term": "Compound Annual Growth Rate (CAGR)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "The geometric average growth rate that calculates the annual growth that would have taken an investment from its initial value to its final value at a steady compound rate, smoothing the year-to-year fluctuations in its value.",
+    "example": "If a ₹1,00,000 investment rises to ₹2,00,000 over five years with fluctuations along the way, its compound annual growth rate (CAGR) is about 14.87%."
+  },
+  {
+    "id": "xirr",
+    "term": "Extended Internal Rate of Return (XIRR)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Mutual fund SIP calculator",
+      "url": "/en/calculators/mf_sip_calculator.html",
+      "language": "en"
+    },
+    "definition": "The actual annualized compound return calculated for irregular cash flows, taking their timing into account when money is invested in multiple instalments on different dates (SIP) or withdrawn (SWP/redemptions), rather than invested all at once.",
+    "example": "When investing regularly in a mutual fund at different NAVs each month, XIRR is used instead of a simple average to measure the portfolio's actual rate of return."
+  },
+  {
+    "id": "alpha",
+    "term": "Alpha (α)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "The excess return earned by a particular share or actively managed mutual fund beyond what its level of risk would imply, compared with a market index (benchmark index).",
+    "example": "If a fund's alpha is +2.5, it means that during a period when the market index returned 12%, the fund returned 14.5%."
+  },
+  {
+    "id": "beta",
+    "term": "Beta (β)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "How to build an investment portfolio",
+      "url": "/en/articles/portfolio-creation-approach/",
+      "language": "en"
+    },
+    "definition": "A risk-sensitivity measure showing how much more or less volatile a particular share or mutual fund is compared with the overall stock market or an index.",
+    "example": "If a fund's beta is 1.2, it may rise 12% when the market rises 10%, and may fall 12% when the market falls 10%. A beta below 1.0 indicates lower volatility than the market."
+  },
+  {
+    "id": "real-rate-of-return",
+    "term": "Real Rate of Return",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Inflation calculator",
+      "url": "/en/calculators/inflation-calculator.html",
+      "language": "en"
+    },
+    "definition": "The growth in an investor's actual purchasing power after subtracting the prevailing inflation rate from an investment's nominal return.",
+    "example": "If a bank fixed deposit pays 7% interest while inflation is 6%, your increase in purchasing power (real return) is only 1%."
+  },
+  {
+    "id": "inflation",
+    "term": "Inflation",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Inflation calculator",
+      "url": "/en/calculators/inflation-calculator.html",
+      "language": "en"
+    },
+    "definition": "An economic phenomenon in which the prices of goods and services in the market keep rising over time, gradually reducing money's purchasing power.",
+    "example": "Groceries that cost ₹100 today may cost ₹106 next year at 6% annual inflation, and may double to ₹200 in 12 years."
+  },
+  {
+    "id": "apr",
+    "term": "Annual Percentage Rate (APR)",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Lending products in India",
+      "url": "/en/articles/lending-products-india/",
+      "language": "en"
+    },
+    "definition": "The actual overall annual cost of borrowing, calculated by combining processing, documentation and administrative fees with the stated interest rate, rather than counting only the nominal interest charged on a loan.",
+    "example": "If a bank quotes 12% interest on a personal loan and also charges a 3% processing fee, the actual annual borrowing cost (APR) may be about 14% to 15%, as an illustration."
+  },
+  {
+    "id": "credit-card",
+    "term": "Credit Card",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Credit card strategies and traps",
+      "url": "/en/articles/credit-card-optimization-and-traps/",
+      "language": "en"
+    },
+    "definition": "An electronic card issued by a bank with a set credit limit, allowing customers to buy goods and services without immediate cash and repay the amount, typically within an interest-free grace period of 45 to 50 days. The grace period depends on the billing cycle and generally requires paying the full balance on time.",
+    "example": "Paying the full credit-card balance by the monthly billing due date can avoid interest and may earn cashback offers and reward points, depending on the card's terms."
+  },
+  {
+    "id": "debit-card",
+    "term": "Debit Card",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Banking products in India",
+      "url": "/en/articles/banking-and-savings-products-india/",
+      "language": "en"
+    },
+    "definition": "A bank card linked directly to a customer's savings or current account. When used to withdraw cash from an ATM or pay at a store, the amount is immediately deducted from the available balance in the customer's own bank account.",
+    "example": "If your bank account has ₹25,000 and you spend ₹2,000 with a debit card, ₹2,000 is immediately deducted without borrowing, leaving ₹23,000."
+  },
+  {
+    "id": "crypto-wallet",
+    "term": "Crypto Wallet",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Cryptocurrency and NFT trading",
+      "url": "/en/articles/cryptocurrency-and-nft-trading-india/",
+      "language": "en"
+    },
+    "definition": "Software (a hot wallet) or a dedicated hardware device (a cold hardware wallet) that securely stores public and private keys used to manage and transfer blockchain assets such as Bitcoin and Ethereum.",
+    "example": "To reduce the risk associated with crypto-exchange platforms going down, keeping a private key offline and under your own control in a hardware wallet such as Ledger or Trezor."
+  },
+  {
+    "id": "cibil-score",
+    "term": "CIBIL Score",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Understanding your credit score",
+      "url": "/en/articles/credit-score/",
+      "language": "en"
+    },
+    "definition": "A creditworthiness score from 300 to 900 issued by India's leading credit-information company, TransUnion CIBIL, based on a customer's past credit history, credit-card balances and repayment behavior.",
+    "example": "Banks may approve home and vehicle loans at lower interest rates for a person with a CIBIL score of 750 or higher, subject to their lending criteria."
+  },
+  {
+    "id": "icoe-kit",
+    "term": "In Case of Emergency (ICoE) Kit",
+    "category": "Property & wills",
+    "relatedLink": {
+      "title": "In case of emergency checklist",
+      "url": "/en/checklists/icoe-checklist.html",
+      "language": "en"
+    },
+    "definition": "A systematically prepared emergency guide that helps family members promptly access bank accounts, insurance policies, investments, property documents and passwords if the head of the household faces an unexpected emergency or mishap.",
+    "example": "Organizing bank numbers, original health-insurance policy documents, locker keys and lawyer contacts into eight key sections and keeping them together as an emergency file."
+  },
+  {
+    "id": "financial-dossier",
+    "term": "Financial Dossier",
+    "category": "Property & wills",
+    "relatedLink": {
+      "title": "Personal finance fortification checklist",
+      "url": "/en/checklists/personal-finance-fortification-checklist.html",
+      "language": "en"
+    },
+    "definition": "A structured, comprehensive record of a family's assets of all kinds (bank accounts, shares, mutual funds, gold and real estate), debts, insurance, investor folio numbers, nominee details and legal documents such as a will.",
+    "example": "Auditing and maintaining all financial information annually as a single dossier to help prevent family assets from going unclaimed after an unexpected event."
+  },
+  {
+    "id": "irr",
+    "term": "Internal Rate of Return (IRR)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "How to build an investment portfolio",
+      "url": "/en/articles/portfolio-creation-approach/",
+      "language": "en"
+    },
+    "definition": "The discount rate that makes the net present value (NPV) of the future cash flows from an investment project equal to zero. In other words, it is the actual annual internal rate of return on money invested and received back at specified intervals.",
+    "example": "If ₹50,000 is paid annually for 10 years into a life-insurance endowment plan and ₹10 lakh is received in year 15, its actual annual growth rate (IRR) can be calculated and compared with other investments."
+  },
+  {
+    "id": "floating-rate",
+    "term": "Floating Interest Rate",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Loan prepayment versus equity investing",
+      "url": "/en/articles/loan-prepayment-vs-equity-investment/",
+      "language": "en"
+    },
+    "definition": "An interest-rate structure linked to an external benchmark, such as the Reserve Bank of India's repo rate, that may rise or fall periodically over the loan term as economic conditions change.",
+    "example": "Many home loans are offered at floating rates. If the RBI repo rate falls by 0.5%, the interest rate on a home loan may also fall, potentially reducing the EMI or the loan term, depending on the lender's reset terms."
+  },
+  {
+    "id": "fixed-rate",
+    "term": "Fixed Interest Rate",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Lending products in India",
+      "url": "/en/articles/lending-products-india/",
+      "language": "en"
+    },
+    "definition": "An interest-rate arrangement in which the rate set at the outset remains unchanged for the agreed term of a loan or savings product, even if market rates rise or fall, subject to the contract's terms.",
+    "example": "If a five-year bank fixed deposit is booked at 7.25%, or a vehicle loan at 9.5%, that agreed rate remains unchanged for its term even if market interest rates decline."
+  },
+  {
+    "id": "sharpe-ratio",
+    "term": "Sharpe Ratio",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "A ratio used to assess how much excess return an investment or mutual fund has generated for the additional risk it has taken. Risk is measured using standard deviation.",
+    "example": "Even if two mutual funds both return 14%, a fund with a Sharpe ratio of 1.2 has generated more excess return per unit of volatility than one with a ratio of 0.7; the ratio alone does not guarantee future performance."
+  },
+  {
+    "id": "t-plus-one-settlement",
+    "term": "T+1 Settlement",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Equity and market-linked investment products",
+      "url": "/en/articles/equity-investments-in-india/",
+      "language": "en"
+    },
+    "definition": "A settlement process in which, by the next business day (T+1) after the trading day (T) on which a share is bought or sold, the shares are generally credited to the buyer's demat account and the sale proceeds are credited to the seller, subject to applicable settlement rules.",
+    "example": "If you sell a share on Monday, settlement is generally completed by the end of Tuesday, and the proceeds are credited to your trading account, subject to market holidays and applicable rules."
+  },
+  {
+    "id": "demat-account",
+    "term": "Demat Account",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "How to start investing",
+      "url": "/en/articles/how-to-start-investing/",
+      "language": "en"
+    },
+    "definition": "An electronic account, maintained through a depository such as CDSL or NSDL, that holds shares, mutual-fund units, bonds and government securities in dematerialized rather than paper form.",
+    "example": "To buy and sell shares for delivery in the stock market, you generally need a demat account along with a savings bank account; requirements can differ for other products or types of trading."
+  },
+  {
+    "id": "trading-account",
+    "term": "Trading Account",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "How to start investing",
+      "url": "/en/articles/how-to-start-investing/",
+      "language": "en"
+    },
+    "definition": "An account that provides an interface for placing orders through a stockbroker to buy and sell shares, futures, options and ETFs on exchanges such as the NSE and BSE.",
+    "example": "A trading account acts as a link between a bank account, which holds money, and a demat account, which holds securities, and enables share transactions."
+  },
+  {
+    "id": "forex-account",
+    "term": "Forex Account",
+    "category": "International investing",
+    "relatedLink": {
+      "title": "Currency and commodity trading",
+      "url": "/en/articles/currency-and-commodity-trading-india/",
+      "language": "en"
+    },
+    "definition": "A foreign-exchange account opened with an authorized bank or an overseas broker to buy, sell or hold currencies such as USD, EUR and GBP, or to make international payments, subject to applicable laws and account terms.",
+    "example": "To invest in the US stock market, an investor may convert funds from an Indian bank account into dollars and transfer them to a foreign-currency account with an international broker such as IBKR, in accordance with applicable rules."
+  },
+  {
+    "id": "downside-capture-ratio",
+    "term": "Downside Market Capture Ratio",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "A statistical measure of the percentage of a market or benchmark's declines that a mutual fund has experienced during periods when the market fell. A value below 100% indicates that the fund declined less than the benchmark over the measured period.",
+    "example": "If the market falls by 10% and a fund's downside capture ratio is 75%, the fund would have fallen by 7.5% over the measured period. This indicates a smaller decline than the market in that period, but does not guarantee protection from future losses."
+  },
+  {
+    "id": "upside-capture-ratio",
+    "term": "Upside Market Capture Ratio",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "A measure of the percentage of a market or benchmark's gains that a mutual fund has captured during periods when the market rose. A value above 100% indicates that the fund gained more than the benchmark over the measured period.",
+    "example": "If the market rises by 10% and a fund's upside capture ratio is 115%, the fund would have returned 11.5% over the measured period, outperforming the benchmark in that period; this does not assure similar future performance."
+  },
+  {
+    "id": "risk-adjusted-return",
+    "term": "Risk-adjusted Return",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "A way of assessing an investment's return in relation to the risk or volatility an investor accepted to earn it, rather than looking only at the total profit.",
+    "example": "A balanced fund returning 15% with lower volatility may have a better risk-adjusted return than a high-risk equity fund returning 18%, depending on the period and risk measure used."
+  },
+  {
+    "id": "ebita",
+    "term": "EBITA (Earnings Before Interest, Taxes, and Amortization)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Equity and market-linked investment products",
+      "url": "/en/articles/equity-investments-in-india/",
+      "language": "en"
+    },
+    "definition": "A measure of a company's operating performance that shows profit before interest, taxes and amortization of intangible assets are deducted.",
+    "example": "If a company earns ₹100 crore in revenue and has ₹25 crore of EBITA after its direct operating costs, its EBITA margin is 25%."
+  },
+  {
+    "id": "pat",
+    "term": "Profit After Tax (PAT)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Equity and market-linked investment products",
+      "url": "/en/articles/equity-investments-in-india/",
+      "language": "en"
+    },
+    "definition": "A company's final net profit, or bottom line, remaining from total revenue after expenses such as production costs, wages, selling costs, interest, depreciation and corporate income tax have been deducted.",
+    "example": "If a company reports annual PAT of ₹50 crore and has 1 crore shares, its earnings per share (EPS) is ₹50. The profit may be used for dividends, business expansion or other purposes, subject to company decisions and applicable rules."
+  },
+  {
+    "id": "gross-revenue",
+    "term": "Gross Revenue / Topline",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Equity and market-linked investment products",
+      "url": "/en/articles/equity-investments-in-india/",
+      "language": "en"
+    },
+    "definition": "The total initial amount a company earns from selling goods or services during a quarter or financial year, before deducting discounts, taxes or other deductions.",
+    "example": "If a manufacturer bills ₹120 crore for all goods sold in a year, that amount is its gross revenue."
+  },
+  {
+    "id": "net-revenue",
+    "term": "Net Revenue / Net Sales",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Equity and market-linked investment products",
+      "url": "/en/articles/equity-investments-in-india/",
+      "language": "en"
+    },
+    "definition": "The sales income remaining after deductions such as customer discounts, returned defective goods and direct trading deductions such as GST are removed from a company's gross revenue.",
+    "example": "If gross sales are ₹100 crore, discounts are ₹5 crore and product returns are ₹3 crore, net sales revenue is ₹92 crore, before any other applicable deductions."
+  },
+  {
+    "id": "cogs",
+    "term": "Cost of Goods Sold (COGS)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Equity and market-linked investment products",
+      "url": "/en/articles/equity-investments-in-india/",
+      "language": "en"
+    },
+    "definition": "The combined direct costs of raw materials and direct labor used to manufacture the goods a company sells or provide its services.",
+    "example": "If a car manufacturer spends ₹6,00,000 on steel, a battery, components and assembly labor to make a car, those costs form the car's COGS. Administrative office costs are not included."
+  },
+  {
+    "id": "pe-ratio",
+    "term": "Price-to-Earnings Ratio (P/E Ratio)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Equity and market-linked investment products",
+      "url": "/en/articles/equity-investments-in-india/",
+      "language": "en"
+    },
+    "definition": "A valuation measure calculated by dividing a company's current share price by its annual earnings per share (EPS). It helps investors compare a share's price with its earnings, but does not by itself establish whether the share is cheap or expensive.",
+    "example": "If a company's share price is ₹500 and its EPS is ₹25, its P/E ratio is 20 (500/25). This means investors are paying ₹20 for each ₹1 of reported earnings per share."
+  },
+  {
+    "id": "regular-mutual-fund",
+    "term": "Regular Mutual Fund",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Regular versus direct mutual funds",
+      "url": "/en/articles/regular-vs-direct-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "A mutual-fund plan purchased through a bank, financial broker or mutual-fund distributor. Distributor commissions are paid from the plan's expenses, so its expense ratio is generally higher than that of the corresponding direct plan and its returns after expenses may be lower.",
+    "example": "If a regular plan has an expense ratio of 1.8%, of which 0.8% goes to the distributor as commission, that cost may reduce the benefit of compounding over a long investment period."
+  },
+  {
+    "id": "direct-mutual-fund",
+    "term": "Direct Mutual Fund",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Regular versus direct mutual funds",
+      "url": "/en/articles/regular-vs-direct-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "A mutual-fund plan in which an investor invests directly through the asset management company's (AMC's) website or a registered direct-investment platform, without a distributor. Because distributor commission is not included, its expense ratio is generally lower than that of the corresponding regular plan; all else being equal, this may improve returns after expenses.",
+    "example": "If a direct plan has an expense ratio of 0.8% compared with 1.8% for its regular plan, the 1% annual cost difference may compound over a 20-year investment and result in a substantially larger final amount, depending on returns and other costs."
+  },
+  {
+    "id": "t-bills",
+    "term": "Treasury Bills (T-Bills)",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Savings and debt instruments in India",
+      "url": "/en/articles/savings-and-debt-instruments-india/",
+      "language": "en"
+    },
+    "definition": "Short-term sovereign money-market instruments issued by the Reserve Bank of India on behalf of the Government of India, with maturities of 91, 182 or 364 days, to meet the central government's short-term funding needs. They are generally considered to have very low default risk as government obligations, but are not free of all investment risks.",
+    "example": "An investor might buy a T-bill with a face value of ₹100 for ₹96 at a discount and receive ₹100 at maturity. The ₹4 difference is the investor's return; no separate interest payment is made."
+  },
+  {
+    "id": "gov-bonds",
+    "term": "Government Bonds (G-Secs)",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Savings and debt instruments in India",
+      "url": "/en/articles/savings-and-debt-instruments-india/",
+      "language": "en"
+    },
+    "definition": "Sovereign debt securities issued by central or state governments, often for long-term financing needs such as highways and infrastructure, with maturities that may range from 5 to 40 years. Interest-payment frequency and terms depend on the bond; fixed-rate bonds commonly pay interest semi-annually. Government backing does not eliminate market, inflation or reinvestment risks.",
+    "example": "An investor can use the RBI Retail Direct platform to invest in a 10-year government bond. If its terms specify a 7.1% annual coupon paid semi-annually, those payments are made according to the issue terms; the bond's market value can still fluctuate."
+  },
+  {
+    "id": "rbi-bonds",
+    "term": "RBI Floating Rate Savings Bonds (FRSB)",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Savings and debt instruments in India",
+      "url": "/en/articles/savings-and-debt-instruments-india/",
+      "language": "en"
+    },
+    "definition": "A seven-year floating-rate savings bond issued by the Reserve Bank of India for individuals and senior citizens. Its interest rate is set at 0.35 percentage points above the National Savings Certificate (NSC) rate and interest is credited to the investor's bank account every six months, subject to the applicable scheme terms and rate revisions.",
+    "example": "If the NSC rate is 7.7% and the scheme's stated spread is 0.35 percentage points, the RBI bond rate would be 8.05% for the relevant period. The bond is backed by the central government, but rates, terms and the purchasing power of returns should be considered."
+  },
+  {
+    "id": "credit-rating",
+    "term": "Credit Rating",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Savings and debt instruments in India",
+      "url": "/en/articles/savings-and-debt-instruments-india/",
+      "language": "en"
+    },
+    "definition": "A grade, such as AAA, AA, A, BBB or D, assigned by a SEBI-registered credit-rating agency after assessing an issuer's ability to repay principal and interest on securities, deposits or loans on time. A rating is an opinion of credit risk, not a guarantee of repayment.",
+    "example": "An AAA rating on a company's bond indicates the agency's highest category of creditworthiness, while a D rating generally indicates that the issuer is in default on an obligation. Ratings do not remove investment risk."
+  },
+  {
+    "id": "crisil",
+    "term": "CRISIL (Credit Rating Information Services of India Limited)",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Savings and debt instruments in India",
+      "url": "/en/articles/savings-and-debt-instruments-india/",
+      "language": "en"
+    },
+    "definition": "CRISIL is described as India's first and largest credit-rating agency and is a subsidiary of S&P Global (formerly Standard & Poor's). It assesses the creditworthiness of companies, banks and financial institutions and publishes ratings and financial-analysis reports.",
+    "example": "A CRISIL AAA rating on a bank fixed deposit or corporate bond indicates a high rating category under CRISIL's scale, but is not a guarantee that the investment is risk-free or that repayment is certain."
+  },
+  {
+    "id": "bond-yield",
+    "term": "Yield / Bond Yield",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Savings and debt instruments in India",
+      "url": "/en/articles/savings-and-debt-instruments-india/",
+      "language": "en"
+    },
+    "definition": "The percentage return an investor earns annually from a bond in relation to its market price. When a bond's market price rises, its yield generally falls; when its price falls, its yield generally rises, all else being equal.",
+    "example": "If a bond with a face value of ₹1,000 and an 8% coupon is bought for ₹950, its current yield is about 8.42% (₹80/₹950). This is not necessarily the same as its yield to maturity."
+  },
+  {
+    "id": "coupon-rate",
+    "term": "Coupon / Coupon Rate",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Savings and debt instruments in India",
+      "url": "/en/articles/savings-and-debt-instruments-india/",
+      "language": "en"
+    },
+    "definition": "The stated interest rate that a bond issuer, such as a company or government, agrees to pay the bondholder at specified intervals, usually annually or semi-annually, calculated on the bond's face value.",
+    "example": "The stated annual coupon on a government bond with a face value of ₹10,000 and a 7.5% coupon is ₹750, typically paid according to the bond's schedule, subject to the issuer meeting its obligations. The market price does not change the coupon calculation."
+  },
+  {
+    "id": "debenture",
+    "term": "Debenture / Corporate Bond",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Savings and debt instruments in India",
+      "url": "/en/articles/savings-and-debt-instruments-india/",
+      "language": "en"
+    },
+    "definition": "A medium- or long-term debt instrument issued by a company to raise funds from the public or institutional investors, often for business expansion. It may have a stated interest rate and maturity date; its exact security and repayment terms depend on the issue.",
+    "example": "A large manufacturer may issue a five-year corporate debenture to raise capital for expansion. Whether its rate is lower than a bank loan depends on the issuer and prevailing terms."
+  },
+  {
+    "id": "ncd",
+    "term": "Non-Convertible Debentures / NCD",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Savings and debt instruments in India",
+      "url": "/en/articles/savings-and-debt-instruments-india/",
+      "language": "en"
+    },
+    "definition": "A non-convertible debenture (NCD) is a fixed-income debt instrument that cannot be converted into company shares at maturity. NCDs may offer a higher stated interest rate than some bank deposits, but returns and repayment are subject to the issuer's terms and credit risk. They may be secured or unsecured.",
+    "example": "An investor may consider a three-year secured NCD issued by an NBFC with a stated annual interest rate of 9.25%, after assessing its credit rating, security, payment terms and risks."
+  },
+  {
+    "id": "subordinate-debt",
+    "term": "Subordinate Debt / Junior Debt",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Savings and debt instruments in India",
+      "url": "/en/articles/savings-and-debt-instruments-india/",
+      "language": "en"
+    },
+    "definition": "Debt issued on terms that, if the issuer enters insolvency or liquidation, place its repayment behind senior debt. It often carries a higher interest rate to compensate for the additional risk, but recovery is not assured.",
+    "example": "Banks may issue subordinated bonds as Tier 2 capital. Although these may pay higher interest, investors may face a greater risk of loss if the bank encounters financial distress."
+  },
+  {
+    "id": "face-value",
+    "term": "Face Value / Par Value",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Equity and market-linked investment products",
+      "url": "/en/articles/equity-investments-in-india/",
+      "language": "en"
+    },
+    "definition": "The nominal value officially assigned to a share or bond when it is first issued. Dividends on shares and coupon interest on bonds are generally calculated using face value, not the current market price, subject to the issue terms and the company's declared dividend.",
+    "example": "If a share has a face value of ₹10 and a market price of ₹1,500, a dividend declared at 200% of face value would amount to ₹20 per share, before any applicable taxes."
+  },
+  {
+    "id": "ipo",
+    "term": "Initial Public Offering / IPO",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Equity and market-linked investment products",
+      "url": "/en/articles/equity-investments-in-india/",
+      "language": "en"
+    },
+    "definition": "The process by which a previously unlisted company offers shares to the public for the first time and lists them on a stock exchange such as the NSE or BSE, to raise capital for expansion or to provide an exit for existing investors.",
+    "example": "Investors may apply for an IPO through the ASBA process and, if allotted shares at the issue price, may sell them after listing. A listing gain is possible but is not guaranteed."
+  },
+  {
+    "id": "repo-rate",
+    "term": "Repo Rate / Repurchasing Option Rate",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Loan prepayment versus equity investing",
+      "url": "/en/articles/loan-prepayment-vs-equity-investment/",
+      "language": "en"
+    },
+    "definition": "The Reserve Bank of India's policy interest rate for short-term loans to commercial banks against government securities. Changes in the repo rate can influence bank lending rates, including home and vehicle loan rates, but the timing and extent of any change depend on the lender, benchmark and loan terms.",
+    "example": "If the RBI raises the repo rate to 6.50% to address inflation, a bank may raise a home-loan rate, for example from 8.5% to 9.0%, and adjust the EMI or loan term according to the loan agreement."
+  },
+  {
+    "id": "capital-adequacy-ratio",
+    "term": "Capital Adequacy Ratio / CAR / CRAR",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Banking products in India",
+      "url": "/en/articles/banking-and-savings-products-india/",
+      "language": "en"
+    },
+    "definition": "A measure, under Basel III and related rules, of a bank's capital relative to its risk-weighted assets. It indicates the capital buffer available to absorb unexpected losses and help protect depositors; a higher ratio alone does not guarantee a bank's safety.",
+    "example": "If a private bank's CAR is 16%, above the cited RBI minimum of 9%, that indicates a larger capital buffer relative to the minimum requirement and may improve its capacity to absorb losses. Applicable requirements can vary."
+  },
+  {
+    "id": "pb-ratio",
+    "term": "Price-to-Book Ratio or P/B Ratio",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Equity and market-linked investment products",
+      "url": "/en/articles/equity-investments-in-india/",
+      "language": "en"
+    },
+    "definition": "A valuation measure comparing a company's current share price with its book value per share. It is often used to assess banks, financial institutions and asset-heavy companies, but should be considered alongside other information.",
+    "example": "If a bank's share price is ₹150 and its book value per share is ₹100, its P/B ratio is 1.5. A ratio below 1 means the share is trading below book value, but does not by itself mean it is undervalued."
+  },
+  {
+    "id": "roe",
+    "term": "Return on Equity / ROE",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Equity and market-linked investment products",
+      "url": "/en/articles/equity-investments-in-india/",
+      "language": "en"
+    },
+    "definition": "A measure of the net profit a company earns in relation to the shareholders' equity invested in it, expressed as a percentage. It is one indicator of profitability and management performance, not a standalone measure of investment quality.",
+    "example": "If a company's shareholders' equity is ₹1,000 crore and its annual net profit is ₹180 crore, its ROE is 18%. A consistently high ROE, sometimes benchmarked against a 15% heuristic, may be one factor to examine when assessing a company."
+  },
+  {
+    "id": "huf",
+    "term": "Hindu Undivided Family / HUF",
+    "category": "Property & wills",
+    "relatedLink": {
+      "title": "Why writing a will matters",
+      "url": "/en/articles/importance-of-writing-a-will/",
+      "language": "en"
+    },
+    "definition": "A Hindu Undivided Family (HUF) is a legal tax entity under Indian tax law that may obtain a separate PAN and manage eligible family property and income. Its senior member is called the Karta and other eligible members are coparceners. Its tax treatment and deductions depend on applicable law and eligibility.",
+    "example": "A family may open a bank account and obtain a PAN in the HUF's name to manage eligible investments in shares or real estate. Any separate tax treatment or deductions depend on the source and ownership of income and the applicable rules; they are not automatic."
+  },
+  {
+    "id": "fund-manager",
+    "term": "Fund Manager",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "A qualified investment professional at a mutual fund or asset management company (AMC) who decides which shares or bonds to invest in and manages the fund's portfolio in line with its mandate.",
+    "example": "In an actively managed mutual fund, the fund manager may select companies after research in an effort to earn returns above the market benchmark (alpha); outperformance is not assured."
+  },
+  {
+    "id": "mutual-fund",
+    "term": "Mutual Fund",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "A pooled investment vehicle that collects money from multiple investors and invests it in shares, bonds and other financial assets under the guidance of professional fund managers.",
+    "example": "Someone who does not have time to research shares or bonds individually may invest through a monthly SIP in a professionally managed mutual fund. Returns and wealth creation are not guaranteed."
+  },
+  {
+    "id": "passive-mutual-fund",
+    "term": "Passive Mutual Fund",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "A mutual fund that holds the securities in a specified market index, such as the Nifty 50 or Sensex, in proportions designed to track that index, without active security selection by a fund manager. Such funds generally have lower expense ratios than actively managed funds, though costs vary.",
+    "example": "A Nifty 50 index fund seeks to track the performance of the 50 companies in that index and is an example of a passively managed mutual fund."
+  },
+  {
+    "id": "passive-fund",
+    "term": "Passive Fund",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "A relatively low-cost investment fund that follows specified rules or tracks a market index, rather than relying on a fund manager's ongoing research or individual judgments to select securities. Index funds and index ETFs are examples.",
+    "example": "Rule-based investing without individual stock-selection decisions and a low management fee, such as 0.10% to 0.25% in some products, can be features of passive funds; fees vary by fund."
+  },
+  {
+    "id": "passive-income",
+    "term": "Passive Income",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Real estate investment trusts",
+      "url": "/en/articles/reit/",
+      "language": "en"
+    },
+    "definition": "Cash-flow income earned periodically from investments and assets that have already been built up, with less need for ongoing daily labor or direct office work. It may still require oversight and is not necessarily steady or guaranteed.",
+    "example": "Dividends from shares, quarterly distributions from REIT units and interest from bonds are examples of income from investments that may contribute to financial independence; payments and amounts can vary."
+  },
+  {
+    "id": "ice-kit",
+    "term": "In Case of Emergency (ICE) Kit",
+    "category": "Insurance",
+    "relatedLink": {
+      "title": "In case of emergency kit",
+      "url": "/en/articles/in-case-of-emergency-kit/",
+      "language": "en"
+    },
+    "definition": "An organized emergency file of financial documents and account details that helps family members access insurance, bank accounts, investments and will information if the head of the household faces an unexpected accident, serious illness or death.",
+    "example": "Maintain a complete ICE kit containing bank details, term-insurance policies, health-insurance cards, locker-key information and investment-portfolio records, stored securely with access instructions for trusted family members."
+  },
+  {
+    "id": "financial-fortification",
+    "term": "Personal Finance Fortification",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Personal finance fortification",
+      "url": "/en/articles/personal-finance-fortification/",
+      "language": "en"
+    },
+    "definition": "A comprehensive financial safety plan combining an emergency fund, pure term insurance, health insurance and debt management to help protect a family's future from unexpected financial hardship, medical costs or job loss.",
+    "example": "Build a financial safety net for the family by setting aside an emergency fund for six months of household expenses, obtaining ₹1 crore of term insurance where appropriate, and working toward a debt-free lifestyle."
+  },
+  {
+    "id": "sebi-ria",
+    "term": "SEBI Registered Investment Advisor (RIA)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "SEBI-registered investment advisers",
+      "url": "/en/articles/sebi-registered-investment-advisors/",
+      "language": "en"
+    },
+    "definition": "A fee-only financial adviser registered with the Securities and Exchange Board of India (SEBI), who provides financial and investment guidance on an advisory-fee basis without relying on product commissions, subject to the applicable regulatory and compensation rules.",
+    "example": "Instead of choosing commission-based products, an investor may pay a transparent advisory fee to a SEBI-registered investment adviser for investment planning."
+  },
+  {
+    "id": "minimum-amount-due",
+    "term": "Minimum Amount Due (MAD)",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Credit card strategies and traps",
+      "url": "/en/articles/credit-card-optimization-and-traps/",
+      "language": "en"
+    },
+    "definition": "The minimum payment specified on a credit-card statement. Paying it by the due date may help avoid a late-payment fee, subject to the issuer's terms. Paying only this amount leaves a balance on which interest may be charged; the minimum and interest rate vary by card.",
+    "example": "On an outstanding balance of ₹1,00,000, paying only the ₹5,000 minimum amount due may reduce the principal by only about ₹870 after interest and GST in the stated example."
+  },
+  {
+    "id": "grace-period",
+    "term": "Interest-Free Grace Period",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Credit card strategies and traps",
+      "url": "/en/articles/credit-card-optimization-and-traps/",
+      "language": "en"
+    },
+    "definition": "The interest-free period, often about 45 to 50 days depending on the card's billing cycle and terms, between a credit-card transaction and the payment due date. Even a small unpaid balance may cause the interest-free benefit to be lost, and interest may be calculated from the transaction date under the issuer's terms.",
+    "example": "A purchase on May 5 followed by a June 9 payment due date has a 35-day interval. Paying the full bill by the due date may avoid interest, subject to the card's terms."
+  },
+  {
+    "id": "zero-cost-emi",
+    "term": "Zero Cost EMI / No Cost EMI",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Credit card strategies and traps",
+      "url": "/en/articles/credit-card-optimization-and-traps/",
+      "language": "en"
+    },
+    "definition": "A financing arrangement marketed as interest-free EMI. A merchant may offset the interest through an upfront discount, but the customer may still have to pay GST on interest, where applicable, and processing fees or other charges, depending on the offer.",
+    "example": "Buying a phone worth ₹60,000 on a six-month no-cost EMI may still involve ₹700 or more in additional costs from GST on interest and processing fees, depending on the offer's terms."
+  },
+  {
+    "id": "mdr",
+    "term": "Merchant Discount Rate (MDR)",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Credit card strategies and traps",
+      "url": "/en/articles/credit-card-optimization-and-traps/",
+      "language": "en"
+    },
+    "definition": "The merchant discount rate (MDR) is a fee, often around 1.5% to 2% but varying by card and agreement, charged to a merchant when a customer pays by card. It compensates participants such as the acquiring bank and card network for providing payment services.",
+    "example": "MDR paid by merchants on transactions is one source of revenue for banks and card networks from customers who pay their credit-card bills in full by the due date; it is not necessarily their only source of revenue."
+  },
+  {
+    "id": "cur",
+    "term": "Credit Utilization Ratio (CUR)",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Credit card strategies and traps",
+      "url": "/en/articles/credit-card-optimization-and-traps/",
+      "language": "en"
+    },
+    "definition": "The percentage of a person's total available credit limit that they use during a given period. Keeping credit utilization below 30% is a commonly suggested guideline that may support a healthy credit profile, but it does not guarantee a particular CIBIL score.",
+    "example": "On a credit limit of ₹1,00,000, spending no more than ₹30,000 in a month represents a 30% CUR and is within the commonly used guideline."
+  },
+  {
+    "id": "spiva",
+    "term": "S&P Indices Versus Active (SPIVA)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "A research report published by S&P that compares the performance of actively managed mutual funds with their benchmarks, including the share of funds that underperform over specified periods. The findings vary by category, market and reporting period.",
+    "example": "A SPIVA India report found that more than 80% of large-cap active funds underperformed the Nifty 50 over the cited five- to ten-year periods. Results depend on the period and report edition."
+  },
+  {
+    "id": "compounding-drag",
+    "term": "Compounding Drag / Expense Drag",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "The loss of potential growth when additional annual expenses, such as a higher total expense ratio (TER) in an actively managed mutual fund, reduce the amount left to compound over time and may lower the investor's final corpus.",
+    "example": "An additional expense ratio of 1.5% could reduce total wealth creation by 30% to 40% over a 25-year investment under some return and fee assumptions; the actual effect depends on those assumptions."
+  },
+  {
+    "id": "core-and-satellite",
+    "term": "Core and Satellite Investment Strategy",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "A portfolio strategy that keeps a larger share, often 60%–70%, in simple, low-cost index funds (the core) and allocates the remaining 30%–40% to options such as mid-cap, small-cap or international funds (the satellite), which may offer additional return potential but can carry different risks.",
+    "example": "One illustrative allocation is 70% in Nifty 50 and Nifty Next 50 index funds as the core, plus 30% in mid-cap funds or US shares as the satellite. This is an example, not a recommendation for every investor."
+  },
+  {
+    "id": "patta",
+    "term": "Patta (Land Revenue Record)",
+    "category": "Property & wills",
+    "relatedLink": {
+      "title": "Risks of real estate investing",
+      "url": "/en/articles/hidden-risks-of-real-estate-investments-india/",
+      "language": "en"
+    },
+    "definition": "An official land-revenue record showing the person in whose name a particular land parcel or property is recorded. A patta is relevant evidence but may not, by itself, conclusively establish legal title; registration and other title records may also need to be checked. A registered sale deed may need to be followed by an application to update the patta.",
+    "example": "After registering a sale deed, apply to the revenue department for a patta transfer and verify that the land is recorded in the buyer's name."
+  },
+  {
+    "id": "power-of-attorney",
+    "term": "Power of Attorney (PoA)",
+    "category": "Property & wills",
+    "relatedLink": {
+      "title": "Risks of real estate investing",
+      "url": "/en/articles/hidden-risks-of-real-estate-investments-india/",
+      "language": "en"
+    },
+    "definition": "A legal document by which a property owner authorizes another person to manage or sell the property, or take legal actions on the owner's behalf. A power of attorney ordinarily ends on revocation or the principal's death, subject to the instrument and applicable law.",
+    "example": "For property proposed to be sold under a General Power of Attorney, carefully verify that the original owner is alive and that the authority has not been revoked, along with the document's validity under applicable law."
+  },
+  {
+    "id": "legal-heir",
+    "term": "Legal Heir",
+    "category": "Property & wills",
+    "relatedLink": {
+      "title": "Why writing a will matters",
+      "url": "/en/articles/importance-of-writing-a-will/",
+      "language": "en"
+    },
+    "definition": "A person legally entitled to inherit a deceased person's property when the person dies without a will. The eligible heirs and their shares depend on the applicable succession law; for example, a spouse, children and mother may be Class I heirs in an intestate Hindu succession.",
+    "example": "When a Hindu person dies without a will, the estate devolves on Class I heirs under Section 8 of the Hindu Succession Act, subject to the Act's rules for determining each heir's share."
+  },
+  {
+    "id": "attestation",
+    "term": "Attestation of Will",
+    "category": "Property & wills",
+    "relatedLink": {
+      "title": "Why writing a will matters",
+      "url": "/en/articles/importance-of-writing-a-will/",
+      "language": "en"
+    },
+    "definition": "A legal procedure in which at least two competent witnesses sign at the end of a will to confirm that the person making it signed in their full senses and in their presence.",
+    "example": "A person named as a beneficiary in a will should generally not attest it; doing so may affect the bequest to that beneficiary and, depending on applicable law, may have consequences for the will's validity."
+  },
+  {
+    "id": "front-loaded-interest",
+    "term": "Front-loaded Interest (Amortization)",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Loan prepayment versus equity investing",
+      "url": "/en/articles/loan-prepayment-vs-equity-investment/",
+      "language": "en"
+    },
+    "definition": "In a reducing-balance loan, the interest portion of an EMI is often higher early in the term because the outstanding principal is larger. The proportion varies with the loan's rate, tenure and payment schedule.",
+    "example": "On an illustrative ₹50 lakh home loan at 8.5% over 20 years, approximately ₹20 lakh of the ₹26 lakh paid in EMIs over the first five years is interest, with the remainder reducing principal."
+  },
+  {
+    "id": "foreclosure-penalty",
+    "term": "Foreclosure / Prepayment Penalty",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Loan prepayment versus equity investing",
+      "url": "/en/articles/loan-prepayment-vs-equity-investment/",
+      "language": "en"
+    },
+    "definition": "A charge a lender may levy when a borrower repays the entire loan before the end of its term. Under applicable Reserve Bank of India rules, such charges are generally not permitted on qualifying floating-rate home loans to individuals.",
+    "example": "Under RBI rules, qualifying floating-rate home loans are generally not subject to a prepayment charge; the applicable rules and loan terms should be checked."
+  },
+  {
+    "id": "dtaa",
+    "term": "Double Taxation Avoidance Agreement (DTAA)",
+    "category": "International investing",
+    "relatedLink": {
+      "title": "Investing in foreign equities from India",
+      "url": "/en/articles/investing-in-foreign-equity-from-india/",
+      "language": "en"
+    },
+    "definition": "An international tax agreement between two countries intended to prevent the same income, such as dividends or capital gains from foreign investments, from being taxed twice in the country where it is earned and in the investor's home country.",
+    "example": "Under the India–US DTAA example, if 25% tax is withheld in the United States on dividends from US shares, an investor may be able to claim the tax in India as a Foreign Tax Credit (FTC), subject to eligibility and applicable rules."
+  },
+  {
+    "id": "chit-foreman",
+    "term": "Chit Foreman",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Chit funds",
+      "url": "/en/articles/chit-funds/",
+      "language": "en"
+    },
+    "definition": "The person legally responsible for properly registering and administering a chit under the Chit Funds Act, collecting monthly instalments from subscribers, conducting auctions and paying the successful bidder.",
+    "example": "In a registered chit, the foreman may collect a commission of up to 5% of the total chit amount for their services."
+  },
+  {
+    "id": "cas",
+    "term": "Consolidated Account Statement (CAS)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "In case of emergency kit",
+      "url": "/en/articles/in-case-of-emergency-kit/",
+      "language": "en"
+    },
+    "definition": "An official consolidated financial statement that brings together, in one document each month, an investor's financial investments across different mutual fund schemes (AMCs), shares and demat accounts (CDSL / NSDL / CAMS / KFintech).",
+    "example": "Download the monthly CAS statement in a single email from CAMS or NSDL to conveniently track the current market value of the family's combined investments."
+  },
+  {
+    "id": "mega-cap",
+    "term": "Mega Cap",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "The roughly top 20 to 50 companies at the very largest end of the large-cap segment by market capitalisation. These companies, often prominent in indices such as the Nifty 50 and Nifty Top 20, are generally considered relatively lower-risk and financially established, but are not free of market risk.",
+    "example": "Reliance, TCS, Infosys and HDFC Bank are among India's leading companies commonly classed as mega-caps; their size may help them withstand economic slowdowns, but does not ensure that they will do so."
+  },
+  {
+    "id": "multi-asset-fund",
+    "term": "Multi-Asset Allocation Fund",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "How to build an investment portfolio",
+      "url": "/en/articles/portfolio-creation-approach/",
+      "language": "en"
+    },
+    "definition": "A hybrid mutual fund scheme that, under SEBI's framework, invests at least 10% each in a minimum of three different asset classes, such as equities, debt instruments, and gold or silver (commodities).",
+    "example": "An allocation of 65% to equities, 20% to debt instruments and 15% to gold through one scheme spreads investments across assets; gold may help cushion the portfolio during an equity-market decline, but does not guarantee capital protection."
+  },
+  {
+    "id": "nav",
+    "term": "Net Asset Value (NAV)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Regular versus direct mutual funds",
+      "url": "/en/articles/regular-vs-direct-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "The current value of one unit of a mutual fund scheme. NAV is calculated by subtracting the scheme's liabilities and expenses from the market value of its total assets, then dividing the remainder by the total number of units. The daily NAV is published in the evening after the stock-market trading day ends.",
+    "example": "If a mutual fund's NAV is ₹50 and you invest ₹5,000, you receive 100 units. If the NAV rises to ₹60 after a few months, the current value of your 100 units becomes ₹6,000 (100 × 60)."
+  },
+  {
+    "id": "aum",
+    "term": "Assets Under Management (AUM)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "The combined current market value of all investments managed for investors by a mutual fund scheme or an asset management company (AMC). A higher AUM may support liquidity, while an excessively large AUM in mid-cap or small-cap segments can make it more challenging for a fund manager to select stocks.",
+    "example": "If a particular Nifty 50 index fund has an AUM of ₹30,000 crore, investors have entrusted ₹30,000 crore to the scheme; a large AUM may support liquidity and lower impact costs, but does not by itself ensure either."
+  },
+  {
+    "id": "exit-load",
+    "term": "Exit Load",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Mutual fund SWP calculator",
+      "url": "/en/calculators/mf_swp_calculator.html",
+      "language": "en"
+    },
+    "definition": "A charge collected from an investor when they redeem or switch mutual fund units within a specified period after investing (for example, 7 days, 90 days or 1 year). It is intended to discourage short-term speculation, encourage longer-term investing and protect the interests of other investors.",
+    "example": "If an equity scheme charges a 1% exit load on redemptions within 1 year, selling units worth ₹1,00,000 after 8 months would incur a ₹1,000 charge, leaving ₹99,000 before any other applicable charges or taxes. If sold after 1 year, the example's exit load is 0%."
+  },
+  {
+    "id": "lock-in-period",
+    "term": "Lock-in Period",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Personal finance fortification",
+      "url": "/en/articles/personal-finance-fortification/",
+      "language": "en"
+    },
+    "definition": "The minimum period for which invested money is mandatorily locked in by law or scheme rules and cannot be sold, withdrawn or transferred. Lock-in periods are intended to discourage panic exits and support long-term capital formation in tax-benefit schemes offered by the government and mutual funds.",
+    "example": "Each instalment invested in an ELSS mutual fund has a 3-year lock-in; a PPF account has a 15-year lock-in. The money cannot be fully withdrawn for emergencies until the applicable lock-in ends, subject to the scheme's rules."
+  },
+  {
+    "id": "elss",
+    "term": "Equity Linked Savings Scheme (ELSS)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Equity and market-linked investment products",
+      "url": "/en/articles/equity-investments-in-india/",
+      "language": "en"
+    },
+    "definition": "An equity-oriented mutual fund scheme that qualifies for a deduction of up to ₹1.50 lakh per financial year under Section 80C of the Income Tax Act under the old tax regime. Compared with other 80C savings options such as PPF (15 years), FD (5 years) and NSC (5 years), it has a relatively short 3-year lock-in.",
+    "example": "For a person in the 30% tax bracket under the old tax regime, investing ₹1.5 lakh a year in ELSS may save up to ₹46,800 in tax under Section 80C, subject to eligibility and applicable limits; after 3 years, the investment may also grow through the equity market, but returns are not guaranteed."
+  },
+  {
+    "id": "ppf",
+    "term": "Public Provident Fund (PPF)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "PPF calculator",
+      "url": "/en/calculators/ppf_returns_calculator.html",
+      "language": "en"
+    },
+    "definition": "A long-term small-savings scheme backed by the central government, with a 15-year maturity. Under applicable rules, contributions (up to ₹1.5 lakh under Section 80C), interest earned and the maturity amount receive tax-exempt treatment (EEE—Exempt, Exempt, Exempt). A minimum of ₹500 and a maximum of ₹1.5 lakh can be deposited each year at post offices and authorised banks.",
+    "example": "If someone deposits ₹1.5 lakh each year into PPF by April 5 for 15 years, interest at the rate set by the government each quarter (7.1% at the time described) compounds; the maturity value could be about ₹40+ lakh, subject to rates and rules, with tax treatment as applicable."
+  },
+  {
+    "id": "epf",
+    "term": "Employees' Provident Fund (EPF)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "EPF calculator",
+      "url": "/en/calculators/epf_calculator.html",
+      "language": "en"
+    },
+    "definition": "A statutory retirement-savings scheme administered by EPFO for employees of establishments with 20 or more employees. Each month, 12% of the employee's basic pay and dearness allowance (Basic + DA) is contributed by the employee, with an employer contribution of 12% divided between EPF and EPS. Interest is credited at a rate announced annually by the central government.",
+    "example": "For an employee with basic pay of ₹30,000, ₹3,600 (12%) is deducted each month and, together with the employer's contribution, credited to the EPFO account; it may build into a retirement corpus with interest, available on retirement or when changing jobs under applicable rules."
+  },
+  {
+    "id": "nps",
+    "term": "National Pension System (NPS)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Retirement calculator",
+      "url": "/en/calculators/retirement-calculator.html",
+      "language": "en"
+    },
+    "definition": "A market-linked, long-term central-government retirement investment scheme administered by the Pension Fund Regulatory and Development Authority (PFRDA). Contributions are allocated, according to the investor's choice, among equities (E), corporate debt (C) and government securities (G-Sec). An additional tax benefit of up to ₹50,000 is available under Section 80CCD(1B), subject to eligibility and tax rules. At age 60, up to 60% may be withdrawn as a lump sum with the stated tax treatment, and the remaining 40% is used to purchase an annuity, under applicable rules.",
+    "example": "If someone invests ₹5,000 a month in NPS for 30 years with a 75% equity allocation, they may have a substantial retirement corpus at age 60 and may receive a monthly pension for life through an annuity; outcomes depend on investment returns and annuity terms."
+  },
+  {
+    "id": "stp",
+    "term": "Systematic Transfer Plan (STP)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "How to start investing",
+      "url": "/en/articles/how-to-start-investing/",
+      "language": "en"
+    },
+    "definition": "A strategy for automatically transferring a fixed amount at regular intervals (weekly or monthly) from one scheme of a mutual fund company—often a lower-risk liquid or debt fund—to another, often an equity fund with higher growth potential. It can help spread the timing of a lump-sum investment and reduce exposure to investing it all at a market peak.",
+    "example": "Instead of investing the ₹12 lakh received from selling a house in equities all at once, place it in a liquid fund and transfer ₹50,000 a month for 24 months through an STP to a Nifty 50 index fund, which may help manage exposure to market fluctuations."
+  },
+  {
+    "id": "risk-tolerance-appetite",
+    "term": "Risk Tolerance / Risk Appetite",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "How to build an investment portfolio",
+      "url": "/en/articles/portfolio-creation-approach/",
+      "language": "en"
+    },
+    "definition": "Two related measures of an investor's financial and psychological ability to face market fluctuations and investment losses. Risk tolerance/capacity is the actual financial ability to bear losses, based on factors such as age, income, savings and family responsibilities. Risk appetite is the investor's psychological willingness to accept losses in pursuit of higher returns.",
+    "example": "A 28-year-old with a stable IT job and few family responsibilities may have high financial risk capacity. But if a 10% market fall causes them to lose sleep and sell their shares in fear, their psychological risk appetite may be low."
+  },
+  {
+    "id": "stcg",
+    "term": "Short Term Capital Gains (STCG)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Equity and market-linked investment products",
+      "url": "/en/articles/equity-investments-in-india/",
+      "language": "en"
+    },
+    "definition": "Profit earned when an investment asset is sold within the applicable short-term holding period is called short-term capital gain (STCG). The period varies by asset: 12 months or less for shares and equity mutual funds, and 24 months for real estate and gold. Under the 2024 Union Budget rules cited here, STCG on shares and equity mutual funds is taxed at 20% under Section 111A (previously 15%); gains from debt-oriented schemes are taxed at the individual's slab rate, subject to applicable law.",
+    "example": "If shares bought for ₹1,00,000 in January are sold for ₹1,40,000 in October of the same year (after 10 months), the ₹40,000 profit is STCG. At the stated 20% rate, the tax would be ₹8,000, subject to applicable rules. If held for more than 12 months, it is classified as LTCG."
+  },
+  {
+    "id": "ltcg",
+    "term": "Long Term Capital Gains (LTCG)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Equity and market-linked investment products",
+      "url": "/en/articles/equity-investments-in-india/",
+      "language": "en"
+    },
+    "definition": "Profit earned when an investment asset is sold after it has been held for the applicable long-term period is called long-term capital gain (LTCG). Shares and equity mutual funds must be held for more than 12 months; immovable property (real estate) and gold for more than 24 months. Under the 2024 Union Budget rules cited here (Section 112A), the first ₹1.25 lakh of annual LTCG from shares and equity funds is exempt; only the excess is taxed at 12.5%, subject to applicable law.",
+    "example": "If someone invests in a mutual fund for 4 years and realises a capital gain of ₹2,25,000 on selling the units, the first ₹1,25,000 is exempt under the stated rules; only the remaining ₹1,00,000 is taxed at 12.5%, or ₹12,500, subject to eligibility and applicable rules."
+  },
+  {
+    "id": "debt-to-income-ratio",
+    "term": "Debt-to-Income Ratio (DTI)",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Lending products in India",
+      "url": "/en/articles/lending-products-india/",
+      "language": "en"
+    },
+    "definition": "The percentage of an individual's gross monthly income spent on monthly instalments (EMIs) for all debts, including home, vehicle and personal loans and credit cards. Keeping it within 35% to 40% is often considered a prudent guideline for financial health and may help when seeking new credit; it is not a guarantee of loan approval.",
+    "example": "If someone has monthly net income of ₹1,00,000 and pays ₹35,000 in monthly home- and car-loan EMIs, their DTI ratio is 35% (35,000 / 1,00,000), within the example's suggested range."
+  },
+  {
+    "id": "power-of-compounding",
+    "term": "Power of Compounding",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Mutual fund SIP calculator",
+      "url": "/en/calculators/mf_sip_calculator.html",
+      "language": "en"
+    },
+    "definition": "The financial effect by which capital can grow as returns are earned not only on the original investment but also on accumulated interest or gains. Often called the eighth wonder of the world, compounding benefits from regular investing and a long time horizon; the growth rate and outcome are not assured.",
+    "example": "Someone who starts investing ₹10,000 a month at age 25 at a 12% compounded growth rate would have about ₹3.53 crore at age 55 (after 30 years), compared with contributions of ₹36 lakh; roughly ₹3.17 crore of the amount would be growth on accumulated returns, assuming that rate."
+  },
+  {
+    "id": "benchmark",
+    "term": "Benchmark / Benchmark Index",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "A standard market index, selected under SEBI's framework, against which a mutual fund scheme's or portfolio's performance is compared. It provides a reference for assessing whether a fund manager outperformed the market (alpha) or lagged it.",
+    "example": "If the Nifty 50 TRI is the benchmark for a large-cap fund and the index returns 12% over a period while the scheme returns 14%, the scheme has outperformed that benchmark over that period."
+  },
+  {
+    "id": "nifty-50",
+    "term": "Nifty 50 (National Stock Exchange Fifty)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index fund selection checklist",
+      "url": "/en/checklists/index-fund-selection-checklist.html",
+      "language": "en"
+    },
+    "definition": "A leading Indian stock-market index that represents the combined performance of 50 large, liquid Indian companies listed on the National Stock Exchange (NSE), drawn from 14 different sectors. It is often used as an indicator of the broader Indian economy and market, rather than a complete measure of either.",
+    "example": "If the Nifty 50 rises from 24,000 to 25,000 points, it indicates an increase in the combined index value of its 50 constituent companies."
+  },
+  {
+    "id": "nifty-next-50",
+    "term": "Nifty Next 50 (Junior Nifty)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index fund selection checklist",
+      "url": "/en/checklists/index-fund-selection-checklist.html",
+      "language": "en"
+    },
+    "definition": "An index of the 50 companies ranked 51st to 100th in the Nifty 100, excluding the top 50 companies in the Nifty 50. These emerging large-cap companies may have growth potential and somewhat higher volatility; some may qualify for inclusion in the Nifty 50 in future reviews.",
+    "example": "If a Nifty Next 50 company performs well and grows in market value, it may be promoted to the Nifty 50 in a subsequent index review."
+  },
+  {
+    "id": "sensex",
+    "term": "Sensex (BSE Sensitive Index)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Equity and market-linked investment products",
+      "url": "/en/articles/equity-investments-in-india/",
+      "language": "en"
+    },
+    "definition": "India's oldest stock-market index, introduced in 1986, tracking the share-price movements of 30 leading companies from key economic sectors listed on the Bombay Stock Exchange (BSE), Asia's oldest stock exchange.",
+    "example": "When the Sensex reaches 80,000 points, it indicates that the index has reached that level; it does not by itself mean that the market value of all 30 companies is at an all-time high."
+  },
+  {
+    "id": "rebalancing",
+    "term": "Rebalancing / Portfolio Rebalancing",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "How to build an investment portfolio",
+      "url": "/en/articles/portfolio-creation-approach/",
+      "language": "en"
+    },
+    "definition": "A disciplined strategy for restoring a portfolio to its planned asset allocation when market movements change the original proportions: sell some of the assets that have gained and invest in underperforming assets. It can implement a 'sell high, buy low' approach, though it does not ensure a profit.",
+    "example": "If a portfolio that began with 70% equities and 30% debt shifts to 80:20 after an equity-market rise, sell 10% of the equities and move the proceeds to debt to restore the 70:30 allocation."
+  },
+  {
+    "id": "standard-deviation",
+    "term": "Standard Deviation",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "A statistical measure of how far a mutual fund's or stock investment's returns vary above or below their historical average (mean return). A lower standard deviation indicates more consistent historical returns; a higher one indicates greater historical fluctuations and variability, not a prediction of future returns.",
+    "example": "If Fund A's average return is 12% and its standard deviation is 4%, a range of roughly 8% to 16% is illustrative under a normal-distribution assumption, not guaranteed. If Fund B's standard deviation is 15%, the corresponding illustrative range is -3% to 27%."
+  },
+  {
+    "id": "volatility",
+    "term": "Volatility",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "How to build an investment portfolio",
+      "url": "/en/articles/portfolio-creation-approach/",
+      "language": "en"
+    },
+    "definition": "The magnitude of rapid and unexpected fluctuations in the market price of a share, index or mutual fund over a given period. Volatility reflects short-term uncertainty; for long-term investors, it can also create opportunities to buy more units through SIPs at lower prices via rupee-cost averaging, although this does not remove investment risk.",
+    "example": "Small-cap shares rising 15% in one month and falling 12% the next is an example of high volatility; large-cap index funds may have more moderate fluctuations, but their growth is not assured."
+  },
+  {
+    "id": "yield-to-maturity",
+    "term": "Yield to Maturity (YTM)",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Savings and debt instruments in India",
+      "url": "/en/articles/savings-and-debt-instruments-india/",
+      "language": "en"
+    },
+    "definition": "An estimate of the total annualised return on a bond or the bonds in a debt mutual fund if they are held to maturity and interim coupon payments are reinvested at the same rate. The realised return can differ if these assumptions do not hold.",
+    "example": "If a 5-year government bond with a face value of ₹1,00,000 is bought in the market for ₹96,000, its annual interest and the additional principal gain at maturity together may imply a YTM of 8.2%."
+  },
+  {
+    "id": "arbitrage-fund",
+    "term": "Arbitrage Fund",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Equity and market-linked investment products",
+      "url": "/en/articles/equity-investments-in-india/",
+      "language": "en"
+    },
+    "definition": "A hybrid mutual fund that seeks to exploit temporary price differences between the cash-market price of a share and its futures-contract price by buying one and selling the other at the same time. This strategy aims to limit directional market exposure, but is not entirely risk-free. Because more than 65% is handled in the equity market, it may receive equity tax treatment, subject to applicable rules.",
+    "example": "If a share trades at ₹1,000 in the cash market and ₹1,008 in the futures market, the fund may take opposite positions to seek to capture the ₹8 difference; returns and risks vary, and neither FD-equivalent safety nor tax treatment is guaranteed."
+  },
+  {
+    "id": "kyc",
+    "term": "Know Your Customer (KYC)",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Banking products in India",
+      "url": "/en/articles/banking-and-savings-products-india/",
+      "language": "en"
+    },
+    "definition": "A legal process required by the Reserve Bank of India and SEBI for banks, mutual funds, stockbrokers and insurers to verify a customer's identity, residential address and financial credentials before providing financial services. It helps prevent money laundering and financial fraud.",
+    "example": "Before opening a bank account or investing in a mutual fund, submit a PAN card, Aadhaar card and passport-size photograph for verification."
+  },
+  {
+    "id": "e-kyc",
+    "term": "e-KYC (Electronic Know Your Customer)",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Banking products in India",
+      "url": "/en/articles/banking-and-savings-products-india/",
+      "language": "en"
+    },
+    "definition": "An electronic verification process that confirms a customer's identity digitally, often within minutes and without in-person paper documents, using an Aadhaar number and a one-time password (OTP) sent to the registered mobile number or biometric verification (fingerprint / iris) through UIDAI systems.",
+    "example": "On investment apps such as Groww or Zerodha, an investor can register using an Aadhaar OTP from home and may be able to open a demat account and start buying shares within 5 minutes, subject to verification and eligibility."
+  },
+  {
+    "id": "ckyc",
+    "term": "Central KYC (CKYC)",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Banking products in India",
+      "url": "/en/articles/banking-and-savings-products-india/",
+      "language": "en"
+    },
+    "definition": "A centralised database in India's financial market maintained by CERSAI. After a customer completes CKYC once at a financial institution such as a bank or mutual fund, they receive a unique 14-digit identification number (KIN—KYC Identification Number). This can avoid repeatedly submitting documents to other financial institutions, subject to their processes and applicable rules.",
+    "example": "After completing CKYC at one bank, a customer may provide only their 14-digit KIN when investing with another mutual fund company, without resubmitting documents if the institution can retrieve and accept the CKYC record."
+  },
+  {
+    "id": "settlement-cycle",
+    "term": "Settlement Cycle (T+1 / T+0 Settlement)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Equity and market-linked investment products",
+      "url": "/en/articles/equity-investments-in-india/",
+      "language": "en"
+    },
+    "definition": "The period after shares are bought or sold on the stock exchange during which the shares are transferred to the buyer's demat account and the money to the seller's bank account, completing the transaction. India uses a T+1 cycle (the next working day) and T+0 settlement for specified shares, subject to applicable exchange rules.",
+    "example": "If shares are sold on Wednesday (T), under a T+1 cycle the proceeds are expected to reach the trading account by Thursday evening, subject to settlement rules and any applicable holds."
+  },
+  {
+    "id": "circuit-breaker",
+    "term": "Circuit Breaker",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Equity and market-linked investment products",
+      "url": "/en/articles/equity-investments-in-india/",
+      "language": "en"
+    },
+    "definition": "An automatic safeguard that temporarily halts trading across the stock market (NSE/BSE) when an index falls by specified percentages (10%, 15% or 20%) amid extreme panic or an unexpected steep decline. The pause is intended to give investors time to consider their decisions; the duration and thresholds depend on exchange rules and timing.",
+    "example": "Under the cited circuit-breaker rule, if the Nifty or Sensex falls 10% before 1 p.m., trading in all shares is halted for 45 minutes."
+  },
+  {
+    "id": "upper-circuit",
+    "term": "Upper Circuit",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Equity and market-linked investment products",
+      "url": "/en/articles/equity-investments-in-india/",
+      "language": "en"
+    },
+    "definition": "The upper price limit set by the exchange for how much a particular company's share may rise in one trading day (commonly 2%, 5%, 10% or 20%). When the price reaches that limit, buy orders may remain queued if there are no matching sell orders.",
+    "example": "If a share priced at ₹100 has a 10% upper-circuit limit, its price can rise only to ₹110 that day; further buy orders may queue until matching sell orders become available."
+  },
+  {
+    "id": "lower-circuit",
+    "term": "Lower Circuit",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Equity and market-linked investment products",
+      "url": "/en/articles/equity-investments-in-india/",
+      "language": "en"
+    },
+    "definition": "The lower price limit set by the exchange for how much a particular company's share may fall in one trading day (commonly 2%, 5%, 10% or 20%). When the price reaches that limit, sell orders may remain queued if there are no matching buy orders.",
+    "example": "If bad news drives a ₹200 share to its 5% lower-circuit limit of ₹190, sell orders may remain unfilled if there are no buyers."
+  },
+  {
+    "id": "bull-market",
+    "term": "Bull Market",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "How to start investing",
+      "url": "/en/articles/how-to-start-investing/",
+      "language": "en"
+    },
+    "definition": "A period in which stock-market indices and share prices generally keep rising for months or years, often amid economic growth, strong corporate earnings and investor optimism. The name evokes a bull thrusting its horns upward from below.",
+    "example": "After the 2020 pandemic-driven fall, the period in which the Nifty rose from 7,500 points and went on to touch 25,000 was a notable bull-market phase in India."
+  },
+  {
+    "id": "bear-market",
+    "term": "Bear Market",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "How to start investing",
+      "url": "/en/articles/how-to-start-investing/",
+      "language": "en"
+    },
+    "definition": "A prolonged period of market weakness in which a stock market falls 20% or more from a recent peak, often amid recession, high inflation, rising interest rates, war or an international financial crisis. The name evokes a bear pressing its claws downward from above.",
+    "example": "During the 2008 global financial crisis, Indian and global stock markets fell more than 50% from their peaks and experienced a bear-market period lasting about a year or more."
+  },
+  {
+    "id": "correction",
+    "term": "Market Correction",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "How to start investing",
+      "url": "/en/articles/how-to-start-investing/",
+      "language": "en"
+    },
+    "definition": "A short- or medium-term decline in a stock-market index or share of 10% to 20% from a recent peak. It is often viewed as a normal market movement that can moderate excessive price increases and may offer long-term investors lower prices at which to consider quality shares; a recovery is not assured.",
+    "example": "If the Nifty falls 10% from 26,000 to 23,400, stabilises for a few weeks and then starts rising again, that is an example of a market correction."
+  },
+  {
+    "id": "crash",
+    "term": "Market Crash",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "How to start investing",
+      "url": "/en/articles/how-to-start-investing/",
+      "language": "en"
+    },
+    "definition": "An unusual event in which a stock market falls sharply by more than 20% within a few days or weeks, as extreme investor fear follows a sudden shock such as a major disaster, global conflict, pandemic or banking-system disruption.",
+    "example": "When COVID-19 lockdowns were announced in March 2020, the Indian stock market fell by about 38% in a single month, an example of a severe market crash."
+  },
+  {
+    "id": "annuity",
+    "term": "Annuity",
+    "category": "Insurance",
+    "relatedLink": {
+      "title": "Annuity plans guide",
+      "url": "/en/articles/annuity-plans-guide-india/",
+      "language": "en"
+    },
+    "definition": "A retirement-income contract in which a lump sum is paid to an insurance company in return for regular payments—monthly, quarterly or annually—for the investor's lifetime or a specified period. Buying an annuity with 40% of an NPS retirement corpus is generally required under the rules described, subject to current regulations and permitted exceptions.",
+    "example": "At age 60, buying a 'Life Annuity with Return of Purchase Price' for ₹50 lakh may provide a contractually specified pension of about ₹28,000 a month for life; after death, the ₹50 lakh purchase price is returned to the heir under this option, subject to the policy terms."
+  },
+  {
+    "id": "annuity-service-providers",
+    "term": "Annuity Service Providers (ASP)",
+    "category": "Insurance",
+    "relatedLink": {
+      "title": "Annuity plans guide",
+      "url": "/en/articles/annuity-plans-guide-india/",
+      "language": "en"
+    },
+    "definition": "Life-insurance companies authorised by IRDAI and the pension regulator (PFRDA) in India to offer annuity plans to subscribers, particularly NPS retirees, and make pension payments under the annuity contract.",
+    "example": "On retiring at age 60, an NPS subscriber may choose an annuity from an authorised provider listed by PFRDA, such as LIC, SBI Life or HDFC Life, and purchase a pension policy, subject to availability and eligibility."
+  },
+  {
+    "id": "p2p-lending",
+    "term": "Peer-to-Peer Lending (P2P Lending)",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Lending products in India",
+      "url": "/en/articles/lending-products-india/",
+      "language": "en"
+    },
+    "definition": "A financial arrangement in which individual investors lend directly to individual borrowers through online platforms regulated by the Reserve Bank of India as NBFC-P2P entities, without traditional banks or financial institutions intermediating each loan. It may offer the possibility of higher interest income (10%–15%), but carries substantial risk that borrowers will not repay (default risk).",
+    "example": "Rather than lending ₹1,00,000 to one person through a P2P platform, an investor may spread the risk by lending ₹1,000 each to 100 people at 12% interest; diversification does not eliminate default risk."
+  },
+  {
+    "id": "invoice-discounting",
+    "term": "Invoice Discounting / Bill Discounting",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Lending products in India",
+      "url": "/en/articles/lending-products-india/",
+      "language": "en"
+    },
+    "definition": "A trade-finance method used when small and medium-sized businesses (MSMEs) that have supplied goods to large corporations must wait 30 to 90 days for payment: they sell the unpaid invoice to investors or banks at a discount to obtain short-term cash sooner.",
+    "example": "An MSME sells a 90-day invoice worth ₹10 lakh to an investor for ₹9.70 lakh at a 3% discount to obtain cash immediately; after 90 days, the investor is due the full ₹10 lakh from the customer, subject to payment and default risk."
+  },
+  {
+    "id": "reverse-mortgage",
+    "term": "Reverse Mortgage",
+    "category": "Loans & banking",
+    "relatedLink": {
+      "title": "Lending products in India",
+      "url": "/en/articles/lending-products-india/",
+      "language": "en"
+    },
+    "definition": "A specialised mortgage loan through which senior citizens over 60 can pledge the home they live in to a bank without selling it and receive money in monthly instalments to meet retirement expenses. Unlike a conventional loan, no regular EMI is required; under the loan terms, the bank generally recovers the amount by settling the loan against the home after the borrower and spouse have died.",
+    "example": "A retired couple living in their own home valued at ₹80 lakh may mortgage it through a reverse mortgage and receive ₹30,000 a month for 15 years to help meet medical expenses, subject to the bank's terms and eligibility."
+  },
+  {
+    "id": "living-will",
+    "term": "Living Will",
+    "category": "Property & wills",
+    "relatedLink": {
+      "title": "Why writing a will matters",
+      "url": "/en/articles/importance-of-writing-a-will/",
+      "language": "en"
+    },
+    "definition": "A legally recognised document in which a person, while mentally sound and competent, records in advance the limits of intensive medical treatment they want if a future irreversible serious illness or accident leaves them unable to make decisions. Recognised by the Supreme Court of India, it applies to medical care while the person is alive, unlike a property will, which takes effect after death.",
+    "example": "A document made before a doctor and witnesses may state that, if old age or an accident causes brain death, the person does not want to be kept alive on artificial ventilation and wishes to be allowed a dignified natural death, subject to applicable legal and medical procedures."
+  },
+  {
+    "id": "advance-medical-directive",
+    "term": "Advance Medical Directive",
+    "category": "Property & wills",
+    "relatedLink": {
+      "title": "Why writing a will matters",
+      "url": "/en/articles/importance-of-writing-a-will/",
+      "language": "en"
+    },
+    "definition": "An official legal instruction given by a patient for a time when their condition worsens and they lose the capacity to make decisions. It states which medical procedures (such as a ventilator, dialysis or cardiopulmonary resuscitation—CPR) should or should not be performed and may appoint a trusted family member or other person as a healthcare proxy to make decisions on their behalf.",
+    "example": "A senior citizen may appoint their son or daughter to make medical decisions and provide guidance on when artificial life-support measures should be stopped in an intensive care unit (ICU), subject to applicable law and medical procedures."
+  },
+  {
+    "id": "succession-certificate",
+    "term": "Succession Certificate",
+    "category": "Property & wills",
+    "relatedLink": {
+      "title": "Why writing a will matters",
+      "url": "/en/articles/importance-of-writing-a-will/",
+      "language": "en"
+    },
+    "definition": "A legal certificate issued by a civil court under Section 372 of the Indian Succession Act to entitle a legal heir to claim a deceased person's movable assets—such as bank deposits, shares, mutual funds, government securities and debentures—and collect their debts when the person dies without a will. It is a court-issued document distinct from, and generally more authoritative than, a revenue department's legal-heir certificate.",
+    "example": "To transfer to his own name his late father's share investments worth ₹25 lakh for which no nominee was registered, a son applies to the competent district civil court for a succession certificate."
+  },
+  {
+    "id": "asset-class",
+    "term": "Asset Class",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "How to build an investment portfolio",
+      "url": "/en/articles/portfolio-creation-approach/",
+      "language": "en"
+    },
+    "definition": "A distinct category of investments that share similar financial characteristics, market behaviour and risk profiles and are subject to similar rules. Four traditional asset classes are equities, fixed income/debt, gold and commodities, and real estate.",
+    "example": "Debt instruments and gold may provide some stability when the stock market falls because different asset classes can behave differently over an economic cycle; this is not guaranteed."
+  },
+  {
+    "id": "drawdown",
+    "term": "Drawdown (Maximum Drawdown - MDD)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Index funds versus active mutual funds",
+      "url": "/en/articles/index-funds-vs-active-mutual-funds/",
+      "language": "en"
+    },
+    "definition": "The percentage decline in a share, mutual fund or portfolio from its highest historical value (peak) to its lowest point (trough). It is used to assess downside risk during a difficult period and the extent of losses an investor may have had to withstand.",
+    "example": "If a mutual fund's NAV falls from a peak of ₹100 to ₹65 during a bear market, its maximum drawdown (MDD) is 35%; the period of loss is measured until the investment returns to ₹100."
+  },
+  {
+    "id": "gilt-fund",
+    "term": "Gilt Fund (Government Securities Fund)",
+    "category": "Investing & stock markets",
+    "relatedLink": {
+      "title": "Savings and debt instruments in India",
+      "url": "/en/articles/savings-and-debt-instruments-india/",
+      "language": "en"
+    },
+    "definition": "A debt mutual fund that invests at least 80% of investors' money in government securities issued by the central and state governments. These securities are generally regarded as having very low credit/default risk because of the government backing, but their prices remain exposed to interest-rate risk as rates change.",
+    "example": "When the Reserve Bank of India cuts the repo rate, prices of long-term government securities may rise, potentially generating capital gains for gilt funds; the outcome depends on market conditions and is not guaranteed."
+  }
+]

@@ -1,0 +1,312 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="doctrines-title doctrines-desc">
+  <title id="doctrines-title">5 Core Legal Principles Governing Property &amp; Title in India</title>
+  <desc id="doctrines-desc">5 Core Legal Doctrines of Property Law in India: 1. Article 300A, 2. Automatic Coparcenary Rights, 3. Caveat Emptor, 4. Title Deed is Not Proof of Title, 5. Nemo Dat Quod Non Habet.</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;display=swap');
+      .header-en {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 21px;
+        font-weight: 700;
+        fill: #ffffff;
+      }
+      .header-sub {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 13.5px;
+        font-weight: 500;
+        fill: #d5e7e3;
+      }
+      .doc-pill-text {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 11.5px;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+      }
+      .card-title-en {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 15.5px;
+        font-weight: 700;
+        fill: #0f172a;
+        text-anchor: middle;
+      }
+      .card-sub-en {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        text-anchor: middle;
+      }
+      .bullet-text {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 11.5px;
+        font-weight: 500;
+        fill: #334155;
+        line-height: 1.4;
+      }
+      .tag-text {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .bar-title {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 12.5px;
+        font-weight: 700;
+        fill: #0f172a;
+      }
+      .bar-desc {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 11.5px;
+        font-weight: 500;
+        fill: #475569;
+      }
+    </style>
+
+    <linearGradient id="headerGradDoctrines" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D7377"/>
+      <stop offset="100%" stop-color="#102e31"/>
+    </linearGradient>
+
+    <filter id="cardShadowDoctrines" x="-6%" y="-3%" width="112%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="580" rx="18" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- Top Header Banner -->
+  <rect x="2" y="2" width="1196" height="85" rx="16" fill="url(#headerGradDoctrines)"/>
+  <circle cx="50" cy="44" r="24" fill="#14b8a6" fill-opacity="0.2"/>
+  
+  <!-- Scales of Justice / Law Emblem Icon -->
+  <path d="M 50 32 L 50 54 M 42 36 L 58 36" stroke="#5eead4" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 38 45 C 38 48 42 50 45 47 C 48 44 48 38 48 38 L 38 38 Z" fill="none" stroke="#5eead4" stroke-width="1.8"/>
+  <path d="M 52 38 L 62 38 C 62 38 62 44 59 47 C 56 50 52 48 52 45 Z" fill="none" stroke="#5eead4" stroke-width="1.8"/>
+  <line x1="43" y1="54" x2="57" y2="54" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round"/>
+
+  <text x="86" y="38" class="header-en">5 Core Legal Principles Governing Property &amp; Title in India</text>
+  <text x="86" y="60" class="header-sub">Foundational statutory doctrines and judicial realities every property buyer must know</text>
+
+  <!-- ================= 5 DOCTRINE CARDS ================= -->
+
+  <!-- CARD 1: Article 300A -->
+  <g transform="translate(30, 102)" filter="url(#cardShadowDoctrines)">
+    <rect width="216" height="380" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="216" height="5" rx="2.5" fill="#0D7377"/>
+    
+    <!-- Pill -->
+    <rect x="56" y="14" width="104" height="22" rx="11" fill="#e6f5f3"/>
+    <text x="108" y="29" class="doc-pill-text" fill="#0D7377" text-anchor="middle">DOCTRINE 1</text>
+    
+    <!-- Icon Circle -->
+    <circle cx="108" cy="62" r="20" fill="#e6f5f3"/>
+    <!-- Constitutional Pillar Icon -->
+    <path d="M 98 72 L 118 72 M 100 56 L 116 56 M 102 56 L 102 72 M 108 56 L 108 72 M 114 56 L 114 72 M 99 53 L 108 48 L 117 53 Z" stroke="#0D7377" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Title & Subtitle -->
+    <text x="108" y="104" class="card-title-en">Article 300A</text>
+    <text x="108" y="122" class="card-sub-en" fill="#0D7377">Constitutional Protection</text>
+
+    <!-- Bullets -->
+    <circle cx="18" cy="145" r="2.8" fill="#0D7377"/>
+    <text x="26" y="149" class="bullet-text">Property ownership is a</text>
+    <text x="26" y="165" class="bullet-text">sacrosanct constitutional</text>
+    <text x="26" y="181" class="bullet-text">right under Article 300A.</text>
+
+    <circle cx="18" cy="205" r="2.8" fill="#0D7377"/>
+    <text x="26" y="209" class="bullet-text">No number of resales</text>
+    <text x="26" y="225" class="bullet-text">or revenue patta transfers</text>
+    <text x="26" y="241" class="bullet-text">can extinguish genuine title.</text>
+
+    <circle cx="18" cy="265" r="2.8" fill="#0D7377"/>
+    <text x="26" y="269" class="bullet-text">Any sale without the true</text>
+    <text x="26" y="285" class="bullet-text">owner's consent is void</text>
+    <text x="26" y="301" class="bullet-text">from inception (ab initio).</text>
+
+    <!-- Bottom Tag -->
+    <rect x="20" y="335" width="176" height="28" rx="14" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1"/>
+    <text x="108" y="353" class="tag-text" fill="#0f766e">Supreme Court Guarantee</text>
+  </g>
+
+  <!-- CARD 2: Automatic Rights -->
+  <g transform="translate(261, 102)" filter="url(#cardShadowDoctrines)">
+    <rect width="216" height="380" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="216" height="5" rx="2.5" fill="#059669"/>
+    
+    <!-- Pill -->
+    <rect x="56" y="14" width="104" height="22" rx="11" fill="#ecfdf5"/>
+    <text x="108" y="29" class="doc-pill-text" fill="#059669" text-anchor="middle">DOCTRINE 2</text>
+    
+    <!-- Icon Circle -->
+    <circle cx="108" cy="62" r="20" fill="#ecfdf5"/>
+    <!-- Lineage / Family Tree Icon -->
+    <circle cx="108" cy="52" r="4" fill="none" stroke="#059669" stroke-width="1.8"/>
+    <path d="M 108 56 L 108 63 M 100 71 L 100 66 L 116 66 L 116 71" stroke="#059669" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <circle cx="100" cy="72" r="2.5" fill="#059669"/>
+    <circle cx="116" cy="72" r="2.5" fill="#059669"/>
+
+    <!-- Title & Subtitle -->
+    <text x="108" y="104" class="card-title-en">Automatic Rights</text>
+    <text x="108" y="122" class="card-sub-en" fill="#059669">Coparcenary Succession</text>
+
+    <!-- Bullets -->
+    <circle cx="18" cy="145" r="2.8" fill="#059669"/>
+    <text x="26" y="149" class="bullet-text">Coparcenary rights vest</text>
+    <text x="26" y="165" class="bullet-text">automatically by birth</text>
+    <text x="26" y="181" class="bullet-text">in ancestral properties.</text>
+
+    <circle cx="18" cy="205" r="2.8" fill="#059669"/>
+    <text x="26" y="209" class="bullet-text">Even if an heir's name</text>
+    <text x="26" y="225" class="bullet-text">is missing from the patta,</text>
+    <text x="26" y="241" class="bullet-text">their share is not lost.</text>
+
+    <circle cx="18" cy="265" r="2.8" fill="#059669"/>
+    <text x="26" y="269" class="bullet-text">Revenue omissions cannot</text>
+    <text x="26" y="285" class="bullet-text">defeat the lawful rights</text>
+    <text x="26" y="301" class="bullet-text">of coparceners &amp; heirs.</text>
+
+    <!-- Bottom Tag -->
+    <rect x="20" y="335" width="176" height="28" rx="14" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+    <text x="108" y="353" class="tag-text" fill="#15803d">Birthright &amp; Inheritance</text>
+  </g>
+
+  <!-- CARD 3: Caveat Emptor -->
+  <g transform="translate(492, 102)" filter="url(#cardShadowDoctrines)">
+    <rect width="216" height="380" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="216" height="5" rx="2.5" fill="#d97706"/>
+    
+    <!-- Pill -->
+    <rect x="56" y="14" width="104" height="22" rx="11" fill="#fffbeb"/>
+    <text x="108" y="29" class="doc-pill-text" fill="#d97706" text-anchor="middle">DOCTRINE 3</text>
+    
+    <!-- Icon Circle -->
+    <circle cx="108" cy="62" r="20" fill="#fffbeb"/>
+    <!-- Eye / Buyer Beware Alert Icon -->
+    <path d="M 97 62 C 100 56 108 53 108 53 C 108 53 116 56 119 62 C 116 68 108 71 108 71 C 108 71 100 68 97 62 Z" stroke="#d97706" stroke-width="1.8" fill="none"/>
+    <circle cx="108" cy="62" r="3.5" fill="#d97706"/>
+
+    <!-- Title & Subtitle -->
+    <text x="108" y="104" class="card-title-en">Caveat Emptor</text>
+    <text x="108" y="122" class="card-sub-en" fill="#d97706">Let the Buyer Beware!</text>
+
+    <!-- Bullets -->
+    <circle cx="18" cy="145" r="2.8" fill="#d97706"/>
+    <text x="26" y="149" class="bullet-text">The Sub-Registrar</text>
+    <text x="26" y="165" class="bullet-text">provides zero warranty</text>
+    <text x="26" y="181" class="bullet-text">of valid or clean title!</text>
+
+    <circle cx="18" cy="205" r="2.8" fill="#d97706"/>
+    <text x="26" y="209" class="bullet-text">Registration is merely</text>
+    <text x="26" y="225" class="bullet-text">an administrative record</text>
+    <text x="26" y="241" class="bullet-text">for collecting stamp duty.</text>
+
+    <circle cx="18" cy="265" r="2.8" fill="#d97706"/>
+    <text x="26" y="269" class="bullet-text">Investigating encumbrance</text>
+    <text x="26" y="285" class="bullet-text">is <tspan font-weight="700" fill="#b45309">100% the buyer's</tspan></text>
+    <text x="26" y="301" class="bullet-text">sole legal responsibility.</text>
+
+    <!-- Bottom Tag -->
+    <rect x="20" y="335" width="176" height="28" rx="14" fill="#fffbeb" stroke="#fde68a" stroke-width="1"/>
+    <text x="108" y="353" class="tag-text" fill="#b45309">Zero State Warranty</text>
+  </g>
+
+  <!-- CARD 4: Title Deed is Not Proof of Title -->
+  <g transform="translate(723, 102)" filter="url(#cardShadowDoctrines)">
+    <rect width="216" height="380" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="216" height="5" rx="2.5" fill="#2563eb"/>
+    
+    <!-- Pill -->
+    <rect x="56" y="14" width="104" height="22" rx="11" fill="#eff6ff"/>
+    <text x="108" y="29" class="doc-pill-text" fill="#2563eb" text-anchor="middle">DOCTRINE 4</text>
+    
+    <!-- Icon Circle -->
+    <circle cx="108" cy="62" r="20" fill="#eff6ff"/>
+    <!-- Document Deed with Stamp Icon -->
+    <rect x="99" y="50" width="18" height="24" rx="2" fill="none" stroke="#2563eb" stroke-width="1.8"/>
+    <line x1="103" y1="56" x2="113" y2="56" stroke="#2563eb" stroke-width="1.5"/>
+    <line x1="103" y1="61" x2="113" y2="61" stroke="#2563eb" stroke-width="1.5"/>
+    <circle cx="108" cy="67" r="2.5" fill="#2563eb"/>
+
+    <!-- Title & Subtitle -->
+    <text x="108" y="104" class="card-title-en">Deed ≠ Title</text>
+    <text x="108" y="122" class="card-sub-en" fill="#2563eb">Proof of Transaction Only</text>
+
+    <!-- Bullets -->
+    <circle cx="18" cy="145" r="2.8" fill="#2563eb"/>
+    <text x="26" y="149" class="bullet-text">A registered sale deed</text>
+    <text x="26" y="165" class="bullet-text">is only proof that money</text>
+    <text x="26" y="181" class="bullet-text">changed hands on a date.</text>
+
+    <circle cx="18" cy="205" r="2.8" fill="#2563eb"/>
+    <text x="26" y="209" class="bullet-text">Holding original deeds</text>
+    <text x="26" y="225" class="bullet-text">does not prove the seller</text>
+    <text x="26" y="241" class="bullet-text">owned indefeasible title.</text>
+
+    <circle cx="18" cy="265" r="2.8" fill="#2563eb"/>
+    <text x="26" y="269" class="bullet-text">If the vendor's root</text>
+    <text x="26" y="285" class="bullet-text">title was defective, the</text>
+    <text x="26" y="301" class="bullet-text">deed conveys zero title.</text>
+
+    <!-- Bottom Tag -->
+    <rect x="20" y="335" width="176" height="28" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+    <text x="108" y="353" class="tag-text" fill="#1d4ed8">Transaction Evidence Only</text>
+  </g>
+
+  <!-- CARD 5: Nemo Dat Quod Non Habet -->
+  <g transform="translate(954, 102)" filter="url(#cardShadowDoctrines)">
+    <rect width="216" height="380" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="216" height="5" rx="2.5" fill="#dc2626"/>
+    
+    <!-- Pill -->
+    <rect x="56" y="14" width="104" height="22" rx="11" fill="#fef2f2"/>
+    <text x="108" y="29" class="doc-pill-text" fill="#dc2626" text-anchor="middle">DOCTRINE 5</text>
+    
+    <!-- Icon Circle -->
+    <circle cx="108" cy="62" r="20" fill="#fef2f2"/>
+    <!-- Blocked Transfer / Shield Slash Icon -->
+    <circle cx="108" cy="62" r="11" fill="none" stroke="#dc2626" stroke-width="1.8"/>
+    <line x1="100" y1="54" x2="116" y2="70" stroke="#dc2626" stroke-width="1.8"/>
+
+    <!-- Title & Subtitle -->
+    <text x="108" y="104" class="card-title-en">Nemo Dat Quod</text>
+    <text x="108" y="122" class="card-sub-en" fill="#dc2626">No One Gives What They Lack</text>
+
+    <!-- Bullets -->
+    <circle cx="18" cy="145" r="2.8" fill="#dc2626"/>
+    <text x="26" y="149" class="bullet-text">"Nemo Dat Quod Non Habet":</text>
+    <text x="26" y="165" class="bullet-text">a buyer acquires only what</text>
+    <text x="26" y="181" class="bullet-text">the seller legitimately had.</text>
+
+    <circle cx="18" cy="205" r="2.8" fill="#dc2626"/>
+    <text x="26" y="209" class="bullet-text">If the seller's root title</text>
+    <text x="26" y="225" class="bullet-text">has a legal flaw, that defect</text>
+    <text x="26" y="241" class="bullet-text">carries over to the buyer.</text>
+
+    <circle cx="18" cy="265" r="2.8" fill="#dc2626"/>
+    <text x="26" y="269" class="bullet-text">Even paying crores in</text>
+    <text x="26" y="285" class="bullet-text">good faith cannot cure a</text>
+    <text x="26" y="301" class="bullet-text">void sale under the law.</text>
+
+    <!-- Bottom Tag -->
+    <rect x="20" y="335" width="176" height="28" rx="14" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+    <text x="108" y="353" class="tag-text" fill="#b91c1c">Title Defect Passes On</text>
+  </g>
+
+  <!-- ================= BOTTOM TAKEAWAY BAR ================= -->
+  <g transform="translate(30, 496)">
+    <rect width="1140" height="70" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect width="6" height="70" rx="3" fill="#0D7377"/>
+    
+    <!-- Info Icon Circle -->
+    <circle cx="34" cy="35" r="16" fill="#e6f5f3"/>
+    <text x="34" y="40" font-family="'DM Sans', sans-serif" font-size="15" font-weight="700" fill="#0D7377" text-anchor="middle">i</text>
+    
+    <!-- Text Lines -->
+    <text x="62" y="27" class="bar-title">Critical Nuance: State Land Ceiling Laws &amp; Personal Succession Variations</text>
+    <text x="62" y="47" class="bar-desc">Agricultural land classifications and ceiling caps vary significantly across state agrarian legislations;</text>
+    <text x="62" y="62" class="bar-desc">Furthermore, personal religious laws and the Special Marriage Act (SMA) fundamentally alter succession and coparcenary shares.</text>
+  </g>
+  <text id="brand-watermark" x="600" y="607" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">Nidhi Pezhai</text>
+</svg>

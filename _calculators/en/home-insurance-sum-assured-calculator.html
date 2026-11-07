@@ -1,0 +1,302 @@
+---
+title: "Home Insurance Sum Assured Calculator (Owner & Tenant)"
+ogTitle: "Home Insurance Sum Assured Calculator · NidhiPezhai"
+description: "Calculate adequate home insurance cover (Sum Assured) for homeowners and tenants based on structure reconstruction cost, contents replacement, valuables, and alternate accommodation."
+keywords: "home insurance calculator, home insurance sum insured calculator, property insurance calculator India, tenant insurance calculator, home contents insurance, building reconstruction cost"
+hasChart: true
+hasCsvExport: false
+language: en
+publishedEnglish: true
+eleventyExcludeFromCollections: false
+---
+<main id="main-content" tabindex="-1" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full space-y-6">
+    <div>
+      <h1 class="text-xl font-bold tracking-tight text-slate-900 leading-tight">Home Insurance Sum Assured Calculator</h1>
+      <p class="text-xs text-slate-500 font-medium">Estimate the ideal property and contents insurance cover for homeowners and renters</p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-xs border border-slate-200 p-1.5 flex flex-wrap gap-1.5 no-print">
+      <button type="button" class="mode-btn active flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-slate-600" data-mode="owner" aria-pressed="true">🏠 Homeowner</button>
+      <button type="button" class="mode-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-slate-600" data-mode="renter" aria-pressed="false">🔑 Tenant / Renter</button>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+      <div class="lg:col-span-7 space-y-5">
+
+        <!-- Building (owners only) -->
+        <div id="buildingSection" class="bg-white rounded-2xl p-5 sm:p-6 shadow-xs border border-slate-200 space-y-4">
+          <div class="pb-2 border-b border-slate-100">
+            <div class="flex items-center justify-between pb-2">
+              <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Calculation Inputs</span>
+              
+              <button id="btnReset" type="button" class="calc-reset-btn" title="Reset all inputs">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                <span>Reset</span>
+              </button>
+            </div>
+            <h2 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">1</span>
+              Building Structure (Reconstruction Cost)
+            </h2>
+            <p class="text-[11px] text-slate-400 mt-1">Land value is excluded; only the cost to rebuild the physical structure is insurable.</p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+            <div class="space-y-1">
+              <label for="area" class="font-semibold text-slate-700">Built-up Area (sq. ft.)</label>
+              <input type="number" id="area" min="100" step="50" value="1200" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+            </div>
+            <div class="space-y-1">
+              <label for="grade" class="font-semibold text-slate-700">Construction Quality / Grade</label>
+              <select id="grade" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg font-semibold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none bg-white">
+                <option value="1800">Basic (₹1,800 / sq. ft.)</option>
+                <option value="2400" selected>Standard (₹2,400 / sq. ft.)</option>
+                <option value="3200">Premium (₹3,200 / sq. ft.)</option>
+                <option value="4500">Luxury (₹4,500 / sq. ft.)</option>
+                <option value="">Custom Rate (Enter below)</option>
+              </select>
+            </div>
+            <div class="space-y-1">
+              <label for="costPerSqft" class="font-semibold text-slate-700">Reconstruction Cost (₹ / sq. ft.)</label>
+              <input type="number" id="costPerSqft" min="500" step="100" value="2400" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+              <span class="text-[11px] text-slate-400">Indicative benchmarks only; adjust to prevailing construction costs in your city. Exclude land price.</span>
+            </div>
+            <div class="space-y-1">
+              <label for="extras" class="font-semibold text-slate-700">Compound Wall, Gates, Water Tank, Outbuildings (₹)</label>
+              <input type="number" id="extras" min="0" step="10000" value="200000" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+            </div>
+          </div>
+        </div>
+
+        <!-- Contents -->
+        <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-xs border border-slate-200 space-y-4">
+          <div class="pb-2 border-b border-slate-100">
+            <h2 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold" id="contentsNum">2</span>
+              Household Contents (Replacement Cost)
+            </h2>
+            <p class="text-[11px] text-slate-400 mt-1">Estimate the cost to replace your items with equivalent new ones today, not original purchase receipts.</p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+            <div class="space-y-1">
+              <label for="furniture" class="font-semibold text-slate-700">Furniture & Fixtures</label>
+              <input type="number" id="furniture" min="0" step="10000" value="300000" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+            </div>
+            <div class="space-y-1">
+              <label for="appliances" class="font-semibold text-slate-700">Home Appliances (Refrigerator, Washing Machine, AC…)</label>
+              <input type="number" id="appliances" min="0" step="10000" value="250000" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+            </div>
+            <div class="space-y-1">
+              <label for="electronics" class="font-semibold text-slate-700">Consumer Electronics (TV, Laptops, Mobile Devices)</label>
+              <input type="number" id="electronics" min="0" step="10000" value="200000" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+            </div>
+            <div class="space-y-1">
+              <label for="clothing" class="font-semibold text-slate-700">Apparel, Kitchenware & Personal Items</label>
+              <input type="number" id="clothing" min="0" step="5000" value="100000" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+            </div>
+            <div class="space-y-1 sm:col-span-2">
+              <label for="valuables" class="font-semibold text-slate-700">Jewellery, Silver & Valuables (Subject to sub-limits)</label>
+              <input type="number" id="valuables" min="0" step="10000" value="0" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+              <span class="text-[11px] text-slate-400">Most home policies enforce low sub-limits on jewellery; add an itemized schedule / rider if needed.</span>
+            </div>
+            <div class="space-y-1 sm:col-span-2" id="interiorsWrap">
+              <label for="interiors" class="font-semibold text-slate-700">Interior Upgrades / Modular Kitchen / Fixed Fittings (Tenant's Improvement)</label>
+              <input type="number" id="interiors" min="0" step="10000" value="100000" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional -->
+        <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-xs border border-slate-200 space-y-4">
+          <div class="pb-2 border-b border-slate-100">
+            <h2 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold" id="extraNum">3</span>
+              Additional Coverage & Factors
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+            <div class="space-y-1">
+              <label for="rent" class="font-semibold text-slate-700">Monthly Rent for Alternate Accommodation (₹)</label>
+              <input type="number" id="rent" min="0" step="1000" value="25000" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+            </div>
+            <div class="space-y-1">
+              <label for="months" class="font-semibold text-slate-700">Required Alternate Accommodation Tenure (Months)</label>
+              <input type="number" id="months" min="0" max="36" step="1" value="6" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+              <span class="text-[11px] text-slate-400" id="monthsHint">Major damage repairs or rebuilding typically require 6–12 months.</span>
+            </div>
+            <div class="space-y-1 sm:col-span-2">
+              <label for="buffer" class="font-semibold text-slate-700">Cost Escalation Buffer (%)</label>
+              <div class="flex items-center gap-3">
+                <input type="range" id="buffer" min="0" max="25" step="1" value="10" class="flex-1">
+                <span id="bufferVal" class="font-bold text-slate-800 w-10 text-right">10%</span>
+              </div>
+              <span class="text-[11px] text-slate-400">Added to protect against construction price surges and underinsurance penalties; check if your insurer allows escalation endorsements.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="lg:col-span-5 space-y-5 lg:sticky lg:top-20">
+        <div class="rounded-2xl p-6 shadow-sm text-white" style="background:linear-gradient(to right bottom,#059669,#0f766e,#0f172a)">
+          <p class="text-xs font-semibold opacity-90">Recommended Property Sum Assured (with Escalation Buffer)</p>
+          <p id="totalSum" class="text-3xl font-extrabold mt-1">₹0</p>
+          <p id="totalWords" class="text-xs opacity-90 mt-1"></p>
+          <p id="insuredValue" class="text-xs opacity-90 mt-2"></p>
+          <p class="text-[11px] opacity-80 mt-2">This is an indicative coverage benchmark, not a premium quote or underwriter commitment. Policy limits, deductibles, and terms apply.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 shadow-xs border border-slate-200">
+          <h3 class="text-sm font-bold text-slate-900 mb-3">Coverage Breakdown</h3>
+          <table class="w-full text-xs">
+            <tbody id="breakdown" class="divide-y divide-slate-100 text-slate-700"></tbody>
+          </table>
+          <div class="mt-4 h-56"><canvas id="chart"></canvas></div>
+        </div>
+
+        <div class="bg-amber-50 rounded-2xl p-5 shadow-xs border border-amber-200 text-xs text-slate-700 space-y-1">
+          <h3 class="text-sm font-bold text-slate-900">Separate Additional Benefit (Add-on Cover)</h3>
+          <p>Estimated Alternate Accommodation Need: <strong id="altCover">₹0</strong></p>
+          <p>This is kept separate from property Sum Assured. Alternate accommodation, rent loss, and debris removal are subject to policy-specific limits and add-ons; confirm in your policy schedule.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 shadow-xs border border-slate-200 text-xs text-slate-600 space-y-2" id="tips"></div>
+      </div>
+    </div>
+  
+        <!-- Key Assumptions Card -->
+        <div class="calc-assumptions-card mt-6">
+          <div class="calc-assumptions-card__title">
+            <svg class="w-4 h-4 text-sky-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Key Assumptions</span>
+          </div>
+          <ul class="calc-assumptions-card__list">
+            <li>Land value is completely excluded; only the reconstruction cost of the physical structure is insurable.</li>
+            <li>Cost per square foot varies according to structural quality, civil materials, and geographic location.</li>
+            <li>Household contents are evaluated on current replacement cost basis or depreciated book value depending on policy clauses.</li>
+          </ul>
+        </div>
+  </main>
+
+<script>
+    let mode = 'owner';
+    let chart = null;
+    const $ = (id) => document.getElementById(id);
+    const num = (id, min = 0, max = Number.POSITIVE_INFINITY) => {
+      const parsed = Number.parseFloat($(id).value);
+      return Math.min(max, Math.max(min, Number.isFinite(parsed) ? parsed : min));
+    };
+    const inr = (v) => '₹' + Math.round(v).toLocaleString('en-IN');
+
+    function toWords(v) {
+      if (v >= 1e7) return (v / 1e7).toFixed(2) + ' Cr';
+      if (v >= 1e5) return (v / 1e5).toFixed(2) + ' Lakh';
+      return '';
+    }
+
+    function setMode(m) {
+      mode = m;
+      document.querySelectorAll('.mode-btn').forEach((b) => {
+        const selected = b.dataset.mode === m;
+        b.classList.toggle('active', selected);
+        b.setAttribute('aria-pressed', String(selected));
+      });
+      const owner = m === 'owner';
+      $('buildingSection').style.display = owner ? '' : 'none';
+      $('interiorsWrap').style.display = owner ? 'none' : '';
+      $('contentsNum').textContent = owner ? '2' : '1';
+      $('extraNum').textContent = owner ? '3' : '2';
+      $('monthsHint').textContent = owner
+        ? 'Major damage repairs or rebuilding typically require 6–12 months.'
+        : 'If the home becomes uninhabitable, 2–4 months is usually sufficient to relocate to a new rental.';
+      $('months').value = owner ? 6 : 3;
+      calculate();
+    }
+
+    function calculate() {
+      const buffer = num('buffer') / 100;
+      $('bufferVal').textContent = Math.round(buffer * 100) + '%';
+
+      const building = mode === 'owner' ? (num('area', 100) * num('costPerSqft', 500) + num('extras')) : 0;
+      const contents = num('furniture') + num('appliances') + num('electronics') + num('clothing');
+      const valuables = num('valuables');
+      const interiors = mode === 'renter' ? num('interiors') : 0;
+      const alt = num('rent') * num('months', 0, 36);
+
+      const insuredValueTotal = building + contents + valuables + interiors;
+      const bufferAmt = insuredValueTotal * buffer;
+      const total = insuredValueTotal + bufferAmt;
+
+      const rows = [];
+      if (mode === 'owner') rows.push(['Building Structure (Reconstruction Cost)', building, '#059669', '#047857']);
+      rows.push(['Household Contents', contents, '#d97706', '#b45309']);
+      if (valuables) rows.push(['Jewellery & Valuables', valuables, '#0284c7', '#0369a1']);
+      if (interiors) rows.push(['Interior Fittings & Fixtures', interiors, '#6366f1', '#4f46e5']);
+
+      $('totalSum').textContent = inr(total);
+      $('totalWords').textContent = toWords(total) ? '≈ ' + toWords(total) : '';
+      $('insuredValue').textContent = `Assessed Property Value: ${inr(insuredValueTotal)} + Escalation Buffer: ${inr(bufferAmt)}`;
+      $('altCover').textContent = inr(alt);
+      $('breakdown').innerHTML = rows.map(([n, v]) =>
+        `<tr><td class="py-2">${n}</td><td class="py-2 text-right font-semibold">${inr(v)}</td><td class="py-2 text-right text-slate-400">${insuredValueTotal ? (v / insuredValueTotal * 100).toFixed(1) : 0}%</td></tr>`
+      ).join('') +
+      `<tr><td class="py-2">Base Assessed Property Value</td><td class="py-2 text-right font-semibold">${inr(insuredValueTotal)}</td><td></td></tr>` +
+      `<tr><td class="py-2">Escalation Buffer (${Math.round(buffer * 100)}%)</td><td class="py-2 text-right font-semibold">${inr(bufferAmt)}</td><td></td></tr>` +
+      `<tr class="font-bold text-slate-900"><td class="py-2">Target Sum Assured</td><td class="py-2 text-right">${inr(total)}</td><td></td></tr>`;
+
+      const data = {
+        labels: rows.map((r) => r[0]),
+        datasets: [{
+          data: rows.map((r) => r[1]),
+          backgroundColor: rows.map((r) => r[2]),
+          hoverBackgroundColor: rows.map((r) => r[3]),
+          borderWidth: 2,
+          borderColor: '#ffffff',
+        }],
+      };
+      if (chart) { chart.data = data; chart.update(); }
+      else if (window.Chart) {
+        chart = new Chart($('chart'), {
+          type: 'doughnut',
+          data,
+          options: {
+            maintainAspectRatio: false,
+            cutout: '72%',
+            plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 10 } } } },
+          },
+        });
+      }
+
+      const tips = mode === 'owner' ? [
+        'Insure your building for reconstruction cost, never market value; land does not burn or wash away and cannot be insured.',
+        'Verify whether building and contents are settled on a "Reinstatement / Replacement Value" basis or depreciated "Market Value" basis.',
+        'Review coverage for Bharat Griha Raksha standard perils (fire, flood, earthquake, cyclone, riot, terrorism), deductibles, and the average underinsurance clause.',
+      ] : [
+        'Tenants do not need structural building insurance—that is the landlord\'s responsibility. Focus strictly on insuring your personal contents and customized tenant interiors.',
+        'Look for policies covering burglary/theft, natural catastrophes, public liability, and rent for alternate accommodation if the home is rendered uninhabitable.',
+        'Ensure you update your insurer promptly whenever you relocate to a new rental address.',
+      ];
+      $('tips').innerHTML = '<h3 class="text-sm font-bold text-slate-900">Key Tips & Guidelines</h3>' + tips.map((t) => `<p>• ${t}</p>`).join('');
+    }
+
+    $('grade').addEventListener('change', () => {
+      if ($('grade').value) $('costPerSqft').value = $('grade').value;
+      calculate();
+    });
+    $('costPerSqft').addEventListener('input', () => {
+      const grade = [...$('grade').options].find((option) => option.value && Number(option.value) === num('costPerSqft'));
+      $('grade').value = grade ? grade.value : '';
+      calculate();
+    });
+    document.querySelectorAll('input').forEach((el) => el.addEventListener('input', () => {
+      if (el.id === 'months') {
+        const months = Number.parseFloat(el.value);
+        if (Number.isFinite(months) && months > 36) el.value = '36';
+      }
+      calculate();
+    }));
+    document.querySelectorAll('.mode-btn').forEach((b) => b.addEventListener('click', () => setMode(b.dataset.mode)));
+    const printBtn = $('btnPrint');
+    if (printBtn) printBtn.addEventListener('click', () => window.print());
+    window.addEventListener('load', calculate);
+    calculate();
+  </script>

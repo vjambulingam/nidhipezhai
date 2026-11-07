@@ -1,0 +1,882 @@
+---
+title: "Retirement Planning & Corpus Calculator"
+ogTitle: "Retirement Corpus Calculator · NidhiPezhai"
+description: "Calculate your required retirement corpus, inflation-adjusted living expenses, and monthly SIP savings to achieve financial independence."
+keywords: "retirement calculator, retirement corpus calculator India, retirement planning calculator, inflation adjusted retirement calculator, retirement SIP calculator"
+hasChart: true
+hasCsvExport: true
+language: en
+publishedEnglish: true
+eleventyExcludeFromCollections: false
+---
+<main id="main-content" tabindex="-1" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full space-y-6">
+    <div>
+      <h1 class="text-xl font-bold tracking-tight text-slate-900 leading-tight">
+        Retirement Planning Calculator
+      </h1>
+      <p class="text-xs text-slate-500 font-medium hidden sm:block">Retirement corpus requirement, inflation modeling, and asset allocation strategy</p>
+    </div>
+
+    <!-- Investor Persona Presets -->
+    <div class="bg-white rounded-xl shadow-xs border border-slate-200 p-1.5 flex flex-wrap gap-1.5">
+      <button class="investor-type-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 bg-emerald-600 text-white shadow-xs" data-investor="moderate">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        Balanced / Moderate
+      </button>
+      <button class="investor-type-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100" data-investor="aggressive">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+        Aggressive Growth
+      </button>
+      <button class="investor-type-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100" data-investor="conservative">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        Conservative / Debt Focused
+      </button>
+    </div>
+
+    <!-- Main Interactive Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+      
+      <!-- Left Column: Inputs Accordion / Sections (7 cols) -->
+      <div class="lg:col-span-7 space-y-5">
+        <div class="flex items-center justify-between pb-3 border-b border-gray-100">
+          <h2 class="text-base font-bold text-gray-900">Input Details</h2>
+          
+          <button id="btnReset" type="button" class="calc-reset-btn" title="Reset all inputs">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            <span>Reset</span>
+          </button>
+        </div>
+        
+        <!-- SECTION 1: Age Parameters & Living Expense -->
+        <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-xs border border-slate-200 space-y-4">
+          <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+            <h2 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">1</span>
+              Age & Current Living Expenses
+            </h2>
+            <span class="text-[11px] text-slate-400" id="yearsToRetireBadge">25 years until retirement</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+            <!-- Current Age -->
+            <div class="space-y-1.5">
+              <div class="flex justify-between items-center">
+                <label for="currentAgeInput" class="text-xs font-semibold text-slate-700">Current Age</label>
+              </div>
+              <input type="number" id="currentAgeInput" min="20" max="60" step="1" value="35" 
+                     class="w-full px-2.5 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 text-xs focus:ring-2 focus:ring-emerald-500 outline-none">
+              <input type="range" id="currentAgeSlider" min="20" max="55" step="1" value="35">
+            </div>
+
+            <!-- Retirement Age -->
+            <div class="space-y-1.5">
+              <div class="flex justify-between items-center">
+                <label for="retirementAgeInput" class="text-xs font-semibold text-slate-700">Retirement Age</label>
+              </div>
+              <input type="number" id="retirementAgeInput" min="45" max="70" step="1" value="60" 
+                     class="w-full px-2.5 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 text-xs focus:ring-2 focus:ring-emerald-500 outline-none">
+              <input type="range" id="retirementAgeSlider" min="45" max="70" step="1" value="60">
+            </div>
+
+            <!-- Life Expectancy -->
+            <div class="space-y-1.5">
+              <div class="flex justify-between items-center">
+                <label for="lifeExpectancyInput" class="text-xs font-semibold text-slate-700">Life Expectancy</label>
+              </div>
+              <input type="number" id="lifeExpectancyInput" min="65" max="100" step="1" value="85" 
+                     class="w-full px-2.5 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 text-xs focus:ring-2 focus:ring-emerald-500 outline-none">
+              <input type="range" id="lifeExpectancySlider" min="65" max="95" step="1" value="85">
+            </div>
+          </div>
+
+          <!-- Monthly Expense Input -->
+          <div class="space-y-2 pt-1 border-t border-slate-100">
+            <div class="flex items-center justify-between">
+              <div>
+                <label for="monthlyExpenseInput" class="text-xs font-semibold text-slate-700 block">Current Monthly Living Expenses</label>
+                <span class="text-[10px] text-slate-400">Essential lifestyle expenses that need to continue post-retirement</span>
+              </div>
+              <div class="relative w-36">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-2.5 text-slate-400 text-xs">₹</span>
+                <input type="number" id="monthlyExpenseInput" min="10000" max="1000000" step="5000" value="60000" 
+                       class="w-full pl-6 pr-2.5 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 text-xs focus:ring-2 focus:ring-emerald-500 outline-none">
+              </div>
+            </div>
+            <input type="range" id="monthlyExpenseSlider" min="20000" max="250000" step="5000" value="60000">
+            <div class="flex justify-between text-[10px] text-slate-400">
+              <span>₹ 20,000</span>
+              <span>₹ 75,000</span>
+              <span>₹ 1,50,000</span>
+              <span>₹ 2,50,000</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: Macroeconomic & Return Assumptions -->
+        <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-xs border border-slate-200 space-y-4">
+          <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+            <h2 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">2</span>
+              Inflation & Expected Investment Returns (% p.a.)
+            </h2>
+            <span class="text-[11px] text-slate-400">Tailored by investor persona</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+            <!-- Expected Inflation -->
+            <div class="space-y-1.5">
+              <label for="inflationInput" class="text-xs font-semibold text-slate-700 block">Annual Inflation</label>
+              <div class="relative">
+                <input type="number" id="inflationInput" min="4" max="10" step="0.25" value="6.0" 
+                       class="w-full pr-6 pl-2.5 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 text-xs focus:ring-2 focus:ring-emerald-500 outline-none">
+                <span class="absolute inset-y-0 right-0 flex items-center pr-2 text-slate-400 text-xs font-semibold">%</span>
+              </div>
+              <input type="range" id="inflationSlider" min="4" max="9" step="0.25" value="6.0">
+            </div>
+
+            <!-- Pre-Retirement Return -->
+            <div class="space-y-1.5">
+              <label for="preReturnInput" class="text-xs font-semibold text-slate-700 block">Pre-Retirement Return</label>
+              <div class="relative">
+                <input type="number" id="preReturnInput" min="6" max="18" step="0.25" value="12.0" 
+                       class="w-full pr-6 pl-2.5 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 text-xs focus:ring-2 focus:ring-emerald-500 outline-none">
+                <span class="absolute inset-y-0 right-0 flex items-center pr-2 text-slate-400 text-xs font-semibold">%</span>
+              </div>
+              <input type="range" id="preReturnSlider" min="7" max="16" step="0.25" value="12.0">
+            </div>
+
+            <!-- Post-Retirement Return -->
+            <div class="space-y-1.5">
+              <label for="postReturnInput" class="text-xs font-semibold text-slate-700 block">Post-Retirement Return</label>
+              <div class="relative">
+                <input type="number" id="postReturnInput" min="5" max="12" step="0.25" value="8.5" 
+                       class="w-full pr-6 pl-2.5 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 text-xs focus:ring-2 focus:ring-emerald-500 outline-none">
+                <span class="absolute inset-y-0 right-0 flex items-center pr-2 text-slate-400 text-xs font-semibold">%</span>
+              </div>
+              <input type="range" id="postReturnSlider" min="5" max="11" step="0.25" value="8.5">
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 3: Current Accumulated Corpus / Savings -->
+        <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-xs border border-slate-200 space-y-4">
+          <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+            <h2 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">3</span>
+              Existing Savings & Investments
+            </h2>
+            <span class="text-[11px] font-semibold text-emerald-700" id="currentTotalSavingsBadge">Total Savings: ₹ 35 Lakh</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs">
+            <!-- EPF / PPF Balance -->
+            <div>
+              <label for="epfPpfInput" class="text-slate-600 block mb-1 font-medium">EPF / PPF / VPF Savings Balance</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-2.5 text-slate-400">₹</span>
+                <input type="number" id="epfPpfInput" min="0" max="50000000" step="50000" value="1500000" 
+                       class="w-full pl-6 pr-2.5 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+              </div>
+            </div>
+
+            <!-- Equities / Mutual Funds -->
+            <div>
+              <label for="equityMfInput" class="text-slate-600 block mb-1 font-medium">Direct Stocks & Mutual Funds (Equity MF)</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-2.5 text-slate-400">₹</span>
+                <input type="number" id="equityMfInput" min="0" max="50000000" step="50000" value="1500000" 
+                       class="w-full pl-6 pr-2.5 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+              </div>
+            </div>
+
+            <!-- Fixed Deposits & Liquid Funds -->
+            <div>
+              <label for="fdLiquidInput" class="text-slate-600 block mb-1 font-medium">Bank FDs, RDs & Liquid Funds</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-2.5 text-slate-400">₹</span>
+                <input type="number" id="fdLiquidInput" min="0" max="30000000" step="25000" value="500000" 
+                       class="w-full pl-6 pr-2.5 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+              </div>
+            </div>
+
+            <!-- Expected Ongoing Monthly Savings to EPF/SIP -->
+            <div>
+              <label for="ongoingMonthlySavingInput" class="text-slate-600 block mb-1 font-medium">Current Monthly Savings (Ongoing SIP / EPF)</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-2.5 text-slate-400">₹</span>
+                <input type="number" id="ongoingMonthlySavingInput" min="0" max="500000" step="2500" value="25000" 
+                       class="w-full pl-6 pr-2.5 py-1.5 border border-slate-300 rounded-lg text-right font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 outline-none">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inflation Impact Callout -->
+        <div class="p-3 bg-amber-50 rounded-xl border border-amber-200/60 flex items-start gap-2.5 text-xs text-amber-900 leading-relaxed">
+          <span class="text-amber-600 mt-0.5">💡</span>
+          <div>
+            <strong>The Reality of Inflation:</strong> A monthly expense of ₹60,000 today will escalate to <strong>approx. ₹2.57 Lakh per month</strong> by age 60 at 6% inflation! Your retirement investments must grow proactively to sustain that lifestyle.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Results & Interactive Asset Allocation (5 cols) -->
+      <div class="lg:col-span-5 bg-white rounded-2xl p-6 sm:p-7 shadow-xs border border-slate-200 flex flex-col justify-between space-y-6">
+        
+        <!-- Primary Retirement Corpus Highlight Card -->
+        <div class="bg-gradient-to-br from-emerald-600 via-teal-700 to-slate-900 rounded-xl p-5 text-white shadow-md relative overflow-hidden">
+          <div class="absolute -right-6 -bottom-6 w-28 h-28 bg-white/10 rounded-full pointer-events-none"></div>
+          <div class="flex items-center justify-between">
+            <p class="text-xs uppercase tracking-wider font-semibold text-emerald-100">Total Required Retirement Corpus</p>
+            <span class="bg-emerald-500/30 text-white text-[10px] px-2 py-0.5 rounded-full font-medium border border-white/20" id="retireAgeBadge">at age 60</span>
+          </div>
+          <div class="flex items-baseline gap-2 mt-1.5">
+            <span class="text-3xl sm:text-4xl font-extrabold tracking-tight" id="requiredCorpusDisplay">₹ 5.64 Cr</span>
+          </div>
+          <p class="text-xs text-emerald-100/90 mt-1 font-medium" id="monthlyExpenseAtRetireDisplay">First month expense at retirement: ₹ 2.57 Lakh</p>
+        </div>
+
+        <!-- Corpus Gap / Additional SIP Requirement Card -->
+        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200/80 space-y-2.5 text-xs">
+          <div class="flex justify-between items-center text-slate-600 font-medium">
+            <span>Projected value of current savings at retirement:</span>
+            <span class="font-bold text-slate-800" id="projectedCurrentSavingsDisplay">₹ 5.95 Cr</span>
+          </div>
+          <div class="flex justify-between items-center text-slate-600 font-medium border-t border-slate-200 pt-1.5">
+            <span>Corpus Shortfall:</span>
+            <span class="font-bold text-emerald-700" id="shortfallDisplay">₹ 0 (Target Achieved!)</span>
+          </div>
+          <div class="flex justify-between items-center text-slate-800 border-t border-slate-200 pt-1.5 font-bold text-sm">
+            <span>Recommended Additional Monthly SIP:</span>
+            <span class="text-emerald-700 font-extrabold" id="requiredNewSIPDisplay">Not Required</span>
+          </div>
+        </div>
+
+        <!-- Asset Allocation Recommendation (By Investor Persona) -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <h3 class="text-xs font-bold text-slate-900 uppercase tracking-wider">Recommended Asset Split</h3>
+            <span class="text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100" id="assetSplitTitle">Balanced Investment Strategy</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
+            <!-- Asset Split Donut Chart -->
+            <div class="relative w-40 h-40 mx-auto flex items-center justify-center">
+              <canvas id="assetSplitChart"></canvas>
+              <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
+                <span class="text-[10px] uppercase font-bold text-slate-400">Split</span>
+                <span id="chartCenterTotal" class="text-xs font-bold text-slate-700">100%</span>
+              </div>
+            </div>
+
+            <!-- Asset Legend Details -->
+            <div class="space-y-2 text-xs">
+              <div class="border-l-4 border-emerald-600 pl-2">
+                <span class="text-slate-500 font-medium block">Equities / Stock Market</span>
+                <span id="equityPercentText" class="font-bold text-slate-900">50% (Equities & Index MF)</span>
+              </div>
+              <div class="border-l-4 border-teal-500 pl-2">
+                <span class="text-slate-500 font-medium block">Bonds & Debt (EPF/PPF/Fixed Income)</span>
+                <span id="debtPercentText" class="font-bold text-slate-900">35% (Secure Fixed Returns)</span>
+              </div>
+              <div class="border-l-4 border-amber-500 pl-2">
+                <span class="text-slate-500 font-medium block">Gold (Gold ETF / SGB)</span>
+                <span id="goldPercentText" class="font-bold text-slate-900">10% (Inflation Hedge)</span>
+              </div>
+              <div class="border-l-4 border-slate-400 pl-2">
+                <span class="text-slate-500 font-medium block">Emergency Liquid Funds (FD / Cash)</span>
+                <span id="cashPercentText" class="font-bold text-slate-900">5% (Contingency Buffer)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Retirement Corpus Trajectory (Accumulation vs Depletion) -->
+    <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-slate-100">
+        <div>
+          <h2 class="text-lg font-bold text-slate-900">Retirement Corpus Trajectory (Accumulation vs. Drawdown)</h2>
+          <p class="text-xs text-slate-500">Wealth accumulation leading up to retirement and sustained withdrawal across life expectancy</p>
+        </div>
+        <div class="flex items-center gap-4 text-xs font-semibold">
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-xs bg-emerald-600 inline-block"></span> Accumulation Phase</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-xs bg-amber-500 inline-block"></span> Post-Retirement Balance</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-1.5 rounded-full bg-slate-900 inline-block"></span> Annual Living Expenses</span>
+        </div>
+      </div>
+      <div class="w-full h-80">
+        <canvas id="trajectoryChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Year-on-Year Growth & Drawdown Schedule Table -->
+    <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200 space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-slate-100">
+        <div>
+          <h2 class="text-lg font-bold text-slate-900">Retirement Cash Flow Projection Schedule</h2>
+          <p class="text-xs text-slate-500">Year-by-year projections of investments, inflation-adjusted expenses, and ending corpus balance.</p>
+        </div>
+      </div>
+
+      <!-- Schedule Table -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs sm:text-sm border-collapse" id="retirementTable">
+          <thead>
+            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 uppercase font-semibold text-[11px] tracking-wider">
+              <th class="py-3 px-4">Age</th>
+              <th class="py-3 px-4">Phase</th>
+              <th class="py-3 px-4 text-right">Opening Balance</th>
+              <th class="py-3 px-4 text-right">Annual Inflow / Outflow</th>
+              <th class="py-3 px-4 text-right">Investment Returns</th>
+              <th class="py-3 px-4 text-right">Closing Balance</th>
+            </tr>
+          </thead>
+          <tbody id="retirementTableBody" class="divide-y divide-slate-100 text-slate-700">
+            <!-- Populated dynamically via JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Key Assumptions Card -->
+    <div class="calc-assumptions-card mt-6">
+      <div class="calc-assumptions-card__title">
+        <svg class="w-4 h-4 text-sky-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <span>Key Assumptions</span>
+      </div>
+      <ul class="calc-assumptions-card__list">
+        <li>Models post-retirement life expectancy and steady inflation (6%–7%).</li>
+        <li>Assumes conservative, capital-preservation focused returns (8%–9%) post-retirement.</li>
+        <li>Models a sustainable withdrawal strategy across projected life expectancy to prevent capital exhaustion.</li>
+      </ul>
+    </div>
+</main>
+
+<script>
+    /* Local English number-to-words helper */
+    function formatAmountToWords(amount) {
+      if (isNaN(amount) || amount === 0) return '₹ 0';
+      if (amount >= 10000000) {
+        return `₹ ${(amount / 10000000).toFixed(2)} Cr`;
+      } else if (amount >= 100000) {
+        return `₹ ${(amount / 100000).toFixed(2)} L`;
+      } else if (amount >= 1000) {
+        return `₹ ${(amount / 1000).toFixed(1)} K`;
+      }
+      return `₹ ${Math.round(amount)}`;
+    }
+
+    /* State */
+    const state = {
+      investorType: 'moderate', // 'conservative', 'moderate', 'aggressive'
+      currentAge: 35,
+      retirementAge: 60,
+      lifeExpectancy: 85,
+      monthlyExpense: 60000,
+      inflation: 6.0,
+      preReturn: 12.0,
+      postReturn: 8.5,
+      epfPpfBalance: 1500000,
+      equityMfBalance: 1500000,
+      fdLiquidBalance: 500000,
+      ongoingMonthlySaving: 25000,
+      scheduleData: []
+    };
+
+    /* Asset Split Maps by Investor Profile */
+    const assetAllocations = {
+      conservative: {
+        title: 'Conservative Investor',
+        equity: 30,
+        debt: 50,
+        gold: 10,
+        cash: 10,
+        preReturn: 9.5,
+        postReturn: 7.5,
+        desc: 'Prioritizes capital preservation; 30% equities and 50% government bonds/EPF/PPF.'
+      },
+      moderate: {
+        title: 'Balanced / Moderate Investor',
+        equity: 50,
+        debt: 35,
+        gold: 10,
+        cash: 5,
+        preReturn: 12.0,
+        postReturn: 8.5,
+        desc: 'Balanced growth and capital security; 50% equities and 35% fixed-income debt/EPF.'
+      },
+      aggressive: {
+        title: 'Aggressive Growth Investor',
+        equity: 70,
+        debt: 20,
+        gold: 5,
+        cash: 5,
+        preReturn: 14.0,
+        postReturn: 9.5,
+        desc: 'Long-term compounding focus; 70% equities and 20% fixed income.'
+      }
+    };
+
+    /* Chart instances */
+    let assetSplitChartInstance = null;
+    let trajectoryChartInstance = null;
+
+    /* Core Actuarial Retirement Modeling Engine */
+    function calculateRetirement() {
+      const curAge = state.currentAge;
+      const retAge = state.retirementAge;
+      const lifeExp = state.lifeExpectancy;
+      
+      const yearsToRetire = Math.max(1, retAge - curAge);
+      const retirementDuration = Math.max(1, lifeExp - retAge);
+
+      const inflRate = state.inflation / 100;
+      const preReturnRate = state.preReturn / 100;
+      const postReturnRate = state.postReturn / 100;
+
+      // 1. Inflated Annual Expense at Year of Retirement
+      const currentAnnualExpense = state.monthlyExpense * 12;
+      const annualExpenseAtRetirement = currentAnnualExpense * Math.pow(1 + inflRate, yearsToRetire);
+      const monthlyExpenseAtRetirement = annualExpenseAtRetirement / 12;
+
+      // 2. Real Rate of Return during post-retirement phase
+      const realRate = (postReturnRate - inflRate) / (1 + inflRate);
+
+      // 3. Required Retirement Corpus at age of retirement
+      let requiredCorpus = 0;
+      if (Math.abs(realRate) < 0.0001) {
+        requiredCorpus = annualExpenseAtRetirement * retirementDuration;
+      } else {
+        requiredCorpus = annualExpenseAtRetirement * ((1 - Math.pow(1 + realRate, -retirementDuration)) / realRate) * (1 + realRate);
+      }
+
+      // 4. Future Value of Existing Accumulated Corpus at retirement
+      const initialSavings = (state.epfPpfBalance || 0) + (state.equityMfBalance || 0) + (state.fdLiquidBalance || 0);
+      const fvExistingSavings = initialSavings * Math.pow(1 + preReturnRate, yearsToRetire);
+
+      // 5. Future Value of ongoing monthly savings
+      const monthlyPreRate = preReturnRate / 12;
+      const totalMonthsPre = yearsToRetire * 12;
+      let fvOngoingSavings = 0;
+      if (monthlyPreRate > 0) {
+        fvOngoingSavings = state.ongoingMonthlySaving * ((Math.pow(1 + monthlyPreRate, totalMonthsPre) - 1) / monthlyPreRate) * (1 + monthlyPreRate);
+      }
+
+      const totalProjectedSavingsAtRetirement = fvExistingSavings + fvOngoingSavings;
+
+      // 6. Net Shortfall & Additional Monthly SIP Needed
+      const shortfall = Math.max(0, requiredCorpus - totalProjectedSavingsAtRetirement);
+      let requiredNewMonthlySIP = 0;
+      if (shortfall > 0 && monthlyPreRate > 0) {
+        requiredNewMonthlySIP = (shortfall * monthlyPreRate) / ((Math.pow(1 + monthlyPreRate, totalMonthsPre) - 1) * (1 + monthlyPreRate));
+      }
+
+      // 7. Full Year-by-Year Cash Flow Projection
+      const schedule = [];
+      let runningBalance = initialSavings;
+      let currExpenseForYear = currentAnnualExpense;
+
+      // Phase 1: Pre-Retirement Accumulation
+      for (let age = curAge; age < retAge; age++) {
+        const startBal = runningBalance;
+        const yearlyOngoingContribution = state.ongoingMonthlySaving * 12;
+        const investmentGains = (startBal + (yearlyOngoingContribution / 2)) * preReturnRate;
+        runningBalance = startBal + yearlyOngoingContribution + investmentGains;
+        currExpenseForYear = currExpenseForYear * (1 + inflRate);
+
+        schedule.push({
+          age: age + 1,
+          phase: 'Accumulation Phase',
+          startBalance: startBal,
+          annualFlow: yearlyOngoingContribution,
+          isExpense: false,
+          returns: investmentGains,
+          closingBalance: runningBalance,
+          annualExpense: currExpenseForYear
+        });
+      }
+
+      // Phase 2: Post-Retirement Depletion (Drawing from Corpus)
+      let postRetireCorpus = Math.max(runningBalance, requiredCorpus);
+      for (let age = retAge; age < lifeExp; age++) {
+        const startBal = postRetireCorpus;
+        const currentYearExpense = currExpenseForYear;
+        const remainingAfterExpense = Math.max(0, startBal - currentYearExpense);
+        const investmentGains = remainingAfterExpense * postReturnRate;
+        postRetireCorpus = remainingAfterExpense + investmentGains;
+
+        schedule.push({
+          age: age + 1,
+          phase: 'Retirement Drawdown',
+          startBalance: startBal,
+          annualFlow: currentYearExpense,
+          isExpense: true,
+          returns: investmentGains,
+          closingBalance: Math.max(0, postRetireCorpus),
+          annualExpense: currentYearExpense
+        });
+
+        currExpenseForYear = currExpenseForYear * (1 + inflRate);
+      }
+
+      return {
+        yearsToRetire,
+        retirementDuration,
+        annualExpenseAtRetirement: Math.round(annualExpenseAtRetirement),
+        monthlyExpenseAtRetirement: Math.round(monthlyExpenseAtRetirement),
+        requiredCorpus: Math.round(requiredCorpus),
+        initialSavings: Math.round(initialSavings),
+        totalProjectedSavingsAtRetirement: Math.round(totalProjectedSavingsAtRetirement),
+        shortfall: Math.round(shortfall),
+        requiredNewMonthlySIP: Math.round(requiredNewMonthlySIP),
+        schedule
+      };
+    }
+
+    /* Chart Renderers */
+    function updateCharts(calc) {
+      const alloc = assetAllocations[state.investorType];
+
+      // 1. Donut Chart - Asset Allocation Split
+      const donutCtx = document.getElementById('assetSplitChart').getContext('2d');
+      const donutData = {
+        labels: ['Equity', 'Debt (EPF/PPF/Bonds)', 'Gold', 'Liquid / Cash'],
+        datasets: [{
+          data: [alloc.equity, alloc.debt, alloc.gold, alloc.cash],
+          backgroundColor: ['#059669', '#14b8a6', '#f59e0b', '#94a3b8'],
+          hoverBackgroundColor: ['#047857', '#0d9488', '#d97706', '#64748b'],
+          borderWidth: 2,
+          borderColor: '#ffffff'
+        }]
+      };
+
+      if (assetSplitChartInstance) {
+        assetSplitChartInstance.data = donutData;
+        assetSplitChartInstance.update();
+      } else {
+        assetSplitChartInstance = new Chart(donutCtx, {
+          type: 'doughnut',
+          data: donutData,
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '72%',
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    return ` ${context.label}: ${context.parsed}%`;
+                  }
+                }
+              }
+            }
+          }
+        });
+      }
+
+      // 2. Trajectory Stacked Line / Area Chart
+      const trajCtx = document.getElementById('trajectoryChart').getContext('2d');
+      const labels = calc.schedule.map(d => `Age ${d.age}`);
+      const balanceTrajectory = calc.schedule.map(d => Math.round(d.closingBalance));
+      const annualExpenses = calc.schedule.map(d => Math.round(d.annualExpense));
+
+      const trajData = {
+        labels: labels,
+        datasets: [
+          {
+            type: 'line',
+            label: 'Retirement Corpus Balance',
+            data: balanceTrajectory,
+            borderColor: '#059669',
+            backgroundColor: 'rgba(5, 150, 105, 0.1)',
+            fill: true,
+            borderWidth: 2.5,
+            pointRadius: labels.length > 30 ? 1 : 2.5,
+            yAxisID: 'y',
+            tension: 0.25
+          },
+          {
+            type: 'line',
+            label: 'Annual Living Expenses',
+            data: annualExpenses,
+            borderColor: '#0f172a',
+            backgroundColor: 'transparent',
+            borderWidth: 1.5,
+            borderDash: [4, 4],
+            pointRadius: 0,
+            yAxisID: 'y1',
+            tension: 0.2
+          }
+        ]
+      };
+
+      if (trajectoryChartInstance) {
+        trajectoryChartInstance.data = trajData;
+        trajectoryChartInstance.update();
+      } else {
+        trajectoryChartInstance = new Chart(trajCtx, {
+          data: trajData,
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: {
+              mode: 'index',
+              intersect: false
+            },
+            scales: {
+              x: {
+                grid: { display: false },
+                ticks: { font: { size: 10 } }
+              },
+              y: {
+                position: 'left',
+                grid: { color: '#f1f5f9' },
+                ticks: {
+                  font: { size: 10 },
+                  callback: (value) => formatAmountToWords(value)
+                }
+              },
+              y1: {
+                position: 'right',
+                grid: { drawOnChartArea: false },
+                ticks: {
+                  font: { size: 10 },
+                  callback: (value) => formatAmountToWords(value)
+                }
+              }
+            },
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    return ` ${context.dataset.label}: ${formatINR(context.parsed.y)}`;
+                  }
+                }
+              }
+            }
+          }
+        });
+      }
+    }
+
+    /* Table Renderer */
+    function renderScheduleTable(schedule) {
+      const tbody = document.getElementById('retirementTableBody');
+      tbody.innerHTML = '';
+
+      schedule.forEach(row => {
+        const isPre = row.phase.includes('Accumulation');
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-slate-50 transition-colors border-b border-slate-100 font-medium';
+        tr.innerHTML = `
+          <td class="py-3 px-4 font-bold text-slate-800">${row.age}</td>
+          <td class="py-3 px-4">
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium ${isPre ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-amber-50 text-amber-700 border border-amber-200'}">
+              ${row.phase}
+            </span>
+          </td>
+          <td class="py-3 px-4 text-right text-slate-600">${formatINR(row.startBalance)}</td>
+          <td class="py-3 px-4 text-right font-bold ${isPre ? 'text-emerald-700' : 'text-amber-700'}">
+            ${isPre ? '+ ' + formatINR(row.annualFlow) : '- ' + formatINR(row.annualFlow)}
+          </td>
+          <td class="py-3 px-4 text-right text-teal-600 font-semibold">${formatINR(row.returns)}</td>
+          <td class="py-3 px-4 text-right text-slate-900 font-extrabold">${formatINR(row.closingBalance)}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    /* Update Complete UI State */
+    function updateUI() {
+      // Age consistency checks
+      if (state.currentAge >= state.retirementAge) {
+        state.retirementAge = state.currentAge + 1;
+        document.getElementById('retirementAgeInput').value = state.retirementAge;
+        document.getElementById('retirementAgeSlider').value = state.retirementAge;
+      }
+      if (state.retirementAge >= state.lifeExpectancy) {
+        state.lifeExpectancy = state.retirementAge + 5;
+        document.getElementById('lifeExpectancyInput').value = state.lifeExpectancy;
+        document.getElementById('lifeExpectancySlider').value = state.lifeExpectancy;
+      }
+
+      const calc = calculateRetirement();
+
+      // Top Highlights
+      document.getElementById('requiredCorpusDisplay').textContent = formatINR(calc.requiredCorpus);
+      document.getElementById('monthlyExpenseAtRetireDisplay').textContent = `First month expense at retirement: ${formatINR(calc.monthlyExpenseAtRetirement)}`;
+      document.getElementById('retireAgeBadge').textContent = `at age ${state.retirementAge}`;
+      document.getElementById('yearsToRetireBadge').textContent = calc.yearsToRetire === 1 ? '1 year until retirement' : `${calc.yearsToRetire} years until retirement`;
+
+      // Corpus Gap Analysis
+      document.getElementById('projectedCurrentSavingsDisplay').textContent = formatINR(calc.totalProjectedSavingsAtRetirement);
+      const shortfallEl = document.getElementById('shortfallDisplay');
+      const sipEl = document.getElementById('requiredNewSIPDisplay');
+
+      if (calc.shortfall > 0) {
+        shortfallEl.textContent = formatINR(calc.shortfall);
+        shortfallEl.className = 'font-bold text-rose-600';
+        sipEl.textContent = `${formatINR(calc.requiredNewMonthlySIP)} / month`;
+        sipEl.className = 'text-rose-600 font-extrabold';
+      } else {
+        const surplus = calc.totalProjectedSavingsAtRetirement - calc.requiredCorpus;
+        shortfallEl.textContent = `₹ 0 (${formatINR(surplus)} surplus!)`;
+        shortfallEl.className = 'font-bold text-emerald-700';
+        sipEl.textContent = 'Target Achieved!';
+        sipEl.className = 'text-emerald-700 font-extrabold';
+      }
+
+      // Existing Savings Badge
+      document.getElementById('currentTotalSavingsBadge').textContent = `Total Savings: ${formatINR(calc.initialSavings)}`;
+
+      // Update Asset Split Texts based on active persona
+      const alloc = assetAllocations[state.investorType];
+      document.getElementById('assetSplitTitle').textContent = alloc.title;
+      document.getElementById('equityPercentText').textContent = `${alloc.equity}% (Equities & Index MF)`;
+      document.getElementById('debtPercentText').textContent = `${alloc.debt}% (EPF/PPF & Debt Instruments)`;
+      document.getElementById('goldPercentText').textContent = `${alloc.gold}% (Gold / SGB)`;
+      document.getElementById('cashPercentText').textContent = `${alloc.cash}% (Liquid FD / Emergency Cash)`;
+
+      // Sync Controls
+      document.getElementById('currentAgeInput').value = state.currentAge;
+      document.getElementById('currentAgeSlider').value = state.currentAge;
+
+      document.getElementById('retirementAgeInput').value = state.retirementAge;
+      document.getElementById('retirementAgeSlider').value = state.retirementAge;
+
+      document.getElementById('lifeExpectancyInput').value = state.lifeExpectancy;
+      document.getElementById('lifeExpectancySlider').value = state.lifeExpectancy;
+
+      document.getElementById('monthlyExpenseInput').value = state.monthlyExpense;
+      document.getElementById('monthlyExpenseSlider').value = state.monthlyExpense;
+
+      document.getElementById('inflationInput').value = state.inflation;
+      document.getElementById('inflationSlider').value = state.inflation;
+
+      document.getElementById('preReturnInput').value = state.preReturn;
+      document.getElementById('preReturnSlider').value = state.preReturn;
+
+      document.getElementById('postReturnInput').value = state.postReturn;
+      document.getElementById('postReturnSlider').value = state.postReturn;
+
+      document.getElementById('epfPpfInput').value = state.epfPpfBalance;
+      document.getElementById('equityMfInput').value = state.equityMfBalance;
+      document.getElementById('fdLiquidInput').value = state.fdLiquidBalance;
+      document.getElementById('ongoingMonthlySavingInput').value = state.ongoingMonthlySaving;
+
+      // Update Charts & Table
+      updateCharts(calc);
+      renderScheduleTable(calc.schedule);
+    }
+
+    /* Helper for Syncing Text Input and Range Slider */
+    function syncInputSlider(inputId, sliderId, key) {
+      const input = document.getElementById(inputId);
+      const slider = document.getElementById(sliderId);
+
+      input.addEventListener('input', (e) => {
+        state[key] = Number(e.target.value) || 0;
+        if (slider) slider.value = state[key];
+        updateUI();
+      });
+
+      if (slider) {
+        slider.addEventListener('input', (e) => {
+          state[key] = Number(e.target.value) || 0;
+          input.value = state[key];
+          updateUI();
+        });
+      }
+    }
+
+    function initListeners() {
+      syncInputSlider('currentAgeInput', 'currentAgeSlider', 'currentAge');
+      syncInputSlider('retirementAgeInput', 'retirementAgeSlider', 'retirementAge');
+      syncInputSlider('lifeExpectancyInput', 'lifeExpectancySlider', 'lifeExpectancy');
+      syncInputSlider('monthlyExpenseInput', 'monthlyExpenseSlider', 'monthlyExpense');
+      syncInputSlider('inflationInput', 'inflationSlider', 'inflation');
+      syncInputSlider('preReturnInput', 'preReturnSlider', 'preReturn');
+      syncInputSlider('postReturnInput', 'postReturnSlider', 'postReturn');
+
+      document.getElementById('epfPpfInput').addEventListener('input', (e) => {
+        state.epfPpfBalance = Number(e.target.value) || 0;
+        updateUI();
+      });
+
+      document.getElementById('equityMfInput').addEventListener('input', (e) => {
+        state.equityMfBalance = Number(e.target.value) || 0;
+        updateUI();
+      });
+
+      document.getElementById('fdLiquidInput').addEventListener('input', (e) => {
+        state.fdLiquidBalance = Number(e.target.value) || 0;
+        updateUI();
+      });
+
+      document.getElementById('ongoingMonthlySavingInput').addEventListener('input', (e) => {
+        state.ongoingMonthlySaving = Number(e.target.value) || 0;
+        updateUI();
+      });
+
+      // Investor Persona Presets Switcher
+      document.querySelectorAll('.investor-type-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.investor-type-btn').forEach(b => {
+            b.className = 'investor-type-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100';
+          });
+          btn.className = 'investor-type-btn flex-1 py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-lg transition-all text-center flex items-center justify-center gap-2 bg-emerald-600 text-white shadow-xs';
+
+          const inv = btn.dataset.investor;
+          state.investorType = inv;
+          const conf = assetAllocations[inv];
+          state.preReturn = conf.preReturn;
+          state.postReturn = conf.postReturn;
+
+          updateUI();
+        });
+      });
+
+      // Print
+      const printBtn = document.getElementById('btnPrint');
+      if (printBtn) {
+        printBtn.addEventListener('click', () => {
+          window.print();
+        });
+      }
+
+      // Export CSV
+      const csvBtn = document.getElementById('btnExportCSV');
+      if (csvBtn) {
+        csvBtn.addEventListener('click', () => {
+          const calc = calculateRetirement();
+          let csv = 'Age,Phase,Opening Balance,Annual Inflow/Outflow,Returns,Closing Balance\n';
+
+          calc.schedule.forEach(row => {
+            csv += `${row.age},"${row.phase}","${row.startBalance}","${row.annualFlow}","${row.returns}","${row.closingBalance}"\n`;
+          });
+
+          const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.setAttribute('href', url);
+          link.setAttribute('download', `Retirement_Planning_Report_${Date.now()}.csv`);
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        });
+      }
+    }
+
+    /* Initial Load */
+    window.addEventListener('DOMContentLoaded', () => {
+      initListeners();
+      updateUI();
+    });
+</script>

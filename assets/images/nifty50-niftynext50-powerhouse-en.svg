@@ -1,0 +1,238 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="570" viewBox="0 0 1200 570" role="img" aria-labelledby="n50-title n50-desc">
+  <title id="n50-title">Nifty 50 and Nifty Next 50 - The Nifty 100 Powerhouse Strategy</title>
+  <desc id="n50-desc">How combining Nifty 50 and Nifty Next 50 creates India's Nifty 100 powerhouse covering ~70% of market capitalization with low cost and zero manager bias.</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700;800&amp;display=swap');
+      .n-hdr-title {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 18.5px;
+        font-weight: 700;
+        fill: #ffffff;
+      }
+      .n-hdr-sub {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        fill: #d5e7e3;
+      }
+      .n-card-title {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+      }
+      .n-card-sub {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 11.5px;
+        font-weight: 600;
+      }
+      .n-pill-txt {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+      }
+      .n-bullet-lbl {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        fill: #1e293b;
+      }
+      .n-bullet-desc {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 10.8px;
+        font-weight: 500;
+        fill: #475569;
+      }
+      .n-metric-val {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 800;
+      }
+      .n-alloc-title {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 13.5px;
+        font-weight: 700;
+      }
+      .n-alloc-desc {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        fill: #334155;
+      }
+      .n-ftr-txt {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        fill: #065f46;
+        text-anchor: middle;
+      }
+    </style>
+
+    <linearGradient id="nHdrGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D7377"/>
+      <stop offset="100%" stop-color="#102e31"/>
+    </linearGradient>
+
+    <filter id="nCardShadow" x="-3%" y="-4%" width="106%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="530" fill="#f8fafc" rx="14"/>
+  <rect width="1200" height="530" fill="none" stroke="#e2e8f0" stroke-width="1.5" rx="14"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1200" height="72" fill="url(#nHdrGrad)" rx="14"/>
+  <rect x="0" y="58" width="1200" height="14" fill="#102e31"/>
+
+  <g transform="translate(40, 24)">
+    <circle cx="16" cy="16" r="16" fill="rgba(255,255,255,0.12)"/>
+    <path d="M8 22 L14 14 L20 18 L25 10" stroke="#e5c58e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="44" y="16" class="n-hdr-title">Nifty 50 + Nifty Next 50: India's Nifty 100 Powerhouse Strategy!</text>
+    <text x="44" y="34" class="n-hdr-sub">Mega-Cap Stability Combined with Junior Nifty High-Growth Potential: Capturing ~70% of India's Market Capitalization</text>
+  </g>
+
+  <!-- TOP SECTION: NIFTY 50 + NIFTY NEXT 50 CARDS (y: 86 to 330, height: 244) -->
+
+  <!-- Left Card: Nifty 50 -->
+  <g transform="translate(40, 86)">
+    <rect width="520" height="244" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#nCardShadow)"/>
+    <rect width="520" height="6" rx="3" fill="#2563eb"/>
+
+    <!-- Header info -->
+    <g transform="translate(20, 20)">
+      <text x="0" y="15" class="n-card-title" fill="#2563eb">1. NIFTY 50 (Mega-Caps)</text>
+      <text x="0" y="32" class="n-card-sub" fill="#64748b">Ranks 1 to 50 • Rock-Solid Foundation</text>
+
+      <rect x="340" y="-3" width="140" height="24" rx="6" fill="#dbeafe"/>
+      <text x="410" y="13" class="n-pill-txt" fill="#1d4ed8" text-anchor="middle">~50% Market Cap</text>
+    </g>
+
+    <!-- Bullets -->
+    <g transform="translate(20, 78)">
+      <circle cx="5" cy="5" r="3" fill="#2563eb"/>
+      <text x="16" y="8" class="n-bullet-lbl">Constituents: <tspan class="n-bullet-desc">Reliance, TCS, HDFC Bank, Infosys, ICICI Bank</tspan></text>
+
+      <circle cx="5" cy="29" r="3" fill="#2563eb"/>
+      <text x="16" y="32" class="n-bullet-lbl">Key Strength: <tspan class="n-bullet-desc">Unmatched liquidity &amp; rock-solid balance sheet stability</tspan></text>
+
+      <circle cx="5" cy="53" r="3" fill="#2563eb"/>
+      <text x="16" y="56" class="n-bullet-lbl">Safety Cushion: <tspan class="n-bullet-desc">India's premier 50 blue-chip anchors; dependable core</tspan></text>
+    </g>
+
+    <!-- Metrics box -->
+    <g transform="translate(20, 160)">
+      <rect width="478" height="64" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+      <g transform="translate(16, 20)">
+        <text x="0" y="0" font-family="'DM Sans', sans-serif" font-size="10.5px" font-weight="600" fill="#64748b">Expense Ratio (TER)</text>
+        <text x="0" y="24" class="n-metric-val" fill="#2563eb">0.10% – 0.15%</text>
+      </g>
+      <line x1="165" y1="12" x2="165" y2="52" stroke="#e2e8f0"/>
+      <g transform="translate(180, 20)">
+        <text x="0" y="0" font-family="'DM Sans', sans-serif" font-size="10.5px" font-weight="600" fill="#64748b">Long-Term 15+ yr CAGR</text>
+        <text x="0" y="24" class="n-metric-val" fill="#0f172a">~11% – 13%</text>
+      </g>
+      <line x1="330" y1="12" x2="330" y2="52" stroke="#e2e8f0"/>
+      <g transform="translate(345, 20)">
+        <text x="0" y="0" font-family="'DM Sans', sans-serif" font-size="10.5px" font-weight="600" fill="#64748b">Manager Risk</text>
+        <text x="0" y="24" class="n-metric-val" fill="#16a34a">0%</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Middle PLUS Symbol -->
+  <g transform="translate(580, 192)">
+    <circle cx="20" cy="20" r="18" fill="#0D7377" filter="url(#nCardShadow)"/>
+    <text x="20" y="26" font-family="'DM Sans', sans-serif" font-size="20px" font-weight="800" fill="#ffffff" text-anchor="middle">+</text>
+  </g>
+
+  <!-- Right Card: Nifty Next 50 -->
+  <g transform="translate(640, 86)">
+    <rect width="520" height="244" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#nCardShadow)"/>
+    <rect width="520" height="6" rx="3" fill="#059669"/>
+
+    <!-- Header info -->
+    <g transform="translate(20, 20)">
+      <text x="0" y="15" class="n-card-title" fill="#059669">2. NIFTY NEXT 50 (Junior Nifty)</text>
+      <text x="0" y="32" class="n-card-sub" fill="#64748b">Ranks 51 to 100 • Tomorrow's Nifty 50 Champions</text>
+
+      <rect x="340" y="-3" width="140" height="24" rx="6" fill="#d1fae5"/>
+      <text x="410" y="13" class="n-pill-txt" fill="#065f46" text-anchor="middle">~15% Market Cap</text>
+    </g>
+
+    <!-- Bullets -->
+    <g transform="translate(20, 78)">
+      <circle cx="5" cy="5" r="3" fill="#059669"/>
+      <text x="16" y="8" class="n-bullet-lbl">Past Graduates: <tspan class="n-bullet-desc">Titan, Bajaj Finance, BEL (Graduated into Nifty 50)</tspan></text>
+
+      <circle cx="5" cy="29" r="3" fill="#059669"/>
+      <text x="16" y="32" class="n-bullet-lbl">Key Strength: <tspan class="n-bullet-desc">Dynamic earnings growth; natural portfolio alpha booster</tspan></text>
+
+      <circle cx="5" cy="53" r="3" fill="#059669"/>
+      <text x="16" y="56" class="n-bullet-lbl">Self-Purging: <tspan class="n-bullet-desc">Seamlessly incubates tomorrow's mega-cap corporate giants</tspan></text>
+    </g>
+
+    <!-- Metrics box -->
+    <g transform="translate(20, 160)">
+      <rect width="478" height="64" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+      <g transform="translate(16, 20)">
+        <text x="0" y="0" font-family="'DM Sans', sans-serif" font-size="10.5px" font-weight="600" fill="#64748b">Expense Ratio (TER)</text>
+        <text x="0" y="24" class="n-metric-val" fill="#059669">0.20% – 0.30%</text>
+      </g>
+      <line x1="165" y1="12" x2="165" y2="52" stroke="#e2e8f0"/>
+      <g transform="translate(180, 20)">
+        <text x="0" y="0" font-family="'DM Sans', sans-serif" font-size="10.5px" font-weight="600" fill="#64748b">Long-Term 15+ yr CAGR</text>
+        <text x="0" y="24" class="n-metric-val" fill="#0f172a">~12% – 15%</text>
+      </g>
+      <line x1="330" y1="12" x2="330" y2="52" stroke="#e2e8f0"/>
+      <g transform="translate(345, 20)">
+        <text x="0" y="0" font-family="'DM Sans', sans-serif" font-size="10.5px" font-weight="600" fill="#64748b">Manager Risk</text>
+        <text x="0" y="24" class="n-metric-val" fill="#16a34a">0%</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- BOTTOM SECTION: 2 ASSET ALLOCATION STRATEGY CARDS (y: 344 to 452, height: 108) -->
+
+  <!-- Strategy 1: Balanced 70:30 -->
+  <g transform="translate(40, 344)">
+    <rect width="545" height="108" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#nCardShadow)"/>
+    <rect width="5" height="108" rx="2.5" fill="#0D7377"/>
+
+    <g transform="translate(20, 16)">
+      <text x="0" y="14" class="n-alloc-title" fill="#0D7377">Balanced Allocation Strategy (Recommended)</text>
+      <rect x="360" y="-2" width="145" height="22" rx="5" fill="#ccfbf1"/>
+      <text x="432" y="13" class="n-pill-txt" fill="#0f766e" text-anchor="middle">70% N50 + 30% NN50</text>
+    </g>
+
+    <text x="20" y="58" class="n-alloc-desc">Combines an impregnable large-cap anchor with high-momentum</text>
+    <text x="20" y="76" class="n-alloc-desc">emerging blue-chip compounders for stable, risk-adjusted growth.</text>
+    <text x="20" y="96" font-family="'DM Sans', sans-serif" font-size="11px" font-weight="700" fill="#0D7377">👉 The ideal golden asset allocation ratio for most long-term wealth builders!</text>
+  </g>
+
+  <!-- Strategy 2: Aggressive 50:50 -->
+  <g transform="translate(615, 344)">
+    <rect width="545" height="108" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" filter="url(#nCardShadow)"/>
+    <rect width="5" height="108" rx="2.5" fill="#d97706"/>
+
+    <g transform="translate(20, 16)">
+      <text x="0" y="14" class="n-alloc-title" fill="#b45309">Aggressive Growth Strategy</text>
+      <rect x="360" y="-2" width="145" height="22" rx="5" fill="#fef3c7"/>
+      <text x="432" y="13" class="n-pill-txt" fill="#92400e" text-anchor="middle">50% N50 + 50% NN50</text>
+    </g>
+
+    <text x="20" y="58" class="n-alloc-desc">Designed for young investors with long 15+ year investment horizons,</text>
+    <text x="20" y="76" class="n-alloc-desc">maximizing exposure to Next 50's aggressive earnings momentum.</text>
+    <text x="20" y="96" font-family="'DM Sans', sans-serif" font-size="11px" font-weight="700" fill="#b45309">👉 Requires temperament to endure sharper interim cyclical market drawdowns!</text>
+  </g>
+
+  <!-- FOOTER SUMMARY (y: 466, height: 48) -->
+  <g transform="translate(40, 466)">
+    <rect width="1120" height="48" rx="8" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1.5"/>
+    <text x="560" y="20" class="n-ftr-txt">🎯 Verdict: Rather than paying 1.5%–2% fees to underperforming active large-cap funds,</text>
+    <text x="560" y="37" class="n-ftr-txt">The Nifty 50 + Next 50 combo captures ~70% of India's corporate market cap at an ultra-low blended fee of ~0.18%!</text>
+  </g>
+  <text id="brand-watermark" x="600" y="557" text-anchor="middle" font-family="'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#0D7377" aria-hidden="true">Nidhi Pezhai</text>
+</svg>
