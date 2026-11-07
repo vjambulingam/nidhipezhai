@@ -64,7 +64,7 @@ function render({ title, type, category }) {
   ctx.fillText("நிதிப்பேழை", 80, 95);
   ctx.fillStyle = GOLD;
   ctx.font = regular(22);
-  ctx.fillText("நிதி நலம் காக்கத் தெளிவான நிதி அறிவு", 80, 135);
+  ctx.fillText("உங்கள் நிதி நலம் காக்கும் நிதி அறிவுப் பெட்டகம்", 80, 135);
 
   ctx.font = bold(22);
   const pillW = Math.min(1040, ctx.measureText(category).width + 40);
